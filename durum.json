@@ -72,6 +72,7 @@
     "PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉",
     "PAKET TATİLDEKİ GİZLİ MALİYET! 🏖️",
     "PARFÜM NEDEN GİRİŞTE SATILIR? 💐",
+    "RAF ALTINDAKİ ÜRÜN NEDEN %30 DAHA AZ SATILIR? 📦",
     "RAF ÜSTÜNÜN RENGİ NEDEN 15% DAHA FAZLA SATIŞ YAPILIR? 🎨",
     "REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺",
     "REKLAMLARDA NEDEN ÇOCUK VAR? 👶",
@@ -116,15 +117,15 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": "display closeup,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~6813 / pixabay~1584 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~4551 toplam -> 'warranty document closeup, tight']\n      [Pixabay: 12 klip / ~529 toplam -> 'warranty document closeup, tight']\n      [seçim(vision): pexels~4551 / pixabay~529 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~3562 toplam -> 'salesperson explaining warranty closeup,']\n      [Pixabay: 12 klip / ~473 toplam -> 'salesperson explaining warranty closeup,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~3562 / pixabay~473 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~7952 toplam -> 'smartphone box new closeup,']\n      [Pixabay: 12 klip / ~2842 toplam -> 'smartphone box new closeup,']\n      [seçim(vision): pexels~7952 / pixabay~2842 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=9, pixabay=1, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (16226 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-27T09:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi: d5apLtHw2D0\n✓ Yüklendi: https://youtu.be/rmyOiLZ6RnE  (yayın: 2026-09-27T09:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n      Oynatma listesine eklendi: 🏨 Hizmet & Abonelik Tuzakları\n      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)\n",
+  "son_rapor": "abay: 12 klip / ~5337 toplam -> 'An animated heatmap overlay']\n      [seçim(vision): pexels~8000 / pixabay~5337 -> önce pexels]\n      Sahne 6/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'A close‑up of a']\n      [Pixabay: 12 klip / ~3695 toplam -> 'A close‑up of a']\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~3695 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~6086 toplam -> 'A split‑screen: left side']\n      [Pixabay: 0 klip / ~0 toplam -> 'A split‑screen: left side']\n      [seçim(sayısal): pexels~6086 / pixabay~0 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'A slow dolly shot']\n      [Pixabay: 12 klip / ~2689 toplam -> 'A slow dolly shot']\n      [seçim(vision): pexels~8000 / pixabay~2689 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'An animated heatmap overlay']\n      [Pixabay: 12 klip / ~5337 toplam -> 'An animated heatmap overlay']\n      [seçim(vision): pexels~8000 / pixabay~5337 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=9, pixabay=1, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (45179 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-27T17:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi: rmyOiLZ6RnE\n✓ Yüklendi: https://youtu.be/uBumMVjNB4Y  (yayın: 2026-09-27T17:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n      Oynatma listesine eklendi: 🛒 Market & AVM Tuzakları\n      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)\n",
   "bekleyen_yorum": {
-    "video_id": "rmyOiLZ6RnE",
-    "metin": "GARANTİ UZATMASI NEDEN GEREKSİZ? ️ hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
-    "kaynak": "fallback",
-    "hash": "432a3a0dfd9f3c8d"
+    "video_id": "uBumMVjNB4Y",
+    "metin": "Alışveriş yaptığın rafındaki ürünün birim fiyatını bir kez kontrol et ve farkı not al.",
+    "kaynak": "trend.yorum",
+    "hash": "8862ceae339b0c32"
   },
-  "son_kategori": "hizmet",
-  "son_video_id": "rmyOiLZ6RnE",
-  "son_baslik": "GARANTİ UZATMASI NEDEN GEREKSİZ? 🛡️",
-  "son_yayin_zamani": "2026-09-27T09:00:00Z"
+  "son_kategori": "market",
+  "son_video_id": "uBumMVjNB4Y",
+  "son_baslik": "RAF ALTINDAKİ ÜRÜN NEDEN %30 DAHA AZ SATILIR? 📦",
+  "son_yayin_zamani": "2026-09-27T17:00:00Z"
 }
