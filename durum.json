@@ -28,6 +28,7 @@
     "DUTY FREE GERÇEKTEN UCUZ MU? ✈️",
     "DÜĞÜN SALONU EKSTRALARI! 💒",
     "FAST FOOD MENÜ TUZAĞI! 🍔",
+    "GARANTİ UZATMASI NEDEN GEREKSİZ? 🛡️",
     "HEDİYE KARTI NEDEN SEVİLİR? 🎫",
     "KAHVE ZİNCİRLERİNİN GİZLİ OYUNU! ☕",
     "KAHVEDE 'ORTA' YOKTUR! ☕",
@@ -115,15 +116,15 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": "screen']\n      [Pixabay: 12 klip / ~12337 toplam -> 'travel booking website screen']\n      [seçim(vision): pexels~8000 / pixabay~12337 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~1636 toplam -> 'last minute deal banner']\n      [Pixabay: 12 klip / ~831 toplam -> 'last minute deal banner']\n      [seçim(vision): pexels~1636 / pixabay~831 -> önce pixabay]\n      Sahne 8/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~8000 toplam -> 'hotel room booking closeup,']\n      [Pixabay: 12 klip / ~2034 toplam -> 'hotel room booking closeup,']\n      [vision gemini-2.5-flash hata: The read operation timed out]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~2034 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~6041 toplam -> 'countdown timer on booking']\n      [Pixabay: 12 klip / ~1790 toplam -> 'countdown timer on booking']\n      [vision gemini-2.5-flash hata: The read operation timed out]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~6041 / pixabay~1790 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=8, pixabay=2, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (13510 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-26T17:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi: wcqN_h-G760\n✓ Yüklendi: https://youtu.be/d5apLtHw2D0  (yayın: 2026-09-26T17:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n      Oynatma listesine eklendi: 🎯 Tüm Tuzaklar\n      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)\n",
+  "son_rapor": "display closeup,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~6813 / pixabay~1584 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~4551 toplam -> 'warranty document closeup, tight']\n      [Pixabay: 12 klip / ~529 toplam -> 'warranty document closeup, tight']\n      [seçim(vision): pexels~4551 / pixabay~529 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~3562 toplam -> 'salesperson explaining warranty closeup,']\n      [Pixabay: 12 klip / ~473 toplam -> 'salesperson explaining warranty closeup,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~3562 / pixabay~473 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~7952 toplam -> 'smartphone box new closeup,']\n      [Pixabay: 12 klip / ~2842 toplam -> 'smartphone box new closeup,']\n      [seçim(vision): pexels~7952 / pixabay~2842 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=9, pixabay=1, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (16226 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-27T09:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi: d5apLtHw2D0\n✓ Yüklendi: https://youtu.be/rmyOiLZ6RnE  (yayın: 2026-09-27T09:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n      Oynatma listesine eklendi: 🏨 Hizmet & Abonelik Tuzakları\n      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)\n",
   "bekleyen_yorum": {
-    "video_id": "d5apLtHw2D0",
-    "metin": "SON DAKİKA FIRSATI TUZAĞI! ⚡ hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
+    "video_id": "rmyOiLZ6RnE",
+    "metin": "GARANTİ UZATMASI NEDEN GEREKSİZ? ️ hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "b8ff513af1f3a030"
+    "hash": "432a3a0dfd9f3c8d"
   },
-  "son_kategori": "diger",
-  "son_video_id": "d5apLtHw2D0",
-  "son_baslik": "SON DAKİKA FIRSATI TUZAĞI! ⚡",
-  "son_yayin_zamani": "2026-09-26T17:00:00Z"
+  "son_kategori": "hizmet",
+  "son_video_id": "rmyOiLZ6RnE",
+  "son_baslik": "GARANTİ UZATMASI NEDEN GEREKSİZ? 🛡️",
+  "son_yayin_zamani": "2026-09-27T09:00:00Z"
 }
