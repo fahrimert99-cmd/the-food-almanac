@@ -6419,5 +6419,39 @@
     ],
     "tema": "tuzak",
     "uretim": "v2"
+  },
+  {
+    "baslik": "RAF ALTINDAKİ ÜRÜN NEDEN %30 DAHA AZ SATILIR? 📦",
+    "aciklama": "Bu video, ürünün raf konumunun satış üzerindeki etkisini açıklar ve izleyicilere hemen uygulayabileceği bir kontrol tavsiyesi sunar. Gruen Etkisi gibi gözlemlenen düzenlemeler üzerinden düşük rakım ürünlerinin neden daha az satıldığını gösterir.",
+    "etiketler": [
+      "tuzak",
+      "tüketici",
+      "tüketici hakları",
+      "tasarruf",
+      "para"
+    ],
+    "kanca": "Düşük rakım etkisi",
+    "yorum": "Alışveriş yaptığın rafındaki ürünün birim fiyatını bir kez kontrol et ve farkı not al.",
+    "script": "Alt rafdeki ürünün neden %30 daha az satığını fark ettin mi? Bu sadece tesadüf değil; süpermarketlerde ürünün konumu satışını doğrudan etkiler. Gruen Etkisi gibi gözlemlenen düzenlemeler, göz seviyesindeki ürünlere daha fazla dikkat çeker. Bugün alışveriş yaparken, aynı ürünün üst ve alt rafındaki birim fiyatlarını karşılaştır; farkı görüp daha akıllı bir seçim yap. Bu küçük gözlem, senin bütçenizi nasıl değiştirebilir? Bir sonraki videoda bu efektin diğer gizli taktikleri nedir?",
+    "sahneler": [
+      {
+        "metin": "Alt rafdeki ürünün neden %30 daha az satığını fark ettin mi? Bu sadece tesadüf değil; süpermarketlerde ürünün konumu satışını doğrudan etkiler.",
+        "gorsel": "A slow dolly shot across a supermarket aisle, stopping at a product on the bottom shelf, with a subtle question mark graphic appearing."
+      },
+      {
+        "metin": "Gruen Etkisi gibi gözlemlenen düzenlemeler, göz seviyesindeki ürünlere daha fazla dikkat çeker.",
+        "gorsel": "An animated heatmap overlay on a shelf showing brighter spots at eye level, indicating where shoppers look most."
+      },
+      {
+        "metin": "Bugün alışveriş yaparken, aynı ürünün üst ve alt rafındaki birim fiyatlarını karşılaştır; farkı görüp daha akıllı bir seçim yap.",
+        "gorsel": "A close‑up of a shopper’s hand holding two identical items, one from the top shelf and one from the bottom, with price tags visible side by side."
+      },
+      {
+        "metin": "Bu küçük gözlem, senin bütçenizi nasıl değiştirebilir? Bir sonraki videoda bu efektin diğer gizli taktikleri nedir?",
+        "gorsel": "A split‑screen: left side shows a shopping cart with a few items, right side shows the same cart with more items, accompanied by a ticking calculator graphic."
+      }
+    ],
+    "tema": "tuzak",
+    "uretim": "v2"
   }
 ]
