@@ -9,8 +9,7 @@ on:
     # concurrency grubu çakışmayı serialize eder.
     - cron: "0 0 * * *"    # üretim -> 12:00 TR yayını (09:00 UTC publishAt); 9 saat tampon
     - cron: "0 10 * * *"   # akşam üretimi -> 20:00 TR yayını (17:00 UTC publishAt); 7 saat tampon
-  # Yalnızca bu iki cron üretim yapar. Manuel/repository_dispatch tetikleri
-  # kapalıdır; böylece bir yayın slotunda ikinci video oluşturulmaz.
+  workflow_dispatch:       # Elle "Run workflow" butonu (acil / kaçırılan yayın için)
 
 permissions:
   contents: write
