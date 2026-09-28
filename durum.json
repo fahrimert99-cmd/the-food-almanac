@@ -38,6 +38,7 @@
     "KASA SIRASI NEDEN UZUN? 🧾",
     "KASADA BEKLERKEN DÜŞTÜĞÜN 3 PAZARLAMA TUZAĞI! 💰",
     "KASADAKİ ÇİKOLATA TUZAĞI! 🍫",
+    "KIYAFET BEDENLERİ NEDEN TUTMAZ? 👗",
     "KOKUNUN GİZLİ GÜCÜ! 👃",
     "KREDİ KARTI CASHBACK TUZAĞI: GERÇEK KAZANÇ NE KADAR? 💳",
     "KREDİ KARTI PUANI TUZAK MI? 🎁",
@@ -117,15 +118,15 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": "abay: 12 klip / ~5337 toplam -> 'An animated heatmap overlay']\n      [seçim(vision): pexels~8000 / pixabay~5337 -> önce pexels]\n      Sahne 6/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'A close‑up of a']\n      [Pixabay: 12 klip / ~3695 toplam -> 'A close‑up of a']\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~3695 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~6086 toplam -> 'A split‑screen: left side']\n      [Pixabay: 0 klip / ~0 toplam -> 'A split‑screen: left side']\n      [seçim(sayısal): pexels~6086 / pixabay~0 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'A slow dolly shot']\n      [Pixabay: 12 klip / ~2689 toplam -> 'A slow dolly shot']\n      [seçim(vision): pexels~8000 / pixabay~2689 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'An animated heatmap overlay']\n      [Pixabay: 12 klip / ~5337 toplam -> 'An animated heatmap overlay']\n      [seçim(vision): pexels~8000 / pixabay~5337 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=9, pixabay=1, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (45179 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-27T17:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi: rmyOiLZ6RnE\n✓ Yüklendi: https://youtu.be/uBumMVjNB4Y  (yayın: 2026-09-27T17:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n      Oynatma listesine eklendi: 🛒 Market & AVM Tuzakları\n      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)\n",
+  "son_rapor": "pixabay~571 -> önce pexels]\n      Sahne 6/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'clothing size labels closeup,']\n      [Pixabay: 12 klip / ~660 toplam -> 'clothing size labels closeup,']\n      [seçim(vision): pexels~8000 / pixabay~660 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'clothes on store racks']\n      [Pixabay: 12 klip / ~916 toplam -> 'clothes on store racks']\n      [seçim(vision): pexels~8000 / pixabay~916 -> önce pixabay]\n      Sahne 8/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~8000 toplam -> 'fitting room mirror closeup,']\n      [Pixabay: 12 klip / ~1723 toplam -> 'fitting room mirror closeup,']\n      [seçim(vision): pexels~8000 / pixabay~1723 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~4036 toplam -> 'comparing two size tags']\n      [Pixabay: 12 klip / ~198 toplam -> 'comparing two size tags']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~4036 / pixabay~198 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=8, pixabay=2, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (15745 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-28T09:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi: uBumMVjNB4Y\n✓ Yüklendi: https://youtu.be/yLQLfm28EtE  (yayın: 2026-09-28T09:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n      Oynatma listesine eklendi: 🎯 Tüm Tuzaklar\n      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)\n",
   "bekleyen_yorum": {
-    "video_id": "uBumMVjNB4Y",
-    "metin": "Alışveriş yaptığın rafındaki ürünün birim fiyatını bir kez kontrol et ve farkı not al.",
-    "kaynak": "trend.yorum",
-    "hash": "8862ceae339b0c32"
+    "video_id": "yLQLfm28EtE",
+    "metin": "KIYAFET BEDENLERİ NEDEN TUTMAZ hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
+    "kaynak": "fallback",
+    "hash": "8c72620e0145ce23"
   },
-  "son_kategori": "market",
-  "son_video_id": "uBumMVjNB4Y",
-  "son_baslik": "RAF ALTINDAKİ ÜRÜN NEDEN %30 DAHA AZ SATILIR? 📦",
-  "son_yayin_zamani": "2026-09-27T17:00:00Z"
+  "son_kategori": "diger",
+  "son_video_id": "yLQLfm28EtE",
+  "son_baslik": "KIYAFET BEDENLERİ NEDEN TUTMAZ? 👗",
+  "son_yayin_zamani": "2026-09-28T09:00:00Z"
 }
