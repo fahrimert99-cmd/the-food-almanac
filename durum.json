@@ -129,5 +129,35 @@
   "son_kategori": "yeme",
   "son_video_id": "PT2yl_-oswg",
   "son_baslik": "AVM'de klima neden bu kadar soğuk? Üşümen satışa dönüşür ❄️",
-  "son_yayin_zamani": "2026-09-29T09:00:00Z"
+  "son_yayin_zamani": "2026-09-29T09:00:00Z",
+  "analytics_ozet": {
+    "guncelleme": "2026-09-29T04:43:11Z",
+    "donem": {
+      "baslangic": "2026-09-22",
+      "bitis": "2026-09-28",
+      "gun": 7
+    },
+    "kaynak": "youtube_analytics_api",
+    "kanal_abone": 103,
+    "haftalik_izlenme": 3726,
+    "haftalik_ortalama_sure_sn": 11,
+    "haftalik_abone_net": 0,
+    "top3": [
+      {
+        "baslik": "PARFÜM NEDEN GİRİŞTE SATILIR? 💐",
+        "izlenme": 1012,
+        "ortalama_sure_sn": 9
+      },
+      {
+        "baslik": "MENÜDE FİYAT NEDEN SAĞDA DEĞİL? 🍽️",
+        "izlenme": 927,
+        "ortalama_sure_sn": 11
+      },
+      {
+        "baslik": "VİTRİN NEDEN HEP DEĞİŞİR? 🪟",
+        "izlenme": 681,
+        "ortalama_sure_sn": 14
+      }
+    ]
+  }
 }

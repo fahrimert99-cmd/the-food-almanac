@@ -1,0 +1,242 @@
+{
+  "olusturma": "2026-09-29T04:43:11Z",
+  "donem": {
+    "baslangic": "2026-09-22",
+    "bitis": "2026-09-28",
+    "gun": 7
+  },
+  "kanal": {
+    "id": "UCQworUMz3vuLujt7yHibsww",
+    "baslik": "TUZAK AVCISI",
+    "abone": 103,
+    "toplam_izlenme": 55508,
+    "video_sayisi": 98
+  },
+  "kaynak": "youtube_analytics_api",
+  "haftalik": {
+    "izlenme": 3726,
+    "izlenme_dakika": 294.0,
+    "ortalama_sure_sn": 11,
+    "abone_kazanim": 0,
+    "abone_kayip": 0
+  },
+  "top_videolar_analytics": [
+    {
+      "video_id": "D6_tdOfTBzk",
+      "views": 1012,
+      "estimatedMinutesWatched": 82,
+      "averageViewDuration": 9,
+      "baslik": "PARFÜM NEDEN GİRİŞTE SATILIR? 💐",
+      "averageViewDuration_sn": 9
+    },
+    {
+      "video_id": "RClMdfd_crA",
+      "views": 927,
+      "estimatedMinutesWatched": 73,
+      "averageViewDuration": 11,
+      "baslik": "MENÜDE FİYAT NEDEN SAĞDA DEĞİL? 🍽️",
+      "averageViewDuration_sn": 11
+    },
+    {
+      "video_id": "02WWvl9DoMs",
+      "views": 681,
+      "estimatedMinutesWatched": 39,
+      "averageViewDuration": 14,
+      "baslik": "VİTRİN NEDEN HEP DEĞİŞİR? 🪟",
+      "averageViewDuration_sn": 14
+    },
+    {
+      "video_id": "wcqN_h-G760",
+      "views": 498,
+      "estimatedMinutesWatched": 50,
+      "averageViewDuration": 14,
+      "baslik": "BEDAVA İADE NEDEN VAR? 🔁",
+      "averageViewDuration_sn": 14
+    },
+    {
+      "video_id": "54rrt3msivY",
+      "views": 282,
+      "estimatedMinutesWatched": 21,
+      "averageViewDuration": 15,
+      "baslik": "İADE NEDEN BU KADAR ZOR? 📦",
+      "averageViewDuration_sn": 15
+    },
+    {
+      "video_id": "bwcZtoxwx58",
+      "views": 182,
+      "estimatedMinutesWatched": 14,
+      "averageViewDuration": 10,
+      "baslik": "SADAKAT PROGRAMI SENİ NASIL BAĞLIYOR? 🎯",
+      "averageViewDuration_sn": 10
+    },
+    {
+      "video_id": "2GocwkZCvZs",
+      "views": 25,
+      "estimatedMinutesWatched": 1,
+      "averageViewDuration": 10,
+      "baslik": "LOGO YOK OLAN TSİRT NEDEN 3 KAT DAHA PAHALI SATILIOR? 👕",
+      "averageViewDuration_sn": 10
+    },
+    {
+      "video_id": "198wcOMbS-4",
+      "views": 24,
+      "estimatedMinutesWatched": 2,
+      "averageViewDuration": 13,
+      "baslik": "ÜCRETSİZ WIFI'NIN BEDELİ NE? 📶",
+      "averageViewDuration_sn": 13
+    },
+    {
+      "video_id": "d5apLtHw2D0",
+      "views": 15,
+      "estimatedMinutesWatched": 1,
+      "averageViewDuration": 11,
+      "baslik": "SON DAKİKA FIRSATI TUZAĞI! ⚡",
+      "averageViewDuration_sn": 11
+    },
+    {
+      "video_id": "euNOzJugljY",
+      "views": 12,
+      "estimatedMinutesWatched": 1,
+      "averageViewDuration": 15,
+      "baslik": "BNPL TAKSİT ÜCRETİ NEDEN GİZLİ %3 EK MALİYET GETİRİR? 💳",
+      "averageViewDuration_sn": 15
+    }
+  ],
+  "son_videolar": [
+    {
+      "video_id": "PT2yl_-oswg",
+      "baslik": "AVM'de klima neden bu kadar soğuk? Üşümen satışa dönüşür ❄️",
+      "yayin": "2026-09-29",
+      "izlenme": 0,
+      "begeni": 0,
+      "yorum": 0,
+      "sure_sn": 24
+    },
+    {
+      "video_id": "0wowoKjj11Y",
+      "baslik": "İLK AY BEDAVA NEDEN VAR? 🎬",
+      "yayin": "2026-09-28",
+      "izlenme": 363,
+      "begeni": 3,
+      "yorum": 1,
+      "sure_sn": 25
+    },
+    {
+      "video_id": "yLQLfm28EtE",
+      "baslik": "KIYAFET BEDENLERİ NEDEN TUTMAZ? 👗",
+      "yayin": "2026-09-28",
+      "izlenme": 981,
+      "begeni": 6,
+      "yorum": 1,
+      "sure_sn": 23
+    },
+    {
+      "video_id": "uBumMVjNB4Y",
+      "baslik": "RAF ALTINDAKİ ÜRÜN NEDEN %30 DAHA AZ SATILIR? 📦",
+      "yayin": "2026-09-27",
+      "izlenme": 567,
+      "begeni": 3,
+      "yorum": 1,
+      "sure_sn": 28
+    },
+    {
+      "video_id": "rmyOiLZ6RnE",
+      "baslik": "GARANTİ UZATMASI NEDEN GEREKSİZ? 🛡️",
+      "yayin": "2026-09-27",
+      "izlenme": 422,
+      "begeni": 4,
+      "yorum": 1,
+      "sure_sn": 25
+    },
+    {
+      "video_id": "d5apLtHw2D0",
+      "baslik": "SON DAKİKA FIRSATI TUZAĞI! ⚡",
+      "yayin": "2026-09-26",
+      "izlenme": 39,
+      "begeni": 2,
+      "yorum": 1,
+      "sure_sn": 25
+    },
+    {
+      "video_id": "wcqN_h-G760",
+      "baslik": "BEDAVA İADE NEDEN VAR? 🔁",
+      "yayin": "2026-09-26",
+      "izlenme": 640,
+      "begeni": 5,
+      "yorum": 1,
+      "sure_sn": 24
+    },
+    {
+      "video_id": "02WWvl9DoMs",
+      "baslik": "VİTRİN NEDEN HEP DEĞİŞİR? 🪟",
+      "yayin": "2026-09-25",
+      "izlenme": 657,
+      "begeni": 5,
+      "yorum": 2,
+      "sure_sn": 20
+    },
+    {
+      "video_id": "D6_tdOfTBzk",
+      "baslik": "PARFÜM NEDEN GİRİŞTE SATILIR? 💐",
+      "yayin": "2026-09-25",
+      "izlenme": 998,
+      "begeni": 5,
+      "yorum": 1,
+      "sure_sn": 20
+    },
+    {
+      "video_id": "bwcZtoxwx58",
+      "baslik": "SADAKAT PROGRAMI SENİ NASIL BAĞLIYOR? 🎯",
+      "yayin": "2026-09-24",
+      "izlenme": 182,
+      "begeni": 2,
+      "yorum": 1,
+      "sure_sn": 22
+    },
+    {
+      "video_id": "RClMdfd_crA",
+      "baslik": "MENÜDE FİYAT NEDEN SAĞDA DEĞİL? 🍽️",
+      "yayin": "2026-09-24",
+      "izlenme": 922,
+      "begeni": 8,
+      "yorum": 2,
+      "sure_sn": 19
+    },
+    {
+      "video_id": "54rrt3msivY",
+      "baslik": "İADE NEDEN BU KADAR ZOR? 📦",
+      "yayin": "2026-09-23",
+      "izlenme": 279,
+      "begeni": 5,
+      "yorum": 1,
+      "sure_sn": 24
+    },
+    {
+      "video_id": "198wcOMbS-4",
+      "baslik": "ÜCRETSİZ WIFI'NIN BEDELİ NE? 📶",
+      "yayin": "2026-09-23",
+      "izlenme": 24,
+      "begeni": 3,
+      "yorum": 1,
+      "sure_sn": 21
+    },
+    {
+      "video_id": "fxm-e8Xj79w",
+      "baslik": "NEDEN NAKİTTEN VAZGEÇTİK? 💵",
+      "yayin": "2026-09-22",
+      "izlenme": 10,
+      "begeni": 2,
+      "yorum": 1,
+      "sure_sn": 25
+    },
+    {
+      "video_id": "euNOzJugljY",
+      "baslik": "BNPL TAKSİT ÜCRETİ NEDEN GİZLİ %3 EK MALİYET GETİRİR? 💳",
+      "yayin": "2026-09-22",
+      "izlenme": 12,
+      "begeni": 3,
+      "yorum": 1,
+      "sure_sn": 33
+    }
+  ]
+}
