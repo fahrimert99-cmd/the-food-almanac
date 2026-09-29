@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Haftalık YouTube Analytics raporu → durum.json + artifact JSON.
+"""Haftalık YouTube Analytics raporu → durum.json + artifact JSON + öneri sistemi.
 
 Önce YouTube Analytics API dener (yt-analytics.readonly gerekir).
 Scope yoksa veya hata olursa Data API statistics ile yedek rapor üretir.
+Rapor metriklerinden öncelikli aksiyon önerileri üretir.
 """
 from __future__ import annotations
 
@@ -137,6 +138,208 @@ def _analytics_top_videos(ya, start: str, end: str, limit=10) -> list:
     return out
 
 
+def _kelime_skor(baslik: str) -> list:
+    b = (baslik or "").lower()
+    temalar = []
+    harita = {
+        "market_vitrin": ("market", "vitrin", "raf", "reyon", "kasa", "sepet", "parfüm", "labirent"),
+        "fiyat_indirim": ("fiyat", "indirim", "pahalı", "ucuz", "etiket", "kurus"),
+        "yeme_restoran": ("menü", "menu", "restoran", "mısır", "kahve", "büfe", "sinema"),
+        "abonelik_dijital": ("abonelik", "üyelik", "bedava", "iptal", "uygulama", "wifi"),
+        "finans_kart": ("kart", "kredi", "banka", "taksit", "faiz", "bnpl"),
+        "gizem": ("okyanus", "deniz", "bermuda", "mariana", "gemi", "megalodon"),
+    }
+    for tema, kws in harita.items():
+        if any(k in b for k in kws):
+            temalar.append(tema)
+    return temalar or ["diger"]
+
+
+def _oneriler_uret(rapor: dict) -> dict:
+    """Rapor metriklerinden öncelikli, uygulanabilir öneriler üretir."""
+    h = rapor.get("haftalik") or {}
+    top = rapor.get("top_videolar_analytics") or []
+    son = rapor.get("son_videolar") or []
+    abone = (rapor.get("kanal") or {}).get("abone") or 0
+
+    izlenme = h.get("izlenme")
+    ort_sure = h.get("ortalama_sure_sn")
+    abone_net = None
+    if h.get("abone_kazanim") is not None:
+        abone_net = (h.get("abone_kazanim") or 0) - (h.get("abone_kayip") or 0)
+
+    oneriler = []
+
+    if ort_sure is not None:
+        if ort_sure < 8:
+            oneriler.append({
+                "oncelik": "kritik",
+                "alan": "tutma",
+                "baslik": "Ort. izlenme süresi çok düşük",
+                "detay": f"Haftalık ortalama {ort_sure} sn. İzleyici ilk saniyelerde çıkıyor.",
+                "aksiyon": "İlk 1.5 sn kancayı sertleştir; soru + şok cümle; yazı ekranda büyük olsun.",
+            })
+        elif ort_sure < 12:
+            oneriler.append({
+                "oncelik": "yuksek",
+                "alan": "tutma",
+                "baslik": "Tutma orta seviyede — kanca iyileştir",
+                "detay": f"Ort. süre {ort_sure} sn. Shorts için hedef 15 sn+.",
+                "aksiyon": "En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele.",
+            })
+        elif ort_sure < 16:
+            oneriler.append({
+                "oncelik": "orta",
+                "alan": "tutma",
+                "baslik": "Tutma idare eder, biraz daha sıkılaştır",
+                "detay": f"Ort. süre {ort_sure} sn — iyi yolda.",
+                "aksiyon": "CTA'yı son 3 sn'de tut; ortada tempo düşmesin.",
+            })
+        else:
+            oneriler.append({
+                "oncelik": "bilgi",
+                "alan": "tutma",
+                "baslik": "Tutma güçlü",
+                "detay": f"Ort. süre {ort_sure} sn — format çalışıyor.",
+                "aksiyon": "Aynı tempo ve kanca stilini koru; sadece kanıtlı temaları çoğalt.",
+            })
+
+    if izlenme is not None:
+        if izlenme < 1000:
+            oneriler.append({
+                "oncelik": "yuksek",
+                "alan": "kesif",
+                "baslik": "Haftalık izlenme düşük",
+                "detay": f"7 günde {izlenme} izlenme.",
+                "aksiyon": "Başlıkları güçlendir; Reels/TikTok'a günde 1 cross-post; tutan konuları tekrarla.",
+            })
+        elif izlenme < 5000:
+            oneriler.append({
+                "oncelik": "orta",
+                "alan": "kesif",
+                "baslik": "Keşif orta — ivme için tekrar format",
+                "detay": f"7 günde {izlenme} izlenme.",
+                "aksiyon": "Top videoların varyasyonunu üret; yayın saatini (12:00/20:00) kaçırma.",
+            })
+        else:
+            oneriler.append({
+                "oncelik": "bilgi",
+                "alan": "kesif",
+                "baslik": "Keşif iyi",
+                "detay": f"7 günde {izlenme} izlenme.",
+                "aksiyon": "Hacmi koru; kalite düşmeden günde 2 Shorts devam.",
+            })
+
+    if abone_net is not None and izlenme:
+        oran = (abone_net / max(izlenme, 1)) * 1000
+        if abone_net <= 0:
+            oneriler.append({
+                "oncelik": "yuksek",
+                "alan": "abone",
+                "baslik": "Abone dönüşümü zayıf",
+                "detay": f"Net abone {abone_net}, {izlenme} izlenmede.",
+                "aksiyon": "Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu.",
+            })
+        elif oran < 2:
+            oneriler.append({
+                "oncelik": "orta",
+                "alan": "abone",
+                "baslik": "Abone artışı yavaş",
+                "detay": f"Net +{abone_net} (~{oran:.1f}/1000 izlenme).",
+                "aksiyon": "CTA'yı sesli söyle; ekranda 'ABONE OL' yazısı son 3 sn.",
+            })
+
+    tema_skor = {}
+    for t in top[:10]:
+        baslik = t.get("baslik") or ""
+        views = int(t.get("views") if t.get("views") is not None else t.get("izlenme") or 0)
+        sure = int(t.get("averageViewDuration_sn") or t.get("averageViewDuration") or 0)
+        skor = views + sure * 20
+        for tema in _kelime_skor(baslik):
+            tema_skor[tema] = tema_skor.get(tema, 0) + skor
+
+    if tema_skor:
+        sirali = sorted(tema_skor.items(), key=lambda x: -x[1])
+        en_iyi = [t for t, _ in sirali[:3] if t != "diger"]
+        tema_ad = {
+            "market_vitrin": "market / vitrin / raf / kasa",
+            "fiyat_indirim": "fiyat / indirim",
+            "yeme_restoran": "menü / restoran / sinema",
+            "abonelik_dijital": "abonelik / dijital tuzak",
+            "finans_kart": "kart / banka / taksit",
+            "gizem": "gizem / okyanus",
+        }
+        if en_iyi:
+            oneriler.append({
+                "oncelik": "yuksek",
+                "alan": "icerik",
+                "baslik": "Bu temaları çoğalt",
+                "detay": ", ".join(tema_ad.get(t, t) for t in en_iyi),
+                "aksiyon": f"Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: {', '.join(tema_ad.get(t, t) for t in en_iyi)}.",
+            })
+        if "gizem" in tema_skor and tema_skor.get("gizem", 0) < max(tema_skor.values()) * 0.3:
+            oneriler.append({
+                "oncelik": "orta",
+                "alan": "icerik",
+                "baslik": "Gizem içeriğini sınırla",
+                "detay": "Gizem bu hafta tuzak temalarının gerisinde.",
+                "aksiyon": "Haftada en fazla 1 gizem; asıl hacmi market/fiyat/abonelikte tut.",
+            })
+
+    for t in top[:5]:
+        views = int(t.get("views") if t.get("views") is not None else t.get("izlenme") or 0)
+        sure = int(t.get("averageViewDuration_sn") or t.get("averageViewDuration") or 0)
+        baslik = (t.get("baslik") or "")[:60]
+        if views >= 500 and sure and sure < 10:
+            oneriler.append({
+                "oncelik": "yuksek",
+                "alan": "baslik_icerik",
+                "baslik": f"Başlık çeker, içerik tutmaz: {baslik}",
+                "detay": f"{views} izlenme ama ort. {sure} sn.",
+                "aksiyon": "Aynı konuda daha sert kanca + daha hızlı vaat ile yeniden çek (varyasyon).",
+            })
+            break
+
+    dusuk = [v for v in son if (v.get("izlenme") or 0) < 50]
+    if len(dusuk) >= 3:
+        oneriler.append({
+            "oncelik": "orta",
+            "alan": "icerik",
+            "baslik": "Birden fazla video çok düşük izlenme almış",
+            "detay": f"Son listede {len(dusuk)} video <50 izlenme.",
+            "aksiyon": "Düşük giden konu tiplerini 2 hafta üretme; top3 varyasyonuna dön.",
+        })
+
+    if abone < 500:
+        oneriler.append({
+            "oncelik": "orta",
+            "alan": "buyume",
+            "baslik": "Küçük kanal: tutarlılık + dış trafik",
+            "detay": f"{abone} abone.",
+            "aksiyon": "12:00/20:00'i hiç kaçırma; haftada en az 3 cross-post (Reels/TikTok).",
+        })
+
+    sira = {"kritik": 0, "yuksek": 1, "orta": 2, "bilgi": 3}
+    oneriler.sort(key=lambda o: sira.get(o.get("oncelik"), 9))
+
+    kritik = [o for o in oneriler if o["oncelik"] in ("kritik", "yuksek")]
+    if not kritik:
+        ozet = "Metrikler dengeli; kanıtlı temaları çoğaltmaya devam."
+    else:
+        ozet = kritik[0]["baslik"] + " — " + kritik[0]["aksiyon"][:120]
+
+    return {
+        "ozet": ozet,
+        "oncelikli": oneriler[:8],
+        "tema_skor": tema_skor if tema_skor else {},
+        "esikler": {
+            "ort_sure_hedef_sn": 15,
+            "haftalik_izlenme_hedef": 5000,
+            "abone_per_1000_izlenme_hedef": 2,
+        },
+    }
+
+
 def main():
     end = date.today() - timedelta(days=1)
     start = end - timedelta(days=6)
@@ -207,6 +410,9 @@ def main():
             "sure_sn": _iso_sure_saniye(v.get("sure_iso") or ""),
         })
 
+    oneriler = _oneriler_uret(rapor)
+    rapor["oneriler"] = oneriler
+
     with open(RAPOR_DOSYA, "w", encoding="utf-8") as f:
         json.dump(rapor, f, ensure_ascii=False, indent=2)
     print(f"✓ {RAPOR_DOSYA} yazıldı")
@@ -231,10 +437,12 @@ def main():
             "izlenme": t.get("views") if "views" in t else t.get("izlenme"),
             "ortalama_sure_sn": t.get("averageViewDuration_sn") or t.get("averageViewDuration") or t.get("sure_sn"),
         } for t in (rapor["top_videolar_analytics"] or [])[:3]],
+        "oneriler": oneriler.get("oncelikli", [])[:5],
+        "oneri_ozet": oneriler.get("ozet", ""),
     }
     with open(DURUM, "w", encoding="utf-8") as f:
         json.dump(durum, f, ensure_ascii=False, indent=2)
-    print("✓ durum.json ← analytics_ozet")
+    print("✓ durum.json ← analytics_ozet + öneriler")
 
     h = rapor["haftalik"]
     print(
@@ -242,6 +450,9 @@ def main():
         f"7g izlenme={h.get('izlenme')} | "
         f"ort.süre(sn)={h.get('ortalama_sure_sn')} | kaynak={rapor['kaynak']}"
     )
+    print(f"ÖNERİ ÖZET: {oneriler.get('ozet', '')}")
+    for i, o in enumerate(oneriler.get("oncelikli", [])[:5], 1):
+        print(f"  {i}. [{o.get('oncelik')}] {o.get('baslik')}")
 
 
 if __name__ == "__main__":
