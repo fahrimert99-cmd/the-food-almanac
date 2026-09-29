@@ -67,7 +67,6 @@ def _kilit_birak():
 def _senaryolar():
     with open(SENARYOLAR, encoding="utf-8-sig") as f:
         base = json.load(f)
-    # Öncelik havuzu: büyüme planındaki yeni senaryolar en önde
     oncelik_yolu = "senaryolar_oncelik.json"
     if os.path.exists(oncelik_yolu):
         try:
@@ -216,13 +215,13 @@ def main():
             continue
         kalan.append((i, s))
     if not kalan:
-        print("✓ Tüm konular yayınlanmış! Yeni içerik için senaryolar.json'a konu ekleyin.")
+        print("✓ Tüm konular yayınlanmış!")
         _durum_yaz(durum)
         return
     tema_havuz = [t for t in kalan if _tema(t[1]) == "tuzak" and _marka_uygun_mu(t[1])]
     print(f"      Tema (katı marka filtresi): 'tuzak' (uygun kalan: {len(tema_havuz)})")
     if not tema_havuz:
-        print("✓ Marka uyumlu tuzak senaryosu kalmadı; konu dışı video üretilmedi.")
+        print("✓ Marka uyumlu tuzak senaryosu kalmadı.")
         _durum_yaz(durum)
         return
 
@@ -238,19 +237,16 @@ def main():
     if _v1 and _v2:
         _sec = "v2" if _yayin["v2"] <= _yayin["v1"] else "v1"
         tema_havuz = _v2 if _sec == "v2" else _v1
-        print(f"      Kohort: {_sec} (yayinlanan v1={_yayin['v1']} v2={_yayin['v2']}, "
-              f"bekleyen v1={len(_v1)} v2={len(_v2)})")
+        print(f"      Kohort: {_sec}")
     elif _v2:
         tema_havuz = _v2
-        print(f"      Kohort: v2 (v1 havuzu bitti, bekleyen v2={len(_v2)})")
     else:
-        print(f"      Kohort: v1 (henuz v2 senaryo yok, bekleyen v1={len(_v1)})")
+        print(f"      Kohort: v1")
 
     son_kat = durum.get("son_kategori")
     havuz = [t for t in tema_havuz if _kategori(t[1]["baslik"]) != son_kat] or tema_havuz
     havuz.sort(key=lambda t: (0 if _okyanus_mu(t[1]["baslik"]) else 1,
                               -_oncelik_skoru(t[1]["baslik"]), t[0]))
-    # force_next.json: bir sonraki üretimde zorunlu konu (akşam videosu vb.)
     idx = havuz[0][0]
     force_yolu = "force_next.json"
     if os.path.exists(force_yolu):
@@ -279,14 +275,11 @@ def main():
     if yayin_zamani:
         mevcut_slot = YT.planli_slot_video(yayin_zamani)
         if mevcut_slot:
-            print(f"✓ Yayın slotu zaten dolu ({yayin_zamani}); video üretimi atlandı: "
-                  f"https://youtu.be/{mevcut_slot}")
+            print(f"✓ Yayın slotu zaten dolu ({yayin_zamani}); atlandı: https://youtu.be/{mevcut_slot}")
             _durum_yaz(durum)
             return
-        if (durum.get("son_yayin_zamani") == yayin_zamani
-                and durum.get("son_video_id")):
-            print(f"✓ Slot durum.json'da kayıtlı ({yayin_zamani}); atlandı: "
-                  f"https://youtu.be/{durum['son_video_id']}")
+        if durum.get("son_yayin_zamani") == yayin_zamani and durum.get("son_video_id"):
+            print(f"✓ Slot durum.json'da kayıtlı; atlandı")
             _durum_yaz(durum)
             return
     else:
@@ -302,15 +295,31 @@ def main():
             slot_s = slot.strftime("%Y-%m-%dT%H:%M:%SZ")
             if son_yz == slot_s and durum.get("son_video_id"):
                 if abs((now - slot).total_seconds()) < 6 * 3600:
-                    print(f"✓ Bugünün slotu ({slot_s}) zaten üretildi; "
-                          f"yedek/son-çare atlandı: https://youtu.be/{durum['son_video_id']}")
+                    print(f"✓ Bugünün slotu zaten üretildi; atlandı")
                     _durum_yaz(durum)
                     return
 
     tmp = tempfile.mkdtemp()
     sp = os.path.join(tmp, "script.txt")
+    # GLOBAL KAPANIŞ CTA — tüm videolarda aynı bitiş
+    SABIT_CTA = (
+        "Artık biliyorsun. Her gün 12:00 ve 20:00'de yeni bir tuzak. "
+        "Abone ol, bir daha kanma."
+    )
+    script_metin = (veri.get("script") or "").strip()
+    for eski_bitis in (
+        "Yarın yeni bir tuzağı çözüyoruz, kaçırma.",
+        "Yarın yeni bir tuzak. Abone ol, uyanık kal.",
+        "Her akşam yeni bir tuzak. Abone ol, uyanık kal.",
+        "Abone ol, uyanık kal. Yarın yeni bir tuzağı çözüyoruz, kaçırma.",
+    ):
+        if script_metin.endswith(eski_bitis):
+            script_metin = script_metin[: -len(eski_bitis)].rstrip(" .")
+            break
+    if SABIT_CTA not in script_metin:
+        script_metin = (script_metin.rstrip(" .") + " " + SABIT_CTA).strip()
     with open(sp, "w", encoding="utf-8") as f:
-        f.write(veri["script"])
+        f.write(script_metin)
     os.makedirs("output", exist_ok=True)
     cikti = "output/video.mp4"
     print("[2/3] Video üretiliyor ...")
@@ -337,10 +346,7 @@ def main():
         if cfg.get("ai_kapak"):
             try:
                 import nvidia_araclar as NA
-                ai_bg = NA.kapak_arkaplani(veri["baslik"], veri.get("kanca", ""),
-                                           "output/ai_kapak_bg.jpg")
-                if ai_bg:
-                    print(f"      AI kapak arka planı üretildi ({NA.GORSEL_MODEL})")
+                ai_bg = NA.kapak_arkaplani(veri["baslik"], veri.get("kanca", ""), "output/ai_kapak_bg.jpg")
             except Exception as e:
                 print(f"      AI kapak atlandı: {str(e)[:100]}")
         kapak_yolu = K.kapak_uret(cikti, veri["baslik"], "output/kapak.jpg", arka_plan=ai_bg)
@@ -355,9 +361,7 @@ def main():
             print(f"      İlk kare atlandı: {str(e)[:100]}")
 
     if cfg.get("yukleme_atla"):
-        print("[3/3] ÖNİZLEME MODU — yükleme atlandı")
-        _durum_yaz(durum)
-        return
+        print("[3/3] ÖNİZLEME MODU"); _durum_yaz(durum); return
 
     yayin_zamani = _sonraki_yayin_zamani(cfg)
     if yayin_zamani:
@@ -368,7 +372,7 @@ def main():
     if _bek and _bek.get("video_id"):
         try:
             YT.yorum_at(_bek["video_id"], _bek["metin"])
-            print("✓ Onceki videoya abone yorumu eklendi: " + _bek["video_id"])
+            print("✓ Onceki videoya abone yorumu eklendi")
             durum["bekleyen_yorum"] = None
         except Exception as _e:
             print("! Yorum eklenemedi: " + str(_e)[:160])
@@ -377,13 +381,12 @@ def main():
         import aciklama as ACK
         _aciklama = ACK.olustur(veri, cfg)
     except Exception as e:
-        print(f"      Açıklama şablonu atlandı: {str(e)[:100]}")
         _aciklama = veri.get("aciklama", "")
     _vid = YT.planli_video_bul(veri["baslik"], yayin_zamani)
     if not _vid and yayin_zamani:
         _vid = YT.planli_slot_video(yayin_zamani)
     if _vid:
-        print(f"✓ Yayın slotu zaten dolu; tekrar yükleme atlandı: https://youtu.be/{_vid}")
+        print(f"✓ Slot dolu; atlandı: https://youtu.be/{_vid}")
     else:
         _vid = YT.yukle(cikti, veri["baslik"], _aciklama,
                  veri.get("etiketler") or [],
@@ -393,30 +396,22 @@ def main():
                  kapak=kapak_yolu, yayin_zamani=yayin_zamani,
                  sentetik=bool(cfg.get("ai_beyani", True)))
     if cfg.get("oynatma_listesi", True):
-        _LISTE = {"market": "🛒 Market & AVM Tuzakları",
-                  "finans": "💳 Banka & Kart Tuzakları",
-                  "dijital": "📱 Dijital & Uygulama Tuzakları",
-                  "psikoloji": "🧠 Psikolojik Satış Oyunları",
-                  "yeme": "🍔 Restoran & Yeme-İçme Tuzakları",
-                  "hizmet": "🏨 Hizmet & Abonelik Tuzakları"}
+        _LISTE = {"market": "🛒 Market & AVM Tuzakları", "finans": "💳 Banka & Kart Tuzakları",
+                  "dijital": "📱 Dijital & Uygulama Tuzakları", "psikoloji": "🧠 Psikolojik Satış Oyunları",
+                  "yeme": "🍔 Restoran & Yeme-İçme Tuzakları", "hizmet": "🏨 Hizmet & Abonelik Tuzakları"}
         _liste = ("🌊 Gizemler & Bilinmeyenler" if veri.get("tema") == "gizem"
                   else _LISTE.get(durum.get("son_kategori"), "🎯 Tüm Tuzaklar"))
         try:
             YT.oynatma_listesine_ekle(_vid, _liste)
-            print(f"      Oynatma listesine eklendi: {_liste}")
-        except Exception as e:
-            print(f"      Oynatma listesi atlandı: {str(e)[:120]}")
+        except Exception:
+            pass
     try:
         import yorum_at as YORUM
         _yorum_metni = YORUM.yorum_metni_uret(veri)
     except Exception:
         _yorum_metni = f"{veri.get('baslik', '')} hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?"
-    durum["bekleyen_yorum"] = {
-        "video_id": _vid,
-        "metin": _yorum_metni,
-        "kaynak": "fallback",
-        "hash": hashlib.sha1((_vid or "").encode()).hexdigest()[:16],
-    }
+    durum["bekleyen_yorum"] = {"video_id": _vid, "metin": _yorum_metni, "kaynak": "fallback",
+        "hash": hashlib.sha1((_vid or "").encode()).hexdigest()[:16]}
     durum["son_video_id"] = _vid
     durum["son_baslik"] = veri["baslik"]
     durum["son_yayin_zamani"] = yayin_zamani or ""
@@ -425,10 +420,8 @@ def main():
         shutil.copy(cikti, "son_video.mp4")
         if kapak_yolu and os.path.exists(kapak_yolu):
             shutil.copy(kapak_yolu, "son_kapak.jpg")
-        print("      son_video.mp4 / son_kapak.jpg kaydedildi")
-    except Exception as e:
-        print(f"      Video kopyalanamadi: {str(e)[:100]}")
-
+    except Exception:
+        pass
     yapilan.add(veri["baslik"])
     durum["yapilan"] = sorted(yapilan)
     _durum_yaz(durum)
@@ -450,21 +443,9 @@ if __name__ == "__main__":
     sys.stdout = Tee(sys.__stdout__, LOG)
     sys.stderr = Tee(sys.__stderr__, LOG)
     if not _kilit_al():
-        print("! Başka bir otomasyon çalışıyor; bu koşu tekrar üretim yapmadan sonlandırıldı.")
-        raise SystemExit(0)
+        print("! Başka bir otomasyon çalışıyor."); raise SystemExit(0)
     try:
         main()
-        try:
-            if os.path.exists("hata.log") and os.path.getsize("hata.log") > 0:
-                open("hata.log", "w", encoding="utf-8").write("")
-                for c in (["git","config","user.name","bot"],
-                          ["git","config","user.email","bot@users.noreply.github.com"],
-                          ["git","add","hata.log"],
-                          ["git","commit","-m","hata.log temizlendi (basarili calisma)"],
-                          ["git","push"]):
-                    subprocess.run(c, check=False)
-        except Exception:
-            pass
     except BaseException:
         LOG.write("\n" + traceback.format_exc())
         try:
@@ -472,8 +453,7 @@ if __name__ == "__main__":
             open(DURUM, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, indent=2))
         except Exception: pass
         open("hata.log", "w", encoding="utf-8").write(traceback.format_exc())
-        for c in (["git","config","user.name","bot"],
-                  ["git","config","user.email","bot@users.noreply.github.com"],
+        for c in (["git","config","user.name","bot"], ["git","config","user.email","bot@users.noreply.github.com"],
                   ["git","add","-A"], ["git","commit","-m","tani/hata"], ["git","push"]):
             subprocess.run(c, check=False)
         raise
