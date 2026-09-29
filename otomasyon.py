@@ -300,17 +300,45 @@ def main():
     durum["son_kategori"] = _kategori(veri["baslik"])
     print(f"[1/3] Senaryo ({idx+1}/{n}) [{durum['son_kategori']}]: {veri['baslik']}")
 
-    # ÜRETİM ÖNCESİ SLOT KİLİDİ: örneğin 20:00 videosu elle önceden
-    # planlandıysa akşam cron'u yeni video üretmeden temizce çıkar.
+    # ÜRETİM ÖNCESİ SLOT KİLİDİ (güvence sisteminin omurgası):
+    # - YouTube'da hâlâ planlı (private+publishAt) video varsa → çık
+    # - durum.json bu slotu kaydetmişse (public olduktan sonra publishAt silinir) → çık
+    # - Anında-public modunda (kaçırılmış slot): bugünün slotu son 6s içinde
+    #   zaten üretildiyse → çık (yedek/son-çare cron çift video üretmesin)
     yayin_zamani = _sonraki_yayin_zamani(cfg)
+    import youtube_yukle as YT
     if yayin_zamani:
-        import youtube_yukle as YT
         mevcut_slot = YT.planli_slot_video(yayin_zamani)
         if mevcut_slot:
             print(f"✓ Yayın slotu zaten dolu ({yayin_zamani}); video üretimi atlandı: "
                   f"https://youtu.be/{mevcut_slot}")
             _durum_yaz(durum)
             return
+        if (durum.get("son_yayin_zamani") == yayin_zamani
+                and durum.get("son_video_id")):
+            print(f"✓ Slot durum.json'da kayıtlı ({yayin_zamani}); atlandı: "
+                  f"https://youtu.be/{durum['son_video_id']}")
+            _durum_yaz(durum)
+            return
+    else:
+        # Kaçırılmış slot → anında public yolu. Bugünün slotlarından biri
+        # son 6 saat içinde zaten üretildiyse ikinci video açma.
+        from datetime import datetime, timezone
+        now = datetime.now(timezone.utc)
+        son_yz = durum.get("son_yayin_zamani") or ""
+        for saat in (cfg.get("yayin_saatleri_utc") or []):
+            try:
+                hh, mm = map(int, str(saat).split(":"))
+            except Exception:
+                continue
+            slot = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
+            slot_s = slot.strftime("%Y-%m-%dT%H:%M:%SZ")
+            if son_yz == slot_s and durum.get("son_video_id"):
+                if abs((now - slot).total_seconds()) < 6 * 3600:
+                    print(f"✓ Bugünün slotu ({slot_s}) zaten üretildi; "
+                          f"yedek/son-çare atlandı: https://youtu.be/{durum['son_video_id']}")
+                    _durum_yaz(durum)
+                    return
 
     tmp = tempfile.mkdtemp()
     sp = os.path.join(tmp, "script.txt")
@@ -391,7 +419,6 @@ def main():
         print(f"      Planlı yayın: {yayin_zamani} UTC")
 
     print("[3/3] YouTube'a yükleniyor ...")
-    import youtube_yukle as YT
     # --- Bekleyen yorum: onceki gunun videosu artik public, yorumu simdi at ---
     _bek = durum.get("bekleyen_yorum")
     if _bek and _bek.get("video_id"):
