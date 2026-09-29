@@ -1,0 +1,43 @@
+name: Studio Aksiyon (baslik + yorum)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kisa-video
+  cancel-in-progress: false
+
+jobs:
+  aksiyon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Python kur
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bagimliliklar
+        run: pip install -r requirements.txt
+      - name: Baslik + sabit yorum
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 studio_aksiyon.py
+      - name: durum.json kaydet
+        if: always()
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add durum.json || true
+          git commit -m "studio_aksiyon: baslik/yorum" || { echo "degisiklik yok"; exit 0; }
+          for i in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push; then
+              echo "push tamam"; exit 0
+            fi
+            sleep $((2 ** i))
+          done
+          exit 0
