@@ -1,0 +1,87 @@
+[
+  {
+    "baslik": "KASAYA YAKLAŞINCA ELİN NEDEN RAFA GİDİYOR? 🍬",
+    "aciklama": "Kasada sakız, çikolata ve küçük atıştırmalıklar rastgele değil. Sabırsız anında dürtünü yakalamak için oradalar.\n\n🎯 TUZAK AVCISI — her gün yeni bir tüketici tuzağı. 12:00 & 20:00\n#kasatuzağı #markettuzağı #dürtüalımı #tüketicituzakları",
+    "etiketler": ["kasa", "sakız", "çikolata", "market", "tuzak", "dürtü", "alışveriş", "tüketici"],
+    "script": "Kasaya yaklaşınca elin neden rafa gidiyor biliyor musun? Sakız, çikolata, küçük atıştırmalıklar bilerek en son anda gözünün önüne konur. Sıra beklerken sabrın incelir, çocuk yanındaysa direnmek daha da zor. Bu ürünlerin kâr marjı yüksek; senin 'zararsız' sandığın ekleme asıl kazanç kalemi. Sepeti kapatmadan önce o rafa bakma, çocuk varsa önceden konuş. Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal. Yarın yeni bir tuzağı çözüyoruz, kaçırma.",
+    "kanca": "KASADA ELİN NEDEN RAFA GİDİYOR?",
+    "sahneler": [
+      {"metin": "Kasaya yaklaşınca elin neden rafa gidiyor biliyor musun?", "gorsel": "checkout counter candy rack"},
+      {"metin": "Sakız, çikolata, küçük atıştırmalıklar bilerek en son anda gözünün önüne konur.", "gorsel": "gum and chocolate at register"},
+      {"metin": "Sıra beklerken sabrın incelir, çocuk yanındaysa direnmek daha da zor.", "gorsel": "parent child shopping checkout"},
+      {"metin": "Bu ürünlerin kâr marjı yüksek; senin zararsız sandığın ekleme asıl kazanç kalemi.", "gorsel": "impulse buy snacks closeup"},
+      {"metin": "Sepeti kapatmadan önce o rafa bakma, çocuk varsa önceden konuş.", "gorsel": "shopping cart closing"},
+      {"metin": "Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal.", "gorsel": "supermarket exit doors"}
+    ],
+    "tema": "tuzak",
+    "uretim": "v2"
+  },
+  {
+    "baslik": "MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖",
+    "aciklama": "Daha yeni yemek yedin, on dakika sonra sepet dolu. Fırın kokusu ve labirent reyon tesadüf değil.\n\n🎯 TUZAK AVCISI — 12:00 & 20:00\n#markettuzağı #kokutuzağı #alışverişpsikolojisi",
+    "etiketler": ["market", "koku", "açlık", "fırın", "tuzak", "alışveriş", "tüketici"],
+    "script": "Markete girince neden aniden acıkıyorsun? Daha yeni yemek yemiş olabilirsin. Girişe yakın fırın ve taze ekmek kokusu bilinçaltını tetikler. Yavaş müzik ve uzun koridorlar gezinme süreni uzatır. Acıkmış gibi hissedince planlamadığın ürünler sepete girer. Tok git, liste yap, koku reyonunda fazla oyalanma. Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal. Yarın yeni bir tuzağı çözüyoruz, kaçırma.",
+    "kanca": "MARKETE GİRİNCE NEDEN ACIKIYORSUN?",
+    "sahneler": [
+      {"metin": "Markete girince neden aniden acıkıyorsun?", "gorsel": "supermarket entrance doors"},
+      {"metin": "Girişe yakın fırın ve taze ekmek kokusu bilinçaltını tetikler.", "gorsel": "fresh bread bakery aisle"},
+      {"metin": "Yavaş müzik ve uzun koridorlar gezinme süreni uzatır.", "gorsel": "long grocery store aisle"},
+      {"metin": "Acıkmış gibi hissedince planlamadığın ürünler sepete girer.", "gorsel": "shopping cart filling snacks"},
+      {"metin": "Tok git, liste yap, koku reyonunda fazla oyalanma.", "gorsel": "shopping list paper"},
+      {"metin": "Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal.", "gorsel": "person leaving supermarket"}
+    ],
+    "tema": "tuzak",
+    "uretim": "v2"
+  },
+  {
+    "baslik": "DIŞARIDAN YİYECEK SOKMAYIN YASAĞININ ASIL AMACI 🚫🍿",
+    "aciklama": "Sinemada dışarıdan yiyecek yasağı güvenlik değil, kâr koruma. Fuaye fiyatları bilerek yüksek.\n\n🎯 TUZAK AVCISI — 12:00 & 20:00\n#sinematuzağı #mısır #tüketicituzakları",
+    "etiketler": ["sinema", "mısır", "fuaye", "yasak", "tuzak", "fiyat", "tüketici"],
+    "script": "Dışarıdan yiyecek sokmayın yasağının asıl amacı ne? Güvenlik değil. Sinema biletten değil, fuayedeki mısır ve içecekten kazanır. Marj o kadar yüksek ki yasağı gevşetirlerse model çöker. Susuz ve aç bırakılırsın; sonra 'madem buradayım' dersin. Mümkünse önceden su iç, atıştırmalığı ölçülü seç. Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal. Yarın yeni bir tuzağı çözüyoruz, kaçırma.",
+    "kanca": "DIŞARIDAN YİYECEK YASAĞI NEDEN VAR?",
+    "sahneler": [
+      {"metin": "Dışarıdan yiyecek sokmayın yasağının asıl amacı ne?", "gorsel": "cinema entrance no food sign"},
+      {"metin": "Sinema biletten değil, fuayedeki mısır ve içecekten kazanır.", "gorsel": "movie theater concession stand"},
+      {"metin": "Marj o kadar yüksek ki yasağı gevşetirlerse model çöker.", "gorsel": "popcorn and soda prices"},
+      {"metin": "Susuz ve aç bırakılırsın; sonra madem buradayım dersin.", "gorsel": "audience in dark cinema"},
+      {"metin": "Mümkünse önceden su iç, atıştırmalığı ölçülü seç.", "gorsel": "water bottle before movie"},
+      {"metin": "Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal.", "gorsel": "cinema exit hallway"}
+    ],
+    "tema": "tuzak",
+    "uretim": "v2"
+  },
+  {
+    "baslik": "ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİK TUZAĞI ⏱️",
+    "aciklama": "Üyelik tek tık. İptal gizli menülerde. Deneme süresi bitince karttan çekim başlar.\n\n🎯 TUZAK AVCISI — 12:00 & 20:00\n#aboneliktuzağı #iptal #dijitaltuzak",
+    "etiketler": ["abonelik", "iptal", "deneme", "kart", "tuzak", "dijital", "tüketici"],
+    "script": "Üye olmak 10 saniye, iptal 10 dakika. Bu tesadüf değil. Kaydol butonu büyük ve yeşil; iptal ise ayarlar, hesap, faturalama derken kaybolur. Deneme bitince sessizce ücret kesilir. Takvimine iptal gününü yaz, deneme bitmeden çık. Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal. Yarın yeni bir tuzağı çözüyoruz, kaçırma.",
+    "kanca": "ÜYE OLMAK KOLAY İPTAL ZOR",
+    "sahneler": [
+      {"metin": "Üye olmak 10 saniye, iptal 10 dakika. Bu tesadüf değil.", "gorsel": "subscription signup button phone"},
+      {"metin": "Kaydol butonu büyük ve yeşil; iptal ayarlarda kaybolur.", "gorsel": "phone settings menu maze"},
+      {"metin": "Deneme bitince sessizce ücret kesilir.", "gorsel": "credit card charge notification"},
+      {"metin": "Takvimine iptal gününü yaz, deneme bitmeden çık.", "gorsel": "calendar reminder alarm"},
+      {"metin": "Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal.", "gorsel": "person canceling subscription"},
+      {"metin": "Yarın yeni bir tuzağı çözüyoruz, kaçırma.", "gorsel": "mobile app unsubscribe screen"}
+    ],
+    "tema": "tuzak",
+    "uretim": "v2"
+  },
+  {
+    "baslik": "UCUZ SANDIN SEPET 2000 TL OLDU — GİRİŞ FIRSAT TUZAĞI 🛒",
+    "aciklama": "Girişteki indirim reyonu seni içeri çeker. Anchor fiyat ile normal reyonlar pahalı gelmez.\n\n🎯 TUZAK AVCISI — 12:00 & 20:00\n#indirimtuzağı #market #alışverişpsikolojisi",
+    "etiketler": ["indirim", "giriş", "market", "fırsat", "tuzak", "sepet", "tüketici"],
+    "script": "Ucuz sandın, sepet 2000 TL oldu. Girişteki fırsat reyonu seni mağazaya çeker. Büyük indirim etiketi referans fiyat yaratır; içerideki normal fiyatlar makul görünür. Liste yoksa gezerken ekleme yaparsın. Sadece listedekini al, giriş reyonunda tur atma. Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal. Yarın yeni bir tuzağı çözüyoruz, kaçırma.",
+    "kanca": "GİRİŞTEKİ İNDİRİM NEDEN VAR?",
+    "sahneler": [
+      {"metin": "Ucuz sandın, sepet 2000 TL oldu.", "gorsel": "full shopping cart supermarket"},
+      {"metin": "Girişteki fırsat reyonu seni mağazaya çeker.", "gorsel": "discount display store entrance"},
+      {"metin": "Büyük indirim etiketi referans fiyat yaratır.", "gorsel": "red sale price tag closeup"},
+      {"metin": "Liste yoksa gezerken ekleme yaparsın.", "gorsel": "person browsing grocery shelves"},
+      {"metin": "Sadece listedekini al, giriş reyonunda tur atma.", "gorsel": "shopping list checkbox"},
+      {"metin": "Artık biliyorsun. Her akşam yeni bir tuzak. Abone ol, uyanık kal.", "gorsel": "supermarket checkout receipt"}
+    ],
+    "tema": "tuzak",
+    "uretim": "v2"
+  }
+]
