@@ -131,7 +131,7 @@
   "son_baslik": "AVM'de klima neden bu kadar soğuk? Üşümen satışa dönüşür ❄️",
   "son_yayin_zamani": "2026-09-29T09:00:00Z",
   "analytics_ozet": {
-    "guncelleme": "2026-09-29T04:49:53Z",
+    "guncelleme": "2026-09-29T04:55:58Z",
     "donem": {
       "baslangic": "2026-09-22",
       "bitis": "2026-09-28",
@@ -197,5 +197,47 @@
       }
     ],
     "oneri_ozet": "Tutma orta seviyede — kanca iyileştir — En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele."
+  },
+  "oneri_uygulama": {
+    "zaman": "2026-09-29T04:56:00Z",
+    "bonus_kw": [
+      "market",
+      "kasa",
+      "vitrin",
+      "raf",
+      "reyon",
+      "sepet",
+      "parfüm",
+      "labirent",
+      "menü",
+      "restoran",
+      "mısır",
+      "kahve",
+      "sinema",
+      "büfe"
+    ],
+    "engelle_kw": [
+      "okyanus",
+      "deniz",
+      "bermuda",
+      "mariana"
+    ],
+    "senaryo_siralandi": true,
+    "uygulanan": [
+      "oneri_tema.json (seçim skoru)",
+      "senaryolar_oncelik sırası",
+      "baslik_guclendir"
+    ],
+    "uygulanmayan_korumalar": [
+      "12:00/20:00 yayın saatleri değiştirilmez",
+      "slot kilidi / üretim atlanmaz",
+      "cron zamanları değiştirilmez"
+    ],
+    "oneri_ozet": "Tutma orta seviyede — kanca iyileştir — En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele.",
+    "top_oneriler": [
+      "Tutma orta seviyede — kanca iyileştir",
+      "Abone dönüşümü zayıf",
+      "Bu temaları çoğalt"
+    ]
   }
 }

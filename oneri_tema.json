@@ -1,0 +1,33 @@
+{
+  "guncelleme": "2026-09-29T04:56:00Z",
+  "tema_skor": {
+    "market_vitrin": 1192,
+    "yeme_restoran": 1147,
+    "diger": 2385,
+    "abonelik_dijital": 1062,
+    "finans_kart": 312
+  },
+  "bonus_kw": [
+    "market",
+    "kasa",
+    "vitrin",
+    "raf",
+    "reyon",
+    "sepet",
+    "parfüm",
+    "labirent",
+    "menü",
+    "restoran",
+    "mısır",
+    "kahve",
+    "sinema",
+    "büfe"
+  ],
+  "engelle_kw": [
+    "okyanus",
+    "deniz",
+    "bermuda",
+    "mariana"
+  ],
+  "not": "otomasyon seçiminde bonus_kw +2, engelle_kw -2 skor"
+}
