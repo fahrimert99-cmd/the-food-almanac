@@ -134,7 +134,17 @@ def main():
 
     def _oncelik_skoru(baslik):
         bl = baslik.lower()
-        return sum(1 for k in ONCELIK if k in bl)
+        skor = sum(1 for k in ONCELIK if k in bl)
+        # Öneri sistemi: oneri_tema.json bonus/ceza — üretim saatine dokunmaz
+        try:
+            if os.path.exists("oneri_tema.json"):
+                with open("oneri_tema.json", encoding="utf-8-sig") as _tf:
+                    _tema = json.load(_tf) or {}
+                skor += 2 * sum(1 for k in (_tema.get("bonus_kw") or []) if k in bl)
+                skor -= 2 * sum(1 for k in (_tema.get("engelle_kw") or []) if k in bl)
+        except Exception:
+            pass
+        return skor
 
     OKYANUS = ("okyanus", "deniz", "derin", "dalga", "balina", "köpekbalığı", "megalodon",
                "kraken", "denizaltı", "batık", "girdap", "mercan", "mariana", "marıana",
@@ -301,7 +311,6 @@ def main():
 
     tmp = tempfile.mkdtemp()
     sp = os.path.join(tmp, "script.txt")
-    # GLOBAL KAPANIŞ CTA — tüm videolarda aynı bitiş
     SABIT_CTA = (
         "Artık biliyorsun. Her gün 12:00 ve 20:00'de yeni bir tuzak. "
         "Abone ol, bir daha kanma."
@@ -380,7 +389,7 @@ def main():
     try:
         import aciklama as ACK
         _aciklama = ACK.olustur(veri, cfg)
-    except Exception as e:
+    except Exception:
         _aciklama = veri.get("aciklama", "")
     _vid = YT.planli_video_bul(veri["baslik"], yayin_zamani)
     if not _vid and yayin_zamani:
