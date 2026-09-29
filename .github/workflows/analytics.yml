@@ -1,0 +1,85 @@
+name: Haftalik Analytics + Baslik
+
+on:
+  schedule:
+    - cron: "0 6 * * 0"
+  workflow_dispatch:
+    inputs:
+      baslik_guclendir:
+        description: "Toplu baslik guclendirme calistir"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+      baslik_dry_run:
+        description: "Baslik dry-run (sadece rapor, degistirme)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analytics-baslik
+  cancel-in-progress: false
+
+jobs:
+  rapor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Python kur
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Bagimliliklar
+        run: pip install -r requirements.txt
+
+      - name: Haftalik analytics raporu
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 analytics_rapor.py
+
+      - name: Toplu baslik guclendirme
+        if: ${{ github.event_name == 'schedule' || inputs.baslik_guclendir == 'true' }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          BASLIK_MAX: "20"
+          BASLIK_DRY_RUN: ${{ inputs.baslik_dry_run || 'false' }}
+        run: python3 baslik_guclendir.py
+
+      - name: Artifact yukle
+        uses: actions/upload-artifact@v4
+        with:
+          name: analytics-baslik-${{ github.run_id }}
+          path: |
+            analytics_rapor.json
+            baslik_guclendir_rapor.json
+          if-no-files-found: warn
+
+      - name: durum.json kaydet
+        if: always()
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add durum.json analytics_rapor.json || true
+          git commit -m "analytics: haftalik rapor + ozet" || { echo "degisiklik yok"; exit 0; }
+          for i in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push; then
+              echo "push tamam"; exit 0
+            fi
+            sleep $((2 ** i))
+          done
+          exit 0
