@@ -13,9 +13,6 @@ DURUM = "durum.json"
 LOG = io.StringIO()
 LOCK = ".otomasyon.lock"
 
-# Başlık değişse bile aynı fikrin yeniden yayınlanmasını önlemek için kullanılan
-# hafif, yerel konu parmak izi.  Üretim hattındaki trend.py ile aynı kök mantığını
-# kullanır; böylece eski durum.json kayıtları da geriye dönük çalışır.
 _KONU_STOP = {
     "NEDEN", "NASIL", "TUZAĞI", "TUZAK", "GİZLİ", "GERÇEK", "GERÇEKTE",
     "SENİ", "KADAR", "DAHA", "İLE", "BİR", "NEDİR", "VAR", "YOK", "İLAVE",
@@ -31,7 +28,6 @@ def _konu_kokleri(baslik):
 
 
 def _konu_tekrari(baslik, kullanilan_basliklar):
-    """Başlık, daha önce yayınlanmış aynı konuya aitse eşleşen başlığı döndür."""
     kokler = _konu_kokleri(baslik)
     if len(kokler) < 2:
         return None
@@ -48,7 +44,6 @@ def _kilit_al():
             f.write(str(os.getpid()))
         return True
     except FileExistsError:
-        # Önceki süreç zorla sonlandırıldıysa eski kilidi güvenle temizle.
         try:
             with open(LOCK, encoding="utf-8") as f:
                 pid = int(f.read().strip())
@@ -71,7 +66,21 @@ def _kilit_birak():
 
 def _senaryolar():
     with open(SENARYOLAR, encoding="utf-8-sig") as f:
-        return json.load(f)
+        base = json.load(f)
+    # Öncelik havuzu: büyüme planındaki yeni senaryolar en önde
+    oncelik_yolu = "senaryolar_oncelik.json"
+    if os.path.exists(oncelik_yolu):
+        try:
+            with open(oncelik_yolu, encoding="utf-8-sig") as f:
+                ekstra = json.load(f) or []
+            if isinstance(ekstra, list) and ekstra:
+                gorulen = {s.get("baslik") for s in base}
+                ekstra = [s for s in ekstra if s.get("baslik") not in gorulen]
+                base = ekstra + base
+                print(f"      Öncelik senaryoları eklendi: {len(ekstra)}")
+        except Exception as e:
+            print(f"      Öncelik senaryoları okunamadı: {str(e)[:100]}")
+    return base
 
 
 def _durum():
@@ -88,15 +97,6 @@ def _durum_yaz(durum):
 
 
 def _sonraki_yayin_zamani(cfg):
-    """Config'teki en yakın uygun UTC slotunu ISO-8601 olarak döndürür.
-
-    GitHub Actions kuyruk gecikmelerine dayanıklı:
-    - Slot henüz gelmemişse → o slotu kullan (publishAt).
-    - Slot geçmiş ama TOLERANS (4 saat) içindeyse → anında public (None döner).
-    - Slot + tolerans tamamen geçmişse → bir sonraki güne kaydır.
-    Böylece akşam cron'u 1-2 saat gecikse bile 20:00 TR slotu kaçırılmaz;
-    çok geç kalırsa video hemen yayınlanır, yarına atılmaz.
-    """
     from datetime import datetime, timezone, timedelta
     saatler = cfg.get("yayin_saatleri_utc")
     if not saatler:
@@ -104,7 +104,6 @@ def _sonraki_yayin_zamani(cfg):
         saatler = [tek] if tek else []
     adaylar = []
     now = datetime.now(timezone.utc)
-    # Actions gecikmesi + üretim süresi için tolerans
     TOLERANS = timedelta(hours=4)
     for saat in saatler:
         try:
@@ -113,16 +112,12 @@ def _sonraki_yayin_zamani(cfg):
             continue
         h = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
         if h + TOLERANS < now:
-            # Slot + tolerans tamamen geçti → yarına al
             h += timedelta(days=1)
             adaylar.append(h)
         elif h > now:
-            # Slot gelecekte → normal planlı yayın
             adaylar.append(h)
-        # else: h <= now <= h+TOLERANS → kaçırılmış ama tolerans içinde;
-        #        aday ekleme → None dönerse anında public olur
     if not adaylar:
-        return None  # tüm slotlar kaçırıldı veya boş → hemen public
+        return None
     return min(adaylar).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -133,9 +128,6 @@ def main():
     durum = _durum()
     n = len(senaryolar)
     yapilan = set(durum.get("yapilan", []))
-    # ÖNCELİK: analizde en çok tutan/kanıtlı temalar (market, sinema, fiyat, reklam,
-    # kasa, otel, akaryakıt, çocuk...) önce yayınlansın; kanal büyürken en güçlü
-    # konular öne çıksın. Yapılanlar başlıkla atlanır (tekrar yok), sıra determenistik.
     ONCELIK = ("market", "kasa", "sinema", "otel", "reklam", "paket", "fiyat", "indirim",
                "istasyon", "akaryak", "kart", "kredi", "taksit", "abonelik", "çocuk", "cocuk",
                "oyun", "telefon", "fatura", "restoran", "kahve", "avm", "kargo", "site",
@@ -145,26 +137,18 @@ def main():
         bl = baslik.lower()
         return sum(1 for k in ONCELIK if k in bl)
 
-    # OKYANUS ÖNCELİĞİ: kanalda en çok tutan format okyanus/deniz gizemi
-    # ("Okyanusun Dibinde", "Bermuda" patladı). Gizem havuzunda su/deniz temalı
-    # konular EN ÖNE gelsin; trend sıcakken bu damardan besle.
     OKYANUS = ("okyanus", "deniz", "derin", "dalga", "balina", "köpekbalığı", "megalodon",
                "kraken", "denizaltı", "batık", "girdap", "mercan", "mariana", "marıana",
                "çukur", "titanik", "bermuda", "su altı", "sualtı", "buzul", "kutup",
                "canavar", "adası", "mavi del", "hayalet gemi", "bloop", "çember")
 
     def _tr_lower(s):
-        # Türkçe İ/I küçültme: "DENİZ".lower() -> "deni̇z" (birleşen nokta) olur ve
-        # "deniz" alt dizisiyle eşleşmez. İ->i, I->ı ile önce düzelt.
         return s.replace("İ", "i").replace("I", "ı").lower()
 
     def _okyanus_mu(baslik):
         bl = _tr_lower(baslik)
         return any(k in bl for k in OKYANUS)
 
-    # ÇEŞİTLİLİK (P4): benzer konular arka arkaya gelmesin -> izleyici yorgunluğu azalsın.
-    # Her konuyu bir kategoriye ata; bir ÖNCEKİ videonun kategorisinden FARKLI bir
-    # kategori tercih et. Böylece market->market->market yerine market->finans->dijital...
     KATEGORI = {
         "market": ("market", "kasa", "raf", "reyon", "sepet", "büfe", "labirent", "koku",
                    "müzik", "ışık", "vitrin", "manken", "boş raf", "sağa", "parfüm"),
@@ -189,13 +173,8 @@ def main():
         return "diger"
 
     def _tema(s):
-        # Tema: "tuzak" (tuketici tuzagi), "gizem" (gizem/gercek olaylar) ya da
-        # "cesitlilik" (eski: tasarruf/'biliyor muydun'). Alan yoksa "tuzak".
         return s.get("tema", "tuzak")
 
-    # TUZAK AVCISI marka filtresi: konu, izleyicinin parasını/alışverişini,
-    # ödeme kararını veya bir hizmetle ilişkisini açıkça anlatmalı. Yalnızca
-    # genel psikoloji/bilim konuları bu kanalda yayınlanmaz.
     MARKA_TERIMLERI = (
         "market", "fiyat", "indirim", "ödeme", "ücret", "alışveriş", "ürün",
         "mağaza", "reyon", "raf", "sepet", "kasa", "restoran", "menü",
@@ -205,10 +184,6 @@ def main():
         "internet", "reklam", "kampanya", "para", "satış", "hizmet", "sözleşme",
         "ek ücret", "gizli ücret", "sana özel", "son iki", "bedava", "ücretsiz",
     )
-
-    # Kanal konusu ile ilişkili olsa da ilk test döneminde daha zayıf sinyal
-    # veren soyut duyusal/alışkanlık başlıklarını, doğrudan para veya ürün
-    # vaadi olanlar varken seçme. Silinmez; güçlü havuz biterse kullanılabilir.
     ZAYIF_BASLIK_TERIMLERI = ("müzik", "koku", "sağa", "yön", "hız", "kokunun")
     DOĞRUDAN_BASLIK_TERIMLERI = (
         "fiyat", "indirim", "ücret", "ödeme", "para", "ürün", "market", "reyon",
@@ -230,9 +205,6 @@ def main():
         dogrudan = any(_marka_norm(t) in baslik for t in DOĞRUDAN_BASLIK_TERIMLERI)
         return not zayif or dogrudan
 
-    # Başlık emojisi/kelime sırası değişmiş olsa bile daha önce yayınlanan aynı
-    # konuyu tekrar seçme. Bu kontrol, geçmişte havuza yanlışlıkla eklenmiş
-    # mükerrer senaryoları da etkisiz hale getirir.
     kalan = []
     for i, s in enumerate(senaryolar):
         baslik = s.get("baslik", "")
@@ -247,24 +219,13 @@ def main():
         print("✓ Tüm konular yayınlanmış! Yeni içerik için senaryolar.json'a konu ekleyin.")
         _durum_yaz(durum)
         return
-    # KANAL KİMLİĞİ = "TUZAK AVCISI": sadece marka uyumlu tuzaklar.
-    # Tuzak havuzu boşalırsa üretim yapmak yerine durmak, kanalı konu dışı
-    # videolarla doldurmaktan daha güvenlidir.
     tema_havuz = [t for t in kalan if _tema(t[1]) == "tuzak" and _marka_uygun_mu(t[1])]
-    print(f"      Tema (katı marka filtresi): 'tuzak' "
-          f"(uygun kalan: {len(tema_havuz)})")
+    print(f"      Tema (katı marka filtresi): 'tuzak' (uygun kalan: {len(tema_havuz)})")
     if not tema_havuz:
         print("✓ Marka uyumlu tuzak senaryosu kalmadı; konu dışı video üretilmedi.")
         _durum_yaz(durum)
         return
-    # --- A/B KOHORTU (v1 eski havuz / v2 yeni prompt) -------------------------
-    # Senaryo secimi dosya SIRASINA gore yapiliyor ve yeni senaryolar havuzun
-    # SONUNA ekleniyor. Bekleyen 82 senaryo varken (gunde 2 video = ~41 gun)
-    # yeni prompt'la uretilen senaryolar bir ay icinde HIC yayinlanmazdi; yani
-    # "bir ay veri toplayalim" hicbir sey olcmezdi.
-    # Cozum: iki kohortu DONUSUMLU yayinla. Boylece ikisi ayni donemde,
-    # ayni algoritma kosullarinda yarisir (once/sonra kiyasi mevsimsellige ve
-    # algoritma degisikligine takilirdi; es zamanli kiyas takilmaz).
+
     def _kohort(s):
         return s.get("uretim") or "v1"
 
@@ -275,7 +236,6 @@ def main():
     _v1 = [x for x in tema_havuz if _kohort(x[1]) == "v1"]
     _v2 = [x for x in tema_havuz if _kohort(x[1]) == "v2"]
     if _v1 and _v2:
-        # Geride kalan kohorttan yayinla -> ikisi yaklasik esit ilerler.
         _sec = "v2" if _yayin["v2"] <= _yayin["v1"] else "v1"
         tema_havuz = _v2 if _sec == "v2" else _v1
         print(f"      Kohort: {_sec} (yayinlanan v1={_yayin['v1']} v2={_yayin['v2']}, "
@@ -287,24 +247,33 @@ def main():
         print(f"      Kohort: v1 (henuz v2 senaryo yok, bekleyen v1={len(_v1)})")
 
     son_kat = durum.get("son_kategori")
-    # Önce bir önceki videodan FARKLI kategorideki konulara bak; yoksa tüm havuza.
     havuz = [t for t in tema_havuz if _kategori(t[1]["baslik"]) != son_kat] or tema_havuz
-    # Sıralama: (1) okyanus/deniz temalı gizem konuları EN ÖNE (patlayan format),
-    # (2) sonra öncelik skoru yüksek olanlar, (3) eşitlikte dosya sırası (deterministik).
-    # Okyanus önceliği yalnızca gizem havuzunu etkiler: tuzak başlıkları su kelimesi
-    # içermez, o yüzden tuzak fazında hiçbir değişiklik olmaz.
     havuz.sort(key=lambda t: (0 if _okyanus_mu(t[1]["baslik"]) else 1,
                               -_oncelik_skoru(t[1]["baslik"]), t[0]))
+    # force_next.json: bir sonraki üretimde zorunlu konu (akşam videosu vb.)
     idx = havuz[0][0]
+    force_yolu = "force_next.json"
+    if os.path.exists(force_yolu):
+        try:
+            with open(force_yolu, encoding="utf-8-sig") as f:
+                force = json.load(f) or {}
+            hedef = (force.get("baslik") or "").strip()
+            if hedef:
+                for i, s in enumerate(senaryolar):
+                    if s.get("baslik") == hedef and hedef not in yapilan:
+                        idx = i
+                        print(f"      force_next: zorunlu konu seçildi → {hedef[:60]}")
+                        break
+            try:
+                os.unlink(force_yolu)
+            except FileNotFoundError:
+                pass
+        except Exception as e:
+            print(f"      force_next okunamadı: {str(e)[:100]}")
     veri = senaryolar[idx]
     durum["son_kategori"] = _kategori(veri["baslik"])
     print(f"[1/3] Senaryo ({idx+1}/{n}) [{durum['son_kategori']}]: {veri['baslik']}")
 
-    # ÜRETİM ÖNCESİ SLOT KİLİDİ (güvence sisteminin omurgası):
-    # - YouTube'da hâlâ planlı (private+publishAt) video varsa → çık
-    # - durum.json bu slotu kaydetmişse (public olduktan sonra publishAt silinir) → çık
-    # - Anında-public modunda (kaçırılmış slot): bugünün slotu son 6s içinde
-    #   zaten üretildiyse → çık (yedek/son-çare cron çift video üretmesin)
     yayin_zamani = _sonraki_yayin_zamani(cfg)
     import youtube_yukle as YT
     if yayin_zamani:
@@ -321,8 +290,6 @@ def main():
             _durum_yaz(durum)
             return
     else:
-        # Kaçırılmış slot → anında public yolu. Bugünün slotlarından biri
-        # son 6 saat içinde zaten üretildiyse ikinci video açma.
         from datetime import datetime, timezone
         now = datetime.now(timezone.utc)
         son_yz = durum.get("son_yayin_zamani") or ""
@@ -366,8 +333,6 @@ def main():
     kapak_yolu = None
     try:
         import kapak as K
-        # AI KAPAK (opsiyonel, config.ai_kapak): NVIDIA image-gen ile özel dramatik
-        # arka plan üret; başarısızsa None -> kapak videodan kare çıkarır (eski hal).
         ai_bg = None
         if cfg.get("ai_kapak"):
             try:
@@ -383,8 +348,6 @@ def main():
     except Exception as e:
         print(f"      Kapak üretilemedi: {str(e)[:120]}")
 
-    # MARKALI İLK KARE: kapağı videonun başına ~1sn intro karesi olarak ekle
-    # (Shorts özel kapak yerine kareyi gösterir -> ilk kare markalı olsun).
     if cfg.get("marka_ilk_kare", True) and kapak_yolu:
         try:
             cikti = K.ilk_kare_bas(cikti, kapak_yolu, sure=float(cfg.get("marka_ilk_kare_sn", 1.0)))
@@ -392,34 +355,15 @@ def main():
             print(f"      İlk kare atlandı: {str(e)[:100]}")
 
     if cfg.get("yukleme_atla"):
-        print("[3/3] ÖNİZLEME MODU — yükleme atlandı (kanal kirlenmez)")
-        try:
-            import shutil, subprocess
-            shutil.copy(cikti, "onizleme.mp4")
-            if kapak_yolu and os.path.exists(kapak_yolu):
-                shutil.copy(kapak_yolu, "onizleme_kapak.jpg")
-            for c in (["git","config","user.name","bot"],
-                      ["git","config","user.email","bot@users.noreply.github.com"],
-                      ["git","add","onizleme.mp4","onizleme_kapak.jpg"],
-                      ["git","commit","-m","onizleme"], ["git","push"]):
-                subprocess.run(c, check=False)
-            print("      onizleme.mp4 repoya kaydedildi — indirip izleyebilirsin")
-        except Exception as e:
-            print(f"      Önizleme kaydedilemedi: {str(e)[:100]}")
+        print("[3/3] ÖNİZLEME MODU — yükleme atlandı")
         _durum_yaz(durum)
-        print("TANI TAMAM ✓")
         return
 
-    # PLANLI YAYIN: video 'private' yuklenir, en yakin gelecek slotta (publishAt)
-    # otomatik public olur -> Studio'da "Planlanan"da gorunur, tam saatinde cikar.
-    # yayin_saatleri_utc (liste) onceliklidir; yoksa tekil yayin_saati_utc; o da
-    # yoksa aninda public. Cron slottan ~2 saat once uretir (gecikme payi).
     yayin_zamani = _sonraki_yayin_zamani(cfg)
     if yayin_zamani:
         print(f"      Planlı yayın: {yayin_zamani} UTC")
 
     print("[3/3] YouTube'a yükleniyor ...")
-    # --- Bekleyen yorum: onceki gunun videosu artik public, yorumu simdi at ---
     _bek = durum.get("bekleyen_yorum")
     if _bek and _bek.get("video_id"):
         try:
@@ -431,14 +375,10 @@ def main():
 
     try:
         import aciklama as ACK
-        _aciklama = ACK.olustur(veri, cfg)  # SEO + marka footer (CTA/saat/handle/hashtag)
+        _aciklama = ACK.olustur(veri, cfg)
     except Exception as e:
         print(f"      Açıklama şablonu atlandı: {str(e)[:100]}")
         _aciklama = veri.get("aciklama", "")
-    # Yükleme sonrası GitHub durum kaydı yazılamadan işlem kesilirse workflow
-    # yeniden çalışabilir. Aynı başlık + aynı publishAt slotunu bulursak veya
-    # manuel tetikleme zaten dolu olan bir slotu hedefliyorsa ikinci kez
-    # YouTube'a yüklemeyiz.
     _vid = YT.planli_video_bul(veri["baslik"], yayin_zamani)
     if not _vid and yayin_zamani:
         _vid = YT.planli_slot_video(yayin_zamani)
@@ -452,8 +392,6 @@ def main():
                  cocuk_icerigi=bool(cfg.get("cocuk_icerigi", False)),
                  kapak=kapak_yolu, yayin_zamani=yayin_zamani,
                  sentetik=bool(cfg.get("ai_beyani", True)))
-    # OYNATMA LİSTESİ: videoyu kategori/temasına göre listeye ekle (izlenme
-    # süresi/oturum uzunluğu -> algoritma sever). Hata olursa yükleme bozulmaz.
     if cfg.get("oynatma_listesi", True):
         _LISTE = {"market": "🛒 Market & AVM Tuzakları",
                   "finans": "💳 Banka & Kart Tuzakları",
@@ -468,9 +406,6 @@ def main():
             print(f"      Oynatma listesine eklendi: {_liste}")
         except Exception as e:
             print(f"      Oynatma listesi atlandı: {str(e)[:120]}")
-    # Yorum, video public olduktan SONRA atilir (ozel videoya yorum yasak).
-    # Video ID + trend.py'den gelen videoya özgü yorum durum.json'a yazılır;
-    # yorum video public olduktan sonra gönderilir.
     try:
         import yorum_at as YORUM
         _yorum_metni = YORUM.yorum_metni_uret(veri)
@@ -490,7 +425,7 @@ def main():
         shutil.copy(cikti, "son_video.mp4")
         if kapak_yolu and os.path.exists(kapak_yolu):
             shutil.copy(kapak_yolu, "son_kapak.jpg")
-        print("      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)")
+        print("      son_video.mp4 / son_kapak.jpg kaydedildi")
     except Exception as e:
         print(f"      Video kopyalanamadi: {str(e)[:100]}")
 
@@ -519,8 +454,6 @@ if __name__ == "__main__":
         raise SystemExit(0)
     try:
         main()
-        # Basarili calisma: eski hata.log'u temizle ki gecmis hatalar
-        # (or. suresi dolmus token) seni bir daha yaniltmasin.
         try:
             if os.path.exists("hata.log") and os.path.getsize("hata.log") > 0:
                 open("hata.log", "w", encoding="utf-8").write("")
