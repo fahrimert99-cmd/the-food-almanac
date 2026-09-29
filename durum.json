@@ -131,33 +131,71 @@
   "son_baslik": "AVM'de klima neden bu kadar soğuk? Üşümen satışa dönüşür ❄️",
   "son_yayin_zamani": "2026-09-29T09:00:00Z",
   "analytics_ozet": {
-    "guncelleme": "2026-09-29T04:43:11Z",
+    "guncelleme": "2026-09-29T04:49:53Z",
     "donem": {
       "baslangic": "2026-09-22",
       "bitis": "2026-09-28",
       "gun": 7
     },
     "kaynak": "youtube_analytics_api",
-    "kanal_abone": 103,
+    "kanal_abone": 104,
     "haftalik_izlenme": 3726,
     "haftalik_ortalama_sure_sn": 11,
     "haftalik_abone_net": 0,
     "top3": [
       {
-        "baslik": "PARFÜM NEDEN GİRİŞTE SATILIR? 💐",
+        "baslik": "PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
         "izlenme": 1012,
         "ortalama_sure_sn": 9
       },
       {
-        "baslik": "MENÜDE FİYAT NEDEN SAĞDA DEĞİL? 🍽️",
+        "baslik": "MENÜDE FİYAT neden SAĞDA DEĞİL? Bilerek yapıyorlar 🍽️",
         "izlenme": 927,
         "ortalama_sure_sn": 11
       },
       {
-        "baslik": "VİTRİN NEDEN HEP DEĞİŞİR? 🪟",
+        "baslik": "VİTRİN neden HEP DEĞİŞİR? Bilerek yapıyorlar 🪟",
         "izlenme": 681,
         "ortalama_sure_sn": 14
       }
-    ]
+    ],
+    "oneriler": [
+      {
+        "oncelik": "yuksek",
+        "alan": "tutma",
+        "baslik": "Tutma orta seviyede — kanca iyileştir",
+        "detay": "Ort. süre 11 sn. Shorts için hedef 15 sn+.",
+        "aksiyon": "En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele."
+      },
+      {
+        "oncelik": "yuksek",
+        "alan": "abone",
+        "baslik": "Abone dönüşümü zayıf",
+        "detay": "Net abone 0, 3726 izlenmede.",
+        "aksiyon": "Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu."
+      },
+      {
+        "oncelik": "yuksek",
+        "alan": "icerik",
+        "baslik": "Bu temaları çoğalt",
+        "detay": "market / vitrin / raf / kasa, menü / restoran / sinema",
+        "aksiyon": "Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: market / vitrin / raf / kasa, menü / restoran / sinema."
+      },
+      {
+        "oncelik": "yuksek",
+        "alan": "baslik_icerik",
+        "baslik": "Başlık çeker, içerik tutmaz: PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
+        "detay": "1012 izlenme ama ort. 9 sn.",
+        "aksiyon": "Aynı konuda daha sert kanca + daha hızlı vaat ile yeniden çek (varyasyon)."
+      },
+      {
+        "oncelik": "orta",
+        "alan": "kesif",
+        "baslik": "Keşif orta — ivme için tekrar format",
+        "detay": "7 günde 3726 izlenme.",
+        "aksiyon": "Top videoların varyasyonunu üret; yayın saatini (12:00/20:00) kaçırma."
+      }
+    ],
+    "oneri_ozet": "Tutma orta seviyede — kanca iyileştir — En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele."
   }
 }
