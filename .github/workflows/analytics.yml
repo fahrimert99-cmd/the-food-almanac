@@ -1,4 +1,4 @@
-name: Haftalik Analytics + Baslik
+name: Haftalik Analytics + Oneri Uygula
 
 on:
   schedule:
@@ -6,31 +6,27 @@ on:
   workflow_dispatch:
     inputs:
       baslik_guclendir:
-        description: "Toplu baslik guclendirme calistir"
+        description: "Toplu baslik guclendirme"
         required: false
         default: "true"
         type: choice
-        options:
-          - "true"
-          - "false"
+        options: ["true", "false"]
       baslik_dry_run:
-        description: "Baslik dry-run (sadece rapor, degistirme)"
+        description: "Baslik dry-run"
         required: false
         default: "false"
         type: choice
-        options:
-          - "true"
-          - "false"
+        options: ["true", "false"]
 
 permissions:
   contents: write
 
 concurrency:
-  group: analytics-baslik
+  group: analytics-oneri
   cancel-in-progress: false
 
 jobs:
-  rapor:
+  rapor-uygula:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -43,14 +39,14 @@ jobs:
       - name: Bagimliliklar
         run: pip install -r requirements.txt
 
-      - name: Haftalik analytics raporu
+      - name: 1) Veri cek + analiz + oneri
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python3 analytics_rapor.py
 
-      - name: Toplu baslik guclendirme
+      - name: 2) Toplu baslik guclendirme
         if: ${{ github.event_name == 'schedule' || inputs.baslik_guclendir == 'true' }}
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -58,24 +54,34 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           BASLIK_MAX: "20"
           BASLIK_DRY_RUN: ${{ inputs.baslik_dry_run || 'false' }}
-        run: python3 baslik_guclendir.py
+        run: |
+          python3 baslik_guclendir.py
+          echo "BASLIK_UYGULANDI=1" >> $GITHUB_ENV
 
-      - name: Artifact yukle
+      - name: 3) Onerileri guvenli uygula
+        env:
+          BASLIK_UYGULANDI: ${{ env.BASLIK_UYGULANDI || '0' }}
+        run: python3 oneri_uygula.py
+
+      - name: Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: analytics-baslik-${{ github.run_id }}
+          name: analytics-oneri-${{ github.run_id }}
           path: |
             analytics_rapor.json
+            oneri_tema.json
             baslik_guclendir_rapor.json
           if-no-files-found: warn
 
-      - name: durum.json kaydet
+      - name: Kaydet (12/20 slot DOKUNULMAZ)
         if: always()
         run: |
           git config user.name "bot"
           git config user.email "bot@users.noreply.github.com"
-          git add durum.json analytics_rapor.json || true
-          git commit -m "analytics: haftalik rapor + ozet" || { echo "degisiklik yok"; exit 0; }
+          git add durum.json analytics_rapor.json oneri_tema.json senaryolar_oncelik.json || true
+          git commit -m "analytics+oneri: veri → analiz → güvenli uygulama (12/20 korunur)" || {
+            echo "degisiklik yok"; exit 0
+          }
           for i in 1 2 3; do
             if git pull --rebase --autostash origin main && git push; then
               echo "push tamam"; exit 0
