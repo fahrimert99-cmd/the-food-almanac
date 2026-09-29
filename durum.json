@@ -84,6 +84,7 @@
     "SADAKAT PROGRAMI SENİ NASIL BAĞLIYOR? 🎯",
     "SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒",
     "SES REKLAMLARI NEDEN YÜKSEK? 🔊",
+    "SICAK HAVADA NEDEN ÜŞÜRSÜN? ❄️",
     "SINIRLI SAYIDA YALANI! ⏳",
     "SON DAKİKA FIRSATI TUZAĞI! ⚡",
     "SON KULLANMA TARİHİ OYUNU! 📅",
@@ -119,15 +120,15 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": "k stok video ✓ (pexels)\n      [Pexels: 8 klip / ~5733 toplam -> 'free trial offer screen']\n      [Pixabay: 12 klip / ~3953 toplam -> 'free trial offer screen']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~5733 / pixabay~3953 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~7569 toplam -> 'entering card details closeup,']\n      [Pixabay: 12 klip / ~1475 toplam -> 'entering card details closeup,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~7569 / pixabay~1475 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'person binge watching closeup,']\n      [Pixabay: 12 klip / ~2041 toplam -> 'person binge watching closeup,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~2041 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=8, pixabay=2, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (14011 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-29T09:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi: yLQLfm28EtE\n✓ Yüklendi: https://youtu.be/0wowoKjj11Y  (yayın: 2026-09-29T09:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n      Oynatma listesine eklendi: 🧠 Psikolojik Satış Oyunları\n      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)\n",
+  "son_rapor": "     [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~1494 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'air conditioning vent closeup,']\n      [Pixabay: 12 klip / ~1397 toplam -> 'air conditioning vent closeup,']\n      [seçim(vision): pexels~8000 / pixabay~1397 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'cool comfortable store interior']\n      [Pixabay: 12 klip / ~1319 toplam -> 'cool comfortable store interior']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~1319 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'hot sunny day outside']\n      [Pixabay: 12 klip / ~5155 toplam -> 'hot sunny day outside']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~5155 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=9, pixabay=1, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (21681 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-29T09:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi: 0wowoKjj11Y\n✓ Yüklendi: https://youtu.be/PT2yl_-oswg  (yayın: 2026-09-29T09:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n      Oynatma listesine eklendi: 🎯 Tüm Tuzaklar\n      son_video.mp4 / son_kapak.jpg kaydedildi (workflow artifact olarak alinir)\n",
   "bekleyen_yorum": {
-    "video_id": "0wowoKjj11Y",
-    "metin": "İLK AY BEDAVA NEDEN VAR hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
+    "video_id": "PT2yl_-oswg",
+    "metin": "SICAK HAVADA NEDEN ÜŞÜRSÜN? ❄️ hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "accd700cf0f5d00e"
+    "hash": "0912d45f6965755d"
   },
-  "son_kategori": "psikoloji",
-  "son_video_id": "0wowoKjj11Y",
-  "son_baslik": "İLK AY BEDAVA NEDEN VAR? 🎬",
+  "son_kategori": "diger",
+  "son_video_id": "PT2yl_-oswg",
+  "son_baslik": "SICAK HAVADA NEDEN ÜŞÜRSÜN? ❄️",
   "son_yayin_zamani": "2026-09-29T09:00:00Z"
 }
