@@ -25,6 +25,7 @@
     "CİPS PAKETİ NEDEN YARI BOŞ? 🥔",
     "DENİZDE KAYBOLAN HAYALET GEMİLER 🚢",
     "DENİZİN DİBİNDEKİ KAYIP ŞEHİRLER 🏛️",
+    "DIŞARIDAN YİYECEK SOKMAYIN YASAĞININ ASIL AMACI 🚫🍿",
     "DUTY FREE GERÇEKTEN UCUZ MU? ✈️",
     "DÜĞÜN SALONU EKSTRALARI! 💒",
     "FAST FOOD MENÜ TUZAĞI! 🍔",
@@ -121,17 +122,17 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": "landı (yayınlanmış konu tekrarı ~ 'ONAY KUTUSUNDAKİ KÜÇÜK TUZAK! ✅'): NEDEN BÜYÜK KUTU KÜÇÜK ÜRÜN? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): İLK ÜRÜN NEDEN PAHALI GÖSTERİLİR? 📊\n      · atlandı (yayınlanmış konu tekrarı ~ 'BENZİNLİK MARKETİ NEDEN PAHALI? ⛽'): MARKALI GİYSİ NEDEN PAHALI? 👕\n      · atlandı (yayınlanmış konu tekrarı ~ 'BOZUK PARA NEDEN VERMEZLER? 🪙'): BOZUK PARANIN KENARI NEDEN TIRTIKLI? 🪙\n      · atlandı (yayınlanmış konu tekrarı ~ 'REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺'): 'BEDAVA' KELİMESİ BEYNİ NASIL KANDIRIR? 🧠\n      · atlandı (yayınlanmış konu tekrarı ~ 'SON KULLANMA TARİHİ OYUNU! 📅'): SON KULLANMA TARİHİNİN ÖNÜNDE FİYAT MANİPÜLASYONU! 📅\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): İNDİRİM ETİKETİ NEDEN HEP KIRMIZI? 🔴\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): EN PAHALI ÜRÜN NEDEN GÖZ HİZASINDA? 👁️\n      · atlandı (yayınlanmış konu tekrarı ~ ''ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰'): “ÜCRETSİZ DENE” NEDEN ÜCRETLİ OLUR? ⏰\n      · atlandı (yayınlanmış konu tekrarı ~ 'UÇAK BİLETİ FİYAT OYUNU! ✈️'): “SANA ÖZEL” FİYAT OYUNU! 🎯\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): SAHTE İNDİRİMİN MATEMATİĞİ: BÜYÜK YALANI NASIL ANLARSIN\n      · atlandı (yayınlanmış konu tekrarı ~ 'PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉'): UN PAKETİ NEDEN 1KG'den 900g'a düştü fiyat aynı? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'MARKET KOKUSU BİLE TUZAK! 👃'): MARKET GİRİŞİNDE KULLANILAN SIĞIR KOKUSU NEDEN DAHA FAZ\n      Tema (katı marka filtresi): 'tuzak' (uygun kalan: 49)\n      Kohort: v2\n[1/3] Senaryo (2/149) [market]: MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖\n✓ Yayın slotu zaten dolu (2026-09-29T17:00:00Z); atlandı: https://youtu.be/NPTOMRJ_yqM\n",
+  "son_rapor": "75 / pixabay~667 -> önce pexels]\n      Sahne 6/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'cinema entrance no food']\n      [Pixabay: 12 klip / ~4034 toplam -> 'cinema entrance no food']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~4034 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~7430 toplam -> 'movie theater concession stand,']\n      [Pixabay: 12 klip / ~851 toplam -> 'movie theater concession stand,']\n      [seçim(vision): pexels~7430 / pixabay~851 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~1602 toplam -> 'popcorn and soda prices,']\n      [Pixabay: 12 klip / ~132 toplam -> 'popcorn and soda prices,']\n      [seçim(vision): pexels~1602 / pixabay~132 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~7313 toplam -> 'audience in dark cinema,']\n      [Pixabay: 12 klip / ~5793 toplam -> 'audience in dark cinema,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~7313 / pixabay~5793 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=9, pixabay=1, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (16179 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-30T09:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi\n✓ Yüklendi: https://youtu.be/Mwkk-R4Mb9U  (yayın: 2026-09-30T09:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n",
   "bekleyen_yorum": {
-    "video_id": "NPTOMRJ_yqM",
-    "metin": "KASAYA YAKLAŞINCA ELİN NEDEN RAFA GİDİYOR hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
+    "video_id": "Mwkk-R4Mb9U",
+    "metin": "DIŞARIDAN YİYECEK SOKMAYIN YASAĞININ ASIL AMACI hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "efcb8c768ec6135e"
+    "hash": "4d756f3d1fe026ff"
   },
-  "son_kategori": "market",
-  "son_video_id": "NPTOMRJ_yqM",
-  "son_baslik": "KASAYA YAKLAŞINCA ELİN NEDEN RAFA GİDİYOR? 🍬",
-  "son_yayin_zamani": "2026-09-29T17:00:00Z",
+  "son_kategori": "diger",
+  "son_video_id": "Mwkk-R4Mb9U",
+  "son_baslik": "DIŞARIDAN YİYECEK SOKMAYIN YASAĞININ ASIL AMACI 🚫🍿",
+  "son_yayin_zamani": "2026-09-30T09:00:00Z",
   "analytics_ozet": {
     "guncelleme": "2026-09-29T04:55:58Z",
     "donem": {
