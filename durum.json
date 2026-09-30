@@ -56,6 +56,7 @@
     "MARKET KOKUSU BİLE TUZAK! 👃",
     "MARKET MARKASI KÖTÜ MÜ? 🏷️",
     "MARKET NEDEN LABİRENT GİBİ? 🌀",
+    "MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖",
     "MARKETLER SENİ BÖYLE KANDIRIYOR! 🛒",
     "MEGALODON HÂLÂ YAŞIYOR OLABİLİR Mİ? 🦈",
     "MENÜDE FİYAT NEDEN SAĞDA DEĞİL? 🍽️",
@@ -122,17 +123,17 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": " konu tekrarı ~ 'ONAY KUTUSUNDAKİ KÜÇÜK TUZAK! ✅'): NEDEN BÜYÜK KUTU KÜÇÜK ÜRÜN? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): İLK ÜRÜN NEDEN PAHALI GÖSTERİLİR? 📊\n      · atlandı (yayınlanmış konu tekrarı ~ 'BENZİNLİK MARKETİ NEDEN PAHALI? ⛽'): MARKALI GİYSİ NEDEN PAHALI? 👕\n      · atlandı (yayınlanmış konu tekrarı ~ 'BOZUK PARA NEDEN VERMEZLER? 🪙'): BOZUK PARANIN KENARI NEDEN TIRTIKLI? 🪙\n      · atlandı (yayınlanmış konu tekrarı ~ 'REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺'): 'BEDAVA' KELİMESİ BEYNİ NASIL KANDIRIR? 🧠\n      · atlandı (yayınlanmış konu tekrarı ~ 'SON KULLANMA TARİHİ OYUNU! 📅'): SON KULLANMA TARİHİNİN ÖNÜNDE FİYAT MANİPÜLASYONU! 📅\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): İNDİRİM ETİKETİ NEDEN HEP KIRMIZI? 🔴\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): EN PAHALI ÜRÜN NEDEN GÖZ HİZASINDA? 👁️\n      · atlandı (yayınlanmış konu tekrarı ~ ''ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰'): “ÜCRETSİZ DENE” NEDEN ÜCRETLİ OLUR? ⏰\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM GÜNÜNDEKİ FİYAT OYUNU! 🛍️'): “SANA ÖZEL” FİYAT OYUNU! 🎯\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): SAHTE İNDİRİMİN MATEMATİĞİ: BÜYÜK YALANI NASIL ANLARSIN\n      · atlandı (yayınlanmış konu tekrarı ~ 'PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉'): UN PAKETİ NEDEN 1KG'den 900g'a düştü fiyat aynı? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'MARKET KOKUSU BİLE TUZAK! 👃'): MARKET GİRİŞİNDE KULLANILAN SIĞIR KOKUSU NEDEN DAHA FAZ\n      Tema (katı marka filtresi): 'tuzak' (uygun kalan: 48)\n      Kohort: v2\n[1/3] Senaryo (5/149) [diger]: ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİK TUZAĞI ⏱️\n✓ Yayın slotu zaten dolu (2026-09-30T09:00:00Z); atlandı: https://youtu.be/Mwkk-R4Mb9U\n",
+  "son_rapor": "abay]\n      Sahne 6/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~3887 toplam -> 'supermarket entrance doors, alternate']\n      [Pixabay: 12 klip / ~431 toplam -> 'supermarket entrance doors, alternate']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~3887 / pixabay~431 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'fresh bread bakery aisle,']\n      [Pixabay: 12 klip / ~1642 toplam -> 'fresh bread bakery aisle,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~1642 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~6402 toplam -> 'long grocery store aisle,']\n      [Pixabay: 12 klip / ~355 toplam -> 'long grocery store aisle,']\n      [seçim(vision): pexels~6402 / pixabay~355 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~7804 toplam -> 'shopping cart filling snacks,']\n      [Pixabay: 12 klip / ~722 toplam -> 'shopping cart filling snacks,']\n      [seçim(vision): pexels~7804 / pixabay~722 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=8, pixabay=2, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (31626 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-09-30T17:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi\n✓ Yüklendi: https://youtu.be/oIyamMc8uBk  (yayın: 2026-09-30T17:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n",
   "bekleyen_yorum": {
-    "video_id": "Mwkk-R4Mb9U",
-    "metin": "DIŞARIDAN YİYECEK SOKMAYIN YASAĞININ ASIL AMACI hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
+    "video_id": "oIyamMc8uBk",
+    "metin": "MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "4d756f3d1fe026ff"
+    "hash": "c745cf421820ab96"
   },
-  "son_kategori": "diger",
-  "son_video_id": "Mwkk-R4Mb9U",
-  "son_baslik": "DIŞARIDAN YİYECEK SOKMAYIN YASAĞININ ASIL AMACI 🚫🍿",
-  "son_yayin_zamani": "2026-09-30T09:00:00Z",
+  "son_kategori": "market",
+  "son_video_id": "oIyamMc8uBk",
+  "son_baslik": "MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖",
+  "son_yayin_zamani": "2026-09-30T17:00:00Z",
   "analytics_ozet": {
     "guncelleme": "2026-09-29T04:55:58Z",
     "donem": {
