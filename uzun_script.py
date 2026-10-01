@@ -2,7 +2,7 @@
 # Varsayilan tema "tuketici_belgesel": 8-12 dk (~1300-1600 kelime) marka/sirket
 # hikayesi + tuketiciye kurulan tuzak (Onur Ulger tarzi "X Neden Y?" belgeseli).
 # Eski ~3 dk "gizem" temasi config.uzun_tema="gizem" ile hala secilebilir.
-import os, json, time, urllib.request
+import os, re, json, time, urllib.request
 from ai_script import _gemini, _poll_post, _poll_get, _temizle, _claude, _claude_key
 
 # Guncel UCRETSIZ katman modelleri; anahtarin erisebildigi ilki secilir.
@@ -104,6 +104,7 @@ Metni 4-7 sahneye böl (sahne başı 20-35 kelime). Her sahne için:
 SADECE şu JSON'u döndür:
 {{"sahneler":[{{"metin":"...","gorsel_prompt":"...","arsiv":false,"gorsel":"..."}}]}}"""
 
+_YABANCI_ALFABE = re.compile(r"[\u0370-\u03FF\u0400-\u052F\u0590-\u08FF\u0E00-\u0E7F\u3000-\u9FFF\uAC00-\uD7AF]+")
 _CLAUDE_KAPALI = False  # kredi/erişim hatası alınca bu koşuda Claude bir daha denenmez
 
 
@@ -193,6 +194,8 @@ def uret_belgesel(baslik, not_=""):
                       bolum_kontrol, f"Bölüm {i+1}/{len(bolumler)}",
                       yedek_kontrol=lambda d, a=int(kelime * 0.45): bolum_kontrol(d, a))
         ss = [s for s in d["sahneler"] if isinstance(s, dict) and (s.get("metin") or "").strip()]
+        for s_ in ss:  # model bazen Arapça/Kiril/CJK karakter sızdırıyor (seslendirmede bozulur)
+            s_["metin"] = re.sub(r"\s{2,}", " ", _YABANCI_ALFABE.sub("", s_["metin"])).strip()
         bolum_isaret.append({"baslik": b.get("baslik", ""), "sahne": len(sahneler)})
         sahneler.extend(ss)
         onceki = ss[-1]["metin"].strip().split(". ")[-1][:200]

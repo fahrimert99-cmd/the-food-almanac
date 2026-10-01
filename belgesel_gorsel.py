@@ -98,7 +98,65 @@ def _kart(W, H):
     return Image.composite(im, ust, maske)
 
 
+# Gemini görsel modelleri (sıra önemli). Ücretsiz katmanda kota 0: Google
+# projesinde faturalandırma açılınca kendiliğinden devreye girer; kota hatası
+# alınca o koşuda bir daha denenmez ve NVIDIA/Pollinations'a düşülür.
+GEMINI_GORSEL_MODELLER = [m.strip() for m in (os.environ.get("GEMINI_GORSEL_MODELLER") or
+                          "gemini-3.1-flash-image,gemini-3-pro-image").split(",") if m.strip()]
+_GEMINI_KAPALI = False
+
+
+def _gemini_anahtar():
+    import json
+    for ad in ("GEMINI_IMAGE_API_KEY", "GEMINI_KEY_UZUN", "GEMINI_API_KEY", "GEMINI_KEY"):
+        raw = (os.environ.get(ad) or "").strip()
+        if raw.startswith("{"):
+            try:
+                raw = (json.loads(raw).get("gemini") or "").strip()
+            except Exception:
+                raw = ""
+        if raw:
+            return raw
+    return ""
+
+
+def _gemini_gorsel(prompt, yol):
+    """Gemini ile 16:9 görsel; başarısızsa None."""
+    global _GEMINI_KAPALI
+    key = _gemini_anahtar()
+    if _GEMINI_KAPALI or not key:
+        return None
+    import base64, json, urllib.error, urllib.request
+    for model in GEMINI_GORSEL_MODELLER:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
+        body = {"contents": [{"parts": [{"text": "Generate an image: " + prompt}]}],
+                "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "16:9"}}}
+        try:
+            req = urllib.request.Request(url, data=json.dumps(body).encode(),
+                                         headers={"Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=150) as r:
+                d = json.loads(r.read().decode())
+            for c in d.get("candidates", []):
+                for part in (c.get("content") or {}).get("parts", []):
+                    inl = part.get("inlineData") or part.get("inline_data")
+                    if inl and inl.get("data"):
+                        with open(yol, "wb") as f:
+                            f.write(base64.b64decode(inl["data"]))
+                        return yol
+        except urllib.error.HTTPError as e:
+            govde = e.read().decode(errors="replace")
+            if e.code in (401, 403) or (e.code == 429 and "limit: 0" in govde):
+                _GEMINI_KAPALI = True
+                print(f"      (Gemini görsel kapalı: HTTP {e.code} — faturalandırma/kota; NVIDIA'ya geçiliyor)")
+                return None
+        except Exception as e:
+            print(f"      (Gemini görsel [{model}] hata: {str(e)[:80]})")
+    return None
+
+
 def _uret(prompt, yol):
+    if _gemini_gorsel(prompt, yol):
+        return yol
     try:
         import nvidia_araclar as NA
         return NA.gorsel_uret(prompt, yol, genislik=1344, yukseklik=768)
@@ -119,6 +177,8 @@ def sahne_gorselleri(sahneler, boyut, tmp, paralel=3):
     def _is(a):
         i, p, yol = a
         sonuc = _uret(p, yol)
+        if not sonuc:  # sadeleştirilmiş promptla bir kez daha (önceki kareyi tekrar kullanmaktan iyi)
+            sonuc = _uret(", ".join(p.split(", ")[:2]) + ", photorealistic", yol)
         print(f"      Sahne {i + 1}/{len(isler)}: {'AI görsel ✓' if sonuc else 'üretilemedi'}")
         return i, sonuc
 
