@@ -155,6 +155,28 @@ def _konturlu_yazi(d, xy, metin, font, dolgu, kontur, kalinlik):
     d.text(xy, metin, font=font, fill=dolgu, stroke_width=kalinlik, stroke_fill=kontur)
 
 
+def _konu_kutusu(im, x_bas):
+    """x_bas'ın sağındaki en parlak bölgenin kutusu (kapakta konunun yeri)."""
+    W, H = im.size
+    l = im.convert("L").crop((x_bas, 0, W, H))
+    esik = sorted(l.getdata())[int(l.width * l.height * 0.93)]  # en parlak %7
+    if esik < 60:
+        return None
+    k = l.point(lambda v: 255 if v >= esik else 0).filter(ImageFilter.MaxFilter(5)).getbbox()
+    return (k[0] + x_bas, k[1], k[2] + x_bas, k[3]) if k else None
+
+
+def _ok(d, bas, son, renk=KIRMIZI, kalinlik=14, uc=46):
+    """bas -> son yönünde kalın ok (uç son noktada)."""
+    import math
+    a = math.atan2(son[1] - bas[1], son[0] - bas[0])
+    gx, gy = son[0] - uc * 0.8 * math.cos(a), son[1] - uc * 0.8 * math.sin(a)
+    d.line((bas[0], bas[1], gx, gy), fill=renk, width=kalinlik)
+    sol_k = (son[0] - uc * math.cos(a - 0.5), son[1] - uc * math.sin(a - 0.5))
+    sag_k = (son[0] - uc * math.cos(a + 0.5), son[1] - uc * math.sin(a + 0.5))
+    d.polygon([son, sol_k, sag_k], fill=renk)
+
+
 def kapak(arka_prompt, ust, alt, cikti="output/uzun_kapak.jpg", W=1280, H=720, arka_yol=None):
     """Rakip tarzı kapak. arka_yol verilirse AI çağrılmaz (test için)."""
     os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
@@ -175,6 +197,7 @@ def kapak(arka_prompt, ust, alt, cikti="output/uzun_kapak.jpg", W=1280, H=720, a
     maske = Image.linear_gradient("L").rotate(90, expand=True).resize((W, H))
     im = Image.composite(im, Image.new("RGB", (W, H), (0, 0, 0)),
                          maske.point(lambda v: min(255, int(v * 1.6 + 40))))
+    arka = im.copy()  # yazısız hâl: ok için konunun yeri buradan bulunur
     d = ImageDraw.Draw(im)
     ust, alt = (ust or "").strip().upper(), (alt or "").strip().upper()
     sol = int(W * 0.045)
@@ -190,7 +213,7 @@ def kapak(arka_prompt, ust, alt, cikti="output/uzun_kapak.jpg", W=1280, H=720, a
     _konturlu_yazi(d, (sol - b[0], y1 - b[1]), ust, f1, (255, 255, 255), (120, 0, 0), 2)
     # Alt satır: dev beyaz yazı, kalın siyah kontur + gölge
     f2 = _font(int(H * 0.30))
-    while f2.size > 40 and d.textlength(alt, font=f2) > W * 0.58:
+    while f2.size > 40 and d.textlength(alt, font=f2) > W * 0.52:
         f2 = _font(f2.size - 6)
     b2 = d.textbbox((0, 0), alt, font=f2)
     y2 = y1 + th + pad * 3
@@ -199,12 +222,18 @@ def kapak(arka_prompt, ust, alt, cikti="output/uzun_kapak.jpg", W=1280, H=720, a
     im = Image.alpha_composite(im.convert("RGBA"), golge.filter(ImageFilter.GaussianBlur(6))).convert("RGB")
     d = ImageDraw.Draw(im)
     _konturlu_yazi(d, (sol - b2[0], y2 - b2[1]), alt, f2, (255, 255, 255), (0, 0, 0), max(4, f2.size // 22))
-    # Kırmızı ok: yazıdan görsele
-    x0 = sol + max(tw, b2[2] - b2[0]) + int(W * 0.03)
-    yk = y2 + (b2[3] - b2[1]) // 2
-    if x0 < W * 0.75:
-        x1 = min(W * 0.86, x0 + W * 0.13)
-        d.line((x0, yk, x1 - 18, yk - 30), fill=KIRMIZI, width=14)
-        d.polygon([(x1, yk - 38), (x1 - 46, yk - 46), (x1 - 26, yk - 2)], fill=KIRMIZI)
+    # Kırmızı ok: konunun ÜSTÜNE değil, ona doğru (ilk önizlemede ok "A101"
+    # yazısının üstüne binmişti). Konu = yazının sağındaki en parlak bölge.
+    yazi_sag = sol + max(tw, b2[2] - b2[0]) + int(W * 0.02)
+    konu = _konu_kutusu(arka, yazi_sag) if arka is not None else None
+    if konu:
+        kx0, ky0, kx1, ky1 = konu
+        kcx = (kx0 + kx1) // 2
+        if ky1 + 150 < H - 15:            # altında yer var: aşağıdan konuya
+            _ok(d, (kcx - 70, ky1 + 150), (kcx - 10, ky1 + 18))
+        elif kx0 - yazi_sag > 150:         # solunda yer var: soldan konuya
+            kcy = (ky0 + ky1) // 2
+            _ok(d, (kx0 - 150, kcy + 50), (kx0 - 18, kcy + 5))
+        # yer yoksa ok çizilmez (konunun üstüne binmesindense hiç olmasın)
     im.save(cikti, quality=93)
     return cikti
