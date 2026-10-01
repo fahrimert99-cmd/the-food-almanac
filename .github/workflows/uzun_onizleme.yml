@@ -70,7 +70,7 @@ jobs:
         if: always()
         run: |
           mkdir -p onizleme/uzun
-          for f in kapak.jpg kareler.jpg aciklama.txt senaryo.json; do
+          for f in kapak.jpg kapak_bg.jpg kareler.jpg aciklama.txt senaryo.json; do
             [ -f "output/onizleme/$f" ] && cp "output/onizleme/$f" onizleme/uzun/
           done
           cp uzun_onizleme.log onizleme/uzun/ 2>/dev/null || true

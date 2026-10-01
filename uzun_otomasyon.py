@@ -91,6 +91,9 @@ def _onizleme_kaydet(uzun, cikti, kapak):
     os.makedirs(ONIZLEME_DIR,exist_ok=True)
     shutil.copy(cikti,os.path.join(ONIZLEME_DIR,"video.mp4"))
     if kapak and os.path.exists(kapak): shutil.copy(kapak,os.path.join(ONIZLEME_DIR,"kapak.jpg"))
+    # Yazısız arka plan: kapak yazısı değişirse yeni AI görseli üretmeden yeniden basılır.
+    bg=os.path.splitext(kapak or "")[0]+"_bg.jpg"
+    if kapak and os.path.exists(bg): shutil.copy(bg,os.path.join(ONIZLEME_DIR,"kapak_bg.jpg"))
     with open(os.path.join(ONIZLEME_DIR,"aciklama.txt"),"w",encoding="utf-8") as f:
         f.write(f"BAŞLIK: {uzun['baslik']}\n\nETİKETLER: {', '.join(uzun.get('etiketler') or [])}\n\n{uzun.get('aciklama','')}\n")
     with open(os.path.join(ONIZLEME_DIR,"senaryo.json"),"w",encoding="utf-8") as f:

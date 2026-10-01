@@ -1,0 +1,42 @@
+name: Onizleme Kapak Yenile (gecici)
+
+# Önizleme kapağını senaryo.json'daki kapak_gorsel promptuyla yeniden üretir
+# (tek AI görsel) ve yazısız arka planı da kaydeder. Video yeniden üretilmez.
+on:
+  push:
+    branches: [claude/adoring-sagan-ni2qvl]
+    paths: [.github/workflows/kapak_yenile.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  kapak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Kapak uret
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          KAPAK_UST: "NEDEN"
+          KAPAK_ALT: "BİTİYOR?"
+        run: |
+          python3 - <<'PY'
+          import json, os, belgesel_gorsel as BG
+          s = json.load(open("onizleme/uzun/senaryo.json", encoding="utf-8"))
+          BG.kapak(s.get("kapak_gorsel"), os.environ["KAPAK_UST"], os.environ["KAPAK_ALT"],
+                   "onizleme/uzun/kapak.jpg")
+          PY
+          ls -la onizleme/uzun
+      - name: Dala kaydet
+        run: |
+          git config user.name "onizleme-bot"
+          git config user.email "onizleme-bot@users.noreply.github.com"
+          git add -f onizleme/uzun/kapak.jpg onizleme/uzun/kapak_bg.jpg
+          git commit -m "onizleme: kapak NEDEN BİTİYOR? (+ yazısız arka plan)" || exit 0
+          git push origin HEAD:claude/adoring-sagan-ni2qvl
