@@ -1,27 +1,35 @@
 [
   {
-    "baslik": "Temu Nasıl Bu Kadar Ucuz?",
-    "not": "Fabrikadan doğrudan satış modeli, oyunlaştırma (çark, kupon), uzun teslimat; tüketicinin ödediği gizli bedel: ürün kalitesi, veri, dürtüsel alışveriş."
-  },
-  {
-    "baslik": "Getir 10 Dakikada Nasıl Getiriyordu?",
-    "not": "Karanlık mağaza modeli, kurye ekonomisi, yatırımcı parasıyla büyüme ve küçülme; ucuz hızın gerçek maliyeti, sepet büyütme taktikleri."
-  },
-  {
     "baslik": "A101 Aldın Aldın Neden Hep Bitiyor?",
     "not": "Aktüel ürün modeli, sınırlı stok ve kıtlık psikolojisi, perşembe kuyruğu; plansız alışverişten korunma."
   },
   {
-    "baslik": "McDonald's Aslında Ne Satıyor?",
-    "not": "Franchise ve gayrimenkul modeli, menü tasarımı, menüye yükseltme; menü psikolojisinden korunma."
+    "baslik": "Temu Nasıl Bu Kadar Ucuz?",
+    "not": "Fabrikadan doğrudan satış modeli, oyunlaştırma (çark, kupon), uzun teslimat; tüketicinin ödediği gizli bedel: ürün kalitesi, veri, dürtüsel alışveriş."
   },
   {
     "baslik": "Amazon Prime İptali Neden Bu Kadar Zor?",
     "not": "Üyelik ekonomisi, iptal akışlarındaki karanlık tasarım (dark pattern) eleştirileri, otomatik yenileme; abonelik denetimi rehberi."
   },
   {
+    "baslik": "Getir 10 Dakikada Nasıl Getiriyordu?",
+    "not": "Karanlık mağaza modeli, kurye ekonomisi, yatırımcı parasıyla büyüme ve küçülme; ucuz hızın gerçek maliyeti, sepet büyütme taktikleri."
+  },
+  {
+    "baslik": "Yemek Uygulamalarında Yemek Neden Daha Pahalı?",
+    "not": "Platform komisyonu, restoranın fiyat yansıtması, servis ve teslimat ücretleri, kampanya bağımlılığı; uygulama ile restoran fiyatı karşılaştırması."
+  },
+  {
+    "baslik": "Market Kartları Seni Neden Bedavaya Üye Yapıyor?",
+    "not": "Sadakat programlarının veri ekonomisi, kişiselleştirilmiş kampanyalar, puan psikolojisi; sadakat kartını lehine kullanma."
+  },
+  {
     "baslik": "Netflix Neden Şifre Paylaşımını Yasakladı?",
     "not": "Büyüme stratejisi değişimi, reklamlı paket, fiyat artışları; abonelik maliyetini düşürme yolları."
+  },
+  {
+    "baslik": "McDonald's Aslında Ne Satıyor?",
+    "not": "Franchise ve gayrimenkul modeli, menü tasarımı, menüye yükseltme; menü psikolojisinden korunma."
   },
   {
     "baslik": "Apple Şarj Aletini Kutudan Neden Çıkardı?",
@@ -40,20 +48,12 @@
     "not": "Düşük maliyetli havayolu modeli, ek ücretler (bagaj, koltuk, check-in), dinamik fiyat; gerçek bilet maliyetini hesaplama."
   },
   {
-    "baslik": "Yemek Uygulamalarında Yemek Neden Daha Pahalı?",
-    "not": "Platform komisyonu, restoranın fiyat yansıtması, servis ve teslimat ücretleri, kampanya bağımlılığı; uygulama ile restoran fiyatı karşılaştırması."
-  },
-  {
     "baslik": "Duolingo Seni Neden Suçlu Hissettiriyor?",
     "not": "Seri (streak) mekaniği, bildirim psikolojisi, freemium ve premium dönüşümü; uygulama alışkanlık tuzaklarından korunma."
   },
   {
     "baslik": "Nespresso Kapsülü Neden Sadece Kendi Makinesine Uyuyor?",
     "not": "Kapalı sistem stratejisi, patentler ve uyumlu kapsül pazarı; fincan başı maliyet hesabı."
-  },
-  {
-    "baslik": "Market Kartları Seni Neden Bedavaya Üye Yapıyor?",
-    "not": "Sadakat programlarının veri ekonomisi, kişiselleştirilmiş kampanyalar, puan psikolojisi; sadakat kartını lehine kullanma."
   },
   {
     "baslik": "Starbucks Kahvesi Neden Bu Kadar Pahalı?",

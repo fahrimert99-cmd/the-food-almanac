@@ -72,11 +72,11 @@ Emoji YOK, madde işareti YOK, başlık satırı YOK; 'script' düz akıcı para
 Anlatımı 35-50 sahneye böl. Sahne 'metin'leri script'in SIRAYLA ve EKSİKSİZ parçaları olsun (birleştirildiğinde script'in tamamı çıksın).
 Her sahne için 'gorsel': o cümlede anlatılan şeyi gösteren 2-4 KELİMELİK, SOMUT, ARANABİLİR İngilizce stok video anahtar kelimesi.
 Somut nesne/mekân/eylem kullan; örnek: "supermarket shopping cart", "credit card payment", "warehouse forklift", "people using smartphone".
-Marka logosu/ürünü yerine genel karşılığını yaz ("coffee shop counter", "fast food restaurant", "delivery courier scooter").
+Marka adı/logosu stok sitelerde bulunmaz ve telif riski taşır: markanın GENEL karşılığını yaz ("discount supermarket aisle", "crowded store checkout queue", "coffee shop counter", "fast food restaurant", "delivery courier scooter").
 YASAK: soyut/kavramsal ifadeler ("conceptual", "abstract", "cinematic shot", "shadowy figure" gibi). Başa "a"/"the" KOYMA.
 ÇOK ÖNEMLİ — TÜRKÇE YAZIM: 'script', 'baslik', 'aciklama', 'kanca' ve sahne 'metin' alanlarını KUSURSUZ Türkçe imlâ ile yaz; ç, ğ, ı, İ, ö, ş, ü harflerini ASLA ASCII'ye sadeleştirme. (Yalnızca 'gorsel' İngilizce.)
 SADECE şu JSON'u döndür:
-{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade (örn. 'BEDAVA DEĞİL', 'SEN ÖDÜYORSUN', 'ASIL ÜRÜN SENSİN'); ZORUNLU","script":"...","sahneler":[{{"metin":"...","gorsel":"english stock keywords"}}]}}"""
+{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade ; marka adı YAZI olarak geçebilir (örn. 'A101'İN SIRRI', 'BEDAVA DEĞİL', 'ASIL ÜRÜN SENSİN'); ZORUNLU","script":"...","sahneler":[{{"metin":"...","gorsel":"english stock keywords"}}]}}"""
 
 TEMALAR = {"tuketici_belgesel": (BELGESEL_PROMPT, 1200), "gizem": (UZUN_PROMPT, 300)}
 
@@ -189,5 +189,5 @@ def uret(baslik, tema="tuketici_belgesel", not_=""):
 
 if __name__ == "__main__":
     import sys
-    print(json.dumps(uret(sys.argv[1] if len(sys.argv) > 1 else "Temu Nasıl Bu Kadar Ucuz?"),
+    print(json.dumps(uret(sys.argv[1] if len(sys.argv) > 1 else "A101 Aldın Aldın Neden Hep Bitiyor?"),
                      ensure_ascii=False, indent=2))
