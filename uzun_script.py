@@ -1,4 +1,7 @@
-# uzun_script.py — ~2.5-3 dk (~400 kelime) UZUN video metni uretir.
+# uzun_script.py — UZUN (yatay) video metni uretir.
+# Varsayilan tema "tuketici_belgesel": 8-12 dk (~1300-1600 kelime) marka/sirket
+# hikayesi + tuketiciye kurulan tuzak (Onur Ulger tarzi "X Neden Y?" belgeseli).
+# Eski ~3 dk "gizem" temasi config.uzun_tema="gizem" ile hala secilebilir.
 import os, json, time, urllib.request
 from ai_script import _gemini, _poll_post, _poll_get, _temizle, _claude, _claude_key
 
@@ -9,7 +12,7 @@ def _gemini_uzun(prompt, key, model):
     # ai_script._gemini ile ayni, ama maxOutputTokens buyuk (uzun JSON kesilmesin).
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     body = {"contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"temperature": 0.9, "maxOutputTokens": 8192,
+            "generationConfig": {"temperature": 0.9, "maxOutputTokens": 16384,
                                  "responseMimeType": "application/json"}}
     req = urllib.request.Request(url, data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json"})
@@ -35,6 +38,47 @@ Bu harfleri ASLA ASCII karşılıklarına (c, g, i, o, s, u) sadeleştirme; aksa
 (NOT: yalnızca 'gorsel' alanı İngilizce olacak; onun dışındaki tüm metin doğru Türkçe karakterlerle yazılır.)
 SADECE şu JSON'u döndür:
 {{"baslik":"...","aciklama":"2-3 cümle","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8"],"kanca":"EN FAZLA 3 kelimelik ŞOK EDİCİ, kaydırmayı durduran, merak uyandıran Türkçe açılış (kapakta da kullanılır) - izleyici ilk 2 saniyede DURSUN; ZORUNLU, asla boş bırakma; örnek: 'GEMİLER NEDEN KAYBOLUYOR', 'KİM GÖNDERDİ', 'HERKES YANILDI'","script":"...","sahneler":[{{"metin":"...","gorsel":"cinematic english"}}]}}"""
+
+
+BELGESEL_PROMPT = """BAŞLIK: {baslik}
+{not_satiri}Bu başlık için TUZAK AVCISI kanalında yayınlanacak YATAY, 8-12 dakikalık bir "tüketici belgeseli" seslendirme metni yaz.
+
+KONUMLANDIRMA: Herkesin bildiği bir markanın/sektörün iş modelini bir HİKÂYE olarak anlat, sonra o modelin TÜKETİCİYE nasıl yansıdığını (fark etmeden ödediğin bedel, kurulan tuzak) göster ve izleyiciye somut korunma yolları ver. Şirket tarihi tek başına amaç değil; amaç "bunu bilen tüketici bir daha kanmaz".
+
+TON: Sakin, meraklı, güven veren bir belgesel anlatıcısı; birinci tekil şahıs ("bu videoda ... bakıyoruz"). Abartısız, sansasyonsuz; bağırmayan ama merak taşıyan dil. İzleyiciye "sen" diye hitap et.
+
+UZUNLUK: 1300-1600 kelime (zorunlu; 1200'ün altı kabul edilmez).
+
+YAPI (bölüm başlığı YAZMA, akıcı geçişlerle anlat):
+1) SOĞUK AÇILIŞ (ilk 20 sn): Somut bir sahne, kişi ya da şaşırtıcı bir sayıyla başla; başlıktaki soruyu yeniden sor ve cevabın beklenenden farklı olduğunu ima et. Ardından tek cümleyle: "Burası Tuzak Avcısı; hayatın içindeki tuzakları birlikte çözüyoruz." ve bu videoda neyi öğreneceğini söyle.
+2) HİKÂYENİN BAŞLANGICI: Şirketin/modelin nasıl doğduğu; kurucular, yıl, ilk fikir, dönüm noktası. Yalnızca KAMUYA AÇIK, iyi bilinen bilgiler.
+3) MEKANİZMA: Para gerçekte nereden kazanılıyor? İş modelini adım adım, gündelik örneklerle açıkla (bir terim varsa adını ver ve basitçe anlat).
+4) TÜKETİCİ TARAFI: Bu model senin cüzdanına, alışkanlığına, dikkatine nasıl yansıyor? Fark edilmeyen maliyetler, psikolojik taktikler, varsayılan ayarlar.
+5) DÖNÜM NOKTASI: En şaşırtıcı detay ya da bir kriz/dava/değişiklik ("ama hikâye burada bitmiyor" gibi açık döngülerle merakı taze tut).
+6) KORUNMA REHBERİ: 3-5 somut, uygulanabilir adım (ne kontrol etmeli, hangi ayarı kapatmalı, neyi karşılaştırmalı).
+7) KAPANIŞ: Ana fikri tek cümlede bağla; "bir sonraki tuzağı kaçırmamak için abone ol" tarzı kısa çağrı ve yorumda izleyiciye tek bir soru sor.
+Her 60-90 saniyede yeni bir soru veya merak aç ki izleyici sonuna kadar kalsın.
+
+DOĞRULUK VE HUKUK (ÇOK ÖNEMLİ):
+- Uydurma istatistik, tarih, alıntı, dava YAZMA. Emin olmadığın sayı yerine nitel ifade kullan ("milyonlarca", "yıllar içinde").
+- Bir şirketi suç işlemekle SUÇLAMA; "yasadışı", "dolandırıyor" gibi hüküm kurma. Taktikleri "iş modeli", "tasarım tercihi", "pazarlama stratejisi" olarak anlat; tartışmalı konularda "eleştirmenlere göre", "araştırmalar gösteriyor ki" de.
+- Hem şirketin mantığını hem tüketicinin bedelini adil göster.
+
+BAŞLIK KURALI: "<Marka/Konu> Neden ...?" ya da "<Marka> Nasıl ...?" kalıbında, en fazla 60 karakter, cümle düzeninde (TAMAMI BÜYÜK HARF DEĞİL), emoji YOK. Verilen başlığı koru; yalnızca yazım hatası varsa düzelt.
+AÇIKLAMA: 2 kısa paragraf: (1) başlıktaki soruyu tekrar soran ve videoda anlatılanları özetleyen 2-3 cümle, (2) "Bu videoda ..." diye başlayıp ele alınan 3-4 konuyu sayan bir cümle. Emoji YOK.
+ETİKETLER: 10-12 Türkçe arama terimi (marka adı, "<marka> neden", sektör, "tüketici hakları", "belgesel" dahil).
+
+Emoji YOK, madde işareti YOK, başlık satırı YOK; 'script' düz akıcı paragraflardan oluşan tek metin.
+Anlatımı 35-50 sahneye böl. Sahne 'metin'leri script'in SIRAYLA ve EKSİKSİZ parçaları olsun (birleştirildiğinde script'in tamamı çıksın).
+Her sahne için 'gorsel': o cümlede anlatılan şeyi gösteren 2-4 KELİMELİK, SOMUT, ARANABİLİR İngilizce stok video anahtar kelimesi.
+Somut nesne/mekân/eylem kullan; örnek: "supermarket shopping cart", "credit card payment", "warehouse forklift", "people using smartphone".
+Marka logosu/ürünü yerine genel karşılığını yaz ("coffee shop counter", "fast food restaurant", "delivery courier scooter").
+YASAK: soyut/kavramsal ifadeler ("conceptual", "abstract", "cinematic shot", "shadowy figure" gibi). Başa "a"/"the" KOYMA.
+ÇOK ÖNEMLİ — TÜRKÇE YAZIM: 'script', 'baslik', 'aciklama', 'kanca' ve sahne 'metin' alanlarını KUSURSUZ Türkçe imlâ ile yaz; ç, ğ, ı, İ, ö, ş, ü harflerini ASLA ASCII'ye sadeleştirme. (Yalnızca 'gorsel' İngilizce.)
+SADECE şu JSON'u döndür:
+{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade (örn. 'BEDAVA DEĞİL', 'SEN ÖDÜYORSUN', 'ASIL ÜRÜN SENSİN'); ZORUNLU","script":"...","sahneler":[{{"metin":"...","gorsel":"english stock keywords"}}]}}"""
+
+TEMALAR = {"tuketici_belgesel": (BELGESEL_PROMPT, 1200), "gizem": (UZUN_PROMPT, 300)}
 
 
 _TR_OZEL = set("çğıöşüÇĞİÖŞÜ")  # Türkçe'ye özgü, ASCII karşılığı olmayan harfler
@@ -69,24 +113,37 @@ def _gemini_key():
     return raw
 
 
-def uret(baslik):
-    prompt = UZUN_PROMPT.format(baslik=baslik)
+def _yeterli(data, min_kelime):
+    """Script var, sahneli, Türkçe karakterli ve hedef uzunlukta mı?"""
+    sc = data.get("script") or ""
+    if not (sc and data.get("sahneler")):
+        return "bos yanit"
+    if not _turkce_yeterli(sc):
+        return "turkce karakter eksik"
+    if len(sc.split()) < min_kelime:
+        return f"kisa ({len(sc.split())} kelime < {min_kelime})"
+    return None
+
+
+def uret(baslik, tema="tuketici_belgesel", not_=""):
+    sablon, min_kelime = TEMALAR.get(tema, TEMALAR["tuketici_belgesel"])
+    not_satiri = f"YAPIMCI NOTU (açı/odak): {not_}\n" if not_ else ""
+    prompt = (sablon.format(baslik=baslik, not_satiri=not_satiri) if sablon is BELGESEL_PROMPT
+              else sablon.format(baslik=baslik))
     hatalar = []
     # 1) Anthropic Claude (en kaliteli/en tutarli Turkce) — birincil saglayici
     ckey = _claude_key()
     if ckey:
         for deneme in range(2):
             try:
-                data = json.loads(_temizle(_claude(prompt, ckey)))
-                if data.get("script") and data.get("sahneler"):
-                    if _turkce_yeterli(data["script"]):
-                        print("    Senaryo: Anthropic Claude")
-                        return data
-                    hatalar.append(f"claude#{deneme+1}: turkce karakter eksik")
-                    if deneme == 0:
-                        continue
-                    break
-                hatalar.append("claude: bos yanit")
+                data = json.loads(_temizle(_claude(prompt, ckey, max_tokens=16000)))
+                sorun = _yeterli(data, min_kelime)
+                if not sorun:
+                    print(f"    Senaryo: Anthropic Claude ({len(data['script'].split())} kelime)")
+                    return data
+                hatalar.append(f"claude#{deneme+1}: {sorun}")
+                if deneme == 0 and sorun != "bos yanit":
+                    continue
                 break
             except Exception as e:
                 msg = str(e)
@@ -101,18 +158,15 @@ def uret(baslik):
             for deneme in range(2):
                 try:
                     data = json.loads(_temizle(_gemini_uzun(prompt, key, model)))
-                    if data.get("script") and data.get("sahneler"):
-                        if _turkce_yeterli(data["script"]):
-                            print(f"    Senaryo: Gemini ({model})")
-                            return data
-                        # Diakritiksiz (ASCII) uretim -> ses ve altyazi Turkce
-                        # karakter kullanmaz; kabul etme, tekrar dene.
-                        hatalar.append(f"{model}#{deneme+1}: turkce karakter eksik")
-                        if deneme == 0:
-                            continue  # ayni modelle bir kez daha dene
-                        break         # sonraki modele gec
-                    hatalar.append(f"{model}: bos yanit")
-                    break
+                    sorun = _yeterli(data, min_kelime)
+                    if not sorun:
+                        print(f"    Senaryo: Gemini ({model}, {len(data['script'].split())} kelime)")
+                        return data
+                    # Diakritiksiz (ASCII) ya da kisa uretim -> kabul etme, tekrar dene.
+                    hatalar.append(f"{model}#{deneme+1}: {sorun}")
+                    if deneme == 0 and sorun != "bos yanit":
+                        continue  # ayni modelle bir kez daha dene
+                    break         # sonraki modele gec
                 except Exception as e:
                     msg = str(e)
                     hatalar.append(f"{model}#{deneme+1}: {msg[:90]}")
@@ -123,13 +177,11 @@ def uret(baslik):
                    ("poll_get", lambda: _poll_get(prompt))):
         try:
             data = json.loads(_temizle(fn()))
-            if data.get("script") and data.get("sahneler"):
-                if _turkce_yeterli(data["script"]):
-                    print(f"    Senaryo: {ad} (yedek)")
-                    return data
-                hatalar.append(f"{ad}: turkce karakter eksik")
-            else:
-                hatalar.append(f"{ad}: bos")
+            sorun = _yeterli(data, min_kelime)
+            if not sorun:
+                print(f"    Senaryo: {ad} (yedek)")
+                return data
+            hatalar.append(f"{ad}: {sorun}")
         except Exception as e:
             hatalar.append(f"{ad}: {str(e)[:90]}")
     raise RuntimeError("Uzun script uretilemedi: " + " | ".join(hatalar[:8]))
@@ -137,5 +189,5 @@ def uret(baslik):
 
 if __name__ == "__main__":
     import sys
-    print(json.dumps(uret(sys.argv[1] if len(sys.argv) > 1 else "BERMUDA ŞEYTAN ÜÇGENİNDE GERÇEKTE NE OLUYOR?"),
+    print(json.dumps(uret(sys.argv[1] if len(sys.argv) > 1 else "Temu Nasıl Bu Kadar Ucuz?"),
                      ensure_ascii=False, indent=2))

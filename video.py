@@ -687,15 +687,43 @@ def _eleven_key():
             or _keys().get("eleven", "")).strip()
 
 
-def _eleven_seslendir(text, mp3_path, voice_id=None):
-    """ElevenLabs ile gerçekçi seslendirme + kelime zamanlaması (alt yazı senkronu).
-    voice_id verilirse o kullanilir (pipeline'a ozel ses); yoksa ELEVEN_VOICE_ID
-    env'i, o da yoksa varsayilan ses."""
+# ElevenLabs tek istekte ~10.000 karakter kabul eder; uzun (8-12 dk) anlatimlar
+# cumle sinirindan bu boyutta parcalara bolunup arka arkaya eklenir.
+ELEVEN_PARCA_KARAKTER = 4500
+
+
+def _eleven_parcala(text, sinir=ELEVEN_PARCA_KARAKTER):
+    """Metni cumle sinirlarindan, her biri 'sinir' karakteri asmayan parcalara boler."""
+    if len(text) <= sinir:
+        return [text]
+    cumleler = re.split(r"(?<=[.!?…])\s+", text.strip())
+    parcalar, cur = [], ""
+    for c in cumleler:
+        if cur and len(cur) + 1 + len(c) > sinir:
+            parcalar.append(cur); cur = c
+        else:
+            cur = f"{cur} {c}".strip()
+    if cur:
+        parcalar.append(cur)
+    return parcalar
+
+
+def _eleven_kalan_karakter(key):
+    """Abonelikte kalan karakter kotasi; okunamazsa None (kontrol atlanir)."""
+    import urllib.request
+    try:
+        req = urllib.request.Request("https://api.elevenlabs.io/v1/user/subscription",
+                                     headers={"xi-api-key": key})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            d = json.loads(r.read().decode())
+        return int(d["character_limit"]) - int(d["character_count"])
+    except Exception:
+        return None
+
+
+def _eleven_tek(text, mp3_path, voice_id, key, speed):
+    """Tek ElevenLabs istegi: mp3 yazar, kelime zamanlamalarini dondurur."""
     import urllib.request, urllib.error, base64 as _b64
-    key = _eleven_key()
-    if not key:
-        raise RuntimeError("ElevenLabs anahtarı yok")
-    voice_id = (voice_id or "").strip() or os.environ.get("ELEVEN_VOICE_ID", "").strip() or "dDcfsSsiSzmphdMGCECb"
     # output_format=mp3_44100_128: ücretsiz/Starter planda İZİNLİ en yüksek mp3
     # (192 yalnızca Creator+; 403 verip ElevenLabs'i komple devre dışı bırakıyordu).
     # Kalan cızırtı temizliği _ses_temizle (de-esser) ile yapılır.
@@ -704,11 +732,11 @@ def _eleven_seslendir(text, mp3_path, voice_id=None):
     body = {"text": text, "model_id": "eleven_multilingual_v2",
             # Daha PÜRÜZSÜZ ses: speaker_boost kapalı + style=0 (tiz/cızırtı
             # artefaktlarını azaltır), stability biraz yüksek, similarity ölçülü.
-            # speed: 1.12 -> ~%12 hizli (Shorts icin ideal sure; pitch bozulmaz,
-            # kelime timestamp'leri de hizli sese gore doner, altyazi senkron kalir).
+            # speed: Shorts icin 1.12 (~%12 hizli); uzun belgeselde ~1.0 dogal tempo.
+            # Pitch bozulmaz, kelime timestamp'leri de sese gore doner.
             "voice_settings": {"stability": 0.55, "similarity_boost": 0.72,
                                "style": 0.0, "use_speaker_boost": False,
-                               "speed": 1.12}}
+                               "speed": speed}}
     req = urllib.request.Request(url, data=json.dumps(body).encode(),
                                  headers={"xi-api-key": key, "Content-Type": "application/json"})
     try:
@@ -734,6 +762,40 @@ def _eleven_seslendir(text, mp3_path, voice_id=None):
             cur += ch; we = e
     if cur:
         boundaries.append({"start": ws, "dur": max(0.05, we - ws), "text": cur})
+    return boundaries
+
+
+def _eleven_seslendir(text, mp3_path, voice_id=None, speed=1.12):
+    """ElevenLabs ile gerçekçi seslendirme + kelime zamanlaması (alt yazı senkronu).
+    voice_id verilirse o kullanilir (pipeline'a ozel ses); yoksa ELEVEN_VOICE_ID
+    env'i, o da yoksa varsayilan ses. Uzun metin parcalara bolunur, sesler
+    birlestirilir ve kelime zamanlari parca sureleriyle kaydirilir."""
+    key = _eleven_key()
+    if not key:
+        raise RuntimeError("ElevenLabs anahtarı yok")
+    voice_id = (voice_id or "").strip() or os.environ.get("ELEVEN_VOICE_ID", "").strip() or "dDcfsSsiSzmphdMGCECb"
+    parcalar = _eleven_parcala(text)
+    if len(parcalar) == 1:
+        return _eleven_tek(text, mp3_path, voice_id, key, speed)
+    # Kota yetmezse hic baslama: yarim kalan uzun anlatim krediyi bosa harcar.
+    kalan = _eleven_kalan_karakter(key)
+    if kalan is not None and kalan < len(text):
+        raise RuntimeError(f"ElevenLabs kotası yetersiz (kalan {kalan}, gereken {len(text)})")
+    tmp = tempfile.mkdtemp()
+    dosyalar, boundaries, ofset = [], [], 0.0
+    for n, parca in enumerate(parcalar):
+        yol = os.path.join(tmp, f"p{n}.mp3")
+        for b in _eleven_tek(parca, yol, voice_id, key, speed):
+            boundaries.append({**b, "start": b["start"] + ofset})
+        ofset += sure_al(yol)
+        dosyalar.append(yol)
+    liste = os.path.join(tmp, "liste.txt")
+    with open(liste, "w") as f:
+        f.writelines(f"file '{d}'\n" for d in dosyalar)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0",
+                    "-i", liste, "-c", "copy", mp3_path], check=True)
+    shutil.rmtree(tmp, ignore_errors=True)
+    print(f"      ElevenLabs: {len(parcalar)} parça birleştirildi ({len(text)} karakter)")
     return boundaries
 
 
@@ -1512,8 +1574,8 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
         if _ad == "google" and not _google_key():
             continue
         try:
-            boundaries = (_fn(text, mp3, eleven_voice_id) if _ad == "eleven"
-                          else _fn(text, mp3))
+            boundaries = (_fn(text, mp3, eleven_voice_id, speed=1.12 if dikey else 1.0)
+                          if _ad == "eleven" else _fn(text, mp3))
             print(f"      Ses: {_etiket}")
         except Exception as e:
             print(f"      {_ad} TTS hata ({str(e)[:200]}), sonraki saglayiciya geciliyor")
