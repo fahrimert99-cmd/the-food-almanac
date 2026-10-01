@@ -238,27 +238,42 @@ def _gemini_gorsel_dene(prompt, yol):
     return None
 
 
-CF_MODEL = os.environ.get("CF_GORSEL_MODEL", "").strip() or "@cf/black-forest-labs/flux-1-schnell"
+CF_MODEL = os.environ.get("CF_GORSEL_MODEL", "").strip() or "@cf/black-forest-labs/flux-2-dev"
+CF_YEDEK_MODEL = "@cf/black-forest-labs/flux-1-schnell"
 _CF_KAPALI = False
+_CF_AKTIF = None   # koşu içinde FLUX.2 biçim hatası verirse schnell'e geçilir
+
+
+def _multipart(alanlar):
+    import uuid
+    sinir = uuid.uuid4().hex
+    govde = b"".join(f"--{sinir}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode()
+                     for k, v in alanlar.items()) + f"--{sinir}--\r\n".encode()
+    return govde, f"multipart/form-data; boundary={sinir}"
 
 
 def _cloudflare_gorsel(prompt, yol):
-    """Cloudflare Workers AI (FLUX schnell; günlük ücretsiz kota). CF_API_TOKEN +
-    CF_ACCOUNT_ID gerekir. Yetki/kota hatasında o koşuda bir daha denenmez."""
-    global _CF_KAPALI
+    """Cloudflare Workers AI (varsayılan FLUX.2 dev, yedek FLUX.1 schnell; günlük
+    ücretsiz kota). CF_API_TOKEN + CF_ACCOUNT_ID gerekir. Yetki/kota hatasında o
+    koşuda bir daha denenmez."""
+    global _CF_KAPALI, _CF_AKTIF
     token = (os.environ.get("CF_API_TOKEN") or "").strip()
     hesap = (os.environ.get("CF_ACCOUNT_ID") or "").strip()
     if _CF_KAPALI or not (token and hesap):
         return None
     import base64, json, urllib.error, urllib.request
-    url = f"https://api.cloudflare.com/client/v4/accounts/{hesap}/ai/run/{CF_MODEL}"
-    # schnell kare (1024) üretir; 16:9'a kırpılacağı için yatay kompozisyon iste
-    body = {"prompt": (prompt + ", wide horizontal composition, subject centered")[:2000], "steps": 8}
+    model = _CF_AKTIF or CF_MODEL
+    url = f"https://api.cloudflare.com/client/v4/accounts/{hesap}/ai/run/{model}"
+    if "flux-2" in model:   # FLUX.2 multipart ister; doğrudan 16:9'a yakın üretir
+        data, ctype = _multipart({"prompt": prompt[:2000], "width": 1344, "height": 768})
+    else:                   # schnell kare (1024) üretir; 16:9'a kırpılacağı için yatay kompozisyon
+        data = json.dumps({"prompt": (prompt + ", wide horizontal composition, subject centered")[:2000],
+                           "steps": 8}).encode()
+        ctype = "application/json"
     try:
-        req = urllib.request.Request(url, data=json.dumps(body).encode(),
-                                     headers={"Authorization": f"Bearer {token}",
-                                              "Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=120) as r:
+        req = urllib.request.Request(url, data=data, headers={"Authorization": f"Bearer {token}",
+                                                              "Content-Type": ctype})
+        with urllib.request.urlopen(req, timeout=180) as r:
             d = json.loads(r.read().decode())
         b64 = (d.get("result") or {}).get("image")
         if b64:
@@ -269,6 +284,11 @@ def _cloudflare_gorsel(prompt, yol):
         if e.code in (401, 403, 429):
             _CF_KAPALI = True
             print(f"      (Cloudflare görsel kapalı: HTTP {e.code} — anahtar/günlük kota)")
+        elif model != CF_YEDEK_MODEL:
+            _CF_AKTIF = CF_YEDEK_MODEL
+            print(f"      ({model.split('/')[-1]} HTTP {e.code}: {e.read().decode(errors='ignore')[:120]} "
+                  f"— schnell'e geçiliyor)")
+            return _cloudflare_gorsel(prompt, yol)
     except Exception as e:
         print(f"      (Cloudflare görsel hata: {str(e)[:80]})")
     return None

@@ -158,7 +158,7 @@ def main():
     gruplar = modeller_listele()
     rapor["modeller"] = gruplar
     t2i = gruplar.get("Text-to-Image", [])
-    denenecek = [m for m in GORSEL_MODELLER if m in t2i] + [m for m in t2i if m not in GORSEL_MODELLER]
+    denenecek = [m for m in (os.environ.get("CF_TEST_MODELLER") or "@cf/black-forest-labs/flux-2-dev").split(",") if m in t2i]
     rapor["gorsel"] = []
     for m in denenecek:
         s = gorsel_dene(m)
