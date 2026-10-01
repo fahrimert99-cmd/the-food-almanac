@@ -1,0 +1,120 @@
+[1/4] Uzun konu (tuketici_belgesel): 'A101 Aldın Aldın Neden Hep Bitiyor?'
+    (Claude bu koşuda kapatıldı: HTTP Error 400: {"type":"error","error":{"type":"invalid_request_error","message":"Your cr)
+    Plan: gemini-3.5-flash-lite ✓
+    Bölüm 1/9: gemini-3.5-flash-lite ✓
+    Bölüm 2/9: gemini-3.5-flash-lite ✓
+    Bölüm 3/9: gemini-3.5-flash-lite ✓
+    Bölüm 4/9: gemini-3.5-flash-lite ✓
+    Bölüm 5/9: gemini-3.5-flash-lite ✓
+    Bölüm 6/9: gemini-2.5-flash ✓
+    Bölüm 7/9: gemini-3.5-flash-lite ✓
+    Bölüm 8/9: gemini-2.5-flash ✓
+    Bölüm 9/9: gemini-3.5-flash-lite ✓
+    Senaryo: 1122 kelime, 46 sahne, 9 bölüm
+  Senaryo: 1122 kelime, 46 sahne
+[2/4] Yatay render ...
+      [anahtar: [redacted]
+      google TTS hata (401: {
+  "error": {
+    "code": 401,
+    "message": "API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud), sonraki saglayiciya geciliyor
+      ElevenLabs: 2 parça birleştirildi (8364 karakter)
+      Ses: ElevenLabs (gerçekçi insan sesi)
+      Konuşma boşlukları daraltıldı (~6.9 sn kısaldı, senkron korundu).
+      Ses temizlendi (de-esser + tiz/cızırtı bastırma).
+      Arka fon müziği eklendi (yerel: genel.mp3, ses %24, ducking).
+      Sahne 1/46: AI görsel ✓
+      Sahne 2/46: AI görsel ✓
+      Sahne 3/46: AI görsel ✓
+      Sahne 6/46: AI görsel ✓
+      Sahne 4/46: AI görsel ✓
+      Sahne 7/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      (pollinations yedek atlandı: HTTP Error 500: Internal Server Error)
+      Sahne 5/46: üretilemedi
+      Sahne 9/46: AI görsel ✓
+      Sahne 10/46: AI görsel ✓
+      Sahne 11/46: AI görsel ✓
+      Sahne 8/46: AI görsel ✓
+      Sahne 14/46: AI görsel ✓
+      Sahne 15/46: AI görsel ✓
+      Sahne 12/46: AI görsel ✓
+      Sahne 17/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      Sahne 18/46: AI görsel ✓
+      (görsel ücretsiz yedekten üretildi: pollinations)
+      Sahne 13/46: AI görsel ✓
+      Sahne 19/46: AI görsel ✓
+      Sahne 20/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      (pollinations yedek atlandı: HTTP Error 402: Payment Required)
+      Sahne 16/46: üretilemedi
+      Sahne 21/46: AI görsel ✓
+      Sahne 23/46: AI görsel ✓
+      Sahne 24/46: AI görsel ✓
+      Sahne 26/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      Sahne 27/46: AI görsel ✓
+      (görsel ücretsiz yedekten üretildi: pollinations)
+      Sahne 22/46: AI görsel ✓
+      Sahne 28/46: AI görsel ✓
+      Sahne 29/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      (pollinations yedek atlandı: HTTP Error 402: Payment Required)
+      Sahne 25/46: üretilemedi
+      Sahne 31/46: AI görsel ✓
+      Sahne 32/46: AI görsel ✓
+      Sahne 33/46: AI görsel ✓
+      Sahne 35/46: AI görsel ✓
+      Sahne 36/46: AI görsel ✓
+      Sahne 37/46: AI görsel ✓
+      Sahne 38/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      Sahne 39/46: AI görsel ✓
+      (görsel ücretsiz yedekten üretildi: pollinations)
+      Sahne 30/46: AI görsel ✓
+      Sahne 40/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      (pollinations yedek atlandı: HTTP Error 402: Payment Required)
+      Sahne 34/46: üretilemedi
+      Sahne 43/46: AI görsel ✓
+      Sahne 44/46: AI görsel ✓
+      Sahne 45/46: AI görsel ✓
+      Sahne 46/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      (görsel ücretsiz yedekten üretildi: pollinations)
+      Sahne 41/46: AI görsel ✓
+      (NVIDIA görsel [black-forest-labs/flux.1-dev] HTTP 500: Internal Server Error)
+      (NVIDIA görsel [google/diffusiongemma-26b-a4b-it] HTTP 404: 404 page not found
+)
+      (pollinations yedek atlandı: HTTP Error 402: Payment Required)
+      Sahne 42/46: üretilemedi
+      AI görsel: 41/46 üretildi
+  Bolumler: 
+    Zaman Damgaları
+    00:00 — Perşembe Sabahı Kuyruğu
+    00:49 — Perakendede İndirim Devrimi
+    01:47 — Lojistik ve Tedarik Kısıtları
+    02:37 — Kıtlık Psikolojisi ve Çekim Alanı
+    03:43 — Büyümenin Anahtarı Olarak Aktüel
+    04:28 — Cüzdana ve Dikkatimize Yansıyanlar
+    05:28 — Tüketici Eleştirileri ve Haklı Tepkiler
+    06:16 — Bilinçli Alışveriş Rehberi
+    07:19 — Kapanış ve Ana Fikir
+✓ ONIZLEME hazir (8.2 dk): output/onizleme/ — YouTube'a YUKLENMEDI
