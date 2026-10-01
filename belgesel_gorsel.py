@@ -179,8 +179,11 @@ def _ok(d, bas, son, renk=KIRMIZI, kalinlik=14, uc=46):
     d.polygon([son, sol_k, sag_k], fill=renk)
 
 
-def kapak(arka_prompt, ust, alt, cikti="output/uzun_kapak.jpg", W=1280, H=720, arka_yol=None):
-    """Rakip tarzı kapak. arka_yol verilirse AI çağrılmaz (test için)."""
+def kapak(arka_prompt, ust, alt, cikti="output/uzun_kapak.jpg", W=1280, H=720, arka_yol=None,
+          hazir=False):
+    """Rakip tarzı kapak. arka_yol verilirse AI çağrılmaz.
+    hazir=True: arka_yol zaten işlenmiş (kontrast + sol karartma uygulanmış) bir
+    kapak zeminidir; yalnızca yazı ve ok basılır."""
     os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
     bg = None
     if not arka_yol and arka_prompt:
@@ -193,12 +196,19 @@ def kapak(arka_prompt, ust, alt, cikti="output/uzun_kapak.jpg", W=1280, H=720, a
         except Exception:
             bg = None
     im = _kapla(bg, W, H) if bg else _kart(W, H)
+    if hazir and bg:
+        return _kapak_yaz(im, ust, alt, cikti, W, H)
     im = ImageEnhance.Contrast(im).enhance(1.18)
     im = ImageEnhance.Color(im).enhance(1.15)
     # Sol tarafı koyulaştır: yazı her arka planda okunsun.
     maske = Image.linear_gradient("L").rotate(90, expand=True).resize((W, H))
     im = Image.composite(im, Image.new("RGB", (W, H), (0, 0, 0)),
                          maske.point(lambda v: min(255, int(v * 1.6 + 40))))
+    return _kapak_yaz(im, ust, alt, cikti, W, H)
+
+
+def _kapak_yaz(im, ust, alt, cikti, W, H):
+    """İşlenmiş zemine üst/alt satırı ve oku basar."""
     arka = im.copy()  # yazısız hâl: ok için konunun yeri buradan bulunur
     d = ImageDraw.Draw(im)
     ust, alt = (ust or "").strip().upper(), (alt or "").strip().upper()
