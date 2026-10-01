@@ -116,7 +116,8 @@ def whisper_dene(gruplar):
         return {"durum": "atlandı"}
     model = next((m for m in asr if "turbo" in m), asr[0])
     mp3 = "/tmp/klip.mp3"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "60", "-t", "30", "-i", video,
+    import imageio_ffmpeg
+    subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-loglevel", "error", "-ss", "60", "-t", "30", "-i", video,
                     "-vn", "-ac", "1", "-ar", "16000", "-b:a", "48k", mp3], check=True)
     body = {"audio": base64.b64encode(open(mp3, "rb").read()).decode(), "language": "tr"}
     try:
@@ -164,7 +165,10 @@ def main():
         print(s)
         rapor["gorsel"].append(s)
     rapor["kota_dolu"] = any(s["durum"] == "HTTP 429" for s in rapor["gorsel"])
-    rapor["whisper"] = whisper_dene(gruplar)
+    try:
+        rapor["whisper"] = whisper_dene(gruplar)
+    except Exception as e:
+        rapor["whisper"] = {"durum": "HATA", "hata": str(e)[:300]}
     print(rapor["whisper"])
     panel(rapor["gorsel"])
     json.dump(rapor, open(os.path.join(CIKTI, "rapor.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
