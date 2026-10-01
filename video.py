@@ -1569,7 +1569,7 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
                sahneler=None, animasyon=True, cocuk=True, tonlama="+0Hz",
                gorsel_stil="stok", kanca=None, eleven_once=False, eleven_voice_id=None,
                muzik_tema=None, ai_sahne=False, ai_fallback=True, altyazi=True,
-               hazir_ses=None, hazir_zaman=None, ses_karisik=False):
+               hazir_ses=None, hazir_zaman=None, ses_karisik=False, ucretsiz_ses=False):
     """Orkestratör tarafından çağrılır: script -> mp4.
     sahneler verilirse (Gemini'den), her sahne için AI görsel üretir ve
     Ken Burns + çapraz geçişle animasyonlu montaj yapar.
@@ -1578,7 +1578,8 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
     başarısız olursa Google TTS, o da olmazsa edge-tts'e düşülür.
     hazir_ses: daha önce üretilmiş anlatım (TTS çağrılmaz, kredi harcanmaz).
     hazir_zaman: o anlatımın kelime zamanları (yoksa metinden eşit dağıtılır).
-    ses_karisik=True: hazir_ses müzik eklenmiş son ses -> temizleme/müzik atlanır."""
+    ses_karisik=True: hazir_ses müzik eklenmiş son ses -> temizleme/müzik atlanır.
+    ucretsiz_ses=True: Google/ElevenLabs hiç denenmez, doğrudan edge-tts (kredi yok)."""
     boyut = CONFIG["dikey"] if dikey else CONFIG["yatay"]
     voice = CONFIG["sesler"][ses]
     text, cumleler = metni_oku(script_path)
@@ -1603,6 +1604,9 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
     _eleven = ("eleven", _eleven_seslendir, "ElevenLabs (gerçekçi insan sesi)")
     _google = ("google", _google_seslendir, "Google TTS (nöral Türkçe)")
     sira = ([_eleven, _google] if eleven_once else [_google, _eleven])
+    if ucretsiz_ses:
+        sira = []
+        print(f"      Ses: ücretsiz edge-tts ({voice}) — Google/ElevenLabs atlandı")
     for _ad, _fn, _etiket in sira:
         if boundaries is not None:
             break

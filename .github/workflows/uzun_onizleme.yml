@@ -7,6 +7,7 @@ name: Uzun Video ONIZLEME (YUKLEMEZ)
 # Tetikleme: Actions'tan elle ya da onizleme_tetik.txt değişince (bu dal).
 # Commit mesajında [yeniden] varsa: onaylı önizlemenin senaryosu, sesi ve kapağı
 # yeniden kullanılır, yalnızca görseller yeniden üretilir (TTS/ElevenLabs YOK).
+# [yeni-ses]: senaryo + kapak yeniden kullanılır, ses config'e göre sıfırdan üretilir.
 # Commit mesajında [durdur] varsa: çalışan önizleme iptal edilir.
 on:
   workflow_dispatch: {}
@@ -49,7 +50,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: output/ses_cache
-          key: uzun-ses-${{ hashFiles('onizleme/uzun/senaryo.json') }}
+          key: uzun-ses2-${{ hashFiles('onizleme/uzun/senaryo.json') }}
       - name: Hazir ses — onceki onizleme kaynak run
         id: kaynak
         if: contains(github.event.head_commit.message, '[yeniden]') && steps.sesonbellek.outputs.cache-hit != 'true'
@@ -73,6 +74,7 @@ jobs:
         env:
           ONIZLEME: "1"
           ONIZLEME_YENIDEN: ${{ contains(github.event.head_commit.message, '[yeniden]') && '1' || '0' }}
+          ONIZLEME_YENI_SES: ${{ contains(github.event.head_commit.message, '[yeni-ses]') && '1' || '0' }}
           # YT secret'lari BILEREK yok -> yukleme imkansiz.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
@@ -98,7 +100,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: output/ses_cache
-          key: uzun-ses-${{ hashFiles('output/onizleme/senaryo.json') }}
+          key: uzun-ses2-${{ hashFiles('output/onizleme/senaryo.json') }}
       - name: Onizleme artifact (video dahil)
         if: always()
         uses: actions/upload-artifact@v4

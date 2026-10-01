@@ -160,7 +160,8 @@ def main():
         print("Uzun konu bankasi bitti — uzun_konular.json'a yeni konular ekleyin."); _save(u); return
     print(f"[1/4] Uzun konu ({tema}): {konu!r}")
 
-    yeniden=onizleme and os.environ.get("ONIZLEME_YENIDEN")=="1"
+    yeni_ses=onizleme and os.environ.get("ONIZLEME_YENI_SES")=="1"   # aynı senaryo, sıfırdan (ücretsiz) ses
+    yeniden=onizleme and (os.environ.get("ONIZLEME_YENIDEN")=="1" or yeni_ses)
     _man=os.path.join("uzun_scripts", _slug(konu)+".json")
     if yeniden:
         # ONAYLI ÖNİZLEMEYİ YENİDEN RENDER: aynı senaryo + hazır ses (+ onaylı kapak);
@@ -180,7 +181,7 @@ def main():
     tmp=tempfile.mkdtemp(); sp=os.path.join(tmp,"script.txt"); open(sp,"w",encoding="utf-8").write(uzun["script"])
     os.makedirs("output",exist_ok=True); cikti="output/uzun_video.mp4"
     hazir_ses=hazir_zaman=None; karisik=False
-    if yeniden:
+    if yeniden and not yeni_ses:
         if os.path.exists(f"{SES_CACHE}/anlatim.mp3") and os.path.exists(f"{SES_CACHE}/zaman.json"):
             hazir_ses=f"{SES_CACHE}/anlatim.mp3"
             with open(f"{SES_CACHE}/zaman.json",encoding="utf-8") as _f: hazir_zaman=json.load(_f)
@@ -196,7 +197,8 @@ def main():
                  sahneler=uzun.get("sahneler"),animasyon=bool(cfg.get("animasyon",True)),cocuk=bool(cfg.get("cocuk_icerigi",False)),
                  tonlama=str(cfg.get("tonlama","+0Hz")),gorsel_stil=str(cfg.get("uzun_gorsel_stil","stok")),kanca=(uzun.get("kanca") or konu),
                  eleven_once=bool(cfg.get("uzun_eleven",True)),altyazi=bool(cfg.get("uzun_altyazi",True)),
-                 hazir_ses=hazir_ses,hazir_zaman=hazir_zaman,ses_karisik=karisik)
+                 hazir_ses=hazir_ses,hazir_zaman=hazir_zaman,ses_karisik=karisik,
+                 ucretsiz_ses=str(cfg.get("uzun_ses","")).lower()=="ucretsiz")
     if onizleme: _anlatim_sakla()
     if "Zaman Damgaları" not in uzun.get("aciklama",""):   # yeniden kullanımda açıklama hazır
         damgalar=_zaman_damgalari(uzun.get("bolumler"), getattr(V,"SON_SAHNE_BASLANGIC",None))
