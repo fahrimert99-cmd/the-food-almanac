@@ -8,11 +8,15 @@ from ai_script import _gemini, _poll_post, _poll_get, _temizle, _claude, _claude
 # Guncel UCRETSIZ katman modelleri; anahtarin erisebildigi ilki secilir.
 GEMINI_MODELS = ["gemini-3.5-flash-lite", "gemini-2.5-flash"]
 
+# Model başına çıktı tavanı: gemini-2.5-flash düşünme tokenlarını da bu bütçeden
+# harcıyor (16k'da uzun JSON yarıda kesiliyordu).
+GEMINI_MAX_CIKTI = {"gemini-2.5-flash": 65536}
+
 def _gemini_uzun(prompt, key, model):
     # ai_script._gemini ile ayni, ama maxOutputTokens buyuk (uzun JSON kesilmesin).
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     body = {"contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"temperature": 0.9, "maxOutputTokens": 16384,
+            "generationConfig": {"temperature": 0.9, "maxOutputTokens": GEMINI_MAX_CIKTI.get(model, 16384),
                                  "responseMimeType": "application/json"}}
     req = urllib.request.Request(url, data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json"})
@@ -50,9 +54,9 @@ KONUMLANDIRMA: Herkesin bildiği bir markanın/sektörün iş modelini bir HİK�
 
 TON: Sakin, meraklı, güven veren bir belgesel anlatıcısı; birinci tekil şahıs ("bu videoda ... bakıyoruz"). Abartısız, sansasyonsuz; bağırmayan ama merak taşıyan dil. İzleyiciye "sen" diye hitap et.
 
-UZUNLUK: 1300-1600 kelime (zorunlu; 1200'ün altı kabul edilmez).
+UZUNLUK: Sahne 'metin'lerinin toplamı 1300-1600 kelime (zorunlu; 1000'in altı kabul edilmez).
 
-YAPI (script içinde bölüm başlığı YAZMA, akıcı geçişlerle anlat; 7-9 bölüm, her biri ~1-1,5 dk):
+YAPI (anlatımda bölüm başlığı YAZMA, akıcı geçişlerle anlat; 7-9 bölüm, her biri ~1-1,5 dk):
 1) ÇERÇEVE HİKÂYE AÇILIŞI (ilk 60-80 sn): Somut, gerçek ve kamuya açık bir kişi/vaka/sahneyle başla (örn. "1 milyon mil yapan kamyonet"; bizim için: kuyrukta bekleyen bir müşteri, şaşırtan bir fiş, bir şikâyet). Başlıktaki soruyu yeniden sor, cevabın beklenenden farklı olduğunu ima et. Ardından tek cümle: "Burası Tuzak Avcısı; hayatın içindeki tuzakları birlikte çözüyoruz." ve bu videoda neyi öğreneceğini söyle.
 2) BEKLENMEDİK BAŞLANGIÇ: Hikâyenin sanıldığı yerde başlamadığını göster ("hikâye bir fabrikada değil, bir dokuma tezgâhında başlıyor" gibi). Kurucular, yıl, ilk fikir — yalnızca kamuya açık bilgiler.
 3) KISIT / ZORUNLULUK: Şirketi bu modele iten şey neydi? ("hata yapacak parası yoktu" gibi bir kısıt anlatısı).
@@ -80,17 +84,17 @@ AÇIKLAMA (Zaman damgalarını YAZMA, sistem ekler). Rakip belgesel düzeni, emo
 'kaynaklar' alanına videoda kullanılan bilgiler için 2-5 RESMÎ kaynak yaz: yalnızca kurum adı + kök alan adı (örn. {{"ad":"A101 – Kurumsal","alan":"a101.com.tr"}}, {{"ad":"KAP – Kamuyu Aydınlatma Platformu","alan":"kap.org.tr"}}). Alt sayfa URL'si UYDURMA.
 ETİKETLER: 10-12 Türkçe arama terimi (marka adı, "<marka> neden", sektör, "tüketici hakları", "belgesel" dahil).
 
-Emoji YOK, madde işareti YOK, başlık satırı YOK; 'script' düz akıcı paragraflardan oluşan tek metin.
-Anlatımı 45-60 sahneye böl (sahne başı ~10-15 sn). Sahne 'metin'leri script'in SIRAYLA ve EKSİKSİZ parçaları olsun (birleştirildiğinde script'in tamamı çıksın).
+Emoji YOK, madde işareti YOK, başlık satırı YOK; anlatım düz, akıcı konuşma dili.
+Anlatımın TAMAMINI 45-60 sahneye bölerek yaz (sahne başı ~10-15 sn, 20-35 kelime). AYRI bir 'script' alanı YAZMA: sahne 'metin'leri sırayla birleştirildiğinde seslendirme metninin kendisi olur.
 Her sahne için 'gorsel': o cümlede anlatılan şeyi gösteren 2-4 KELİMELİK, SOMUT, ARANABİLİR İngilizce stok video anahtar kelimesi.
 Somut nesne/mekân/eylem kullan; örnek: "supermarket shopping cart", "credit card payment", "warehouse forklift", "people using smartphone".
 Marka adı/logosu stok sitelerde bulunmaz ve telif riski taşır: markanın GENEL karşılığını yaz ("discount supermarket aisle", "crowded store checkout queue", "coffee shop counter", "fast food restaurant", "delivery courier scooter").
 YASAK: soyut/kavramsal ifadeler ("conceptual", "abstract", "cinematic shot", "shadowy figure" gibi). Başa "a"/"the" KOYMA.
-ÇOK ÖNEMLİ — TÜRKÇE YAZIM: 'script', 'baslik', 'aciklama', 'kanca' ve sahne 'metin' alanlarını KUSURSUZ Türkçe imlâ ile yaz; ç, ğ, ı, İ, ö, ş, ü harflerini ASLA ASCII'ye sadeleştirme. (Yalnızca 'gorsel', 'gorsel_prompt' ve 'kapak_gorsel' İngilizce.)
+ÇOK ÖNEMLİ — TÜRKÇE YAZIM: 'baslik', 'aciklama', 'kanca' ve sahne 'metin' alanlarını KUSURSUZ Türkçe imlâ ile yaz; ç, ğ, ı, İ, ö, ş, ü harflerini ASLA ASCII'ye sadeleştirme. (Yalnızca 'gorsel', 'gorsel_prompt' ve 'kapak_gorsel' İngilizce.)
 SADECE şu JSON'u döndür:
-{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade ; marka adı YAZI olarak geçebilir (örn. 'A101'İN SIRRI', 'BEDAVA DEĞİL', 'ASIL ÜRÜN SENSİN'); ZORUNLU","script":"...","sahneler":[{{"metin":"...","gorsel_prompt":"english image prompt","arsiv":false,"gorsel":"english stock keywords"}}],"bolumler":[{{"baslik":"...","sahne":0}}],"kaynaklar":[{{"ad":"...","alan":"..."}}],"kapak_yazi":{{"ust":"...","alt":"..."}},"kapak_gorsel":"..."}}"""
+{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade ; marka adı YAZI olarak geçebilir (örn. 'A101'İN SIRRI', 'BEDAVA DEĞİL', 'ASIL ÜRÜN SENSİN'); ZORUNLU","sahneler":[{{"metin":"...","gorsel_prompt":"english image prompt","arsiv":false,"gorsel":"english stock keywords"}}],"bolumler":[{{"baslik":"...","sahne":0}}],"kaynaklar":[{{"ad":"...","alan":"..."}}],"kapak_yazi":{{"ust":"...","alt":"..."}},"kapak_gorsel":"..."}}"""
 
-TEMALAR = {"tuketici_belgesel": (BELGESEL_PROMPT, 1200), "gizem": (UZUN_PROMPT, 300)}
+TEMALAR = {"tuketici_belgesel": (BELGESEL_PROMPT, 1000), "gizem": (UZUN_PROMPT, 300)}
 
 
 _TR_OZEL = set("çğıöşüÇĞİÖŞÜ")  # Türkçe'ye özgü, ASCII karşılığı olmayan harfler
@@ -126,7 +130,12 @@ def _gemini_key():
 
 
 def _yeterli(data, min_kelime):
-    """Script var, sahneli, Türkçe karakterli ve hedef uzunlukta mı?"""
+    """Script var, sahneli, Türkçe karakterli ve hedef uzunlukta mı?
+    Belgesel temasında ayrı 'script' alanı yok (çıktıyı yarıya indirir, JSON
+    kesilmez): seslendirme metni sahne metinlerinin birleşimidir."""
+    if not data.get("script") and data.get("sahneler"):
+        data["script"] = " ".join((s.get("metin") or "").strip()
+                                  for s in data["sahneler"] if isinstance(s, dict)).strip()
     sc = data.get("script") or ""
     if not (sc and data.get("sahneler")):
         return "bos yanit"
