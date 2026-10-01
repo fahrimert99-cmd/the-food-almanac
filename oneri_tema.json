@@ -1,11 +1,11 @@
 {
-  "guncelleme": "2026-09-29T04:56:00Z",
+  "guncelleme": "2026-10-01T03:55:11Z",
   "tema_skor": {
-    "market_vitrin": 1192,
-    "yeme_restoran": 1147,
-    "diger": 2385,
-    "abonelik_dijital": 1062,
-    "finans_kart": 312
+    "market_vitrin": 2261,
+    "diger": 3923,
+    "yeme_restoran": 1148,
+    "abonelik_dijital": 1600,
+    "finans_kart": 679
   },
   "bonus_kw": [
     "market",
@@ -16,12 +16,12 @@
     "sepet",
     "parfüm",
     "labirent",
-    "menü",
-    "restoran",
-    "mısır",
-    "kahve",
-    "sinema",
-    "büfe"
+    "abonelik",
+    "üyelik",
+    "bedava",
+    "iptal",
+    "uygulama",
+    "wifi"
   ],
   "engelle_kw": [
     "okyanus",

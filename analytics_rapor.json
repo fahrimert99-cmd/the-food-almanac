@@ -1,45 +1,61 @@
 {
-  "olusturma": "2026-09-29T04:55:58Z",
+  "olusturma": "2026-10-01T03:55:09Z",
   "donem": {
-    "baslangic": "2026-09-22",
-    "bitis": "2026-09-28",
+    "baslangic": "2026-09-24",
+    "bitis": "2026-09-30",
     "gun": 7
   },
   "kanal": {
     "id": "UCQworUMz3vuLujt7yHibsww",
     "baslik": "TUZAK AVCISI",
-    "abone": 104,
-    "toplam_izlenme": 55508,
-    "video_sayisi": 98
+    "abone": 106,
+    "toplam_izlenme": 59100,
+    "video_sayisi": 102
   },
   "kaynak": "youtube_analytics_api",
   "haftalik": {
-    "izlenme": 3726,
-    "izlenme_dakika": 294.0,
-    "ortalama_sure_sn": 11,
-    "abone_kazanim": 0,
-    "abone_kayip": 0
+    "izlenme": 6445,
+    "izlenme_dakika": 512.0,
+    "ortalama_sure_sn": 12,
+    "abone_kazanim": 2,
+    "abone_kayip": 2
   },
   "top_videolar_analytics": [
     {
       "video_id": "D6_tdOfTBzk",
-      "views": 1012,
-      "estimatedMinutesWatched": 82,
+      "views": 1014,
+      "estimatedMinutesWatched": 83,
       "averageViewDuration": 9,
       "baslik": "PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
       "averageViewDuration_sn": 9
     },
     {
+      "video_id": "yLQLfm28EtE",
+      "views": 988,
+      "estimatedMinutesWatched": 76,
+      "averageViewDuration": 13,
+      "baslik": "Kıyafet bedeni neden tutmaz? Markalar bilerek karıştırıyor 👗",
+      "averageViewDuration_sn": 13
+    },
+    {
       "video_id": "RClMdfd_crA",
-      "views": 927,
+      "views": 928,
       "estimatedMinutesWatched": 73,
       "averageViewDuration": 11,
       "baslik": "MENÜDE FİYAT neden SAĞDA DEĞİL? Bilerek yapıyorlar 🍽️",
       "averageViewDuration_sn": 11
     },
     {
+      "video_id": "uBumMVjNB4Y",
+      "views": 867,
+      "estimatedMinutesWatched": 69,
+      "averageViewDuration": 10,
+      "baslik": "RAF ALTINDAKİ ÜRÜN neden %30 DAHA AZ SATILIR? Bilerek yapıyorlar 📦",
+      "averageViewDuration_sn": 10
+    },
+    {
       "video_id": "02WWvl9DoMs",
-      "views": 681,
+      "views": 686,
       "estimatedMinutesWatched": 39,
       "averageViewDuration": 14,
       "baslik": "VİTRİN neden HEP DEĞİŞİR? Bilerek yapıyorlar 🪟",
@@ -47,18 +63,26 @@
     },
     {
       "video_id": "wcqN_h-G760",
-      "views": 498,
-      "estimatedMinutesWatched": 50,
+      "views": 641,
+      "estimatedMinutesWatched": 65,
       "averageViewDuration": 14,
       "baslik": "BEDAVA İADE neden VAR? Bilerek yapıyorlar 🔁",
       "averageViewDuration_sn": 14
     },
     {
-      "video_id": "54rrt3msivY",
-      "views": 282,
+      "video_id": "rmyOiLZ6RnE",
+      "views": 472,
+      "estimatedMinutesWatched": 41,
+      "averageViewDuration": 16,
+      "baslik": "GARANTİ UZATMASI neden GEREKSİZ? Bilerek yapıyorlar 🛡️",
+      "averageViewDuration_sn": 16
+    },
+    {
+      "video_id": "0wowoKjj11Y",
+      "views": 379,
       "estimatedMinutesWatched": 21,
       "averageViewDuration": 15,
-      "baslik": "İADE neden BU KADAR ZOR? Bilerek yapıyorlar 📦",
+      "baslik": "İlk ay bedava deyip kartını alıyorlar — iptal etmezsen kaybedersin 🎬",
       "averageViewDuration_sn": 15
     },
     {
@@ -70,54 +94,66 @@
       "averageViewDuration_sn": 10
     },
     {
-      "video_id": "2GocwkZCvZs",
-      "views": 25,
-      "estimatedMinutesWatched": 1,
-      "averageViewDuration": 10,
-      "baslik": "LOGO YOK OLAN TSİRT neden 3 KAT DAHA PAHALI SATILIOR? Bilerek yapıyorlar 👕",
-      "averageViewDuration_sn": 10
-    },
-    {
-      "video_id": "198wcOMbS-4",
-      "views": 24,
-      "estimatedMinutesWatched": 2,
-      "averageViewDuration": 13,
-      "baslik": "ÜCRETSİZ WIFI'NIN BEDELİ NE? 📶",
-      "averageViewDuration_sn": 13
-    },
-    {
-      "video_id": "d5apLtHw2D0",
-      "views": 15,
-      "estimatedMinutesWatched": 1,
-      "averageViewDuration": 11,
-      "baslik": "SON DAKİKA FIRSATI TUZAĞI! ⚡",
-      "averageViewDuration_sn": 11
-    },
-    {
-      "video_id": "euNOzJugljY",
-      "views": 12,
-      "estimatedMinutesWatched": 1,
-      "averageViewDuration": 15,
-      "baslik": "BNPL TAKSİT ÜCRETİ neden GİZLİ %3 EK MALİYET GETİRİR? Bilerek yapıyorlar 💳",
-      "averageViewDuration_sn": 15
+      "video_id": "54rrt3msivY",
+      "views": 175,
+      "estimatedMinutesWatched": 16,
+      "averageViewDuration": 18,
+      "baslik": "İADE neden BU KADAR ZOR? Bilerek yapıyorlar 📦",
+      "averageViewDuration_sn": 18
     }
   ],
   "son_videolar": [
     {
-      "video_id": "PT2yl_-oswg",
-      "baslik": "AVM'de klima neden bu kadar soğuk? Üşümen satışa dönüşür ❄️",
-      "yayin": "2026-09-29",
+      "video_id": "mu5iythhQKY",
+      "baslik": "ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİK TUZAĞI ⏱️",
+      "yayin": "2026-09-30",
       "izlenme": 0,
       "begeni": 0,
       "yorum": 0,
+      "sure_sn": 23
+    },
+    {
+      "video_id": "oIyamMc8uBk",
+      "baslik": "MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖",
+      "yayin": "2026-09-30",
+      "izlenme": 1153,
+      "begeni": 4,
+      "yorum": 1,
+      "sure_sn": 26
+    },
+    {
+      "video_id": "Mwkk-R4Mb9U",
+      "baslik": "DIŞARIDAN YİYECEK SOKMAYIN YASAĞININ ASIL AMACI 🚫🍿",
+      "yayin": "2026-09-30",
+      "izlenme": 987,
+      "begeni": 15,
+      "yorum": 1,
+      "sure_sn": 29
+    },
+    {
+      "video_id": "NPTOMRJ_yqM",
+      "baslik": "KASAYA YAKLAŞINCA ELİN NEDEN RAFA GİDİYOR? 🍬",
+      "yayin": "2026-09-29",
+      "izlenme": 673,
+      "begeni": 4,
+      "yorum": 1,
+      "sure_sn": 33
+    },
+    {
+      "video_id": "PT2yl_-oswg",
+      "baslik": "AVM'de klima neden bu kadar soğuk? Üşümen satışa dönüşür ❄️",
+      "yayin": "2026-09-29",
+      "izlenme": 299,
+      "begeni": 3,
+      "yorum": 1,
       "sure_sn": 24
     },
     {
       "video_id": "0wowoKjj11Y",
       "baslik": "İlk ay bedava deyip kartını alıyorlar — iptal etmezsen kaybedersin 🎬",
       "yayin": "2026-09-28",
-      "izlenme": 363,
-      "begeni": 3,
+      "izlenme": 390,
+      "begeni": 5,
       "yorum": 1,
       "sure_sn": 25
     },
@@ -125,7 +161,7 @@
       "video_id": "yLQLfm28EtE",
       "baslik": "Kıyafet bedeni neden tutmaz? Markalar bilerek karıştırıyor 👗",
       "yayin": "2026-09-28",
-      "izlenme": 981,
+      "izlenme": 993,
       "begeni": 6,
       "yorum": 1,
       "sure_sn": 23
@@ -134,8 +170,8 @@
       "video_id": "uBumMVjNB4Y",
       "baslik": "RAF ALTINDAKİ ÜRÜN neden %30 DAHA AZ SATILIR? Bilerek yapıyorlar 📦",
       "yayin": "2026-09-27",
-      "izlenme": 567,
-      "begeni": 4,
+      "izlenme": 944,
+      "begeni": 9,
       "yorum": 1,
       "sure_sn": 28
     },
@@ -143,8 +179,8 @@
       "video_id": "rmyOiLZ6RnE",
       "baslik": "GARANTİ UZATMASI neden GEREKSİZ? Bilerek yapıyorlar 🛡️",
       "yayin": "2026-09-27",
-      "izlenme": 422,
-      "begeni": 5,
+      "izlenme": 490,
+      "begeni": 7,
       "yorum": 1,
       "sure_sn": 25
     },
@@ -152,7 +188,7 @@
       "video_id": "d5apLtHw2D0",
       "baslik": "SON DAKİKA FIRSATI TUZAĞI! ⚡",
       "yayin": "2026-09-26",
-      "izlenme": 39,
+      "izlenme": 43,
       "begeni": 2,
       "yorum": 1,
       "sure_sn": 25
@@ -161,7 +197,7 @@
       "video_id": "wcqN_h-G760",
       "baslik": "BEDAVA İADE neden VAR? Bilerek yapıyorlar 🔁",
       "yayin": "2026-09-26",
-      "izlenme": 640,
+      "izlenme": 643,
       "begeni": 5,
       "yorum": 1,
       "sure_sn": 24
@@ -170,7 +206,7 @@
       "video_id": "02WWvl9DoMs",
       "baslik": "VİTRİN neden HEP DEĞİŞİR? Bilerek yapıyorlar 🪟",
       "yayin": "2026-09-25",
-      "izlenme": 657,
+      "izlenme": 661,
       "begeni": 5,
       "yorum": 2,
       "sure_sn": 20
@@ -179,7 +215,7 @@
       "video_id": "D6_tdOfTBzk",
       "baslik": "PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
       "yayin": "2026-09-25",
-      "izlenme": 998,
+      "izlenme": 1000,
       "begeni": 5,
       "yorum": 1,
       "sure_sn": 20
@@ -188,7 +224,7 @@
       "video_id": "bwcZtoxwx58",
       "baslik": "SADAKAT PROGRAMI SENİ NASIL BAĞLIYOR? 🎯",
       "yayin": "2026-09-24",
-      "izlenme": 182,
+      "izlenme": 183,
       "begeni": 2,
       "yorum": 1,
       "sure_sn": 22
@@ -197,107 +233,64 @@
       "video_id": "RClMdfd_crA",
       "baslik": "MENÜDE FİYAT neden SAĞDA DEĞİL? Bilerek yapıyorlar 🍽️",
       "yayin": "2026-09-24",
-      "izlenme": 922,
+      "izlenme": 923,
       "begeni": 8,
       "yorum": 2,
       "sure_sn": 19
-    },
-    {
-      "video_id": "54rrt3msivY",
-      "baslik": "İADE neden BU KADAR ZOR? Bilerek yapıyorlar 📦",
-      "yayin": "2026-09-23",
-      "izlenme": 279,
-      "begeni": 5,
-      "yorum": 1,
-      "sure_sn": 24
-    },
-    {
-      "video_id": "198wcOMbS-4",
-      "baslik": "ÜCRETSİZ WIFI'NIN BEDELİ NE? 📶",
-      "yayin": "2026-09-23",
-      "izlenme": 24,
-      "begeni": 3,
-      "yorum": 1,
-      "sure_sn": 21
-    },
-    {
-      "video_id": "fxm-e8Xj79w",
-      "baslik": "NEDEN NAKİTTEN VAZGEÇTİK? 💵",
-      "yayin": "2026-09-22",
-      "izlenme": 10,
-      "begeni": 2,
-      "yorum": 1,
-      "sure_sn": 25
-    },
-    {
-      "video_id": "euNOzJugljY",
-      "baslik": "BNPL TAKSİT ÜCRETİ neden GİZLİ %3 EK MALİYET GETİRİR? Bilerek yapıyorlar 💳",
-      "yayin": "2026-09-22",
-      "izlenme": 12,
-      "begeni": 3,
-      "yorum": 1,
-      "sure_sn": 33
     }
   ],
   "oneriler": {
-    "ozet": "Tutma orta seviyede — kanca iyileştir — En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele.",
+    "ozet": "Abone dönüşümü zayıf — Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu.",
     "oncelikli": [
-      {
-        "oncelik": "yuksek",
-        "alan": "tutma",
-        "baslik": "Tutma orta seviyede — kanca iyileştir",
-        "detay": "Ort. süre 11 sn. Shorts için hedef 15 sn+.",
-        "aksiyon": "En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele."
-      },
       {
         "oncelik": "yuksek",
         "alan": "abone",
         "baslik": "Abone dönüşümü zayıf",
-        "detay": "Net abone 0, 3726 izlenmede.",
+        "detay": "Net abone 0, 6445 izlenmede.",
         "aksiyon": "Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu."
       },
       {
         "oncelik": "yuksek",
         "alan": "icerik",
         "baslik": "Bu temaları çoğalt",
-        "detay": "market / vitrin / raf / kasa, menü / restoran / sinema",
-        "aksiyon": "Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: market / vitrin / raf / kasa, menü / restoran / sinema."
+        "detay": "market / vitrin / raf / kasa, abonelik / dijital tuzak",
+        "aksiyon": "Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: market / vitrin / raf / kasa, abonelik / dijital tuzak."
       },
       {
         "oncelik": "yuksek",
         "alan": "baslik_icerik",
         "baslik": "Başlık çeker, içerik tutmaz: PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
-        "detay": "1012 izlenme ama ort. 9 sn.",
+        "detay": "1014 izlenme ama ort. 9 sn.",
         "aksiyon": "Aynı konuda daha sert kanca + daha hızlı vaat ile yeniden çek (varyasyon)."
       },
       {
         "oncelik": "orta",
-        "alan": "kesif",
-        "baslik": "Keşif orta — ivme için tekrar format",
-        "detay": "7 günde 3726 izlenme.",
-        "aksiyon": "Top videoların varyasyonunu üret; yayın saatini (12:00/20:00) kaçırma."
-      },
-      {
-        "oncelik": "orta",
-        "alan": "icerik",
-        "baslik": "Birden fazla video çok düşük izlenme almış",
-        "detay": "Son listede 5 video <50 izlenme.",
-        "aksiyon": "Düşük giden konu tiplerini 2 hafta üretme; top3 varyasyonuna dön."
+        "alan": "tutma",
+        "baslik": "Tutma idare eder, biraz daha sıkılaştır",
+        "detay": "Ort. süre 12 sn — iyi yolda.",
+        "aksiyon": "CTA'yı son 3 sn'de tut; ortada tempo düşmesin."
       },
       {
         "oncelik": "orta",
         "alan": "buyume",
         "baslik": "Küçük kanal: tutarlılık + dış trafik",
-        "detay": "104 abone.",
+        "detay": "106 abone.",
         "aksiyon": "12:00/20:00'i hiç kaçırma; haftada en az 3 cross-post (Reels/TikTok)."
+      },
+      {
+        "oncelik": "bilgi",
+        "alan": "kesif",
+        "baslik": "Keşif iyi",
+        "detay": "7 günde 6445 izlenme.",
+        "aksiyon": "Hacmi koru; kalite düşmeden günde 2 Shorts devam."
       }
     ],
     "tema_skor": {
-      "market_vitrin": 1192,
-      "yeme_restoran": 1147,
-      "diger": 2385,
-      "abonelik_dijital": 1062,
-      "finans_kart": 312
+      "market_vitrin": 2261,
+      "diger": 3923,
+      "yeme_restoran": 1148,
+      "abonelik_dijital": 1600,
+      "finans_kart": 679
     },
     "esikler": {
       "ort_sure_hedef_sn": 15,

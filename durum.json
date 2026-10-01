@@ -136,75 +136,75 @@
   "son_baslik": "ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİK TUZAĞI ⏱️",
   "son_yayin_zamani": "2026-10-01T09:00:00Z",
   "analytics_ozet": {
-    "guncelleme": "2026-09-29T04:55:58Z",
+    "guncelleme": "2026-10-01T03:55:09Z",
     "donem": {
-      "baslangic": "2026-09-22",
-      "bitis": "2026-09-28",
+      "baslangic": "2026-09-24",
+      "bitis": "2026-09-30",
       "gun": 7
     },
     "kaynak": "youtube_analytics_api",
-    "kanal_abone": 104,
-    "haftalik_izlenme": 3726,
-    "haftalik_ortalama_sure_sn": 11,
+    "kanal_abone": 106,
+    "haftalik_izlenme": 6445,
+    "haftalik_ortalama_sure_sn": 12,
     "haftalik_abone_net": 0,
     "top3": [
       {
         "baslik": "PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
-        "izlenme": 1012,
+        "izlenme": 1014,
         "ortalama_sure_sn": 9
       },
       {
-        "baslik": "MENÜDE FİYAT neden SAĞDA DEĞİL? Bilerek yapıyorlar 🍽️",
-        "izlenme": 927,
-        "ortalama_sure_sn": 11
+        "baslik": "Kıyafet bedeni neden tutmaz? Markalar bilerek karıştırıyor 👗",
+        "izlenme": 988,
+        "ortalama_sure_sn": 13
       },
       {
-        "baslik": "VİTRİN neden HEP DEĞİŞİR? Bilerek yapıyorlar 🪟",
-        "izlenme": 681,
-        "ortalama_sure_sn": 14
+        "baslik": "MENÜDE FİYAT neden SAĞDA DEĞİL? Bilerek yapıyorlar 🍽️",
+        "izlenme": 928,
+        "ortalama_sure_sn": 11
       }
     ],
     "oneriler": [
       {
         "oncelik": "yuksek",
-        "alan": "tutma",
-        "baslik": "Tutma orta seviyede — kanca iyileştir",
-        "detay": "Ort. süre 11 sn. Shorts için hedef 15 sn+.",
-        "aksiyon": "En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele."
-      },
-      {
-        "oncelik": "yuksek",
         "alan": "abone",
         "baslik": "Abone dönüşümü zayıf",
-        "detay": "Net abone 0, 3726 izlenmede.",
+        "detay": "Net abone 0, 6445 izlenmede.",
         "aksiyon": "Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu."
       },
       {
         "oncelik": "yuksek",
         "alan": "icerik",
         "baslik": "Bu temaları çoğalt",
-        "detay": "market / vitrin / raf / kasa, menü / restoran / sinema",
-        "aksiyon": "Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: market / vitrin / raf / kasa, menü / restoran / sinema."
+        "detay": "market / vitrin / raf / kasa, abonelik / dijital tuzak",
+        "aksiyon": "Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: market / vitrin / raf / kasa, abonelik / dijital tuzak."
       },
       {
         "oncelik": "yuksek",
         "alan": "baslik_icerik",
         "baslik": "Başlık çeker, içerik tutmaz: PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
-        "detay": "1012 izlenme ama ort. 9 sn.",
+        "detay": "1014 izlenme ama ort. 9 sn.",
         "aksiyon": "Aynı konuda daha sert kanca + daha hızlı vaat ile yeniden çek (varyasyon)."
       },
       {
         "oncelik": "orta",
-        "alan": "kesif",
-        "baslik": "Keşif orta — ivme için tekrar format",
-        "detay": "7 günde 3726 izlenme.",
-        "aksiyon": "Top videoların varyasyonunu üret; yayın saatini (12:00/20:00) kaçırma."
+        "alan": "tutma",
+        "baslik": "Tutma idare eder, biraz daha sıkılaştır",
+        "detay": "Ort. süre 12 sn — iyi yolda.",
+        "aksiyon": "CTA'yı son 3 sn'de tut; ortada tempo düşmesin."
+      },
+      {
+        "oncelik": "orta",
+        "alan": "buyume",
+        "baslik": "Küçük kanal: tutarlılık + dış trafik",
+        "detay": "106 abone.",
+        "aksiyon": "12:00/20:00'i hiç kaçırma; haftada en az 3 cross-post (Reels/TikTok)."
       }
     ],
-    "oneri_ozet": "Tutma orta seviyede — kanca iyileştir — En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele."
+    "oneri_ozet": "Abone dönüşümü zayıf — Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu."
   },
   "oneri_uygulama": {
-    "zaman": "2026-09-29T04:56:00Z",
+    "zaman": "2026-10-01T03:55:11Z",
     "bonus_kw": [
       "market",
       "kasa",
@@ -214,12 +214,12 @@
       "sepet",
       "parfüm",
       "labirent",
-      "menü",
-      "restoran",
-      "mısır",
-      "kahve",
-      "sinema",
-      "büfe"
+      "abonelik",
+      "üyelik",
+      "bedava",
+      "iptal",
+      "uygulama",
+      "wifi"
     ],
     "engelle_kw": [
       "okyanus",
@@ -227,10 +227,9 @@
       "bermuda",
       "mariana"
     ],
-    "senaryo_siralandi": true,
+    "senaryo_siralandi": false,
     "uygulanan": [
       "oneri_tema.json (seçim skoru)",
-      "senaryolar_oncelik sırası",
       "baslik_guclendir"
     ],
     "uygulanmayan_korumalar": [
@@ -238,11 +237,11 @@
       "slot kilidi / üretim atlanmaz",
       "cron zamanları değiştirilmez"
     ],
-    "oneri_ozet": "Tutma orta seviyede — kanca iyileştir — En iyi 3 videonun açılışını kopyala; zayıf açılışlı konuları ertele.",
+    "oneri_ozet": "Abone dönüşümü zayıf — Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu.",
     "top_oneriler": [
-      "Tutma orta seviyede — kanca iyileştir",
       "Abone dönüşümü zayıf",
-      "Bu temaları çoğalt"
+      "Bu temaları çoğalt",
+      "Başlık çeker, içerik tutmaz: PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐"
     ]
   }
 }
