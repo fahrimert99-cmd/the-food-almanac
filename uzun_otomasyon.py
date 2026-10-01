@@ -47,6 +47,32 @@ def _yayin_zamani(cfg, simdi=None):
     if h<=simdi+timedelta(minutes=30): h+=timedelta(days=7)
     return h.isoformat().replace("+00:00","Z")
 
+def _zaman_damgalari(bolumler, baslangiclar):
+    """Senaryonun bolumlerini (baslik + baslangic sahnesi) render'daki gercek sahne
+    zamanlarina cevirir. YouTube kurallari: ilk 00:00, en az 3 bolum, her bolum
+    >= 10 sn. Kurallar saglanmazsa bos string (aciklama bolumsuz kalir)."""
+    if not bolumler or not baslangiclar:
+        return ""
+    satirlar, son = [], None
+    for i, b in enumerate(sorted(bolumler, key=lambda x: int(x.get("sahne", 0)))):
+        n = min(max(0, int(b.get("sahne", 0))), len(baslangiclar) - 1)
+        t = 0 if i == 0 else int(baslangiclar[n])
+        bas = (b.get("baslik") or "").strip()
+        if not bas or (son is not None and t - son < 10):
+            continue
+        satirlar.append(f"{t // 60:02d}:{t % 60:02d} — {bas}"); son = t
+    return ("Zaman Damgaları\n" + "\n".join(satirlar)) if len(satirlar) >= 3 else ""
+
+def _aciklama_bolumlu(aciklama, damgalar):
+    """Zaman damgalarini, aciklamanin sonundaki gorus sorusundan ONCE yerlestirir
+    (Toyota videosu duzeni: ozet -> kavramlar -> zaman damgalari -> soru)."""
+    if not damgalar:
+        return aciklama
+    par = [p for p in (aciklama or "").strip().split("\n\n") if p.strip()]
+    if par and par[-1].strip().endswith("?"):
+        return "\n\n".join(par[:-1] + [damgalar, par[-1]])
+    return "\n\n".join(par + [damgalar])
+
 def main():
     cfg=_load(CFG_P,{})
     # DURDURMA BAYRAGI: analiz (uzun ort. 38 izlenme vs short 750) sonrasi uzun hatti
@@ -78,6 +104,9 @@ def main():
                  sahneler=uzun.get("sahneler"),animasyon=bool(cfg.get("animasyon",True)),cocuk=bool(cfg.get("cocuk_icerigi",False)),
                  tonlama=str(cfg.get("tonlama","+0Hz")),gorsel_stil=str(cfg.get("uzun_gorsel_stil","stok")),kanca=(uzun.get("kanca") or konu),
                  eleven_once=bool(cfg.get("uzun_eleven",True)))
+    damgalar=_zaman_damgalari(uzun.get("bolumler"), getattr(V,"SON_SAHNE_BASLANGIC",None))
+    uzun["aciklama"]=_aciklama_bolumlu(uzun.get("aciklama",""), damgalar)
+    print("  Bolumler:", ("\n    "+damgalar.replace("\n","\n    ")) if damgalar else "yok (kural saglanmadi)")
     kapak=None
     try:
         import kapak_uzun as K; kapak=K.kapak_uret(cikti,uzun["baslik"],"output/uzun_kapak.jpg",kanca=uzun.get("kanca"))

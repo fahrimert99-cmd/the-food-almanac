@@ -690,6 +690,7 @@ def _eleven_key():
 # ElevenLabs tek istekte ~10.000 karakter kabul eder; uzun (8-12 dk) anlatimlar
 # cumle sinirindan bu boyutta parcalara bolunup arka arkaya eklenir.
 ELEVEN_PARCA_KARAKTER = 4500
+SON_SAHNE_BASLANGIC = None  # son uzun render'in sahne baslangic saniyeleri
 
 
 def _eleven_parcala(text, sinir=ELEVEN_PARCA_KARAKTER):
@@ -1608,6 +1609,9 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
         # UZUN (yatay) videolarda görselleri seslendirmeye TAM senkronla:
         # her sahne, metninin konuşulduğu gerçek zaman aralığında görünür.
         _ss = _sahne_sureleri(sahneler, boundaries, sure_al(mp3)) if (not dikey and sahneler) else None
+        # Uzun videoda YouTube bolum (zaman damgasi) uretimi icin sahne baslangiclari.
+        global SON_SAHNE_BASLANGIC
+        SON_SAHNE_BASLANGIC = ([sum(_ss[:i]) for i in range(len(_ss))] if _ss else None)
         video_uret_animasyon(gorseller, mp3, ass, cikti, boyut, CONFIG["fps"],
                              sahne_sureleri=_ss)
     else:

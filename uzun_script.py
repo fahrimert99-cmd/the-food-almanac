@@ -49,15 +49,17 @@ TON: Sakin, meraklı, güven veren bir belgesel anlatıcısı; birinci tekil şa
 
 UZUNLUK: 1300-1600 kelime (zorunlu; 1200'ün altı kabul edilmez).
 
-YAPI (bölüm başlığı YAZMA, akıcı geçişlerle anlat):
-1) SOĞUK AÇILIŞ (ilk 20 sn): Somut bir sahne, kişi ya da şaşırtıcı bir sayıyla başla; başlıktaki soruyu yeniden sor ve cevabın beklenenden farklı olduğunu ima et. Ardından tek cümleyle: "Burası Tuzak Avcısı; hayatın içindeki tuzakları birlikte çözüyoruz." ve bu videoda neyi öğreneceğini söyle.
-2) HİKÂYENİN BAŞLANGICI: Şirketin/modelin nasıl doğduğu; kurucular, yıl, ilk fikir, dönüm noktası. Yalnızca KAMUYA AÇIK, iyi bilinen bilgiler.
-3) MEKANİZMA: Para gerçekte nereden kazanılıyor? İş modelini adım adım, gündelik örneklerle açıkla (bir terim varsa adını ver ve basitçe anlat).
-4) TÜKETİCİ TARAFI: Bu model senin cüzdanına, alışkanlığına, dikkatine nasıl yansıyor? Fark edilmeyen maliyetler, psikolojik taktikler, varsayılan ayarlar.
-5) DÖNÜM NOKTASI: En şaşırtıcı detay ya da bir kriz/dava/değişiklik ("ama hikâye burada bitmiyor" gibi açık döngülerle merakı taze tut).
-6) KORUNMA REHBERİ: 3-5 somut, uygulanabilir adım (ne kontrol etmeli, hangi ayarı kapatmalı, neyi karşılaştırmalı).
-7) KAPANIŞ: Ana fikri tek cümlede bağla; "bir sonraki tuzağı kaçırmamak için abone ol" tarzı kısa çağrı ve yorumda izleyiciye tek bir soru sor.
-Her 60-90 saniyede yeni bir soru veya merak aç ki izleyici sonuna kadar kalsın.
+YAPI (script içinde bölüm başlığı YAZMA, akıcı geçişlerle anlat; 7-9 bölüm, her biri ~1-1,5 dk):
+1) ÇERÇEVE HİKÂYE AÇILIŞI (ilk 60-80 sn): Somut, gerçek ve kamuya açık bir kişi/vaka/sahneyle başla (örn. "1 milyon mil yapan kamyonet"; bizim için: kuyrukta bekleyen bir müşteri, şaşırtan bir fiş, bir şikâyet). Başlıktaki soruyu yeniden sor, cevabın beklenenden farklı olduğunu ima et. Ardından tek cümle: "Burası Tuzak Avcısı; hayatın içindeki tuzakları birlikte çözüyoruz." ve bu videoda neyi öğreneceğini söyle.
+2) BEKLENMEDİK BAŞLANGIÇ: Hikâyenin sanıldığı yerde başlamadığını göster ("hikâye bir fabrikada değil, bir dokuma tezgâhında başlıyor" gibi). Kurucular, yıl, ilk fikir — yalnızca kamuya açık bilgiler.
+3) KISIT / ZORUNLULUK: Şirketi bu modele iten şey neydi? ("hata yapacak parası yoktu" gibi bir kısıt anlatısı).
+4) MEKANİZMA: Sistem nasıl çalışıyor? 3-6 kavramı ADIYLA ver ve gündelik örnekle açıkla (izleyici "yeni bir terim öğrendim" desin).
+5) BÜYÜME: Model şirketi nasıl büyüttü?
+6) TÜKETİCİ TARAFI: Bu model senin cüzdanına, alışkanlığına, dikkatine nasıl yansıyor? Fark edilmeyen maliyetler, psikolojik taktikler.
+7) KRİZ / ELEŞTİRİ: Modelin karanlık tarafı, bir kriz ya da eleştiri — güvenilirlik için zorunlu, adil anlat.
+8) KORUNMA REHBERİ: 3-5 somut, uygulanabilir adım.
+9) ÇERÇEVEYE DÖNÜŞ VE KAPANIŞ: Açılıştaki kişiye/vakaya geri dön ve hikâyeyi onunla bağla; "bir sonraki tuzağı kaçırmamak için abone ol" de ve izleyiciye görüş soran TEK bir soru sor.
+Her bölüm geçişinde yeni bir merak aç ("ama hikâye burada bitmiyor").
 
 DOĞRULUK VE HUKUK (ÇOK ÖNEMLİ):
 - Uydurma istatistik, tarih, alıntı, dava YAZMA. Emin olmadığın sayı yerine nitel ifade kullan ("milyonlarca", "yıllar içinde").
@@ -65,7 +67,12 @@ DOĞRULUK VE HUKUK (ÇOK ÖNEMLİ):
 - Hem şirketin mantığını hem tüketicinin bedelini adil göster.
 
 BAŞLIK KURALI: "<Marka/Konu> Neden ...?" ya da "<Marka> Nasıl ...?" kalıbında, en fazla 60 karakter, cümle düzeninde (TAMAMI BÜYÜK HARF DEĞİL), emoji YOK. Verilen başlığı koru; yalnızca yazım hatası varsa düzelt.
-AÇIKLAMA: 2 kısa paragraf: (1) başlıktaki soruyu tekrar soran ve videoda anlatılanları özetleyen 2-3 cümle, (2) "Bu videoda ..." diye başlayıp ele alınan 3-4 konuyu sayan bir cümle. Emoji YOK.
+AÇIKLAMA (Zaman damgalarını YAZMA, sistem ekler): 4 kısım, emoji YOK:
+(1) Başlıktaki soru tek satır ("A101 Aldın Aldın neden hep bitiyor?").
+(2) "Bu videoda [açılış vakası]ndan başlayıp [ana soru]ya bakıyoruz." + hikâyenin beklenmedik başlangıcını anlatan bir cümle.
+(3) Videoda geçen kavramları ve konuları sayan, "... inceliyorum." diye biten bir paragraf.
+(4) En sonda izleyiciye yorum yaptıracak TEK bir görüş sorusu.
+BÖLÜMLER: 'bolumler' listesinde 7-9 bölüm ver. 'baslik' merak uyandıran kısa bir cümle (örn. "Toyota'nın hata yapacak parası yoktu"), 'sahne' o bölümün başladığı sahnenin 0'dan başlayan sıra numarası. İlk bölümün sahnesi 0; sonuncusu çerçeveye dönüş.
 ETİKETLER: 10-12 Türkçe arama terimi (marka adı, "<marka> neden", sektör, "tüketici hakları", "belgesel" dahil).
 
 Emoji YOK, madde işareti YOK, başlık satırı YOK; 'script' düz akıcı paragraflardan oluşan tek metin.
@@ -76,7 +83,7 @@ Marka adı/logosu stok sitelerde bulunmaz ve telif riski taşır: markanın GENE
 YASAK: soyut/kavramsal ifadeler ("conceptual", "abstract", "cinematic shot", "shadowy figure" gibi). Başa "a"/"the" KOYMA.
 ÇOK ÖNEMLİ — TÜRKÇE YAZIM: 'script', 'baslik', 'aciklama', 'kanca' ve sahne 'metin' alanlarını KUSURSUZ Türkçe imlâ ile yaz; ç, ğ, ı, İ, ö, ş, ü harflerini ASLA ASCII'ye sadeleştirme. (Yalnızca 'gorsel' İngilizce.)
 SADECE şu JSON'u döndür:
-{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade ; marka adı YAZI olarak geçebilir (örn. 'A101'İN SIRRI', 'BEDAVA DEĞİL', 'ASIL ÜRÜN SENSİN'); ZORUNLU","script":"...","sahneler":[{{"metin":"...","gorsel":"english stock keywords"}}]}}"""
+{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade ; marka adı YAZI olarak geçebilir (örn. 'A101'İN SIRRI', 'BEDAVA DEĞİL', 'ASIL ÜRÜN SENSİN'); ZORUNLU","script":"...","sahneler":[{{"metin":"...","gorsel":"english stock keywords"}}],"bolumler":[{{"baslik":"...","sahne":0}}]}}"""
 
 TEMALAR = {"tuketici_belgesel": (BELGESEL_PROMPT, 1200), "gizem": (UZUN_PROMPT, 300)}
 
