@@ -1,5 +1,9 @@
 token: True hesap: True
+CF_API_TOKEN 'cfat_' ile başlıyor mu: True | harf/rakam dışı karakter var mı: False
+CF_ACCOUNT_ID ekrandaki hesapla aynı mı: True
+Workers AI model listesi: HTTP 401 {"success":false,"errors":[{"code":10000,"message":"Authentication error"}],"messages":[],"result":null}
+
 hesap kimliği uzunluğu: 32 | token uzunluğu: 53
-hesap tokeni doğrulama: {"result":{"id":"4aef6729fdd6e385437cfe57cae09b97","status":"active"},"success":true,"errors":[],"messages":[{"code":10000,"message":"This API Token is valid and active","type":null}]}
+hesap tokeni doğrulama: {"result":{"id":"23325414d6832e949a7f021ec2f12e51","status":"active"},"success":true,"errors":[],"messages":[{"code":10000,"message":"This API Token is valid and active","type":null}]}
 kullanıcı tokeni doğrulama: HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
 CF_FAIL 401 {"result":null,"success":false,"errors":[{"code":10000,"message":"Authentication error"}],"messages":[]}
