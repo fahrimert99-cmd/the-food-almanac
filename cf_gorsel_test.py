@@ -27,3 +27,4 @@ try:
     print("CF_OK")
 except urllib.error.HTTPError as e:
     print("CF_FAIL", e.code, e.read().decode()[:400])
+# tetik 16:55:11
