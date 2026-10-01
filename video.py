@@ -687,9 +687,10 @@ def _eleven_key():
             or _keys().get("eleven", "")).strip()
 
 
-# ElevenLabs tek istekte ~10.000 karakter kabul eder; uzun (8-12 dk) anlatimlar
-# cumle sinirindan bu boyutta parcalara bolunup arka arkaya eklenir.
-ELEVEN_PARCA_KARAKTER = 4500
+# ElevenLabs tek istekte ~10.000 karakter kabul eder ama UZUN istekte ses giderek
+# sertleşip boğuklaşıyor (A101 önizlemesinde 4500 karakterlik parçanın 2:45-4:20
+# arası +6 dB, tizler yarıya indi). Kısa parçalar + önceki/sonraki metin bağlamı.
+ELEVEN_PARCA_KARAKTER = 1500
 SON_SAHNE_BASLANGIC = None  # son uzun render'in sahne baslangic saniyeleri
 
 
@@ -722,7 +723,7 @@ def _eleven_kalan_karakter(key):
         return None
 
 
-def _eleven_tek(text, mp3_path, voice_id, key, speed):
+def _eleven_tek(text, mp3_path, voice_id, key, speed, onceki="", sonraki=""):
     """Tek ElevenLabs istegi: mp3 yazar, kelime zamanlamalarini dondurur."""
     import urllib.request, urllib.error, base64 as _b64
     # output_format=mp3_44100_128: ücretsiz/Starter planda İZİNLİ en yüksek mp3
@@ -738,6 +739,11 @@ def _eleven_tek(text, mp3_path, voice_id, key, speed):
             "voice_settings": {"stability": 0.55, "similarity_boost": 0.72,
                                "style": 0.0, "use_speaker_boost": False,
                                "speed": speed}}
+    # Parçalar arası tonlama sürekliliği (her parça baştan "başlıyormuş" gibi okunmasın)
+    if onceki:
+        body["previous_text"] = onceki[-600:]
+    if sonraki:
+        body["next_text"] = sonraki[:600]
     req = urllib.request.Request(url, data=json.dumps(body).encode(),
                                  headers={"xi-api-key": key, "Content-Type": "application/json"})
     try:
@@ -785,8 +791,18 @@ def _eleven_seslendir(text, mp3_path, voice_id=None, speed=1.12):
     tmp = tempfile.mkdtemp()
     dosyalar, boundaries, ofset = [], [], 0.0
     for n, parca in enumerate(parcalar):
+        ham = os.path.join(tmp, f"h{n}.mp3")
         yol = os.path.join(tmp, f"p{n}.mp3")
-        for b in _eleven_tek(parca, yol, voice_id, key, speed):
+        bs = _eleven_tek(parca, ham, voice_id, key, speed,
+                         onceki=" ".join(parcalar[:n]), sonraki=" ".join(parcalar[n + 1:]))
+        # Parça başına ses seviyesi eşitleme (EBU R128): parçalar arası seviye sıçraması olmasın
+        try:
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", ham, "-af",
+                            "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", "44100", "-b:a", "128k", yol],
+                           check=True)
+        except Exception:
+            shutil.copy(ham, yol)
+        for b in bs:
             boundaries.append({**b, "start": b["start"] + ofset})
         ofset += sure_al(yol)
         dosyalar.append(yol)

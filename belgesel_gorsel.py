@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import os
 import random
+import re
 from concurrent.futures import ThreadPoolExecutor
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
@@ -26,10 +27,43 @@ KIRMIZI = (214, 32, 39)
 STIL_EK = ("photorealistic cinematic documentary still, 35mm film look, natural "
            "lighting, shallow depth of field, rich detail, no watermark")
 ARSIV_EK = "photographed in the early 2000s, documentary archival photo"
-# Görsellerdeki TÜM yazılar Türkçe ve sahneye uygun olsun (İngilizce tabela olmasın).
-TR_YAZI_EK = ("set in Turkey, Turkish street and store environment, every visible sign, "
-              "price tag, label and screen text is written in Turkish language, "
-              "short legible Turkish words only, no English text")
+# Görselde YAZI ÜRETİLMEZ: FLUX Türkçe harfleri (İ, Ş, Ğ...) bozuyordu ("İNDİRİM" ->
+# "ÜNDÇÜM"). Tabelalar boş üretilir; sahnenin Türkçe yazısı sonradan KODLA basılır.
+YAZISIZ_EK = ("set in Turkey, no text, no letters, no words, no numbers, blank signs, "
+              "blank labels, blank price tags, unbranded packaging, no logos")
+_YAZI_KALIBI = re.compile(r"""\s*(?:with\s+(?:the\s+)?text|(?:that\s+)?reads?|reading|saying|labell?ed|written)\s*['"]([^'"]{1,40})['"]""", re.I)
+_TIRNAK_KALIBI = re.compile(r"""['"]([^'"]{1,40})['"]""")
+
+
+def yazisiz_prompt(p):
+    """Prompttan görünür yazı isteklerini ayıklar. (yazısız prompt, Türkçe yazı|None)."""
+    yazilar = _YAZI_KALIBI.findall(p) + _TIRNAK_KALIBI.findall(_YAZI_KALIBI.sub("", p))
+    temiz = _TIRNAK_KALIBI.sub("", _YAZI_KALIBI.sub("", p))
+    temiz = re.sub(r"\s{2,}", " ", re.sub(r"\s+,", ",", temiz)).strip(" ,")
+    yazi = next((y.strip() for y in yazilar if y.strip()), None)
+    return temiz, yazi
+
+
+def yazi_etiketi(im, yazi):
+    """Sahnenin Türkçe yazısını kanal tarzında etiket olarak basar (sol üst, Ken Burns
+    yakınlaştırmasında kırpılmayacak güvenli alanda): koyu yarı saydam kutu + sarı şerit."""
+    W, H = im.size
+    yazi = yazi.strip().replace("i", "İ").replace("ı", "I").upper()  # Türkçe büyük harf
+    f = _font(int(H * 0.065))
+    while f.size > 24 and ImageDraw.Draw(im).textlength(yazi, font=f) > W * 0.6:
+        f = _font(f.size - 4)
+    d0 = ImageDraw.Draw(im)
+    b = d0.textbbox((0, 0), yazi, font=f)
+    tw, th = b[2] - b[0], b[3] - b[1]
+    x, y, pad = int(W * 0.085), int(H * 0.11), int(f.size * 0.35)
+    kat = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    dk = ImageDraw.Draw(kat)
+    dk.rectangle((x, y, x + tw + pad * 2 + 12, y + th + pad * 2), fill=(10, 10, 14, 185))
+    dk.rectangle((x, y, x + 12, y + th + pad * 2), fill=(255, 195, 30, 255))
+    im = Image.alpha_composite(im.convert("RGBA"), kat).convert("RGB")
+    ImageDraw.Draw(im).text((x + 12 + pad - b[0], y + pad - b[1]), yazi, font=f, fill=(255, 255, 255))
+    return im
+
 
 # Türkçe tabela yazısını prompta zorla: tırnak içindeki İngilizce yazıları Türkçeye çevirir.
 _TR_CEVIRI_PROMPT = """Aşağıdaki İngilizce görsel üretim promptlarında tırnak ('...' veya "...") içinde
@@ -258,10 +292,13 @@ def sahne_gorselleri(sahneler, boyut, tmp, paralel=3):
     isler = []
     hamlar = [(s.get("gorsel_prompt") or s.get("gorsel") or "").strip() or "documentary scene"
               for s in sahneler]
-    hamlar = turkce_yazili_promptlar(hamlar)
+    hamlar = turkce_yazili_promptlar(hamlar)   # tırnaklı yazılar Türkçeleşir (etiket için)
+    ayrik = [yazisiz_prompt(p) for p in hamlar]
+    etiketler = [y for _, y in ayrik]
+    print(f"      Görsellerde yazı yok; {sum(1 for y in etiketler if y)} sahneye Türkçe etiket kodla basılacak")
     for i, s in enumerate(sahneler):
         ek = f"{ARSIV_EK}, {STIL_EK}" if s.get("arsiv") else STIL_EK
-        isler.append((i, f"{hamlar[i]}, {TR_YAZI_EK}, {ek}", os.path.join(tmp, f"ai_{i:03d}.jpg")))
+        isler.append((i, f"{ayrik[i][0]}, {YAZISIZ_EK}, {ek}", os.path.join(tmp, f"ai_{i:03d}.jpg")))
 
     def _is(a):
         i, p, yol = a
@@ -291,6 +328,8 @@ def sahne_gorselleri(sahneler, boyut, tmp, paralel=3):
             im = _kart(W, H)
         im = _kapla(im, W, H)
         im = arsiv(im, i) if s.get("arsiv") else sinematik(im)
+        if etiketler[i]:
+            im = yazi_etiketi(im, etiketler[i])
         im = _avatar_ekle(im)
         yol = os.path.join(tmp, f"sahne_{i:03d}.jpg")
         im.save(yol, quality=92)
