@@ -73,11 +73,43 @@ def _aciklama_bolumlu(aciklama, damgalar):
         return "\n\n".join(par[:-1] + [damgalar, par[-1]])
     return "\n\n".join(par + [damgalar])
 
+ONIZLEME_DIR="output/onizleme"
+
+def _kaynaklar_ve_etiket(uzun):
+    """Aciklamanin sonuna KAYNAKLAR (resmi kurum + kok alan adi) ve 2 hashtag ekler."""
+    satir=[f"{k.get('ad','').strip()}\nhttps://{k.get('alan','').strip().strip('/')}"
+           for k in (uzun.get("kaynaklar") or []) if k.get("ad") and k.get("alan")]
+    ek=[]
+    if satir: ek.append("KAYNAKLAR\n\n"+"\n\n".join(satir))
+    et=[t for t in (uzun.get("etiketler") or []) if t and " " not in t.strip()][:1]
+    ek.append(" ".join(["#"+_slug(t).replace("-","") for t in et]+["#belgesel"]))
+    return (uzun.get("aciklama","").rstrip()+"\n\n"+"\n\n".join(ek)).strip()
+
+def _onizleme_kaydet(uzun, cikti, kapak):
+    """YAYINLAMADAN inceleme paketi: video + kapak + aciklama + senaryo + kare paneli."""
+    import shutil, subprocess
+    os.makedirs(ONIZLEME_DIR,exist_ok=True)
+    shutil.copy(cikti,os.path.join(ONIZLEME_DIR,"video.mp4"))
+    if kapak and os.path.exists(kapak): shutil.copy(kapak,os.path.join(ONIZLEME_DIR,"kapak.jpg"))
+    with open(os.path.join(ONIZLEME_DIR,"aciklama.txt"),"w",encoding="utf-8") as f:
+        f.write(f"BAŞLIK: {uzun['baslik']}\n\nETİKETLER: {', '.join(uzun.get('etiketler') or [])}\n\n{uzun.get('aciklama','')}\n")
+    with open(os.path.join(ONIZLEME_DIR,"senaryo.json"),"w",encoding="utf-8") as f:
+        json.dump(uzun,f,ensure_ascii=False,indent=1)
+    # 12 karelik panel (videoyu indirmeden genel bakis)
+    sure=float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of",
+                               "default=nokey=1:noprint_wrappers=1",cikti],capture_output=True,text=True).stdout.strip() or 0)
+    if sure>0:
+        subprocess.run(["ffmpeg","-v","error","-y","-i",cikti,"-vf",
+                        f"fps=12/{sure:.1f},scale=480:-1,tile=4x3","-frames:v","1",
+                        os.path.join(ONIZLEME_DIR,"kareler.jpg")])
+    print(f"✓ ONIZLEME hazir ({sure/60:.1f} dk): {ONIZLEME_DIR}/ — YouTube'a YUKLENMEDI")
+
 def main():
     cfg=_load(CFG_P,{})
+    onizleme=os.environ.get("ONIZLEME")=="1"
     # DURDURMA BAYRAGI: analiz (uzun ort. 38 izlenme vs short 750) sonrasi uzun hatti
     # devre disi. Yeniden acmak icin config.json'da "uzun_aktif": true yapin.
-    if not cfg.get("uzun_aktif", True):
+    if not onizleme and not cfg.get("uzun_aktif", True):
         print("Uzun hatti devre disi (config.uzun_aktif=false) — atlaniyor."); return
     u=_load(UZUN_P,{"pending":[],"yapilan":[],"yapilan_id":[],"bekleyen_yorum":None})
     for k in ("pending","yapilan","yapilan_id"): u.setdefault(k,[])
@@ -103,14 +135,24 @@ def main():
     V.uret_video(sp,cikti,ses=cfg.get("ses","erkek"),dikey=False,hiz=str(cfg.get("uzun_hiz","+0%")),
                  sahneler=uzun.get("sahneler"),animasyon=bool(cfg.get("animasyon",True)),cocuk=bool(cfg.get("cocuk_icerigi",False)),
                  tonlama=str(cfg.get("tonlama","+0Hz")),gorsel_stil=str(cfg.get("uzun_gorsel_stil","stok")),kanca=(uzun.get("kanca") or konu),
-                 eleven_once=bool(cfg.get("uzun_eleven",True)))
+                 eleven_once=bool(cfg.get("uzun_eleven",True)),altyazi=bool(cfg.get("uzun_altyazi",True)))
     damgalar=_zaman_damgalari(uzun.get("bolumler"), getattr(V,"SON_SAHNE_BASLANGIC",None))
     uzun["aciklama"]=_aciklama_bolumlu(uzun.get("aciklama",""), damgalar)
     print("  Bolumler:", ("\n    "+damgalar.replace("\n","\n    ")) if damgalar else "yok (kural saglanmadi)")
+    uzun["aciklama"]=_kaynaklar_ve_etiket(uzun)
     kapak=None
-    try:
-        import kapak_uzun as K; kapak=K.kapak_uret(cikti,uzun["baslik"],"output/uzun_kapak.jpg",kanca=uzun.get("kanca"))
-    except Exception as e: print("kapak atlandi:",str(e)[:60])
+    ky=uzun.get("kapak_yazi") or {}
+    if ky.get("alt"):
+        try:
+            import belgesel_gorsel as BG
+            kapak=BG.kapak(uzun.get("kapak_gorsel"),ky.get("ust",""),ky["alt"],"output/uzun_kapak.jpg")
+        except Exception as e: print("belgesel kapak atlandi:",str(e)[:80])
+    if not kapak:
+        try:
+            import kapak_uzun as K; kapak=K.kapak_uret(cikti,uzun["baslik"],"output/uzun_kapak.jpg",kanca=uzun.get("kanca"))
+        except Exception as e: print("kapak atlandi:",str(e)[:60])
+    if onizleme:
+        _onizleme_kaydet(uzun,cikti,kapak); return
 
     gizlilik=cfg.get("uzun_gizlilik","unlisted"); yayin=None
     if gizlilik=="private":

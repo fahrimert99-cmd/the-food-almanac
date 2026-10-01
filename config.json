@@ -17,7 +17,7 @@
   "kisa_eleven": true,
   "uzun_eleven": true,
   "uzun_gizlilik": "unlisted",
-  "uzun_gorsel_stil": "stok",
+  "uzun_gorsel_stil": "ai_sinematik",
   "uzun_aktif": true,
   "marka_ad": "TUZAK AVCISI",
   "marka_renk": [
@@ -58,5 +58,6 @@
   "uzun_tema": "tuketici_belgesel",
   "uzun_yayin_gunu": 3,
   "uzun_yayin_saati_utc": "15:00",
-  "uzun_hiz": "+0%"
+  "uzun_hiz": "+0%",
+  "uzun_altyazi": false
 }

@@ -29,9 +29,12 @@ Yapı — RETENTION için kritik: SOĞUK AÇILIŞ ile başla (ilk cümle çarpı
 Her 60-90 saniyede yeni bir soru/merak aç ki izleyici sonuna kadar kalsın.
 Emoji YOK, madde YOK, başlık satırı YOK; düz akıcı paragraflar (tek metin).
 Anlatımı 10-13 sahneye böl. Sahne 'metin'leri script'in SIRAYLA parçaları olsun (o an anlatılan şey).
-Her sahne için 'gorsel': o cümlede anlatılan şeyi gösteren 2-4 KELİMELİK, SOMUT, ARANABİLİR İngilizce stok video anahtar kelimesi.
-Somut nesne/mekân/eylem kullan; örnek: "supermarket shopping cart", "credit card payment", "shrinking product package", "child playing phone game".
-YASAK: soyut/kavramsal ifadeler ("conceptual", "abstract", "cinematic shot", "shadowy figure", "coins dissolving" gibi). Başa "a"/"the" KOYMA, somut ismi başa yaz.
+GÖRSEL STİL (rakip belgesel): Ekranda yazı/grafik YOK; her sahne yapay zekâyla üretilen, fotoğraf gerçekliğinde sinematik bir kare.
+Her sahne için:
+- 'gorsel_prompt': o an anlatılanı gösteren 15-30 kelimelik İNGİLİZCE görsel üretim promptu. Somut kişi, mekân, nesne, ışık ve kamera açısı yaz (örn. "long queue of shoppers waiting outside a Turkish discount supermarket at 9am, morning light, wide shot"). Konu bir marka mağazasıysa tabeladaki yazıyı birebir ver (örn. "store sign reading 'A101'"); başka yazı, logo veya filigran isteme. Gerçek, tanınmış kişilerin (kurucu, CEO) yüzünü İSTEME; onları arkadan, uzaktan ya da ortamla anlat.
+- 'arsiv': anlatılan olay geçmişteyse (kuruluş yılları, eski bir kriz) true, değilse false. Arşiv sahneleri eski film efektiyle gösterilir.
+- 'gorsel': aynı sahne için 2-4 kelimelik İngilizce stok anahtar kelimesi (yedek).
+KAPAK: 'kapak_yazi' = {{"ust":"1 kelime (kırmızı etikette, örn. NEDEN)","alt":"1-2 kelime, en fazla 12 harf (dev yazı, örn. BİTİYOR?)"}}. 'kapak_gorsel' = kapak arka planı için İngilizce prompt: konuyu tek bakışta anlatan TEK güçlü nesne/sahne, sağ tarafta, sol taraf karanlık ve boş (örn. "cardboard box overflowing with discounted electronics and household goods with a store sign reading 'A101' in a dark warehouse, right side of frame").
 ÇOK ÖNEMLİ — TÜRKÇE YAZIM: 'script', 'baslik', 'aciklama', 'kanca' ve sahne 'metin' alanlarını KUSURSUZ Türkçe imlâ ile yaz.
 Türkçe'ye özgü harfleri (ç, ğ, ı, İ, ö, ş, ü ve büyükleri Ç, Ğ, İ, Ö, Ş, Ü) HER ZAMAN ve EKSİKSİZ kullan.
 Bu harfleri ASLA ASCII karşılıklarına (c, g, i, o, s, u) sadeleştirme; aksan/diakritik atlama. Örnek: "guclu" DEĞİL "güçlü", "cocuk" DEĞİL "çocuk", "sirri" DEĞİL "sırrı", "yasiyor" DEĞİL "yaşıyor".
@@ -67,23 +70,25 @@ DOĞRULUK VE HUKUK (ÇOK ÖNEMLİ):
 - Hem şirketin mantığını hem tüketicinin bedelini adil göster.
 
 BAŞLIK KURALI: "<Marka/Konu> Neden ...?" ya da "<Marka> Nasıl ...?" kalıbında, en fazla 60 karakter, cümle düzeninde (TAMAMI BÜYÜK HARF DEĞİL), emoji YOK. Verilen başlığı koru; yalnızca yazım hatası varsa düzelt.
-AÇIKLAMA (Zaman damgalarını YAZMA, sistem ekler): 4 kısım, emoji YOK:
+AÇIKLAMA (Zaman damgalarını YAZMA, sistem ekler). Rakip belgesel düzeni, emoji YOK, paragraflar arasında boş satır:
 (1) Başlıktaki soru tek satır ("A101 Aldın Aldın neden hep bitiyor?").
-(2) "Bu videoda [açılış vakası]ndan başlayıp [ana soru]ya bakıyoruz." + hikâyenin beklenmedik başlangıcını anlatan bir cümle.
-(3) Videoda geçen kavramları ve konuları sayan, "... inceliyorum." diye biten bir paragraf.
-(4) En sonda izleyiciye yorum yaptıracak TEK bir görüş sorusu.
-BÖLÜMLER: 'bolumler' listesinde 7-9 bölüm ver. 'baslik' merak uyandıran kısa bir cümle (örn. "Toyota'nın hata yapacak parası yoktu"), 'sahne' o bölümün başladığı sahnenin 0'dan başlayan sıra numarası. İlk bölümün sahnesi 0; sonuncusu çerçeveye dönüş.
+(2) Cevabın beklenen yerde olmadığını söyleyen 1-2 cümle ("Cevap yalnızca ... değil.").
+(3) "Bu videoda ..." diye başlayıp videoda geçen tarihçeyi, kavramları ve konuları sayan, "... inceliyorum." diye biten paragraf.
+(4) Videonun cevapladığı 3-4 merak sorusu, her biri ayrı satırda.
+(5) Tek cümlelik vurucu sonuç ("Belki de asıl ürün ... değil; ...").
+(6) İzleyiciye yorum yaptıracak TEK görüş sorusu (soru işaretiyle bitsin).
+'kaynaklar' alanına videoda kullanılan bilgiler için 2-5 RESMÎ kaynak yaz: yalnızca kurum adı + kök alan adı (örn. {{"ad":"A101 – Kurumsal","alan":"a101.com.tr"}}, {{"ad":"KAP – Kamuyu Aydınlatma Platformu","alan":"kap.org.tr"}}). Alt sayfa URL'si UYDURMA.
 ETİKETLER: 10-12 Türkçe arama terimi (marka adı, "<marka> neden", sektör, "tüketici hakları", "belgesel" dahil).
 
 Emoji YOK, madde işareti YOK, başlık satırı YOK; 'script' düz akıcı paragraflardan oluşan tek metin.
-Anlatımı 35-50 sahneye böl. Sahne 'metin'leri script'in SIRAYLA ve EKSİKSİZ parçaları olsun (birleştirildiğinde script'in tamamı çıksın).
+Anlatımı 45-60 sahneye böl (sahne başı ~10-15 sn). Sahne 'metin'leri script'in SIRAYLA ve EKSİKSİZ parçaları olsun (birleştirildiğinde script'in tamamı çıksın).
 Her sahne için 'gorsel': o cümlede anlatılan şeyi gösteren 2-4 KELİMELİK, SOMUT, ARANABİLİR İngilizce stok video anahtar kelimesi.
 Somut nesne/mekân/eylem kullan; örnek: "supermarket shopping cart", "credit card payment", "warehouse forklift", "people using smartphone".
 Marka adı/logosu stok sitelerde bulunmaz ve telif riski taşır: markanın GENEL karşılığını yaz ("discount supermarket aisle", "crowded store checkout queue", "coffee shop counter", "fast food restaurant", "delivery courier scooter").
 YASAK: soyut/kavramsal ifadeler ("conceptual", "abstract", "cinematic shot", "shadowy figure" gibi). Başa "a"/"the" KOYMA.
-ÇOK ÖNEMLİ — TÜRKÇE YAZIM: 'script', 'baslik', 'aciklama', 'kanca' ve sahne 'metin' alanlarını KUSURSUZ Türkçe imlâ ile yaz; ç, ğ, ı, İ, ö, ş, ü harflerini ASLA ASCII'ye sadeleştirme. (Yalnızca 'gorsel' İngilizce.)
+ÇOK ÖNEMLİ — TÜRKÇE YAZIM: 'script', 'baslik', 'aciklama', 'kanca' ve sahne 'metin' alanlarını KUSURSUZ Türkçe imlâ ile yaz; ç, ğ, ı, İ, ö, ş, ü harflerini ASLA ASCII'ye sadeleştirme. (Yalnızca 'gorsel', 'gorsel_prompt' ve 'kapak_gorsel' İngilizce.)
 SADECE şu JSON'u döndür:
-{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade ; marka adı YAZI olarak geçebilir (örn. 'A101'İN SIRRI', 'BEDAVA DEĞİL', 'ASIL ÜRÜN SENSİN'); ZORUNLU","script":"...","sahneler":[{{"metin":"...","gorsel":"english stock keywords"}}],"bolumler":[{{"baslik":"...","sahne":0}}]}}"""
+{{"baslik":"...","aciklama":"...","etiketler":["e1","e2","e3","e4","e5","e6","e7","e8","e9","e10"],"kanca":"EN FAZLA 3 kelimelik, kapakta kullanılacak çarpıcı Türkçe ifade ; marka adı YAZI olarak geçebilir (örn. 'A101'İN SIRRI', 'BEDAVA DEĞİL', 'ASIL ÜRÜN SENSİN'); ZORUNLU","script":"...","sahneler":[{{"metin":"...","gorsel_prompt":"english image prompt","arsiv":false,"gorsel":"english stock keywords"}}],"bolumler":[{{"baslik":"...","sahne":0}}],"kaynaklar":[{{"ad":"...","alan":"..."}}],"kapak_yazi":{{"ust":"...","alt":"..."}},"kapak_gorsel":"..."}}"""
 
 TEMALAR = {"tuketici_belgesel": (BELGESEL_PROMPT, 1200), "gizem": (UZUN_PROMPT, 300)}
 

@@ -1542,7 +1542,7 @@ def video_uret(gorseller, mp3, ass, cikti, boyut, fps):
 def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
                sahneler=None, animasyon=True, cocuk=True, tonlama="+0Hz",
                gorsel_stil="stok", kanca=None, eleven_once=False, eleven_voice_id=None,
-               muzik_tema=None, ai_sahne=False, ai_fallback=True):
+               muzik_tema=None, ai_sahne=False, ai_fallback=True, altyazi=True):
     """Orkestratör tarafından çağrılır: script -> mp4.
     sahneler verilirse (Gemini'den), her sahne için AI görsel üretir ve
     Ken Burns + çapraz geçişle animasyonlu montaj yapar.
@@ -1593,7 +1593,8 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
     mp3, boundaries = _bosluk_daralt(mp3, boundaries, tmp)
     cues = cue_olustur(boundaries, CONFIG["altyazi_max_kelime"], CONFIG["altyazi_max_sure"])
     ass = os.path.join(tmp, "sub.ass")
-    ass_yaz(cues, ass, CONFIG, dikey, kanca=kanca)
+    # altyazi=False: belgesel düzeni (rakip videolarda ekranda yazı yok) -> boş ASS.
+    ass_yaz(cues if altyazi else [], ass, CONFIG, dikey, kanca=kanca if altyazi else None)
     os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
     # SES TEMİZLEME: anlatımı cızırtı/tizlikten arındır (de-esser + fizzy-tepe
     # kesimi). Süreyi değiştirmez -> altyazı senkronu korunur. Müzikten ÖNCE.
@@ -1603,9 +1604,14 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
     # ekliyoruz (senkron bozulmaz). Kapalıysa/başarısızsa mp3 değişmeden döner.
     mp3 = _muzik_ekle(mp3, tmp, muzik_tema)
     if animasyon:
-        gorseller = sahne_gorselleri_hazirla(sahneler, cumleler, boyut, tmp,
-                                             cocuk=cocuk, stil=gorsel_stil,
-                                             ai_sahne=ai_sahne, ai_fallback=ai_fallback)
+        if gorsel_stil == "ai_sinematik" and sahneler:
+            # Uzun belgesel: her sahneye 1 AI görsel (sahne sayısı korunur -> senkron).
+            import belgesel_gorsel as BG
+            gorseller = BG.sahne_gorselleri(sahneler, boyut, tmp)
+        else:
+            gorseller = sahne_gorselleri_hazirla(sahneler, cumleler, boyut, tmp,
+                                                 cocuk=cocuk, stil=gorsel_stil,
+                                                 ai_sahne=ai_sahne, ai_fallback=ai_fallback)
         # UZUN (yatay) videolarda görselleri seslendirmeye TAM senkronla:
         # her sahne, metninin konuşulduğu gerçek zaman aralığında görünür.
         _ss = _sahne_sureleri(sahneler, boundaries, sure_al(mp3)) if (not dikey and sahneler) else None

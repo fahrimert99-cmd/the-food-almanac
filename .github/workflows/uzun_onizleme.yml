@@ -1,0 +1,79 @@
+name: Uzun Video ONIZLEME (YUKLEMEZ)
+
+# Uzun tüketici belgeselini TAM üretir (senaryo + AI görseller + ElevenLabs ses +
+# kapak + zaman damgaları) ama YouTube'a YÜKLEMEZ: YouTube secret'ları BİLEREK
+# verilmez. Video "uzun-onizleme" artifact'ında; kapak, kare paneli, açıklama ve
+# senaryo ayrıca onizleme/uzun/ klasörüne commit edilir.
+# Tetikleme: Actions'tan elle ya da onizleme_tetik.txt değişince (bu dal).
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [claude/adoring-sagan-ni2qvl]
+    paths: [onizleme_tetik.txt]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uzun-onizleme
+  cancel-in-progress: false
+
+jobs:
+  onizle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - name: FFmpeg kur
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
+      - name: Python kur
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bagimliliklar
+        run: pip install -r requirements.txt
+      - name: Onizleme uret (YouTube'a YUKLENMEZ)
+        env:
+          ONIZLEME: "1"
+          # YT secret'lari BILEREK yok -> yukleme imkansiz.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+          ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          GEMINI_KEY_UZUN: ${{ secrets.GEMINI_KEY_UZUN }}
+          GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVEN_VOICE_ID: ${{ secrets.ELEVEN_VOICE_ID }}
+        run: |
+          set -o pipefail
+          python3 uzun_otomasyon.py 2>&1 | sed -E 's/anahtar:.*/anahtar: [redacted]/' | tee uzun_onizleme.log
+      - name: Onizleme artifact (video dahil)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: uzun-onizleme
+          path: |
+            output/onizleme/
+            uzun_onizleme.log
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Kucuk dosyalari dala kaydet (video haric)
+        if: always()
+        run: |
+          mkdir -p onizleme/uzun
+          for f in kapak.jpg kareler.jpg aciklama.txt senaryo.json; do
+            [ -f "output/onizleme/$f" ] && cp "output/onizleme/$f" onizleme/uzun/
+          done
+          cp uzun_onizleme.log onizleme/uzun/ 2>/dev/null || true
+          git config user.name "onizleme-bot"
+          git config user.email "onizleme-bot@users.noreply.github.com"
+          git add onizleme/uzun
+          git commit -m "onizleme: uzun video paketi" || exit 0
+          for i in 1 2 3; do
+            git pull --rebase origin claude/adoring-sagan-ni2qvl && git push origin HEAD:claude/adoring-sagan-ni2qvl && exit 0
+            sleep $((2 ** i))
+          done
