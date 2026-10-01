@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: uzun-onizleme
-  cancel-in-progress: false
+  cancel-in-progress: true   # yeni önizleme, takılı/eski önizlemeyi iptal eder
 
 jobs:
   onizle:
@@ -25,7 +25,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: FFmpeg kur
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
+        # Paket aynası yanıt vermezse (bir koşu 7+ dk asılı kaldı) sonsuza dek bekleme.
+        timeout-minutes: 8
+        run: |
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30"
+          sudo apt-get $APT update || true
+          sudo apt-get $APT install -y --no-install-recommends ffmpeg fonts-dejavu
       - name: Python kur
         uses: actions/setup-python@v6
         with:
