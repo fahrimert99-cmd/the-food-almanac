@@ -20,6 +20,8 @@ concurrency:
 
 jobs:
   onizle:
+    # commit mesajında [durdur] varsa: bu koşu çalışan önizlemeyi iptal eder, kendisi atlanır
+    if: ${{ !contains(github.event.head_commit.message, '[durdur]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
