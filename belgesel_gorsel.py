@@ -157,8 +157,45 @@ def _gemini_gorsel(prompt, yol):
     return None
 
 
+CF_MODEL = os.environ.get("CF_GORSEL_MODEL", "").strip() or "@cf/black-forest-labs/flux-1-schnell"
+_CF_KAPALI = False
+
+
+def _cloudflare_gorsel(prompt, yol):
+    """Cloudflare Workers AI (FLUX schnell; günlük ücretsiz kota). CF_API_TOKEN +
+    CF_ACCOUNT_ID gerekir. Yetki/kota hatasında o koşuda bir daha denenmez."""
+    global _CF_KAPALI
+    token = (os.environ.get("CF_API_TOKEN") or "").strip()
+    hesap = (os.environ.get("CF_ACCOUNT_ID") or "").strip()
+    if _CF_KAPALI or not (token and hesap):
+        return None
+    import base64, json, urllib.error, urllib.request
+    url = f"https://api.cloudflare.com/client/v4/accounts/{hesap}/ai/run/{CF_MODEL}"
+    # schnell kare (1024) üretir; 16:9'a kırpılacağı için yatay kompozisyon iste
+    body = {"prompt": (prompt + ", wide horizontal composition, subject centered")[:2000], "steps": 8}
+    try:
+        req = urllib.request.Request(url, data=json.dumps(body).encode(),
+                                     headers={"Authorization": f"Bearer {token}",
+                                              "Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            d = json.loads(r.read().decode())
+        b64 = (d.get("result") or {}).get("image")
+        if b64:
+            with open(yol, "wb") as f:
+                f.write(base64.b64decode(b64))
+            return yol
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403, 429):
+            _CF_KAPALI = True
+            print(f"      (Cloudflare görsel kapalı: HTTP {e.code} — anahtar/günlük kota)")
+    except Exception as e:
+        print(f"      (Cloudflare görsel hata: {str(e)[:80]})")
+    return None
+
+
 def _uret(prompt, yol):
-    if _gemini_gorsel(prompt, yol):
+    # Sıra: Gemini (faturalıysa) -> Cloudflare (ücretsiz kota) -> NVIDIA -> Pollinations
+    if _gemini_gorsel(prompt, yol) or _cloudflare_gorsel(prompt, yol):
         return yol
     try:
         import nvidia_araclar as NA
