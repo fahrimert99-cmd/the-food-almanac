@@ -158,11 +158,13 @@ def _konturlu_yazi(d, xy, metin, font, dolgu, kontur, kalinlik):
 def _konu_kutusu(im, x_bas):
     """x_bas'ın sağındaki en parlak bölgenin kutusu (kapakta konunun yeri)."""
     W, H = im.size
-    l = im.convert("L").crop((x_bas, 0, W, H))
-    esik = sorted(l.getdata())[int(l.width * l.height * 0.93)]  # en parlak %7
+    # Alt %28 hariç: zemindeki yansıma konu kutusunu ekranın altına uzatmasın.
+    l = im.convert("L").crop((x_bas, 0, W, int(H * 0.72)))
+    esik = sorted(l.getdata())[int(l.width * l.height * 0.985)]  # en parlak %1,5 (çekirdek, hale değil)
     if esik < 60:
         return None
-    k = l.point(lambda v: 255 if v >= esik else 0).filter(ImageFilter.MaxFilter(5)).getbbox()
+    # MinFilter: tek tük parlak pikselleri (yansıma kırıntısı, gren) ayıkla
+    k = l.point(lambda v: 255 if v >= esik else 0).filter(ImageFilter.MinFilter(3)).getbbox()
     return (k[0] + x_bas, k[1], k[2] + x_bas, k[3]) if k else None
 
 
