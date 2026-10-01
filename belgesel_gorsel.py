@@ -103,11 +103,14 @@ def _kart(W, H):
 # alınca o koşuda bir daha denenmez ve NVIDIA/Pollinations'a düşülür.
 GEMINI_GORSEL_MODELLER = [m.strip() for m in (os.environ.get("GEMINI_GORSEL_MODELLER") or
                           "gemini-3.1-flash-image,gemini-3-pro-image").split(",") if m.strip()]
-_GEMINI_KAPALI = False
+_GEMINI_OLU = set()  # bu koşuda kota/yetki hatası veren anahtarlar
 
 
-def _gemini_anahtar():
+def _gemini_anahtarlar():
+    """Görsel için denenecek anahtarlar. Önce GEMINI_IMAGE_API_KEY: faturalandırması
+    açık AYRI projenin anahtarı (Shorts'un ücretsiz anahtarları ücretli olmasın)."""
     import json
+    out = []
     for ad in ("GEMINI_IMAGE_API_KEY", "GEMINI_KEY_UZUN", "GEMINI_API_KEY", "GEMINI_KEY"):
         raw = (os.environ.get(ad) or "").strip()
         if raw.startswith("{"):
@@ -115,42 +118,42 @@ def _gemini_anahtar():
                 raw = (json.loads(raw).get("gemini") or "").strip()
             except Exception:
                 raw = ""
-        if raw:
-            return raw
-    return ""
+        if raw and raw not in out:
+            out.append(raw)
+    return out
 
 
 def _gemini_gorsel(prompt, yol):
-    """Gemini ile 16:9 görsel; başarısızsa None."""
-    global _GEMINI_KAPALI
-    key = _gemini_anahtar()
-    if _GEMINI_KAPALI or not key:
-        return None
+    """Gemini ile 16:9 görsel; başarısızsa None. Kotası 0 olan (faturalandırması
+    kapalı) anahtar o koşuda bir daha denenmez; hepsi öyleyse NVIDIA'ya düşülür."""
     import base64, json, urllib.error, urllib.request
-    for model in GEMINI_GORSEL_MODELLER:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
-        body = {"contents": [{"parts": [{"text": "Generate an image: " + prompt}]}],
-                "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "16:9"}}}
-        try:
-            req = urllib.request.Request(url, data=json.dumps(body).encode(),
-                                         headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=150) as r:
-                d = json.loads(r.read().decode())
-            for c in d.get("candidates", []):
-                for part in (c.get("content") or {}).get("parts", []):
-                    inl = part.get("inlineData") or part.get("inline_data")
-                    if inl and inl.get("data"):
-                        with open(yol, "wb") as f:
-                            f.write(base64.b64decode(inl["data"]))
-                        return yol
-        except urllib.error.HTTPError as e:
-            govde = e.read().decode(errors="replace")
-            if e.code in (401, 403) or (e.code == 429 and "limit: 0" in govde):
-                _GEMINI_KAPALI = True
-                print(f"      (Gemini görsel kapalı: HTTP {e.code} — faturalandırma/kota; NVIDIA'ya geçiliyor)")
-                return None
-        except Exception as e:
-            print(f"      (Gemini görsel [{model}] hata: {str(e)[:80]})")
+    for key in _gemini_anahtarlar():
+        if key in _GEMINI_OLU:
+            continue
+        for model in GEMINI_GORSEL_MODELLER:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
+            body = {"contents": [{"parts": [{"text": "Generate an image: " + prompt}]}],
+                    "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "16:9"}}}
+            try:
+                req = urllib.request.Request(url, data=json.dumps(body).encode(),
+                                             headers={"Content-Type": "application/json"})
+                with urllib.request.urlopen(req, timeout=150) as r:
+                    d = json.loads(r.read().decode())
+                for c in d.get("candidates", []):
+                    for part in (c.get("content") or {}).get("parts", []):
+                        inl = part.get("inlineData") or part.get("inline_data")
+                        if inl and inl.get("data"):
+                            with open(yol, "wb") as f:
+                                f.write(base64.b64decode(inl["data"]))
+                            return yol
+            except urllib.error.HTTPError as e:
+                govde = e.read().decode(errors="replace")
+                if e.code in (401, 403) or (e.code == 429 and "limit: 0" in govde):
+                    _GEMINI_OLU.add(key)
+                    print(f"      (Gemini görsel: bir anahtar kapalı — HTTP {e.code}, faturalandırma/kota)")
+                    break  # bu anahtarın diğer modelleri de aynı projede: sonraki anahtara geç
+            except Exception as e:
+                print(f"      (Gemini görsel [{model}] hata: {str(e)[:80]})")
     return None
 
 
