@@ -26,6 +26,42 @@ KIRMIZI = (214, 32, 39)
 STIL_EK = ("photorealistic cinematic documentary still, 35mm film look, natural "
            "lighting, shallow depth of field, rich detail, no watermark")
 ARSIV_EK = "photographed in the early 2000s, documentary archival photo"
+# Görsellerdeki TÜM yazılar Türkçe ve sahneye uygun olsun (İngilizce tabela olmasın).
+TR_YAZI_EK = ("set in Turkey, Turkish street and store environment, every visible sign, "
+              "price tag, label and screen text is written in Turkish language, "
+              "short legible Turkish words only, no English text")
+
+# Türkçe tabela yazısını prompta zorla: tırnak içindeki İngilizce yazıları Türkçeye çevirir.
+_TR_CEVIRI_PROMPT = """Aşağıdaki İngilizce görsel üretim promptlarında tırnak ('...' veya "...") içinde
+görselde YAZI olarak görünecek ifadeler var (tabela, etiket, ekran). Her promptu şu kurallarla yeniden yaz:
+- Tırnak içindeki yazıyı kısa, doğru TÜRKÇE karşılığıyla değiştir (en fazla 3 kelime, büyük harf olabilir;
+  örn. 'Limited Stock' -> 'SON ÜRÜNLER', '50% OFF' -> '%50 İNDİRİM', 'Budget' -> 'BÜTÇE').
+  Marka adlarını (A101, BİM, ŞOK, Migros vb.) aynen bırak.
+- Promptta yazı geçmiyorsa ve sahnede tabela/etiket/ekran varsa, uygun kısa bir Türkçe yazıyı
+  tırnak içinde ekleyebilirsin (örn. market rafı -> price tags reading 'İNDİRİM').
+- Geri kalan her şey İngilizce kalsın, anlam değişmesin.
+SADECE JSON döndür: {{"promptlar": ["...", "..."]}} (aynı sırada, aynı sayıda).
+PROMPTLAR:
+{liste}"""
+
+
+def turkce_yazili_promptlar(promptlar):
+    """Promptlardaki görünür yazıları toplu olarak Türkçeye çevirir (tek LLM isteği).
+    Başarısızsa promptlar aynen döner (görsel yine TR_YAZI_EK ile Türkçe yazı ister)."""
+    if not promptlar:
+        return promptlar
+    try:
+        import json
+        import uzun_script as US
+        d = US._llm_json(_TR_CEVIRI_PROMPT.format(liste=json.dumps(promptlar, ensure_ascii=False, indent=0)),
+                         lambda x: None if len(x.get("promptlar") or []) == len(promptlar) else "sayı tutmadı",
+                         "Türkçe tabela")
+        yeni = [str(p).strip() or eski for p, eski in zip(d["promptlar"], promptlar)]
+        print(f"      Görsel yazıları Türkçeleştirildi ({sum(a != b for a, b in zip(yeni, promptlar))} prompt değişti)")
+        return yeni
+    except Exception as e:
+        print(f"      (Türkçe tabela çevirisi atlandı: {str(e)[:100]})")
+        return promptlar
 
 
 def _font(boy):
@@ -104,6 +140,8 @@ def _kart(W, H):
 GEMINI_GORSEL_MODELLER = [m.strip() for m in (os.environ.get("GEMINI_GORSEL_MODELLER") or
                           "gemini-3.1-flash-image,gemini-3-pro-image").split(",") if m.strip()]
 _GEMINI_OLU = set()  # bu koşuda kota/yetki hatası veren anahtarlar
+import threading as _th
+_GEMINI_KILIT = _th.Lock()  # ilk deneme bitmeden diğer iş parçacıkları beklesin (9 kez 429 olmasın)
 
 
 def _gemini_anahtarlar():
@@ -124,6 +162,15 @@ def _gemini_anahtarlar():
 
 
 def _gemini_gorsel(prompt, yol):
+    if not _gemini_anahtarlar() or all(k in _GEMINI_OLU for k in _gemini_anahtarlar()):
+        return None
+    with _GEMINI_KILIT:  # ücretsiz anahtarlar zaten kota 0: tek deneme yeter
+        if all(k in _GEMINI_OLU for k in _gemini_anahtarlar()):
+            return None
+        return _gemini_gorsel_dene(prompt, yol)
+
+
+def _gemini_gorsel_dene(prompt, yol):
     """Gemini ile 16:9 görsel; başarısızsa None. Kotası 0 olan (faturalandırması
     kapalı) anahtar o koşuda bir daha denenmez; hepsi öyleyse NVIDIA'ya düşülür."""
     import base64, json, urllib.error, urllib.request
@@ -209,10 +256,12 @@ def sahne_gorselleri(sahneler, boyut, tmp, paralel=3):
     """Her sahne için bir ('image', yol) döndürür (sahne sayısı korunur)."""
     W, H = boyut
     isler = []
+    hamlar = [(s.get("gorsel_prompt") or s.get("gorsel") or "").strip() or "documentary scene"
+              for s in sahneler]
+    hamlar = turkce_yazili_promptlar(hamlar)
     for i, s in enumerate(sahneler):
-        p = (s.get("gorsel_prompt") or s.get("gorsel") or "").strip() or "documentary scene"
         ek = f"{ARSIV_EK}, {STIL_EK}" if s.get("arsiv") else STIL_EK
-        isler.append((i, f"{p}, {ek}", os.path.join(tmp, f"ai_{i:03d}.jpg")))
+        isler.append((i, f"{hamlar[i]}, {TR_YAZI_EK}, {ek}", os.path.join(tmp, f"ai_{i:03d}.jpg")))
 
     def _is(a):
         i, p, yol = a

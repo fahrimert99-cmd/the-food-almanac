@@ -98,7 +98,7 @@ UZUNLUK: yaklaşık {kelime} kelime (en az {asgari}).
 Bölüm başlığını metne YAZMA; emoji ve madde işareti yok; düz, akıcı konuşma dili. Bölüm sonunda bir sonraki bölüme merak bırak ("ama hikâye burada bitmiyor" gibi), son bölüm hariç.
 Metni 4-7 sahneye böl (sahne başı 20-35 kelime). Her sahne için:
 - 'metin': o sahnenin Türkçe anlatım parçası (sahneler sırayla birleşince bölüm metni olur).
-- 'gorsel_prompt': o an anlatılanı gösteren 15-30 kelimelik İNGİLİZCE, fotoğraf gerçekliğinde görsel üretim promptu: somut kişi, mekân, nesne, ışık, kamera açısı (örn. "long queue of shoppers outside a Turkish discount supermarket at 9am, morning light, wide shot"). Marka mağazası gerekiyorsa tabeladaki yazıyı birebir ver ("store sign reading 'A101'"); başka yazı/logo/filigran isteme. Gerçek, tanınmış kişilerin yüzünü İSTEME (arkadan, uzaktan ya da ortamla anlat).
+- 'gorsel_prompt': o an anlatılanı gösteren 15-30 kelimelik İNGİLİZCE, fotoğraf gerçekliğinde görsel üretim promptu: somut kişi, mekân, nesne, ışık, kamera açısı (örn. "long queue of shoppers outside a Turkish discount supermarket at 9am, morning light, wide shot"). Mekân TÜRKİYE: sahnede görünen tabela, fiyat etiketi, afiş ve ekran yazıları TÜRKÇE olsun ve tırnak içinde kısa verilsin (örn. "price tags reading '%50 İNDİRİM'", "shelf sign reading 'SON ÜRÜNLER'"); İngilizce yazı İSTEME. Marka mağazası gerekiyorsa tabeladaki yazıyı birebir ver ("store sign reading 'A101'"); logo/filigran isteme. Gerçek, tanınmış kişilerin yüzünü İSTEME (arkadan, uzaktan ya da ortamla anlat).
 - 'arsiv': anlatılan olay geçmişteyse (kuruluş yılları, eski bir kriz) true, değilse false.
 - 'gorsel': 2-4 kelimelik İngilizce stok anahtar kelimesi (yedek).
 SADECE şu JSON'u döndür:
