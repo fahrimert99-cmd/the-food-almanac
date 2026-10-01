@@ -107,11 +107,13 @@ SADECE şu JSON'u döndür:
 _CLAUDE_KAPALI = False  # kredi/erişim hatası alınca bu koşuda Claude bir daha denenmez
 
 
-def _llm_json(prompt, kontrol, etiket):
+def _llm_json(prompt, kontrol, etiket, yedek_kontrol=None):
     """Claude -> Gemini modelleri sırasıyla dener; JSON'u ayrıştırıp kontrol()'den
-    geçen ilk yanıtı döndürür. kontrol(data) -> None (uygun) | hata metni."""
+    geçen ilk yanıtı döndürür. kontrol(data) -> None (uygun) | hata metni.
+    Hiçbiri geçmezse yedek_kontrol()'ü (daha gevşek) geçen ilk yanıt döner:
+    birkaç kelime kısa kalan bir bölüm yüzünden tüm video düşmesin."""
     global _CLAUDE_KAPALI
-    hatalar = []
+    hatalar, yedek = [], None
     saglayicilar = []
     ckey = _claude_key()
     if ckey and not _CLAUDE_KAPALI:
@@ -129,6 +131,8 @@ def _llm_json(prompt, kontrol, etiket):
                     print(f"    {etiket}: {ad} ✓")
                     return data
                 hatalar.append(f"{ad}#{deneme+1}: {sorun}")
+                if yedek is None and yedek_kontrol and not yedek_kontrol(data):
+                    yedek = (ad, data)
             except Exception as e:
                 msg = str(e)
                 hatalar.append(f"{ad}#{deneme+1}: {msg[:120]}")
@@ -138,6 +142,11 @@ def _llm_json(prompt, kontrol, etiket):
                     break
                 if "429" in msg:
                     time.sleep(20)
+                elif "503" in msg:
+                    time.sleep(10)  # model geçici olarak meşgul
+    if yedek:
+        print(f"    {etiket}: {yedek[0]} ✓ (hedefin altında, kabul edildi: {hatalar[-1][:60]})")
+        return yedek[1]
     raise RuntimeError(f"{etiket} üretilemedi: " + " | ".join(hatalar[-6:]))
 
 
@@ -181,7 +190,8 @@ def uret_belgesel(baslik, not_=""):
         d = _llm_json(BOLUM_PROMPT.format(baslik=baslik, ortak=_ORTAK, plan=plan_metni, no=i + 1,
                                           bolum=b.get("baslik", ""), rol=ad, ozet=b.get("ozet", ""),
                                           kelime=kelime, asgari=asgari, ozel=ozel),
-                      bolum_kontrol, f"Bölüm {i+1}/{len(bolumler)}")
+                      bolum_kontrol, f"Bölüm {i+1}/{len(bolumler)}",
+                      yedek_kontrol=lambda d, a=int(kelime * 0.45): bolum_kontrol(d, a))
         ss = [s for s in d["sahneler"] if isinstance(s, dict) and (s.get("metin") or "").strip()]
         bolum_isaret.append({"baslik": b.get("baslik", ""), "sahne": len(sahneler)})
         sahneler.extend(ss)
