@@ -1539,16 +1539,30 @@ def video_uret(gorseller, mp3, ass, cikti, boyut, fps):
 # ----------------------------------------------------------
 # ANA AKIŞ
 # ----------------------------------------------------------
+SON_ANLATIM = None  # (temiz anlatım mp3 yolu, kelime zamanları) — son render
+
+
+def _yapay_zaman(text, toplam):
+    """Kelime zamanı bilinmeyen hazır anlatım için: kelimeleri süreye eşit dağıt."""
+    ws = text.split() or [" "]
+    adim = toplam / len(ws)
+    return [{"start": i * adim, "dur": adim, "text": w} for i, w in enumerate(ws)]
+
+
 def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
                sahneler=None, animasyon=True, cocuk=True, tonlama="+0Hz",
                gorsel_stil="stok", kanca=None, eleven_once=False, eleven_voice_id=None,
-               muzik_tema=None, ai_sahne=False, ai_fallback=True, altyazi=True):
+               muzik_tema=None, ai_sahne=False, ai_fallback=True, altyazi=True,
+               hazir_ses=None, hazir_zaman=None, ses_karisik=False):
     """Orkestratör tarafından çağrılır: script -> mp4.
     sahneler verilirse (Gemini'den), her sahne için AI görsel üretir ve
     Ken Burns + çapraz geçişle animasyonlu montaj yapar.
     tonlama: ses tonu (örn '-12Hz' daha tok/derin erkek sesi).
     eleven_once=True: seslendirmede ElevenLabs (daha gerçekçi) önce denenir;
-    başarısız olursa Google TTS, o da olmazsa edge-tts'e düşülür."""
+    başarısız olursa Google TTS, o da olmazsa edge-tts'e düşülür.
+    hazir_ses: daha önce üretilmiş anlatım (TTS çağrılmaz, kredi harcanmaz).
+    hazir_zaman: o anlatımın kelime zamanları (yoksa metinden eşit dağıtılır).
+    ses_karisik=True: hazir_ses müzik eklenmiş son ses -> temizleme/müzik atlanır."""
     boyut = CONFIG["dikey"] if dikey else CONFIG["yatay"]
     voice = CONFIG["sesler"][ses]
     text, cumleler = metni_oku(script_path)
@@ -1561,6 +1575,12 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
     _gk=_google_key(); _pk=_pexels_key(); _xk=_pixabay_key()
     print(f"      [anahtar: google={_gk[:6]}..len{len(_gk)}, pexels={_pk[:6]}..len{len(_pk)}, pixabay={_xk[:6]}..len{len(_xk)}]")
     boundaries = None
+    global SON_ANLATIM
+    SON_ANLATIM = None
+    if hazir_ses:
+        shutil.copy(hazir_ses, mp3)
+        boundaries = hazir_zaman or _yapay_zaman(text, sure_al(mp3))
+        print("      Ses: HAZIR anlatım kullanıldı (TTS çağrılmadı, kredi harcanmadı)")
     # Seslendirme saglayici sirasi. eleven_once=True (uzun videolar) ise
     # ElevenLabs (daha gercekci insan sesi) once denenir; degilse mevcut
     # davranis korunur (Google TTS once, ElevenLabs yedek).
@@ -1590,7 +1610,8 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
             boundaries = seslendir(text, voice, hiz, mp3, pitch=tonlama)
     # KONUŞMA BOŞLUKLARINI DARALT: cümle araları + baş/son ölü havayı kıs, kelime
     # zamanlamalarını kaydır (altyazı senkronu korunur). Cue'lardan ve müzikten ÖNCE.
-    mp3, boundaries = _bosluk_daralt(mp3, boundaries, tmp)
+    if not hazir_ses:
+        mp3, boundaries = _bosluk_daralt(mp3, boundaries, tmp)
     cues = cue_olustur(boundaries, CONFIG["altyazi_max_kelime"], CONFIG["altyazi_max_sure"])
     ass = os.path.join(tmp, "sub.ass")
     # altyazi=False: belgesel düzeni (rakip videolarda ekranda yazı yok) -> boş ASS.
@@ -1598,11 +1619,19 @@ def uret_video(script_path, cikti, ses="kadin", dikey=False, hiz="+0%",
     os.makedirs(os.path.dirname(cikti) or ".", exist_ok=True)
     # SES TEMİZLEME: anlatımı cızırtı/tizlikten arındır (de-esser + fizzy-tepe
     # kesimi). Süreyi değiştirmez -> altyazı senkronu korunur. Müzikten ÖNCE.
-    mp3 = _ses_temizle(mp3, tmp)
+    if not hazir_ses:
+        mp3 = _ses_temizle(mp3, tmp)
+    if not ses_karisik:
+        # Temiz anlatımı (müziksiz) + kelime zamanlarını sakla: aynı senaryo
+        # yeniden render edilirken TTS'e (ElevenLabs kredisine) gerek kalmasın.
+        _kalici = os.path.join(tempfile.gettempdir(), "son_anlatim.mp3")
+        shutil.copy(mp3, _kalici)
+        SON_ANLATIM = (_kalici, boundaries)
     # ARKA FON MÜZİĞİ: anlatım sesine CC0 müzik (ducking ile) karıştır. Alt yazı
     # zamanlaması yukarıda GERÇEK anlatım sesinden çıkarıldığı için müziği burada
     # ekliyoruz (senkron bozulmaz). Kapalıysa/başarısızsa mp3 değişmeden döner.
-    mp3 = _muzik_ekle(mp3, tmp, muzik_tema)
+    if not ses_karisik:
+        mp3 = _muzik_ekle(mp3, tmp, muzik_tema)
     if animasyon:
         if gorsel_stil == "ai_sinematik" and sahneler:
             # Uzun belgesel: her sahneye 1 AI görsel (sahne sayısı korunur -> senkron).

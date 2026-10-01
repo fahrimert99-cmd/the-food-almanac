@@ -107,6 +107,43 @@ def _onizleme_kaydet(uzun, cikti, kapak):
                         os.path.join(ONIZLEME_DIR,"kareler.jpg")])
     print(f"✓ ONIZLEME hazir ({sure/60:.1f} dk): {ONIZLEME_DIR}/ — YouTube'a YUKLENMEDI")
 
+ONIZLEME_SENARYO="onizleme/uzun/senaryo.json"; ONIZLEME_KAPAK="onizleme/uzun/kapak.jpg"
+SES_CACHE="output/ses_cache"
+
+def _cipali_zaman(uzun, toplam):
+    """Kelime zamanı olmayan hazır (müzikli) anlatım için kelime zamanları: açıklamadaki
+    gerçek bölüm zaman damgalarına çapalanmış doğrusal dağıtım (sahne-ses kayması ~1 sn)."""
+    import re as _r
+    sahneler=uzun.get("sahneler") or []
+    adet=[len((x.get("metin") or "").split()) for x in sahneler]
+    bas=[sum(adet[:i]) for i in range(len(adet))]; W=sum(adet)
+    if W==0: return None
+    damga={m.group(3).strip():int(m.group(1))*60+int(m.group(2)) for m in
+           _r.finditer(r"^(\d\d):(\d\d) — (.+)$", uzun.get("aciklama",""), _r.M)}
+    cipa=[(0,0.0)]
+    for b in uzun.get("bolumler") or []:
+        t=damga.get((b.get("baslik") or "").strip()); i=int(b.get("sahne",0))
+        if t is not None and 0<i<len(bas) and bas[i]>cipa[-1][0] and t>cipa[-1][1]:
+            cipa.append((bas[i],float(t)))
+    cipa.append((W,float(toplam)))
+    zaman=[]; kelimeler=" ".join(x.get("metin","") for x in sahneler).split()
+    for k,w in enumerate(kelimeler):
+        j=max(i for i in range(len(cipa)-1) if cipa[i][0]<=k)
+        (k0,t0),(k1,t1)=cipa[j],cipa[j+1]
+        t=t0+(t1-t0)*(k-k0)/max(1,k1-k0); d=(t1-t0)/max(1,k1-k0)
+        zaman.append({"start":t,"dur":max(0.05,d),"text":w})
+    return zaman
+
+def _anlatim_sakla():
+    """Son render'ın temiz anlatımını (+ kelime zamanları) önbelleğe yaz."""
+    import shutil
+    son=getattr(V,"SON_ANLATIM",None)
+    if not son: return
+    os.makedirs(SES_CACHE,exist_ok=True)
+    shutil.copy(son[0],os.path.join(SES_CACHE,"anlatim.mp3"))
+    with open(os.path.join(SES_CACHE,"zaman.json"),"w",encoding="utf-8") as f: json.dump(son[1],f)
+    print(f"  Anlatım önbelleğe alındı: {SES_CACHE}/ (aynı senaryo bir daha seslendirilmez)")
+
 def main():
     cfg=_load(CFG_P,{})
     onizleme=os.environ.get("ONIZLEME")=="1"
@@ -123,8 +160,16 @@ def main():
         print("Uzun konu bankasi bitti — uzun_konular.json'a yeni konular ekleyin."); _save(u); return
     print(f"[1/4] Uzun konu ({tema}): {konu!r}")
 
+    yeniden=onizleme and os.environ.get("ONIZLEME_YENIDEN")=="1"
     _man=os.path.join("uzun_scripts", _slug(konu)+".json")
-    if os.path.exists(_man):
+    if yeniden:
+        # ONAYLI ÖNİZLEMEYİ YENİDEN RENDER: aynı senaryo + hazır ses (+ onaylı kapak);
+        # yalnızca görseller yeniden üretilir. Hazır ses yoksa TTS'e GİDİLMEZ (kredi korunur).
+        if not os.path.exists(ONIZLEME_SENARYO):
+            raise SystemExit(f"Yeniden kullanım: {ONIZLEME_SENARYO} yok")
+        with open(ONIZLEME_SENARYO,encoding="utf-8") as _f: uzun=json.load(_f)
+        print("  [onaylı önizleme senaryosu yeniden kullanılıyor]")
+    elif os.path.exists(_man):
         with open(_man,encoding="utf-8-sig") as _f: uzun=json.load(_f)
         print("  [manuel script kullanildi]", _man)
     else:
@@ -134,18 +179,36 @@ def main():
 
     tmp=tempfile.mkdtemp(); sp=os.path.join(tmp,"script.txt"); open(sp,"w",encoding="utf-8").write(uzun["script"])
     os.makedirs("output",exist_ok=True); cikti="output/uzun_video.mp4"
+    hazir_ses=hazir_zaman=None; karisik=False
+    if yeniden:
+        if os.path.exists(f"{SES_CACHE}/anlatim.mp3") and os.path.exists(f"{SES_CACHE}/zaman.json"):
+            hazir_ses=f"{SES_CACHE}/anlatim.mp3"
+            with open(f"{SES_CACHE}/zaman.json",encoding="utf-8") as _f: hazir_zaman=json.load(_f)
+            print("  Ses: önbellekteki temiz anlatım")
+        elif os.path.exists(os.environ.get("ONIZLEME_HAZIR_SES","") or "/yok"):
+            hazir_ses=os.environ["ONIZLEME_HAZIR_SES"]; karisik=True
+            hazir_zaman=_cipali_zaman(uzun, V.sure_al(hazir_ses))
+            print("  Ses: önceki önizleme videosundan çıkarılan anlatım (müzikli)")
+        else:
+            raise SystemExit("Hazır ses bulunamadı — ElevenLabs kredisi harcamamak için durduruldu.")
     print("[2/4] Yatay render ...")
     V.uret_video(sp,cikti,ses=cfg.get("ses","erkek"),dikey=False,hiz=str(cfg.get("uzun_hiz","+0%")),
                  sahneler=uzun.get("sahneler"),animasyon=bool(cfg.get("animasyon",True)),cocuk=bool(cfg.get("cocuk_icerigi",False)),
                  tonlama=str(cfg.get("tonlama","+0Hz")),gorsel_stil=str(cfg.get("uzun_gorsel_stil","stok")),kanca=(uzun.get("kanca") or konu),
-                 eleven_once=bool(cfg.get("uzun_eleven",True)),altyazi=bool(cfg.get("uzun_altyazi",True)))
-    damgalar=_zaman_damgalari(uzun.get("bolumler"), getattr(V,"SON_SAHNE_BASLANGIC",None))
-    uzun["aciklama"]=_aciklama_bolumlu(uzun.get("aciklama",""), damgalar)
-    print("  Bolumler:", ("\n    "+damgalar.replace("\n","\n    ")) if damgalar else "yok (kural saglanmadi)")
-    uzun["aciklama"]=_kaynaklar_ve_etiket(uzun)
+                 eleven_once=bool(cfg.get("uzun_eleven",True)),altyazi=bool(cfg.get("uzun_altyazi",True)),
+                 hazir_ses=hazir_ses,hazir_zaman=hazir_zaman,ses_karisik=karisik)
+    if onizleme: _anlatim_sakla()
+    if "Zaman Damgaları" not in uzun.get("aciklama",""):   # yeniden kullanımda açıklama hazır
+        damgalar=_zaman_damgalari(uzun.get("bolumler"), getattr(V,"SON_SAHNE_BASLANGIC",None))
+        uzun["aciklama"]=_aciklama_bolumlu(uzun.get("aciklama",""), damgalar)
+        print("  Bolumler:", ("\n    "+damgalar.replace("\n","\n    ")) if damgalar else "yok (kural saglanmadi)")
+        uzun["aciklama"]=_kaynaklar_ve_etiket(uzun)
     kapak=None
+    if yeniden and os.path.exists(ONIZLEME_KAPAK):
+        import shutil as _sh; _sh.copy(ONIZLEME_KAPAK,"output/uzun_kapak.jpg"); kapak="output/uzun_kapak.jpg"
+        print("  Kapak: onaylı önizleme kapağı")
     ky=uzun.get("kapak_yazi") or {}
-    if ky.get("alt"):
+    if not kapak and ky.get("alt"):
         try:
             import belgesel_gorsel as BG
             kapak=BG.kapak(uzun.get("kapak_gorsel"),ky.get("ust",""),ky["alt"],"output/uzun_kapak.jpg")

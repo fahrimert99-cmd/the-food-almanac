@@ -5,6 +5,9 @@ name: Uzun Video ONIZLEME (YUKLEMEZ)
 # verilmez. Video "uzun-onizleme" artifact'ında; kapak, kare paneli, açıklama ve
 # senaryo ayrıca onizleme/uzun/ klasörüne commit edilir.
 # Tetikleme: Actions'tan elle ya da onizleme_tetik.txt değişince (bu dal).
+# Commit mesajında [yeniden] varsa: onaylı önizlemenin senaryosu, sesi ve kapağı
+# yeniden kullanılır, yalnızca görseller yeniden üretilir (TTS/ElevenLabs YOK).
+# Commit mesajında [durdur] varsa: çalışan önizleme iptal edilir.
 on:
   workflow_dispatch: {}
   push:
@@ -13,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  actions: read   # önceki önizlemenin artifact'ından hazır sesi almak için
 
 concurrency:
   group: uzun-onizleme
@@ -39,9 +43,36 @@ jobs:
           python-version: "3.12"
       - name: Bagimliliklar
         run: pip install -r requirements.txt
+      - name: Hazir ses — onbellek (ayni senaryo)
+        id: sesonbellek
+        if: contains(github.event.head_commit.message, '[yeniden]')
+        uses: actions/cache/restore@v4
+        with:
+          path: output/ses_cache
+          key: uzun-ses-${{ hashFiles('onizleme/uzun/senaryo.json') }}
+      - name: Hazir ses — onceki onizleme kaynak run
+        id: kaynak
+        if: contains(github.event.head_commit.message, '[yeniden]') && steps.sesonbellek.outputs.cache-hit != 'true'
+        run: echo "id=$(cat onizleme/uzun/kaynak_run.txt)" >> "$GITHUB_OUTPUT"
+      - name: Hazir ses — onceki onizleme videosunu indir
+        if: steps.kaynak.outputs.id != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: uzun-onizleme
+          run-id: ${{ steps.kaynak.outputs.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: onceki
+      - name: Hazir ses — videodan anlatimi cikar
+        if: steps.kaynak.outputs.id != ''
+        run: |
+          v=$(find onceki -name video.mp4 | head -1)
+          ffmpeg -v error -y -i "$v" -vn -c:a libmp3lame -q:a 2 /tmp/onceki_ses.mp3
+          ls -la /tmp/onceki_ses.mp3
+          echo "ONIZLEME_HAZIR_SES=/tmp/onceki_ses.mp3" >> "$GITHUB_ENV"
       - name: Onizleme uret (YouTube'a YUKLENMEZ)
         env:
           ONIZLEME: "1"
+          ONIZLEME_YENIDEN: ${{ contains(github.event.head_commit.message, '[yeniden]') && '1' || '0' }}
           # YT secret'lari BILEREK yok -> yukleme imkansiz.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
@@ -61,6 +92,13 @@ jobs:
         run: |
           set -o pipefail
           python3 uzun_otomasyon.py 2>&1 | sed -E 's/anahtar:.*/anahtar: [redacted]/' | tee uzun_onizleme.log
+      - name: Temiz anlatimi onbellege kaydet (ayni senaryo bir daha seslendirilmez)
+        if: always() && hashFiles('output/ses_cache/zaman.json') != ''
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: output/ses_cache
+          key: uzun-ses-${{ hashFiles('output/onizleme/senaryo.json') }}
       - name: Onizleme artifact (video dahil)
         if: always()
         uses: actions/upload-artifact@v4
@@ -79,6 +117,8 @@ jobs:
             [ -f "output/onizleme/$f" ] && cp "output/onizleme/$f" onizleme/uzun/
           done
           cp uzun_onizleme.log onizleme/uzun/ 2>/dev/null || true
+          # sonraki [yeniden] koşusu hazır sesi bu koşunun videosundan alabilsin
+          [ -f output/onizleme/video.mp4 ] && echo "${{ github.run_id }}" > onizleme/uzun/kaynak_run.txt
           git config user.name "onizleme-bot"
           git config user.email "onizleme-bot@users.noreply.github.com"
           git add -f onizleme/uzun   # .gitignore *.jpg/*.log engelini aş (yalnız bu klasör)
