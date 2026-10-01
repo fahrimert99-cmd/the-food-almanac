@@ -1,0 +1,2 @@
+token: True hesap: True
+CF_FAIL 401 {"result":null,"success":false,"errors":[{"code":10000,"message":"Authentication error"}],"messages":[]}
