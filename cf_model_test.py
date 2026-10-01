@@ -85,8 +85,15 @@ def _kaydet(ctype, b, yol):
     raise RuntimeError(f"görsel yok: {str(d)[:200]}")
 
 
-def gorsel_dene(model):
-    yol = os.path.join(CIKTI, model.split("/")[-1] + ".jpg")
+STORYBOOK = ("storybook illustration, hand-painted children's picture book style, soft "
+             "watercolor and gouache textures, warm colors, gentle lighting, friendly rounded "
+             "shapes, inside a Turkish discount supermarket, an almost empty promotional shelf "
+             "with only two boxes left, shoppers with baskets in the background, "
+             "no text, no letters, blank signs, no logos")
+
+
+def gorsel_dene(model, PROMPT=PROMPT, ek=""):
+    yol = os.path.join(CIKTI, model.split("/")[-1] + ek + ".jpg")
     url = f"{API}/run/{model}"
     t0 = time.time()
     try:
@@ -101,7 +108,7 @@ def gorsel_dene(model):
                 body.update({"width": 1344, "height": 768})
             ctype, b = _istek(url, json.dumps(body).encode())
         _kaydet(ctype, b, yol)
-        return {"model": model, "durum": "OK", "sure_sn": round(time.time() - t0, 1), "dosya": yol}
+        return {"model": model + ek, "durum": "OK", "sure_sn": round(time.time() - t0, 1), "dosya": yol}
     except urllib.error.HTTPError as e:
         govde = e.read().decode(errors="ignore")[:300]
         return {"model": model, "durum": f"HTTP {e.code}", "hata": govde}
@@ -123,7 +130,7 @@ def whisper_dene(gruplar):
     try:
         _, b = _istek(f"{API}/run/{model}", json.dumps(body).encode())
         d = json.loads(b).get("result") or {}
-        return {"model": model, "durum": "OK", "metin": (d.get("text") or "")[:600]}
+        return {"model": model + ek, "durum": "OK", "metin": (d.get("text") or "")[:600]}
     except urllib.error.HTTPError as e:
         return {"model": model, "durum": f"HTTP {e.code}", "hata": e.read().decode(errors="ignore")[:300]}
 
@@ -164,6 +171,10 @@ def main():
         s = gorsel_dene(m)
         print(s)
         rapor["gorsel"].append(s)
+        if "flux-2" in m:   # aynı sahnenin storybook (illüstrasyon) sürümü
+            s = gorsel_dene(m, STORYBOOK, "-storybook")
+            print(s)
+            rapor["gorsel"].append(s)
     rapor["kota_dolu"] = any(s["durum"] == "HTTP 429" for s in rapor["gorsel"])
     try:
         rapor["whisper"] = whisper_dene(gruplar)
