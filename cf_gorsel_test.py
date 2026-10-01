@@ -13,6 +13,10 @@ def _get(u):
         return f"HTTP {e.code} {e.read().decode()[:300]}"
 import urllib.request as _u
 acc = os.environ['CF_ACCOUNT_ID'].strip()
+_t = os.environ['CF_API_TOKEN'].strip()
+print("CF_API_TOKEN 'cfat_' ile başlıyor mu:", _t.startswith("cfat_"), "| harf/rakam dışı karakter var mı:", any(not (c.isalnum() or c in "_-") for c in _t))
+print("CF_ACCOUNT_ID ekrandaki hesapla aynı mı:", acc == "a40cc833cdbb25802108c4de95b16e4b")
+print("Workers AI model listesi:", _get(f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/models/search?per_page=1")[:160])
 print("hesap kimliği uzunluğu:", len(acc), "| token uzunluğu:", len(os.environ['CF_API_TOKEN'].strip()))
 print("hesap tokeni doğrulama:", _get(f"https://api.cloudflare.com/client/v4/accounts/{acc}/tokens/verify"))
 print("kullanıcı tokeni doğrulama:", _get("https://api.cloudflare.com/client/v4/user/tokens/verify"))
@@ -27,4 +31,4 @@ try:
     print("CF_OK")
 except urllib.error.HTTPError as e:
     print("CF_FAIL", e.code, e.read().decode()[:400])
-# tetik 16:55:11
+# tetik 2
