@@ -117,6 +117,12 @@ jobs:
             [ -f "output/onizleme/$f" ] && cp "output/onizleme/$f" onizleme/uzun/
           done
           cp uzun_onizleme.log onizleme/uzun/ 2>/dev/null || true
+          # sohbette doğrudan izlenebilsin diye küçük (480p) kopya
+          if [ -f output/onizleme/video.mp4 ]; then
+            ffmpeg -v error -y -i output/onizleme/video.mp4 -vf scale=-2:480 -c:v libx264 -preset veryfast \
+              -crf 30 -c:a aac -b:a 96k -movflags +faststart onizleme/uzun/video_480p.mp4 || true
+            ls -la onizleme/uzun/video_480p.mp4 || true
+          fi
           # sonraki [yeniden] koşusu hazır sesi bu koşunun videosundan alabilsin
           [ -f output/onizleme/video.mp4 ] && echo "${{ github.run_id }}" > onizleme/uzun/kaynak_run.txt
           git config user.name "onizleme-bot"
