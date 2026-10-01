@@ -1,0 +1,36 @@
+name: Rakip Kapak Indir (gecici, salt okunur)
+
+# Rakip kanalın kapak görsellerini indirip bu dala kaydeder (tasarım referansı).
+# YouTube'a hiçbir şey yazmaz; yalnızca herkese açık thumbnail URL'lerini okur.
+on:
+  push:
+    branches: [claude/adoring-sagan-ni2qvl]
+    paths: [.github/workflows/rakip_kapak.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  kapak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Kapaklari indir
+        run: |
+          mkdir -p referans/rakip_kapak
+          for v in SGGztvPo5bA:whatsapp cyWjBxjsfCY:toyota TsMVLy1zy_w:bim g-8XzYIeips:ikea \
+                   2jEJRCRM9DY:cocacola rqxyLVCZ-9U:havayolu lymCHpLVQ4Y:kredikarti; do
+            id=${v%%:*}; ad=${v##*:}
+            curl -sfL "https://i.ytimg.com/vi/$id/maxresdefault.jpg" -o "referans/rakip_kapak/$ad.jpg" \
+              || curl -sfL "https://i.ytimg.com/vi/$id/hqdefault.jpg" -o "referans/rakip_kapak/$ad.jpg" \
+              || echo "indirilemedi: $ad"
+          done
+          ls -la referans/rakip_kapak
+      - name: Dala kaydet
+        run: |
+          git config user.name "rakip-bot"
+          git config user.email "rakip-bot@users.noreply.github.com"
+          git add referans/rakip_kapak
+          git commit -m "referans: rakip kapak görselleri" || exit 0
+          git push origin HEAD:claude/adoring-sagan-ni2qvl
