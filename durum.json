@@ -11,6 +11,7 @@
     "AVM'LER SENİ BÖYLE İÇERDE TUTUYOR! 🏬",
     "AÇIK BÜFE NASIL KÂR EDER? 🍽️",
     "BANKALAR GİZLİ ÜCRETLERLE KANDIRIYOR! 🏦",
+    "BEDAVA DANIŞMANLIK TUZAĞI! 📞",
     "BEDAVA KAHVE NEDEN VERİLİR? ☕",
     "BEDAVA OYUN PARANI NASIL ALIR? 🕹️",
     "BEDAVA UYGULAMA NASIL KAZANIR? 📲",
@@ -127,17 +128,17 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": "ş konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): İLK ÜRÜN NEDEN PAHALI GÖSTERİLİR? 📊\n      · atlandı (yayınlanmış konu tekrarı ~ 'BENZİNLİK MARKETİ NEDEN PAHALI? ⛽'): MARKALI GİYSİ NEDEN PAHALI? 👕\n      · atlandı (yayınlanmış konu tekrarı ~ 'BOZUK PARA NEDEN VERMEZLER? 🪙'): BOZUK PARANIN KENARI NEDEN TIRTIKLI? 🪙\n      · atlandı (yayınlanmış konu tekrarı ~ 'REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺'): 'BEDAVA' KELİMESİ BEYNİ NASIL KANDIRIR? 🧠\n      · atlandı (yayınlanmış konu tekrarı ~ 'SON KULLANMA TARİHİ OYUNU! 📅'): SON KULLANMA TARİHİNİN ÖNÜNDE FİYAT MANİPÜLASYONU! 📅\n      · atlandı (yayınlanmış konu tekrarı ~ 'ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİ'): ABONELİK İPTALİNİ GİZLEYEN SAYFA TUZAĞI 🔒\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): İNDİRİM ETİKETİ NEDEN HEP KIRMIZI? 🔴\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): EN PAHALI ÜRÜN NEDEN GÖZ HİZASINDA? 👁️\n      · atlandı (yayınlanmış konu tekrarı ~ ''ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰'): “ÜCRETSİZ DENE” NEDEN ÜCRETLİ OLUR? ⏰\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM GÜNÜNDEKİ FİYAT OYUNU! 🛍️'): “SANA ÖZEL” FİYAT OYUNU! 🎯\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): SAHTE İNDİRİMİN MATEMATİĞİ: BÜYÜK YALANI NASIL ANLARSIN\n      · atlandı (yayınlanmış konu tekrarı ~ 'PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉'): UN PAKETİ NEDEN 1KG'den 900g'a düştü fiyat aynı? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'MARKET KOKUSU BİLE TUZAK! 👃'): MARKET GİRİŞİNDE KULLANILAN SIĞIR KOKUSU NEDEN DAHA FAZ\n      Tema (katı marka filtresi): 'tuzak' (uygun kalan: 42)\n      Kohort: v1\n[1/3] Senaryo (136/149) [market]: SEPETİNE BUNU KİM EKLEDİ? 🛒\n✓ Yayın slotu zaten dolu (2026-10-02T17:00:00Z); atlandı: https://youtu.be/B8U60zXACS4\n",
+  "son_rapor": " / ~1690 toplam -> 'contract on table closeup']\n      [seçim(vision): pexels~8000 / pixabay~1690 -> önce pexels]\n      Sahne 6/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'consultant visiting home closeup,']\n      [Pixabay: 12 klip / ~1807 toplam -> 'consultant visiting home closeup,']\n      [vision gemini-2.5-flash hata: The read operation timed out]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~1807 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~5332 toplam -> 'free consultation offer closeup,']\n      [Pixabay: 12 klip / ~1042 toplam -> 'free consultation offer closeup,']\n      [seçim(vision): pexels~5332 / pixabay~1042 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'person measuring for quote']\n      [Pixabay: 12 klip / ~1442 toplam -> 'person measuring for quote']\n      [seçim(vision): pexels~8000 / pixabay~1442 -> önce pixabay]\n      Sahne 9/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~8000 toplam -> 'sales presentation at home']\n      [Pixabay: 12 klip / ~2150 toplam -> 'sales presentation at home']\n      [seçim(vision): pexels~8000 / pixabay~2150 -> önce pixabay]\n      Sahne 10/10: gerçek stok video ✓ (pixabay)\n      [dağılım: nvidia=0, pexels=7, pixabay=3, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (17946 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-10-03T09:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n! Yorum eklenemedi: video henüz public değil; yorum ertelendi\n✓ Yüklendi: https://youtu.be/mTszSrLDpqY  (yayın: 2026-10-03T09:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n",
   "bekleyen_yorum": {
-    "video_id": "B8U60zXACS4",
-    "metin": "BOŞ RAF NEDEN BIRAKILIR hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
+    "video_id": "mTszSrLDpqY",
+    "metin": "BEDAVA DANIŞMANLIK TUZAĞI hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "f15253b50d23642f"
+    "hash": "f4dcfdbcae5bb145"
   },
-  "son_kategori": "market",
-  "son_video_id": "B8U60zXACS4",
-  "son_baslik": "BOŞ RAF NEDEN BIRAKILIR? 📭",
-  "son_yayin_zamani": "2026-10-02T17:00:00Z",
+  "son_kategori": "psikoloji",
+  "son_video_id": "mTszSrLDpqY",
+  "son_baslik": "BEDAVA DANIŞMANLIK TUZAĞI! 📞",
+  "son_yayin_zamani": "2026-10-03T09:00:00Z",
   "analytics_ozet": {
     "guncelleme": "2026-10-01T03:55:09Z",
     "donem": {
