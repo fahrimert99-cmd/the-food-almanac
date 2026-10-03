@@ -120,6 +120,56 @@ def _sonraki_yayin_zamani(cfg):
     return min(adaylar).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+MARKA_TERIMLERI = (
+    "market", "fiyat", "indirim", "ödeme", "ücret", "alışveriş", "ürün",
+    "mağaza", "reyon", "raf", "sepet", "kasa", "restoran", "menü",
+    "büfe", "sinema", "kart", "kredi", "banka", "faiz", "taksit",
+    "kampanya", "kupon", "abonelik", "üyelik", "iade", "kargo", "garanti",
+    "otopark", "kuaför", "berber", "uygulama", "site", "çerez", "wifi",
+    "internet", "reklam", "kampanya", "para", "satış", "hizmet", "sözleşme",
+    "ek ücret", "gizli ücret", "sana özel", "son iki", "bedava", "ücretsiz",
+)
+ZAYIF_BASLIK_TERIMLERI = ("müzik", "koku", "sağa", "yön", "hız", "kokunun")
+DOĞRUDAN_BASLIK_TERIMLERI = (
+    "fiyat", "indirim", "ücret", "ödeme", "para", "ürün", "market", "reyon",
+    "raf", "sepet", "kasa", "kart", "kredi", "banka", "taksit", "kampanya",
+    "abonelik", "üyelik", "iade", "kargo", "garanti", "menü", "gizli tuzak",
+    "ekstra", "bedava", "ücretsiz", "son iki", "sınırlı", "çerez",
+)
+
+def _marka_norm(metin):
+    metin = unicodedata.normalize("NFC", str(metin))
+    return metin.replace("İ", "I").replace("ı", "i").lower()
+
+def _marka_uygun_mu(s):
+    metin = _marka_norm(" ".join(str(s.get(k, "")) for k in ("baslik", "aciklama", "script")))
+    if not any(_marka_norm(t) in metin for t in MARKA_TERIMLERI):
+        return False
+    baslik = _marka_norm(s.get("baslik", ""))
+    zayif = any(_marka_norm(t) in baslik for t in ZAYIF_BASLIK_TERIMLERI)
+    dogrudan = any(_marka_norm(t) in baslik for t in DOĞRUDAN_BASLIK_TERIMLERI)
+    return not zayif or dogrudan
+
+
+def havuz_sayilari(senaryolar, yapilan):
+    """Yayına uygun kalan senaryo sayıları (klasik, marka) — otomasyonun seçim
+    filtreleriyle aynı (yayınlanmamış, konu tekrarı değil, tuzak teması, marka
+    filtresi). Senaryo bekçisi havuzu bu sayıya göre doldurur."""
+    yap = set(yapilan or [])
+    klasik = marka = 0
+    for s in senaryolar:
+        baslik = s.get("baslik", "")
+        if baslik in yap or _konu_tekrari(baslik, yap):
+            continue
+        if s.get("tema", "tuzak") != "tuzak" or not _marka_uygun_mu(s):
+            continue
+        if s.get("seri") == "marka":
+            marka += 1
+        else:
+            klasik += 1
+    return klasik, marka
+
+
 def _hedef_slot(cfg, yayin_zamani):
     """Bu koşunun dolduracağı slotun 'HH:MM' (UTC) değeri. Planlı yayında
     yayin_zamani'ndan; slot kaçmışsa (yayin_zamani yok) son 4 saatteki slottan."""
@@ -201,36 +251,6 @@ def main():
 
     def _tema(s):
         return s.get("tema", "tuzak")
-
-    MARKA_TERIMLERI = (
-        "market", "fiyat", "indirim", "ödeme", "ücret", "alışveriş", "ürün",
-        "mağaza", "reyon", "raf", "sepet", "kasa", "restoran", "menü",
-        "büfe", "sinema", "kart", "kredi", "banka", "faiz", "taksit",
-        "kampanya", "kupon", "abonelik", "üyelik", "iade", "kargo", "garanti",
-        "otopark", "kuaför", "berber", "uygulama", "site", "çerez", "wifi",
-        "internet", "reklam", "kampanya", "para", "satış", "hizmet", "sözleşme",
-        "ek ücret", "gizli ücret", "sana özel", "son iki", "bedava", "ücretsiz",
-    )
-    ZAYIF_BASLIK_TERIMLERI = ("müzik", "koku", "sağa", "yön", "hız", "kokunun")
-    DOĞRUDAN_BASLIK_TERIMLERI = (
-        "fiyat", "indirim", "ücret", "ödeme", "para", "ürün", "market", "reyon",
-        "raf", "sepet", "kasa", "kart", "kredi", "banka", "taksit", "kampanya",
-        "abonelik", "üyelik", "iade", "kargo", "garanti", "menü", "gizli tuzak",
-        "ekstra", "bedava", "ücretsiz", "son iki", "sınırlı", "çerez",
-    )
-
-    def _marka_norm(metin):
-        metin = unicodedata.normalize("NFC", str(metin))
-        return metin.replace("İ", "I").replace("ı", "i").lower()
-
-    def _marka_uygun_mu(s):
-        metin = _marka_norm(" ".join(str(s.get(k, "")) for k in ("baslik", "aciklama", "script")))
-        if not any(_marka_norm(t) in metin for t in MARKA_TERIMLERI):
-            return False
-        baslik = _marka_norm(s.get("baslik", ""))
-        zayif = any(_marka_norm(t) in baslik for t in ZAYIF_BASLIK_TERIMLERI)
-        dogrudan = any(_marka_norm(t) in baslik for t in DOĞRUDAN_BASLIK_TERIMLERI)
-        return not zayif or dogrudan
 
     kalan = []
     for i, s in enumerate(senaryolar):
