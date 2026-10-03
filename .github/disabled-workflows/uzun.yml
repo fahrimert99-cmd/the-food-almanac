@@ -1,14 +1,10 @@
-name: Uzun Video (Tuketici Belgeseli)
-# Haftalik 8-12 dk yatay "tuketici belgeseli": "<Marka> Neden ...?" hikayesi +
-# tuketiciye kurulan tuzak + korunma rehberi. Konu bankasi: uzun_konular.json.
-# Kisa (Shorts) hattindan bagimsiz: 12:00/20:00 TR slotlarina dokunmaz; yayin
-# config.uzun_yayin_gunu/uzun_yayin_saati_utc (varsayilan Persembe 18:00 TR).
-# NOT: config.json'da "uzun_gizlilik":"unlisted" oldugu surece videolar gizli
-# (link ile) yuklenir. Kaliteyi onaylayinca "private" (zamanlanmis public) yapin.
-on:
-  schedule:
-    - cron: "17 6 * * 2"   # Sali 06:17 UTC: Persembe yayini icin uretim + kontrol payi
-  workflow_dispatch: {}
+name: Uzun Video (Otonom)
+# Uzun videolar: GİZEM/GERÇEK OLAYLAR, ~3 dk. Haftada 2 kez otonom üretim.
+# NOT: config.json'da "uzun_gizlilik":"unlisted" olduğu sürece videolar
+# gizli (link ile) yüklenir — kanalda herkese açık olmaz. Kaliteyi onaylayınca
+# "private" (zamanlanmış public) yapın.
+# Günlük iki slot dışında video yüklenmemesi için devre dışı.
+on: {}
 permissions:
   contents: write
 concurrency:
@@ -17,7 +13,6 @@ concurrency:
 jobs:
   uret:
     runs-on: ubuntu-latest
-    timeout-minutes: 120   # 10 dk yatay render + 40+ stok klip indirme
     steps:
       - uses: actions/checkout@v5
       - name: FFmpeg kur
@@ -34,9 +29,6 @@ jobs:
           GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
           GEMINI_KEY_UZUN: ${{ secrets.GEMINI_KEY_UZUN }}
-          GEMINI_IMAGE_API_KEY: ${{ secrets.GEMINI_IMAGE_API_KEY }}  # görsel: faturalı ayrı proje
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}      # Cloudflare Workers AI görsel
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
           ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
