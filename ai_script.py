@@ -52,7 +52,13 @@ def _openrouter(prompt, key, model=None, timeout=120, max_tokens=4096):
             d = json.loads(r.read().decode())
     except urllib.error.HTTPError as he:
         raise RuntimeError(f"{he.code}: {he.read().decode()[:180]}")
-    return d["choices"][0]["message"]["content"]
+    choice = (d.get("choices") or [{}])[0]
+    message = choice.get("message") or {}
+    content = message.get("content")
+    if not isinstance(content, str) or not content.strip():
+        raise RuntimeError("bos content; finish_reason=" + str(choice.get("finish_reason")) +
+                           "; message_keys=" + ",".join(message.keys()))
+    return content
 
 
 def _openrouter_free_models(timeout=20):

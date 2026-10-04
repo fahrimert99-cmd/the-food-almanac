@@ -25,7 +25,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: openrouter/free
           OPENROUTER_IMAGE_MODEL: inclusionai/ming-image-0.1-design
-          OPENROUTER_MAX_FALLBACKS: "2"
+          OPENROUTER_MAX_FALLBACKS: "6"
         run: python3 openrouter_video_trial.py
       - name: Deneme çıktısını yükle
         if: always()
