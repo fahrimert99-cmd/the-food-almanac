@@ -400,22 +400,142 @@ def s_yorum(d, t, T):
     tik(d, W / 2, 1390, 70, faz(t, 1.4, 0.5))
 
 
+_AVATAR = None
+
+
+def _avatar():
+    global _AVATAR
+    if _AVATAR is None:
+        _AVATAR = Image.open("assets/marka/avatar.png").convert("RGBA")
+    return _AVATAR
+
+
+def _yapistir(d, katman, cx, cy):
+    """RGBA katmanı, çizim tuvaline merkezden yapıştır."""
+    im = d._image
+    im.paste(katman, (int(cx - katman.width / 2), int(cy - katman.height / 2)), katman)
+
+
+def _katman(boy):
+    k = Image.new("RGBA", (boy, boy), (0, 0, 0, 0))
+    return k, ImageDraw.Draw(k)
+
+
+def ikon_begen(boy, dolu):
+    k, kd = _katman(boy)
+    s = boy / 100
+    r = SARI if dolu else BEYAZ
+    kd.rounded_rectangle((8 * s, 44 * s, 26 * s, 92 * s), radius=int(5 * s), fill=r)          # bilek
+    kd.rounded_rectangle((32 * s, 40 * s, 86 * s, 92 * s), radius=int(12 * s), fill=r)        # avuç
+    kd.polygon([(34 * s, 44 * s), (52 * s, 8 * s), (64 * s, 12 * s), (60 * s, 44 * s)], fill=r)  # başparmak
+    if not dolu:
+        kd.rounded_rectangle((38 * s, 46 * s, 80 * s, 86 * s), radius=int(9 * s), fill=PANEL)
+    return k
+
+
+def ikon_yorum(boy, nokta_k):
+    k, kd = _katman(boy)
+    s = boy / 100
+    kd.rounded_rectangle((6 * s, 10 * s, 94 * s, 72 * s), radius=int(18 * s), fill=BEYAZ)
+    kd.polygon([(24 * s, 70 * s), (22 * s, 94 * s), (46 * s, 70 * s)], fill=BEYAZ)
+    for i in range(3):
+        z = math.sin(nokta_k * 8 - i * 0.9)
+        rr = (7 + 2.5 * max(0, z)) * s
+        cx = (30 + i * 20) * s
+        kd.ellipse((cx - rr, 41 * s - rr, cx + rr, 41 * s + rr), fill=PANEL)
+    return k
+
+
+def ikon_zil(boy, aci):
+    k, kd = _katman(boy)
+    s = boy / 100
+    kd.pieslice((18 * s, 12 * s, 82 * s, 80 * s), 180, 360, fill=SARI)
+    kd.rectangle((18 * s, 46 * s, 82 * s, 72 * s), fill=SARI)
+    kd.polygon([(10 * s, 78 * s), (18 * s, 68 * s), (82 * s, 68 * s), (90 * s, 78 * s)], fill=SARI)
+    kd.ellipse((42 * s, 78 * s, 58 * s, 94 * s), fill=SARI)
+    kd.ellipse((45 * s, 4 * s, 55 * s, 14 * s), fill=SARI)
+    return k.rotate(aci, resample=Image.BICUBIC, center=(boy / 2, 10 * s))
+
+
+def parmak(d, x, y, basili):
+    r = 34 if not basili else 28
+    d.ellipse((x - r - 10, y - r - 10, x + r + 10, y + r + 10), outline=(255, 255, 255), width=5)
+    d.ellipse((x - r, y - r, x + r, y + r), fill=(255, 255, 255))
+
+
+def patlama(d, cx, cy, k, renk=SARI):
+    if not (0 < k < 1):
+        return
+    for i in range(8):
+        a = i * math.pi / 4
+        r0, r1 = 70 + 60 * k, 95 + 90 * k
+        d.line((cx + r0 * math.cos(a), cy + r0 * math.sin(a), cx + r1 * math.cos(a), cy + r1 * math.sin(a)),
+               fill=renk, width=int(10 * (1 - k)) + 2)
+
+
 def s_son(d, t, T):
-    """Son: sabit CTA — her gün 12:00 / 20:00, abone ol."""
-    k = ease_back(faz(t, 0, 0.45))
-    yazi(d, (W / 2, 640), "ARTIK BİLİYORSUN", int(110 * k) + 1, BEYAZ)
-    for j, (sa, x) in enumerate((("12:00", 330), ("20:00", 750))):
-        kk = ease_back(faz(t, 0.5 + j * 0.25, 0.4))
-        if kk > 0:
-            kutu(d, x - 170 * kk, 820, x + 170 * kk, 1000, r=24, renk=PANEL, cizgi=SARI, kalinlik=6)
-            yazi(d, (x, 910), sa, int(110 * kk) + 1, SARI)
-    yazi(d, (W / 2, 1090), "HER GÜN YENİ BİR TUZAK", 70, BEYAZ) if t > 1.0 else None
-    kb = ease_back(faz(t, 1.6, 0.45))
-    if kb > 0.15:
-        nab = 1 + 0.04 * math.sin(t * 8)
-        w2 = 300 * kb * nab
-        kutu(d, W / 2 - w2, 1210, W / 2 + w2, 1350, r=70, renk=KIRMIZI)
-        yazi(d, (W / 2, 1280), "ABONE OL", int(88 * kb) + 1, BEYAZ)
+    """Kapanış: kanal avatarı + BEĞEN / YORUM YAP / ABONE OL animasyonu."""
+    # 1) avatar: zıplayarak gelir, etrafında dönen nişan halkası
+    ka = ease_back(faz(t, 0, 0.5))
+    ay = 560
+    if ka > 0.02:
+        boy = int(380 * ka * (1 + 0.025 * math.sin(t * 6)))
+        parlak = int(120 + 60 * math.sin(t * 5))
+        r = boy / 2 + 26
+        d.ellipse((W / 2 - r, ay - r, W / 2 + r, ay + r), outline=(255, 195, 30), width=6)
+        bas = (t * 140) % 360
+        for i in range(4):
+            d.arc((W / 2 - r - 22, ay - r - 22, W / 2 + r + 22, ay + r + 22),
+                  bas + i * 90, bas + i * 90 + 50, fill=(255, 195, 30, parlak), width=10)
+        _yapistir(d, _avatar().resize((boy, boy), Image.LANCZOS), W / 2, ay)
+    if t > 0.35:
+        yazi(d, (W / 2, 880), "TUZAK AVCISI", 88, SARI, kontur=4)
+        yazi(d, (W / 2, 960), "HER GÜN 12:00 VE 20:00", 50, BEYAZ, kontur=3)
+
+    # 2) üç buton sırayla kayarak gelir; parmak her birine dokunur
+    butonlar = [("BEĞEN", 1080), ("YORUM YAP", 1225), ("ABONE OL", 1370)]
+    dokun = [1.5, 2.3, 3.1]
+    for i, (ad, y) in enumerate(butonlar):
+        kg = ease_out(faz(t, 0.6 + i * 0.15, 0.4))
+        if kg <= 0:
+            continue
+        x0 = 150 + (1 - kg) * -900
+        basildi = t >= dokun[i]
+        bk = faz(t, dokun[i], 0.25)
+        olc = 1 - 0.08 * math.sin(math.pi * bk) if 0 < bk < 1 else 1
+        w2, h2 = 390 * olc, 62 * olc
+        cx = W / 2 + (x0 - 150)
+        if ad == "ABONE OL":
+            renk = (70, 70, 80) if basildi else KIRMIZI
+            metin = "ABONE OLUNDU" if basildi else "ABONE OL"
+        else:
+            renk = PANEL
+            metin = ad
+        kutu(d, cx - w2, y - h2, cx + w2, y + h2, r=int(h2), renk=renk,
+             cizgi=SARI if (basildi and ad != "ABONE OL") else None, kalinlik=5)
+        ix = cx - w2 + 80
+        if ad == "BEĞEN":
+            _yapistir(d, ikon_begen(86, basildi), ix, y)
+            if basildi:
+                patlama(d, ix, y, faz(t, dokun[i], 0.5))
+        elif ad == "YORUM YAP":
+            _yapistir(d, ikon_yorum(86, t if basildi else 0), ix, y)
+        else:
+            aci = 22 * math.sin((t - dokun[i]) * 18) * max(0, 1 - (t - dokun[i]) / 1.2) if basildi else 0
+            _yapistir(d, ikon_zil(86, aci), ix, y)
+            if basildi:
+                patlama(d, ix, y, faz(t, dokun[i], 0.5), renk=BEYAZ)
+        yazi(d, (cx + 40, y), metin, int((54 if metin == "ABONE OLUNDU" else 64) * olc), BEYAZ)
+
+    # 3) dokunma imleci: butondan butona gider
+    if 1.0 < t < dokun[-1] + 0.6:
+        hedefler = [(W / 2 + 230, y) for _, y in butonlar]
+        i = min(range(3), key=lambda j: abs(t - dokun[j]))
+        onceki = hedefler[max(0, i - 1)] if t < dokun[i] else hedefler[i]
+        k = ease_out(faz(t, dokun[i] - 0.5, 0.4)) if t < dokun[i] else 1
+        x = onceki[0] + (hedefler[i][0] - onceki[0]) * k
+        y = (onceki[1] + (hedefler[i][1] - onceki[1]) * k) + 40
+        parmak(d, x, y, abs(t - dokun[i]) < 0.12)
 
 
 SAHNE_CIZ = {"TEMU NASIL BU KADAR UCUZ? 📦": [s_telefon, s_akis, s_maliyet, s_yorum]}
