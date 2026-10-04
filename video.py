@@ -139,6 +139,8 @@ def _ses_normalize(metin):
     if not metin:
         return metin
     m = metin
+    # Harfe yapışık sayı (A101, iPhone15): araya boşluk -> "A yüz bir" ("Ayüz bir" değil)
+    m = re.sub(r"(?<=[A-Za-zÇĞİÖŞÜçğıöşü])(?=\d)", " ", m)
     m = re.sub(r"%\s*(\d+)", r"yüzde \1", m)                 # %95 -> yüzde 95
     # saat: 19:00 -> "on dokuz", 19:30 -> "on dokuz otuz"  (iki nokta okunmasın)
     def _saat_rep(x):

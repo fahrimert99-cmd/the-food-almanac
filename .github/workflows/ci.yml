@@ -40,3 +40,5 @@ jobs:
           PY
       - name: Senaryolar dogrula
         run: python3 senaryolar_validator.py
+      - name: Kod video tarifleri (marka serisi)
+        run: python3 test_kod_sahneler.py
