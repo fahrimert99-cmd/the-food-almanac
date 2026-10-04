@@ -1,44 +1,2345 @@
 {
  "TEMU NASIL BU KADAR UCUZ? 📦": {
-  "kanca": {"buyuk": "TEMU", "orta": "NASIL BU KADAR", "vurgu": "UCUZ?"},
+  "kanca": {
+   "buyuk": "TEMU",
+   "orta": "NASIL BU KADAR",
+   "vurgu": "UCUZ?"
+  },
   "kapanis_klip": "delivery package doorstep",
   "sahneler": [
-   {"tip": "fiyat", "klip": "online shopping smartphone", "ikon": "kulaklik", "urun": "Kablosuz kulaklık", "fiyat": "30 TL", "bant": "ARADA KİMSE YOK"},
-   {"tip": "akis", "klip": "factory packaging boxes", "bant": "FABRİKADAN KAPINA", "sol": "FABRİKA", "sol_ikon": "fabrika", "sag": "KAPIN", "sag_ikon": "ev", "aradakiler": ["TOPTANCI", "MAĞAZA"]},
-   {"tip": "cubuklar", "klip": "warehouse shipping boxes", "kalemler": [{"ad": "MAĞAZA KİRASI", "oran": 1.0, "durum": "dus"}, {"ad": "TOPTANCI", "oran": 0.8, "durum": "dus"}, {"ad": "DEPO MASRAFI", "oran": 0.55}], "sonuc": "= ÇOK UCUZ FİYAT",
-    "bolme": 0.5, "sonra": {"tip": "soru_cevap", "soru": "BEDELİ KİM ÖDÜYOR?", "cevap": "SEN", "alt": [{"ikon": "saat", "ad": "BEKLEME"}, {"ikon": "yildiz", "ad": "KALİTE", "dus": true}]}},
-   {"tip": "karsilastir", "klip": "woman scrolling phone", "bant": "YORUMLARA BAK", "sol": {"ad": "İLAN", "ikon": "kulaklik"}, "sag": {"ad": "GERÇEK", "ikon": "kulaklik_kotu", "isaret": "x"}}
+   {
+    "tip": "fiyat",
+    "klip": "online shopping smartphone",
+    "ikon": "kulaklik",
+    "urun": "Kablosuz kulaklık",
+    "fiyat": "30 TL",
+    "bant": "ARADA KİMSE YOK"
+   },
+   {
+    "tip": "akis",
+    "klip": "factory packaging boxes",
+    "bant": "FABRİKADAN KAPINA",
+    "sol": "FABRİKA",
+    "sol_ikon": "fabrika",
+    "sag": "KAPIN",
+    "sag_ikon": "ev",
+    "aradakiler": [
+     "TOPTANCI",
+     "MAĞAZA"
+    ]
+   },
+   {
+    "tip": "cubuklar",
+    "klip": "warehouse shipping boxes",
+    "kalemler": [
+     {
+      "ad": "MAĞAZA KİRASI",
+      "oran": 1.0,
+      "durum": "dus"
+     },
+     {
+      "ad": "TOPTANCI",
+      "oran": 0.8,
+      "durum": "dus"
+     },
+     {
+      "ad": "DEPO MASRAFI",
+      "oran": 0.55
+     }
+    ],
+    "sonuc": "= ÇOK UCUZ FİYAT",
+    "bolme": 0.5,
+    "sonra": {
+     "tip": "soru_cevap",
+     "soru": "BEDELİ KİM ÖDÜYOR?",
+     "cevap": "SEN",
+     "alt": [
+      {
+       "ikon": "saat",
+       "ad": "BEKLEME"
+      },
+      {
+       "ikon": "yildiz",
+       "ad": "KALİTE",
+       "dus": true
+      }
+     ]
+    }
+   },
+   {
+    "tip": "karsilastir",
+    "klip": "woman scrolling phone",
+    "bant": "YORUMLARA BAK",
+    "sol": {
+     "ad": "İLAN",
+     "ikon": "kulaklik"
+    },
+    "sag": {
+     "ad": "GERÇEK",
+     "ikon": "kulaklik_kotu",
+     "isaret": "x"
+    }
+   }
   ]
  },
  "A101 ALDIN ALDIN ÜRÜNÜ NEDEN İLK SAATTE BİTER? ⏰": {
-  "kanca": {"buyuk": "ALDIN ALDIN", "orta": "NEDEN İLK SAATTE", "vurgu": "BİTER?"},
+  "kanca": {
+   "buyuk": "ALDIN ALDIN",
+   "orta": "NEDEN İLK SAATTE",
+   "vurgu": "BİTER?"
+  },
   "kapanis_klip": "supermarket shopping cart",
   "sahneler": [
-   {"tip": "damga", "klip": "empty supermarket shelf", "ust": "PERŞEMBE SABAHI", "ikon": "tv", "etiket": "AKILLI TV", "damga": "TÜKENDİ", "an": 1.6},
-   {"tip": "sayac", "klip": "supermarket stock boxes", "bant": "MAĞAZA BAŞINA STOK", "ikon": "paket", "bas": 5, "son": 0, "birim": " ADET", "renk": "kirmizi", "alt": "AZ STOK = HAFTAYA DAHA ERKEN GELİRSİN"},
-   {"tip": "liste", "klip": "woman shopping supermarket", "bant": "KITLIK ETKİSİ", "maddeler": [{"metin": "Kampanya ürünü", "isaret": "x"}, {"metin": "Süt", "isaret": "tik"}, {"metin": "Deterjan", "isaret": "tik"}, {"metin": "Atıştırmalık", "isaret": "tik"}]},
-   {"tip": "karsilastir", "klip": "person thinking shopping list", "bant": "KENDİNE SOR", "sol": {"ad": "İHTİYAÇ", "ikon": "sepet", "isaret": "tik"}, "sag": {"ad": "BİTTİ DİYE", "ikon": "tv", "isaret": "x"}}
+   {
+    "tip": "damga",
+    "klip": "empty supermarket shelf",
+    "ust": "PERŞEMBE SABAHI",
+    "ikon": "tv",
+    "etiket": "AKILLI TV",
+    "damga": "TÜKENDİ",
+    "an": 1.6
+   },
+   {
+    "tip": "sayac",
+    "klip": "supermarket stock boxes",
+    "bant": "MAĞAZA BAŞINA STOK",
+    "ikon": "paket",
+    "bas": 5,
+    "son": 0,
+    "birim": " ADET",
+    "renk": "kirmizi",
+    "alt": "AZ STOK = HAFTAYA DAHA ERKEN GELİRSİN"
+   },
+   {
+    "tip": "liste",
+    "klip": "woman shopping supermarket",
+    "bant": "KITLIK ETKİSİ",
+    "maddeler": [
+     {
+      "metin": "Kampanya ürünü",
+      "isaret": "x"
+     },
+     {
+      "metin": "Süt",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Deterjan",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Atıştırmalık",
+      "isaret": "tik"
+     }
+    ]
+   },
+   {
+    "tip": "karsilastir",
+    "klip": "person thinking shopping list",
+    "bant": "KENDİNE SOR",
+    "sol": {
+     "ad": "İHTİYAÇ",
+     "ikon": "sepet",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "BİTTİ DİYE",
+     "ikon": "tv",
+     "isaret": "x"
+    }
+   }
   ]
  },
  "NETFLIX BİR SONRAKİ BÖLÜMÜ NEDEN KENDİSİ AÇAR? ▶️": {
-  "kanca": {"buyuk": "NETFLIX", "orta": "SONRAKİ BÖLÜMÜ NEDEN", "vurgu": "KENDİSİ AÇAR?"},
+  "kanca": {
+   "buyuk": "NETFLIX",
+   "orta": "SONRAKİ BÖLÜMÜ NEDEN",
+   "vurgu": "KENDİSİ AÇAR?"
+  },
   "kapanis_klip": "person relaxing sofa evening",
   "sahneler": [
-   {"tip": "sayac", "klip": "watching tv night couch", "bant": "SONRAKİ BÖLÜM", "ikon": "oynat", "bas": 5, "son": 0, "birim": " SN", "hiz": 0.7, "alt": "SEN KALKMADAN BAŞLAR"},
-   {"tip": "karsilastir", "klip": "remote control tv", "bant": "KARARI KİM VERİYOR?", "sol": {"ad": "DURMAK", "ikon": "dur", "alt": "Sen bir şey yapmalısın"}, "sag": {"ad": "DEVAM", "ikon": "oynat", "alt": "Hiçbir şey yapma", "isaret": "x"}},
-   {"tip": "cubuklar", "klip": "binge watching tv", "bant": "İZLENME SÜRESİ", "kalemler": [{"ad": "1 BÖLÜM", "oran": 0.3, "durum": "buyu", "deger": "45 DK"}, {"ad": "3 BÖLÜM", "oran": 0.65, "durum": "buyu", "deger": "2 SAAT"}, {"ad": "6 BÖLÜM", "oran": 1.0, "durum": "buyu", "deger": "4 SAAT"}], "sonuc": "SÜRE = VAZGEÇİLMEZLİK", "sonuc_renk": "kirmizi"},
-   {"tip": "anahtar", "klip": "hand holding phone settings", "bant": "AYARLARDAN KAPAT", "ekran": "OYNATMA AYARLARI", "etiket": "Otomatik oynatma", "yon": "kapat", "sonuc": "KARAR SENDE"}
+   {
+    "tip": "sayac",
+    "klip": "watching tv night couch",
+    "bant": "SONRAKİ BÖLÜM",
+    "ikon": "oynat",
+    "bas": 5,
+    "son": 0,
+    "birim": " SN",
+    "hiz": 0.7,
+    "alt": "SEN KALKMADAN BAŞLAR"
+   },
+   {
+    "tip": "karsilastir",
+    "klip": "remote control tv",
+    "bant": "KARARI KİM VERİYOR?",
+    "sol": {
+     "ad": "DURMAK",
+     "ikon": "dur",
+     "alt": "Sen bir şey yapmalısın"
+    },
+    "sag": {
+     "ad": "DEVAM",
+     "ikon": "oynat",
+     "alt": "Hiçbir şey yapma",
+     "isaret": "x"
+    }
+   },
+   {
+    "tip": "cubuklar",
+    "klip": "binge watching tv",
+    "bant": "İZLENME SÜRESİ",
+    "kalemler": [
+     {
+      "ad": "1 BÖLÜM",
+      "oran": 0.3,
+      "durum": "buyu",
+      "deger": "45 DK"
+     },
+     {
+      "ad": "3 BÖLÜM",
+      "oran": 0.65,
+      "durum": "buyu",
+      "deger": "2 SAAT"
+     },
+     {
+      "ad": "6 BÖLÜM",
+      "oran": 1.0,
+      "durum": "buyu",
+      "deger": "4 SAAT"
+     }
+    ],
+    "sonuc": "SÜRE = VAZGEÇİLMEZLİK",
+    "sonuc_renk": "kirmizi"
+   },
+   {
+    "tip": "anahtar",
+    "klip": "hand holding phone settings",
+    "bant": "AYARLARDAN KAPAT",
+    "ekran": "OYNATMA AYARLARI",
+    "etiket": "Otomatik oynatma",
+    "yon": "kapat",
+    "sonuc": "KARAR SENDE"
+   }
   ]
  },
  "TALL, GRANDE, VENTİ: KÜÇÜK BOY NEDEN YOK? 🥤": {
-  "kanca": {"buyuk": "TALL GRANDE VENTİ", "orta": "KÜÇÜK BOY", "vurgu": "NEDEN YOK?"},
+  "kanca": {
+   "buyuk": "TALL GRANDE VENTİ",
+   "orta": "KÜÇÜK BOY",
+   "vurgu": "NEDEN YOK?"
+  },
   "kapanis_klip": "coffee shop customer",
   "sahneler": [
-   {"tip": "boylar", "klip": "starbucks coffee cup", "bant": "EN KÜÇÜK BOY", "etiketler": ["TALL", "GRANDE", "VENTİ"], "alt": ["= UZUN", "", ""], "vurgu": 0, "rozet": "UZUN?!"},
-   {"tip": "buyuk_yazi", "klip": "coffee shop menu board", "satirlar": ["KÜÇÜK", "ORTA", "BÜYÜK"], "ciz": 0, "vurgu": 1,
-    "bolme": 0.5, "sonra": {"tip": "liste", "bant": "ALIŞILMADIK İSİMLER", "maddeler": [{"metin": "Fiyat karşılaştırması zor", "isaret": "x"}, {"metin": "Küçük demek zor", "isaret": "x"}]}},
-   {"tip": "boylar", "klip": "barista making coffee", "bant": "ORTA SEÇENEK ETKİSİ", "etiketler": ["TALL", "GRANDE", "VENTİ"], "vurgu": 1, "rozet": "EN KÂRLI"},
-   {"tip": "boylar", "klip": "woman drinking coffee", "bant": "MİLİLİTREYLE DÜŞÜN", "etiketler": ["TALL", "GRANDE", "VENTİ"], "alt": ["354 ML", "473 ML", "591 ML"]}
+   {
+    "tip": "boylar",
+    "klip": "starbucks coffee cup",
+    "bant": "EN KÜÇÜK BOY",
+    "etiketler": [
+     "TALL",
+     "GRANDE",
+     "VENTİ"
+    ],
+    "alt": [
+     "= UZUN",
+     "",
+     ""
+    ],
+    "vurgu": 0,
+    "rozet": "UZUN?!"
+   },
+   {
+    "tip": "buyuk_yazi",
+    "klip": "coffee shop menu board",
+    "satirlar": [
+     "KÜÇÜK",
+     "ORTA",
+     "BÜYÜK"
+    ],
+    "ciz": 0,
+    "vurgu": 1,
+    "bolme": 0.5,
+    "sonra": {
+     "tip": "liste",
+     "bant": "ALIŞILMADIK İSİMLER",
+     "maddeler": [
+      {
+       "metin": "Fiyat karşılaştırması zor",
+       "isaret": "x"
+      },
+      {
+       "metin": "Küçük demek zor",
+       "isaret": "x"
+      }
+     ]
+    }
+   },
+   {
+    "tip": "boylar",
+    "klip": "barista making coffee",
+    "bant": "ORTA SEÇENEK ETKİSİ",
+    "etiketler": [
+     "TALL",
+     "GRANDE",
+     "VENTİ"
+    ],
+    "vurgu": 1,
+    "rozet": "EN KÂRLI"
+   },
+   {
+    "tip": "boylar",
+    "klip": "woman drinking coffee",
+    "bant": "MİLİLİTREYLE DÜŞÜN",
+    "etiketler": [
+     "TALL",
+     "GRANDE",
+     "VENTİ"
+    ],
+    "alt": [
+     "354 ML",
+     "473 ML",
+     "591 ML"
+    ]
+   }
+  ]
+ },
+ "MARKETTE NEDEN TELEVİZYON SATILIR? 📺": {
+  "kanca": {
+   "buyuk": "MARKETTE",
+   "orta": "NEDEN",
+   "vurgu": "TELEVİZYON?"
+  },
+  "kapanis_klip": "supermarket checkout",
+  "sahneler": [
+   {
+    "tip": "liste",
+    "bant": "EKMEK ALMAYA GİRDİN",
+    "maddeler": [
+     {
+      "metin": "Televizyon"
+     },
+     {
+      "metin": "Süpürge"
+     },
+     {
+      "metin": "Bisiklet"
+     }
+    ],
+    "klip": "supermarket aisle"
+   },
+   {
+    "tip": "akis",
+    "bant": "ASIL GÖREV: SENİ ÇEKMEK",
+    "sol": "KAMPANYA",
+    "sol_ikon": "tv",
+    "sag": "MAĞAZA",
+    "sag_ikon": "magaza",
+    "tasinan": "sepet",
+    "klip": "supermarket entrance people"
+   },
+   {
+    "tip": "liste",
+    "bant": "ÇIKIŞTA SEPETİNDE",
+    "maddeler": [
+     {
+      "metin": "Kampanya ürünü",
+      "isaret": "x"
+     },
+     {
+      "metin": "Süt",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Deterjan",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Atıştırmalık",
+      "isaret": "tik"
+     }
+    ],
+    "klip": "shopping basket groceries"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "LİSTEDE VAR",
+     "ikon": "sepet",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "LİSTEDE YOK",
+     "ikon": "tv",
+     "isaret": "x"
+    },
+    "bant": "İHTİYAÇ LİSTESİYLE GİT",
+    "klip": "shopping list hand"
+   }
+  ]
+ },
+ "TEMU'DAKİ ÇARK NEDEN HEP KAZANDIRIYOR? 🎡": {
+  "kanca": {
+   "buyuk": "TEMU ÇARKI",
+   "orta": "NEDEN HEP",
+   "vurgu": "KAZANDIRIR?"
+  },
+  "kapanis_klip": "online shopping smartphone",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "HİÇ KAYBETTİN Mİ?",
+    "ikon": "cark",
+    "etiket": "ŞANS ÇARKI",
+    "damga": "KAZANDIN!",
+    "an": 1.4,
+    "klip": "smartphone app hand"
+   },
+   {
+    "tip": "akis",
+    "bant": "KUPON → SEPET",
+    "sol": "KUPON",
+    "sol_ikon": "kupon",
+    "sag": "SEPET",
+    "sag_ikon": "sepet",
+    "tasinan": "paket",
+    "klip": "woman shopping online phone"
+   },
+   {
+    "tip": "sayac",
+    "bant": "KUPONUN SÜRESİ",
+    "ikon": "saat",
+    "bas": 15,
+    "son": 0,
+    "birim": " DK",
+    "renk": "kirmizi",
+    "alt": "ACELE ETTİRİR",
+    "klip": "clock ticking"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "ÖNCE LİSTE",
+     "ikon": "fatura",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "SONRA ÇARK",
+     "ikon": "cark",
+     "isaret": "x"
+    },
+    "bant": "ÇÖZÜM BASİT",
+    "klip": "writing shopping list"
+   }
+  ]
+ },
+ "AMAZON PRIME İPTALİ NEDEN BU KADAR ZOR? 🔒": {
+  "kanca": {
+   "buyuk": "AMAZON PRIME",
+   "orta": "İPTALİ NEDEN",
+   "vurgu": "BU KADAR ZOR?"
+  },
+  "kapanis_klip": "laptop online shopping",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "ÜYE OL",
+     "ikon": "kart",
+     "alt": "1 tık",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "İPTAL ET",
+     "ikon": "kilit",
+     "alt": "Sayfalar sürer",
+     "isaret": "x"
+    },
+    "bant": "TESADÜF MÜ?",
+    "klip": "laptop typing frustrated"
+   },
+   {
+    "tip": "sayac",
+    "bant": "2025 UZLAŞMASI",
+    "ikon": "bina",
+    "bas": 0,
+    "son": 2.5,
+    "on": "$",
+    "birim": " MİLYAR",
+    "alt": "FTC 2023'TE DAVA AÇTI",
+    "klip": "courthouse building",
+    "ondalik": 1
+   },
+   {
+    "tip": "liste",
+    "bant": "KARANLIK DESEN",
+    "maddeler": [
+     {
+      "metin": "Emin misin?",
+      "isaret": "x"
+     },
+     {
+      "metin": "Bunu kaybedeceksin!",
+      "isaret": "x"
+     },
+     {
+      "metin": "Son bir teklif...",
+      "isaret": "x"
+     }
+    ],
+    "klip": "computer screen popup"
+   },
+   {
+    "tip": "anahtar",
+    "bant": "ABONELİKLERİNE BAK",
+    "ekran": "ABONELİKLER",
+    "etiket": "Kullanmadığın üyelik",
+    "yon": "kapat",
+    "sonuc": "KAPAT GİTSİN",
+    "klip": "phone settings hand"
+   }
+  ]
+ },
+ "PRIME ÜYESİ NEDEN DAHA ÇOK HARCAR? 🛒": {
+  "kanca": {
+   "buyuk": "PRIME ÜYESİ",
+   "orta": "NEDEN DAHA ÇOK",
+   "vurgu": "HARCAR?"
+  },
+  "kapanis_klip": "delivery boxes doorstep",
+  "sahneler": [
+   {
+    "tip": "buyuk_yazi",
+    "satirlar": [
+     "ASIL ÜRÜN",
+     "KARGO DEĞİL",
+     "ALIŞKANLIK"
+    ],
+    "vurgu": 2,
+    "klip": "delivery boxes stack"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "YILLIK ÜCRET ÖDENDİ",
+    "cevap": "PARASINI ÇIKAR!",
+    "alt": [
+     {
+      "ikon": "para",
+      "ad": "BATIK MALİYET"
+     }
+    ],
+    "klip": "credit card payment"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "SİPARİŞ SAYISI",
+    "kalemler": [
+     {
+      "ad": "ÜYE DEĞİL",
+      "oran": 0.35,
+      "durum": "buyu"
+     },
+     {
+      "ad": "PRIME ÜYESİ",
+      "oran": 1.0,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "DAHA ÇOK SİPARİŞ",
+    "sonuc_renk": "kirmizi",
+    "klip": "online order packages"
+   },
+   {
+    "tip": "sayac",
+    "bant": "AY SONU SAY",
+    "ikon": "paket",
+    "bas": 0,
+    "son": 14,
+    "birim": " SİPARİŞ",
+    "alt": "ŞAŞIRABİLİRSİN",
+    "klip": "person counting boxes"
+   }
+  ]
+ },
+ "GETİR 10 DAKİKADA NASIL GETİRİYORDU? ⏱️": {
+  "kanca": {
+   "buyuk": "GETİR",
+   "orta": "10 DAKİKADA",
+   "vurgu": "NASIL?"
+  },
+  "kapanis_klip": "delivery courier scooter city",
+  "sahneler": [
+   {
+    "tip": "sayac",
+    "bant": "TESLİMAT SÜRESİ",
+    "ikon": "kurye",
+    "bas": 10,
+    "son": 0,
+    "birim": " DK",
+    "klip": "delivery scooter city"
+   },
+   {
+    "tip": "damga",
+    "ust": "KARANLIK MAĞAZA",
+    "ikon": "magaza",
+    "etiket": "MÜŞTERİYE KAPALI",
+    "damga": "SADECE KURYE",
+    "an": 1.4,
+    "klip": "warehouse shelves groceries"
+   },
+   {
+    "tip": "liste",
+    "bant": "HIZIN SIRRI",
+    "maddeler": [
+     {
+      "metin": "Az ürün çeşidi",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Hızlı toplanan raflar",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Birkaç km'lik alan",
+      "isaret": "tik"
+     }
+    ],
+    "klip": "warehouse worker picking"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "HIZ VS MALİYET",
+    "kalemler": [
+     {
+      "ad": "HIZ",
+      "oran": 1.0
+     },
+     {
+      "ad": "MALİYET",
+      "oran": 1.0,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "2024: YURT DIŞINDAN ÇEKİLDİ",
+    "sonuc_renk": "kirmizi",
+    "klip": "empty city street night"
+   }
+  ]
+ },
+ "GETİR'DE MİNİMUM SEPET NEDEN VAR? 🧺": {
+  "kanca": {
+   "buyuk": "MİNİMUM SEPET",
+   "orta": "NEDEN",
+   "vurgu": "VAR?"
+  },
+  "kapanis_klip": "grocery bag kitchen",
+  "sahneler": [
+   {
+    "tip": "fiyat",
+    "ikon": "sepet",
+    "urun": "Sadece ekmek",
+    "fiyat": "MİN.",
+    "buton": "SEPET YETERSİZ",
+    "bant": "MİNİMUM TUTARA TAKILDIN",
+    "klip": "phone grocery app"
+   },
+   {
+    "tip": "liste",
+    "bant": "TAKTİKLER",
+    "maddeler": [
+     {
+      "metin": "İhtiyacın olmayanı ekle",
+      "isaret": "x"
+     },
+     {
+      "metin": "'Bunu da ister misin?'",
+      "isaret": "x"
+     }
+    ],
+    "klip": "online shopping checkout"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "TESLİMAT ÜCRETİ",
+    "kalemler": [
+     {
+      "ad": "SEPET TUTARI",
+      "oran": 1.0,
+      "durum": "buyu"
+     },
+     {
+      "ad": "TESLİMAT ÜCRETİ",
+      "oran": 0.6,
+      "durum": "dus"
+     }
+    ],
+    "sonuc": "+ BİRKAÇ ÜRÜN DAHA",
+    "sonuc_renk": "kirmizi",
+    "klip": "grocery delivery bag"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "LİSTE",
+     "ikon": "fatura",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "ÖNERİLER",
+     "ikon": "sepet",
+     "isaret": "x"
+    },
+    "bant": "ÖNCE LİSTENİ YAZ",
+    "klip": "woman writing list kitchen"
+   }
+  ]
+ },
+ "YEMEK SİPARİŞİNDE KOMİSYONU KİM ÖDÜYOR? 🍔": {
+  "kanca": {
+   "buyuk": "KOMİSYONU",
+   "orta": "KİM",
+   "vurgu": "ÖDÜYOR?"
+  },
+  "kapanis_klip": "food delivery bag",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "RESTORAN",
+     "ikon": "hamburger",
+     "alt": "Menü fiyatı"
+    },
+    "sag": {
+     "ad": "UYGULAMA",
+     "ikon": "telefon",
+     "alt": "Daha pahalı",
+     "isaret": "x"
+    },
+    "bant": "AYNI MENÜ",
+    "klip": "restaurant burger"
+   },
+   {
+    "tip": "akis",
+    "bant": "HER SİPARİŞTE PAY",
+    "sol": "RESTORAN",
+    "sol_ikon": "restoran",
+    "sag": "UYGULAMA",
+    "sag_ikon": "telefon",
+    "tasinan": "para",
+    "klip": "restaurant kitchen cooking"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "FARK BÜYÜYOR",
+    "kalemler": [
+     {
+      "ad": "MENÜ",
+      "oran": 0.55
+     },
+     {
+      "ad": "+ TESLİMAT",
+      "oran": 0.7
+     },
+     {
+      "ad": "+ SERVİS BEDELİ",
+      "oran": 0.85
+     },
+     {
+      "ad": "+ KÜÇÜK SEPET",
+      "oran": 1.0
+     }
+    ],
+    "klip": "food delivery courier"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "GEL-AL",
+     "ikon": "restoran",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "UYGULAMA",
+     "ikon": "telefon"
+    },
+    "bant": "FİYATI KARŞILAŞTIR",
+    "klip": "takeaway food counter"
+   }
+  ]
+ },
+ "İLK SİPARİŞE NEDEN YÜZDE ELLİ İNDİRİM? 🎁": {
+  "kanca": {
+   "buyuk": "%50",
+   "orta": "İLK SİPARİŞE",
+   "vurgu": "NEDEN?"
+  },
+  "kapanis_klip": "food delivery night",
+  "sahneler": [
+   {
+    "tip": "sayac",
+    "bant": "İLK SİPARİŞ",
+    "ikon": "kupon",
+    "bas": 0,
+    "son": 50,
+    "on": "%",
+    "birim": " İNDİRİM",
+    "klip": "phone food app"
+   },
+   {
+    "tip": "buyuk_yazi",
+    "satirlar": [
+     "TEK SİPARİŞ DEĞİL",
+     "HEDEF:",
+     "ALIŞKANLIK"
+    ],
+    "vurgu": 2,
+    "klip": "ordering food phone couch"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "SONRAKİ SİPARİŞLER",
+    "kalemler": [
+     {
+      "ad": "1. SİPARİŞ",
+      "oran": 0.5,
+      "deger": "%50"
+     },
+     {
+      "ad": "2. SİPARİŞ",
+      "oran": 1.0,
+      "deger": "TAM FİYAT"
+     },
+     {
+      "ad": "3. SİPARİŞ",
+      "oran": 1.0,
+      "deger": "TAM FİYAT"
+     }
+    ],
+    "klip": "food delivery bag door"
+   },
+   {
+    "tip": "sayac",
+    "bant": "AY SONU KONTROL",
+    "ikon": "fatura",
+    "bas": 0,
+    "son": 1800,
+    "birim": " TL",
+    "renk": "kirmizi",
+    "alt": "BÜTÇENE YAZ",
+    "klip": "person checking bills"
+   }
+  ]
+ },
+ "MARKET KARTI NEDEN BEDAVA? 💳": {
+  "kanca": {
+   "buyuk": "MARKET KARTI",
+   "orta": "NEDEN",
+   "vurgu": "BEDAVA?"
+  },
+  "kapanis_klip": "supermarket checkout card",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "KART + PUAN BEDAVA",
+    "ikon": "kart",
+    "etiket": "SADAKAT KARTI",
+    "damga": "BEDAVA?",
+    "an": 1.3,
+    "klip": "loyalty card checkout"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "MARKET NE KAZANIYOR?",
+    "cevap": "VERİ",
+    "alt": [
+     {
+      "ikon": "veri",
+      "ad": "NE ALDIN"
+     },
+     {
+      "ikon": "saat",
+      "ad": "NE ZAMAN"
+     }
+    ],
+    "klip": "data screen analytics"
+   },
+   {
+    "tip": "liste",
+    "bant": "VERİYLE NE YAPILIR?",
+    "maddeler": [
+     {
+      "metin": "Sana özel kampanya"
+     },
+     {
+      "metin": "Raf düzeni"
+     },
+     {
+      "metin": "Tam zamanında indirim"
+     }
+    ],
+    "klip": "supermarket shelves"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "İHTİYAÇ",
+     "ikon": "sepet",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "KAMPANYA MESAJI",
+     "ikon": "telefon",
+     "isaret": "x"
+    },
+    "bant": "KARTI KULLAN AMA",
+    "klip": "phone notification"
+   }
+  ]
+ },
+ "MARKET PUANI NEDEN SENİ DAHA ÇOK HARCATIR? 🪙": {
+  "kanca": {
+   "buyuk": "MARKET PUANI",
+   "orta": "SENİ NEDEN",
+   "vurgu": "HARCATIR?"
+  },
+  "kapanis_klip": "supermarket cashier",
+  "sahneler": [
+   {
+    "tip": "sayac",
+    "bant": "ÖDÜLÜNE KALDI",
+    "ikon": "para",
+    "bas": 100,
+    "son": 20,
+    "birim": " PUAN",
+    "klip": "supermarket cashier counter"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "HEDEF GRADYAN ETKİSİ",
+    "kalemler": [
+     {
+      "ad": "PUAN",
+      "oran": 0.92,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "BİR ŞEY DAHA AL!",
+    "sonuc_renk": "kirmizi",
+    "klip": "shopping cart supermarket"
+   },
+   {
+    "tip": "sayac",
+    "bant": "PUANIN GERÇEK DEĞERİ",
+    "ikon": "kupon",
+    "bas": 0,
+    "son": 1,
+    "on": "%",
+    "alt": "HARCAMANIN KÜÇÜK BİR YÜZDESİ",
+    "klip": "receipt close up"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "İHTİYAÇ",
+     "ikon": "sepet",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "PUAN",
+     "ikon": "para",
+     "isaret": "x"
+    },
+    "bant": "NE İÇİN ALIŞVERİŞ?",
+    "klip": "woman shopping list"
+   }
+  ]
+ },
+ "NETFLIX ŞİFRE PAYLAŞIMINI NEDEN YASAKLADI? 🔐": {
+  "kanca": {
+   "buyuk": "NETFLIX",
+   "orta": "ŞİFRE PAYLAŞIMINI",
+   "vurgu": "NEDEN YASAKLADI?"
+  },
+  "kapanis_klip": "watching tv couch",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "2023",
+    "ikon": "kilit",
+    "etiket": "ŞİFRE PAYLAŞIMI",
+    "damga": "KISITLANDI",
+    "an": 1.4,
+    "klip": "tv remote streaming"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "NEDEN?",
+    "cevap": "BÜYÜME YAVAŞLADI",
+    "alt": [
+     {
+      "ikon": "ev",
+      "ad": "MİLYONLARCA HANE"
+     }
+    ],
+    "klip": "family watching tv"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "SONRA NE OLDU?",
+    "kalemler": [
+     {
+      "ad": "YENİ ABONE",
+      "oran": 1.0,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "KENDİ HESABINI AÇTILAR",
+    "klip": "laptop subscription payment"
+   },
+   {
+    "tip": "anahtar",
+    "bant": "ABONELİKLERİNİ SAY",
+    "ekran": "DİJİTAL ABONELİKLER",
+    "etiket": "Kullanmadığın",
+    "yon": "kapat",
+    "sonuc": "DONDUR",
+    "klip": "phone settings"
+   }
+  ]
+ },
+ "McDONALD'S ASLINDA NE SATIYOR? 🍟": {
+  "kanca": {
+   "buyuk": "McDONALD'S",
+   "orta": "ASLINDA NE",
+   "vurgu": "SATIYOR?"
+  },
+  "kapanis_klip": "fast food restaurant street",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "HAMBURGER",
+     "ikon": "hamburger",
+     "isaret": "x"
+    },
+    "sag": {
+     "ad": "?",
+     "ikon": "bina"
+    },
+    "bant": "EN BÜYÜK İŞ?",
+    "klip": "fast food burger"
+   },
+   {
+    "tip": "akis",
+    "bant": "BAYİ → KİRA",
+    "sol": "BAYİ",
+    "sol_ikon": "restoran",
+    "sag": "McDONALD'S",
+    "sag_ikon": "bina",
+    "tasinan": "para",
+    "klip": "restaurant building exterior"
+   },
+   {
+    "tip": "buyuk_yazi",
+    "satirlar": [
+     "SATIŞ DEĞİŞSE BİLE",
+     "KİRA DÜZENLİ",
+     "GAYRİMENKUL DEVİ"
+    ],
+    "vurgu": 2,
+    "klip": "city buildings aerial"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "ASIL NEREDEN KAZANIYOR?",
+    "cevap": "MERAK ET",
+    "alt": [
+     {
+      "ikon": "para",
+      "ad": "FİYATIN MANTIĞI"
+     }
+    ],
+    "klip": "person reading newspaper"
+   }
+  ]
+ },
+ "McDONALD'S'TA MENÜ NEDEN DAHA CAZİP? 🥤": {
+  "kanca": {
+   "buyuk": "MENÜ",
+   "orta": "NEDEN DAHA",
+   "vurgu": "CAZİP?"
+  },
+  "kapanis_klip": "fast food counter",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "HAMBURGER",
+     "ikon": "hamburger",
+     "alt": "Tek başına"
+    },
+    "sag": {
+     "ad": "MENÜ",
+     "ikon": "kahve",
+     "alt": "Biraz daha pahalı",
+     "isaret": "tik"
+    },
+    "bant": "SEN DE MENÜ ALDIN",
+    "klip": "fast food menu board"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "EN KÂRLI ÜRÜNLER",
+    "kalemler": [
+     {
+      "ad": "HAMBURGER",
+      "oran": 0.4
+     },
+     {
+      "ad": "PATATES",
+      "oran": 0.9
+     },
+     {
+      "ad": "İÇECEK",
+      "oran": 1.0
+     }
+    ],
+    "klip": "french fries soda"
+   },
+   {
+    "tip": "buyuk_yazi",
+    "satirlar": [
+     "DAHA FAZLA YERSİN",
+     "DAHA FAZLA ÖDERSİN",
+     "KAZANÇLI SANIRSIN"
+    ],
+    "vurgu": 2,
+    "klip": "eating fast food"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "SİPARİŞTEN ÖNCE",
+    "cevap": "NE İSTİYORSUN?",
+    "alt": [
+     {
+      "ikon": "hamburger",
+      "ad": "SADECE O"
+     }
+    ],
+    "klip": "self order kiosk"
+   }
+  ]
+ },
+ "APPLE ŞARJ ALETİNİ KUTUDAN NEDEN ÇIKARDI? 🔌": {
+  "kanca": {
+   "buyuk": "APPLE",
+   "orta": "ŞARJ ALETİNİ",
+   "vurgu": "NEDEN ÇIKARDI?"
+  },
+  "kapanis_klip": "phone charging desk",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "2020 · GEREKÇE: ÇEVRE",
+    "ikon": "sarj",
+    "etiket": "ŞARJ ADAPTÖRÜ",
+    "damga": "KUTUDA YOK",
+    "an": 1.4,
+    "klip": "unboxing smartphone"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "PALET BAŞINA TELEFON",
+    "kalemler": [
+     {
+      "ad": "ESKİ KUTU",
+      "oran": 0.55
+     },
+     {
+      "ad": "İNCE KUTU",
+      "oran": 1.0,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "NAKLİYE UCUZLADI",
+    "klip": "cargo pallets warehouse"
+   },
+   {
+    "tip": "fiyat",
+    "ikon": "sarj",
+    "urun": "Şarj adaptörü",
+    "fiyat": "AYRICA",
+    "buton": "SATIN AL",
+    "klip": "electronics store"
+   },
+   {
+    "tip": "liste",
+    "bant": "ÖNCE KONTROL ET",
+    "maddeler": [
+     {
+      "metin": "Evdeki eski şarj aletleri",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Uyumlu mu?",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Yeni adaptör",
+      "isaret": "x"
+     }
+    ],
+    "klip": "drawer cables chargers"
+   }
+  ]
+ },
+ "iPHONE NEDEN USB-C'YE GEÇTİ? 🔋": {
+  "kanca": {
+   "buyuk": "iPHONE",
+   "orta": "NEDEN USB-C'YE",
+   "vurgu": "GEÇTİ?"
+  },
+  "kapanis_klip": "charging cables desk",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "LIGHTNING",
+     "ikon": "kablo",
+     "isaret": "x"
+    },
+    "sag": {
+     "ad": "USB-C",
+     "ikon": "kablo",
+     "isaret": "tik"
+    },
+    "bant": "iPHONE 15",
+    "klip": "smartphone cable"
+   },
+   {
+    "tip": "damga",
+    "ust": "AVRUPA BİRLİĞİ",
+    "ikon": "bina",
+    "etiket": "ORTAK ŞARJ KURALI",
+    "damga": "ZORUNLU",
+    "an": 1.3,
+    "klip": "european parliament flags"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "ÖZEL GİRİŞ",
+     "ikon": "kablo",
+     "alt": "Aksesuardan pay"
+    },
+    "sag": {
+     "ad": "ORTAK GİRİŞ",
+     "ikon": "kablo",
+     "alt": "Herkese tek tip",
+     "isaret": "tik"
+    },
+    "klip": "tangled cables"
+   },
+   {
+    "tip": "liste",
+    "bant": "ESKİ KABLOLAR",
+    "maddeler": [
+     {
+      "metin": "Atma",
+      "isaret": "x"
+     },
+     {
+      "metin": "Başka cihazda kullan",
+      "isaret": "tik"
+     }
+    ],
+    "klip": "box of cables"
+   }
+  ]
+ },
+ "GILLETTE BIÇAĞI NEDEN PAHALI? 🪒": {
+  "kanca": {
+   "buyuk": "GILLETTE",
+   "orta": "BIÇAĞI NEDEN",
+   "vurgu": "PAHALI?"
+  },
+  "kapanis_klip": "bathroom shaving",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "MAKİNE",
+     "ikon": "jilet",
+     "alt": "Ucuz",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "YEDEK BIÇAK",
+     "ikon": "jilet",
+     "alt": "Pahalı",
+     "isaret": "x"
+    },
+    "bant": "TESADÜF DEĞİL",
+    "klip": "razor shaving bathroom"
+   },
+   {
+    "tip": "buyuk_yazi",
+    "satirlar": [
+     "JİLET VE BIÇAK",
+     "MODELİ"
+    ],
+    "vurgu": 0,
+    "bolme": 0.45,
+    "sonra": {
+     "tip": "cubuklar",
+     "bant": "BİR KEZ VS YILLARCA",
+     "kalemler": [
+      {
+       "ad": "MAKİNE",
+       "oran": 0.25,
+       "deger": "1 KEZ"
+      },
+      {
+       "ad": "BIÇAK",
+       "oran": 1.0,
+       "durum": "buyu",
+       "deger": "YILLARCA"
+      }
+     ]
+    },
+    "klip": "razor blades pack"
+   },
+   {
+    "tip": "damga",
+    "ust": "BAŞKA MARKA?",
+    "ikon": "jilet",
+    "etiket": "SADECE KENDİ MAKİNESİ",
+    "damga": "UYMAZ",
+    "an": 1.3,
+    "klip": "store shelf razors"
+   },
+   {
+    "tip": "sayac",
+    "bant": "YILLIK BIÇAK MALİYETİ",
+    "ikon": "jilet",
+    "bas": 0,
+    "son": 1200,
+    "birim": " TL",
+    "renk": "kirmizi",
+    "alt": "HESABI BUNA GÖRE YAP",
+    "klip": "calculator bills"
+   }
+  ]
+ },
+ "YEDEK BIÇAK NEDEN SADECE KENDİ MAKİNESİNE UYAR? 🔧": {
+  "kanca": {
+   "buyuk": "YEDEK BIÇAK",
+   "orta": "NEDEN SADECE",
+   "vurgu": "KENDİNE UYAR?"
+  },
+  "kapanis_klip": "store shelf shopping",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "YENİ MAKİNE",
+    "ikon": "jilet",
+    "etiket": "ESKİ BIÇAKLAR",
+    "damga": "TAKILMIYOR",
+    "an": 1.3,
+    "klip": "man shaving mirror"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "NEDEN?",
+    "cevap": "KİLİTLENME",
+    "alt": [
+     {
+      "ikon": "kilit",
+      "ad": "SİSTEME BAĞLAR"
+     }
+    ],
+    "klip": "lock chain"
+   },
+   {
+    "tip": "liste",
+    "bant": "AYNI MANTIK",
+    "maddeler": [
+     {
+      "metin": "Kapsül kahve",
+      "isaret": "x"
+     },
+     {
+      "metin": "Yazıcı kartuşu",
+      "isaret": "x"
+     },
+     {
+      "metin": "Konsol aksesuarı",
+      "isaret": "x"
+     }
+    ],
+    "klip": "coffee capsules"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "ALIRKEN SOR",
+    "cevap": "YEDEK PARÇA KAÇ TL?",
+    "alt": [
+     {
+      "ikon": "fatura",
+      "ad": "TOPLAM MALİYET"
+     }
+    ],
+    "klip": "shopping electronics store"
+   }
+  ]
+ },
+ "YAZICI MÜREKKEBİ NEDEN BU KADAR PAHALI? 🖨️": {
+  "kanca": {
+   "buyuk": "MÜREKKEP",
+   "orta": "NEDEN BU KADAR",
+   "vurgu": "PAHALI?"
+  },
+  "kapanis_klip": "office printer",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "YAZICI",
+     "ikon": "yazici",
+     "alt": "Ucuz"
+    },
+    "sag": {
+     "ad": "KARTUŞ",
+     "ikon": "kartus",
+     "alt": "Neredeyse aynı fiyat",
+     "isaret": "x"
+    },
+    "bant": "NEDEN?",
+    "klip": "printer office"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "ASIL KÂR",
+    "kalemler": [
+     {
+      "ad": "YAZICI",
+      "oran": 0.2,
+      "deger": "DÜŞÜK"
+     },
+     {
+      "ad": "MÜREKKEP",
+      "oran": 1.0,
+      "durum": "buyu",
+      "deger": "YILLARCA"
+     }
+    ]
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "MÜREKKEP",
+     "ikon": "kartus",
+     "alt": "Mililitre başına"
+    },
+    "sag": {
+     "ad": "PARFÜM",
+     "ikon": "kapsul",
+     "alt": "Daha ucuz olabilir"
+    },
+    "bant": "ML HESABI",
+    "klip": "ink cartridge"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "ALIRKEN BAK",
+    "cevap": "SAYFA BAŞI MALİYET",
+    "alt": [
+     {
+      "ikon": "yazici",
+      "ad": "CİHAZ DEĞİL"
+     }
+    ],
+    "klip": "person printing documents"
+   }
+  ]
+ },
+ "KARTUŞ UYARISI GELİNCE GERÇEKTEN BOŞ MU? 🔍": {
+  "kanca": {
+   "buyuk": "KARTUŞ UYARISI",
+   "orta": "GERÇEKTEN",
+   "vurgu": "BOŞ MU?"
+  },
+  "kapanis_klip": "printer paper office",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "YAZICI DİYOR Kİ",
+    "ikon": "kartus",
+    "etiket": "KARTUŞ",
+    "damga": "MÜREKKEP BİTTİ",
+    "an": 1.3,
+    "klip": "printer error"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "UYARI ANINDA KARTUŞ",
+    "kalemler": [
+     {
+      "ad": "KALAN MÜREKKEP",
+      "oran": 0.35,
+      "deger": "HÂLÂ VAR"
+     }
+    ]
+   },
+   {
+    "tip": "sayac",
+    "bant": "DAHA SIK DEĞİŞİM",
+    "ikon": "kartus",
+    "bas": 0,
+    "son": 6,
+    "birim": " KARTUŞ",
+    "renk": "kirmizi",
+    "alt": "DAHA FAZLA ÖDERSİN",
+    "klip": "ink cartridges desk"
+   },
+   {
+    "tip": "liste",
+    "bant": "UYARI GELİNCE",
+    "maddeler": [
+     {
+      "metin": "Hemen değiştir",
+      "isaret": "x"
+     },
+     {
+      "metin": "Kalite düşene kadar kullan",
+      "isaret": "tik"
+     }
+    ],
+    "klip": "printing document"
+   }
+  ]
+ },
+ "PEGASUS NASIL BU KADAR UCUZ BİLET SATIYOR? ✈️": {
+  "kanca": {
+   "buyuk": "PEGASUS",
+   "orta": "NASIL BU KADAR",
+   "vurgu": "UCUZ?"
+  },
+  "kapanis_klip": "airplane takeoff",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "OTOBÜS",
+     "ikon": "kurye"
+    },
+    "sag": {
+     "ad": "UÇAK",
+     "ikon": "ucak",
+     "isaret": "tik"
+    },
+    "bant": "UÇAK DAHA UCUZ?",
+    "klip": "airplane runway"
+   },
+   {
+    "tip": "liste",
+    "bant": "BİLET = SADECE KOLTUK",
+    "maddeler": [
+     {
+      "metin": "Bagaj",
+      "isaret": "x"
+     },
+     {
+      "metin": "Koltuk seçimi",
+      "isaret": "x"
+     },
+     {
+      "metin": "Yemek",
+      "isaret": "x"
+     }
+    ],
+    "klip": "airport check in"
+   },
+   {
+    "tip": "liste",
+    "bant": "MALİYET NASIL DÜŞER?",
+    "maddeler": [
+     {
+      "metin": "Günde daha çok sefer",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Benzer uçak modelleri",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Ucuz bakım ve eğitim",
+      "isaret": "tik"
+     }
+    ],
+    "klip": "airplane gate ground crew"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "TOPLAM FİYAT",
+    "kalemler": [
+     {
+      "ad": "BİLET",
+      "oran": 0.4
+     },
+     {
+      "ad": "+ EKSTRALAR",
+      "oran": 1.0,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "TOPLAMA BAK",
+    "klip": "laptop booking flight"
+   }
+  ]
+ },
+ "UÇAKTA YAN YANA OTURMAK NEDEN PARALI? 💺": {
+  "kanca": {
+   "buyuk": "YAN YANA",
+   "orta": "OTURMAK NEDEN",
+   "vurgu": "PARALI?"
+  },
+  "kapanis_klip": "airplane cabin",
+  "sahneler": [
+   {
+    "tip": "fiyat",
+    "ikon": "ucak",
+    "urun": "Koltuk seçimi",
+    "fiyat": "+ ÜCRET",
+    "buton": "KOLTUK SEÇ",
+    "bant": "AİLENLE UÇUYORSUN",
+    "klip": "family airport"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "EK GELİR",
+    "kalemler": [
+     {
+      "ad": "BİLET",
+      "oran": 0.5
+     },
+     {
+      "ad": "KOLTUK SEÇİMİ",
+      "oran": 0.9,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "BİLET UCUZ KALIR",
+    "klip": "airplane seats"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "ÖDEMEZSEN?",
+    "cevap": "AYRI OTURABİLİRSİN",
+    "alt": [
+     {
+      "ikon": "ucak",
+      "ad": "SİSTEM ATAR"
+     }
+    ],
+    "klip": "airplane cabin passengers"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "KISA UÇUŞ",
+    "cevap": "ŞART MI?",
+    "alt": [
+     {
+      "ikon": "saat",
+      "ad": "ÖNCE KARAR VER"
+     }
+    ],
+    "klip": "passenger boarding plane"
+   }
+  ]
+ },
+ "DUOLINGO SERİSİ NEDEN BIRAKTIRMIYOR? 🔥": {
+  "kanca": {
+   "buyuk": "DUOLINGO",
+   "orta": "SERİSİ NEDEN",
+   "vurgu": "BIRAKTIRMIYOR?"
+  },
+  "kapanis_klip": "student studying phone",
+  "sahneler": [
+   {
+    "tip": "sayac",
+    "bant": "GÜNLÜK SERİ",
+    "ikon": "alev",
+    "bas": 0,
+    "son": 200,
+    "birim": " GÜN",
+    "klip": "phone app night"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "KAYIPTAN KAÇINMA",
+    "kalemler": [
+     {
+      "ad": "KAZANMANIN SEVİNCİ",
+      "oran": 0.5
+     },
+     {
+      "ad": "KAYBETMENİN ACISI",
+      "oran": 1.0
+     }
+    ],
+    "klip": "person stressed phone"
+   },
+   {
+    "tip": "damga",
+    "ust": "SERİ DONDURUCU",
+    "ikon": "alev",
+    "etiket": "SERİNİ KORU",
+    "damga": "UYGULAMADA KAL",
+    "an": 1.3,
+    "klip": "phone notification"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "ASIL SORU",
+    "cevap": "BUGÜN NE ÖĞRENDİN?",
+    "alt": [
+     {
+      "ikon": "muzik",
+      "ad": "SERİ DEĞİL"
+     }
+    ],
+    "klip": "studying notebook"
+   }
+  ]
+ },
+ "DUOLINGO BİLDİRİMİ NEDEN TAM O SAATTE GELİR? 🦉": {
+  "kanca": {
+   "buyuk": "DUOLINGO",
+   "orta": "BİLDİRİMİ NEDEN",
+   "vurgu": "TAM O SAATTE?"
+  },
+  "kapanis_klip": "phone notification evening",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "TAM DERS SAATİNDE",
+    "ikon": "zil",
+    "etiket": "DUOLINGO",
+    "damga": "DERS ZAMANI!",
+    "an": 1.3,
+    "klip": "phone lock screen"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "NASIL BİLİYOR?",
+    "cevap": "SAATİNİ ÖĞRENİR",
+    "alt": [
+     {
+      "ikon": "saat",
+      "ad": "SENİN SAATİN"
+     }
+    ],
+    "klip": "clock evening"
+   },
+   {
+    "tip": "liste",
+    "bant": "MESAJLARIN AMACI",
+    "maddeler": [
+     {
+      "metin": "Esprili"
+     },
+     {
+      "metin": "Biraz suçluluk",
+      "isaret": "x"
+     },
+     {
+      "metin": "Seni geri getirmek",
+      "isaret": "x"
+     }
+    ],
+    "klip": "person smiling phone couch"
+   },
+   {
+    "tip": "anahtar",
+    "bant": "KONTROL SENDE",
+    "ekran": "BİLDİRİM AYARLARI",
+    "etiket": "Hatırlatma saati",
+    "yon": "kapat",
+    "sonuc": "SAATİ SEN SEÇ",
+    "klip": "phone settings"
+   }
+  ]
+ },
+ "NESPRESSO KAPSÜLLERİ NEDEN BAŞKA MAKİNEYE OLMAZ? ☕": {
+  "kanca": {
+   "buyuk": "NESPRESSO",
+   "orta": "KAPSÜLÜ NEDEN",
+   "vurgu": "BAŞKASINA OLMAZ?"
+  },
+  "kapanis_klip": "coffee machine kitchen",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "MAKİNE",
+     "ikon": "kahve",
+     "alt": "Uygun fiyat"
+    },
+    "sag": {
+     "ad": "KAPSÜL",
+     "ikon": "kapsul",
+     "alt": "Sürekli para",
+     "isaret": "x"
+    },
+    "bant": "TANIDIK GELDİ Mİ?",
+    "klip": "coffee capsule machine"
+   },
+   {
+    "tip": "damga",
+    "ust": "YILLARCA PATENT",
+    "ikon": "kapsul",
+    "etiket": "KAPSÜL SİSTEMİ",
+    "damga": "KORUMALI",
+    "an": 1.3,
+    "bolme": 0.6,
+    "sonra": {
+     "tip": "buyuk_yazi",
+     "satirlar": [
+      "PATENTLER BİTTİ",
+      "UYUMLU KAPSÜL"
+     ],
+     "vurgu": 1
+    },
+    "klip": "coffee capsules"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "JİLET-BIÇAK MODELİ",
+    "kalemler": [
+     {
+      "ad": "MAKİNE",
+      "oran": 0.25,
+      "deger": "1 KERE"
+     },
+     {
+      "ad": "KAPSÜL",
+      "oran": 1.0,
+      "durum": "buyu",
+      "deger": "HER GÜN"
+     }
+    ]
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "ORİJİNAL",
+     "ikon": "kapsul"
+    },
+    "sag": {
+     "ad": "UYUMLU",
+     "ikon": "kapsul",
+     "isaret": "tik"
+    },
+    "bant": "FARKI KENDİN GÖR",
+    "klip": "coffee tasting cups"
+   }
+  ]
+ },
+ "KAPSÜL KAHVENİN KİLO FİYATI NE? ⚖️": {
+  "kanca": {
+   "buyuk": "KAPSÜL KAHVE",
+   "orta": "KİLOSU",
+   "vurgu": "KAÇ PARA?"
+  },
+  "kapanis_klip": "coffee beans kitchen",
+  "sahneler": [
+   {
+    "tip": "sayac",
+    "bant": "BİR KAPSÜLDE",
+    "ikon": "kapsul",
+    "bas": 0,
+    "son": 5,
+    "birim": " GRAM",
+    "alt": "KİLO FİYATI NE KADAR?",
+    "klip": "coffee capsule close up"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "KİLO FİYATI",
+    "kalemler": [
+     {
+      "ad": "ÇEKİRDEK KAHVE",
+      "oran": 0.3
+     },
+     {
+      "ad": "KAPSÜL KAHVE",
+      "oran": 1.0,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "KAT KAT PAHALI",
+    "sonuc_renk": "kirmizi",
+    "klip": "coffee beans bag"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "TEK KAPSÜL",
+     "ikon": "kapsul",
+     "alt": "Küçük görünür"
+    },
+    "sag": {
+     "ad": "TOPLAM",
+     "ikon": "fatura",
+     "alt": "Görmezsin",
+     "isaret": "x"
+    },
+    "bant": "KÜÇÜK PAKET ALGISI",
+    "klip": "coffee capsules box"
+   },
+   {
+    "tip": "sayac",
+    "bant": "AYLIK KAPSÜL",
+    "ikon": "takvim",
+    "bas": 0,
+    "son": 60,
+    "birim": " KAPSÜL",
+    "alt": "NE KADAR ÖDÜYORSUN?",
+    "klip": "morning coffee"
+   }
+  ]
+ },
+ "STARBUCKS KAHVESİ NEDEN BU KADAR PAHALI? 💸": {
+  "kanca": {
+   "buyuk": "STARBUCKS",
+   "orta": "NEDEN BU KADAR",
+   "vurgu": "PAHALI?"
+  },
+  "kapanis_klip": "coffee shop interior",
+  "sahneler": [
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "EVDE LATTE",
+     "ikon": "kahve",
+     "alt": "Ucuz"
+    },
+    "sag": {
+     "ad": "STARBUCKS",
+     "ikon": "kahve",
+     "alt": "Kat kat fiyat",
+     "isaret": "x"
+    },
+    "bant": "PARAYI NEYE VERİYORSUN?",
+    "klip": "latte coffee shop"
+   },
+   {
+    "tip": "liste",
+    "bant": "ÜÇÜNCÜ MEKÂN",
+    "maddeler": [
+     {
+      "metin": "Koltuk",
+      "isaret": "tik"
+     },
+     {
+      "metin": "İnternet",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Ortam",
+      "isaret": "tik"
+     }
+    ],
+    "klip": "cafe people laptops"
+   },
+   {
+    "tip": "damga",
+    "ust": "KÜÇÜK DOKUNUŞ",
+    "ikon": "kahve",
+    "etiket": "BARDAKTA İSMİN",
+    "damga": "KİŞİSEL",
+    "an": 1.3,
+    "klip": "barista writing cup"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "TERMOS",
+     "ikon": "kahve",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "HER GÜN KAFE",
+     "ikon": "kahve"
+    },
+    "bant": "SADECE KAHVE İÇİNSE",
+    "klip": "thermos coffee park"
+   }
+  ]
+ },
+ "LEGO NEDEN BU KADAR PAHALI? 🧱": {
+  "kanca": {
+   "buyuk": "LEGO",
+   "orta": "NEDEN BU KADAR",
+   "vurgu": "PAHALI?"
+  },
+  "kapanis_klip": "child playing bricks",
+  "sahneler": [
+   {
+    "tip": "fiyat",
+    "ikon": "tugla",
+    "urun": "Yapım seti",
+    "fiyat": "PAHALI",
+    "buton": "SEPETE EKLE",
+    "bant": "SONUÇTA PLASTİK DEĞİL Mİ?",
+    "klip": "lego bricks"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "ESKİ PARÇA",
+     "ikon": "tugla"
+    },
+    "sag": {
+     "ad": "YENİ PARÇA",
+     "ikon": "tugla",
+     "isaret": "tik"
+    },
+    "bant": "HASSAS KALIP: HÂLÂ UYUMLU",
+    "klip": "building bricks close up"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "FİYATIN İÇİ",
+    "kalemler": [
+     {
+      "ad": "SET",
+      "oran": 0.6
+     },
+     {
+      "ad": "+ LİSANS ÜCRETİ",
+      "oran": 1.0,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "FİLM/OYUN SETİ DAHA PAHALI",
+    "sonuc_renk": "kirmizi",
+    "klip": "toy store shelf"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "KARŞILAŞTIR",
+    "cevap": "PARÇA BAŞINA FİYAT",
+    "alt": [
+     {
+      "ikon": "tugla",
+      "ad": "KLASİK SETLER"
+     }
+    ],
+    "klip": "child building toys"
+   }
+  ]
+ },
+ "LEGO SETLERİ NEDEN 'EMEKLİYE' AYRILIR? 📦": {
+  "kanca": {
+   "buyuk": "LEGO SETLERİ",
+   "orta": "NEDEN",
+   "vurgu": "EMEKLİYE AYRILIR?"
+  },
+  "kapanis_klip": "child playing toys",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "BİRKAÇ YIL SONRA",
+    "ikon": "tugla",
+    "etiket": "YAPIM SETİ",
+    "damga": "ÜRETİMDEN KALKTI",
+    "an": 1.3,
+    "klip": "toy store"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "İKİNCİ EL DEĞERİ",
+    "kalemler": [
+     {
+      "ad": "ÇIKIŞ FİYATI",
+      "oran": 0.45
+     },
+     {
+      "ad": "YILLAR SONRA",
+      "oran": 1.0,
+      "durum": "buyu"
+     }
+    ],
+    "sonuc": "ŞİMDİ ALMAZSAM KAÇAR!",
+    "sonuc_renk": "kirmizi",
+    "klip": "collector shelves toys"
+   },
+   {
+    "tip": "buyuk_yazi",
+    "satirlar": [
+     "KITLIK HİSSİ",
+     "OYUNCAK =",
+     "YATIRIM?"
+    ],
+    "vurgu": 2,
+    "klip": "sealed toy boxes"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "OYNAYACAĞI",
+     "ikon": "tugla",
+     "isaret": "tik"
+    },
+    "sag": {
+     "ad": "EMEKLİYE AYRILACAK",
+     "ikon": "paket",
+     "isaret": "x"
+    },
+    "bant": "ÇOCUĞUN İÇİN SEÇ",
+    "klip": "child happy playing"
+   }
+  ]
+ },
+ "SPOTIFY BEDAVA SÜRÜMÜ NEDEN HÂLÂ VAR? 🎧": {
+  "kanca": {
+   "buyuk": "SPOTIFY",
+   "orta": "BEDAVA SÜRÜM",
+   "vurgu": "NEDEN VAR?"
+  },
+  "kapanis_klip": "headphones music listening",
+  "sahneler": [
+   {
+    "tip": "soru_cevap",
+    "soru": "PARA KAYBETMİYOR MU?",
+    "cevap": "HAYIR",
+    "alt": [
+     {
+      "ikon": "muzik",
+      "ad": "BEDAVA SÜRÜM"
+     }
+    ],
+    "klip": "listening music phone"
+   },
+   {
+    "tip": "akis",
+    "bant": "ASIL GÖREV",
+    "sol": "BEDAVA",
+    "sol_ikon": "muzik",
+    "sag": "PREMIUM",
+    "sag_ikon": "kart",
+    "tasinan": "para",
+    "klip": "headphones city"
+   },
+   {
+    "tip": "liste",
+    "bant": "CAZİP YAPAN KISITLAR",
+    "maddeler": [
+     {
+      "metin": "Reklamlar",
+      "isaret": "x"
+     },
+     {
+      "metin": "Şarkı atlama sınırı",
+      "isaret": "x"
+     },
+     {
+      "metin": "Çevrimdışı yok",
+      "isaret": "x"
+     }
+    ],
+    "klip": "phone ad screen"
+   },
+   {
+    "tip": "sayac",
+    "bant": "ÖNCE BAK",
+    "ikon": "saat",
+    "bas": 0,
+    "son": 40,
+    "birim": " DK/GÜN",
+    "alt": "NE KADAR DİNLİYORSUN?",
+    "klip": "screen time phone"
+   }
+  ]
+ },
+ "SPOTIFY DENEMESİ BİTİNCE NE OLUR? 📆": {
+  "kanca": {
+   "buyuk": "ÜCRETSİZ DENEME",
+   "orta": "BİTİNCE",
+   "vurgu": "NE OLUR?"
+  },
+  "kapanis_klip": "calendar phone desk",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "DENEMEYİ UNUTTUN",
+    "ikon": "kart",
+    "etiket": "KARTINDAN",
+    "damga": "ÜCRET ÇEKİLDİ",
+    "an": 1.4,
+    "klip": "bank app phone"
+   },
+   {
+    "tip": "sayac",
+    "bant": "DENEME SÜRESİ",
+    "ikon": "takvim",
+    "bas": 0,
+    "son": 30,
+    "birim": " GÜN",
+    "alt": "ALIŞKANLIK OLUŞUR",
+    "klip": "calendar"
+   },
+   {
+    "tip": "anahtar",
+    "bant": "VARSAYILAN AYAR",
+    "ekran": "ABONELİK",
+    "etiket": "Otomatik yenileme",
+    "yon": "ac",
+    "sonuc": "HİÇBİR ŞEY YAPMAMAK = ÖDEMEK",
+    "klip": "phone subscription"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "DENEMEYİ BAŞLATINCA",
+    "cevap": "TAKVİME YAZ",
+    "alt": [
+     {
+      "ikon": "takvim",
+      "ad": "BİTİŞ TARİHİ"
+     }
+    ],
+    "klip": "phone calendar reminder"
+   }
+  ]
+ },
+ "TAAHHÜT BİTİNCE FATURAN NEDEN BİRDEN ARTAR? 📈": {
+  "kanca": {
+   "buyuk": "TAAHHÜT",
+   "orta": "BİTİNCE FATURA",
+   "vurgu": "NEDEN ARTAR?"
+  },
+  "kapanis_klip": "phone call office",
+  "sahneler": [
+   {
+    "tip": "cubuklar",
+    "bant": "FATURAN",
+    "kalemler": [
+     {
+      "ad": "TAAHHÜTTE",
+      "oran": 0.5
+     },
+     {
+      "ad": "TAAHHÜT BİTİNCE",
+      "oran": 1.0,
+      "durum": "buyu",
+      "deger": "2 KATI"
+     }
+    ]
+   },
+   {
+    "tip": "damga",
+    "ust": "İNDİRİM BİTTİ",
+    "ikon": "fatura",
+    "etiket": "TARİFE",
+    "damga": "LİSTE FİYATI",
+    "an": 1.3,
+    "klip": "phone bill paper"
+   },
+   {
+    "tip": "karsilastir",
+    "sol": {
+     "ad": "HİÇBİR ŞEY YAPMA",
+     "ikon": "fatura",
+     "alt": "En çok ödersin",
+     "isaret": "x"
+    },
+    "sag": {
+     "ad": "ARA, PAZARLIK ET",
+     "ikon": "telefon",
+     "alt": "Yeni teklif",
+     "isaret": "tik"
+    },
+    "klip": "call center"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "ŞİMDİ",
+    "cevap": "TAKVİME YAZ",
+    "alt": [
+     {
+      "ikon": "takvim",
+      "ad": "BİTMEDEN ARA"
+     }
+    ],
+    "klip": "calendar reminder phone"
+   }
+  ]
+ },
+ "OPERATÖRÜ ARAYINCA FİYAT NEDEN DÜŞER? ☎️": {
+  "kanca": {
+   "buyuk": "OPERATÖRÜ ARA",
+   "orta": "FİYAT NEDEN",
+   "vurgu": "DÜŞER?"
+  },
+  "kapanis_klip": "phone call smiling",
+  "sahneler": [
+   {
+    "tip": "damga",
+    "ust": "'AYRILMAK İSTİYORUM'",
+    "ikon": "telefon",
+    "etiket": "OPERATÖR",
+    "damga": "UCUZ PAKET!",
+    "an": 1.4,
+    "klip": "phone call"
+   },
+   {
+    "tip": "cubuklar",
+    "bant": "MÜŞTERİ MALİYETİ",
+    "kalemler": [
+     {
+      "ad": "MEVCUDU TUTMAK",
+      "oran": 0.3
+     },
+     {
+      "ad": "YENİSİNİ KAZANMAK",
+      "oran": 1.0
+     }
+    ],
+    "sonuc": "ELDE TUTMA TEKLİFLERİ",
+    "klip": "call center office"
+   },
+   {
+    "tip": "soru_cevap",
+    "soru": "BU TEKLİFLER",
+    "cevap": "SORMADAN GELMEZ",
+    "alt": [
+     {
+      "ikon": "kilit",
+      "ad": "GİZLİ"
+     }
+    ],
+    "klip": "closed door"
+   },
+   {
+    "tip": "liste",
+    "bant": "ARAYINCA",
+    "maddeler": [
+     {
+      "metin": "Kibar ol",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Rakip teklifleri söyle",
+      "isaret": "tik"
+     },
+     {
+      "metin": "Karşılaştır, sonra karar ver",
+      "isaret": "tik"
+     }
+    ],
+    "klip": "person comparing phone plans"
+   }
   ]
  }
 }

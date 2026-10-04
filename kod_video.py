@@ -281,8 +281,25 @@ def altyazi(d, kelimeler, t):
         x += gw + bosluk
 
 
+# İngilizce marka/kelimeler: Türkçe i->İ kuralı uygulanmaz (NETFLIX, IPHONE...)
+_INGILIZCE = {"netflix", "spotify", "duolingo", "gillette", "prime", "iphone", "lightning", "premium",
+              "nespresso", "starbucks", "mcdonald's", "mcdonald's'ın", "mcdonald's'ta", "online", "apple",
+              "tall", "grande", "lego", "temu", "pegasus", "amazon", "usb-c", "venti"}
+
+
 def _tr_ust(s):
-    return s.replace("i", "İ").replace("ı", "I").upper()
+    out = []
+    for w in s.split(" "):
+        kok = re.sub(r"[^\w'’-]", "", w.lower())
+        tab = kok.split("'")[0].split("’")[0]
+        if kok in _INGILIZCE or tab in _INGILIZCE:
+            # marka kısmı İngilizce büyük harf, Türkçe eki Türkçe kurala göre
+            i = w.lower().find(tab)
+            out.append(w[:i] + w[i:i + len(tab)].upper()
+                       + w[i + len(tab):].replace("i", "İ").replace("ı", "I").upper())
+        else:
+            out.append(w.replace("i", "İ").replace("ı", "I").upper())
+    return " ".join(out)
 
 
 _AVATAR = None
@@ -496,6 +513,102 @@ def ikon(d, ad, cx, cy, s=1.0, ton=None):
         saat(d, cx, cy, 90 * s, 0.3)
     elif ad == "yildiz":
         yildiz(d, cx, cy, 70 * s)
+    elif ad == "cark":
+        renkler = [KIRMIZI, SARI, YESIL, (60, 110, 200), (255, 110, 30), (160, 80, 200)]
+        r = 110 * s
+        for i in range(6):
+            d.pieslice((cx - r, cy - r, cx + r, cy + r), i * 60, i * 60 + 60, fill=renkler[i])
+        d.ellipse((cx - 20 * s, cy - 20 * s, cx + 20 * s, cy + 20 * s), fill=BEYAZ)
+        d.polygon([(cx - 18 * s, cy - r - 30 * s), (cx + 18 * s, cy - r - 30 * s), (cx, cy - r + 10 * s)], fill=BEYAZ)
+    elif ad == "kupon":
+        kutu(d, cx - 130 * s, cy - 65 * s, cx + 130 * s, cy + 65 * s, r=int(14 * s), renk=ton or (255, 110, 30))
+        for y in range(int(cy - 55 * s), int(cy + 55 * s), max(4, int(18 * s))):
+            d.line((cx + 60 * s, y, cx + 60 * s, y + 8 * s), fill=BEYAZ, width=max(2, int(4 * s)))
+        yazi(d, (cx - 35 * s, cy), "%", max(10, int(90 * s)), BEYAZ)
+    elif ad == "kilit":
+        d.arc((cx - 55 * s, cy - 120 * s, cx + 55 * s, cy - 10 * s), 180, 360, fill=GRI, width=max(3, int(22 * s)))
+        d.rectangle((cx - 55 * s, cy - 66 * s, cx - 33 * s, cy - 30 * s), fill=GRI)
+        d.rectangle((cx + 33 * s, cy - 66 * s, cx + 55 * s, cy - 30 * s), fill=GRI)
+        kutu(d, cx - 85 * s, cy - 35 * s, cx + 85 * s, cy + 90 * s, r=int(16 * s), renk=SARI)
+        d.ellipse((cx - 14 * s, cy + 10 * s, cx + 14 * s, cy + 38 * s), fill=KOYU)
+    elif ad == "jilet":
+        kutu(d, cx - 18 * s, cy - 10 * s, cx + 18 * s, cy + 120 * s, r=int(10 * s), renk=ton or (60, 110, 200))
+        kutu(d, cx - 100 * s, cy - 70 * s, cx + 100 * s, cy - 10 * s, r=int(12 * s), renk=(200, 205, 215))
+        d.line((cx - 92 * s, cy - 40 * s, cx + 92 * s, cy - 40 * s), fill=(120, 125, 140), width=max(2, int(5 * s)))
+    elif ad == "yazici":
+        kutu(d, cx - 130 * s, cy - 40 * s, cx + 130 * s, cy + 60 * s, r=int(14 * s), renk=(90, 92, 105))
+        d.rectangle((cx - 80 * s, cy - 110 * s, cx + 80 * s, cy - 40 * s), fill=BEYAZ)
+        d.rectangle((cx - 80 * s, cy + 40 * s, cx + 80 * s, cy + 120 * s), fill=BEYAZ)
+        for i in range(3):
+            d.line((cx - 60 * s, cy + 62 * s + i * 18 * s, cx + 50 * s, cy + 62 * s + i * 18 * s), fill=GRI, width=max(2, int(5 * s)))
+    elif ad == "kartus":
+        kutu(d, cx - 60 * s, cy - 90 * s, cx + 60 * s, cy + 90 * s, r=int(12 * s), renk=(50, 50, 60))
+        d.rectangle((cx - 45 * s, cy - 20 * s, cx + 45 * s, cy + 75 * s), fill=ton or (40, 160, 220))
+    elif ad == "sarj":
+        kutu(d, cx - 70 * s, cy - 70 * s, cx + 70 * s, cy + 70 * s, r=int(18 * s), renk=BEYAZ)
+        d.rectangle((cx - 35 * s, cy - 110 * s, cx - 20 * s, cy - 70 * s), fill=GRI)
+        d.rectangle((cx + 20 * s, cy - 110 * s, cx + 35 * s, cy - 70 * s), fill=GRI)
+        d.line((cx, cy + 70 * s, cx, cy + 130 * s), fill=BEYAZ, width=max(3, int(12 * s)))
+    elif ad == "kablo":
+        d.line((cx - 120 * s, cy + 60 * s, cx - 20 * s, cy + 60 * s, cx + 20 * s, cy - 40 * s), fill=BEYAZ, width=max(3, int(12 * s)))
+        kutu(d, cx + 5 * s, cy - 110 * s, cx + 55 * s, cy - 30 * s, r=int(10 * s), renk=(200, 205, 215))
+        d.rectangle((cx + 18 * s, cy - 140 * s, cx + 42 * s, cy - 110 * s), fill=GRI)
+    elif ad == "kapsul":
+        d.polygon([(cx - 70 * s, cy - 30 * s), (cx + 70 * s, cy - 30 * s), (cx + 45 * s, cy + 60 * s), (cx - 45 * s, cy + 60 * s)],
+                  fill=ton or (170, 40, 60))
+        d.ellipse((cx - 85 * s, cy - 50 * s, cx + 85 * s, cy - 15 * s), fill=(200, 200, 210))
+    elif ad == "tugla":
+        kutu(d, cx - 120 * s, cy - 40 * s, cx + 120 * s, cy + 70 * s, r=int(10 * s), renk=ton or KIRMIZI)
+        for i in range(4):
+            x = cx - 90 * s + i * 60 * s
+            kutu(d, x - 20 * s, cy - 70 * s, x + 20 * s, cy - 35 * s, r=int(8 * s), renk=ton or KIRMIZI)
+    elif ad == "takvim":
+        kutu(d, cx - 100 * s, cy - 80 * s, cx + 100 * s, cy + 100 * s, r=int(14 * s), renk=BEYAZ)
+        d.rectangle((cx - 100 * s, cy - 80 * s, cx + 100 * s, cy - 35 * s), fill=KIRMIZI)
+        for i in range(3):
+            for j in range(3):
+                d.rectangle((cx - 70 * s + j * 50 * s, cy - 15 * s + i * 38 * s, cx - 45 * s + j * 50 * s,
+                             cy + 8 * s + i * 38 * s), fill=(200, 200, 210))
+    elif ad == "fatura":
+        d.rectangle((cx - 80 * s, cy - 110 * s, cx + 80 * s, cy + 110 * s), fill=BEYAZ)
+        for i in range(5):
+            d.line((cx - 55 * s, cy - 70 * s + i * 30 * s, cx + 55 * s, cy - 70 * s + i * 30 * s), fill=GRI, width=max(2, int(6 * s)))
+        yazi(d, (cx, cy + 80 * s), "TL", max(10, int(40 * s)), KIRMIZI)
+    elif ad == "kurye":
+        d.ellipse((cx - 110 * s, cy + 30 * s, cx - 50 * s, cy + 90 * s), fill=(60, 60, 70))
+        d.ellipse((cx + 50 * s, cy + 30 * s, cx + 110 * s, cy + 90 * s), fill=(60, 60, 70))
+        d.polygon([(cx - 80 * s, cy + 40 * s), (cx + 80 * s, cy + 40 * s), (cx + 40 * s, cy - 20 * s), (cx - 50 * s, cy - 20 * s)], fill=KIRMIZI)
+        kutu(d, cx - 100 * s, cy - 110 * s, cx - 10 * s, cy - 25 * s, r=int(10 * s), renk=SARI)
+    elif ad == "hamburger":
+        d.pieslice((cx - 110 * s, cy - 100 * s, cx + 110 * s, cy + 20 * s), 180, 360, fill=(220, 150, 60))
+        d.rectangle((cx - 115 * s, cy - 45 * s, cx + 115 * s, cy - 25 * s), fill=YESIL)
+        d.rectangle((cx - 110 * s, cy - 25 * s, cx + 110 * s, cy + 15 * s), fill=(110, 60, 40))
+        kutu(d, cx - 110 * s, cy + 15 * s, cx + 110 * s, cy + 55 * s, r=int(16 * s), renk=(220, 150, 60))
+    elif ad == "bina":
+        d.rectangle((cx - 80 * s, cy - 130 * s, cx + 80 * s, cy + 100 * s), fill=(110, 115, 130))
+        for i in range(4):
+            for j in range(3):
+                d.rectangle((cx - 60 * s + j * 45 * s, cy - 110 * s + i * 48 * s, cx - 35 * s + j * 45 * s,
+                             cy - 80 * s + i * 48 * s), fill=SARI)
+    elif ad == "zil":
+        _yapistir(d, ikon_zil(int(180 * s), 15), cx, cy)
+    elif ad == "veri":
+        for i in range(3):
+            y = cy - 80 * s + i * 60 * s
+            d.ellipse((cx - 90 * s, y - 25 * s, cx + 90 * s, y + 25 * s), fill=(60, 110, 200))
+            d.rectangle((cx - 90 * s, y, cx + 90 * s, y + 35 * s), fill=(60, 110, 200))
+            d.ellipse((cx - 90 * s, y - 25 * s, cx + 90 * s, y + 25 * s), outline=(140, 180, 240), width=max(2, int(5 * s)))
+    elif ad == "muzik":
+        d.ellipse((cx - 80 * s, cy + 30 * s, cx - 20 * s, cy + 80 * s), fill=SARI)
+        d.ellipse((cx + 30 * s, cy + 10 * s, cx + 90 * s, cy + 60 * s), fill=SARI)
+        d.rectangle((cx - 30 * s, cy - 90 * s, cx - 18 * s, cy + 55 * s), fill=SARI)
+        d.rectangle((cx + 78 * s, cy - 110 * s, cx + 90 * s, cy + 35 * s), fill=SARI)
+        d.polygon([(cx - 30 * s, cy - 90 * s), (cx + 90 * s, cy - 110 * s), (cx + 90 * s, cy - 80 * s), (cx - 30 * s, cy - 60 * s)], fill=SARI)
+    elif ad == "alev":
+        d.polygon([(cx, cy - 120 * s), (cx + 70 * s, cy - 10 * s), (cx + 55 * s, cy + 80 * s), (cx - 55 * s, cy + 80 * s),
+                   (cx - 70 * s, cy - 10 * s)], fill=(255, 110, 30))
+        d.polygon([(cx, cy - 40 * s), (cx + 35 * s, cy + 30 * s), (cx + 25 * s, cy + 80 * s), (cx - 25 * s, cy + 80 * s),
+                   (cx - 35 * s, cy + 30 * s)], fill=SARI)
     else:   # bilinmeyen ad: soru işareti rozeti
         d.ellipse((cx - 80 * s, cy - 80 * s, cx + 80 * s, cy + 80 * s), fill=PANEL, outline=SARI, width=6)
         yazi(d, (cx, cy), "?", max(10, int(110 * s)), SARI)
@@ -536,7 +649,7 @@ def sb_fiyat(d, t, T, p):
     g = ease_out(faz(t, 0, 0.5))
     cy = 900 + (1 - g) * 600
     x0, y0, x1, y1 = telefon(d, W / 2, cy)
-    kutu(d, x0 + 30, y0 + 90, x1 - 30, y0 + 470, r=24, renk=(225, 228, 235))
+    kutu(d, x0 + 30, y0 + 90, x1 - 30, y0 + 470, r=24, renk=(52, 54, 66))
     ikon(d, p.get("ikon", "paket"), W / 2, y0 + 280, 1.2)
     yazi(d, (W / 2, y0 + 540), _tr_ust(p.get("urun", "")), 46, (40, 40, 50))
     for i in range(5):
@@ -652,11 +765,11 @@ def sb_karsilastir(d, t, T, p):
         if k <= 0:
             continue
         w2, h2 = 210 * k, 270 * k
-        kutu(d, x - w2, 900 - h2, x + w2, 900 + h2, r=24, renk=(235, 236, 240))
+        kutu(d, x - w2, 900 - h2, x + w2, 900 + h2, r=24, renk=(38, 40, 50), cizgi=(80, 82, 96), kalinlik=4)
         ikon(d, kart.get("ikon", ""), x, 860, 1.0 * k)
         if kart.get("alt"):
             for i, sat in enumerate(_sar(_tr_ust(kart["alt"]), 40, 380 * k)[:2]):
-                yazi(d, (x, 1060 + i * 46), sat, max(10, int(40 * k)), (40, 40, 50))
+                yazi(d, (x, 1060 + i * 46), sat, max(10, int(40 * k)), (215, 215, 225))
         yazi(d, (x, 900 + h2 + 60), _tr_ust(kart.get("ad", "")), 64, BEYAZ, kontur=3)
         isaret = kart.get("isaret")
         if isaret == "x":
@@ -674,9 +787,14 @@ def sb_sayac(d, t, T, p):
     bas, son = float(p.get("bas", 0)), float(p.get("son", 100))
     k = ease_out(faz(t, 0.4, max(0.8, T * float(p.get("hiz", 0.55)))))
     deger = bas + (son - bas) * k
-    metin = f"{p.get('on', '')}{int(round(deger))}{p.get('birim', '')}"
+    od = int(p.get("ondalik", 0))
+    sayi = f"{deger:.{od}f}".replace(".", ",") if od else str(int(round(deger)))
+    metin = f"{p.get('on', '')}{sayi}{p.get('birim', '')}"
     nab = 1 + 0.06 * math.sin(math.pi * kis((t - 0.4) * 4)) if k < 1 else 1
-    yazi(d, (W / 2, 960), metin, int(250 * nab), SARI if p.get("renk") != "kirmizi" else KIRMIZI, kontur=6)
+    sb = 250
+    while sb > 90 and F(sb).getlength(metin) > W - 120:
+        sb -= 10
+    yazi(d, (W / 2, 960), metin, int(sb * nab), SARI if p.get("renk") != "kirmizi" else KIRMIZI, kontur=6)
     if p.get("alt"):
         for i, sat in enumerate(_sar(_tr_ust(p["alt"]), 72, W - 160)[:2]):
             yazi(d, (W / 2, 1150 + i * 84), sat, 72, BEYAZ, kontur=4)
@@ -781,16 +899,20 @@ def sb_damga(d, t, T, p):
         baslik_bandi(d, _tr_ust(p["ust"]), t, 0.0, y=330, boy=84)
     k = ease_back(faz(t, 0.2, 0.45))
     if k > 0:
-        kutu(d, W / 2 - 300 * k, 950 - 330 * k, W / 2 + 300 * k, 950 + 330 * k, r=30, renk=(235, 236, 240))
+        kutu(d, W / 2 - 300 * k, 950 - 330 * k, W / 2 + 300 * k, 950 + 330 * k, r=30, renk=(38, 40, 50),
+             cizgi=(80, 82, 96), kalinlik=4)
         ikon(d, p.get("ikon", "paket"), W / 2, 880, 1.6 * k)
-        yazi(d, (W / 2, 950 + 230 * k), _tr_ust(p.get("etiket", "")), max(10, int(56 * k)), (40, 40, 50))
+        yazi(d, (W / 2, 950 + 230 * k), _tr_ust(p.get("etiket", "")), max(10, int(56 * k)), BEYAZ)
     dk = faz(t, float(p.get("an", 1.2)), 0.25)
     if dk > 0:
         s = 1.6 - 0.6 * ease_out(dk)
         damga = _tr_ust(p.get("damga", "TÜKENDİ"))
         kat, kd = _katman(900)
-        kd.rounded_rectangle((60, 330, 840, 570), radius=24, outline=KIRMIZI, width=16)
-        kd.text((450, 450), damga, font=F(150), fill=KIRMIZI, anchor="mm")
+        kd.rounded_rectangle((60, 330, 840, 570), radius=24, fill=(14, 14, 18, 215), outline=KIRMIZI, width=16)
+        db = 150
+        while db > 60 and F(db).getlength(damga) > 700:
+            db -= 6
+        kd.text((450, 450), damga, font=F(db), fill=KIRMIZI, anchor="mm")
         kat = kat.rotate(-12, resample=Image.BICUBIC)
         kat = kat.resize((int(900 * s), int(900 * s)), Image.BICUBIC)
         _yapistir(d, kat, W / 2, 950)
@@ -848,10 +970,16 @@ def seslendir(metin, mp3):
         sure = max(8.0, len(metin.split()) / 2.6)
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i",
                         "anullsrc=r=44100:cl=mono", "-t", f"{sure:.2f}", mp3], check=True)
-        return V._yapay_zaman(metin, sure), "sessiz (yerel deneme)"
+        ws = metin.split() or [" "]
+        return [{"start": i * sure / len(ws), "dur": sure / len(ws), "text": w} for i, w in enumerate(ws)], "sessiz (yerel deneme)"
     if cfg.get("kisa_eleven", True) and V._eleven_key():
         try:
-            b = V._eleven_seslendir(metin, mp3, str(cfg.get("kisa_ses_id", "")).strip() or None, speed=1.12)
+            import inspect
+            vid = str(cfg.get("kisa_ses_id", "")).strip() or None
+            if "speed" in inspect.signature(V._eleven_seslendir).parameters:
+                b = V._eleven_seslendir(metin, mp3, vid, speed=1.12)
+            else:
+                b = V._eleven_seslendir(metin, mp3, vid)
             return b, "ElevenLabs (kanal Shorts sesi)"
         except Exception as e:
             print("ElevenLabs hata:", str(e)[:150])
@@ -891,13 +1019,14 @@ def render(baslik, cikti):
     mp3 = os.path.join(tmp, "ses.mp3")
     # Ses önbelleği: aynı metin bir daha seslendirilmez (ElevenLabs kredisi korunur)
     import hashlib, shutil
-    ob = os.path.join("onizleme", "kod_video", "ses", hashlib.md5(tts_metin.encode()).hexdigest()[:12])
-    if os.path.exists(ob + ".mp3") and os.path.exists(ob + ".json"):
+    ob_dir = os.environ.get("KOD_VIDEO_SES_DIR", os.path.join("onizleme", "kod_video", "ses"))
+    ob = os.path.join(ob_dir, hashlib.md5(tts_metin.encode()).hexdigest()[:12]) if ob_dir else None
+    if ob and os.path.exists(ob + ".mp3") and os.path.exists(ob + ".json"):
         shutil.copy(ob + ".mp3", mp3)
         kelimeler, kaynak = json.load(open(ob + ".json", encoding="utf-8")), "önbellek (kredi harcanmadı)"
     else:
         kelimeler, kaynak = seslendir(tts_metin, mp3)
-        if "sessiz" not in kaynak:
+        if ob and "sessiz" not in kaynak:
             os.makedirs(os.path.dirname(ob), exist_ok=True)
             shutil.copy(mp3, ob + ".mp3")
             json.dump(kelimeler, open(ob + ".json", "w", encoding="utf-8"), ensure_ascii=False)
