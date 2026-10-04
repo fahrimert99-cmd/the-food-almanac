@@ -61,6 +61,7 @@
     "MARKET NEDEN LABİRENT GİBİ? 🌀",
     "MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖",
     "MARKETLER SENİ BÖYLE KANDIRIYOR! 🛒",
+    "MARKETTE NEDEN TELEVİZYON SATILIR? 📺",
     "MEGALODON HÂLÂ YAŞIYOR OLABİLİR Mİ? 🦈",
     "MENÜDE FİYAT NEDEN SAĞDA DEĞİL? 🍽️",
     "MENÜDEKİ GİZLİ TUZAK! 📋",
@@ -131,17 +132,17 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": " ÜRÜN NEDEN PAHALI GÖSTERİLİR? 📊\n      · atlandı (yayınlanmış konu tekrarı ~ 'BENZİNLİK MARKETİ NEDEN PAHALI? ⛽'): MARKALI GİYSİ NEDEN PAHALI? 👕\n      · atlandı (yayınlanmış konu tekrarı ~ 'BOZUK PARA NEDEN VERMEZLER? 🪙'): BOZUK PARANIN KENARI NEDEN TIRTIKLI? 🪙\n      · atlandı (yayınlanmış konu tekrarı ~ 'REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺'): 'BEDAVA' KELİMESİ BEYNİ NASIL KANDIRIR? 🧠\n      · atlandı (yayınlanmış konu tekrarı ~ 'SON KULLANMA TARİHİ OYUNU! 📅'): SON KULLANMA TARİHİNİN ÖNÜNDE FİYAT MANİPÜLASYONU! 📅\n      · atlandı (yayınlanmış konu tekrarı ~ 'ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİ'): ABONELİK İPTALİNİ GİZLEYEN SAYFA TUZAĞI 🔒\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): İNDİRİM ETİKETİ NEDEN HEP KIRMIZI? 🔴\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): EN PAHALI ÜRÜN NEDEN GÖZ HİZASINDA? 👁️\n      · atlandı (yayınlanmış konu tekrarı ~ ''ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰'): “ÜCRETSİZ DENE” NEDEN ÜCRETLİ OLUR? ⏰\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM GÜNÜNDEKİ FİYAT OYUNU! 🛍️'): “SANA ÖZEL” FİYAT OYUNU! 🎯\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): SAHTE İNDİRİMİN MATEMATİĞİ: BÜYÜK YALANI NASIL ANLARSIN\n      · atlandı (yayınlanmış konu tekrarı ~ 'PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉'): UN PAKETİ NEDEN 1KG'den 900g'a düştü fiyat aynı? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖'): MARKET GİRİŞİNDE KULLANILAN SIĞIR KOKUSU NEDEN DAHA FAZ\n      Tema (katı marka filtresi): 'tuzak' (uygun kalan: 74)\n      Slot 17:00 UTC: klasik tuzak (kalan: 39)\n      Kohort: v1\n[1/3] Senaryo (51/185) [yeme]: MENÜDE RESİM NEDEN YOK? 📖\n✓ Yayın slotu zaten dolu (2026-10-04T17:00:00Z); atlandı: https://youtu.be/g78x-Od1Y3U\n",
+  "son_rapor": "abay~150 -> önce pixabay]\n      Sahne 6/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~4596 toplam -> 'checkout belt full of']\n      [Pixabay: 12 klip / ~571 toplam -> 'checkout belt full of']\n      [seçim(vision): pexels~4596 / pixabay~571 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'hand holding a short']\n      [Pixabay: 12 klip / ~1565 toplam -> 'hand holding a short']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~1565 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~2832 toplam -> 'television and vacuum cleaner']\n      [Pixabay: 12 klip / ~296 toplam -> 'television and vacuum cleaner']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~2832 / pixabay~296 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~1788 toplam -> 'weekly promotional flyer with']\n      [Pixabay: 12 klip / ~150 toplam -> 'weekly promotional flyer with']\n      [seçim(vision): pexels~1788 / pixabay~150 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: openrouter=0, nvidia=0, pexels=8, pixabay=2, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (21932 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-10-05T09:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi\n✓ Yüklendi: https://youtu.be/IwOJ0PI5R_U  (yayın: 2026-10-05T09:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n",
   "bekleyen_yorum": {
-    "video_id": "g78x-Od1Y3U",
-    "metin": "İKİNCİ ÜRÜN NEDEN 'BEDAVA' hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
+    "video_id": "IwOJ0PI5R_U",
+    "metin": "Kampanyaya gidip başka şey aldığın oldu mu?",
     "kaynak": "fallback",
-    "hash": "23af62d3b75663de"
+    "hash": "69008e0ef18597c0"
   },
-  "son_kategori": "yeme",
-  "son_video_id": "g78x-Od1Y3U",
-  "son_baslik": "İKİNCİ ÜRÜN NEDEN 'BEDAVA'? 🎁",
-  "son_yayin_zamani": "2026-10-04T17:00:00Z",
+  "son_kategori": "market",
+  "son_video_id": "IwOJ0PI5R_U",
+  "son_baslik": "MARKETTE NEDEN TELEVİZYON SATILIR? 📺",
+  "son_yayin_zamani": "2026-10-05T09:00:00Z",
   "analytics_ozet": {
     "guncelleme": "2026-10-04T11:41:11Z",
     "donem": {
