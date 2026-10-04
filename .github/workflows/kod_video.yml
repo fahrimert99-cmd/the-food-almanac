@@ -1,0 +1,58 @@
+name: Kod Video Onizleme (YUKLEMEZ)
+
+# Tamamen kodla çizilmiş Shorts prototipi. YouTube'a YUKLEMEZ.
+# Çıktı: onizleme/kod_video/*.mp4 (dala kaydedilir) + artifact.
+on:
+  push:
+    branches: [claude/adoring-sagan-ni2qvl]
+    paths: [kod_video.py, .github/workflows/kod_video.yml, onizleme/kod_video_tetik.txt]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kod-video
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: claude/adoring-sagan-ni2qvl
+      - name: FFmpeg kur
+        timeout-minutes: 8
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg && break
+            sleep 10
+          done
+          ffmpeg -version | head -1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Render
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVEN_VOICE_ID: ${{ secrets.ELEVEN_VOICE_ID }}
+        run: |
+          python3 kod_video.py "TEMU NASIL BU KADAR UCUZ? 📦" onizleme/kod_video/temu.mp4 2>&1 | tee onizleme/kod_video_log.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kod-video
+          path: onizleme/kod_video/
+          if-no-files-found: ignore
+      - name: Dala kaydet
+        if: always()
+        run: |
+          git config user.name "onizleme-bot"
+          git config user.email "onizleme-bot@users.noreply.github.com"
+          mkdir -p onizleme/kod_video && mv onizleme/kod_video_log.txt onizleme/kod_video/log.txt 2>/dev/null || true
+          git add -f onizleme/kod_video
+          git commit -m "onizleme: kod video" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin claude/adoring-sagan-ni2qvl && git push origin HEAD:claude/adoring-sagan-ni2qvl && break; sleep 5; done
