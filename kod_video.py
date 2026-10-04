@@ -187,18 +187,65 @@ def baslik_bandi(d, metin, t, bas, y=330, boy=96):
 
 
 # ---------------- arka plan + marka ----------------
-def arka_plan(t):
-    img = Image.new("RGB", (W, H), KOYU)
-    d = ImageDraw.Draw(img)
-    # yavaş kayan ızgara
-    kay = (t * 40) % 120
-    for x in range(-120, W + 120, 120):
-        d.line((x + kay, 0, x + kay, H), fill=(22, 22, 28), width=2)
-    for y in range(-120, H + 120, 120):
-        d.line((0, y + kay, W, y + kay), fill=(22, 22, 28), width=2)
-    # üst marka şeridi
+_KARARTMA = None
+
+
+def _karartma():
+    """Gerçek klip üstüne okunabilirlik katmanı: üst/alt koyu, orta yarı saydam."""
+    global _KARARTMA
+    if _KARARTMA is None:
+        k = Image.new("RGBA", (W, H))
+        kd = ImageDraw.Draw(k)
+        for y in range(H):
+            # ortada ~%45, üstte ve altyazı bölgesinde ~%80 koyuluk
+            uc = max(0.0, 1 - min(y, H - y) / 520)
+            a = int(255 * (0.55 + 0.33 * uc))
+            # altyazı bölgesi (y≈1560) için yumuşak koyu bant
+            bant = max(0.0, 1 - abs(y - 1560) / 190)
+            a = max(a, int(215 * min(1.0, bant * 1.6)))
+            kd.line((0, y, W, y), fill=(10, 10, 14, a))
+        _KARARTMA = k
+    return _KARARTMA
+
+
+class Klip:
+    """Bir stok klibi 1080x1920/30fps ham kareler olarak akıtır (gerekirse döngüler)."""
+    def __init__(self, yol, sure):
+        self.son = None
+        self.p = subprocess.Popen(
+            ["ffmpeg", "-v", "error", "-stream_loop", "-1", "-i", yol, "-t", f"{sure + 1:.2f}", "-an",
+             "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,"
+                    "eq=saturation=0.9:contrast=1.05",
+             "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
+
+    def kare(self):
+        b = self.p.stdout.read(W * H * 3)
+        if len(b) == W * H * 3:
+            self.son = Image.frombytes("RGB", (W, H), b)
+        return self.son
+
+    def kapat(self):
+        try:
+            self.p.kill()
+        except Exception:
+            pass
+
+
+def arka_plan(t, klip=None):
+    zemin = klip.kare() if klip else None
+    if zemin is not None:
+        img = Image.alpha_composite(zemin.convert("RGBA"), _karartma()).convert("RGB")
+        d = ImageDraw.Draw(img)
+    else:
+        img = Image.new("RGB", (W, H), KOYU)
+        d = ImageDraw.Draw(img)
+        kay = (t * 40) % 120
+        for x in range(-120, W + 120, 120):
+            d.line((x + kay, 0, x + kay, H), fill=(22, 22, 28), width=2)
+        for y in range(-120, H + 120, 120):
+            d.line((0, y + kay, W, y + kay), fill=(22, 22, 28), width=2)
     d.rectangle((0, 0, W, 10), fill=SARI)
-    yazi(d, (W / 2, 120), "TUZAK AVCISI", 54, SARI)
+    yazi(d, (W / 2, 120), "TUZAK AVCISI", 54, SARI, kontur=4)
     return img, d
 
 
@@ -372,6 +419,25 @@ def s_son(d, t, T):
 
 
 SAHNE_CIZ = {"TEMU NASIL BU KADAR UCUZ? 📦": [s_telefon, s_akis, s_maliyet, s_yorum]}
+# Her sahne + kapanış için gerçek stok klip araması (Pexels/Pixabay, İngilizce)
+SAHNE_KLIP = {"TEMU NASIL BU KADAR UCUZ? 📦": [
+    "online shopping smartphone", "factory packaging boxes", "warehouse shipping boxes",
+    "woman scrolling phone", "delivery package doorstep"]}
+
+
+def klipleri_indir(baslik, tmp):
+    import video as V
+    yollar = []
+    for i, q in enumerate(SAHNE_KLIP.get(baslik, [])):
+        yol = os.path.join(tmp, f"klip_{i}.mp4")
+        try:
+            r = V.stok_video_ara(q, (W, H), yol, dikey=True)
+            yollar.append(yol if r else None)
+            print(f"   Klip {i + 1}: {q} -> {r[0] if r else 'yok'}")
+        except Exception as e:
+            print(f"   Klip {i + 1}: {q} hata {str(e)[:80]}")
+            yollar.append(None)
+    return yollar
 
 
 # ---------------- ses + zamanlama ----------------
@@ -423,7 +489,18 @@ def render(baslik, cikti):
     import video as V
     tts_metin = V._ses_normalize(metin)
     mp3 = os.path.join(tmp, "ses.mp3")
-    kelimeler, kaynak = seslendir(tts_metin, mp3)
+    # Ses önbelleği: aynı metin bir daha seslendirilmez (ElevenLabs kredisi korunur)
+    import hashlib, shutil
+    ob = os.path.join("onizleme", "kod_video", "ses", hashlib.md5(tts_metin.encode()).hexdigest()[:12])
+    if os.path.exists(ob + ".mp3") and os.path.exists(ob + ".json"):
+        shutil.copy(ob + ".mp3", mp3)
+        kelimeler, kaynak = json.load(open(ob + ".json", encoding="utf-8")), "önbellek (kredi harcanmadı)"
+    else:
+        kelimeler, kaynak = seslendir(tts_metin, mp3)
+        if "sessiz" not in kaynak:
+            os.makedirs(os.path.dirname(ob), exist_ok=True)
+            shutil.copy(mp3, ob + ".mp3")
+            json.dump(kelimeler, open(ob + ".json", "w", encoding="utf-8"), ensure_ascii=False)
     print("Ses:", kaynak)
     try:
         karisik = V._muzik_ekle(mp3, tmp, "merak")
@@ -432,6 +509,7 @@ def render(baslik, cikti):
     toplam = V.sure_al(mp3) + 0.6
     sinir = sahne_sinirlari(s["sahneler"], kelimeler, toplam)
     kanca_sure = 1.1
+    klipler = klipleri_indir(baslik, tmp) if os.environ.get("KOD_VIDEO_KLIPSIZ") != "1" else []
     print("Sahne başlangıçları:", [round(x, 2) for x in sinir], "toplam", round(toplam, 2))
 
     ff = subprocess.Popen(
@@ -441,9 +519,18 @@ def render(baslik, cikti):
          "-af", "apad", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", cikti],
         stdin=subprocess.PIPE)
     kare_say = int(toplam * FPS)
+    aralik = sinir + [toplam]          # klip i: [aralik[i], aralik[i+1])
+    akan, akan_i = None, -1
     for f in range(kare_say):
         t = f / FPS
-        img, d = arka_plan(t)
+        ki = max(i for i in range(len(aralik) - 1) if aralik[i] <= t) if t >= 0 else 0
+        if ki != akan_i:
+            if akan:
+                akan.kapat()
+            yol = klipler[ki] if ki < len(klipler) else None
+            akan = Klip(yol, aralik[ki + 1] - aralik[ki]) if yol else None
+            akan_i = ki
+        img, d = arka_plan(t, akan)
         if t < kanca_sure:
             s_kanca(d, t, kanca_sure)
         elif t >= sinir[-1]:
@@ -458,6 +545,8 @@ def render(baslik, cikti):
         # ilerleme çubuğu
         d.rectangle((0, H - 14, W * t / toplam, H), fill=SARI)
         ff.stdin.write(img.tobytes())
+    if akan:
+        akan.kapat()
     ff.stdin.close()
     ff.wait()
     print("✓", cikti, f"{toplam:.1f} sn")
