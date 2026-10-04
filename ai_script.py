@@ -53,6 +53,51 @@ def _openrouter(prompt, key, model=None, timeout=120, max_tokens=4096):
     return d["choices"][0]["message"]["content"]
 
 
+def _openrouter_free_models(timeout=20):
+    """Canli katalogdan :free metin modellerini alir; proses boyunca onbellekler."""
+    global _OPENROUTER_FREE_CACHE
+    if _OPENROUTER_FREE_CACHE is not None:
+        return list(_OPENROUTER_FREE_CACHE)
+    try:
+        url = "https://openrouter.ai/api/v1/models?output_modalities=text"
+        with urllib.request.urlopen(url, timeout=timeout) as r:
+            models = json.loads(r.read().decode()).get("data", [])
+        ids = []
+        for item in models:
+            model_id = item.get("id", "")
+            pricing = item.get("pricing", {})
+            if (model_id.endswith(":free") or
+                    (pricing.get("prompt") == "0" and pricing.get("completion") == "0")):
+                if model_id and model_id != "openrouter/free":
+                    ids.append(model_id)
+        _OPENROUTER_FREE_CACHE = ids
+    except Exception:
+        _OPENROUTER_FREE_CACHE = []
+    return list(_OPENROUTER_FREE_CACHE)
+
+
+def _openrouter_with_fallback(prompt, key, max_tokens=4096, timeout=120):
+    """Router hata verirse canli katalogdaki ucretsiz modelleri sirayla dener."""
+    candidates = [OPENROUTER_MODEL] + _openrouter_free_models()
+    seen, errors = set(), []
+    for model in candidates:
+        if not model or model in seen:
+            continue
+        seen.add(model)
+        try:
+            result = _openrouter(prompt, key, model=model, timeout=timeout,
+                                 max_tokens=max_tokens)
+            if model != OPENROUTER_MODEL:
+                print(f"    OpenRouter fallback modeli: {model}")
+            return result
+        except Exception as e:
+            errors.append(f"{model}: {str(e)[:100]}")
+            if len(errors) >= OPENROUTER_MAX_FALLBACKS + 1:
+                break
+    raise RuntimeError("OpenRouter ucretsiz fallback zinciri basarisiz: " +
+                       " | ".join(errors))
+
+
 def _gemini(prompt, key, model="gemini-2.0-flash"):
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     body = {"contents": [{"parts": [{"text": prompt}]}],
@@ -171,7 +216,7 @@ def uret(baslik):
     yollar = []
     if okey:
         yollar.append((f"openrouter:{OPENROUTER_MODEL}",
-                       lambda: _openrouter(prompt, okey)))
+                       lambda: _openrouter_with_fallback(prompt, okey)))
     if nkey:
         for _m in _nvidia_modeller():
             yollar.append((f"nvidia:{_m.split('/')[-1][:16]}",
@@ -210,3 +255,5 @@ if __name__ == "__main__":
     import sys
     print(json.dumps(uret(sys.argv[1] if len(sys.argv) > 1 else "Gökyüzü neden mavidir?"),
                      ensure_ascii=False, indent=2))
+OPENROUTER_MAX_FALLBACKS = max(0, int(os.environ.get("OPENROUTER_MAX_FALLBACKS", "4") or "4"))
+_OPENROUTER_FREE_CACHE = None

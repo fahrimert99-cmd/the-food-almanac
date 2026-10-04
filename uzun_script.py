@@ -1,7 +1,7 @@
 # uzun_script.py — ~2.5-3 dk (~400 kelime) UZUN video metni uretir.
 import os, json, time, urllib.request
 from ai_script import (_gemini, _poll_post, _poll_get, _temizle, _claude,
-                       _claude_key, _openrouter, _openrouter_key,
+                       _claude_key, _openrouter_key, _openrouter_with_fallback,
                        OPENROUTER_MODEL)
 
 # Guncel UCRETSIZ katman modelleri; anahtarin erisebildigi ilki secilir.
@@ -79,9 +79,8 @@ def uret(baslik):
     if okey:
         for deneme in range(2):
             try:
-                data = json.loads(_temizle(_openrouter(prompt, okey,
-                                                       model=OPENROUTER_MODEL,
-                                                       max_tokens=8192)))
+                data = json.loads(_temizle(_openrouter_with_fallback(
+                    prompt, okey, max_tokens=8192)))
                 if data.get("script") and data.get("sahneler"):
                     if _turkce_yeterli(data["script"]):
                         print(f"    Senaryo: OpenRouter ({OPENROUTER_MODEL})")
