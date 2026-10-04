@@ -1,0 +1,4 @@
+Ses: ElevenLabs (kanal Shorts sesi)
+      Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
+Sahne başlangıçları: [0.0, 5.14, 10.41, 20.14, 24.21] toplam 32.13
+✓ onizleme/kod_video/temu.mp4 32.1 sn
