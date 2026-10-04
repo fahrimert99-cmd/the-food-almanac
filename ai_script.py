@@ -30,6 +30,8 @@ def _openrouter_key():
 
 
 OPENROUTER_MODEL = os.environ.get("OPENROUTER_MODEL", "").strip() or "openrouter/free"
+OPENROUTER_MAX_FALLBACKS = max(0, int(os.environ.get("OPENROUTER_MAX_FALLBACKS", "4") or "4"))
+_OPENROUTER_FREE_CACHE = None
 
 
 def _openrouter(prompt, key, model=None, timeout=120, max_tokens=4096):
@@ -76,8 +78,9 @@ def _openrouter_free_models(timeout=20):
     return list(_OPENROUTER_FREE_CACHE)
 
 
-def _openrouter_with_fallback(prompt, key, max_tokens=4096, timeout=120):
-    """Router hata verirse canli katalogdaki ucretsiz modelleri sirayla dener."""
+def _openrouter_with_fallback(prompt, key, max_tokens=4096, timeout=120,
+                              required_field="script"):
+    """Router hata veya gecersiz JSON verirse ucretsiz modelleri sirayla dener."""
     candidates = [OPENROUTER_MODEL] + _openrouter_free_models()
     seen, errors = set(), []
     for model in candidates:
@@ -87,6 +90,10 @@ def _openrouter_with_fallback(prompt, key, max_tokens=4096, timeout=120):
         try:
             result = _openrouter(prompt, key, model=model, timeout=timeout,
                                  max_tokens=max_tokens)
+            parsed = json.loads(_temizle(result))
+            if required_field and (not isinstance(parsed, dict) or
+                                   not parsed.get(required_field)):
+                raise RuntimeError(f"gecersiz JSON veya {required_field} alani yok")
             if model != OPENROUTER_MODEL:
                 print(f"    OpenRouter fallback modeli: {model}")
             return result
