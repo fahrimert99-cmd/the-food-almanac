@@ -25,6 +25,34 @@ def _temizle(t):
     return t
 
 
+def _openrouter_key():
+    return re.sub(r"\s", "", os.environ.get("OPENROUTER_API_KEY") or "")
+
+
+OPENROUTER_MODEL = os.environ.get("OPENROUTER_MODEL", "").strip() or "openrouter/free"
+
+
+def _openrouter(prompt, key, model=None, timeout=120, max_tokens=4096):
+    """OpenRouter OpenAI-uyumlu endpoint'i; varsayilan yonlendirici ucretsizdir."""
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    body = {"model": model or OPENROUTER_MODEL, "temperature": 0.85,
+            "max_tokens": max_tokens,
+            "messages": [{"role": "system", "content": "Yalnizca gecerli JSON dondur."},
+                         {"role": "user", "content": prompt}]}
+    req = urllib.request.Request(
+        url, data=json.dumps(body).encode(),
+        headers={"Content-Type": "application/json", "Accept": "application/json",
+                 "Authorization": f"Bearer {key}",
+                 "HTTP-Referer": "https://github.com/fahrimert99-cmd/yt-cocuk-otomasyon",
+                 "X-Title": "YT Cocuk Otomasyon"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            d = json.loads(r.read().decode())
+    except urllib.error.HTTPError as he:
+        raise RuntimeError(f"{he.code}: {he.read().decode()[:180]}")
+    return d["choices"][0]["message"]["content"]
+
+
 def _gemini(prompt, key, model="gemini-2.0-flash"):
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     body = {"contents": [{"parts": [{"text": prompt}]}],
@@ -136,10 +164,14 @@ def _poll_get(prompt):
 
 def uret(baslik):
     prompt = PROMPT.format(baslik=baslik)
+    okey = _openrouter_key()
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     ckey = _claude_key()
     nkey = _nvidia_key()
     yollar = []
+    if okey:
+        yollar.append((f"openrouter:{OPENROUTER_MODEL}",
+                       lambda: _openrouter(prompt, okey)))
     if nkey:
         for _m in _nvidia_modeller():
             yollar.append((f"nvidia:{_m.split('/')[-1][:16]}",

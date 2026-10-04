@@ -1,6 +1,8 @@
 # uzun_script.py — ~2.5-3 dk (~400 kelime) UZUN video metni uretir.
 import os, json, time, urllib.request
-from ai_script import _gemini, _poll_post, _poll_get, _temizle, _claude, _claude_key
+from ai_script import (_gemini, _poll_post, _poll_get, _temizle, _claude,
+                       _claude_key, _openrouter, _openrouter_key,
+                       OPENROUTER_MODEL)
 
 # Guncel UCRETSIZ katman modelleri; anahtarin erisebildigi ilki secilir.
 GEMINI_MODELS = ["gemini-3.5-flash-lite", "gemini-2.5-flash"]
@@ -72,7 +74,27 @@ def _gemini_key():
 def uret(baslik):
     prompt = UZUN_PROMPT.format(baslik=baslik)
     hatalar = []
-    # 1) Anthropic Claude (en kaliteli/en tutarli Turkce) — birincil saglayici
+    # 1) OpenRouter — varsayilan model openrouter/free; digerleri yedek.
+    okey = _openrouter_key()
+    if okey:
+        for deneme in range(2):
+            try:
+                data = json.loads(_temizle(_openrouter(prompt, okey,
+                                                       model=OPENROUTER_MODEL,
+                                                       max_tokens=8192)))
+                if data.get("script") and data.get("sahneler"):
+                    if _turkce_yeterli(data["script"]):
+                        print(f"    Senaryo: OpenRouter ({OPENROUTER_MODEL})")
+                        return data
+                    hatalar.append(f"openrouter#{deneme+1}: turkce karakter eksik")
+                else:
+                    hatalar.append("openrouter: bos yanit")
+            except Exception as e:
+                hatalar.append(f"openrouter#{deneme+1}: {str(e)[:90]}")
+                if "429" not in str(e) or deneme != 0:
+                    break
+                time.sleep(15)
+    # 2) Anthropic Claude (en kaliteli/en tutarli Turkce) — yedek saglayici
     ckey = _claude_key()
     if ckey:
         for deneme in range(2):
