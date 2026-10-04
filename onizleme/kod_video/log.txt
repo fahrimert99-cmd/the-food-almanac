@@ -1,3 +1,75 @@
+Ses: ElevenLabs (kanal Shorts sesi)
+      Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
+      [Pexels: 8 klip / ~4551 toplam -> 'empty supermarket shelf']
+      [Pixabay: 12 klip / ~370 toplam -> 'empty supermarket shelf']
+      [seçim(sayısal): pexels~4551 / pixabay~370 -> önce pexels]
+   Klip 1: empty supermarket shelf -> pexels
+      [Pexels: 8 klip / ~4456 toplam -> 'supermarket stock boxes']
+      [Pixabay: 12 klip / ~866 toplam -> 'supermarket stock boxes']
+      [seçim(sayısal): pexels~4456 / pixabay~866 -> önce pexels]
+   Klip 2: supermarket stock boxes -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'woman shopping supermarket']
+      [Pixabay: 12 klip / ~3408 toplam -> 'woman shopping supermarket']
+      [seçim(sayısal): pexels~8000 / pixabay~3408 -> önce pexels]
+   Klip 3: woman shopping supermarket -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'person thinking shopping list']
+      [Pixabay: 12 klip / ~1784 toplam -> 'person thinking shopping list']
+      [seçim(sayısal): pexels~8000 / pixabay~1784 -> önce pexels]
+   Klip 4: person thinking shopping list -> pexels
+      [Pexels: 8 klip / ~6685 toplam -> 'supermarket shopping cart']
+      [Pixabay: 12 klip / ~500 toplam -> 'supermarket shopping cart']
+      [seçim(sayısal): pexels~6685 / pixabay~500 -> önce pexels]
+   Klip 5: supermarket shopping cart -> pexels
+Sahne başlangıçları: [0.0, 5.5, 16.93, 25.38, 31.42] toplam 38.35
+✓ onizleme/kod_video/a101-aldin-aldin-urunu-neden-ilk-saatte-.mp4 38.3 sn
+Ses: ElevenLabs (kanal Shorts sesi)
+      Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
+      [Pexels: 8 klip / ~8000 toplam -> 'watching tv night couch']
+      [Pixabay: 12 klip / ~7762 toplam -> 'watching tv night couch']
+      [seçim(sayısal): pexels~8000 / pixabay~7762 -> önce pexels]
+   Klip 1: watching tv night couch -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'remote control tv']
+      [Pixabay: 12 klip / ~673 toplam -> 'remote control tv']
+      [seçim(sayısal): pexels~8000 / pixabay~673 -> önce pexels]
+   Klip 2: remote control tv -> pexels
+      [Pexels: 8 klip / ~4854 toplam -> 'binge watching tv']
+      [Pixabay: 12 klip / ~797 toplam -> 'binge watching tv']
+      [seçim(sayısal): pexels~4854 / pixabay~797 -> önce pexels]
+   Klip 3: binge watching tv -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'hand holding phone settings']
+      [Pixabay: 12 klip / ~1654 toplam -> 'hand holding phone settings']
+      [seçim(sayısal): pexels~8000 / pixabay~1654 -> önce pexels]
+   Klip 4: hand holding phone settings -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'person relaxing sofa evening']
+      [Pixabay: 12 klip / ~7684 toplam -> 'person relaxing sofa evening']
+      [seçim(sayısal): pexels~8000 / pixabay~7684 -> önce pexels]
+   Klip 5: person relaxing sofa evening -> pexels
+Sahne başlangıçları: [0.0, 4.62, 13.28, 20.89, 25.65] toplam 32.81
+✓ onizleme/kod_video/netflix-bir-sonraki-bolumu-neden-kendisi.mp4 32.8 sn
+Ses: ElevenLabs (kanal Shorts sesi)
+      Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
+      [Pexels: 8 klip / ~7598 toplam -> 'starbucks coffee cup']
+      [Pixabay: 12 klip / ~920 toplam -> 'starbucks coffee cup']
+      [seçim(sayısal): pexels~7598 / pixabay~920 -> önce pexels]
+   Klip 1: starbucks coffee cup -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'coffee shop menu board']
+      [Pixabay: 12 klip / ~1528 toplam -> 'coffee shop menu board']
+      [seçim(sayısal): pexels~8000 / pixabay~1528 -> önce pexels]
+   Klip 2: coffee shop menu board -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'barista making coffee']
+      [Pixabay: 12 klip / ~848 toplam -> 'barista making coffee']
+      [seçim(sayısal): pexels~8000 / pixabay~848 -> önce pexels]
+   Klip 3: barista making coffee -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'woman drinking coffee']
+      [Pixabay: 12 klip / ~4154 toplam -> 'woman drinking coffee']
+      [seçim(sayısal): pexels~8000 / pixabay~4154 -> önce pexels]
+   Klip 4: woman drinking coffee -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'coffee shop customer']
+      [Pixabay: 12 klip / ~1240 toplam -> 'coffee shop customer']
+      [seçim(sayısal): pexels~8000 / pixabay~1240 -> önce pexels]
+   Klip 5: coffee shop customer -> pexels
+Sahne başlangıçları: [0.0, 4.88, 13.1, 21.0, 24.76] toplam 31.66
+✓ onizleme/kod_video/tall-grande-venti-kucuk-boy-neden-yok.mp4 31.7 sn
 Ses: önbellek (kredi harcanmadı)
       Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
       [Pexels: 8 klip / ~8000 toplam -> 'online shopping smartphone']
@@ -21,4 +93,4 @@ Ses: önbellek (kredi harcanmadı)
       [seçim(sayısal): pexels~3299 / pixabay~126 -> önce pexels]
    Klip 5: delivery package doorstep -> pexels
 Sahne başlangıçları: [0.0, 4.84, 9.78, 19.52, 23.05] toplam 29.47
-✓ onizleme/kod_video/temu.mp4 29.5 sn
+✓ onizleme/kod_video/temu-nasil-bu-kadar-ucuz.mp4 29.5 sn
