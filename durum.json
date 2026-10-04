@@ -119,6 +119,7 @@
     "ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİK TUZAĞI ⏱️",
     "İADE NEDEN BU KADAR ZOR? 📦",
     "İKİNCİ EL LÜKS SAAT NEDEN YENİ GİBİ UCUZ? ⌚",
+    "İKİNCİ ÜRÜN NEDEN 'BEDAVA'? 🎁",
     "İLK AY BEDAVA NEDEN VAR? 🎬",
     "İLK FİYAT NEDEN HEP YÜKSEK? 🎯",
     "İNDİRİM ETİKETLERİ YALAN! 🏷️",
@@ -130,17 +131,17 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": " 🛒'): İLK ÜRÜN NEDEN PAHALI GÖSTERİLİR? 📊\n      · atlandı (yayınlanmış konu tekrarı ~ 'BENZİNLİK MARKETİ NEDEN PAHALI? ⛽'): MARKALI GİYSİ NEDEN PAHALI? 👕\n      · atlandı (yayınlanmış konu tekrarı ~ 'BOZUK PARA NEDEN VERMEZLER? 🪙'): BOZUK PARANIN KENARI NEDEN TIRTIKLI? 🪙\n      · atlandı (yayınlanmış konu tekrarı ~ 'REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺'): 'BEDAVA' KELİMESİ BEYNİ NASIL KANDIRIR? 🧠\n      · atlandı (yayınlanmış konu tekrarı ~ 'SON KULLANMA TARİHİ OYUNU! 📅'): SON KULLANMA TARİHİNİN ÖNÜNDE FİYAT MANİPÜLASYONU! 📅\n      · atlandı (yayınlanmış konu tekrarı ~ 'ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİ'): ABONELİK İPTALİNİ GİZLEYEN SAYFA TUZAĞI 🔒\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): İNDİRİM ETİKETİ NEDEN HEP KIRMIZI? 🔴\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): EN PAHALI ÜRÜN NEDEN GÖZ HİZASINDA? 👁️\n      · atlandı (yayınlanmış konu tekrarı ~ ''ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰'): “ÜCRETSİZ DENE” NEDEN ÜCRETLİ OLUR? ⏰\n      · atlandı (yayınlanmış konu tekrarı ~ 'UÇAK BİLETİ FİYAT OYUNU! ✈️'): “SANA ÖZEL” FİYAT OYUNU! 🎯\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): SAHTE İNDİRİMİN MATEMATİĞİ: BÜYÜK YALANI NASIL ANLARSIN\n      · atlandı (yayınlanmış konu tekrarı ~ 'PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉'): UN PAKETİ NEDEN 1KG'den 900g'a düştü fiyat aynı? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖'): MARKET GİRİŞİNDE KULLANILAN SIĞIR KOKUSU NEDEN DAHA FAZ\n      Tema (katı marka filtresi): 'tuzak' (uygun kalan: 75)\n      Slot 09:00 UTC: marka serisi (kalan: 35)\n[1/3] Senaryo (151/185) [market]: MARKETTE NEDEN TELEVİZYON SATILIR? 📺\n✓ Yayın slotu zaten dolu (2026-10-04T09:00:00Z); atlandı: https://youtu.be/QCigHD_AnSI\n",
+  "son_rapor": ": 12 klip / ~751 toplam -> 'buy one get one']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~4057 / pixabay~751 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'hands holding two products,']\n      [Pixabay: 12 klip / ~1250 toplam -> 'hands holding two products,']\n      [seçim(vision): pexels~8000 / pixabay~1250 -> önce pixabay]\n      Sahne 8/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~6403 toplam -> 'supermarket promo display, overhead']\n      [Pixabay: 12 klip / ~625 toplam -> 'supermarket promo display, overhead']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~6403 / pixabay~625 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'shopping cart filling up,']\n      [Pixabay: 12 klip / ~2899 toplam -> 'shopping cart filling up,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~2899 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: openrouter=0, nvidia=0, pexels=9, pixabay=1, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (19904 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-10-04T17:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi\n✓ Yüklendi: https://youtu.be/g78x-Od1Y3U  (yayın: 2026-10-04T17:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n",
   "bekleyen_yorum": {
-    "video_id": "QCigHD_AnSI",
-    "metin": "Sen hiç Aldın Aldın ürünü için sıraya girdin mi?",
+    "video_id": "g78x-Od1Y3U",
+    "metin": "İKİNCİ ÜRÜN NEDEN 'BEDAVA' hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "d493a744c2f957b7"
+    "hash": "23af62d3b75663de"
   },
-  "son_kategori": "market",
-  "son_video_id": "QCigHD_AnSI",
-  "son_baslik": "A101 ALDIN ALDIN ÜRÜNÜ NEDEN İLK SAATTE BİTER? ⏰",
-  "son_yayin_zamani": "2026-10-04T09:00:00Z",
+  "son_kategori": "psikoloji",
+  "son_video_id": "g78x-Od1Y3U",
+  "son_baslik": "İKİNCİ ÜRÜN NEDEN 'BEDAVA'? 🎁",
+  "son_yayin_zamani": "2026-10-04T17:00:00Z",
   "analytics_ozet": {
     "guncelleme": "2026-10-01T03:55:09Z",
     "donem": {
