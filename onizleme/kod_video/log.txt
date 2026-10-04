@@ -1,4 +1,24 @@
 Ses: ElevenLabs (kanal Shorts sesi)
       Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
-Sahne başlangıçları: [0.0, 5.14, 10.41, 20.14, 24.21] toplam 32.13
-✓ onizleme/kod_video/temu.mp4 32.1 sn
+      [Pexels: 8 klip / ~8000 toplam -> 'online shopping smartphone']
+      [Pixabay: 12 klip / ~872 toplam -> 'online shopping smartphone']
+      [seçim(sayısal): pexels~8000 / pixabay~872 -> önce pexels]
+   Klip 1: online shopping smartphone -> pexels
+      [Pexels: 8 klip / ~4682 toplam -> 'factory packaging boxes']
+      [Pixabay: 12 klip / ~613 toplam -> 'factory packaging boxes']
+      [seçim(sayısal): pexels~4682 / pixabay~613 -> önce pexels]
+   Klip 2: factory packaging boxes -> pexels
+      [Pexels: 8 klip / ~5801 toplam -> 'warehouse shipping boxes']
+      [Pixabay: 12 klip / ~1718 toplam -> 'warehouse shipping boxes']
+      [seçim(sayısal): pexels~5801 / pixabay~1718 -> önce pexels]
+   Klip 3: warehouse shipping boxes -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'woman scrolling phone']
+      [Pixabay: 12 klip / ~3353 toplam -> 'woman scrolling phone']
+      [seçim(sayısal): pexels~8000 / pixabay~3353 -> önce pexels]
+   Klip 4: woman scrolling phone -> pexels
+      [Pexels: 8 klip / ~3299 toplam -> 'delivery package doorstep']
+      [Pixabay: 12 klip / ~126 toplam -> 'delivery package doorstep']
+      [seçim(sayısal): pexels~3299 / pixabay~126 -> önce pexels]
+   Klip 5: delivery package doorstep -> pexels
+Sahne başlangıçları: [0.0, 4.84, 9.78, 19.52, 23.05] toplam 29.47
+✓ onizleme/kod_video/temu.mp4 29.5 sn
