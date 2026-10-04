@@ -5,7 +5,7 @@ name: Kod Video Onizleme (YUKLEMEZ)
 on:
   push:
     branches: [claude/adoring-sagan-ni2qvl]
-    paths: [kod_video.py, .github/workflows/kod_video.yml, onizleme/kod_video_tetik.txt]
+    paths: [kod_video.py, kod_sahneler.json, .github/workflows/kod_video.yml, onizleme/kod_video_liste.txt]
   workflow_dispatch:
 
 permissions:
@@ -18,7 +18,7 @@ concurrency:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
         with:
@@ -44,7 +44,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
         run: |
-          python3 kod_video.py "TEMU NASIL BU KADAR UCUZ? 📦" onizleme/kod_video/temu.mp4 2>&1 | tee onizleme/kod_video_log.txt
+          python3 kod_video.py --liste onizleme/kod_video_liste.txt 2>&1 | tee onizleme/kod_video_log.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:

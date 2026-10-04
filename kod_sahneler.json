@@ -1,0 +1,44 @@
+{
+ "TEMU NASIL BU KADAR UCUZ? 📦": {
+  "kanca": {"buyuk": "TEMU", "orta": "NASIL BU KADAR", "vurgu": "UCUZ?"},
+  "kapanis_klip": "delivery package doorstep",
+  "sahneler": [
+   {"tip": "fiyat", "klip": "online shopping smartphone", "ikon": "kulaklik", "urun": "Kablosuz kulaklık", "fiyat": "30 TL", "bant": "ARADA KİMSE YOK"},
+   {"tip": "akis", "klip": "factory packaging boxes", "bant": "FABRİKADAN KAPINA", "sol": "FABRİKA", "sol_ikon": "fabrika", "sag": "KAPIN", "sag_ikon": "ev", "aradakiler": ["TOPTANCI", "MAĞAZA"]},
+   {"tip": "cubuklar", "klip": "warehouse shipping boxes", "kalemler": [{"ad": "MAĞAZA KİRASI", "oran": 1.0, "durum": "dus"}, {"ad": "TOPTANCI", "oran": 0.8, "durum": "dus"}, {"ad": "DEPO MASRAFI", "oran": 0.55}], "sonuc": "= ÇOK UCUZ FİYAT",
+    "bolme": 0.5, "sonra": {"tip": "soru_cevap", "soru": "BEDELİ KİM ÖDÜYOR?", "cevap": "SEN", "alt": [{"ikon": "saat", "ad": "BEKLEME"}, {"ikon": "yildiz", "ad": "KALİTE", "dus": true}]}},
+   {"tip": "karsilastir", "klip": "woman scrolling phone", "bant": "YORUMLARA BAK", "sol": {"ad": "İLAN", "ikon": "kulaklik"}, "sag": {"ad": "GERÇEK", "ikon": "kulaklik_kotu", "isaret": "x"}}
+  ]
+ },
+ "A101 ALDIN ALDIN ÜRÜNÜ NEDEN İLK SAATTE BİTER? ⏰": {
+  "kanca": {"buyuk": "ALDIN ALDIN", "orta": "NEDEN İLK SAATTE", "vurgu": "BİTER?"},
+  "kapanis_klip": "supermarket shopping cart",
+  "sahneler": [
+   {"tip": "damga", "klip": "empty supermarket shelf", "ust": "PERŞEMBE SABAHI", "ikon": "tv", "etiket": "AKILLI TV", "damga": "TÜKENDİ", "an": 1.6},
+   {"tip": "sayac", "klip": "supermarket stock boxes", "bant": "MAĞAZA BAŞINA STOK", "ikon": "paket", "bas": 5, "son": 0, "birim": " ADET", "renk": "kirmizi", "alt": "AZ STOK = HAFTAYA DAHA ERKEN GELİRSİN"},
+   {"tip": "liste", "klip": "woman shopping supermarket", "bant": "KITLIK ETKİSİ", "maddeler": [{"metin": "Kampanya ürünü", "isaret": "x"}, {"metin": "Süt", "isaret": "tik"}, {"metin": "Deterjan", "isaret": "tik"}, {"metin": "Atıştırmalık", "isaret": "tik"}]},
+   {"tip": "karsilastir", "klip": "person thinking shopping list", "bant": "KENDİNE SOR", "sol": {"ad": "İHTİYAÇ", "ikon": "sepet", "isaret": "tik"}, "sag": {"ad": "BİTTİ DİYE", "ikon": "tv", "isaret": "x"}}
+  ]
+ },
+ "NETFLIX BİR SONRAKİ BÖLÜMÜ NEDEN KENDİSİ AÇAR? ▶️": {
+  "kanca": {"buyuk": "NETFLIX", "orta": "SONRAKİ BÖLÜMÜ NEDEN", "vurgu": "KENDİSİ AÇAR?"},
+  "kapanis_klip": "person relaxing sofa evening",
+  "sahneler": [
+   {"tip": "sayac", "klip": "watching tv night couch", "bant": "SONRAKİ BÖLÜM", "ikon": "oynat", "bas": 5, "son": 0, "birim": " SN", "hiz": 0.7, "alt": "SEN KALKMADAN BAŞLAR"},
+   {"tip": "karsilastir", "klip": "remote control tv", "bant": "KARARI KİM VERİYOR?", "sol": {"ad": "DURMAK", "ikon": "dur", "alt": "Sen bir şey yapmalısın"}, "sag": {"ad": "DEVAM", "ikon": "oynat", "alt": "Hiçbir şey yapma", "isaret": "x"}},
+   {"tip": "cubuklar", "klip": "binge watching tv", "bant": "İZLENME SÜRESİ", "kalemler": [{"ad": "1 BÖLÜM", "oran": 0.3, "durum": "buyu", "deger": "45 DK"}, {"ad": "3 BÖLÜM", "oran": 0.65, "durum": "buyu", "deger": "2 SAAT"}, {"ad": "6 BÖLÜM", "oran": 1.0, "durum": "buyu", "deger": "4 SAAT"}], "sonuc": "SÜRE = VAZGEÇİLMEZLİK", "sonuc_renk": "kirmizi"},
+   {"tip": "anahtar", "klip": "hand holding phone settings", "bant": "AYARLARDAN KAPAT", "ekran": "OYNATMA AYARLARI", "etiket": "Otomatik oynatma", "yon": "kapat", "sonuc": "KARAR SENDE"}
+  ]
+ },
+ "TALL, GRANDE, VENTİ: KÜÇÜK BOY NEDEN YOK? 🥤": {
+  "kanca": {"buyuk": "TALL GRANDE VENTİ", "orta": "KÜÇÜK BOY", "vurgu": "NEDEN YOK?"},
+  "kapanis_klip": "coffee shop customer",
+  "sahneler": [
+   {"tip": "boylar", "klip": "starbucks coffee cup", "bant": "EN KÜÇÜK BOY", "etiketler": ["TALL", "GRANDE", "VENTİ"], "alt": ["= UZUN", "", ""], "vurgu": 0, "rozet": "UZUN?!"},
+   {"tip": "buyuk_yazi", "klip": "coffee shop menu board", "satirlar": ["KÜÇÜK", "ORTA", "BÜYÜK"], "ciz": 0, "vurgu": 1,
+    "bolme": 0.5, "sonra": {"tip": "liste", "bant": "ALIŞILMADIK İSİMLER", "maddeler": [{"metin": "Fiyat karşılaştırması zor", "isaret": "x"}, {"metin": "Küçük demek zor", "isaret": "x"}]}},
+   {"tip": "boylar", "klip": "barista making coffee", "bant": "ORTA SEÇENEK ETKİSİ", "etiketler": ["TALL", "GRANDE", "VENTİ"], "vurgu": 1, "rozet": "EN KÂRLI"},
+   {"tip": "boylar", "klip": "woman drinking coffee", "bant": "MİLİLİTREYLE DÜŞÜN", "etiketler": ["TALL", "GRANDE", "VENTİ"], "alt": ["354 ML", "473 ML", "591 ML"]}
+  ]
+ }
+}

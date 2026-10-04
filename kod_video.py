@@ -285,121 +285,6 @@ def _tr_ust(s):
     return s.replace("i", "İ").replace("ı", "I").upper()
 
 
-# ---------------- TEMU sahneleri ----------------
-def s_kanca(d, t, T):
-    """0: başlık kancası (ilk ~1.2 sn)."""
-    k = ease_back(faz(t, 0, 0.4))
-    yazi(d, (W / 2, 820), "TEMU", int(230 * k) + 1, SARI, kontur=6)
-    if t > 0.25:
-        yazi(d, (W / 2, 1010), "NASIL BU KADAR", 110, BEYAZ)
-        yazi(d, (W / 2, 1140), "UCUZ?", 150, KIRMIZI)
-
-
-def s_telefon(d, t, T):
-    """Sahne 1: telefonda kulaklık, 30 TL etiketi, 'ARADA KİMSE YOK'."""
-    g = ease_out(faz(t, 0, 0.5))
-    cy = 900 + (1 - g) * 600
-    x0, y0, x1, y1 = telefon(d, W / 2, cy)
-    kutu(d, x0 + 30, y0 + 90, x1 - 30, y0 + 470, r=24, renk=(225, 228, 235))
-    kulaklik(d, W / 2, y0 + 250, 1.2, renk=(255, 255, 255), golge=(180, 184, 196))
-    yazi(d, (W / 2, y0 + 540), "KABLOSUZ KULAKLIK", 46, (40, 40, 50))
-    for i in range(5):
-        yildiz(d, W / 2 - 120 + i * 60, y0 + 610, 22)
-    kutu(d, x0 + 40, y1 - 150, x1 - 40, y1 - 50, r=50, renk=(255, 110, 30))
-    yazi(d, (W / 2, y1 - 100), "SEPETE EKLE", 50, BEYAZ)
-    s = ease_back(faz(t, 0.8, 0.45))
-    fiyat_etiketi(d, W / 2 + 230, cy - 330, "30 TL", s * 1.25)
-    if t > T * 0.55:
-        baslik_bandi(d, "ARADA KİMSE YOK", t, T * 0.55, y=330, boy=90)
-
-
-def s_akis(d, t, T):
-    """Sahne 2: fabrika → küçük paketler → ev."""
-    baslik_bandi(d, "FABRİKADAN KAPINA", t, 0.0, y=330, boy=90)
-    fx, ex, yy = 230, 850, 900
-    a = ease_out(faz(t, 0.1, 0.5))
-    fabrika(d, fx, yy, 1.2 * a + 0.01)
-    b = ease_out(faz(t, 0.4, 0.5))
-    ev(d, ex, yy, 1.2 * b + 0.01)
-    yazi(d, (fx, yy + 190), "FABRİKA", 56, GRI)
-    yazi(d, (ex, yy + 190), "KAPIN", 56, GRI)
-    c = ease_out(faz(t, 0.7, 0.6))
-    if c > 0:
-        d.line((fx + 150, yy + 40, fx + 150 + (ex - fx - 300) * c, yy + 40), fill=(70, 70, 82), width=14)
-    # paketler hat boyunca akar
-    for i in range(4):
-        p = ((t - 1.0) * 0.4 + i / 4.0)
-        if t < 1.0 or p < 0:
-            continue
-        p = p % 1.0
-        x = fx + 150 + (ex - fx - 300) * p
-        paket(d, x, yy - 10 - 18 * math.sin(p * math.pi), 0.9)
-    # aradan çıkanlar
-    for j, (ad, gx) in enumerate((("TOPTANCI", 330), ("MAĞAZA", 750))):
-        bas = 1.4 + j * 0.5
-        k = faz(t, bas, 0.4)
-        if k > 0:
-            kutu(d, gx - 160, 1200, gx + 160, 1330, r=20, renk=PANEL)
-            yazi(d, (gx, 1265), ad, 60, GRI)
-            carpi(d, gx, 1265, 70, faz(t, bas + 0.3, 0.3))
-
-
-def s_maliyet(d, t, T):
-    """Sahne 3: maliyet kalemleri çizilir, sonra 'BEDELİ KİM ÖDÜYOR? → SEN'."""
-    yarim = T * 0.5
-    if t < yarim:
-        kalemler = (("MAĞAZA KİRASI", 1.0), ("TOPTANCI", 0.8), ("DEPO MASRAFI", 0.55))
-        for i, (ad, oran) in enumerate(kalemler):
-            y = 560 + i * 230
-            k = ease_out(faz(t, i * 0.35, 0.5))
-            yazi(d, (120, y - 70), ad, 58, BEYAZ, hiza="lm")
-            kutu(d, 120, y - 25, 120 + 820 * k, y + 55, r=16, renk=PANEL)
-            dolu = 820 * k * (1 - ease_out(faz(t, 1.3 + i * 0.25, 0.5)) * (0.9 if i < 2 else 0.6))
-            kutu(d, 120, y - 25, 120 + max(30, dolu), y + 55, r=16, renk=KIRMIZI if i < 2 else SARI)
-            if i < 2:
-                carpi(d, 1000, y + 15, 40, faz(t, 1.3 + i * 0.25, 0.3))
-        k2 = ease_back(faz(t, 2.0, 0.4))
-        if k2 > 0:
-            yazi(d, (W / 2, 1300), "= ÇOK UCUZ FİYAT", int(100 * k2) + 1, YESIL)
-    else:
-        tl = t - yarim
-        baslik_bandi(d, "BEDELİ KİM ÖDÜYOR?", tl, 0.0, y=420, boy=86)
-        k = ease_back(faz(tl, 0.5, 0.4))
-        if k > 0:
-            yazi(d, (W / 2, 700), "SEN", int(260 * k) + 1, KIRMIZI, kontur=6)
-        k3 = faz(tl, 1.0, 0.4)
-        if k3 > 0:
-            saat(d, 290, 1080, 120, tl / 3.0)
-            yazi(d, (290, 1250), "BEKLEME", 60, BEYAZ)
-            for i in range(5):
-                # kalite yıldızları teker teker söner
-                son = faz(tl, 1.6 + i * 0.12, 0.2) > 0.5 and i >= 2
-                yildiz(d, 620 + i * 85, 1080, 38, dolu=not son)
-            yazi(d, (790, 1250), "KALİTE", 60, BEYAZ)
-
-
-def s_yorum(d, t, T):
-    """Sahne 4: ilan fotoğrafı vs gerçek fotoğraf, tik."""
-    baslik_bandi(d, "YORUMLARA BAK", t, 0.0, y=330, boy=96)
-    for j, (ad, x) in enumerate((("İLAN", 290), ("GERÇEK", 790))):
-        k = ease_back(faz(t, 0.3 + j * 0.4, 0.45))
-        if k <= 0:
-            continue
-        w2, h2 = 200 * k, 260 * k
-        kutu(d, x - w2, 900 - h2, x + w2, 900 + h2, r=24, renk=(235, 236, 240))
-        if j == 0:
-            kulaklik(d, x, 860, 1.0 * k, renk=(255, 255, 255), golge=(185, 190, 200))
-            for i in range(5):
-                yildiz(d, x - 100 * k + i * 50 * k, 1080, 18 * k)
-        else:
-            kulaklik(d, x, 860, 0.8 * k, renk=(200, 196, 188), golge=(150, 146, 140))
-            d.line((x - 80 * k, 820, x + 40 * k, 900), fill=(120, 116, 110), width=6)
-            for i in range(5):
-                yildiz(d, x - 100 * k + i * 50 * k, 1080, 18 * k, dolu=i < 2)
-        yazi(d, (x, 900 + h2 + 60), ad, 64, BEYAZ)
-    tik(d, W / 2, 1390, 70, faz(t, 1.4, 0.5))
-
-
 _AVATAR = None
 
 
@@ -538,20 +423,415 @@ def s_son(d, t, T):
         parmak(d, x, y, abs(t - dokun[i]) < 0.12)
 
 
-SAHNE_CIZ = {"TEMU NASIL BU KADAR UCUZ? 📦": [s_telefon, s_akis, s_maliyet, s_yorum]}
-# Her sahne + kapanış için gerçek stok klip araması (Pexels/Pixabay, İngilizce)
-SAHNE_KLIP = {"TEMU NASIL BU KADAR UCUZ? 📦": [
-    "online shopping smartphone", "factory packaging boxes", "warehouse shipping boxes",
-    "woman scrolling phone", "delivery package doorstep"]}
+# ---------------- ikonlar (kodla) ----------------
+def ikon(d, ad, cx, cy, s=1.0, ton=None):
+    """Adına göre basit vektör ikon çizer (s: ölçek, ~100px * s)."""
+    if s <= 0.02:
+        return
+    g = (120, 125, 140)
+    if ad == "kulaklik":
+        kulaklik(d, cx, cy - 20 * s, s, renk=(255, 255, 255), golge=(180, 184, 196))
+    elif ad == "kulaklik_kotu":
+        kulaklik(d, cx, cy - 20 * s, s * 0.85, renk=(200, 196, 188), golge=(150, 146, 140))
+        d.line((cx - 70 * s, cy - 60 * s, cx + 40 * s, cy + 20 * s), fill=(120, 116, 110), width=max(2, int(6 * s)))
+    elif ad == "paket":
+        paket(d, cx, cy, 1.6 * s)
+    elif ad == "fabrika":
+        fabrika(d, cx, cy, s)
+    elif ad == "ev":
+        ev(d, cx, cy, s)
+    elif ad == "magaza":
+        d.rectangle((cx - 110 * s, cy - 40 * s, cx + 110 * s, cy + 90 * s), fill=g)
+        for i in range(5):
+            x = cx - 110 * s + i * 44 * s
+            d.rectangle((x, cy - 90 * s, x + 44 * s, cy - 40 * s), fill=KIRMIZI if i % 2 == 0 else BEYAZ)
+        d.rectangle((cx - 30 * s, cy + 20 * s, cx + 30 * s, cy + 90 * s), fill=SARI)
+    elif ad == "restoran":
+        d.ellipse((cx - 90 * s, cy - 60 * s, cx + 90 * s, cy + 60 * s), fill=BEYAZ)
+        d.ellipse((cx - 60 * s, cy - 40 * s, cx + 60 * s, cy + 40 * s), fill=(225, 225, 230))
+        d.rectangle((cx - 130 * s, cy - 60 * s, cx - 118 * s, cy + 70 * s), fill=GRI)
+        d.rectangle((cx + 118 * s, cy - 60 * s, cx + 130 * s, cy + 70 * s), fill=GRI)
+    elif ad == "telefon":
+        kutu(d, cx - 55 * s, cy - 95 * s, cx + 55 * s, cy + 95 * s, r=int(16 * s), renk=(40, 40, 50))
+        kutu(d, cx - 45 * s, cy - 82 * s, cx + 45 * s, cy + 82 * s, r=int(10 * s), renk=(235, 236, 240))
+    elif ad == "tv":
+        kutu(d, cx - 130 * s, cy - 80 * s, cx + 130 * s, cy + 70 * s, r=int(14 * s), renk=(40, 40, 50))
+        kutu(d, cx - 118 * s, cy - 68 * s, cx + 118 * s, cy + 58 * s, r=int(8 * s), renk=ton or (60, 90, 160))
+        d.rectangle((cx - 40 * s, cy + 70 * s, cx + 40 * s, cy + 90 * s), fill=(40, 40, 50))
+    elif ad == "kahve":
+        d.polygon([(cx - 60 * s, cy - 70 * s), (cx + 60 * s, cy - 70 * s), (cx + 45 * s, cy + 90 * s),
+                   (cx - 45 * s, cy + 90 * s)], fill=BEYAZ)
+        d.rectangle((cx - 66 * s, cy - 92 * s, cx + 66 * s, cy - 70 * s), fill=(60, 60, 70))
+        d.rectangle((cx - 54 * s, cy - 10 * s, cx + 49 * s, cy + 35 * s), fill=ton or (30, 120, 80))
+    elif ad == "kart":
+        kutu(d, cx - 120 * s, cy - 75 * s, cx + 120 * s, cy + 75 * s, r=int(16 * s), renk=ton or (60, 110, 200))
+        d.rectangle((cx - 120 * s, cy - 40 * s, cx + 120 * s, cy - 15 * s), fill=(30, 30, 40))
+        kutu(d, cx - 95 * s, cy + 10 * s, cx - 45 * s, cy + 45 * s, r=int(6 * s), renk=SARI)
+    elif ad == "sepet":
+        d.polygon([(cx - 110 * s, cy - 50 * s), (cx + 110 * s, cy - 50 * s), (cx + 80 * s, cy + 50 * s),
+                   (cx - 80 * s, cy + 50 * s)], fill=(200, 205, 215))
+        for i in range(4):
+            x = cx - 70 * s + i * 47 * s
+            d.line((x, cy - 45 * s, x + 5 * s, cy + 45 * s), fill=(150, 155, 165), width=max(2, int(5 * s)))
+        d.ellipse((cx - 70 * s, cy + 55 * s, cx - 40 * s, cy + 85 * s), fill=(90, 90, 100))
+        d.ellipse((cx + 40 * s, cy + 55 * s, cx + 70 * s, cy + 85 * s), fill=(90, 90, 100))
+        d.line((cx - 110 * s, cy - 50 * s, cx - 140 * s, cy - 90 * s), fill=(150, 155, 165), width=max(2, int(8 * s)))
+    elif ad == "oynat":
+        d.ellipse((cx - 90 * s, cy - 90 * s, cx + 90 * s, cy + 90 * s), fill=KIRMIZI)
+        d.polygon([(cx - 28 * s, cy - 45 * s), (cx - 28 * s, cy + 45 * s), (cx + 45 * s, cy)], fill=BEYAZ)
+    elif ad == "dur":
+        d.ellipse((cx - 90 * s, cy - 90 * s, cx + 90 * s, cy + 90 * s), fill=(70, 70, 82))
+        d.rectangle((cx - 35 * s, cy - 40 * s, cx - 12 * s, cy + 40 * s), fill=BEYAZ)
+        d.rectangle((cx + 12 * s, cy - 40 * s, cx + 35 * s, cy + 40 * s), fill=BEYAZ)
+    elif ad == "para":
+        d.ellipse((cx - 80 * s, cy - 80 * s, cx + 80 * s, cy + 80 * s), fill=SARI)
+        d.ellipse((cx - 62 * s, cy - 62 * s, cx + 62 * s, cy + 62 * s), outline=(200, 150, 20), width=max(2, int(6 * s)))
+        yazi(d, (cx, cy), "TL", max(10, int(70 * s)), (150, 100, 10))
+    elif ad == "ucak":
+        d.polygon([(cx - 120 * s, cy), (cx + 120 * s, cy - 10 * s), (cx + 120 * s, cy + 10 * s)], fill=BEYAZ)
+        d.ellipse((cx - 130 * s, cy - 18 * s, cx + 130 * s, cy + 18 * s), fill=BEYAZ)
+        d.polygon([(cx - 10 * s, cy), (cx + 40 * s, cy - 90 * s), (cx + 60 * s, cy - 90 * s), (cx + 40 * s, cy)], fill=GRI)
+        d.polygon([(cx - 10 * s, cy), (cx + 40 * s, cy + 90 * s), (cx + 60 * s, cy + 90 * s), (cx + 40 * s, cy)], fill=GRI)
+    elif ad == "saat":
+        saat(d, cx, cy, 90 * s, 0.3)
+    elif ad == "yildiz":
+        yildiz(d, cx, cy, 70 * s)
+    else:   # bilinmeyen ad: soru işareti rozeti
+        d.ellipse((cx - 80 * s, cy - 80 * s, cx + 80 * s, cy + 80 * s), fill=PANEL, outline=SARI, width=6)
+        yazi(d, (cx, cy), "?", max(10, int(110 * s)), SARI)
 
 
-def klipleri_indir(baslik, tmp):
+def _sar(metin, boy, gen):
+    """Metni verilen genişliğe sığacak satırlara böler."""
+    kel, sat, cur = metin.split(), [], ""
+    for k in kel:
+        dene = (cur + " " + k).strip()
+        if F(boy).getlength(dene) <= gen or not cur:
+            cur = dene
+        else:
+            sat.append(cur)
+            cur = k
+    if cur:
+        sat.append(cur)
+    return sat
+
+
+# ---------------- ŞABLONLAR ----------------
+# Her şablon: f(d, t, T, p)  — t sahne içi zaman, T sahne süresi, p parametreler.
+
+def sb_kanca(d, t, T, p):
+    k = ease_back(faz(t, 0, 0.4))
+    buyuk = _tr_ust(p.get("buyuk", ""))
+    boy = 230
+    while boy > 90 and F(boy).getlength(buyuk) > W - 120:
+        boy -= 10
+    yazi(d, (W / 2, 820), buyuk, int(boy * k) + 1, SARI, kontur=6)
+    if t > 0.25:
+        yazi(d, (W / 2, 1010), _tr_ust(p.get("orta", "")), 100, BEYAZ, kontur=4)
+        yazi(d, (W / 2, 1140), _tr_ust(p.get("vurgu", "")), 140, KIRMIZI, kontur=4)
+
+
+def sb_fiyat(d, t, T, p):
+    """Telefonda ürün kartı + zıplayan fiyat etiketi (+ ara bant)."""
+    g = ease_out(faz(t, 0, 0.5))
+    cy = 900 + (1 - g) * 600
+    x0, y0, x1, y1 = telefon(d, W / 2, cy)
+    kutu(d, x0 + 30, y0 + 90, x1 - 30, y0 + 470, r=24, renk=(225, 228, 235))
+    ikon(d, p.get("ikon", "paket"), W / 2, y0 + 280, 1.2)
+    yazi(d, (W / 2, y0 + 540), _tr_ust(p.get("urun", "")), 46, (40, 40, 50))
+    for i in range(5):
+        yildiz(d, W / 2 - 120 + i * 60, y0 + 610, 22)
+    kutu(d, x0 + 40, y1 - 150, x1 - 40, y1 - 50, r=50, renk=(255, 110, 30))
+    yazi(d, (W / 2, y1 - 100), _tr_ust(p.get("buton", "SEPETE EKLE")), 50, BEYAZ)
+    fiyat_etiketi(d, W / 2 + 230, cy - 330, p.get("fiyat", ""), ease_back(faz(t, 0.8, 0.45)) * 1.25)
+    if p.get("bant") and t > T * 0.55:
+        baslik_bandi(d, _tr_ust(p["bant"]), t, T * 0.55, y=330, boy=88)
+
+
+def sb_akis(d, t, T, p):
+    """Sol → sağ akış: kayan paketler; aradan çıkanlar çarpılanır."""
+    if p.get("bant"):
+        baslik_bandi(d, _tr_ust(p["bant"]), t, 0.0, y=330, boy=88)
+    fx, ex, yy = 230, 850, 900
+    ikon(d, p.get("sol_ikon", "fabrika"), fx, yy, 1.2 * ease_out(faz(t, 0.1, 0.5)))
+    ikon(d, p.get("sag_ikon", "ev"), ex, yy, 1.2 * ease_out(faz(t, 0.4, 0.5)))
+    yazi(d, (fx, yy + 190), _tr_ust(p.get("sol", "")), 56, BEYAZ, kontur=3)
+    yazi(d, (ex, yy + 190), _tr_ust(p.get("sag", "")), 56, BEYAZ, kontur=3)
+    c = ease_out(faz(t, 0.7, 0.6))
+    if c > 0:
+        d.line((fx + 150, yy + 40, fx + 150 + (ex - fx - 300) * c, yy + 40), fill=(70, 70, 82), width=14)
+    for i in range(4):
+        q = (t - 1.0) * 0.4 + i / 4.0
+        if t < 1.0:
+            continue
+        q = q % 1.0
+        x = fx + 150 + (ex - fx - 300) * q
+        ikon(d, p.get("tasinan", "paket"), x, yy - 10 - 18 * math.sin(q * math.pi), 0.55)
+    ara = p.get("aradakiler", [])
+    for j, ad in enumerate(ara[:2]):
+        gx = 330 if len(ara) > 1 and j == 0 else (750 if len(ara) > 1 else W / 2)
+        bas = 1.4 + j * 0.5
+        if faz(t, bas, 0.4) > 0:
+            kutu(d, gx - 170, 1200, gx + 170, 1330, r=20, renk=PANEL)
+            yazi(d, (gx, 1265), _tr_ust(ad), 56, GRI)
+            carpi(d, gx, 1265, 70, faz(t, bas + 0.3, 0.3))
+
+
+def sb_cubuklar(d, t, T, p):
+    """Etiketli çubuklar: 'dus' küçülür(+çarpı), 'buyu' uzar; sonunda sonuç yazısı."""
+    if p.get("bant"):
+        baslik_bandi(d, _tr_ust(p["bant"]), t, 0.0, y=330, boy=84)
+    kalemler = p.get("kalemler", [])
+    y0 = 560 if p.get("bant") else 520
+    for i, km in enumerate(kalemler[:4]):
+        y = y0 + i * 220
+        k = ease_out(faz(t, i * 0.3, 0.5))
+        yazi(d, (120, y - 70), _tr_ust(km.get("ad", "")), 56, BEYAZ, hiza="lm", kontur=3)
+        kutu(d, 120, y - 25, 120 + 820 * k, y + 55, r=16, renk=PANEL)
+        oran = float(km.get("oran", 1.0))
+        hedef = km.get("durum", "")
+        dk = ease_out(faz(t, 1.2 + i * 0.25, 0.6))
+        if hedef == "dus":
+            dolu = 820 * k * oran * (1 - 0.88 * dk)
+            renk = KIRMIZI
+        elif hedef == "buyu":
+            dolu = 820 * k * (oran * 0.25 + oran * 0.75 * dk)
+            renk = SARI
+        else:
+            dolu = 820 * k * oran
+            renk = km.get("renk") and tuple(km["renk"]) or SARI
+        kutu(d, 120, y - 25, 120 + max(30, dolu), y + 55, r=16, renk=renk)
+        if km.get("deger") and dk > 0.5:
+            dx = 120 + max(30, dolu)
+            if dx + 20 + F(54).getlength(km["deger"]) > W - 30:   # taşarsa çubuğun içine yaz
+                yazi(d, (dx - 20, y + 15), km["deger"], 54, KOYU, hiza="rm")
+            else:
+                yazi(d, (dx + 20, y + 15), km["deger"], 54, BEYAZ, hiza="lm", kontur=3)
+        if hedef == "dus":
+            carpi(d, 1000, y + 15, 40, faz(t, 1.2 + i * 0.25, 0.3))
+    if p.get("sonuc"):
+        k2 = ease_back(faz(t, 2.0, 0.4))
+        if k2 > 0:
+            yb = y0 + len(kalemler[:4]) * 220 + 20
+            yazi(d, (W / 2, yb), _tr_ust(p["sonuc"]), int(92 * k2) + 1,
+                 YESIL if p.get("sonuc_renk") != "kirmizi" else KIRMIZI, kontur=4)
+
+
+def sb_soru_cevap(d, t, T, p):
+    """Soru bandı → büyük cevap → altta 2 ikonlu durum (saat dönüyor, yıldız söner...)."""
+    baslik_bandi(d, _tr_ust(p.get("soru", "")), t, 0.0, y=420, boy=84)
+    k = ease_back(faz(t, 0.5, 0.4))
+    cevap = _tr_ust(p.get("cevap", ""))
+    boy = 260
+    while boy > 100 and F(boy).getlength(cevap) > W - 100:
+        boy -= 10
+    if k > 0:
+        yazi(d, (W / 2, 700), cevap, int(boy * k) + 1, KIRMIZI, kontur=6)
+    alt = p.get("alt", [])
+    for j, a in enumerate(alt[:2]):
+        x = 290 if len(alt) > 1 and j == 0 else (790 if len(alt) > 1 else W / 2)
+        if faz(t, 1.0 + j * 0.3, 0.3) <= 0:
+            continue
+        if a.get("ikon") == "saat":
+            saat(d, x, 1080, 110, t / 3.0)
+        elif a.get("ikon") == "yildiz":
+            for i in range(5):
+                son = a.get("dus") and faz(t, 1.6 + i * 0.12, 0.2) > 0.5 and i >= 2
+                yildiz(d, x - 170 + i * 85, 1080, 36, dolu=not son)
+        else:
+            ikon(d, a.get("ikon", ""), x, 1080, 1.0 * ease_back(faz(t, 1.0 + j * 0.3, 0.4)))
+        yazi(d, (x, 1250), _tr_ust(a.get("ad", "")), 58, BEYAZ, kontur=3)
+
+
+def sb_karsilastir(d, t, T, p):
+    """İki kart yan yana (iyi/kötü işaretli), sonunda tik."""
+    if p.get("bant"):
+        baslik_bandi(d, _tr_ust(p["bant"]), t, 0.0, y=330, boy=90)
+    for j, (kart, x) in enumerate(((p.get("sol", {}), 290), (p.get("sag", {}), 790))):
+        k = ease_back(faz(t, 0.3 + j * 0.4, 0.45))
+        if k <= 0:
+            continue
+        w2, h2 = 210 * k, 270 * k
+        kutu(d, x - w2, 900 - h2, x + w2, 900 + h2, r=24, renk=(235, 236, 240))
+        ikon(d, kart.get("ikon", ""), x, 860, 1.0 * k)
+        if kart.get("alt"):
+            for i, sat in enumerate(_sar(_tr_ust(kart["alt"]), 40, 380 * k)[:2]):
+                yazi(d, (x, 1060 + i * 46), sat, max(10, int(40 * k)), (40, 40, 50))
+        yazi(d, (x, 900 + h2 + 60), _tr_ust(kart.get("ad", "")), 64, BEYAZ, kontur=3)
+        isaret = kart.get("isaret")
+        if isaret == "x":
+            carpi(d, x + w2 - 30, 900 - h2 + 30, 34, faz(t, 1.4 + j * 0.2, 0.3))
+        elif isaret == "tik":
+            tik(d, x + w2 - 40, 900 - h2 + 40, 36, faz(t, 1.4 + j * 0.2, 0.4))
+
+
+def sb_sayac(d, t, T, p):
+    """Büyük sayaç: 'bas'tan 'son'a sayar (geri sayım da olur), birim + açıklama."""
+    if p.get("bant"):
+        baslik_bandi(d, _tr_ust(p["bant"]), t, 0.0, y=330, boy=88)
+    if p.get("ikon"):
+        ikon(d, p["ikon"], W / 2, 620, 1.3 * ease_back(faz(t, 0.1, 0.4)))
+    bas, son = float(p.get("bas", 0)), float(p.get("son", 100))
+    k = ease_out(faz(t, 0.4, max(0.8, T * float(p.get("hiz", 0.55)))))
+    deger = bas + (son - bas) * k
+    metin = f"{p.get('on', '')}{int(round(deger))}{p.get('birim', '')}"
+    nab = 1 + 0.06 * math.sin(math.pi * kis((t - 0.4) * 4)) if k < 1 else 1
+    yazi(d, (W / 2, 960), metin, int(250 * nab), SARI if p.get("renk") != "kirmizi" else KIRMIZI, kontur=6)
+    if p.get("alt"):
+        for i, sat in enumerate(_sar(_tr_ust(p["alt"]), 72, W - 160)[:2]):
+            yazi(d, (W / 2, 1150 + i * 84), sat, 72, BEYAZ, kontur=4)
+
+
+def sb_liste(d, t, T, p):
+    """Maddeler sırayla gelir; her birinin yanında ✓ ya da ✗."""
+    if p.get("bant"):
+        baslik_bandi(d, _tr_ust(p["bant"]), t, 0.0, y=330, boy=88)
+    maddeler = p.get("maddeler", [])[:5]
+    adim = min(1.0, max(0.35, (T - 1.0) / max(1, len(maddeler))))
+    for i, m in enumerate(maddeler):
+        y = 560 + i * 170
+        k = ease_out(faz(t, 0.3 + i * adim, 0.4))
+        if k <= 0:
+            continue
+        x0 = 100 - (1 - k) * 700
+        kutu(d, x0, y - 62, x0 + 880, y + 62, r=22, renk=PANEL)
+        yazi(d, (x0 + 50, y), _tr_ust(m.get("metin", "")), 60, BEYAZ, hiza="lm")
+        isaret = m.get("isaret")
+        if isaret == "x":
+            carpi(d, x0 + 810, y, 32, faz(t, 0.5 + i * adim, 0.3))
+        elif isaret == "tik":
+            tik(d, x0 + 810, y, 34, faz(t, 0.5 + i * adim, 0.4))
+
+
+def sb_anahtar(d, t, T, p):
+    """Ayar ekranı: anahtar AÇIK'tan KAPALI'ya geçer."""
+    if p.get("bant"):
+        baslik_bandi(d, _tr_ust(p["bant"]), t, 0.0, y=330, boy=88)
+    g = ease_out(faz(t, 0, 0.5))
+    cy = 900 + (1 - g) * 500
+    kutu(d, 90, cy - 230, W - 90, cy + 230, r=36, renk=(235, 236, 240))
+    yazi(d, (W / 2, cy - 150), _tr_ust(p.get("ekran", "AYARLAR")), 54, (90, 90, 100))
+    yazi(d, (150, cy + 20), _tr_ust(p.get("etiket", "")), 62, (30, 30, 40), hiza="lm")
+    kapan = ease_out(faz(t, T * 0.45, 0.35))
+    acik = 1 - kapan if p.get("yon", "kapat") == "kapat" else kapan
+    renk = renk_kar((180, 180, 190), YESIL, acik)
+    tx = W - 330
+    kutu(d, tx, cy - 45, tx + 180, cy + 65, r=55, renk=renk)
+    bx = tx + 55 + 70 * acik
+    d.ellipse((bx - 45, cy - 35, bx + 45, cy + 55), fill=BEYAZ)
+    if kapan > 0.95 and p.get("sonuc"):
+        yazi(d, (W / 2, cy + 340), _tr_ust(p["sonuc"]), 80, SARI, kontur=4)
+
+
+def sb_boylar(d, t, T, p):
+    """Üç boy bardak/paket: etiket, ml; biri vurgulanır (rozetle)."""
+    if p.get("bant"):
+        baslik_bandi(d, _tr_ust(p["bant"]), t, 0.0, y=330, boy=88)
+    etik = p.get("etiketler", ["KÜÇÜK", "ORTA", "BÜYÜK"])
+    alt = p.get("alt", [])
+    olcek = (0.95, 1.25, 1.55)
+    vurgu = p.get("vurgu")
+    for i in range(3):
+        x = 230 + i * 310
+        k = ease_back(faz(t, 0.2 + i * 0.2, 0.45))
+        s = olcek[i] * k
+        yb = 1150
+        if s > 0.02:
+            h = 260 * s
+            w0, w1 = 95 * s, 72 * s
+            d.polygon([(x - w0, yb - h), (x + w0, yb - h), (x + w1, yb), (x - w1, yb)], fill=BEYAZ)
+            d.rectangle((x - w0 - 8 * s, yb - h - 26 * s, x + w0 + 8 * s, yb - h), fill=(60, 60, 70))
+            d.rectangle((x - w0 * 0.8, yb - h * 0.62, x + w0 * 0.8, yb - h * 0.32), fill=(30, 120, 80))
+        yazi(d, (x, yb + 70), _tr_ust(etik[i]) if i < len(etik) else "", 60,
+             SARI if vurgu == i else BEYAZ, kontur=3)
+        if i < len(alt) and faz(t, 1.0, 0.3) > 0:
+            yazi(d, (x, yb + 140), _tr_ust(alt[i]), 46, GRI, kontur=2)
+    if vurgu is not None and p.get("rozet"):
+        k2 = ease_back(faz(t, 1.3, 0.4))
+        if k2 > 0:
+            x = 230 + vurgu * 310
+            kutu(d, x - 150 * k2, 560, x + 150 * k2, 650, r=20, renk=KIRMIZI)
+            yazi(d, (x, 605), _tr_ust(p["rozet"]), int(50 * k2) + 1, BEYAZ)
+
+
+def sb_buyuk_yazi(d, t, T, p):
+    """Satır satır büyük yazı; 'ciz' indeksli satırın üstü çizilir, 'vurgu' sarı."""
+    satirlar = p.get("satirlar", [])[:4]
+    yb = 960 - (len(satirlar) - 1) * 95
+    for i, sat in enumerate(satirlar):
+        k = ease_back(faz(t, 0.2 + i * 0.35, 0.4))
+        if k <= 0:
+            continue
+        metin = _tr_ust(sat)
+        boy = 130
+        while boy > 60 and F(boy).getlength(metin) > W - 120:
+            boy -= 6
+        renk = SARI if p.get("vurgu") == i else BEYAZ
+        y = yb + i * 190
+        yazi(d, (W / 2, y), metin, int(boy * k) + 1, renk, kontur=5)
+        if p.get("ciz") == i:
+            ck = ease_out(faz(t, 0.6 + i * 0.35, 0.4))
+            gw = F(boy).getlength(metin)
+            d.line((W / 2 - gw / 2 - 20, y, W / 2 - gw / 2 - 20 + (gw + 40) * ck, y), fill=KIRMIZI, width=16)
+
+
+def sb_damga(d, t, T, p):
+    """Ürün kartı + üstüne çarpan büyük damga (TÜKENDİ gibi)."""
+    if p.get("ust"):
+        baslik_bandi(d, _tr_ust(p["ust"]), t, 0.0, y=330, boy=84)
+    k = ease_back(faz(t, 0.2, 0.45))
+    if k > 0:
+        kutu(d, W / 2 - 300 * k, 950 - 330 * k, W / 2 + 300 * k, 950 + 330 * k, r=30, renk=(235, 236, 240))
+        ikon(d, p.get("ikon", "paket"), W / 2, 880, 1.6 * k)
+        yazi(d, (W / 2, 950 + 230 * k), _tr_ust(p.get("etiket", "")), max(10, int(56 * k)), (40, 40, 50))
+    dk = faz(t, float(p.get("an", 1.2)), 0.25)
+    if dk > 0:
+        s = 1.6 - 0.6 * ease_out(dk)
+        damga = _tr_ust(p.get("damga", "TÜKENDİ"))
+        kat, kd = _katman(900)
+        kd.rounded_rectangle((60, 330, 840, 570), radius=24, outline=KIRMIZI, width=16)
+        kd.text((450, 450), damga, font=F(150), fill=KIRMIZI, anchor="mm")
+        kat = kat.rotate(-12, resample=Image.BICUBIC)
+        kat = kat.resize((int(900 * s), int(900 * s)), Image.BICUBIC)
+        _yapistir(d, kat, W / 2, 950)
+
+
+SABLONLAR = {
+    "kanca": sb_kanca, "fiyat": sb_fiyat, "akis": sb_akis, "cubuklar": sb_cubuklar,
+    "soru_cevap": sb_soru_cevap, "karsilastir": sb_karsilastir, "sayac": sb_sayac,
+    "liste": sb_liste, "anahtar": sb_anahtar, "boylar": sb_boylar, "buyuk_yazi": sb_buyuk_yazi,
+    "damga": sb_damga,
+}
+
+
+def sahne_ciz(d, t, T, spec):
+    """Sahne spec'ini çizer; 'sonra' varsa sahne süresi 'bolme' oranında ikiye ayrılır."""
+    if spec.get("sonra"):
+        b = T * float(spec.get("bolme", 0.5))
+        if t >= b:
+            return sahne_ciz(d, t - b, T - b, spec["sonra"])
+        T = b
+    f = SABLONLAR.get(spec.get("tip"))
+    if f:
+        f(d, t, T, spec)
+
+
+SAHNE_DOSYA = "kod_sahneler.json"
+
+
+def sahne_tanimi(baslik):
+    """kod_sahneler.json'dan bu başlığın kanca + sahne + klip tanımları."""
+    with open(SAHNE_DOSYA, encoding="utf-8") as f:
+        return json.load(f)[baslik]
+
+
+def klipleri_indir(sorgular, tmp):
     import video as V
     yollar = []
-    for i, q in enumerate(SAHNE_KLIP.get(baslik, [])):
+    for i, q in enumerate(sorgular):
         yol = os.path.join(tmp, f"klip_{i}.mp4")
         try:
-            r = V.stok_video_ara(q, (W, H), yol, dikey=True)
+            r = V.stok_video_ara(q, (W, H), yol, dikey=True) if q else None
             yollar.append(yol if r else None)
             print(f"   Klip {i + 1}: {q} -> {r[0] if r else 'yok'}")
         except Exception as e:
@@ -560,7 +840,6 @@ def klipleri_indir(baslik, tmp):
     return yollar
 
 
-# ---------------- ses + zamanlama ----------------
 def seslendir(metin, mp3):
     """Kanal Shorts sesi (ElevenLabs, config.kisa_ses_id) → yoksa edge-tts."""
     import video as V
@@ -603,7 +882,8 @@ def sahne_sinirlari(sahneler, kelimeler, toplam):
 def render(baslik, cikti):
     S = json.load(open("senaryolar.json", encoding="utf-8-sig"))
     s = next(x for x in S if x["baslik"] == baslik)
-    ciz = SAHNE_CIZ[baslik]
+    tanim = sahne_tanimi(baslik)
+    ciz = tanim["sahneler"]
     tmp = tempfile.mkdtemp()
     metin = (s["script"].rstrip(" .") + ". " + SABIT_CTA).strip()
     import video as V
@@ -629,7 +909,8 @@ def render(baslik, cikti):
     toplam = V.sure_al(mp3) + 0.6
     sinir = sahne_sinirlari(s["sahneler"], kelimeler, toplam)
     kanca_sure = 1.1
-    klipler = klipleri_indir(baslik, tmp) if os.environ.get("KOD_VIDEO_KLIPSIZ") != "1" else []
+    sorgular = [sp.get("klip", "") for sp in ciz] + [tanim.get("kapanis_klip", "delivery package doorstep")]
+    klipler = klipleri_indir(sorgular, tmp) if os.environ.get("KOD_VIDEO_KLIPSIZ") != "1" else []
     print("Sahne başlangıçları:", [round(x, 2) for x in sinir], "toplam", round(toplam, 2))
 
     ff = subprocess.Popen(
@@ -652,14 +933,14 @@ def render(baslik, cikti):
             akan_i = ki
         img, d = arka_plan(t, akan)
         if t < kanca_sure:
-            s_kanca(d, t, kanca_sure)
+            sb_kanca(d, t, kanca_sure, tanim.get("kanca", {}))
         elif t >= sinir[-1]:
             s_son(d, t - sinir[-1], toplam - sinir[-1])
         else:
             for i in range(len(ciz)):
                 if sinir[i] <= t < sinir[i + 1]:
                     bas = max(sinir[i], kanca_sure if i == 0 else sinir[i])
-                    ciz[i](d, t - bas, sinir[i + 1] - bas)
+                    sahne_ciz(d, t - bas, sinir[i + 1] - bas, ciz[i])
                     break
         altyazi(d, kelimeler, t)
         # ilerleme çubuğu
@@ -673,8 +954,25 @@ def render(baslik, cikti):
     return cikti
 
 
+def _slug(b):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", b.replace("ı", "i").replace("İ", "I")).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")[:40]
+
+
 if __name__ == "__main__":
-    b = sys.argv[1] if len(sys.argv) > 1 else "TEMU NASIL BU KADAR UCUZ? 📦"
-    out = sys.argv[2] if len(sys.argv) > 2 else "onizleme/kod_video/temu.mp4"
-    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
-    render(b, out)
+    # Kullanım: kod_video.py "BAŞLIK" [çıktı]  |  kod_video.py --liste dosya.txt
+    if len(sys.argv) > 2 and sys.argv[1] == "--liste":
+        basliklar = [x.strip() for x in open(sys.argv[2], encoding="utf-8") if x.strip()]
+        for b in basliklar:
+            out = os.path.join("onizleme", "kod_video", _slug(b) + ".mp4")
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            try:
+                render(b, out)
+            except Exception as e:
+                print("HATA", b, str(e)[:200])
+    else:
+        b = sys.argv[1] if len(sys.argv) > 1 else "TEMU NASIL BU KADAR UCUZ? 📦"
+        out = sys.argv[2] if len(sys.argv) > 2 else os.path.join("onizleme", "kod_video", _slug(b) + ".mp4")
+        os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+        render(b, out)
