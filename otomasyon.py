@@ -389,20 +389,34 @@ def main():
     os.makedirs("output", exist_ok=True)
     cikti = "output/video.mp4"
     print("[2/3] Video üretiliyor ...")
-    V.uret_video(sp, cikti,
-                 ses=cfg.get("ses", "erkek"),
-                 dikey=(cfg.get("format", "dikey") == "dikey"),
-                 hiz=str(cfg.get("hiz", "+15%")),
-                 sahneler=veri.get("sahneler"),
-                 animasyon=bool(cfg.get("animasyon", True)),
-                 cocuk=bool(cfg.get("cocuk_icerigi", False)),
-                 tonlama=str(cfg.get("tonlama", "+0Hz")),
-                 gorsel_stil=str(cfg.get("gorsel_stil", "stok")),
-                 kanca=veri.get("kanca"),
-                 eleven_once=bool(cfg.get("kisa_eleven", True)),
-                 eleven_voice_id=str(cfg.get("kisa_ses_id", "")).strip() or None,
-                 ai_sahne=bool(cfg.get("ai_sahne", False)),
-                 ai_fallback=bool(cfg.get("ai_gorsel_yedegi", True)))
+    kod_ok = False
+    if veri.get("seri") == "marka" and cfg.get("kod_video", True):
+        # Marka serisi: tamamen kodla çizilmiş hareketli grafik + gerçek stok klip
+        # (kod_video.py / kod_sahneler.json). Hata olursa klasik üretime düşülür.
+        try:
+            import kod_video as KV
+            if veri["baslik"] in json.load(open(KV.SAHNE_DOSYA, encoding="utf-8")):
+                os.environ["KOD_VIDEO_SES_DIR"] = ""   # üretimde ses önbelleği yazma
+                KV.render(veri["baslik"], cikti)
+                kod_ok = os.path.exists(cikti) and os.path.getsize(cikti) > 100_000
+                print(f"      Kod video: {'tamam' if kod_ok else 'çıktı yok, klasik üretime geçiliyor'}")
+        except Exception as e:
+            print(f"      Kod video hata ({str(e)[:150]}), klasik üretime geçiliyor")
+    if not kod_ok:
+        V.uret_video(sp, cikti,
+                     ses=cfg.get("ses", "erkek"),
+                     dikey=(cfg.get("format", "dikey") == "dikey"),
+                     hiz=str(cfg.get("hiz", "+15%")),
+                     sahneler=veri.get("sahneler"),
+                     animasyon=bool(cfg.get("animasyon", True)),
+                     cocuk=bool(cfg.get("cocuk_icerigi", False)),
+                     tonlama=str(cfg.get("tonlama", "+0Hz")),
+                     gorsel_stil=str(cfg.get("gorsel_stil", "stok")),
+                     kanca=veri.get("kanca"),
+                     eleven_once=bool(cfg.get("kisa_eleven", True)),
+                     eleven_voice_id=str(cfg.get("kisa_ses_id", "")).strip() or None,
+                     ai_sahne=bool(cfg.get("ai_sahne", False)),
+                     ai_fallback=bool(cfg.get("ai_gorsel_yedegi", True)))
     print(f"      Çıktı: {cikti}  ({os.path.getsize(cikti)//1024} KB)")
 
     kapak_yolu = None
