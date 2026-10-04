@@ -1,4 +1,4 @@
-Ses: ElevenLabs (kanal Shorts sesi)
+Ses: önbellek (kredi harcanmadı)
       Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
       [Pexels: 8 klip / ~8000 toplam -> 'online shopping smartphone']
       [Pixabay: 12 klip / ~872 toplam -> 'online shopping smartphone']
