@@ -51,6 +51,7 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}   # kod video stoğunu (release) indirmek için
         run: python3 otomasyon.py
       # Uretilen video/kapak repoya commit edilmez; buradan indirilebilir.
       - name: Video artifact (son_video.mp4 / son_kapak.jpg)

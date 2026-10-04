@@ -397,7 +397,9 @@ def main():
             import kod_video as KV
             if veri["baslik"] in json.load(open(KV.SAHNE_DOSYA, encoding="utf-8")):
                 os.environ["KOD_VIDEO_SES_DIR"] = ""   # üretimde ses önbelleği yazma
-                KV.render(veri["baslik"], cikti)
+                # Önce stoktaki (önceden render edilmiş) hazır video; yoksa canlı render
+                if not KV.stok_indir(veri["baslik"], cikti):
+                    KV.render(veri["baslik"], cikti)
                 kod_ok = os.path.exists(cikti) and os.path.getsize(cikti) > 100_000
                 print(f"      Kod video: {'tamam' if kod_ok else 'çıktı yok, klasik üretime geçiliyor'}")
         except Exception as e:

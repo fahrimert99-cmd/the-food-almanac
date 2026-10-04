@@ -1089,9 +1089,73 @@ def _slug(b):
     return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")[:40]
 
 
+# ---------------- STOK: önceden render, yayında hazır video ----------------
+STOK_TAG = "kod-video-stok"     # GitHub release etiketi (videolar repoya girmez)
+KOD_VIDEO_SURUM = "1"           # render görünümü değişince artır -> stok yenilenir
+
+
+def stok_adi(baslik):
+    """Stok dosya adı: senaryo metni + sahne tarifi + sürüm değişirse ad da değişir
+    (eski render kendiliğinden geçersiz kalır)."""
+    import hashlib
+    S = json.load(open("senaryolar.json", encoding="utf-8-sig"))
+    s = next(x for x in S if x["baslik"] == baslik)
+    tarif = json.dumps(sahne_tanimi(baslik), ensure_ascii=False, sort_keys=True)
+    h = hashlib.md5((KOD_VIDEO_SURUM + s["script"] + tarif + SABIT_CTA).encode()).hexdigest()[:8]
+    return f"{_slug(baslik)}-{h}.mp4"
+
+
+def _gh(*arg, timeout=180):
+    return subprocess.run(["gh", *arg], capture_output=True, text=True, timeout=timeout)
+
+
+def stok_varliklar():
+    r = _gh("release", "view", STOK_TAG, "--json", "assets", "-q", ".assets[].name")
+    return set(r.stdout.split()) if r.returncode == 0 else set()
+
+
+def stok_indir(baslik, hedef):
+    """Stoktaki hazır videoyu indir (GH_TOKEN gerekir). Başarılıysa True."""
+    try:
+        ad = stok_adi(baslik)
+        tmp = tempfile.mkdtemp()
+        r = _gh("release", "download", STOK_TAG, "-p", ad, "-D", tmp)
+        yol = os.path.join(tmp, ad)
+        if r.returncode == 0 and os.path.exists(yol) and os.path.getsize(yol) > 100_000:
+            import shutil
+            shutil.move(yol, hedef)
+            print(f"      Stoktan hazır video: {ad}")
+            return True
+        print(f"      Stokta yok ({ad}): {(r.stderr or '').strip()[:120]}")
+    except Exception as e:
+        print(f"      Stok indirme hata: {str(e)[:120]}")
+    return False
+
+
+def stok_eksikleri():
+    """Yayınlanmamış marka senaryolarından stokta hazır videosu olmayanlar."""
+    S = json.load(open("senaryolar.json", encoding="utf-8-sig"))
+    yap = set(json.load(open("durum.json", encoding="utf-8")).get("yapilan", []))
+    T = json.load(open(SAHNE_DOSYA, encoding="utf-8"))
+    var = stok_varliklar()
+    return [s["baslik"] for s in S if s.get("seri") == "marka" and s["baslik"] not in yap
+            and s["baslik"] in T and stok_adi(s["baslik"]) not in var]
+
+
 if __name__ == "__main__":
     # Kullanım: kod_video.py "BAŞLIK" [çıktı]  |  kod_video.py --liste dosya.txt
-    if len(sys.argv) > 2 and sys.argv[1] == "--liste":
+    if len(sys.argv) > 3 and sys.argv[1] == "--stok-render":
+        # kod_video.py --stok-render <parça> <parça_sayısı>: eksik stok videolarını render et
+        i, n = int(sys.argv[2]), int(sys.argv[3])
+        eksik = stok_eksikleri()
+        print(f"Stok: {len(eksik)} eksik video; bu parça: {len(eksik[i::n])}")
+        os.makedirs("stok", exist_ok=True)
+        for b in eksik[i::n]:
+            try:
+                render(b, os.path.join("stok", stok_adi(b)))
+            except Exception as e:
+                print("HATA", b, str(e)[:200])
+    elif len(sys.argv) > 2 and sys.argv[1] == "--liste":
         basliklar = [x.strip() for x in open(sys.argv[2], encoding="utf-8") if x.strip()]
         for b in basliklar:
             out = os.path.join("onizleme", "kod_video", _slug(b) + ".mp4")
