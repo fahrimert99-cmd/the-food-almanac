@@ -1,0 +1,95 @@
+name: Tek seferlik - 5 Ekim 12:00 videosunu kod video ile degistir
+
+# Kullanıcı onayıyla, bir kez: eski tarzda planlanan "MARKETTE NEDEN TELEVİZYON
+# SATILIR?" videosunu stoktaki kodla çizilmiş sürümle değiştirir. Önce yenisi
+# yüklenir; ancak başarılıysa eskisi silinir.
+on:
+  push:
+    branches: [claude/marka-video-degistir]
+    paths: [.github/workflows/marka_video_degistir.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kisa-video
+  cancel-in-progress: false
+
+jobs:
+  degistir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: FFmpeg kur
+        timeout-minutes: 10
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Degistir
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          sys.argv = ["degistir"]
+          import kod_video as KV, youtube_yukle as YT, kapak as K
+          BASLIK = "MARKETTE NEDEN TELEVİZYON SATILIR? 📺"
+          ESKI = "IwOJ0PI5R_U"
+          SLOT = "2026-10-05T09:00:00Z"
+          cfg = json.load(open("config.json", encoding="utf-8-sig"))
+          veri = next(s for s in json.load(open("senaryolar.json", encoding="utf-8-sig")) if s["baslik"] == BASLIK)
+          mevcut = YT.planli_slot_video(SLOT)
+          print("Slottaki video:", mevcut)
+          if mevcut and mevcut != ESKI:
+              raise SystemExit(f"Slotta beklenmeyen video var ({mevcut}); dokunulmadı.")
+          os.makedirs("output", exist_ok=True)
+          cikti = "output/video.mp4"
+          if not KV.stok_indir(BASLIK, cikti):
+              raise SystemExit("Stokta video yok; eski video olduğu gibi bırakıldı.")
+          kapak = K.kapak_uret(cikti, BASLIK, "output/kapak.jpg")
+          if cfg.get("marka_ilk_kare", True) and kapak:
+              cikti = K.ilk_kare_bas(cikti, kapak, sure=float(cfg.get("marka_ilk_kare_sn", 1.0)))
+          try:
+              import aciklama as ACK
+              acik = ACK.olustur(veri, cfg)
+          except Exception:
+              acik = veri.get("aciklama", "")
+          yeni = YT.yukle(cikti, BASLIK, acik, veri.get("etiketler") or [],
+                          gizlilik=cfg.get("gizlilik", "private"), kategori=str(cfg.get("kategori", "28")),
+                          cocuk_icerigi=bool(cfg.get("cocuk_icerigi", False)), kapak=kapak,
+                          yayin_zamani=SLOT, sentetik=bool(cfg.get("ai_beyani", True)))
+          if not yeni:
+              raise SystemExit("Yeni video yüklenemedi; eski video olduğu gibi bırakıldı.")
+          print("✓ Yeni video planlandı:", f"https://youtu.be/{yeni}", SLOT)
+          try:
+              YT.oynatma_listesine_ekle(yeni, "🛒 Market & AVM Tuzakları")
+          except Exception as e:
+              print("oynatma listesi atlandı:", str(e)[:100])
+          if mevcut == ESKI:
+              YT.sil(ESKI)
+          d = json.load(open("durum.json", encoding="utf-8"))
+          if d.get("son_video_id") == ESKI:
+              d["son_video_id"] = yeni
+          b = d.get("bekleyen_yorum") or {}
+          if b.get("video_id") == ESKI:
+              b["video_id"] = yeni
+              d["bekleyen_yorum"] = b
+          open("durum.json", "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, indent=2))
+          print("TAMAM")
+          PY
+      - name: durum.json kaydet
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add durum.json
+          git commit -m "degistir: 5 Ekim 12:00 videosu kod video surumuyle" || exit 0
+          for i in 1 2 3 4 5; do git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0; sleep $((2 ** i)); done
