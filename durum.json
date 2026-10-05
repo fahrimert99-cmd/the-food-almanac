@@ -64,6 +64,7 @@
     "MARKETTE NEDEN TELEVİZYON SATILIR? 📺",
     "MEGALODON HÂLÂ YAŞIYOR OLABİLİR Mİ? 🦈",
     "MENÜDE FİYAT NEDEN SAĞDA DEĞİL? 🍽️",
+    "MENÜDE RESİM NEDEN YOK? 📖",
     "MENÜDEKİ GİZLİ TUZAK! 📋",
     "MÜZİĞİN HIZI NEDEN ÖNEMLİ? 🎵",
     "NEDEN HEP 'YENİ' DERLER? ✨",
@@ -132,17 +133,17 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": "PAHALANDI? 🛒'): İLK ÜRÜN NEDEN PAHALI GÖSTERİLİR? 📊\n      · atlandı (yayınlanmış konu tekrarı ~ 'BENZİNLİK MARKETİ NEDEN PAHALI? ⛽'): MARKALI GİYSİ NEDEN PAHALI? 👕\n      · atlandı (yayınlanmış konu tekrarı ~ 'BOZUK PARA NEDEN VERMEZLER? 🪙'): BOZUK PARANIN KENARI NEDEN TIRTIKLI? 🪙\n      · atlandı (yayınlanmış konu tekrarı ~ 'REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺'): 'BEDAVA' KELİMESİ BEYNİ NASIL KANDIRIR? 🧠\n      · atlandı (yayınlanmış konu tekrarı ~ 'SON KULLANMA TARİHİ OYUNU! 📅'): SON KULLANMA TARİHİNİN ÖNÜNDE FİYAT MANİPÜLASYONU! 📅\n      · atlandı (yayınlanmış konu tekrarı ~ 'ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİ'): ABONELİK İPTALİNİ GİZLEYEN SAYFA TUZAĞI 🔒\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): İNDİRİM ETİKETİ NEDEN HEP KIRMIZI? 🔴\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): EN PAHALI ÜRÜN NEDEN GÖZ HİZASINDA? 👁️\n      · atlandı (yayınlanmış konu tekrarı ~ ''ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰'): “ÜCRETSİZ DENE” NEDEN ÜCRETLİ OLUR? ⏰\n      · atlandı (yayınlanmış konu tekrarı ~ 'UÇAK BİLETİ FİYAT OYUNU! ✈️'): “SANA ÖZEL” FİYAT OYUNU! 🎯\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): SAHTE İNDİRİMİN MATEMATİĞİ: BÜYÜK YALANI NASIL ANLARSIN\n      · atlandı (yayınlanmış konu tekrarı ~ 'PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉'): UN PAKETİ NEDEN 1KG'den 900g'a düştü fiyat aynı? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖'): MARKET GİRİŞİNDE KULLANILAN SIĞIR KOKUSU NEDEN DAHA FAZ\n      Tema (katı marka filtresi): 'tuzak' (uygun kalan: 73)\n      Slot 09:00 UTC: marka serisi (kalan: 34)\n[1/3] Senaryo (152/185) [diger]: TEMU NASIL BU KADAR UCUZ? 📦\n✓ Yayın slotu zaten dolu (2026-10-05T09:00:00Z); atlandı: https://youtu.be/IwOJ0PI5R_U\n",
+  "son_rapor": "y: 12 klip / ~1954 toplam -> 'restaurant interior warm']\n      [seçim(vision): pexels~8000 / pixabay~1954 -> önce pixabay]\n      Sahne 6/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~8000 toplam -> 'restaurant menu closeup hands,']\n      [Pixabay: 12 klip / ~1859 toplam -> 'restaurant menu closeup hands,']\n      [seçim(vision): pexels~8000 / pixabay~1859 -> önce pexels]\n      Sahne 7/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'elegant restaurant table setting,']\n      [Pixabay: 12 klip / ~1979 toplam -> 'elegant restaurant table setting,']\n      [seçim(vision): pexels~8000 / pixabay~1979 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~6509 toplam -> 'waiter serving dish, overhead']\n      [Pixabay: 12 klip / ~289 toplam -> 'waiter serving dish, overhead']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~6509 / pixabay~289 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'person reading menu, side']\n      [Pixabay: 12 klip / ~1680 toplam -> 'person reading menu, side']\n      [seçim(vision): pexels~8000 / pixabay~1680 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: openrouter=0, nvidia=0, pexels=9, pixabay=1, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (22190 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-10-05T17:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi\n✓ Yüklendi: https://youtu.be/J90BKmZDM04  (yayın: 2026-10-05T17:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n",
   "bekleyen_yorum": {
-    "video_id": "wXSs_0545p0",
-    "metin": "Kampanyaya gidip başka şey aldığın oldu mu?",
+    "video_id": "J90BKmZDM04",
+    "metin": "MENÜDE RESİM NEDEN YOK hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "69008e0ef18597c0"
+    "hash": "029aa03414b933ad"
   },
-  "son_kategori": "diger",
-  "son_video_id": "wXSs_0545p0",
-  "son_baslik": "MARKETTE NEDEN TELEVİZYON SATILIR? 📺",
-  "son_yayin_zamani": "2026-10-05T09:00:00Z",
+  "son_kategori": "yeme",
+  "son_video_id": "J90BKmZDM04",
+  "son_baslik": "MENÜDE RESİM NEDEN YOK? 📖",
+  "son_yayin_zamani": "2026-10-05T17:00:00Z",
   "analytics_ozet": {
     "guncelleme": "2026-10-04T11:41:11Z",
     "donem": {
