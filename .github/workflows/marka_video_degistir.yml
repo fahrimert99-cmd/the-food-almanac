@@ -37,6 +37,11 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVEN_VOICE_ID: ${{ secrets.ELEVEN_VOICE_ID }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python3 - <<'PY'
           import json, os, sys
@@ -54,7 +59,10 @@ jobs:
           os.makedirs("output", exist_ok=True)
           cikti = "output/video.mp4"
           if not KV.stok_indir(BASLIK, cikti):
-              raise SystemExit("Stokta video yok; eski video olduğu gibi bırakıldı.")
+              os.environ["KOD_VIDEO_SES_DIR"] = ""
+              KV.render(BASLIK, cikti)   # stokta yoksa (planlı olduğu için stoklanmadı) şimdi render et
+          if not (os.path.exists(cikti) and os.path.getsize(cikti) > 100_000):
+              raise SystemExit("Kod video üretilemedi; eski video olduğu gibi bırakıldı.")
           kapak = K.kapak_uret(cikti, BASLIK, "output/kapak.jpg")
           if cfg.get("marka_ilk_kare", True) and kapak:
               cikti = K.ilk_kare_bas(cikti, kapak, sure=float(cfg.get("marka_ilk_kare_sn", 1.0)))
