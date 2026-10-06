@@ -991,7 +991,13 @@ def azure_seslendir(metin, mp3):
     if r.reason != sdk.ResultReason.SynthesizingAudioCompleted:
         raise RuntimeError(f"Azure: {r.reason} {getattr(r, 'cancellation_details', '')}")
     open(mp3, "wb").write(r.audio_data)
-    if not kelimeler:   # bazı sesler kelime zamanı vermez: harf sayısına göre dağıt
+    if not kelimeler:
+        try:
+            kelimeler = whisper_hizala(mp3, metin)
+            print("Azure: kelime zamanları Whisper ile hizalandı")
+        except Exception as e:
+            print("Whisper hizalama hata:", str(e)[:150])
+    if not kelimeler:   # son çare: harf sayısına göre dağıt
         import video as V
         sure = V.sure_al(mp3)
         ws = metin.split() or [" "]
@@ -1003,6 +1009,60 @@ def azure_seslendir(metin, mp3):
             t += d
         print("Azure: kelime zamanı yok, tahmini zamanlama")
     return kelimeler
+
+
+def _kok(w):
+    w = w.replace("İ", "i").replace("I", "ı").lower()
+    return re.sub(r"[^0-9a-zçğıöşü]", "", w)
+
+
+def whisper_hizala(mp3, metin):
+    """Metindeki her kelimeye, Whisper'ın sesten bulduğu zamanı verir. Altyazı
+    metni senaryodan gelir (yazım doğru kalır); eşleşmeyen kelimeler komşu
+    eşleşmelerin arasına harf sayısına göre yerleştirilir."""
+    from faster_whisper import WhisperModel
+    import difflib
+    model = WhisperModel(os.environ.get("WHISPER_MODEL", "small"), device="cpu", compute_type="int8")
+    parcalar, _ = model.transcribe(mp3, language="tr", word_timestamps=True, beam_size=5)
+    duyulan = [w for p in parcalar for w in (p.words or [])]
+    if not duyulan:
+        raise RuntimeError("Whisper kelime bulamadı")
+    ws = metin.split()
+    a, b = [_kok(w) for w in ws], [_kok(w.word) for w in duyulan]
+    zaman = [None] * len(ws)
+    for blok in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        etiket, i1, i2, j1, j2 = blok
+        if etiket == "equal" or (etiket == "replace" and i2 - i1 == j2 - j1):
+            for k in range(i2 - i1):
+                zaman[i1 + k] = (duyulan[j1 + k].start, duyulan[j1 + k].end)
+        elif etiket == "replace":   # sayı/ek farkı: aralığı bloğa yay
+            bas, son = duyulan[j1].start, duyulan[j2 - 1].end
+            top = sum(len(w) + 1 for w in ws[i1:i2])
+            t = bas
+            for k in range(i1, i2):
+                d = (son - bas) * (len(ws[k]) + 1) / top
+                zaman[k] = (t, t + d)
+                t += d
+    # eşleşmeyenleri komşular arasında doldur
+    i = 0
+    while i < len(ws):
+        if zaman[i] is not None:
+            i += 1
+            continue
+        j = i
+        while j < len(ws) and zaman[j] is None:
+            j += 1
+        bas = zaman[i - 1][1] if i > 0 else 0.0
+        son = zaman[j][0] if j < len(ws) else max(bas + 0.3 * (j - i), duyulan[-1].end)
+        top = sum(len(w) + 1 for w in ws[i:j])
+        t = bas
+        for k in range(i, j):
+            d = (son - bas) * (len(ws[k]) + 1) / top
+            zaman[k] = (t, t + d)
+            t += d
+        i = j
+    return [{"start": round(z[0], 3), "dur": round(max(0.05, z[1] - z[0]), 3), "text": w}
+            for w, z in zip(ws, zaman)]
 
 
 def seslendir(metin, mp3):
