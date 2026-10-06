@@ -18,6 +18,7 @@ Görsel kaynağı:
 """
 
 import os, re, sys, glob, json, math, asyncio, argparse, subprocess, tempfile, shutil
+import urllib.request
 
 # ----------------------------------------------------------
 # AYARLAR  (istediğiniz gibi değiştirin)
@@ -465,6 +466,56 @@ def _gemini_image_key():
         else:
             return raw
     return ""
+
+
+def _openrouter_image_key():
+    return re.sub(r"\s", "", os.environ.get("OPENROUTER_API_KEY") or "")
+
+
+OPENROUTER_IMAGE_MODEL = (os.environ.get("OPENROUTER_IMAGE_MODEL", "").strip()
+                           or "inclusionai/ming-image-0.1-design")
+
+
+def gorsel_uret_openrouter(prompt, boyut, idx, path, cocuk=True, stil_ad="foto"):
+    """OpenRouter Image API ile ücretsiz görsel üretir; başarısızsa False döner."""
+    key = _openrouter_image_key()
+    if not key:
+        return False
+    import base64 as _b64
+    W, H = boyut
+    stil = ("children's book illustration, cute, colorful, friendly, no text, no watermark"
+            if cocuk else
+            "editorial illustration, realistic materials, cinematic lighting, no text, no watermark")
+    body = {"model": OPENROUTER_IMAGE_MODEL,
+            "prompt": f"{prompt}, {stil}", "size": "1024x1024",
+            "n": 1, "output_format": "png"}
+    req = urllib.request.Request(
+        "https://openrouter.ai/api/v1/images",
+        data=json.dumps(body).encode(),
+        headers={"Content-Type": "application/json", "Authorization": f"Bearer {key}",
+                 "HTTP-Referer": "https://github.com/fahrimert99-cmd/yt-cocuk-otomasyon",
+                 "X-Title": "YT Cocuk Otomasyon"})
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r:
+            data = json.loads(r.read().decode())
+        item = (data.get("data") or [{}])[0]
+        raw = item.get("b64_json")
+        if raw:
+            blob = _b64.b64decode(raw)
+        elif item.get("url"):
+            with urllib.request.urlopen(item["url"], timeout=90) as r:
+                blob = r.read()
+        else:
+            return False
+        with open(path + ".raw", "wb") as f:
+            f.write(blob)
+        _resize_cover(path + ".raw", boyut, path)
+        os.remove(path + ".raw")
+        print(f"      [görsel {idx}: OpenRouter/{OPENROUTER_IMAGE_MODEL} ✓]")
+        return True
+    except Exception as e:
+        print(f"      [görsel {idx}: OpenRouter hata: {str(e)[:120]}]")
+        return False
 
 
 def gorsel_uret_ai(prompt, boyut, idx, path, cocuk=True, stil_ad="foto", gradient=True):
@@ -1059,7 +1110,7 @@ def sahne_gorselleri_hazirla(sahneler, cumleler, boyut, tmp, cocuk=True, stil="s
             print(f"      AI sahne kapalı (nvidia_araclar yok: {str(e)[:60]})")
             NA = None
     gorseller = []
-    sayac = {"pexels": 0, "pixabay": 0, "ai": 0, "nvidia": 0}
+    sayac = {"pexels": 0, "pixabay": 0, "ai": 0, "nvidia": 0, "openrouter": 0}
     for i, p in enumerate(prompts):
         # İLK KARE ÇARPICI OLSUN: Shorts akışında video otomatik oynar ve izleyici
         # kararını ilk anda verir (analitik: %76 "izlemeden geçti"). Bu yüzden 1.
@@ -1069,7 +1120,15 @@ def sahne_gorselleri_hazirla(sahneler, cumleler, boyut, tmp, cocuk=True, stil="s
             p = (p.strip() + ", extreme close-up macro shot filling the frame, "
                  "shallow depth of field, dramatic high-contrast lighting, "
                  "bold striking composition, eye-catching opening frame")
-        # 0) NVIDIA flux ana üretici: hızlı ve mevcut workflow'da doğrulanmış.
+        # 0) OpenRouter ücretsiz görsel modeli: senaryoyla aynı sağlayıcı.
+        if ai_sahne:
+            aipath = os.path.join(tmp, f"sahne_openrouter_{i:03d}.jpg")
+            if gorsel_uret_openrouter(p, boyut, i, aipath, cocuk=cocuk, stil_ad=stil):
+                sayac["openrouter"] += 1
+                gorseller.append(("image", aipath))
+                print(f"      Sahne {i+1}/{len(prompts)}: OpenRouter görseli ✓")
+                continue
+        # 1) NVIDIA flux ana üretici: hızlı ve mevcut workflow'da doğrulanmış.
         if NA is not None:
             aipath = os.path.join(tmp, f"sahne_nvidia_{i:03d}.jpg")
             try:
@@ -1080,7 +1139,7 @@ def sahne_gorselleri_hazirla(sahneler, cumleler, boyut, tmp, cocuk=True, stil="s
                     continue
             except Exception as e:
                 print(f"      Sahne {i+1}: NVIDIA flux atlandı ({str(e)[:60]})")
-        # 1) NVIDIA başarısızsa Gemini Nano Banana yedek olarak denenir.
+        # 2) NVIDIA başarısızsa Gemini Nano Banana yedek olarak denenir.
         if ai_sahne:
             aipath = os.path.join(tmp, f"sahne_gemini_{i:03d}.jpg")
             try:
@@ -1091,7 +1150,7 @@ def sahne_gorselleri_hazirla(sahneler, cumleler, boyut, tmp, cocuk=True, stil="s
                     continue
             except Exception as e:
                 print(f"      Sahne {i+1}: Gemini yedek atlandı ({str(e)[:60]})")
-        # 2) API üretimleri başarısızsa stok video, en son degrade kart.
+        # 3) API üretimleri başarısızsa stok video, en son degrade kart.
         vpath = os.path.join(tmp, f"sahne_{i:03d}.mp4")
         stok = (stok_video_ara(p, boyut, vpath, dikey=dikey)
                 if (stil == "stok" and not cocuk) else None)
@@ -1111,7 +1170,7 @@ def sahne_gorselleri_hazirla(sahneler, cumleler, boyut, tmp, cocuk=True, stil="s
             gradient_kart(p, boyut, i, ipath)
             gorseller.append(("image", ipath))
             print(f"      Sahne {i+1}/{len(prompts)}: yerel başlık kartı ✓")
-    print(f"      [dağılım: nvidia={sayac['nvidia']}, pexels={sayac['pexels']}, "
+    print(f"      [dağılım: openrouter={sayac['openrouter']}, nvidia={sayac['nvidia']}, pexels={sayac['pexels']}, "
           f"pixabay={sayac['pixabay']}, ai={sayac['ai']} / toplam {len(prompts)} sahne]")
     return gorseller
 

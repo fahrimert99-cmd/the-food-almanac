@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       esik:
-        description: "Paylasilmamis senaryo alt esigi (bos = 10)"
+        description: "Uygun klasik senaryo alt esigi (bos = 14)"
         required: false
         default: ""
 permissions:
@@ -35,18 +35,23 @@ jobs:
           ESIK: ${{ github.event.inputs.esik }}
         run: |
           python3 - > kontrol.txt <<'PY'
-          import json, os
+          import json, os, sys
+          sys.argv = ["bekci"]
+          import otomasyon as O
           hav = json.load(open("senaryolar.json", encoding="utf-8"))
           yap = json.load(open("durum.json", encoding="utf-8")).get("yapilan", [])
-          bos = len(hav) - len(yap)
-          esik = int((os.environ.get("ESIK") or "").strip() or "10")
+          # Yalnız yayına GERÇEKTEN uygun klasik senaryolar sayılır (marka serisi
+          # ayrı slotta biter; yayınlanmış/tekrar/filtre dışı olanlar sayılmaz).
+          bos, marka = O.havuz_sayilari(hav, yap)
+          esik = int((os.environ.get("ESIK") or "").strip() or "14")
           print(f"bos={bos}")
+          print(f"marka={marka}")
           print(f"dusuk={'true' if bos < esik else 'false'}")
           PY
           cat kontrol.txt >> "$GITHUB_OUTPUT"
           bos=$(grep '^bos=' kontrol.txt | cut -d= -f2)
           dusuk=$(grep '^dusuk=' kontrol.txt | cut -d= -f2)
-          echo "[bekci] paylasilmamis=$bos -> $([ "$dusuk" = "true" ] && echo 'URETILECEK' || echo 'yeterli, uretilmeyecek')"
+          echo "[bekci] uygun klasik=$bos, marka=$(grep '^marka=' kontrol.txt | cut -d= -f2) -> $([ "$dusuk" = "true" ] && echo 'URETILECEK' || echo 'yeterli, uretilmeyecek')"
       - name: Dusukse senaryo uret
         if: steps.kontrol.outputs.dusuk == 'true'
         env:
@@ -56,6 +61,8 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
           ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}

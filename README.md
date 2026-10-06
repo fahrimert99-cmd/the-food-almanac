@@ -63,6 +63,9 @@ Repo → **Settings → Secrets and variables → Actions → New repository sec
 | `CLAUDE_API_KEY` | Anthropic Claude anahtarı (birincil sağlayıcı). `ANTHROPIC_API_KEY` de kabul edilir. |
 | `ANTHROPIC_MODEL` | *(opsiyonel)* Model seçimi, örn. `claude-sonnet-5` (maliyet için). Boşsa varsayılan kullanılır. |
 | `GEMINI_API_KEY` / `GEMINI_KEY` / `GEMINI_KEY_UZUN` | Gemini yedek anahtar(lar)ı. `GEMINI_KEY_UZUN` uzun hatta ayrı kota için. |
+| `OPENROUTER_API_KEY` | Ücretsiz model yönlendiricisi için OpenRouter secret. Senaryo üretiminde ilk sağlayıcıdır. |
+| `OPENROUTER_MODEL` | *(opsiyonel)* Varsayılan `openrouter/free`; belirli bir ücretsiz model seçilecekse model kimliği yazılır. |
+| `OPENROUTER_MAX_FALLBACKS` | *(opsiyonel)* Router hatasında denenecek ek ücretsiz model sayısı; varsayılan `4`. |
 
 **Ses ve görsel:**
 | Secret | Açıklama |
@@ -161,7 +164,8 @@ istersen `GEMINI_IMAGE_API_KEY` tanımlayabilirsin. Gemini görselleri yatay vid
 
 ## DAYANIKLILIK
 Sistem hatalara karşı sağlamlaştırılmıştır (ayrıntı: `RESILIENCE_GUIDE.md`):
-- AI senaryo üretiminde çok katmanlı yedekleme (Claude → Gemini → Pollinations).
+- AI senaryo üretiminde çok katmanlı yedekleme (OpenRouter/free → canlı ücretsiz model fallback'leri → Claude → Gemini → Pollinations).
+- OpenRouter 429/rate-limit, geçici sunucu hatası veya model hatasında Models API'den güncel `:free` modelleri alır ve en fazla 4 ek modeli sırayla dener.
 - Türkçe karakter doğrulaması (diakritiksiz/ASCII üretimi reddedilir).
 - Kısa video public olmadan yönlendirme yorumu atılmaz (403 önlenir), yayına girince atılır.
 - Başarılı çalışmada eski `hata.log` otomatik temizlenir.

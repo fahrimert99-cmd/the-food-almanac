@@ -1,0 +1,37 @@
+name: OpenRouter Video Denemesi
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - name: FFmpeg kur
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
+      - name: Python kur
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıkları kur
+        run: pip install -r requirements.txt
+      - name: OpenRouter ile video denemesi
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: openrouter/free
+          OPENROUTER_IMAGE_MODEL: inclusionai/ming-image-0.1-design
+          OPENROUTER_MAX_FALLBACKS: "6"
+        run: python3 openrouter_video_trial.py
+      - name: Deneme çıktısını yükle
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: openrouter-video-trial
+          path: output/
+          if-no-files-found: warn
+          retention-days: 14

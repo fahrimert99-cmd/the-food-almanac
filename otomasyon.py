@@ -120,6 +120,56 @@ def _sonraki_yayin_zamani(cfg):
     return min(adaylar).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+MARKA_TERIMLERI = (
+    "market", "fiyat", "indirim", "ödeme", "ücret", "alışveriş", "ürün",
+    "mağaza", "reyon", "raf", "sepet", "kasa", "restoran", "menü",
+    "büfe", "sinema", "kart", "kredi", "banka", "faiz", "taksit",
+    "kampanya", "kupon", "abonelik", "üyelik", "iade", "kargo", "garanti",
+    "otopark", "kuaför", "berber", "uygulama", "site", "çerez", "wifi",
+    "internet", "reklam", "kampanya", "para", "satış", "hizmet", "sözleşme",
+    "ek ücret", "gizli ücret", "sana özel", "son iki", "bedava", "ücretsiz",
+)
+ZAYIF_BASLIK_TERIMLERI = ("müzik", "koku", "sağa", "yön", "hız", "kokunun")
+DOĞRUDAN_BASLIK_TERIMLERI = (
+    "fiyat", "indirim", "ücret", "ödeme", "para", "ürün", "market", "reyon",
+    "raf", "sepet", "kasa", "kart", "kredi", "banka", "taksit", "kampanya",
+    "abonelik", "üyelik", "iade", "kargo", "garanti", "menü", "gizli tuzak",
+    "ekstra", "bedava", "ücretsiz", "son iki", "sınırlı", "çerez",
+)
+
+def _marka_norm(metin):
+    metin = unicodedata.normalize("NFC", str(metin))
+    return metin.replace("İ", "I").replace("ı", "i").lower()
+
+def _marka_uygun_mu(s):
+    metin = _marka_norm(" ".join(str(s.get(k, "")) for k in ("baslik", "aciklama", "script")))
+    if not any(_marka_norm(t) in metin for t in MARKA_TERIMLERI):
+        return False
+    baslik = _marka_norm(s.get("baslik", ""))
+    zayif = any(_marka_norm(t) in baslik for t in ZAYIF_BASLIK_TERIMLERI)
+    dogrudan = any(_marka_norm(t) in baslik for t in DOĞRUDAN_BASLIK_TERIMLERI)
+    return not zayif or dogrudan
+
+
+def havuz_sayilari(senaryolar, yapilan):
+    """Yayına uygun kalan senaryo sayıları (klasik, marka) — otomasyonun seçim
+    filtreleriyle aynı (yayınlanmamış, konu tekrarı değil, tuzak teması, marka
+    filtresi). Senaryo bekçisi havuzu bu sayıya göre doldurur."""
+    yap = set(yapilan or [])
+    klasik = marka = 0
+    for s in senaryolar:
+        baslik = s.get("baslik", "")
+        if baslik in yap or _konu_tekrari(baslik, yap):
+            continue
+        if s.get("tema", "tuzak") != "tuzak" or not _marka_uygun_mu(s):
+            continue
+        if s.get("seri") == "marka":
+            marka += 1
+        else:
+            klasik += 1
+    return klasik, marka
+
+
 def _hedef_slot(cfg, yayin_zamani):
     """Bu koşunun dolduracağı slotun 'HH:MM' (UTC) değeri. Planlı yayında
     yayin_zamani'ndan; slot kaçmışsa (yayin_zamani yok) son 4 saatteki slottan."""
@@ -201,36 +251,6 @@ def main():
 
     def _tema(s):
         return s.get("tema", "tuzak")
-
-    MARKA_TERIMLERI = (
-        "market", "fiyat", "indirim", "ödeme", "ücret", "alışveriş", "ürün",
-        "mağaza", "reyon", "raf", "sepet", "kasa", "restoran", "menü",
-        "büfe", "sinema", "kart", "kredi", "banka", "faiz", "taksit",
-        "kampanya", "kupon", "abonelik", "üyelik", "iade", "kargo", "garanti",
-        "otopark", "kuaför", "berber", "uygulama", "site", "çerez", "wifi",
-        "internet", "reklam", "kampanya", "para", "satış", "hizmet", "sözleşme",
-        "ek ücret", "gizli ücret", "sana özel", "son iki", "bedava", "ücretsiz",
-    )
-    ZAYIF_BASLIK_TERIMLERI = ("müzik", "koku", "sağa", "yön", "hız", "kokunun")
-    DOĞRUDAN_BASLIK_TERIMLERI = (
-        "fiyat", "indirim", "ücret", "ödeme", "para", "ürün", "market", "reyon",
-        "raf", "sepet", "kasa", "kart", "kredi", "banka", "taksit", "kampanya",
-        "abonelik", "üyelik", "iade", "kargo", "garanti", "menü", "gizli tuzak",
-        "ekstra", "bedava", "ücretsiz", "son iki", "sınırlı", "çerez",
-    )
-
-    def _marka_norm(metin):
-        metin = unicodedata.normalize("NFC", str(metin))
-        return metin.replace("İ", "I").replace("ı", "i").lower()
-
-    def _marka_uygun_mu(s):
-        metin = _marka_norm(" ".join(str(s.get(k, "")) for k in ("baslik", "aciklama", "script")))
-        if not any(_marka_norm(t) in metin for t in MARKA_TERIMLERI):
-            return False
-        baslik = _marka_norm(s.get("baslik", ""))
-        zayif = any(_marka_norm(t) in baslik for t in ZAYIF_BASLIK_TERIMLERI)
-        dogrudan = any(_marka_norm(t) in baslik for t in DOĞRUDAN_BASLIK_TERIMLERI)
-        return not zayif or dogrudan
 
     kalan = []
     for i, s in enumerate(senaryolar):
@@ -369,20 +389,36 @@ def main():
     os.makedirs("output", exist_ok=True)
     cikti = "output/video.mp4"
     print("[2/3] Video üretiliyor ...")
-    V.uret_video(sp, cikti,
-                 ses=cfg.get("ses", "erkek"),
-                 dikey=(cfg.get("format", "dikey") == "dikey"),
-                 hiz=str(cfg.get("hiz", "+15%")),
-                 sahneler=veri.get("sahneler"),
-                 animasyon=bool(cfg.get("animasyon", True)),
-                 cocuk=bool(cfg.get("cocuk_icerigi", False)),
-                 tonlama=str(cfg.get("tonlama", "+0Hz")),
-                 gorsel_stil=str(cfg.get("gorsel_stil", "stok")),
-                 kanca=veri.get("kanca"),
-                 eleven_once=bool(cfg.get("kisa_eleven", True)),
-                 eleven_voice_id=str(cfg.get("kisa_ses_id", "")).strip() or None,
-                 ai_sahne=bool(cfg.get("ai_sahne", False)),
-                 ai_fallback=bool(cfg.get("ai_gorsel_yedegi", True)))
+    kod_ok = False
+    if veri.get("seri") == "marka" and cfg.get("kod_video", True):
+        # Marka serisi: tamamen kodla çizilmiş hareketli grafik + gerçek stok klip
+        # (kod_video.py / kod_sahneler.json). Hata olursa klasik üretime düşülür.
+        try:
+            import kod_video as KV
+            if veri["baslik"] in json.load(open(KV.SAHNE_DOSYA, encoding="utf-8")):
+                os.environ["KOD_VIDEO_SES_DIR"] = ""   # üretimde ses önbelleği yazma
+                # Önce stoktaki (önceden render edilmiş) hazır video; yoksa canlı render
+                if not KV.stok_indir(veri["baslik"], cikti):
+                    KV.render(veri["baslik"], cikti)
+                kod_ok = os.path.exists(cikti) and os.path.getsize(cikti) > 100_000
+                print(f"      Kod video: {'tamam' if kod_ok else 'çıktı yok, klasik üretime geçiliyor'}")
+        except Exception as e:
+            print(f"      Kod video hata ({str(e)[:150]}), klasik üretime geçiliyor")
+    if not kod_ok:
+        V.uret_video(sp, cikti,
+                     ses=cfg.get("ses", "erkek"),
+                     dikey=(cfg.get("format", "dikey") == "dikey"),
+                     hiz=str(cfg.get("hiz", "+15%")),
+                     sahneler=veri.get("sahneler"),
+                     animasyon=bool(cfg.get("animasyon", True)),
+                     cocuk=bool(cfg.get("cocuk_icerigi", False)),
+                     tonlama=str(cfg.get("tonlama", "+0Hz")),
+                     gorsel_stil=str(cfg.get("gorsel_stil", "stok")),
+                     kanca=veri.get("kanca"),
+                     eleven_once=bool(cfg.get("kisa_eleven", True)),
+                     eleven_voice_id=str(cfg.get("kisa_ses_id", "")).strip() or None,
+                     ai_sahne=bool(cfg.get("ai_sahne", False)),
+                     ai_fallback=bool(cfg.get("ai_gorsel_yedegi", True)))
     print(f"      Çıktı: {cikti}  ({os.path.getsize(cikti)//1024} KB)")
 
     kapak_yolu = None

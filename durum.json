@@ -4,6 +4,7 @@
     "'DOĞAL & ORGANİK' YALANI! 🌿",
     "'ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰",
     "99 KURUŞ TUZAĞINA DİKKAT! 💸",
+    "A101 ALDIN ALDIN ÜRÜNÜ NEDEN İLK SAATTE BİTER? ⏰",
     "ABONELİKLER SENİ BÖYLE KANDIRIYOR! 🔄",
     "ALTIN GÜNÜ BİR TUZAK MI? 💰",
     "AVM MÜZİĞİ HIZLANINCA CÜZDANIN NEDEN BOŞALIR? 🎶🛍️",
@@ -60,8 +61,10 @@
     "MARKET NEDEN LABİRENT GİBİ? 🌀",
     "MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖",
     "MARKETLER SENİ BÖYLE KANDIRIYOR! 🛒",
+    "MARKETTE NEDEN TELEVİZYON SATILIR? 📺",
     "MEGALODON HÂLÂ YAŞIYOR OLABİLİR Mİ? 🦈",
     "MENÜDE FİYAT NEDEN SAĞDA DEĞİL? 🍽️",
+    "MENÜDE RESİM NEDEN YOK? 📖",
     "MENÜDEKİ GİZLİ TUZAK! 📋",
     "MÜZİĞİN HIZI NEDEN ÖNEMLİ? 🎵",
     "NEDEN HEP 'YENİ' DERLER? ✨",
@@ -87,6 +90,7 @@
     "RESTORANDA TABAKLAR NEDEN KÜÇÜLDÜ? 🍽️",
     "SADAKAT KARTININ GERÇEK AMACI! 💳",
     "SADAKAT PROGRAMI SENİ NASIL BAĞLIYOR? 🎯",
+    "SANAL PARA NEDEN KULLANIRLAR? 🎮",
     "SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒",
     "SEPETİNE BUNU KİM EKLEDİ? 🛒",
     "SES REKLAMLARI NEDEN YÜKSEK? 🔊",
@@ -103,6 +107,7 @@
     "TAKSİTSİZ NEDEN YOK GİBİ? 💳",
     "TAZE SANILAN ETİN SIRRI! 🥩",
     "TELEFON FATURANDAKİ GİZLİ ÜCRETLER! 📞",
+    "TEMU NASIL BU KADAR UCUZ? 📦",
     "TERRAKOTA ORDUSUNUN SIRRI 🏺",
     "UCUZ SANDIN SEPET 2000 TL OLDU — GİRİŞ FIRSAT TUZAĞI 🛒",
     "UYGULAMA İÇİ SATIN ALMA TUZAĞI: ÇOCUKLARIN PARASI NASIL GİDER? 🎮",
@@ -118,6 +123,7 @@
     "ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİK TUZAĞI ⏱️",
     "İADE NEDEN BU KADAR ZOR? 📦",
     "İKİNCİ EL LÜKS SAAT NEDEN YENİ GİBİ UCUZ? ⌚",
+    "İKİNCİ ÜRÜN NEDEN 'BEDAVA'? 🎁",
     "İLK AY BEDAVA NEDEN VAR? 🎬",
     "İLK FİYAT NEDEN HEP YÜKSEK? 🎯",
     "İNDİRİM ETİKETLERİ YALAN! 🏷️",
@@ -129,54 +135,47 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": "\n      Sahne 6/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~4618 toplam -> 'preselected shipping insurance option,']\n      [Pixabay: 12 klip / ~1417 toplam -> 'preselected shipping insurance option,']\n      [seçim(vision): pexels~4618 / pixabay~1417 -> önce pixabay]\n      Sahne 7/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~7129 toplam -> 'extra product appearing in']\n      [Pixabay: 12 klip / ~1332 toplam -> 'extra product appearing in']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~7129 / pixabay~1332 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~6076 toplam -> 'checked add-on checkbox, side']\n      [Pixabay: 12 klip / ~865 toplam -> 'checked add-on checkbox, side']\n      [seçim(vision): pexels~6076 / pixabay~865 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~2662 toplam -> 'cart total reduced after']\n      [Pixabay: 12 klip / ~140 toplam -> 'cart total reduced after']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~2662 / pixabay~140 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: nvidia=0, pexels=7, pixabay=3, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (22651 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-10-03T17:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi\n✓ Yüklendi: https://youtu.be/I6Rqbz6TKds  (yayın: 2026-10-03T17:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n",
+  "son_rapor": "? 🛒'): İLK ÜRÜN NEDEN PAHALI GÖSTERİLİR? 📊\n      · atlandı (yayınlanmış konu tekrarı ~ 'BENZİNLİK MARKETİ NEDEN PAHALI? ⛽'): MARKALI GİYSİ NEDEN PAHALI? 👕\n      · atlandı (yayınlanmış konu tekrarı ~ 'BOZUK PARA NEDEN VERMEZLER? 🪙'): BOZUK PARANIN KENARI NEDEN TIRTIKLI? 🪙\n      · atlandı (yayınlanmış konu tekrarı ~ 'REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺'): 'BEDAVA' KELİMESİ BEYNİ NASIL KANDIRIR? 🧠\n      · atlandı (yayınlanmış konu tekrarı ~ 'SON KULLANMA TARİHİ OYUNU! 📅'): SON KULLANMA TARİHİNİN ÖNÜNDE FİYAT MANİPÜLASYONU! 📅\n      · atlandı (yayınlanmış konu tekrarı ~ 'ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİ'): ABONELİK İPTALİNİ GİZLEYEN SAYFA TUZAĞI 🔒\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): İNDİRİM ETİKETİ NEDEN HEP KIRMIZI? 🔴\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): EN PAHALI ÜRÜN NEDEN GÖZ HİZASINDA? 👁️\n      · atlandı (yayınlanmış konu tekrarı ~ ''ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰'): “ÜCRETSİZ DENE” NEDEN ÜCRETLİ OLUR? ⏰\n      · atlandı (yayınlanmış konu tekrarı ~ 'ÜSTÜ ÇİZİLİ FİYAT OYUNU! 🏷️'): “SANA ÖZEL” FİYAT OYUNU! 🎯\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): SAHTE İNDİRİMİN MATEMATİĞİ: BÜYÜK YALANI NASIL ANLARSIN\n      · atlandı (yayınlanmış konu tekrarı ~ 'PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉'): UN PAKETİ NEDEN 1KG'den 900g'a düştü fiyat aynı? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'MARKET KOKUSU BİLE TUZAK! 👃'): MARKET GİRİŞİNDE KULLANILAN SIĞIR KOKUSU NEDEN DAHA FAZ\n      Tema (katı marka filtresi): 'tuzak' (uygun kalan: 70)\n      Slot 17:00 UTC: klasik tuzak (kalan: 37)\n      Kohort: v1\n[1/3] Senaryo (54/185) [psikoloji]: İNDİRİM KUPONU NEDEN VERİLİR? 🎟️\n✓ Yayın slotu zaten dolu (2026-10-06T17:00:00Z); atlandı: https://youtu.be/gcTYZAAe5jA\n",
   "bekleyen_yorum": {
-    "video_id": "I6Rqbz6TKds",
-    "metin": "SEPETİNE BUNU KİM EKLEDİ hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
+    "video_id": "gcTYZAAe5jA",
+    "metin": "SANAL PARA NEDEN KULLANIRLAR hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "0f0eda0e6e9f0ae3"
+    "hash": "b73a9bbaab37c17e"
   },
-  "son_kategori": "market",
-  "son_video_id": "I6Rqbz6TKds",
-  "son_baslik": "SEPETİNE BUNU KİM EKLEDİ? 🛒",
-  "son_yayin_zamani": "2026-10-03T17:00:00Z",
+  "son_kategori": "psikoloji",
+  "son_video_id": "gcTYZAAe5jA",
+  "son_baslik": "SANAL PARA NEDEN KULLANIRLAR? 🎮",
+  "son_yayin_zamani": "2026-10-06T17:00:00Z",
   "analytics_ozet": {
-    "guncelleme": "2026-10-01T03:55:09Z",
+    "guncelleme": "2026-10-04T11:41:11Z",
     "donem": {
-      "baslangic": "2026-09-24",
-      "bitis": "2026-09-30",
+      "baslangic": "2026-09-27",
+      "bitis": "2026-10-03",
       "gun": 7
     },
     "kaynak": "youtube_analytics_api",
     "kanal_abone": 106,
-    "haftalik_izlenme": 6445,
-    "haftalik_ortalama_sure_sn": 12,
-    "haftalik_abone_net": 0,
+    "haftalik_izlenme": 6936,
+    "haftalik_ortalama_sure_sn": 15,
+    "haftalik_abone_net": 3,
     "top3": [
       {
-        "baslik": "PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
-        "izlenme": 1014,
-        "ortalama_sure_sn": 9
+        "baslik": "MARKETE GİRİNCE neden ANİDEN ACIKIYORSUN? Bilerek yapıyorlar 🥖",
+        "izlenme": 1159,
+        "ortalama_sure_sn": 16
+      },
+      {
+        "baslik": "KASAYA YAKLAŞINCA ELİN neden RAFA GİDİYOR? Bilerek yapıyorlar 🍬",
+        "izlenme": 1007,
+        "ortalama_sure_sn": 16
       },
       {
         "baslik": "Kıyafet bedeni neden tutmaz? Markalar bilerek karıştırıyor 👗",
-        "izlenme": 988,
+        "izlenme": 995,
         "ortalama_sure_sn": 13
-      },
-      {
-        "baslik": "MENÜDE FİYAT neden SAĞDA DEĞİL? Bilerek yapıyorlar 🍽️",
-        "izlenme": 928,
-        "ortalama_sure_sn": 11
       }
     ],
     "oneriler": [
-      {
-        "oncelik": "yuksek",
-        "alan": "abone",
-        "baslik": "Abone dönüşümü zayıf",
-        "detay": "Net abone 0, 6445 izlenmede.",
-        "aksiyon": "Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu."
-      },
       {
         "oncelik": "yuksek",
         "alan": "icerik",
@@ -185,18 +184,25 @@
         "aksiyon": "Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: market / vitrin / raf / kasa, abonelik / dijital tuzak."
       },
       {
-        "oncelik": "yuksek",
-        "alan": "baslik_icerik",
-        "baslik": "Başlık çeker, içerik tutmaz: PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐",
-        "detay": "1014 izlenme ama ort. 9 sn.",
-        "aksiyon": "Aynı konuda daha sert kanca + daha hızlı vaat ile yeniden çek (varyasyon)."
-      },
-      {
         "oncelik": "orta",
         "alan": "tutma",
         "baslik": "Tutma idare eder, biraz daha sıkılaştır",
-        "detay": "Ort. süre 12 sn — iyi yolda.",
+        "detay": "Ort. süre 15 sn — iyi yolda.",
         "aksiyon": "CTA'yı son 3 sn'de tut; ortada tempo düşmesin."
+      },
+      {
+        "oncelik": "orta",
+        "alan": "abone",
+        "baslik": "Abone artışı yavaş",
+        "detay": "Net +3 (~0.4/1000 izlenme).",
+        "aksiyon": "CTA'yı sesli söyle; ekranda 'ABONE OL' yazısı son 3 sn."
+      },
+      {
+        "oncelik": "orta",
+        "alan": "icerik",
+        "baslik": "Birden fazla video çok düşük izlenme almış",
+        "detay": "Son listede 4 video <50 izlenme.",
+        "aksiyon": "Düşük giden konu tiplerini 2 hafta üretme; top3 varyasyonuna dön."
       },
       {
         "oncelik": "orta",
@@ -206,10 +212,10 @@
         "aksiyon": "12:00/20:00'i hiç kaçırma; haftada en az 3 cross-post (Reels/TikTok)."
       }
     ],
-    "oneri_ozet": "Abone dönüşümü zayıf — Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu."
+    "oneri_ozet": "Bu temaları çoğalt — Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: market / vitrin / raf / kasa, abonelik / dijital tuzak."
   },
   "oneri_uygulama": {
-    "zaman": "2026-10-01T03:55:11Z",
+    "zaman": "2026-10-04T11:41:14Z",
     "bonus_kw": [
       "market",
       "kasa",
@@ -242,11 +248,11 @@
       "slot kilidi / üretim atlanmaz",
       "cron zamanları değiştirilmez"
     ],
-    "oneri_ozet": "Abone dönüşümü zayıf — Her videoda sabit CTA: 'Abone ol, bir daha kanma'; sabit yorum + bitiş cümlesi zorunlu.",
+    "oneri_ozet": "Bu temaları çoğalt — Önümüzdeki 5 videodan en az 3'ü şu hatlarda olsun: market / vitrin / raf / kasa, abonelik / dijital tuzak.",
     "top_oneriler": [
-      "Abone dönüşümü zayıf",
       "Bu temaları çoğalt",
-      "Başlık çeker, içerik tutmaz: PARFÜM neden GİRİŞTE SATILIR? Bilerek yapıyorlar 💐"
+      "Tutma idare eder, biraz daha sıkılaştır",
+      "Abone artışı yavaş"
     ]
   }
 }
