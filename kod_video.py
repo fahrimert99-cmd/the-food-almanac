@@ -1023,7 +1023,11 @@ def whisper_hizala(mp3, metin):
     from faster_whisper import WhisperModel
     import difflib
     model = WhisperModel(os.environ.get("WHISPER_MODEL", "small"), device="cpu", compute_type="int8")
-    parcalar, _ = model.transcribe(mp3, language="tr", word_timestamps=True, beam_size=5)
+    import numpy as np   # sesi ffmpeg ile çöz (faster-whisper'ın PyAV yolu sürüm uyumsuz olabiliyor)
+    ham = subprocess.run(["ffmpeg", "-v", "error", "-i", mp3, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                         capture_output=True, check=True).stdout
+    dalga = np.frombuffer(ham, np.int16).astype(np.float32) / 32768.0
+    parcalar, _ = model.transcribe(dalga, language="tr", word_timestamps=True, beam_size=5)
     duyulan = [w for p in parcalar for w in (p.words or [])]
     if not duyulan:
         raise RuntimeError("Whisper kelime bulamadı")
