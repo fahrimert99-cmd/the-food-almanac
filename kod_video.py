@@ -982,14 +982,26 @@ def azure_seslendir(metin, mp3):
                               "dur": e.duration.total_seconds(), "text": e.text})
     synth.synthesis_word_boundary.connect(_sinir)
     hiz = os.environ.get("AZURE_SPEECH_RATE", "+12%")
+    ic = f'<prosody rate="{hiz}">{escape(metin)}</prosody>'
+    if not AZURE_SES().startswith("tr-TR"):   # çok dilli ses: Türkçe konuştur
+        ic = f'<lang xml:lang="tr-TR">{ic}</lang>'
     ssml = ('<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="tr-TR">'
-            f'<voice name="{AZURE_SES()}"><prosody rate="{hiz}">{escape(metin)}</prosody></voice></speak>')
+            f'<voice name="{AZURE_SES()}">{ic}</voice></speak>')
     r = synth.speak_ssml_async(ssml).get()
     if r.reason != sdk.ResultReason.SynthesizingAudioCompleted:
         raise RuntimeError(f"Azure: {r.reason} {getattr(r, 'cancellation_details', '')}")
     open(mp3, "wb").write(r.audio_data)
-    if not kelimeler:
-        raise RuntimeError("Azure: kelime zamanı gelmedi")
+    if not kelimeler:   # bazı sesler kelime zamanı vermez: harf sayısına göre dağıt
+        import video as V
+        sure = V.sure_al(mp3)
+        ws = metin.split() or [" "]
+        top = sum(len(w) + 1 for w in ws)
+        t = 0.0
+        for w in ws:
+            d = sure * (len(w) + 1) / top
+            kelimeler.append({"start": t, "dur": d, "text": w})
+            t += d
+        print("Azure: kelime zamanı yok, tahmini zamanlama")
     return kelimeler
 
 
