@@ -1,6 +1,5 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Whisper hizalama hata: open() got an unexpected keyword argument 'metadata_errors'
-Azure: kelime zamanı yok, tahmini zamanlama
+Azure: kelime zamanları Whisper ile hizalandı
 Ses: Azure (en-US-Andrew:DragonLatestNeural)
       Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
       [Pexels: 8 klip / ~8000 toplam -> 'online shopping smartphone']
@@ -23,5 +22,5 @@ Ses: Azure (en-US-Andrew:DragonLatestNeural)
       [Pixabay: 12 klip / ~126 toplam -> 'delivery package doorstep']
       [seçim(sayısal): pexels~3376 / pixabay~126 -> önce pexels]
    Klip 5: delivery package doorstep -> pexels
-Sahne başlangıçları: [0.0, 4.5, 9.39, 17.18, 21.04] toplam 27.24
-✓ onizleme/azure/temu-andrew-dragon.mp4 27.2 sn
+Sahne başlangıçları: [0.0, np.float64(4.32), np.float64(8.8), np.float64(17.4), np.float64(20.64)] toplam 26.5
+✓ onizleme/azure/temu-andrew-dragon.mp4 26.5 sn
