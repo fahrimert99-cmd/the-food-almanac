@@ -1,96 +1,96 @@
-Ses: ElevenLabs (kanal Shorts sesi)
+Ses: önbellek (kredi harcanmadı)
       Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
-      [Pexels: 8 klip / ~4551 toplam -> 'empty supermarket shelf']
-      [Pixabay: 12 klip / ~370 toplam -> 'empty supermarket shelf']
-      [seçim(sayısal): pexels~4551 / pixabay~370 -> önce pexels]
+      [Pexels: 8 klip / ~4482 toplam -> 'empty supermarket shelf']
+      [Pixabay: 12 klip / ~371 toplam -> 'empty supermarket shelf']
+      [seçim(sayısal): pexels~4482 / pixabay~371 -> önce pexels]
    Klip 1: empty supermarket shelf -> pexels
-      [Pexels: 8 klip / ~4456 toplam -> 'supermarket stock boxes']
-      [Pixabay: 12 klip / ~866 toplam -> 'supermarket stock boxes']
-      [seçim(sayısal): pexels~4456 / pixabay~866 -> önce pexels]
+      [Pexels: 8 klip / ~4366 toplam -> 'supermarket stock boxes']
+      [Pixabay: 12 klip / ~886 toplam -> 'supermarket stock boxes']
+      [seçim(sayısal): pexels~4366 / pixabay~886 -> önce pexels]
    Klip 2: supermarket stock boxes -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'woman shopping supermarket']
-      [Pixabay: 12 klip / ~3408 toplam -> 'woman shopping supermarket']
-      [seçim(sayısal): pexels~8000 / pixabay~3408 -> önce pexels]
+      [Pixabay: 12 klip / ~3413 toplam -> 'woman shopping supermarket']
+      [seçim(sayısal): pexels~8000 / pixabay~3413 -> önce pexels]
    Klip 3: woman shopping supermarket -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'person thinking shopping list']
-      [Pixabay: 12 klip / ~1784 toplam -> 'person thinking shopping list']
-      [seçim(sayısal): pexels~8000 / pixabay~1784 -> önce pexels]
+      [Pixabay: 12 klip / ~1785 toplam -> 'person thinking shopping list']
+      [seçim(sayısal): pexels~8000 / pixabay~1785 -> önce pexels]
    Klip 4: person thinking shopping list -> pexels
-      [Pexels: 8 klip / ~6685 toplam -> 'supermarket shopping cart']
+      [Pexels: 8 klip / ~6700 toplam -> 'supermarket shopping cart']
       [Pixabay: 12 klip / ~500 toplam -> 'supermarket shopping cart']
-      [seçim(sayısal): pexels~6685 / pixabay~500 -> önce pexels]
+      [seçim(sayısal): pexels~6700 / pixabay~500 -> önce pexels]
    Klip 5: supermarket shopping cart -> pexels
 Sahne başlangıçları: [0.0, 5.51, 16.05, 23.92, 29.25] toplam 35.73
 ✓ onizleme/kod_video/a101-aldin-aldin-urunu-neden-ilk-saatte-.mp4 35.7 sn
 Ses: önbellek (kredi harcanmadı)
       Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
       [Pexels: 8 klip / ~8000 toplam -> 'watching tv night couch']
-      [Pixabay: 12 klip / ~7763 toplam -> 'watching tv night couch']
-      [seçim(sayısal): pexels~8000 / pixabay~7763 -> önce pexels]
+      [Pixabay: 12 klip / ~7770 toplam -> 'watching tv night couch']
+      [seçim(sayısal): pexels~8000 / pixabay~7770 -> önce pexels]
    Klip 1: watching tv night couch -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'remote control tv']
-      [Pixabay: 12 klip / ~673 toplam -> 'remote control tv']
-      [seçim(sayısal): pexels~8000 / pixabay~673 -> önce pexels]
+      [Pixabay: 12 klip / ~689 toplam -> 'remote control tv']
+      [seçim(sayısal): pexels~8000 / pixabay~689 -> önce pexels]
    Klip 2: remote control tv -> pexels
-      [Pexels: 8 klip / ~4854 toplam -> 'binge watching tv']
-      [Pixabay: 12 klip / ~797 toplam -> 'binge watching tv']
-      [seçim(sayısal): pexels~4854 / pixabay~797 -> önce pexels]
+      [Pexels: 8 klip / ~4827 toplam -> 'binge watching tv']
+      [Pixabay: 12 klip / ~798 toplam -> 'binge watching tv']
+      [seçim(sayısal): pexels~4827 / pixabay~798 -> önce pexels]
    Klip 3: binge watching tv -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'hand holding phone settings']
-      [Pixabay: 12 klip / ~1654 toplam -> 'hand holding phone settings']
-      [seçim(sayısal): pexels~8000 / pixabay~1654 -> önce pexels]
+      [Pixabay: 12 klip / ~1666 toplam -> 'hand holding phone settings']
+      [seçim(sayısal): pexels~8000 / pixabay~1666 -> önce pexels]
    Klip 4: hand holding phone settings -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'person relaxing sofa evening']
-      [Pixabay: 12 klip / ~7689 toplam -> 'person relaxing sofa evening']
-      [seçim(sayısal): pexels~8000 / pixabay~7689 -> önce pexels]
+      [Pixabay: 12 klip / ~7703 toplam -> 'person relaxing sofa evening']
+      [seçim(sayısal): pexels~8000 / pixabay~7703 -> önce pexels]
    Klip 5: person relaxing sofa evening -> pexels
 Sahne başlangıçları: [0.0, 4.62, 13.28, 20.89, 25.65] toplam 32.81
 ✓ onizleme/kod_video/netflix-bir-sonraki-bolumu-neden-kendisi.mp4 32.8 sn
 Ses: önbellek (kredi harcanmadı)
       Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
-      [Pexels: 8 klip / ~7598 toplam -> 'starbucks coffee cup']
-      [Pixabay: 12 klip / ~920 toplam -> 'starbucks coffee cup']
-      [seçim(sayısal): pexels~7598 / pixabay~920 -> önce pexels]
+      [Pexels: 8 klip / ~7602 toplam -> 'starbucks coffee cup']
+      [Pixabay: 12 klip / ~921 toplam -> 'starbucks coffee cup']
+      [seçim(sayısal): pexels~7602 / pixabay~921 -> önce pexels]
    Klip 1: starbucks coffee cup -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'coffee shop menu board']
-      [Pixabay: 12 klip / ~1528 toplam -> 'coffee shop menu board']
-      [seçim(sayısal): pexels~8000 / pixabay~1528 -> önce pexels]
+      [Pixabay: 12 klip / ~1529 toplam -> 'coffee shop menu board']
+      [seçim(sayısal): pexels~8000 / pixabay~1529 -> önce pexels]
    Klip 2: coffee shop menu board -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'barista making coffee']
-      [Pixabay: 12 klip / ~848 toplam -> 'barista making coffee']
-      [seçim(sayısal): pexels~8000 / pixabay~848 -> önce pexels]
+      [Pixabay: 12 klip / ~849 toplam -> 'barista making coffee']
+      [seçim(sayısal): pexels~8000 / pixabay~849 -> önce pexels]
    Klip 3: barista making coffee -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'woman drinking coffee']
-      [Pixabay: 12 klip / ~4154 toplam -> 'woman drinking coffee']
-      [seçim(sayısal): pexels~8000 / pixabay~4154 -> önce pexels]
+      [Pixabay: 12 klip / ~4160 toplam -> 'woman drinking coffee']
+      [seçim(sayısal): pexels~8000 / pixabay~4160 -> önce pexels]
    Klip 4: woman drinking coffee -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'coffee shop customer']
-      [Pixabay: 12 klip / ~1240 toplam -> 'coffee shop customer']
-      [seçim(sayısal): pexels~8000 / pixabay~1240 -> önce pexels]
+      [Pixabay: 12 klip / ~1241 toplam -> 'coffee shop customer']
+      [seçim(sayısal): pexels~8000 / pixabay~1241 -> önce pexels]
    Klip 5: coffee shop customer -> pexels
 Sahne başlangıçları: [0.0, 4.88, 13.1, 21.0, 24.76] toplam 31.66
 ✓ onizleme/kod_video/tall-grande-venti-kucuk-boy-neden-yok.mp4 31.7 sn
 Ses: önbellek (kredi harcanmadı)
       Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
       [Pexels: 8 klip / ~8000 toplam -> 'online shopping smartphone']
-      [Pixabay: 12 klip / ~872 toplam -> 'online shopping smartphone']
-      [seçim(sayısal): pexels~8000 / pixabay~872 -> önce pexels]
+      [Pixabay: 12 klip / ~871 toplam -> 'online shopping smartphone']
+      [seçim(sayısal): pexels~8000 / pixabay~871 -> önce pexels]
    Klip 1: online shopping smartphone -> pexels
-      [Pexels: 8 klip / ~4682 toplam -> 'factory packaging boxes']
-      [Pixabay: 12 klip / ~613 toplam -> 'factory packaging boxes']
-      [seçim(sayısal): pexels~4682 / pixabay~613 -> önce pexels]
+      [Pexels: 8 klip / ~4603 toplam -> 'factory packaging boxes']
+      [Pixabay: 12 klip / ~635 toplam -> 'factory packaging boxes']
+      [seçim(sayısal): pexels~4603 / pixabay~635 -> önce pexels]
    Klip 2: factory packaging boxes -> pexels
-      [Pexels: 8 klip / ~5801 toplam -> 'warehouse shipping boxes']
-      [Pixabay: 12 klip / ~1718 toplam -> 'warehouse shipping boxes']
-      [seçim(sayısal): pexels~5801 / pixabay~1718 -> önce pexels]
+      [Pexels: 8 klip / ~5695 toplam -> 'warehouse shipping boxes']
+      [Pixabay: 12 klip / ~1739 toplam -> 'warehouse shipping boxes']
+      [seçim(sayısal): pexels~5695 / pixabay~1739 -> önce pexels]
    Klip 3: warehouse shipping boxes -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'woman scrolling phone']
-      [Pixabay: 12 klip / ~3353 toplam -> 'woman scrolling phone']
-      [seçim(sayısal): pexels~8000 / pixabay~3353 -> önce pexels]
+      [Pixabay: 12 klip / ~3358 toplam -> 'woman scrolling phone']
+      [seçim(sayısal): pexels~8000 / pixabay~3358 -> önce pexels]
    Klip 4: woman scrolling phone -> pexels
-      [Pexels: 8 klip / ~3299 toplam -> 'delivery package doorstep']
+      [Pexels: 8 klip / ~3376 toplam -> 'delivery package doorstep']
       [Pixabay: 12 klip / ~126 toplam -> 'delivery package doorstep']
-      [seçim(sayısal): pexels~3299 / pixabay~126 -> önce pexels]
+      [seçim(sayısal): pexels~3376 / pixabay~126 -> önce pexels]
    Klip 5: delivery package doorstep -> pexels
 Sahne başlangıçları: [0.0, 4.84, 9.78, 19.52, 23.05] toplam 29.47
 ✓ onizleme/kod_video/temu-nasil-bu-kadar-ucuz.mp4 29.5 sn
