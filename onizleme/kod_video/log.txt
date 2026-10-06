@@ -41,8 +41,8 @@ Ses: önbellek (kredi harcanmadı)
       [seçim(sayısal): pexels~8000 / pixabay~1666 -> önce pexels]
    Klip 4: hand holding phone settings -> pexels
       [Pexels: 8 klip / ~8000 toplam -> 'person relaxing sofa evening']
-      [Pixabay: 12 klip / ~7703 toplam -> 'person relaxing sofa evening']
-      [seçim(sayısal): pexels~8000 / pixabay~7703 -> önce pexels]
+      [Pixabay: 12 klip / ~7704 toplam -> 'person relaxing sofa evening']
+      [seçim(sayısal): pexels~8000 / pixabay~7704 -> önce pexels]
    Klip 5: person relaxing sofa evening -> pexels
 Sahne başlangıçları: [0.0, 4.62, 13.28, 20.89, 25.65] toplam 32.81
 ✓ onizleme/kod_video/netflix-bir-sonraki-bolumu-neden-kendisi.mp4 32.8 sn
