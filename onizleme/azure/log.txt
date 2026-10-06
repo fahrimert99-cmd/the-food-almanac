@@ -1,0 +1,48 @@
+Ses: Azure (tr-TR-AhmetNeural)
+      Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
+      [Pexels: 8 klip / ~8000 toplam -> 'online shopping smartphone']
+      [Pixabay: 12 klip / ~871 toplam -> 'online shopping smartphone']
+      [seçim(sayısal): pexels~8000 / pixabay~871 -> önce pexels]
+   Klip 1: online shopping smartphone -> pexels
+      [Pexels: 8 klip / ~4603 toplam -> 'factory packaging boxes']
+      [Pixabay: 12 klip / ~635 toplam -> 'factory packaging boxes']
+      [seçim(sayısal): pexels~4603 / pixabay~635 -> önce pexels]
+   Klip 2: factory packaging boxes -> pexels
+      [Pexels: 8 klip / ~5695 toplam -> 'warehouse shipping boxes']
+      [Pixabay: 12 klip / ~1739 toplam -> 'warehouse shipping boxes']
+      [seçim(sayısal): pexels~5695 / pixabay~1739 -> önce pexels]
+   Klip 3: warehouse shipping boxes -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'woman scrolling phone']
+      [Pixabay: 12 klip / ~3358 toplam -> 'woman scrolling phone']
+      [seçim(sayısal): pexels~8000 / pixabay~3358 -> önce pexels]
+   Klip 4: woman scrolling phone -> pexels
+      [Pexels: 8 klip / ~3376 toplam -> 'delivery package doorstep']
+      [Pixabay: 12 klip / ~126 toplam -> 'delivery package doorstep']
+      [seçim(sayısal): pexels~3376 / pixabay~126 -> önce pexels]
+   Klip 5: delivery package doorstep -> pexels
+Sahne başlangıçları: [0.0, 5.92, 11.18, 21.35, 25.73] toplam 34.37
+✓ onizleme/azure/temu-AhmetNeural.mp4 34.4 sn
+Ses: Azure (tr-TR-EmelNeural)
+      Arka fon müziği eklendi (yerel: merak.mp3, ses %24, ducking).
+      [Pexels: 8 klip / ~8000 toplam -> 'online shopping smartphone']
+      [Pixabay: 12 klip / ~871 toplam -> 'online shopping smartphone']
+      [seçim(sayısal): pexels~8000 / pixabay~871 -> önce pexels]
+   Klip 1: online shopping smartphone -> pexels
+      [Pexels: 8 klip / ~4603 toplam -> 'factory packaging boxes']
+      [Pixabay: 12 klip / ~635 toplam -> 'factory packaging boxes']
+      [seçim(sayısal): pexels~4603 / pixabay~635 -> önce pexels]
+   Klip 2: factory packaging boxes -> pexels
+      [Pexels: 8 klip / ~5695 toplam -> 'warehouse shipping boxes']
+      [Pixabay: 12 klip / ~1739 toplam -> 'warehouse shipping boxes']
+      [seçim(sayısal): pexels~5695 / pixabay~1739 -> önce pexels]
+   Klip 3: warehouse shipping boxes -> pexels
+      [Pexels: 8 klip / ~8000 toplam -> 'woman scrolling phone']
+      [Pixabay: 12 klip / ~3358 toplam -> 'woman scrolling phone']
+      [seçim(sayısal): pexels~8000 / pixabay~3358 -> önce pexels]
+   Klip 4: woman scrolling phone -> pexels
+      [Pexels: 8 klip / ~3376 toplam -> 'delivery package doorstep']
+      [Pixabay: 12 klip / ~126 toplam -> 'delivery package doorstep']
+      [seçim(sayısal): pexels~3376 / pixabay~126 -> önce pexels]
+   Klip 5: delivery package doorstep -> pexels
+Sahne başlangıçları: [0.0, 5.58, 10.35, 19.84, 24.48] toplam 32.64
+✓ onizleme/azure/temu-EmelNeural.mp4 32.6 sn
