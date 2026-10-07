@@ -1,0 +1,15 @@
+{
+  "channel_name": "Food Code",
+  "language": "en-US",
+  "format": "horizontal",
+  "duration_target_seconds": 720,
+  "publish_frequency": "weekly",
+  "visual_style": "consistent_ai_medical_editorial_illustration",
+  "category": "27",
+  "made_for_kids": false,
+  "synthetic_media_disclosure": true,
+  "draft_only_by_default": true,
+  "upload_secret_prefix": "FOOD_CODE_",
+  "voice_id_env": "FOOD_CODE_ELEVEN_VOICE_ID",
+  "youtube_refresh_token_env": "FOOD_CODE_YT_REFRESH_TOKEN"
+}

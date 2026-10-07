@@ -1,0 +1,67 @@
+name: Food Code — haftalık taslak
+
+on:
+  workflow_dispatch:
+    inputs:
+      konu:
+        description: "İsteğe bağlı tam konu başlığı; boşsa sıradaki konu seçilir"
+        required: false
+        default: ""
+      yayin_onayi:
+        description: "Yalnızca insan incelemesi tamamlandıysa true yapın"
+        required: true
+        default: "false"
+  schedule:
+    - cron: "0 10 * * 0"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: food-code-weekly
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: FFmpeg ve fontlar
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Bağımlılıklar
+        run: pip install -r requirements.txt
+
+      - name: Food Code taslağı üret
+        env:
+          GEMINI_API_KEY: ${{ secrets.FOOD_CODE_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.FOOD_CODE_ANTHROPIC_API_KEY || secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_API_KEY: ${{ secrets.FOOD_CODE_CLAUDE_API_KEY || secrets.CLAUDE_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.FOOD_CODE_OPENROUTER_API_KEY || secrets.OPENROUTER_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.FOOD_CODE_NVIDIA_API_KEY || secrets.NVIDIA_API_KEY }}
+          FOOD_CODE_TOPIC: ${{ github.event.inputs.konu }}
+        run: python3 food_code/generate_draft.py
+
+      - name: Taslak artifact
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: food-code-draft
+          path: |
+            output/food_code_video.mp4
+            output/food_code_thumbnail.jpg
+            output/food_code_script.json
+            output/food_code_sources.md
+            output/food_code_review.md
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Yayın onayı yok — güvenli duruş
+        if: github.event_name == 'schedule' || github.event.inputs.yayin_onayi != 'true'
+        run: echo "Taslak üretildi. İnsan incelemesi ve ayrı kanal OAuth onayı olmadan YouTube yüklemesi yapılmadı."

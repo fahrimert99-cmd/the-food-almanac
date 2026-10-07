@@ -1,0 +1,52 @@
+[
+  {
+    "title": "What Happens to Your Blood Sugar After a High-Protein Breakfast?",
+    "angle": "Explain the general physiology without promising treatment or guaranteed outcomes.",
+    "evidence_required": ["blood glucose response", "protein and satiety", "individual variation"]
+  },
+  {
+    "title": "Why Fiber Changes How Fast You Digest a Meal",
+    "angle": "Show soluble versus insoluble fiber and explain digestion in plain English.",
+    "evidence_required": ["fiber types", "digestion speed", "water intake"]
+  },
+  {
+    "title": "What a Caffeine Cutoff Can and Cannot Do for Sleep",
+    "angle": "Explain caffeine half-life and why sensitivity differs; avoid universal cutoff claims.",
+    "evidence_required": ["caffeine half-life", "sleep timing", "individual sensitivity"]
+  },
+  {
+    "title": "Why Ultra-Processed Food Is Hard to Stop Eating",
+    "angle": "Discuss energy density, eating rate, palatability, and portion context without demonizing one food.",
+    "evidence_required": ["energy density", "eating rate", "portion size"]
+  },
+  {
+    "title": "What Happens When You Replace Sugary Drinks With Water",
+    "angle": "Describe likely calorie and hydration changes while avoiding guaranteed weight-loss promises.",
+    "evidence_required": ["liquid calories", "hydration", "behavior substitution"]
+  },
+  {
+    "title": "Why Sleep Deprivation Can Increase Food Cravings",
+    "angle": "Explain appetite regulation and decision-making with cautious, non-diagnostic language.",
+    "evidence_required": ["sleep duration", "appetite signals", "craving behavior"]
+  },
+  {
+    "title": "Does Eating Late at Night Matter? The Evidence Is More Nuanced",
+    "angle": "Separate meal timing, total intake, sleep, and individual schedules.",
+    "evidence_required": ["meal timing", "circadian rhythm", "total energy intake"]
+  },
+  {
+    "title": "What the ‘No Added Sugar’ Label Actually Means",
+    "angle": "Explain label language and what the claim does not prove about nutrition quality.",
+    "evidence_required": ["added sugar definition", "nutrition label", "overall diet context"]
+  },
+  {
+    "title": "Why You Feel Full After Some Meals but Hungry After Others",
+    "angle": "Compare protein, fiber, volume, energy density, and eating speed.",
+    "evidence_required": ["satiety", "protein", "fiber", "energy density"]
+  },
+  {
+    "title": "What Happens to Fruit When It Is Turned Into Juice",
+    "angle": "Compare whole fruit and juice without calling either universally good or bad.",
+    "evidence_required": ["fiber", "liquid calories", "portion size"]
+  }
+]
