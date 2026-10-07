@@ -45,6 +45,8 @@ jobs:
           CLAUDE_API_KEY: ${{ secrets.FOOD_CODE_CLAUDE_API_KEY || secrets.CLAUDE_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.FOOD_CODE_OPENROUTER_API_KEY || secrets.OPENROUTER_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.FOOD_CODE_NVIDIA_API_KEY || secrets.NVIDIA_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.FOOD_CODE_ELEVENLABS_API_KEY || secrets.ELEVENLABS_API_KEY }}
+          FOOD_CODE_ELEVEN_VOICE_ID: ${{ secrets.FOOD_CODE_ELEVEN_VOICE_ID }}
           FOOD_CODE_TOPIC: ${{ github.event.inputs.konu }}
         run: python3 food_code/generate_draft.py
 
