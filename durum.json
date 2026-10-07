@@ -129,6 +129,7 @@
     "İLK FİYAT NEDEN HEP YÜKSEK? 🎯",
     "İNDİRİM ETİKETLERİ YALAN! 🏷️",
     "İNDİRİM GÜNÜNDEKİ FİYAT OYUNU! 🛍️",
+    "İNDİRİM KUPONU NEDEN VERİLİR? 🎟️",
     "İNDİRİM REYONU NEDEN GİRİŞTE? 🍎",
     "İNDİRİM REYONU TUZAĞI! 🛒",
     "İNTERNET ALIŞVERİŞİ SENİ KANDIRIYOR! 🛍️",
@@ -136,17 +137,17 @@
     "İSTASYON MARKETİ TUZAĞI! ⛽",
     "İŞTE EN SIK DÜŞÜLEN TUZAK! 🧠"
   ],
-  "son_rapor": ": İLK ÜRÜN NEDEN PAHALI GÖSTERİLİR? 📊\n      · atlandı (yayınlanmış konu tekrarı ~ 'BENZİNLİK MARKETİ NEDEN PAHALI? ⛽'): MARKALI GİYSİ NEDEN PAHALI? 👕\n      · atlandı (yayınlanmış konu tekrarı ~ 'BOZUK PARA NEDEN VERMEZLER? 🪙'): BOZUK PARANIN KENARI NEDEN TIRTIKLI? 🪙\n      · atlandı (yayınlanmış konu tekrarı ~ 'REKLAMLAR BEYNİNİ BÖYLE KANDIRIYOR! 📺'): 'BEDAVA' KELİMESİ BEYNİ NASIL KANDIRIR? 🧠\n      · atlandı (yayınlanmış konu tekrarı ~ 'SON KULLANMA TARİHİ OYUNU! 📅'): SON KULLANMA TARİHİNİN ÖNÜNDE FİYAT MANİPÜLASYONU! 📅\n      · atlandı (yayınlanmış konu tekrarı ~ 'ÜYE OLMAK 10 SANİYE İPTAL 10 DAKİKA — ABONELİ'): ABONELİK İPTALİNİ GİZLEYEN SAYFA TUZAĞI 🔒\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): İNDİRİM ETİKETİ NEDEN HEP KIRMIZI? 🔴\n      · atlandı (yayınlanmış konu tekrarı ~ 'SEPETTEKİ ÜRÜN NEDEN PAHALANDI? 🛒'): EN PAHALI ÜRÜN NEDEN GÖZ HİZASINDA? 👁️\n      · atlandı (yayınlanmış konu tekrarı ~ ''ÜCRETSİZ DENEME' TUZAĞINA DİKKAT! ⏰'): “ÜCRETSİZ DENE” NEDEN ÜCRETLİ OLUR? ⏰\n      · atlandı (yayınlanmış konu tekrarı ~ 'ÜSTÜ ÇİZİLİ FİYAT OYUNU! 🏷️'): “SANA ÖZEL” FİYAT OYUNU! 🎯\n      · atlandı (yayınlanmış konu tekrarı ~ 'İNDİRİM ETİKETLERİ YALAN! 🏷️'): SAHTE İNDİRİMİN MATEMATİĞİ: BÜYÜK YALANI NASIL ANLARSIN\n      · atlandı (yayınlanmış konu tekrarı ~ 'PAKET KÜÇÜLDÜ, FİYAT AYNI! 📉'): UN PAKETİ NEDEN 1KG'den 900g'a düştü fiyat aynı? 📦\n      · atlandı (yayınlanmış konu tekrarı ~ 'MARKETE GİRİNCE NEDEN ANİDEN ACIKIYORSUN? 🥖'): MARKET GİRİŞİNDE KULLANILAN SIĞIR KOKUSU NEDEN DAHA FAZ\n      Tema (katı marka filtresi): 'tuzak' (uygun kalan: 69)\n      Slot 09:00 UTC: marka serisi (kalan: 32)\n[1/3] Senaryo (154/185) [diger]: AMAZON PRIME İPTALİ NEDEN BU KADAR ZOR? 🔒\n✓ Yayın slotu zaten dolu (2026-10-07T09:00:00Z); atlandı: https://youtu.be/XvGYtcV7W80\n",
+  "son_rapor": "> önce pexels]\n      Sahne 6/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~5256 toplam -> 'discount coupon on phone']\n      [Pixabay: 12 klip / ~1134 toplam -> 'discount coupon on phone']\n      [seçim(vision): pexels~5256 / pixabay~1134 -> önce pixabay]\n      Sahne 7/10: gerçek stok video ✓ (pixabay)\n      [Pexels: 8 klip / ~8000 toplam -> 'hand holding sale flyer,']\n      [Pixabay: 12 klip / ~1282 toplam -> 'hand holding sale flyer,']\n      [seçim(vision): pexels~8000 / pixabay~1282 -> önce pexels]\n      Sahne 8/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'red sale tags hanging,']\n      [Pixabay: 12 klip / ~3112 toplam -> 'red sale tags hanging,']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~3112 -> önce pexels]\n      Sahne 9/10: gerçek stok video ✓ (pexels)\n      [Pexels: 8 klip / ~8000 toplam -> 'shopping discount closeup, side']\n      [Pixabay: 12 klip / ~1151 toplam -> 'shopping discount closeup, side']\n      [vision gemini-2.5-flash hata: HTTP Error 429: Too Many Requests]\n      [vision gemini-2.0-flash hata: HTTP Error 404: Not Found]\n      [seçim(sayısal): pexels~8000 / pixabay~1151 -> önce pexels]\n      Sahne 10/10: gerçek stok video ✓ (pexels)\n      [dağılım: openrouter=0, nvidia=0, pexels=8, pixabay=2, ai=0 / toplam 10 sahne]\n      Çıktı: output/video.mp4  (14985 KB)\n      Kapak: output/kapak.jpg\n      Planlı yayın: 2026-10-07T17:00:00Z UTC\n[3/3] YouTube'a yükleniyor ...\n✓ Onceki videoya abone yorumu eklendi\n✓ Yüklendi: https://youtu.be/_K79y_AYJiE  (yayın: 2026-10-07T17:00:00Z UTC)\n✓ Kapak fotoğrafı ayarlandı (ilk)\n✓ Kapak işleme sonrası YENİDEN basıldı (otomatik kareyi ezmesin diye)\n",
   "bekleyen_yorum": {
-    "video_id": "XvGYtcV7W80",
-    "metin": "Sen bu konuda ne düşünüyorsun? Yorumlara yaz.",
+    "video_id": "_K79y_AYJiE",
+    "metin": "İNDİRİM KUPONU NEDEN VERİLİR? ️ hakkında sen en çok hangi ayrıntıyı gözden kaçırıyorsun?",
     "kaynak": "fallback",
-    "hash": "9a376273c2914aae"
+    "hash": "f6721789eecd8e32"
   },
-  "son_kategori": "diger",
-  "son_video_id": "XvGYtcV7W80",
-  "son_baslik": "TEMU'DAKİ ÇARK NEDEN HEP KAZANDIRIYOR? 🎡",
-  "son_yayin_zamani": "2026-10-07T09:00:00Z",
+  "son_kategori": "psikoloji",
+  "son_video_id": "_K79y_AYJiE",
+  "son_baslik": "İNDİRİM KUPONU NEDEN VERİLİR? 🎟️",
+  "son_yayin_zamani": "2026-10-07T17:00:00Z",
   "analytics_ozet": {
     "guncelleme": "2026-10-04T11:41:11Z",
     "donem": {
