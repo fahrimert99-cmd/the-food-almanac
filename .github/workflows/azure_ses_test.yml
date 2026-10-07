@@ -1,0 +1,57 @@
+name: Azure Ses Testi (YUKLEMEZ)
+
+# Aynı marka videosunu Azure Speech Türkçe sesleriyle (Ahmet, Emel) üretir.
+# YouTube'a YUKLEMEZ. Çıktı: onizleme/azure/*.mp4 (dala kaydedilir) + artifact.
+on:
+  push:
+    branches: [claude/adoring-sagan-ni2qvl]
+    paths: [.github/workflows/azure_ses_test.yml, azure_ses_liste.py, onizleme/azure_tetik.txt]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: claude/adoring-sagan-ni2qvl
+      - name: FFmpeg kur
+        timeout-minutes: 8
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg && break
+            sleep 10
+          done
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt azure-cognitiveservices-speech faster-whisper
+      - name: Render
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          KOD_VIDEO_TTS: azure
+        run: |
+          mkdir -p onizleme/azure
+          V="en-US-Andrew:DragonLatestNeural"
+          AZURE_SPEECH_VOICE="$V" python3 kod_video.py "TEMU NASIL BU KADAR UCUZ? 📦" "onizleme/azure/temu-andrew-dragon.mp4" 2>&1 | tee onizleme/azure/log.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: azure-ses
+          path: onizleme/azure/
+          if-no-files-found: ignore
+      - name: Dala kaydet
+        if: always()
+        run: |
+          git config user.name "onizleme-bot"
+          git config user.email "onizleme-bot@users.noreply.github.com"
+          git add -f onizleme/azure onizleme/kod_video/ses || true
+          git commit -m "onizleme: Azure ses testi" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin claude/adoring-sagan-ni2qvl && git push origin HEAD:claude/adoring-sagan-ni2qvl && break; sleep 5; done

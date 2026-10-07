@@ -962,6 +962,113 @@ def klipleri_indir(sorgular, tmp):
     return yollar
 
 
+def AZURE_SES():
+    return os.environ.get("AZURE_SPEECH_VOICE", "tr-TR-AhmetNeural")
+
+
+def azure_seslendir(metin, mp3):
+    """Azure Speech nöral Türkçe ses; kelime zamanları WordBoundary olayından."""
+    import azure.cognitiveservices.speech as sdk
+    from xml.sax.saxutils import escape
+    conf = sdk.SpeechConfig(subscription=os.environ["AZURE_SPEECH_KEY"].strip(),
+                            region=os.environ.get("AZURE_SPEECH_REGION", "swedencentral").strip())
+    conf.set_speech_synthesis_output_format(sdk.SpeechSynthesisOutputFormat.Audio24Khz160KBitRateMonoMp3)
+    synth = sdk.SpeechSynthesizer(speech_config=conf, audio_config=None)
+    kelimeler = []
+
+    def _sinir(e):
+        if e.boundary_type == sdk.SpeechSynthesisBoundaryType.Word and e.text.strip():
+            kelimeler.append({"start": e.audio_offset / 1e7,
+                              "dur": e.duration.total_seconds(), "text": e.text})
+    synth.synthesis_word_boundary.connect(_sinir)
+    hiz = os.environ.get("AZURE_SPEECH_RATE", "+12%")
+    ic = f'<prosody rate="{hiz}">{escape(metin)}</prosody>'
+    if not AZURE_SES().startswith("tr-TR"):   # çok dilli ses: Türkçe konuştur
+        ic = f'<lang xml:lang="tr-TR">{ic}</lang>'
+    ssml = ('<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="tr-TR">'
+            f'<voice name="{AZURE_SES()}">{ic}</voice></speak>')
+    r = synth.speak_ssml_async(ssml).get()
+    if r.reason != sdk.ResultReason.SynthesizingAudioCompleted:
+        raise RuntimeError(f"Azure: {r.reason} {getattr(r, 'cancellation_details', '')}")
+    open(mp3, "wb").write(r.audio_data)
+    if not kelimeler:
+        try:
+            kelimeler = whisper_hizala(mp3, metin)
+            print("Azure: kelime zamanları Whisper ile hizalandı")
+        except Exception as e:
+            print("Whisper hizalama hata:", str(e)[:150])
+    if not kelimeler:   # son çare: harf sayısına göre dağıt
+        import video as V
+        sure = V.sure_al(mp3)
+        ws = metin.split() or [" "]
+        top = sum(len(w) + 1 for w in ws)
+        t = 0.0
+        for w in ws:
+            d = sure * (len(w) + 1) / top
+            kelimeler.append({"start": t, "dur": d, "text": w})
+            t += d
+        print("Azure: kelime zamanı yok, tahmini zamanlama")
+    return kelimeler
+
+
+def _kok(w):
+    w = w.replace("İ", "i").replace("I", "ı").lower()
+    return re.sub(r"[^0-9a-zçğıöşü]", "", w)
+
+
+def whisper_hizala(mp3, metin):
+    """Metindeki her kelimeye, Whisper'ın sesten bulduğu zamanı verir. Altyazı
+    metni senaryodan gelir (yazım doğru kalır); eşleşmeyen kelimeler komşu
+    eşleşmelerin arasına harf sayısına göre yerleştirilir."""
+    from faster_whisper import WhisperModel
+    import difflib
+    model = WhisperModel(os.environ.get("WHISPER_MODEL", "small"), device="cpu", compute_type="int8")
+    import numpy as np   # sesi ffmpeg ile çöz (faster-whisper'ın PyAV yolu sürüm uyumsuz olabiliyor)
+    ham = subprocess.run(["ffmpeg", "-v", "error", "-i", mp3, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                         capture_output=True, check=True).stdout
+    dalga = np.frombuffer(ham, np.int16).astype(np.float32) / 32768.0
+    parcalar, _ = model.transcribe(dalga, language="tr", word_timestamps=True, beam_size=5)
+    duyulan = [w for p in parcalar for w in (p.words or [])]
+    if not duyulan:
+        raise RuntimeError("Whisper kelime bulamadı")
+    ws = metin.split()
+    a, b = [_kok(w) for w in ws], [_kok(w.word) for w in duyulan]
+    zaman = [None] * len(ws)
+    for blok in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        etiket, i1, i2, j1, j2 = blok
+        if etiket == "equal" or (etiket == "replace" and i2 - i1 == j2 - j1):
+            for k in range(i2 - i1):
+                zaman[i1 + k] = (duyulan[j1 + k].start, duyulan[j1 + k].end)
+        elif etiket == "replace":   # sayı/ek farkı: aralığı bloğa yay
+            bas, son = duyulan[j1].start, duyulan[j2 - 1].end
+            top = sum(len(w) + 1 for w in ws[i1:i2])
+            t = bas
+            for k in range(i1, i2):
+                d = (son - bas) * (len(ws[k]) + 1) / top
+                zaman[k] = (t, t + d)
+                t += d
+    # eşleşmeyenleri komşular arasında doldur
+    i = 0
+    while i < len(ws):
+        if zaman[i] is not None:
+            i += 1
+            continue
+        j = i
+        while j < len(ws) and zaman[j] is None:
+            j += 1
+        bas = zaman[i - 1][1] if i > 0 else 0.0
+        son = zaman[j][0] if j < len(ws) else max(bas + 0.3 * (j - i), duyulan[-1].end)
+        top = sum(len(w) + 1 for w in ws[i:j])
+        t = bas
+        for k in range(i, j):
+            d = (son - bas) * (len(ws[k]) + 1) / top
+            zaman[k] = (t, t + d)
+            t += d
+        i = j
+    return [{"start": round(z[0], 3), "dur": round(max(0.05, z[1] - z[0]), 3), "text": w}
+            for w, z in zip(ws, zaman)]
+
+
 def seslendir(metin, mp3):
     """Kanal Shorts sesi (ElevenLabs, config.kisa_ses_id) → yoksa edge-tts."""
     import video as V
@@ -972,6 +1079,8 @@ def seslendir(metin, mp3):
                         "anullsrc=r=44100:cl=mono", "-t", f"{sure:.2f}", mp3], check=True)
         ws = metin.split() or [" "]
         return [{"start": i * sure / len(ws), "dur": sure / len(ws), "text": w} for i, w in enumerate(ws)], "sessiz (yerel deneme)"
+    if os.environ.get("KOD_VIDEO_TTS") == "azure":
+        return azure_seslendir(metin, mp3), f"Azure ({AZURE_SES()})"
     if cfg.get("kisa_eleven", True) and V._eleven_key():
         try:
             import inspect
@@ -983,6 +1092,11 @@ def seslendir(metin, mp3):
             return b, "ElevenLabs (kanal Shorts sesi)"
         except Exception as e:
             print("ElevenLabs hata:", str(e)[:150])
+    if os.environ.get("AZURE_SPEECH_KEY"):
+        try:
+            return azure_seslendir(metin, mp3), f"Azure ({AZURE_SES()})"
+        except Exception as e:
+            print("Azure hata:", str(e)[:150])
     cumleler = [c for c in re.split(r"(?<=[.!?])\s+", metin) if c.strip()]
     b = V.seslendir_prosodik(cumleler, V.CONFIG["sesler"][cfg.get("ses", "erkek")],
                              str(cfg.get("hiz", "+6%")), mp3)
@@ -1020,7 +1134,10 @@ def render(baslik, cikti):
     # Ses önbelleği: aynı metin bir daha seslendirilmez (ElevenLabs kredisi korunur)
     import hashlib, shutil
     ob_dir = os.environ.get("KOD_VIDEO_SES_DIR", os.path.join("onizleme", "kod_video", "ses"))
-    ob = os.path.join(ob_dir, hashlib.md5(tts_metin.encode()).hexdigest()[:12]) if ob_dir else None
+    ob_ad = hashlib.md5(tts_metin.encode()).hexdigest()[:12]
+    if os.environ.get("KOD_VIDEO_TTS") == "azure":
+        ob_ad += "-" + AZURE_SES()
+    ob = os.path.join(ob_dir, ob_ad) if ob_dir else None
     if ob and os.path.exists(ob + ".mp3") and os.path.exists(ob + ".json"):
         shutil.copy(ob + ".mp3", mp3)
         kelimeler, kaynak = json.load(open(ob + ".json", encoding="utf-8")), "önbellek (kredi harcanmadı)"
