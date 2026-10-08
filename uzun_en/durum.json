@@ -1,11 +1,17 @@
 {
-  "aktif": null,
+  "aktif": "walking-after-meals",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
       "slot": "2026-10-09T14:00:00Z",
       "sahne_deneme": 0,
       "not": "Kanalın ilk videosu: sahneleri ve görselleri hazır (tohum/); yalnızca marka adı geçen 2 cümle yeniden seslendirilir."
+    },
+    "walking-after-meals": {
+      "slot": "2026-10-13T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-10-08T11:15:04Z",
+      "sahne_deneme": 0
     }
   }
 }
