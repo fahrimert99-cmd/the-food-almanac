@@ -12,6 +12,10 @@ The channel publishes calm, evidence-based explainers about everyday food questi
 
 Two videos go out every week. Your work is published automatically, so accuracy is everything.
 
+**Audience.** English-speaking viewers, mostly in the US and UK. The core of this niche is adults over 50, who care
+about blood sugar, heart, muscle, joints, gut and brain health. Write for them: plain words, practical takeaways, no jargon
+without an explanation. Do not exclude younger viewers.
+
 The prompt tells you three things:
 - the project **SLUG**,
 - the **topic** (an entry from `uzun_en/konular.json`),
@@ -65,17 +69,29 @@ The prompt tells you three things:
 ## Step 2: Angle, title and thumbnail
 
 **Title (`baslik`)**
-- An honest, curiosity-driven question or statement, in Title Case.
+- An honest, curiosity-driven statement or question, in Title Case.
+- Best-performing pattern in this niche: one concrete food, drink or habit, plus the one thing it does in the body.
+  - Form: "What [food or habit] Really Does to Your [body part or measure]", optionally after a short question.
+  - Examples: "What a 10-Minute Walk After Meals Really Does to Your Blood Sugar", "Eat Vegetables First? What Food Order
+    Really Does to Your Blood Sugar".
+  - One food or habit and one outcome. Do not stack two organs ("... to Your Heart and Muscles").
 - Ideally 45–70 characters; never more than 100.
-- Example of the pattern: "Eat Vegetables First? What Food Order Really Does to Your Blood Sugar".
-- Banned: fear or hype words ("never", "poison", "toxic", "doctors hate", "shocking", "miracle", "destroys", "!!", ALL CAPS).
+- Age angle: when your sources studied older adults, or the effect clearly matters more with age, you may add "After 50"
+  (or "After 60" when the studies were in that age group). Only when the evidence supports it.
+- Banned: fear or hype words ("shock", "shocking", "never", "poison", "toxic", "doctors hate", "miracle", "destroys",
+  "!!", ALL CAPS words).
 - The title must match what the evidence actually shows.
 
 **Thumbnail (`kapak`)**
-- `satirlar`: 2–3 short UPPERCASE lines, each at most 14–16 characters, and at most about 6 words in total.
+- `satirlar`: the title compressed into 3–4 UPPERCASE lines that read as one sentence.
+  - Each line at most 14 characters (never more than 15); 5–8 words in total.
+  - The text fills the left half of the thumbnail in very large letters, so fewer characters means bigger text.
+  - The last line is the body outcome, drawn in gold. Example: `["10-MIN WALK", "AFTER MEALS —", "WHAT IT DOES TO", "BLOOD SUGAR"]`.
 - `vurgu` (optional): one striking but real number from your sources, at most 6 characters (for example `–37%`).
 - `vurgu_alt`: 2–4 words explaining that number.
-- `gorsel`: one large, clear subject for the image model, such as a single food or a plate. Keep it simple and iconic.
+- `gorsel`: one large, clear subject for the image model: a single food, drink or object, big, on plain off-white paper.
+  - No decorative leaves, herbs, plants or extra objects unless they are the subject.
+  - Keep it simple and iconic; the subject is placed automatically on the right half.
 
 ## Step 3: Structure
 
