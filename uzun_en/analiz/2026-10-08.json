@@ -1,5 +1,5 @@
 {
-  "tarih": "2026-10-08T12:23:06Z",
+  "tarih": "2026-10-08T12:25:59Z",
   "aralik": [
     "2026-10-08",
     "2026-10-08"
@@ -44,8 +44,8 @@
   "gunluk": {
     "satirlar": []
   },
+  "izleyici_tutma": {},
   "gosterim": {
-    "hata": "<HttpError 400 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&metrics=videoThumbnailImpressions%2CvideoThumbnailImpressionsClickRate&dimensions=video&startDate=2026-10-08&endDate=2026-10-08&filters=video%3D%3DAxPV1xa_6so&alt=json returned \"The query is not supported. Check the documentation at https://developers.google.com/youtube/analytics/v2/available_reports for a list of supported queries.\". Details: \"[{'message': 'The query is not supported. Check t"
-  },
-  "izleyici_tutma": {}
+    "hata": "<HttpError 403 when requesting https://youtubereporting.googleapis.com/v1/jobs?alt=json returned \"YouTube Reporting API has not been used in project 318605312688 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtubereporting.googleapis.com/overview?project=318605312688 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\". Details: \"[{'@type': 'type.googleapis.com/google.rpc.ErrorIn"
+  }
 }
