@@ -1,0 +1,61 @@
+name: Eski Is Akisi Temizligi
+# Actions sayfasında yalnızca The Food Almanac iş akışları kalsın: dosyası artık depoda olmayan eski
+# (Türkçe Shorts) iş akışlarının çalıştırma geçmişi silinir. Geçmişi biten iş akışı listeden kalkar.
+# API sınırı yüzünden bir çalıştırmada en çok ~700 kayıt silinir; kalanlar her gün devam eder,
+# bitince yalnızca birkaç saniyelik bir kontrol yapılır. Dallara, sürümlere ve koda dokunmaz.
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/eski_akis_temizlik.yml]
+  schedule:
+    - cron: "37 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: eski-akis-temizlik
+  cancel-in-progress: false
+
+jobs:
+  temizle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Eski iş akışlarının çalıştırma geçmişini sil
+        env:
+          GH_TOKEN: ${{ github.token }}
+          R: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          R = os.environ["R"]
+
+          def gh(*a):
+              r = subprocess.run(["gh", "api", *a], capture_output=True, text=True)
+              return r.stdout if r.returncode == 0 else None
+
+          mevcut = {f".github/workflows/{f}" for f in os.listdir(".github/workflows")}
+          wf = json.loads(gh(f"repos/{R}/actions/workflows?per_page=100") or "{}").get("workflows", [])
+          eski = [w for w in wf if w["path"] not in mevcut]
+          print("dosyası olmayan iş akışı:", len(eski), [w["name"] for w in eski])
+          silinen, SINIR = 0, 700
+          for w in eski:
+              while silinen < SINIR:
+                  runs = json.loads(gh(f"repos/{R}/actions/workflows/{w['id']}/runs?per_page=100") or "{}").get("workflow_runs", [])
+                  if not runs:
+                      break
+                  for r in runs:
+                      if silinen >= SINIR:
+                          break
+                      if gh("-X", "DELETE", f"repos/{R}/actions/runs/{r['id']}") is not None:
+                          silinen += 1
+              if silinen >= SINIR:
+                  break
+          print(f"silinen çalıştırma: {silinen}" + (" (günlük sınır; kalanlar yarın)" if silinen >= SINIR else ""))
+          PY

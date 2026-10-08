@@ -17,7 +17,6 @@ import argparse, datetime as dt, os, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
 
-sys.path.insert(0, O.REPO)
 
 
 def ayni_baslikli(yt, baslik):
@@ -34,7 +33,7 @@ def ayni_baslikli(yt, baslik):
 def kota_kontrol():
     """1 birimlik bir okuma: kota dolduysa render boşuna yapılmasın (kota her gün 07:00 UTC'de sıfırlanır)."""
     from googleapiclient.discovery import build
-    import youtube_yukle as YY
+    import youtube_api as YY
     try:
         build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False).channels().list(part="id", mine=True).execute()
     except Exception as e:
@@ -48,7 +47,7 @@ def kota_kontrol():
 def liste_ekle(vid, m):
     if not m.get("oynatma_listesi"):
         return True
-    import youtube_yukle as YY
+    import youtube_api as YY
     try:
         YY.oynatma_listesine_ekle(vid, m["oynatma_listesi"], m.get("oynatma_listesi_aciklama", ""))
         O.log(f"✓ oynatma listesi: {m['oynatma_listesi']}")
@@ -66,7 +65,7 @@ def tamamla():
     import datetime as dt_, subprocess, tempfile
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
-    import youtube_yukle as YY
+    import youtube_api as YY
     m = O.marka()
     simdi = dt_.datetime.now(dt_.timezone.utc)
     adaylar = []
@@ -158,7 +157,7 @@ def main():
 
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
-    import youtube_yukle as YY
+    import youtube_api as YY
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
     vid = ayni_baslikli(yt, meta["baslik"])
     if vid:
