@@ -1,0 +1,2397 @@
+{
+  "ses": "en_US-norman-medium",
+  "sahneler": [
+    {
+      "id": 1,
+      "cumleler": [
+        {
+          "metin": "Picture the same lunch on two different days.",
+          "dosya": "01_01.wav",
+          "sure": 2.026,
+          "duraklar": []
+        },
+        {
+          "metin": "Grilled chicken, a green salad, steamed broccoli, a slice of bread, and a glass of orange juice.",
+          "dosya": "01_02.wav",
+          "sure": 6.68,
+          "duraklar": [
+            [
+              0.82,
+              1.3
+            ],
+            [
+              2.15,
+              2.47
+            ],
+            [
+              2.93,
+              3.05
+            ],
+            [
+              3.61,
+              3.84
+            ],
+            [
+              4.72,
+              4.98
+            ],
+            [
+              6.14,
+              6.28
+            ]
+          ]
+        },
+        {
+          "metin": "Same food.",
+          "dosya": "01_03.wav",
+          "sure": 1.082,
+          "duraklar": [
+            [
+              0.58,
+              0.72
+            ]
+          ]
+        },
+        {
+          "metin": "Same portions.",
+          "dosya": "01_04.wav",
+          "sure": 1.153,
+          "duraklar": []
+        },
+        {
+          "metin": "Same person.",
+          "dosya": "01_05.wav",
+          "sure": 1.097,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "cumleler": [
+        {
+          "metin": "The only thing that changes is the order you eat it in.",
+          "dosya": "02_01.wav",
+          "sure": 2.745,
+          "duraklar": []
+        },
+        {
+          "metin": "And yet, the blood sugar curve that follows can look surprisingly different.",
+          "dosya": "02_02.wav",
+          "sure": 4.0,
+          "duraklar": [
+            [
+              0.53,
+              0.97
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "cumleler": [
+        {
+          "metin": "In one small but striking study, eating the vegetables and protein first, and the bread and juice last, kept blood sugar about 37 percent lower one hour after the meal.",
+          "dosya": "03_01.wav",
+          "sure": 11.108,
+          "duraklar": [
+            [
+              0.77,
+              0.94
+            ],
+            [
+              1.91,
+              2.41
+            ],
+            [
+              3.35,
+              3.57
+            ],
+            [
+              4.44,
+              4.85
+            ],
+            [
+              6.31,
+              6.98
+            ],
+            [
+              7.21,
+              7.36
+            ],
+            [
+              8.12,
+              8.24
+            ],
+            [
+              9.31,
+              9.48
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "cumleler": [
+        {
+          "metin": "So is this a real effect, or just another internet food hack?",
+          "dosya": "04_01.wav",
+          "sure": 3.593,
+          "duraklar": [
+            [
+              1.33,
+              1.45
+            ],
+            [
+              1.46,
+              1.71
+            ],
+            [
+              2.87,
+              3.04
+            ]
+          ]
+        },
+        {
+          "metin": "Today we'll look at what the research actually found, why it might work inside your body, who it helps most, and where the evidence runs out.",
+          "dosya": "04_02.wav",
+          "sure": 7.659,
+          "duraklar": [
+            [
+              2.37,
+              2.82
+            ],
+            [
+              4.39,
+              4.69
+            ],
+            [
+              5.49,
+              6.05
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "cumleler": [
+        {
+          "metin": "Welcome to Past the Label.",
+          "dosya": "05_01.wav",
+          "sure": 1.55,
+          "duraklar": []
+        },
+        {
+          "metin": "Let's start with what actually happens in your body after you eat.",
+          "dosya": "05_02.wav",
+          "sure": 3.611,
+          "duraklar": [
+            [
+              0.79,
+              0.93
+            ],
+            [
+              2.04,
+              2.25
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "cumleler": [
+        {
+          "metin": "When you eat bread, rice, pasta, potatoes, or anything sweet, your digestive system breaks the starches and sugars down into glucose.",
+          "dosya": "06_01.wav",
+          "sure": 9.628,
+          "duraklar": [
+            [
+              0.59,
+              0.71
+            ],
+            [
+              1.07,
+              1.43
+            ],
+            [
+              1.92,
+              2.35
+            ],
+            [
+              2.85,
+              3.14
+            ],
+            [
+              3.71,
+              3.93
+            ],
+            [
+              4.18,
+              4.35
+            ],
+            [
+              5.11,
+              5.32
+            ],
+            [
+              7.69,
+              7.8
+            ],
+            [
+              8.68,
+              8.82
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "cumleler": [
+        {
+          "metin": "That glucose passes through the wall of your small intestine and into your bloodstream.",
+          "dosya": "07_01.wav",
+          "sure": 4.339,
+          "duraklar": [
+            [
+              1.06,
+              1.28
+            ]
+          ]
+        },
+        {
+          "metin": "Your blood sugar rises.",
+          "dosya": "07_02.wav",
+          "sure": 1.335,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "cumleler": [
+        {
+          "metin": "In response, your pancreas releases insulin, the hormone that helps move glucose out of the blood and into your muscles, liver, and fat tissue, where it can be used or stored.",
+          "dosya": "08_01.wav",
+          "sure": 9.974,
+          "duraklar": [
+            [
+              1.21,
+              1.58
+            ],
+            [
+              3.34,
+              3.49
+            ],
+            [
+              6.79,
+              6.91
+            ],
+            [
+              7.66,
+              7.78
+            ],
+            [
+              8.22,
+              8.63
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "cumleler": [
+        {
+          "metin": "In a person without diabetes, blood sugar usually rises after a meal and settles back down within two to three hours, typically staying below about 140 milligrams per deciliter, or 7.8 millimoles per liter, at the two-hour mark.",
+          "dosya": "09_01.wav",
+          "sure": 15.796,
+          "duraklar": [
+            [
+              1.52,
+              2.31
+            ],
+            [
+              4.91,
+              5.09
+            ],
+            [
+              5.56,
+              5.69
+            ],
+            [
+              7.5,
+              7.96
+            ],
+            [
+              8.81,
+              9.0
+            ],
+            [
+              10.75,
+              10.98
+            ],
+            [
+              11.67,
+              11.87
+            ],
+            [
+              12.86,
+              13.26
+            ],
+            [
+              14.38,
+              14.81
+            ],
+            [
+              15.66,
+              15.77
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "cumleler": [
+        {
+          "metin": "In type 2 diabetes and prediabetes, that system works less smoothly.",
+          "dosya": "10_01.wav",
+          "sure": 4.822,
+          "duraklar": [
+            [
+              2.47,
+              2.88
+            ]
+          ]
+        },
+        {
+          "metin": "The body responds less well to insulin, and the pancreas may not keep up.",
+          "dosya": "10_02.wav",
+          "sure": 4.731,
+          "duraklar": [
+            [
+              2.3,
+              2.63
+            ],
+            [
+              3.5,
+              4.02
+            ]
+          ]
+        },
+        {
+          "metin": "So the same meal can push blood sugar higher, and keep it high for longer.",
+          "dosya": "10_03.wav",
+          "sure": 4.294,
+          "duraklar": [
+            [
+              1.12,
+              1.23
+            ],
+            [
+              2.17,
+              2.81
+            ],
+            [
+              3.05,
+              3.2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "cumleler": [
+        {
+          "metin": "Doctors pay attention to these after-meal peaks because, over months, they add to a person's average blood sugar, measured by a test called HbA1c.",
+          "dosya": "11_01.wav",
+          "sure": 9.859,
+          "duraklar": [
+            [
+              2.98,
+              3.14
+            ],
+            [
+              3.74,
+              4.33
+            ],
+            [
+              5.33,
+              5.52
+            ],
+            [
+              6.58,
+              7.06
+            ],
+            [
+              7.86,
+              8.04
+            ],
+            [
+              8.68,
+              8.85
+            ]
+          ]
+        },
+        {
+          "metin": "That's why a simple way to soften them gets attention.",
+          "dosya": "11_02.wav",
+          "sure": 2.307,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "cumleler": [
+        {
+          "metin": "In 2015, researchers at Weill Cornell Medicine in New York decided to test the idea directly.",
+          "dosya": "12_01.wav",
+          "sure": 6.164,
+          "duraklar": [
+            [
+              1.33,
+              1.63
+            ],
+            [
+              4.05,
+              4.17
+            ],
+            [
+              4.99,
+              5.16
+            ],
+            [
+              5.87,
+              5.98
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "cumleler": [
+        {
+          "metin": "They recruited eleven adults with type 2 diabetes.",
+          "dosya": "13_01.wav",
+          "sure": 2.68,
+          "duraklar": []
+        },
+        {
+          "metin": "All of them were overweight or had obesity, and all were taking metformin, a common diabetes medicine.",
+          "dosya": "13_02.wav",
+          "sure": 5.82,
+          "duraklar": [
+            [
+              2.44,
+              2.72
+            ],
+            [
+              3.71,
+              3.86
+            ],
+            [
+              4.26,
+              4.43
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "cumleler": [
+        {
+          "metin": "Each volunteer ate the exact same meal on two separate days, a week apart.",
+          "dosya": "14_01.wav",
+          "sure": 4.754,
+          "duraklar": [
+            [
+              1.5,
+              1.62
+            ],
+            [
+              1.63,
+              1.78
+            ],
+            [
+              3.68,
+              3.92
+            ]
+          ]
+        },
+        {
+          "metin": "Ciabatta bread and orange juice for the carbohydrates.",
+          "dosya": "14_02.wav",
+          "sure": 3.426,
+          "duraklar": [
+            [
+              0.95,
+              1.1
+            ],
+            [
+              1.83,
+              1.95
+            ]
+          ]
+        },
+        {
+          "metin": "Skinless grilled chicken breast for protein.",
+          "dosya": "14_03.wav",
+          "sure": 2.544,
+          "duraklar": [
+            [
+              1.57,
+              1.83
+            ]
+          ]
+        },
+        {
+          "metin": "A lettuce and tomato salad, and steamed broccoli with a little butter.",
+          "dosya": "14_04.wav",
+          "sure": 3.915,
+          "duraklar": [
+            [
+              0.45,
+              0.6
+            ],
+            [
+              1.68,
+              2.06
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "cumleler": [
+        {
+          "metin": "On one day, they ate the bread and juice first, and fifteen minutes later, the chicken and vegetables.",
+          "dosya": "15_01.wav",
+          "sure": 5.532,
+          "duraklar": [
+            [
+              0.71,
+              0.91
+            ],
+            [
+              2.15,
+              2.59
+            ],
+            [
+              3.81,
+              4.26
+            ]
+          ]
+        },
+        {
+          "metin": "On the other day, the order was reversed: chicken and vegetables first, bread and juice fifteen minutes later.",
+          "dosya": "15_02.wav",
+          "sure": 5.948,
+          "duraklar": [
+            [
+              0.74,
+              1.02
+            ],
+            [
+              2.13,
+              2.33
+            ],
+            [
+              3.69,
+              4.14
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "cumleler": [
+        {
+          "metin": "Blood samples were taken before the meal and at intervals for two hours afterward, to track both glucose and insulin.",
+          "dosya": "16_01.wav",
+          "sure": 6.514,
+          "duraklar": [
+            [
+              2.76,
+              2.94
+            ],
+            [
+              4.22,
+              4.66
+            ],
+            [
+              5.2,
+              5.33
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "cumleler": [
+        {
+          "metin": "When the vegetables and protein came first, glucose levels were about 29 percent lower at thirty minutes, about 37 percent lower at one hour, and about 17 percent lower at two hours.",
+          "dosya": "17_01.wav",
+          "sure": 12.126,
+          "duraklar": [
+            [
+              0.87,
+              1.18
+            ],
+            [
+              2.29,
+              2.91
+            ],
+            [
+              4.98,
+              5.14
+            ],
+            [
+              6.26,
+              6.77
+            ],
+            [
+              6.99,
+              7.1
+            ],
+            [
+              8.07,
+              8.19
+            ],
+            [
+              9.09,
+              9.48
+            ],
+            [
+              10.94,
+              11.05
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "cumleler": [
+        {
+          "metin": "Insulin levels were lower too.",
+          "dosya": "18_01.wav",
+          "sure": 1.798,
+          "duraklar": []
+        },
+        {
+          "metin": "In other words, the body needed less insulin to handle the very same food.",
+          "dosya": "18_02.wav",
+          "sure": 4.064,
+          "duraklar": [
+            [
+              0.78,
+              0.94
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "cumleler": [
+        {
+          "metin": "Remember, nothing about the meal changed.",
+          "dosya": "19_01.wav",
+          "sure": 2.416,
+          "duraklar": [
+            [
+              0.63,
+              0.82
+            ]
+          ]
+        },
+        {
+          "metin": "Not the calories, not the carbohydrates, not the portion size.",
+          "dosya": "19_02.wav",
+          "sure": 4.244,
+          "duraklar": [
+            [
+              0.95,
+              1.27
+            ],
+            [
+              2.53,
+              2.94
+            ],
+            [
+              3.29,
+              3.41
+            ]
+          ]
+        },
+        {
+          "metin": "Only the sequence.",
+          "dosya": "19_03.wav",
+          "sure": 1.06,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "cumleler": [
+        {
+          "metin": "Of course, eleven people and a single meal is a very small experiment.",
+          "dosya": "20_01.wav",
+          "sure": 4.267,
+          "duraklar": [
+            [
+              0.61,
+              1.12
+            ]
+          ]
+        },
+        {
+          "metin": "So the same team kept testing.",
+          "dosya": "20_02.wav",
+          "sure": 1.997,
+          "duraklar": [
+            [
+              0.9,
+              1.09
+            ],
+            [
+              1.23,
+              1.44
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "cumleler": [
+        {
+          "metin": "In a 2017 follow-up, sixteen adults with type 2 diabetes tried three versions of the same meal on different days: carbohydrates first, carbohydrates last, and everything eaten together, sandwich-style.",
+          "dosya": "21_01.wav",
+          "sure": 13.793,
+          "duraklar": [
+            [
+              1.64,
+              2.0
+            ],
+            [
+              2.62,
+              2.76
+            ],
+            [
+              3.62,
+              3.81
+            ],
+            [
+              4.64,
+              4.84
+            ],
+            [
+              5.21,
+              5.37
+            ],
+            [
+              5.67,
+              5.81
+            ],
+            [
+              8.94,
+              9.41
+            ],
+            [
+              10.65,
+              11.16
+            ],
+            [
+              12.46,
+              12.88
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "cumleler": [
+        {
+          "metin": "Eating the carbohydrates last produced roughly half the rise in blood sugar compared with eating them first.",
+          "dosya": "22_01.wav",
+          "sure": 5.695,
+          "duraklar": [
+            [
+              1.53,
+              1.73
+            ],
+            [
+              4.49,
+              4.61
+            ],
+            [
+              5.19,
+              5.3
+            ]
+          ]
+        },
+        {
+          "metin": "The all-together sandwich landed in between.",
+          "dosya": "22_02.wav",
+          "sure": 2.47,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "cumleler": [
+        {
+          "metin": "And in 2019, a similar study in adults with prediabetes found the same pattern.",
+          "dosya": "23_01.wav",
+          "sure": 5.426,
+          "duraklar": [
+            [
+              1.38,
+              1.77
+            ],
+            [
+              3.38,
+              3.49
+            ]
+          ]
+        },
+        {
+          "metin": "Carbohydrates last meant a lower, flatter glucose curve after the meal.",
+          "dosya": "23_02.wav",
+          "sure": 4.472,
+          "duraklar": [
+            [
+              0.91,
+              1.02
+            ],
+            [
+              2.2,
+              2.54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "cumleler": [
+        {
+          "metin": "Researchers in Japan had been exploring a similar idea for years, with a simple message for patients.",
+          "dosya": "24_01.wav",
+          "sure": 5.26,
+          "duraklar": [
+            [
+              1.56,
+              1.68
+            ],
+            [
+              2.72,
+              2.83
+            ],
+            [
+              3.32,
+              3.59
+            ],
+            [
+              4.54,
+              4.65
+            ]
+          ]
+        },
+        {
+          "metin": "Eat your vegetables before your carbohydrates.",
+          "dosya": "24_02.wav",
+          "sure": 2.686,
+          "duraklar": [
+            [
+              0.89,
+              1.12
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "cumleler": [
+        {
+          "metin": "In one study of people with type 2 diabetes, patients taught this vegetables-first rule were followed for two years.",
+          "dosya": "25_01.wav",
+          "sure": 6.426,
+          "duraklar": [
+            [
+              2.58,
+              2.97
+            ]
+          ]
+        },
+        {
+          "metin": "Their HbA1c, the long-term blood sugar marker, improved more than in patients given a standard, more complicated meal plan based on food exchanges.",
+          "dosya": "25_02.wav",
+          "sure": 9.654,
+          "duraklar": [
+            [
+              0.36,
+              0.55
+            ],
+            [
+              1.44,
+              1.69
+            ],
+            [
+              3.38,
+              4.02
+            ],
+            [
+              6.22,
+              6.52
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "cumleler": [
+        {
+          "metin": "That matters, because it suggests the effect isn't just a one-meal curiosity.",
+          "dosya": "26_01.wav",
+          "sure": 4.434,
+          "duraklar": [
+            [
+              0.69,
+              0.98
+            ],
+            [
+              2.24,
+              2.48
+            ]
+          ]
+        },
+        {
+          "metin": "A habit simple enough to follow every day may add up over time.",
+          "dosya": "26_02.wav",
+          "sure": 3.269,
+          "duraklar": [
+            [
+              1.0,
+              1.23
+            ]
+          ]
+        },
+        {
+          "metin": "But these studies were done in specific groups of people, so the results don't automatically apply to everyone.",
+          "dosya": "26_03.wav",
+          "sure": 5.896,
+          "duraklar": [
+            [
+              2.53,
+              2.97
+            ],
+            [
+              3.67,
+              3.87
+            ],
+            [
+              4.1,
+              4.27
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "cumleler": [
+        {
+          "metin": "So why would the order of the same foods change what happens in your blood?",
+          "dosya": "27_01.wav",
+          "sure": 3.462,
+          "duraklar": []
+        },
+        {
+          "metin": "There are three main mechanisms, and they work together.",
+          "dosya": "27_02.wav",
+          "sure": 2.529,
+          "duraklar": [
+            [
+              1.4,
+              1.56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "cumleler": [
+        {
+          "metin": "The first is your stomach.",
+          "dosya": "28_01.wav",
+          "sure": 1.265,
+          "duraklar": []
+        },
+        {
+          "metin": "Food doesn't go straight from your plate into your bloodstream.",
+          "dosya": "28_02.wav",
+          "sure": 2.82,
+          "duraklar": [
+            [
+              0.6,
+              0.71
+            ],
+            [
+              1.19,
+              1.31
+            ],
+            [
+              1.71,
+              1.88
+            ]
+          ]
+        },
+        {
+          "metin": "The stomach acts like a gatekeeper, releasing food into the small intestine a little at a time.",
+          "dosya": "28_03.wav",
+          "sure": 4.713,
+          "duraklar": [
+            [
+              1.58,
+              1.82
+            ],
+            [
+              2.24,
+              2.35
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "cumleler": [
+        {
+          "metin": "This is called gastric emptying, and its speed strongly shapes how fast glucose reaches your blood.",
+          "dosya": "29_01.wav",
+          "sure": 5.229,
+          "duraklar": [
+            [
+              1.76,
+              2.14
+            ]
+          ]
+        },
+        {
+          "metin": "A glass of juice on an empty stomach passes through quickly.",
+          "dosya": "29_02.wav",
+          "sure": 3.535,
+          "duraklar": [
+            [
+              2.56,
+              2.82
+            ]
+          ]
+        },
+        {
+          "metin": "A stomach already holding fiber, protein, and fat empties more slowly.",
+          "dosya": "29_03.wav",
+          "sure": 5.471,
+          "duraklar": [
+            [
+              0.41,
+              0.58
+            ],
+            [
+              1.76,
+              2.51
+            ],
+            [
+              3.07,
+              3.57
+            ],
+            [
+              3.95,
+              4.11
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "cumleler": [
+        {
+          "metin": "It's also one reason fruit juice tends to raise blood sugar faster than the same fruit eaten whole.",
+          "dosya": "30_01.wav",
+          "sure": 5.368,
+          "duraklar": [
+            [
+              1.64,
+              1.77
+            ],
+            [
+              3.55,
+              3.92
+            ],
+            [
+              4.51,
+              4.65
+            ]
+          ]
+        },
+        {
+          "metin": "The juice has lost most of its fiber, and liquids leave the stomach quickly.",
+          "dosya": "30_02.wav",
+          "sure": 4.087,
+          "duraklar": [
+            [
+              1.81,
+              1.93
+            ],
+            [
+              2.27,
+              2.38
+            ],
+            [
+              2.78,
+              2.96
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "cumleler": [
+        {
+          "metin": "The second mechanism is fiber.",
+          "dosya": "31_01.wav",
+          "sure": 1.683,
+          "duraklar": []
+        },
+        {
+          "metin": "Vegetables are rich in fiber, and some types of fiber absorb water and form a thick, gel-like mixture in the gut.",
+          "dosya": "31_02.wav",
+          "sure": 7.258,
+          "duraklar": [
+            [
+              1.71,
+              1.82
+            ],
+            [
+              2.03,
+              2.16
+            ],
+            [
+              2.86,
+              2.97
+            ],
+            [
+              4.2,
+              4.36
+            ],
+            [
+              4.99,
+              5.71
+            ],
+            [
+              6.63,
+              6.75
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "cumleler": [
+        {
+          "metin": "That gel can slow how quickly digestive enzymes reach starch, and how quickly the released glucose is absorbed.",
+          "dosya": "32_01.wav",
+          "sure": 6.844,
+          "duraklar": [
+            [
+              2.66,
+              2.77
+            ],
+            [
+              3.58,
+              3.96
+            ],
+            [
+              4.24,
+              4.39
+            ],
+            [
+              4.53,
+              4.67
+            ],
+            [
+              5.3,
+              5.41
+            ],
+            [
+              5.93,
+              6.06
+            ]
+          ]
+        },
+        {
+          "metin": "When the vegetables arrive first, that fiber is already in place when the bread shows up.",
+          "dosya": "32_02.wav",
+          "sure": 4.542,
+          "duraklar": [
+            [
+              1.48,
+              1.92
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "cumleler": [
+        {
+          "metin": "The third mechanism is hormonal, and it's the most interesting.",
+          "dosya": "33_01.wav",
+          "sure": 3.161,
+          "duraklar": [
+            [
+              1.61,
+              1.98
+            ]
+          ]
+        },
+        {
+          "metin": "When protein and fat reach your intestine, they trigger the release of gut hormones, including one called GLP-1.",
+          "dosya": "33_02.wav",
+          "sure": 6.568,
+          "duraklar": [
+            [
+              1.0,
+              1.23
+            ],
+            [
+              2.24,
+              2.61
+            ],
+            [
+              4.32,
+              4.48
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "cumleler": [
+        {
+          "metin": "GLP-1 slows the stomach even further, helps the pancreas release insulin earlier and more efficiently when glucose rises, and helps you feel full.",
+          "dosya": "34_01.wav",
+          "sure": 9.084,
+          "duraklar": [
+            [
+              1.7,
+              1.82
+            ],
+            [
+              2.64,
+              3.0
+            ],
+            [
+              3.96,
+              4.13
+            ],
+            [
+              7.55,
+              7.95
+            ]
+          ]
+        },
+        {
+          "metin": "If that name sounds familiar, it's because some modern diabetes and weight-loss medicines are designed to mimic it.",
+          "dosya": "34_02.wav",
+          "sure": 5.796,
+          "duraklar": [
+            [
+              1.44,
+              1.78
+            ],
+            [
+              3.49,
+              3.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "cumleler": [
+        {
+          "metin": "A 2016 study from Japan tested exactly this.",
+          "dosya": "35_01.wav",
+          "sure": 3.71,
+          "duraklar": []
+        },
+        {
+          "metin": "When people with type 2 diabetes ate fish or meat before rice, their stomachs emptied more slowly, their GLP-1 levels were higher, and their rise in blood sugar was smaller than when they ate the rice first.",
+          "dosya": "35_02.wav",
+          "sure": 12.942,
+          "duraklar": [
+            [
+              0.97,
+              1.09
+            ],
+            [
+              2.14,
+              2.3
+            ],
+            [
+              2.58,
+              2.69
+            ],
+            [
+              3.02,
+              3.19
+            ],
+            [
+              3.96,
+              4.48
+            ],
+            [
+              5.05,
+              5.2
+            ],
+            [
+              5.66,
+              5.8
+            ],
+            [
+              5.83,
+              6.12
+            ],
+            [
+              6.86,
+              7.21
+            ],
+            [
+              9.23,
+              9.75
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "cumleler": [
+        {
+          "metin": "Put together, the picture looks like this.",
+          "dosya": "36_01.wav",
+          "sure": 2.36,
+          "duraklar": [
+            [
+              0.63,
+              0.97
+            ]
+          ]
+        },
+        {
+          "metin": "When vegetables and protein come first, your gut is primed.",
+          "dosya": "36_02.wav",
+          "sure": 2.908,
+          "duraklar": [
+            [
+              1.5,
+              1.61
+            ],
+            [
+              1.92,
+              2.08
+            ]
+          ]
+        },
+        {
+          "metin": "The stomach slows down, fiber is in place, and hormones are already signaling.",
+          "dosya": "36_03.wav",
+          "sure": 4.886,
+          "duraklar": [
+            [
+              1.2,
+              1.66
+            ],
+            [
+              2.59,
+              3.06
+            ]
+          ]
+        },
+        {
+          "metin": "By the time the carbohydrates arrive, your body is ready for them.",
+          "dosya": "36_04.wav",
+          "sure": 3.913,
+          "duraklar": [
+            [
+              2.08,
+              2.63
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "cumleler": [
+        {
+          "metin": "Now, the honest part.",
+          "dosya": "37_01.wav",
+          "sure": 1.572,
+          "duraklar": [
+            [
+              0.42,
+              0.68
+            ]
+          ]
+        },
+        {
+          "metin": "Who actually benefits from this, and what don't we know yet?",
+          "dosya": "37_02.wav",
+          "sure": 3.027,
+          "duraklar": [
+            [
+              1.51,
+              1.9
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "cumleler": [
+        {
+          "metin": "The strongest evidence comes from people with type 2 diabetes and prediabetes.",
+          "dosya": "38_01.wav",
+          "sure": 5.302,
+          "duraklar": [
+            [
+              1.1,
+              1.21
+            ],
+            [
+              1.58,
+              2.05
+            ],
+            [
+              2.59,
+              2.71
+            ],
+            [
+              3.98,
+              4.22
+            ]
+          ]
+        },
+        {
+          "metin": "That's where blood sugar spikes are larger, and where softening them may matter most.",
+          "dosya": "38_02.wav",
+          "sure": 4.235,
+          "duraklar": [
+            [
+              1.77,
+              2.13
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "cumleler": [
+        {
+          "metin": "Studies in people without diabetes have found a similar direction of effect, but their spikes are smaller to begin with, so the absolute difference is smaller too.",
+          "dosya": "39_01.wav",
+          "sure": 8.736,
+          "duraklar": [
+            [
+              3.68,
+              4.12
+            ],
+            [
+              5.95,
+              6.51
+            ],
+            [
+              7.76,
+              7.88
+            ]
+          ]
+        },
+        {
+          "metin": "For most healthy people, a rise in blood sugar after a meal is completely normal.",
+          "dosya": "39_02.wav",
+          "sure": 3.951,
+          "duraklar": [
+            [
+              0.99,
+              1.27
+            ],
+            [
+              3.18,
+              3.29
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "cumleler": [
+        {
+          "metin": "We also need to be clear about the limits.",
+          "dosya": "40_01.wav",
+          "sure": 2.108,
+          "duraklar": []
+        },
+        {
+          "metin": "Most of these studies are small, often a few dozen people or fewer.",
+          "dosya": "40_02.wav",
+          "sure": 3.286,
+          "duraklar": [
+            [
+              1.44,
+              1.65
+            ]
+          ]
+        },
+        {
+          "metin": "Many tested a single meal in a lab, not years of real life.",
+          "dosya": "40_03.wav",
+          "sure": 3.873,
+          "duraklar": [
+            [
+              1.84,
+              2.55
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "cumleler": [
+        {
+          "metin": "There are open questions too.",
+          "dosya": "41_01.wav",
+          "sure": 1.503,
+          "duraklar": [
+            [
+              1.06,
+              1.21
+            ]
+          ]
+        },
+        {
+          "metin": "We don't know the shortest gap that still works, or whether this habit changes long-term outcomes like heart disease.",
+          "dosya": "41_02.wav",
+          "sure": 6.891,
+          "duraklar": [
+            [
+              1.26,
+              1.66
+            ],
+            [
+              2.25,
+              2.36
+            ],
+            [
+              2.44,
+              2.93
+            ],
+            [
+              5.58,
+              5.75
+            ]
+          ]
+        },
+        {
+          "metin": "Those studies simply haven't been done at scale.",
+          "dosya": "41_03.wav",
+          "sure": 2.35,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "cumleler": [
+        {
+          "metin": "Food order doesn't remove carbohydrates or calories.",
+          "dosya": "42_01.wav",
+          "sure": 3.654,
+          "duraklar": [
+            [
+              0.35,
+              0.46
+            ],
+            [
+              1.45,
+              1.64
+            ],
+            [
+              2.91,
+              3.03
+            ]
+          ]
+        },
+        {
+          "metin": "A huge plate of refined carbs eaten last is still a huge plate of refined carbs.",
+          "dosya": "42_02.wav",
+          "sure": 4.747,
+          "duraklar": [
+            [
+              0.31,
+              0.46
+            ],
+            [
+              1.57,
+              1.69
+            ]
+          ]
+        },
+        {
+          "metin": "And it's not a substitute for medication, exercise, or medical care.",
+          "dosya": "42_03.wav",
+          "sure": 4.548,
+          "duraklar": [
+            [
+              1.07,
+              1.18
+            ],
+            [
+              1.9,
+              2.35
+            ],
+            [
+              3.08,
+              3.2
+            ],
+            [
+              3.52,
+              3.65
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "cumleler": [
+        {
+          "metin": "Think of it as a free, low-effort habit that can help a good meal work a little better.",
+          "dosya": "43_01.wav",
+          "sure": 4.306,
+          "duraklar": [
+            [
+              1.07,
+              1.41
+            ],
+            [
+              2.21,
+              2.32
+            ]
+          ]
+        },
+        {
+          "metin": "Not as a magic trick.",
+          "dosya": "43_02.wav",
+          "sure": 1.244,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "cumleler": [
+        {
+          "metin": "So how do you actually use this?",
+          "dosya": "44_01.wav",
+          "sure": 2.06,
+          "duraklar": [
+            [
+              0.38,
+              0.56
+            ]
+          ]
+        },
+        {
+          "metin": "Here are five practical ways.",
+          "dosya": "44_02.wav",
+          "sure": 2.066,
+          "duraklar": [
+            [
+              0.97,
+              1.1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "cumleler": [
+        {
+          "metin": "One.",
+          "dosya": "45_01.wav",
+          "sure": 0.663,
+          "duraklar": []
+        },
+        {
+          "metin": "Start with the vegetables.",
+          "dosya": "45_02.wav",
+          "sure": 1.743,
+          "duraklar": [
+            [
+              0.39,
+              0.67
+            ]
+          ]
+        },
+        {
+          "metin": "A side salad, a bowl of vegetable soup, or the broccoli on your plate.",
+          "dosya": "45_03.wav",
+          "sure": 4.134,
+          "duraklar": [
+            [
+              0.84,
+              1.17
+            ],
+            [
+              2.31,
+              2.84
+            ],
+            [
+              3.96,
+              4.07
+            ]
+          ]
+        },
+        {
+          "metin": "Eat those first.",
+          "dosya": "45_04.wav",
+          "sure": 0.988,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "cumleler": [
+        {
+          "metin": "Two.",
+          "dosya": "46_01.wav",
+          "sure": 0.459,
+          "duraklar": []
+        },
+        {
+          "metin": "Move on to protein and healthy fats.",
+          "dosya": "46_02.wav",
+          "sure": 2.027,
+          "duraklar": [
+            [
+              1.76,
+              1.88
+            ]
+          ]
+        },
+        {
+          "metin": "Chicken, fish, eggs, tofu, beans, cheese, nuts, or olive oil.",
+          "dosya": "46_03.wav",
+          "sure": 6.16,
+          "duraklar": [
+            [
+              0.6,
+              1.19
+            ],
+            [
+              1.52,
+              1.7
+            ],
+            [
+              2.02,
+              2.28
+            ],
+            [
+              2.81,
+              3.02
+            ],
+            [
+              3.43,
+              3.77
+            ],
+            [
+              4.3,
+              4.51
+            ],
+            [
+              4.96,
+              5.3
+            ]
+          ]
+        },
+        {
+          "metin": "These are what trigger those helpful gut hormones.",
+          "dosya": "46_04.wav",
+          "sure": 2.441,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "cumleler": [
+        {
+          "metin": "Three.",
+          "dosya": "47_01.wav",
+          "sure": 0.422,
+          "duraklar": []
+        },
+        {
+          "metin": "Save the bread, rice, pasta, potatoes, and dessert for last.",
+          "dosya": "47_02.wav",
+          "sure": 4.57,
+          "duraklar": [
+            [
+              0.82,
+              0.99
+            ],
+            [
+              1.36,
+              1.63
+            ],
+            [
+              2.19,
+              2.49
+            ],
+            [
+              3.14,
+              3.28
+            ]
+          ]
+        },
+        {
+          "metin": "In the studies, the gap was about ten to fifteen minutes.",
+          "dosya": "47_03.wav",
+          "sure": 2.975,
+          "duraklar": [
+            [
+              0.77,
+              0.97
+            ]
+          ]
+        },
+        {
+          "metin": "You don't need a stopwatch.",
+          "dosya": "47_04.wav",
+          "sure": 1.532,
+          "duraklar": []
+        },
+        {
+          "metin": "The point is simply to give the vegetables and protein a head start.",
+          "dosya": "47_05.wav",
+          "sure": 3.033,
+          "duraklar": []
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "cumleler": [
+        {
+          "metin": "In everyday life, that might mean eggs or Greek yogurt before the toast at breakfast.",
+          "dosya": "48_01.wav",
+          "sure": 5.199,
+          "duraklar": [
+            [
+              0.92,
+              1.46
+            ],
+            [
+              2.82,
+              2.97
+            ],
+            [
+              3.39,
+              3.61
+            ],
+            [
+              4.74,
+              4.86
+            ]
+          ]
+        },
+        {
+          "metin": "Or at dinner, the salad and the salmon before the potatoes.",
+          "dosya": "48_02.wav",
+          "sure": 3.723,
+          "duraklar": [
+            [
+              0.9,
+              1.28
+            ]
+          ]
+        },
+        {
+          "metin": "It works with the foods you already eat.",
+          "dosya": "48_03.wav",
+          "sure": 2.191,
+          "duraklar": [
+            [
+              1.06,
+              1.17
+            ],
+            [
+              1.8,
+              1.91
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "cumleler": [
+        {
+          "metin": "Four.",
+          "dosya": "49_01.wav",
+          "sure": 1.078,
+          "duraklar": []
+        },
+        {
+          "metin": "Be careful with liquid sugar.",
+          "dosya": "49_02.wav",
+          "sure": 1.948,
+          "duraklar": [
+            [
+              0.77,
+              1.06
+            ]
+          ]
+        },
+        {
+          "metin": "Juice and sweet drinks pass through the stomach fast.",
+          "dosya": "49_03.wav",
+          "sure": 3.049,
+          "duraklar": [
+            [
+              1.62,
+              1.84
+            ],
+            [
+              2.42,
+              2.56
+            ]
+          ]
+        },
+        {
+          "metin": "If you have them, have them with or after a meal, not on an empty stomach.",
+          "dosya": "49_04.wav",
+          "sure": 4.303,
+          "duraklar": [
+            [
+              0.81,
+              1.15
+            ],
+            [
+              2.63,
+              3.05
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "cumleler": [
+        {
+          "metin": "Five.",
+          "dosya": "50_01.wav",
+          "sure": 0.489,
+          "duraklar": []
+        },
+        {
+          "metin": "At restaurants, let the bread basket wait.",
+          "dosya": "50_02.wav",
+          "sure": 2.672,
+          "duraklar": [
+            [
+              0.78,
+              1.35
+            ]
+          ]
+        },
+        {
+          "metin": "Order a salad or a vegetable starter, and if a dish mixes everything together, like a sandwich or a pasta bowl, add a side of vegetables and start there.",
+          "dosya": "50_03.wav",
+          "sure": 10.243,
+          "duraklar": [
+            [
+              0.93,
+              1.07
+            ],
+            [
+              1.35,
+              1.5
+            ],
+            [
+              2.54,
+              2.97
+            ],
+            [
+              5.03,
+              5.43
+            ],
+            [
+              6.21,
+              6.33
+            ],
+            [
+              7.49,
+              8.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "cumleler": [
+        {
+          "metin": "And one bonus habit with good evidence behind it.",
+          "dosya": "51_01.wav",
+          "sure": 3.107,
+          "duraklar": [
+            [
+              1.44,
+              1.56
+            ],
+            [
+              1.64,
+              1.78
+            ],
+            [
+              2.93,
+              3.04
+            ]
+          ]
+        },
+        {
+          "metin": "A short, easy walk after your meal.",
+          "dosya": "51_02.wav",
+          "sure": 2.224,
+          "duraklar": [
+            [
+              0.51,
+              0.74
+            ]
+          ]
+        },
+        {
+          "metin": "Working muscles pull glucose out of the blood, which can lower the after-meal peak even further.",
+          "dosya": "51_03.wav",
+          "sure": 5.037,
+          "duraklar": [
+            [
+              0.77,
+              0.88
+            ],
+            [
+              2.31,
+              2.63
+            ],
+            [
+              3.93,
+              4.08
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "cumleler": [
+        {
+          "metin": "One important safety note.",
+          "dosya": "52_01.wav",
+          "sure": 1.414,
+          "duraklar": []
+        },
+        {
+          "metin": "If you use insulin, or medicines that can cause low blood sugar such as sulfonylureas, talk to your doctor or diabetes team before changing when you eat your carbohydrates, because the timing of your medication may need to match.",
+          "dosya": "52_02.wav",
+          "sure": 13.312,
+          "duraklar": [
+            [
+              1.14,
+              1.29
+            ],
+            [
+              1.94,
+              2.3
+            ],
+            [
+              2.86,
+              3.02
+            ],
+            [
+              4.15,
+              4.36
+            ],
+            [
+              5.33,
+              5.61
+            ],
+            [
+              8.37,
+              8.77
+            ],
+            [
+              10.26,
+              10.89
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "cumleler": [
+        {
+          "metin": "And if you already wear a glucose monitor, this is an easy experiment to try on yourself.",
+          "dosya": "53_01.wav",
+          "sure": 5.055,
+          "duraklar": [
+            [
+              2.13,
+              2.5
+            ]
+          ]
+        },
+        {
+          "metin": "The same meal, two different orders, and compare your curves.",
+          "dosya": "53_02.wav",
+          "sure": 3.453,
+          "duraklar": [
+            [
+              0.72,
+              1.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "cumleler": [
+        {
+          "metin": "Let's recap.",
+          "dosya": "54_01.wav",
+          "sure": 1.618,
+          "duraklar": [
+            [
+              0.37,
+              0.5
+            ],
+            [
+              1.13,
+              1.24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "cumleler": [
+        {
+          "metin": "In small studies, eating vegetables and protein before carbohydrates lowered the rise in blood sugar after a meal.",
+          "dosya": "55_01.wav",
+          "sure": 6.351,
+          "duraklar": [
+            [
+              0.93,
+              1.54
+            ]
+          ]
+        },
+        {
+          "metin": "By about a third at the one-hour mark in the original study, and by roughly half in a follow-up.",
+          "dosya": "55_02.wav",
+          "sure": 5.865,
+          "duraklar": [
+            [
+              0.82,
+              0.94
+            ],
+            [
+              3.21,
+              3.74
+            ],
+            [
+              4.05,
+              4.17
+            ],
+            [
+              4.98,
+              5.21
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "cumleler": [
+        {
+          "metin": "It seems to work by slowing the stomach, putting fiber in place, and triggering GLP-1.",
+          "dosya": "56_01.wav",
+          "sure": 6.578,
+          "duraklar": [
+            [
+              0.54,
+              0.66
+            ],
+            [
+              1.04,
+              1.42
+            ],
+            [
+              2.51,
+              3.32
+            ],
+            [
+              4.59,
+              5.01
+            ]
+          ]
+        },
+        {
+          "metin": "The evidence is strongest for people with type 2 diabetes and prediabetes, and it's a habit that costs nothing.",
+          "dosya": "56_02.wav",
+          "sure": 7.325,
+          "duraklar": [
+            [
+              2.21,
+              2.32
+            ],
+            [
+              3.28,
+              3.55
+            ],
+            [
+              3.84,
+              4.18
+            ],
+            [
+              5.07,
+              5.3
+            ],
+            [
+              5.98,
+              6.41
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "cumleler": [
+        {
+          "metin": "Same food.",
+          "dosya": "57_01.wav",
+          "sure": 1.162,
+          "duraklar": [
+            [
+              0.56,
+              0.8
+            ]
+          ]
+        },
+        {
+          "metin": "Different order.",
+          "dosya": "57_02.wav",
+          "sure": 0.856,
+          "duraklar": []
+        },
+        {
+          "metin": "A small change you can try at your very next meal.",
+          "dosya": "57_03.wav",
+          "sure": 2.778,
+          "duraklar": [
+            [
+              0.94,
+              1.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "cumleler": [
+        {
+          "metin": "If you found this useful, subscribe to Past the Label for more food science, explained calmly and honestly.",
+          "dosya": "58_01.wav",
+          "sure": 6.29,
+          "duraklar": [
+            [
+              1.15,
+              1.56
+            ],
+            [
+              4.18,
+              4.5
+            ]
+          ]
+        },
+        {
+          "metin": "This video is for education only, and it isn't medical advice.",
+          "dosya": "58_02.wav",
+          "sure": 3.85,
+          "duraklar": [
+            [
+              2.02,
+              2.47
+            ]
+          ]
+        },
+        {
+          "metin": "See you in the next one.",
+          "dosya": "58_03.wav",
+          "sure": 1.267,
+          "duraklar": []
+        }
+      ]
+    }
+  ]
+}

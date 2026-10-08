@@ -1,0 +1,22 @@
+{
+  "ad": "The Food Almanac",
+  "handle": "@FoodAlmanacTV",
+  "slogan": "Food science, checked against the evidence.",
+  "dil": "en",
+  "kategori": "27",
+  "sentetik_beyan": true,
+  "ses": "en_US-norman-medium",
+  "length_scale": 1.08,
+  "cumle_arasi": 0.28,
+  "yayin": {
+    "gunler": [1, 4],
+    "saat_utc": "14:00",
+    "not": "Python haftanın günü: 0=Pazartesi ... 1=Salı, 4=Cuma. 14:00 UTC = 17:00 TR = 10:00 New York."
+  },
+  "oynatma_listesi": "Food Myths, Checked",
+  "oynatma_listesi_aciklama": "One popular food claim per episode, checked against the research.",
+  "kanal_aciklama": "The Food Almanac explains what the research actually says about everyday food questions: calmly, clearly and without hype.\n\nShould you eat your vegetables first? Is breakfast really the most important meal? Do seed oils deserve their reputation? Each episode takes one popular food claim, walks through the studies behind it, explains the biology in plain language, and shows where the evidence is strong and where it runs out.\n\nNew videos every Tuesday and Friday.\n\nEvery video lists its sources in the description. Illustrations are AI-generated in the style of vintage science-book engravings, and narration uses a synthetic voice. Videos are for education only and are not medical advice: talk to your doctor before changing your diet or medication.",
+  "anahtar_kelimeler": ["nutrition science", "food myths", "evidence based nutrition", "food science explained", "healthy eating", "blood sugar", "diet myths", "metabolism", "gut health", "nutrition facts"],
+  "ulke": "US",
+  "aciklama_sonu": "Narration uses a synthetic voice (Piper TTS). Illustrations are AI-generated in the style of vintage science-book engravings; all on-screen numbers come from the sources above.\n\nThis video is for education only and is not medical advice. If you have diabetes or another health condition, or take medication, talk to your doctor before changing how you eat."
+}

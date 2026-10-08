@@ -1,0 +1,11 @@
+{
+  "aktif": "food-order-blood-sugar",
+  "videolar": {
+    "food-order-blood-sugar": {
+      "asama": "render",
+      "slot": null,
+      "sahne_deneme": 0,
+      "not": "Kanalın ilk videosu: sahneleri ve görselleri hazır (tohum/); yalnızca marka adı geçen 2 cümle yeniden seslendirilir."
+    }
+  }
+}

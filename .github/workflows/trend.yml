@@ -3,10 +3,12 @@ name: Trend & Senaryo Besleme
 # videolarını analiz edip yeni senaryo fikirleri üretir ve senaryolar.json'a ekler.
 # Video YÜKLEMEZ; yalnızca senaryo havuzunu büyütür + trend_rapor.md yazar.
 on:
-  schedule:
-    # HAFTADA 3 KEZ: Pazar+Salı+Perşembe 09:00 TR. Tüketim 2 video/gün = 14/hafta;
-    # her koşu +6 senaryo -> +18/hafta > 14 -> havuz kurumaz. 6 (8 degil):
-    - cron: "0 6 * * 0,2,4"
+  # DURDURULDU (2026-10): kanal 'The Food Almanac' (İngilizce uzun video) oldu; Türkçe Shorts hattı zamanlanmış
+  # çalışmaz. Elle 'Run workflow' hâlâ çalışır. Geri açmak için aşağıdaki satırların başındaki '#'i kaldırın.
+  # schedule:
+  #  # HAFTADA 3 KEZ: Pazar+Salı+Perşembe 09:00 TR. Tüketim 2 video/gün = 14/hafta;
+  #  # her koşu +6 senaryo -> +18/hafta > 14 -> havuz kurumaz. 6 (8 degil):
+  #  - cron: "0 6 * * 0,2,4"
   workflow_dispatch:
     inputs:
       sayi:

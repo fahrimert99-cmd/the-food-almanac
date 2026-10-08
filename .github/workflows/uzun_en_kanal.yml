@@ -1,0 +1,81 @@
+name: Kanal Donusumu (The Food Almanac)
+# Tek seferlik kanal düzenlemesi (YouTube Data API, ücretsiz kota):
+#   açıklama + anahtar kelimeler + dil + banner (assets/marka_en/banner.jpg),
+#   'gizle' açıksa eski Türkçe videolar ve oynatma listeleri private yapılır (SİLİNMEZ; geri_al ile döner).
+# Kanal adı, herkese açık kullanıcı adı ve profil fotoğrafı API ile değiştirilemez: YouTube Studio'dan elle
+# (assets/marka_en/avatar.png). Tetikleme: uzun_en/kanal_islem.json main'e gelince ya da Actions > Run workflow.
+# Kota payı: bir çalıştırma en çok 70 video gizler; kalanları her sabah (kota sıfırlandıktan sonra) tamamlar, bitince
+# yalnızca birkaç birimlik bir kontrol yapar.
+on:
+  schedule:
+    - cron: "41 8 * * *"
+  push:
+    branches: [main]
+    paths: [uzun_en/kanal_islem.json]
+  workflow_dispatch:
+    inputs:
+      islem:
+        description: "durum (yalnızca okur) / donustur / gizle (devam) / geri_al"
+        type: choice
+        options: [durum, donustur, gizle, geri_al]
+        default: durum
+      gizle:
+        description: "donustur ile: eski videoları ve listeleri private yap"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uzun-en-kanal
+  cancel-in-progress: false
+
+jobs:
+  kanal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıklar
+        run: pip install -q -r requirements.txt
+      - name: İşlem
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          IN_ISLEM: ${{ inputs.islem }}
+          IN_GIZLE: ${{ inputs.gizle }}
+        run: |
+          EK=""
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            I="$IN_ISLEM"; G="$IN_GIZLE"
+          elif [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+            I=gizle; G=false
+          else
+            I=$(jq -r '.islem // "durum"' uzun_en/kanal_islem.json); G=$(jq -r '.gizle // false' uzun_en/kanal_islem.json)
+            [ "$(jq -r '.banner // true' uzun_en/kanal_islem.json)" = "false" ] && EK="--bannersiz"
+          fi
+          [[ "$I" =~ ^(durum|donustur|gizle|geri_al)$ ]] || { echo "Geçersiz işlem: $I"; exit 1; }
+          echo "işlem=$I gizle=$G"
+          if [ "$I" = "donustur" ] && [ "$G" = "true" ]; then
+            python3 uzun_en/araclar/kanal.py donustur --gizle $EK
+          elif [ "$I" = "donustur" ]; then
+            python3 uzun_en/araclar/kanal.py donustur $EK
+          else
+            python3 uzun_en/araclar/kanal.py "$I"
+          fi
+          [ -f uzun_en/kanal_rapor.md ] && cat uzun_en/kanal_rapor.md >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Kaydet (geri alma kaydı)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash uzun_en/araclar/kaydet.sh "uzun_en: kanal dönüşümü kaydı" uzun_en/kanal_gizlenen.json uzun_en/kanal_rapor.md

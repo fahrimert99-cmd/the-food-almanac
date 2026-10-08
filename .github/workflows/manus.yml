@@ -9,9 +9,11 @@ name: Manus Arastirma
 #     lite gorev. Takvim buna gore 3 GUNDE BIR senaryo + ayda 1 strateji.
 #   · Ucretsiz planda yalnizca 'lite' (Manus 1.6 Lite) calisir.
 on:
-  schedule:
-    - cron: "0 4 1 * *"      # ayin 1'i 04:00 UTC — aylik strateji raporu
-    - cron: "0 5 */3 * *"    # 3 gunde bir 05:00 UTC — kaynakli senaryo besleme
+  # DURDURULDU (2026-10): kanal 'The Food Almanac' (İngilizce uzun video) oldu; Türkçe Shorts hattı zamanlanmış
+  # çalışmaz. Elle 'Run workflow' hâlâ çalışır. Geri açmak için aşağıdaki satırların başındaki '#'i kaldırın.
+  # schedule:
+  #  - cron: "0 4 1 * *"      # ayin 1'i 04:00 UTC — aylik strateji raporu
+  #  - cron: "0 5 */3 * *"    # 3 gunde bir 05:00 UTC — kaynakli senaryo besleme
   workflow_dispatch:
     inputs:
       mod:

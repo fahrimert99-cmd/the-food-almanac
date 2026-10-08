@@ -1,21 +1,23 @@
 name: Gunluk Bilim Videosu
 
 on:
-  schedule:
-    # PLANLI YAYIN: cron videoyu SLOTTAN ÖNCE üretir; video 'private + publishAt'
-    # ile yüklenip Studio'da "Planlanan"a düşer ve tam yayın saatinde
-    # (config.yayin_saatleri_utc = 09:00 & 17:00 UTC = 12:00 & 20:00 TR) otomatik
-    # public olur. Erken üretim + yedek cron'lar, GitHub gecikmesine karşı tampon.
-    #
-    # Ana üretim (erken):
-    - cron: "0 0 * * *"     # 03:00 TR → 12:00 TR yayını (09:00 UTC); ~9 saat tampon
-    - cron: "0 10 * * *"    # 13:00 TR → 20:00 TR yayını (17:00 UTC); ~7 saat tampon
-    # Yedek üretim (slot doluysa otomasyon.py otomatik çıkar, çift video yok):
-    - cron: "30 5 * * *"    # 08:30 TR → 12:00 slotu hâlâ boşsa doldur
-    - cron: "30 13 * * *"   # 16:30 TR → 20:00 slotu hâlâ boşsa doldur
-    # Son çare (slot saati geçtiyse 4s tolerans → anında public):
-    - cron: "20 9 * * *"    # 12:20 TR → 12:00 kaçtıysa hemen public video üret
-    - cron: "20 17 * * *"   # 20:20 TR → 20:00 kaçtıysa hemen public video üret
+  # DURDURULDU (2026-10): kanal 'The Food Almanac' (İngilizce uzun video) oldu; Türkçe Shorts hattı zamanlanmış
+  # çalışmaz. Elle 'Run workflow' hâlâ çalışır. Geri açmak için aşağıdaki satırların başındaki '#'i kaldırın.
+  # schedule:
+  #  # PLANLI YAYIN: cron videoyu SLOTTAN ÖNCE üretir; video 'private + publishAt'
+  #  # ile yüklenip Studio'da "Planlanan"a düşer ve tam yayın saatinde
+  #  # (config.yayin_saatleri_utc = 09:00 & 17:00 UTC = 12:00 & 20:00 TR) otomatik
+  #  # public olur. Erken üretim + yedek cron'lar, GitHub gecikmesine karşı tampon.
+  #  #
+  #  # Ana üretim (erken):
+  #  - cron: "0 0 * * *"     # 03:00 TR → 12:00 TR yayını (09:00 UTC); ~9 saat tampon
+  #  - cron: "0 10 * * *"    # 13:00 TR → 20:00 TR yayını (17:00 UTC); ~7 saat tampon
+  #  # Yedek üretim (slot doluysa otomasyon.py otomatik çıkar, çift video yok):
+  #  - cron: "30 5 * * *"    # 08:30 TR → 12:00 slotu hâlâ boşsa doldur
+  #  - cron: "30 13 * * *"   # 16:30 TR → 20:00 slotu hâlâ boşsa doldur
+  #  # Son çare (slot saati geçtiyse 4s tolerans → anında public):
+  #  - cron: "20 9 * * *"    # 12:20 TR → 12:00 kaçtıysa hemen public video üret
+  #  - cron: "20 17 * * *"   # 20:20 TR → 20:00 kaçtıysa hemen public video üret
   workflow_dispatch:        # Elle "Run workflow" butonu (acil / kaçırılan yayın için)
 
 permissions:

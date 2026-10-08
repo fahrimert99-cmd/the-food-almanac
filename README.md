@@ -1,5 +1,9 @@
 # 🤖 YouTube Niş Video Otomasyonu — GitHub Actions (Otonom)
 
+> **Ekim 2026 — kanal dönüştürüldü:** Kanal artık **The Food Almanac** (İngilizce, haftada 2 uzun video, Salı + Cuma).
+> Yeni hat: [`uzun_en/`](uzun_en/README.md) ve `.github/workflows/uzun_en.yml`. Aşağıda anlatılan Türkçe Shorts hattının
+> zamanlanmış çalışmaları durduruldu (kod duruyor; elle "Run workflow" hâlâ mümkün ama kanala Türkçe video yükler).
+
 Bu depo, **filigransız** video üreten ve YouTube'a yükleyen tam otomatik bir sistemdir.
 Artık **Make'e gerek yok** — her şey GitHub Actions içinde, zamanlanmış olarak kendi kendine çalışır.
 (Eski Make/dispatch yolu hâlâ opsiyonel olarak duruyor, bkz. aşağıda.)

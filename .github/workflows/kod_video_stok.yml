@@ -8,8 +8,10 @@ on:
   push:
     branches: [main]
     paths: [kod_video.py, kod_sahneler.json, .github/workflows/kod_video_stok.yml]
-  schedule:
-    - cron: "17 2 * * 1"   # haftalık tamamlama (yeni marka senaryosu eklendiyse)
+  # DURDURULDU (2026-10): kanal 'The Food Almanac' (İngilizce uzun video) oldu; Türkçe Shorts hattı zamanlanmış
+  # çalışmaz. Elle 'Run workflow' hâlâ çalışır. Geri açmak için aşağıdaki satırların başındaki '#'i kaldırın.
+  # schedule:
+  #  - cron: "17 2 * * 1"   # haftalık tamamlama (yeni marka senaryosu eklendiyse)
 
 permissions:
   contents: write
