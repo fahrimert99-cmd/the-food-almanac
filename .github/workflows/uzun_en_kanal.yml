@@ -61,7 +61,7 @@ jobs:
             I=gizle; G=false
           else
             I=$(jq -r '.islem // "durum"' uzun_en/kanal_islem.json); G=$(jq -r '.gizle // false' uzun_en/kanal_islem.json)
-            [ "$(jq -r '.banner // true' uzun_en/kanal_islem.json)" = "false" ] && EK="--bannersiz"
+            [ "$(jq -r '.banner' uzun_en/kanal_islem.json)" = "false" ] && EK="--bannersiz"
           fi
           [[ "$I" =~ ^(durum|donustur|gizle|geri_al)$ ]] || { echo "Geçersiz işlem: $I"; exit 1; }
           echo "işlem=$I gizle=$G"
