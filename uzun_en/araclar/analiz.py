@@ -61,7 +61,8 @@ def gosterim(kimlik, ids, bas):
         isler = yr.jobs().list().execute(num_retries=DENEME).get("jobs", [])
         j = next((x for x in isler if x.get("reportTypeId") == ERISIM_RAPORU), None)
         if not j:
-            yr.jobs().create(body={"reportTypeId": ERISIM_RAPORU, "name": "food-almanac-reach"}).execute()  # tekrar yok: çift iş açılmasın
+            # Yeniden deneme yok: hata sonrası tekrar, çift rapor işi açabilir (sonraki çalıştırma zaten dener).
+            yr.jobs().create(body={"reportTypeId": ERISIM_RAPORU, "name": "food-almanac-reach"}).execute()
             return {"durum": "rapor işi oluşturuldu; YouTube ilk raporları birkaç gün içinde üretir"}
         raporlar, sayfa = [], None
         while True:
