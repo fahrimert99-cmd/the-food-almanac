@@ -1,6 +1,6 @@
 {
-  "not": "Bu dosya main'e gelince/değişince 'Kanal Donusumu' iş akışı çalışır. islem: durum | donustur | gizle (kalan eski videoları gizlemeye devam) | geri_al. gizle: eski Türkçe videoları ve listeleri private yap (silinmez; geri_al ile döner). banner: false = banner Studio'dan elle ayarlandı, API ile üzerine yazılmaz.",
-  "islem": "gizle",
+  "not": "Bu dosya main'e gelince/değişince 'Kanal Donusumu' iş akışı çalışır. islem: durum | donustur | gizle | geri_al | sil (gizlenen eski videoları KALICI siler). gizle: donustur ile eski videoları private yap. banner: false = banner Studio'dan elle ayarlandı, API ile üzerine yazılmaz.",
+  "islem": "sil",
   "gizle": true,
   "banner": false
 }

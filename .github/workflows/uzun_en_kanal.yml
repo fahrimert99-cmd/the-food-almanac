@@ -1,7 +1,8 @@
 name: Kanal Donusumu (The Food Almanac)
 # Tek seferlik kanal düzenlemesi (YouTube Data API, ücretsiz kota):
 #   açıklama + anahtar kelimeler + dil + banner (assets/marka_en/banner.jpg),
-#   'gizle' açıksa eski Türkçe videolar ve oynatma listeleri private yapılır (SİLİNMEZ; geri_al ile döner).
+#   'gizle' açıksa eski Türkçe videolar ve oynatma listeleri private yapılır (geri_al ile döner);
+#   'sil' bu gizlenenleri KALICI olarak siler (geri alınamaz; kota dolarsa kalanlar ertesi sabah silinir).
 # Kanal adı, herkese açık kullanıcı adı ve profil fotoğrafı API ile değiştirilemez: YouTube Studio'dan elle
 # (assets/marka_en/avatar.png). Tetikleme: uzun_en/kanal_islem.json main'e gelince ya da Actions > Run workflow.
 # Kota payı: bir çalıştırma en çok 70 video gizler; kalanları her sabah (kota sıfırlandıktan sonra) tamamlar, bitince
@@ -15,9 +16,9 @@ on:
   workflow_dispatch:
     inputs:
       islem:
-        description: "durum (yalnızca okur) / donustur / gizle (devam) / geri_al"
+        description: "durum (yalnızca okur) / donustur / gizle (devam) / geri_al / sil (KALICI)"
         type: choice
-        options: [durum, donustur, gizle, geri_al]
+        options: [durum, donustur, gizle, geri_al, sil]
         default: durum
       gizle:
         description: "donustur ile: eski videoları ve listeleri private yap"
@@ -58,12 +59,12 @@ jobs:
           if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
             I="$IN_ISLEM"; G="$IN_GIZLE"
           elif [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
-            I=gizle; G=false
+            I=gunluk; G=false
           else
             I=$(jq -r '.islem // "durum"' uzun_en/kanal_islem.json); G=$(jq -r '.gizle // false' uzun_en/kanal_islem.json)
             [ "$(jq -r '.banner' uzun_en/kanal_islem.json)" = "false" ] && EK="--bannersiz"
           fi
-          [[ "$I" =~ ^(durum|donustur|gizle|geri_al)$ ]] || { echo "Geçersiz işlem: $I"; exit 1; }
+          [[ "$I" =~ ^(durum|donustur|gizle|geri_al|sil|gunluk)$ ]] || { echo "Geçersiz işlem: $I"; exit 1; }
           echo "işlem=$I gizle=$G"
           if [ "$I" = "donustur" ] && [ "$G" = "true" ]; then
             python3 uzun_en/araclar/kanal.py donustur --gizle $EK
