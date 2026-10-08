@@ -4,6 +4,7 @@
 
   python3 uzun_en/araclar/yukle.py --proje SLUG --slot 2026-10-13T14:00:00Z
   python3 uzun_en/araclar/yukle.py --proje SLUG --slot ... --kuru     # yüklemeden ne gönderileceğini yazdır
+  python3 uzun_en/araclar/yukle.py --kota-kontrol                       # YouTube günlük kotası dolu mu? (dolu: çıkış 3)
 
 Girdi: cikti/video.mp4, cikti/kapak_yt.jpg, cikti/meta.json (meta.py) ve cikti/kalite.json (geçmiş olmalı).
 Aynı video iki kez yüklenmez: projeler/SLUG/yayin.json ya da kanalda aynı başlıklı son yükleme varsa o kullanılır.
@@ -28,12 +29,31 @@ def ayni_baslikli(yt, baslik):
     return None
 
 
+def kota_kontrol():
+    """1 birimlik bir okuma: kota dolduysa render boşuna yapılmasın (kota her gün 07:00 UTC'de sıfırlanır)."""
+    from googleapiclient.discovery import build
+    import youtube_yukle as YY
+    try:
+        build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False).channels().list(part="id", mine=True).execute()
+    except Exception as e:
+        if "quota" in str(e).lower():
+            O.log("YouTube günlük kotası dolu — kota sıfırlanınca (07:00 UTC) yeniden denenecek")
+            sys.exit(3)
+        raise
+    O.log("YouTube kotası: uygun")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
-    ap.add_argument("--slot", required=True, help="yayın zamanı (UTC, ISO)")
+    ap.add_argument("--slot", help="yayın zamanı (UTC, ISO)")
     ap.add_argument("--kuru", action="store_true")
+    ap.add_argument("--kota-kontrol", action="store_true")
     a = ap.parse_args()
+    if a.kota_kontrol:
+        return kota_kontrol()
+    if not a.slot:
+        ap.error("--slot gerekli")
     slug = O.aktif_slug(a.proje)
     pdir = O.proje_dir(slug)
     cikti = os.path.join(pdir, "cikti")

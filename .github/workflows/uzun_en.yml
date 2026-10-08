@@ -442,6 +442,16 @@ jobs:
               f.write(f"DEVAM={str(devam).lower()}\nSABLON_SAYI={n}\n")
           PY
           bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG sahne deneme sayacı" uzun_en/durum.json
+      - name: YouTube kotası (doluysa render boşuna yapılmaz)
+        if: env.DEVAM == 'true'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          pip install -q -r requirements.txt
+          set +e; python3 uzun_en/araclar/yukle.py --kota-kontrol; K=$?; set -e
+          if [ "$K" = "3" ]; then echo "DEVAM=false" >> "$GITHUB_ENV"; elif [ "$K" != "0" ]; then exit "$K"; fi
       - uses: actions/setup-node@v5
         if: env.DEVAM == 'true'
         with:
