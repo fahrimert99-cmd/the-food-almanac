@@ -74,7 +74,7 @@ def konu_isaretle(slug, durum):
 
 def sahne_gruplari(slug, n=GRUP_SAYISI):
     """Tasarlanmamış (taslak) sahneleri n dengeli gruba böler; kart sahneleri ucuz olduğundan yarım sayılır."""
-    from hazirla import taslak_mi
+    from ortak import taslak_mi
     p = O.proje(slug)
     if not p:
         return []

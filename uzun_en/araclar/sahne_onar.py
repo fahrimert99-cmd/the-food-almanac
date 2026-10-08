@@ -9,7 +9,7 @@ import argparse, os, re, shutil, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
-from hazirla import TASLAK, taslak_mi  # noqa: E402
+from ortak import TASLAK, taslak_mi  # noqa: E402
 
 
 def tsc():
