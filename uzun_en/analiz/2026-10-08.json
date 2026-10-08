@@ -1,0 +1,51 @@
+{
+  "tarih": "2026-10-08T12:23:06Z",
+  "aralik": [
+    "2026-10-08",
+    "2026-10-08"
+  ],
+  "videolar": [
+    {
+      "slug": "food-order-blood-sugar",
+      "id": "AxPV1xa_6so",
+      "baslik": "Eat Vegetables First? What Food Order Really Does to Your Blood Sugar",
+      "slot": "2026-10-09T14:00:00Z"
+    }
+  ],
+  "yayinda": [],
+  "kanal": {
+    "hata": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics&mine=true&alt=json returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
+  },
+  "erisim": {
+    "satirlar": [
+      {
+        "views": 4273
+      }
+    ]
+  },
+  "video": {
+    "satirlar": []
+  },
+  "ulke": {
+    "satirlar": []
+  },
+  "trafik": {
+    "satirlar": []
+  },
+  "abone_durumu": {
+    "satirlar": []
+  },
+  "cihaz": {
+    "satirlar": []
+  },
+  "yas_cinsiyet": {
+    "satirlar": []
+  },
+  "gunluk": {
+    "satirlar": []
+  },
+  "gosterim": {
+    "hata": "<HttpError 400 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&metrics=videoThumbnailImpressions%2CvideoThumbnailImpressionsClickRate&dimensions=video&startDate=2026-10-08&endDate=2026-10-08&filters=video%3D%3DAxPV1xa_6so&alt=json returned \"The query is not supported. Check the documentation at https://developers.google.com/youtube/analytics/v2/available_reports for a list of supported queries.\". Details: \"[{'message': 'The query is not supported. Check t"
+  },
+  "izleyici_tutma": {}
+}
