@@ -1,0 +1,42 @@
+name: Ses Ornegi (The Food Almanac)
+# Seslendirme karşılaştırması: uzun_en/ses_ornek.json'daki paragrafı mevcut Piper sesiyle ve Kokoro seslerinden birkaçıyla
+# seslendirir; MP3'leri 'ses-ornek' ön-sürümüne yükler. Üretim hattına dokunmaz.
+on:
+  push:
+    branches: [main]
+    paths: [uzun_en/ses_ornek.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ses-ornek
+  cancel-in-progress: false
+
+jobs:
+  ornek:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıklar
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng >/dev/null
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q -r requirements.txt piper-tts "kokoro>=0.9.4" soundfile
+      - name: Örnekleri üret
+        run: python3 uzun_en/araclar/ses_ornek.py /tmp/ornek
+      - name: Sürüme yükle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view ses-ornek >/dev/null 2>&1 || gh release create ses-ornek --prerelease --title "Ses örnekleri" \
+            --notes "Seslendirme karşılaştırması (Piper ve Kokoro). Üretimde kullanılmaz."
+          gh release upload ses-ornek /tmp/ornek/*.mp3 --clobber
+          ls -la /tmp/ornek
