@@ -66,6 +66,9 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 - **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**.
 - **Durum:** `uzun_en/durum.json` her videonun aşamasını, slotunu ve YouTube kimliğini tutar
   (`projeler/<slug>/yayin.json`).
+- **Analiz:** Kanal Analizi iş akışı her pazartesi YouTube Analytics verisini `analiz/<tarih>.json` dosyasına
+  yazar: ülke, trafik kaynağı, abone durumu, izleyici tutma. Gelir verisi alınmaz. Hemen çalıştırmak için
+  `analiz/tetik.json` içindeki sayıyı artırın.
 - **Ayarlar** (Settings → Variables, isteğe bağlı):
 
   | Değişken | Ne işe yarar |

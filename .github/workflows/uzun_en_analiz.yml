@@ -1,0 +1,46 @@
+name: Kanal Analizi (The Food Almanac)
+# YouTube Analytics'ten videoların izlenme, ülke, trafik kaynağı, abone durumu ve izleyici tutma verilerini toplar.
+# Sonuç uzun_en/analiz/<tarih>.json dosyasına kaydedilir. İş akışı yalnızca okur; gelir verisi alınmaz.
+# Pazartesi sabahları çalışır. Hemen çalıştırmak için uzun_en/analiz/tetik.json içindeki sayıyı artırın.
+on:
+  schedule:
+    - cron: "17 9 * * 1"
+  push:
+    branches: [main]
+    paths: [.github/workflows/uzun_en_analiz.yml, uzun_en/araclar/analiz.py, uzun_en/analiz/tetik.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uzun-en-analiz
+  cancel-in-progress: false
+
+jobs:
+  analiz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıklar
+        run: pip install -q -r requirements.txt
+      - name: Verileri topla
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 uzun_en/araclar/analiz.py
+      - name: Kaydet
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash uzun_en/araclar/kaydet.sh "uzun_en: kanal analizi verileri" uzun_en/analiz
