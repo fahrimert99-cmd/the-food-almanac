@@ -3,6 +3,7 @@
 """Sahne görselleri: NVIDIA FLUX gravür illüstrasyonları (yedek: Gemini, Pollinations).
 
   python3 uzun_en/araclar/gorsel.py --proje SLUG                     # eksik görselleri (ve kapak arka planını) üret
+  python3 uzun_en/araclar/gorsel.py --proje SLUG --sadece kapak      # yalnızca tarifi değişen kapak görselini üret
   python3 uzun_en/araclar/gorsel.py --proje SLUG --sahne 43          # tek sahne için ADAY üret (NN.aday.jpg)
   python3 uzun_en/araclar/gorsel.py --proje SLUG --sahne 43 --aciklama "..." --tohum 7
   python3 uzun_en/araclar/gorsel.py --proje SLUG --sahne 43 --kabul  # adayı kalıcı yap
@@ -219,7 +220,8 @@ class Kayit:
             O.json_yaz(self.yol, self.d)
 
 
-def hepsi(slug, proje):
+def hepsi(slug, proje, sadece=None):
+    """sadece: yalnızca bu anahtarlar ('kapak', 4, 7 ...) ele alınır; diğer görsellere dokunulmaz."""
     img = os.path.join(O.proje_dir(slug), "images")
     os.makedirs(img, exist_ok=True)
     kay = Kayit(os.path.join(img, "uretim.json"))
@@ -227,6 +229,8 @@ def hepsi(slug, proje):
                 for s in proje["sahneler"] if s.get("tip", "gorsel") == "gorsel" and s.get("gorsel")]
     if (proje.get("kapak") or {}).get("gorsel"):
         hedefler.append(("kapak", kapak_prompt(proje), os.path.join(img, "kapak.jpg")))
+    if sadece:
+        hedefler = [h for h in hedefler if str(h[0]) in sadece]
     isler = []
     for k, pr, hedef in hedefler:
         r = kay.al(k)
@@ -300,12 +304,13 @@ def main():
     ap.add_argument("--aciklama", default="", help="yeni İngilizce sahne tarifi (stil/yasak metni otomatik eklenir)")
     ap.add_argument("--tohum", type=int, default=0)
     ap.add_argument("--kabul", action="store_true")
+    ap.add_argument("--sadece", default="", help="yalnızca bu görseller (ör. kapak veya 4,7); diğerlerine dokunulmaz")
     a = ap.parse_args()
     slug = O.aktif_slug(a.proje)
     proje = O.proje(slug)
     if a.sahne is not None:
         return aday(slug, proje, a.sahne, a.aciklama, a.tohum, a.kabul)
-    eksik = hepsi(slug, proje)
+    eksik = hepsi(slug, proje, {x.strip() for x in a.sadece.split(",") if x.strip()} or None)
     sys.exit(1 if eksik else 0)
 
 

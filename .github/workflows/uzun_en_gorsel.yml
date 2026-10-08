@@ -1,0 +1,43 @@
+name: Gorsel Yenile (The Food Almanac)
+# Bir projenin tarifi değişen görsellerini (ör. kapak görseli) NVIDIA FLUX ile yeniden üretir ve GitHub sürümüne
+# (uzun-en-<slug>) yükler. Tarifi değişmeyen görsellere dokunmaz.
+# Tetik: uzun_en/gorsel_yenile.json main'e gelince ({"proje": "<slug>", "gorseller": ["kapak", 4], "tetik": N}); önce
+# proje.json'daki tarifi değiştirin. "gorseller" verilirse yalnızca onlara bakılır (sahne düzenleri bozulmasın).
+on:
+  push:
+    branches: [main]
+    paths: [uzun_en/gorsel_yenile.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uzun-en-gorsel
+  cancel-in-progress: false
+
+jobs:
+  gorsel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıklar
+        run: pip install -q -r requirements.txt
+      - name: Tarifi değişen görselleri üret ve sürüme yükle
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          SLUG=$(python3 -c "import json;print(json.load(open('uzun_en/gorsel_yenile.json'))['proje'])")
+          SADECE=$(python3 -c "import json;print(','.join(map(str, json.load(open('uzun_en/gorsel_yenile.json')).get('gorseller', []))))")
+          echo "proje: $SLUG, görseller: ${SADECE:-tarifi değişen hepsi}"
+          python3 uzun_en/araclar/varlik.py indir --proje "$SLUG" --tur gorsel
+          python3 uzun_en/araclar/gorsel.py --proje "$SLUG" ${SADECE:+--sadece "$SADECE"}
+          python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG" --tur gorsel --degisen
