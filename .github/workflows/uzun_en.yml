@@ -65,11 +65,25 @@ jobs:
         env:
           UZUN_ZORLA: ${{ inputs.asama }}
         run: python3 uzun_en/araclar/plan.py
+      - name: Yüklenmiş videolarda eksik kapak / oynatma listesi
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          if grep -L '"liste_tamam": true' uzun_en/projeler/*/yayin.json 2>/dev/null | grep -q . || \
+             grep -L '"kapak_tamam": true' uzun_en/projeler/*/yayin.json 2>/dev/null | grep -q .; then
+            pip install -q -r requirements.txt && python3 uzun_en/araclar/yukle.py --tamamla
+          else
+            echo "eksik yok"
+          fi
       - name: Kaydet
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          bash uzun_en/araclar/kaydet.sh "uzun_en: plan (${{ steps.p.outputs.slug }} / ${{ steps.p.outputs.asama }})" uzun_en/durum.json uzun_en/konular.json
+          bash uzun_en/araclar/kaydet.sh "uzun_en: plan (${{ steps.p.outputs.slug }} / ${{ steps.p.outputs.asama }})" uzun_en/durum.json uzun_en/konular.json uzun_en/projeler
 
   # ---------------------------------------------------------------------------------------------
   konu:

@@ -5,6 +5,7 @@
   python3 uzun_en/araclar/yukle.py --proje SLUG --slot 2026-10-13T14:00:00Z
   python3 uzun_en/araclar/yukle.py --proje SLUG --slot ... --kuru     # yüklemeden ne gönderileceğini yazdır
   python3 uzun_en/araclar/yukle.py --kota-kontrol                       # YouTube günlük kotası dolu mu? (dolu: çıkış 3)
+  python3 uzun_en/araclar/yukle.py --tamamla                            # eksik kalan kapak / oynatma listesi
 
 Girdi: cikti/video.mp4, cikti/kapak_yt.jpg, cikti/meta.json (meta.py) ve cikti/kalite.json (geçmiş olmalı).
 Aynı video iki kez yüklenmez: projeler/SLUG/yayin.json ya da kanalda aynı başlıklı son yükleme varsa o kullanılır.
@@ -43,15 +44,66 @@ def kota_kontrol():
     O.log("YouTube kotası: uygun")
 
 
+def liste_ekle(vid, m):
+    if not m.get("oynatma_listesi"):
+        return True
+    import youtube_yukle as YY
+    try:
+        YY.oynatma_listesine_ekle(vid, m["oynatma_listesi"], m.get("oynatma_listesi_aciklama", ""))
+        O.log(f"✓ oynatma listesi: {m['oynatma_listesi']}")
+        return True
+    except Exception as e:
+        O.log(f"! oynatma listesi eklenemedi: {str(e)[:160]}")
+        return False
+
+
+def tamamla():
+    """Yüklenmiş ama kapağı (işleme sonrası) ya da oynatma listesi eksik kalmış videoları tamamlar.
+    Plan işi çağırır; eksik yoksa YouTube'a hiç istek atmaz."""
+    import subprocess, tempfile
+    from googleapiclient.discovery import build
+    from googleapiclient.http import MediaFileUpload
+    import youtube_yukle as YY
+    m = O.marka()
+    eksik = []
+    for slug in O.durum()["videolar"]:
+        yol = os.path.join(O.proje_dir(slug), "yayin.json")
+        y = O.json_oku(yol, {}) or {}
+        if y.get("video_id") and not (y.get("kapak_tamam") and y.get("liste_tamam")):
+            eksik.append((slug, yol, y))
+    if not eksik:
+        return O.log("tamamlanacak video yok")
+    yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
+    for slug, yol, y in eksik:
+        try:
+            if not y.get("kapak_tamam"):
+                tmp = tempfile.mkdtemp(prefix="kapak_")
+                subprocess.run(["gh", "release", "download", O.etiket(slug), "-D", tmp, "-p", "kapak_yt.jpg"], check=True)
+                yt.thumbnails().set(videoId=y["video_id"], media_body=MediaFileUpload(os.path.join(tmp, "kapak_yt.jpg"))).execute()
+                y["kapak_tamam"] = True
+                O.log(f"✓ {slug}: kapak basıldı")
+            if not y.get("liste_tamam"):
+                y["liste_tamam"] = liste_ekle(y["video_id"], m)
+        except Exception as e:
+            O.log(f"! {slug}: {str(e)[:160]}")
+            if "quota" in str(e).lower():
+                O.json_yaz(yol, y)
+                return O.log("YouTube kotası dolu — sonraki çalıştırmada tekrar denenecek")
+        O.json_yaz(yol, y)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
     ap.add_argument("--slot", help="yayın zamanı (UTC, ISO)")
     ap.add_argument("--kuru", action="store_true")
     ap.add_argument("--kota-kontrol", action="store_true")
+    ap.add_argument("--tamamla", action="store_true", help="eksik kalan kapak / oynatma listesi")
     a = ap.parse_args()
     if a.kota_kontrol:
         return kota_kontrol()
+    if a.tamamla:
+        return tamamla()
     if not a.slot:
         ap.error("--slot gerekli")
     slug = O.aktif_slug(a.proje)
@@ -107,21 +159,21 @@ def main():
                 time.sleep(5 * hata)
         vid = yanit["id"]
         O.log(f"✓ yüklendi: https://youtu.be/{vid}")
-    O.json_yaz(yayin_yol, {"video_id": vid, "url": f"https://youtu.be/{vid}", "slot": a.slot if zamanli else None,
-                           "baslik": meta["baslik"], "yuklenme": simdi.strftime("%Y-%m-%dT%H:%M:%SZ")})
+    yayin = {"video_id": vid, "url": f"https://youtu.be/{vid}", "slot": a.slot if zamanli else None,
+             "baslik": meta["baslik"], "yuklenme": simdi.strftime("%Y-%m-%dT%H:%M:%SZ")}
+    O.json_yaz(yayin_yol, yayin)
     kapak = os.path.join(cikti, "kapak_yt.jpg")
     if os.path.exists(kapak):
         if YY._kapak_bas(yt, vid, kapak, deneme=2):
             O.log("✓ kapak")
+        # işleme bitmeden basılan kapağı YouTube kendi karesiyle ezebiliyor: işleme sonrası ikinci basım
         if YY._islem_bekle(yt, vid, azami_sn=600) and YY._kapak_bas(yt, vid, kapak, deneme=2):
             O.log("✓ kapak işleme sonrası yeniden basıldı")
-    if m.get("oynatma_listesi"):
-        try:
-            YY.oynatma_listesine_ekle(vid, m["oynatma_listesi"], m.get("oynatma_listesi_aciklama", ""))
-            O.log(f"✓ oynatma listesi: {m['oynatma_listesi']}")
-        except Exception as e:
-            O.log(f"! oynatma listesi eklenemedi: {str(e)[:160]}")
-
+            yayin["kapak_tamam"] = True
+    yayin["liste_tamam"] = liste_ekle(vid, m)
+    O.json_yaz(yayin_yol, yayin)
+    if not (yayin.get("kapak_tamam") and yayin["liste_tamam"]):
+        O.log("! kapak/oynatma listesi eksik kaldı (kota?) — plan işi kota açılınca tamamlar (--tamamla)")
 
 if __name__ == "__main__":
     main()
