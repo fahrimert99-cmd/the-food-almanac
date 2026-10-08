@@ -6,6 +6,8 @@
   python3 uzun_en/araclar/kanal.py donustur [--gizle]    # marka.json'a göre kanalı düzenle (+ eski videoları gizle)
   python3 uzun_en/araclar/kanal.py gizle                 # kalan eski videoları gizlemeye devam et (günlük kota payı)
   python3 uzun_en/araclar/kanal.py geri_al               # gizlenen videoları/listeleri eski durumuna döndür
+  python3 uzun_en/araclar/kanal.py sil                   # gizlenen eski videoları ve listeleri KALICI olarak sil
+  python3 uzun_en/araclar/kanal.py gunluk                # zamanlanmış: yarım kalan gizleme/silme işini sürdür
   ... --kuru                                             # hiçbir şeyi değiştirmeden ne yapılacağını yazdır
 
 Kota: video başına 50 birim. Yükleme kotasına yer kalsın diye bir çalıştırmada en çok --azami (70) video gizlenir;
@@ -191,9 +193,82 @@ def geri_al(yt, kuru):
     O.log(f"geri alındı: {n} video")
 
 
+def _kota_mi(e):
+    m = str(e).lower()
+    return "quotaexceeded" in m or "quota" in m and "exceed" in m
+
+
+def sil(yt, kuru, azami=150):
+    """Gizlenen (kanal_gizlenen.json) eski videoları ve listeleri kalıcı olarak siler. GERİ ALINAMAZ.
+    Güvenlik: yalnızca hâlâ private olan videolar silinir (elle yeniden açılmış olan atlanır); uzun_en videolarına
+    dokunulmaz. Kota biterse kalanlar ertesi gün 'gunluk' ile silinir (video başına 50 birim)."""
+    kayit = O.json_oku(KAYIT, {}) or {}
+    kayit["sil_istendi"] = True
+    silinen = kayit.setdefault("silinen", {})
+    korunan = {(O.json_oku(os.path.join(O.proje_dir(s), "yayin.json"), {}) or {}).get("video_id")
+               for s in O.durum()["videolar"]}
+    ids = [v for v in kayit.get("videolar", {}) if v not in korunan][:azami]
+    durumlar = {}
+    for i in range(0, len(ids), 50):
+        r = yt.videos().list(part="status", id=",".join(ids[i:i + 50])).execute()
+        durumlar.update({v["id"]: v["status"].get("privacyStatus") for v in r.get("items", [])})
+    n = atlanan = 0
+    kota = False
+    for vid in ids:
+        if vid not in durumlar:                         # zaten silinmiş
+            silinen[vid] = kayit["videolar"].pop(vid)["baslik"]
+            continue
+        if durumlar[vid] != "private":                  # elle yeniden açılmış: dokunma
+            atlanan += 1
+            continue
+        if kuru:
+            n += 1
+            continue
+        try:
+            yt.videos().delete(id=vid).execute()
+        except Exception as e:
+            if _kota_mi(e):
+                kota = True
+                break
+            O.log(f"! {vid} silinemedi: {str(e)[:120]}")
+            continue
+        silinen[vid] = kayit["videolar"].pop(vid)["baslik"]
+        n += 1
+        if n % 10 == 0:
+            O.json_yaz(KAYIT, kayit)
+    liste = 0
+    if not kota:
+        for pid, x in list(kayit.get("listeler", {}).items()):
+            if kuru:
+                liste += 1
+                continue
+            try:
+                yt.playlists().delete(id=pid).execute()
+            except Exception as e:
+                if _kota_mi(e):
+                    kota = True
+                    break
+                if "notfound" not in str(e).lower().replace(" ", ""):
+                    O.log(f"! liste {pid} silinemedi: {str(e)[:120]}")
+                    continue
+            silinen[pid] = kayit["listeler"].pop(pid)["baslik"]
+            liste += 1
+    kalan = len(kayit.get("videolar", {})) - atlanan + len(kayit.get("listeler", {}))
+    if not kuru:
+        kayit["sil_tamam"] = kalan <= 0
+        O.json_yaz(KAYIT, kayit)
+    rapor = (f"{'(kuru) ' if kuru else ''}{n} eski video ve {liste} oynatma listesi KALICI olarak silindi"
+             + (f"; {atlanan} video elle yeniden açıldığı için atlandı" if atlanan else "")
+             + (f"; kota doldu, kalan {kalan} öğe yarın silinecek" if kota or kalan > 0 else ""))
+    O.log("• " + rapor)
+    with open(os.path.join(O.KOK, "kanal_rapor.md"), "w", encoding="utf-8") as f:
+        f.write(f"# Eski videoların silinmesi\n\n- {rapor}\n")
+    return rapor
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("islem", choices=["durum", "donustur", "gizle", "geri_al"])
+    ap.add_argument("islem", choices=["durum", "donustur", "gizle", "geri_al", "sil", "gunluk"])
     ap.add_argument("--azami", type=int, default=70, help="bu çalıştırmada en çok kaç video gizlensin")
     ap.add_argument("--bannersiz", action="store_true", help="banner'ı yükleme (Studio'dan elle ayarlandıysa)")
     ap.add_argument("--gizle", action="store_true", help="eski videoları ve listeleri private yap")
@@ -213,6 +288,17 @@ def main():
             f.write("# Kanal dönüşümü\n\n" + "\n".join(f"- {x}" for x in rapor) + "\n\n"
                     "Elle yapılacaklar (YouTube Studio → Özelleştirme): kanal adı **" + O.marka()["ad"] + "**, herkese açık kullanıcı adı **"
                     + O.marka().get("handle", "") + "**, profil fotoğrafı `assets/marka_en/avatar.png`.\n")
+    elif a.islem == "sil":
+        sil(yt, a.kuru)
+    elif a.islem == "gunluk":                           # zamanlanmış: yarım kalan iş varsa sürdür
+        k = O.json_oku(KAYIT, {}) or {}
+        if k.get("sil_istendi") and not k.get("sil_tamam"):
+            sil(yt, a.kuru)
+        elif not k.get("tamam", True):
+            for x in gizle_eski(yt, kanal(yt), a.kuru, a.azami):
+                O.log("• " + x)
+        else:
+            O.log("yapılacak iş yok")
     else:
         geri_al(yt, a.kuru)
 
