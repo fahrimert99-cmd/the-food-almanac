@@ -18,7 +18,6 @@ from PIL import Image, ImageStat
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
-sys.path.insert(0, O.REPO)
 
 W, H = 1920, 1080
 # Görsel dili: eski bilim kitabı gravürü (taramalı mürekkep + suluboya), kâğıt zemin. Her parça NVIDIA
@@ -90,7 +89,7 @@ def _nvidia(prompt, cikti, tohum=0):
     if not re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or "") or "nvidia" in _KAPALI:
         return None
     try:
-        import nvidia_araclar as NA
+        import nvidia_gorsel as NA
     except Exception as e:
         _kapat("nvidia", f"modül yüklenemedi: {e}")
         return None

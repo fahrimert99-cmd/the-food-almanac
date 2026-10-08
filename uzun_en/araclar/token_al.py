@@ -8,7 +8,7 @@ TEK SEFERLİK — YouTube refresh token alma yardımcısı (kendi bilgisayarın�
 2) OAuth istemcisi (Masaüstü / Desktop app) oluşturup client_secret.json indirin,
    bu dosyanın yanına koyun.
 3) pip install google-auth-oauthlib
-4) python3 token_al.py
+4) python3 uzun_en/araclar/token_al.py
 Çıkan CLIENT_ID / CLIENT_SECRET / REFRESH_TOKEN değerlerini GitHub Secrets'a ekleyin.
 
 NOT: Analytics (retention/CTR) için aşağıdaki yt-analytics.readonly scope'u

@@ -22,7 +22,6 @@ import argparse, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
 
-sys.path.insert(0, O.REPO)
 KAYIT = os.path.join(O.KOK, "kanal_gizlenen.json")
 STATUS_ALANLARI = ("embeddable", "license", "privacyStatus", "publicStatsViewable", "publishAt",
                    "selfDeclaredMadeForKids", "containsSyntheticMedia")
@@ -30,7 +29,7 @@ STATUS_ALANLARI = ("embeddable", "license", "privacyStatus", "publicStatsViewabl
 
 def yt_al():
     from googleapiclient.discovery import build
-    import youtube_yukle as YY
+    import youtube_api as YY
     return build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
 
 

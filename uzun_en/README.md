@@ -1,6 +1,6 @@
 # The Food Almanac — İngilizce uzun video hattı (otonom)
 
-Bu hat, kanalın (eski adı **Tuzak Avcısı**) yeni içeriğini üretir. Her hafta **Salı ve Cuma 14:00 UTC'de**
+Bu hat The Food Almanac kanalının (@FoodAlmanacTV) bütün videolarını üretir. Her hafta **Salı ve Cuma 14:00 UTC'de**
 (17:00 TR, 10:00 New York) birer adet, yaklaşık 10–11 dakikalık İngilizce video yayınlar. Videolar kanıta dayalı
 beslenme ve gıda bilimi anlatımlarıdır.
 
@@ -41,21 +41,20 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 | YouTube | Ücretsiz Data API kotası |
 | GitHub Actions | Repo herkese açık olduğu için dakika sınırı yok. |
 
-## Kurulum: bir kerelik
+## Kurulum (yapıldı)
 
-1. **Secret.** Repo → Settings → Secrets and variables → Actions → `CLAUDE_CODE_OAUTH_TOKEN` ekleyin.
-   - past-the-label-content'e eklediğiniz değerin aynısını kullanabilirsiniz.
-   - Bilgisayarda `claude setup-token` ile yeni bir değer de üretebilirsiniz.
-   - Diğer secret'lar (`YT_*`, `NVIDIA_API_KEY`, `GEMINI_API_KEY`) zaten var.
-2. **YouTube Studio → Özelleştirme.** API bu üç alanı değiştiremez; elle yapın:
-   - Kanal adı: **The Food Almanac**
-   - Herkese açık kullanıcı adı: **@FoodAlmanacTV** (@thefoodalmanac başka bir kanala ait)
-   - Profil fotoğrafı: `assets/marka_en/avatar.png`
-3. **Otomatik yapılanlar.** Kanal açıklaması ve anahtar kelimeler, PR birleşince `uzun_en_kanal.yml`
-   tarafından otomatik ayarlanır. Banner Studio'dan elle konduğu için API ile üzerine yazılmaz
-   (`kanal_islem.json` → `"banner": false`; dosyası `assets/marka_en/banner.jpg`).
-   - Eski Türkçe videolar ve oynatma listeleri **private** yapılır (silinmez).
-   - Geri almak için: Actions → **Kanal Donusumu** → Run workflow → `geri_al`.
+1. **Secret'lar:** `CLAUDE_CODE_OAUTH_TOKEN`, `GEMINI_API_KEY`, `NVIDIA_API_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`,
+   `YT_REFRESH_TOKEN`.
+   - YouTube token'ı yenilemek gerekirse: `python3 uzun_en/araclar/token_al.py` (bilgisayarda bir kez).
+   - Claude token'ı yenilemek gerekirse: `claude setup-token`.
+2. **YouTube Studio'dan elle ayarlananlar** (API bunları değiştiremez):
+   - kanal adı **The Food Almanac**,
+   - kullanıcı adı **@FoodAlmanacTV**,
+   - profil fotoğrafı `assets/marka_en/avatar.png`,
+   - banner `assets/marka_en/banner.jpg`.
+3. **API ile ayarlananlar:** Kanal açıklaması ve anahtar kelimeler `uzun_en_kanal.yml` ile ayarlandı.
+   - `kanal_islem.json` dosyası değişince bu iş akışı yeniden çalışır.
+   - Banner elle konduğu için API onun üzerine yazmaz (`"banner": false`).
 
 ## Günlük kullanım
 

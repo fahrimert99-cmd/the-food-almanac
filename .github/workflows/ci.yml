@@ -1,7 +1,5 @@
 name: CI (kontrol)
-
-# Hizli saglik kontrolu: her push ve PR'da calisir. Amac, bozuk bir degisikligin
-# gunluk cron'a (video uretimi) ulasmadan once yakalanmasi.
+# Hızlı sağlık kontrolü: her push ve PR'da. Bozuk bir değişiklik zamanlanmış üretime ulaşmadan yakalanır.
 on:
   push:
     branches: ["**"]
@@ -14,31 +12,64 @@ permissions:
 jobs:
   kontrol:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
-      - name: Python kur
-        uses: actions/setup-python@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Bagimliliklar
-        run: pip install -r requirements.txt
-      - name: Python derleme (sozdizimi/import kontrolu)
-        run: python -m compileall -q .
-      - name: JSON dosyalari gecerli mi
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: uzun_en/remotion/package-lock.json
+      - name: Bağımlılıklar
+        run: |
+          pip install -q -r requirements.txt numpy
+          cd uzun_en/remotion && npm ci --no-audit --no-fund
+      - name: Python derleme (sözdizimi)
+        run: python -m compileall -q uzun_en/araclar
+      - name: JSON dosyaları geçerli mi
         run: |
           python3 - <<'PY'
-          import json, glob, sys
+          import glob, json, sys
           hata = 0
-          for f in glob.glob("*.json") + glob.glob("uzun_scripts/*.json"):
+          for f in sorted(glob.glob("uzun_en/*.json") + glob.glob("uzun_en/projeler/*/*.json")):
               try:
                   json.load(open(f, encoding="utf-8"))
               except Exception as e:
                   print(f"✗ {f}: {e}"); hata = 1
-              else:
-                  print(f"✓ {f}")
           sys.exit(hata)
           PY
-      - name: Senaryolar dogrula
-        run: python3 senaryolar_validator.py
-      - name: Kod video tarifleri (marka serisi)
-        run: python3 test_kod_sahneler.py
+      - name: Senaryolar (proje_kontrol)
+        run: |
+          for p in uzun_en/projeler/*/proje.json; do
+            python3 uzun_en/araclar/proje_kontrol.py --proje "$(basename "$(dirname "$p")")" | tail -1
+          done
+      - name: Plan (takvim kararı, yazmadan)
+        run: python3 uzun_en/araclar/plan.py --goster | tail -3
+      - name: Remotion tip denetimi (her projenin sahneleri)
+        run: |
+          python3 - <<'PY'
+          # tsc için tam.gen.json gerekir: her proje için küçük bir sahte çizelge yazılır, sahneler kurulur
+          import os, subprocess, sys
+          sys.path.insert(0, "uzun_en/araclar")
+          import ortak as O
+          from hazirla import sahneleri_kur
+          hata = 0
+          for slug in sorted(os.listdir(O.PROJELER)):
+              p = O.proje(slug)
+              if not p:
+                  continue
+              sahneleri_kur(slug, p)
+              s = [{"id": x["id"], "bas": 0, "sure": 1, "meta": {"gorsel": None},
+                    "cumleler": [{"bas": 0, "sure": 1, "metin": "x", "dosya": "", "nokta": [[0, 0], [1, 1]]}]}
+                   for x in p["sahneler"]]
+              O.json_yaz(os.path.join(O.REMOTION, "src", "tam", "tam.gen.json"),
+                         {"fps": 30, "toplam": 1, "gecis": 0.35, "slug": slug, "sahneler": s, "altyazi": [],
+                          "kapak": {"satirlar": [], "gorsel": None}})
+              r = subprocess.run(["npx", "tsc", "-p", "."], cwd=O.REMOTION)
+              print(f"{slug}: {'temiz' if r.returncode == 0 else 'TİP HATASI'}")
+              hata |= r.returncode
+          sys.exit(1 if hata else 0)
+          PY
