@@ -242,6 +242,23 @@ def kaydet(slug, yalniz=None):
     O.log(f"kaydedildi: {n} sahne -> {os.path.relpath(hedef, O.REPO)}")
 
 
+def konu_kutusu(yol, esik=35, pay=0.03):
+    """Kapak görselinde konunun sınır kutusu [x0, y0, x1, y1] (0–1). Kapak bunu sağ panele en büyük hâliyle sığdırır.
+    Kâğıt zemini kenar piksellerinin medyanıdır; zeminden belirgin ayrılan piksellerin %1–99 aralığı alınır."""
+    try:
+        from PIL import Image
+        im = np.asarray(Image.open(yol).convert("RGB").resize((320, 180)), dtype=np.int16)
+    except Exception:
+        return None
+    zemin = np.median(np.concatenate([im[0], im[-1], im[:, 0], im[:, -1]]), axis=0)
+    ys, xs = np.nonzero(np.abs(im - zemin).max(axis=2) > esik)
+    if len(xs) < 200:                                   # neredeyse boş görsel: varsayılan yerleşim
+        return None
+    x0, x1 = np.percentile(xs, [1, 99]) / 320
+    y0, y1 = np.percentile(ys, [1, 99]) / 180
+    return [round(float(min(max(v, 0), 1)), 3) for v in (x0 - pay, y0 - pay, x1 + pay, y1 + pay)]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
@@ -263,7 +280,8 @@ def main():
     veri = {"fps": FPS, "toplam": round(toplam, 3), "gecis": GECIS, "slug": slug, "sahneler": sahneler,
             "altyazi": altyazi(sahneler),
             "kapak": {"satirlar": k.get("satirlar") or [], "vurgu": k.get("vurgu"), "vurgu_alt": k.get("vurgu_alt"),
-                      "gorsel": "tam/kapak" if os.path.exists(os.path.join(gdir, "kapak.jpg")) else None}}
+                      "gorsel": "tam/kapak" if os.path.exists(os.path.join(gdir, "kapak.jpg")) else None,
+                      "kutu": konu_kutusu(os.path.join(gdir, "kapak.jpg"))}}
     src = os.path.join(O.REMOTION, "src")
     O.json_yaz(os.path.join(src, "tam", "tam.gen.json"), veri)
     m = O.marka()

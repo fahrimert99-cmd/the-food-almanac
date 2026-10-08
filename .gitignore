@@ -18,5 +18,8 @@ client_secret.json
 !assets/
 !assets/**
 
+# Elle yenilenen YouTube kapağı (yukle.py --tamamla bunu sürümdekine tercih eder)
+!uzun_en/projeler/*/kapak_yt.jpg
+
 # Yerel artıklar
 .foodcode-paylasim/

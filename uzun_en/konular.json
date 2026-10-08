@@ -1,5 +1,5 @@
 {
-  "not": "Konu havuzu. Üretim sırası yukarıdan aşağıya; 'bekliyor' olan ilk konu sıradaki videodur. Havuz azalınca senaryo ajanı yeni konu ekler (gorev/KONU.md). Elle konu eklemek ya da sırayı değiştirmek serbesttir.",
+  "not": "Konu havuzu. Üretim sırası yukarıdan aşağıya; 'bekliyor' olan ilk konu sıradaki videodur. Havuz azalınca senaryo ajanı yeni konu ekler (gorev/KONU.md). Elle konu eklemek ya da sırayı değiştirmek serbesttir. Sıra dönüşümlüdür: tek bir gündelik yiyeceğin vücuda etkisi / alışkanlık ya da efsane.",
   "konular": [
     {
       "slug": "food-order-blood-sugar",
@@ -34,6 +34,18 @@
       "durum": "bekliyor"
     },
     {
+      "slug": "garlic-blood-pressure",
+      "soru": "What does garlic really do to your blood pressure?",
+      "aci": "Meta-analyses of garlic supplements in people with high blood pressure, how allicin forms when garlic is crushed, raw vs cooked vs aged garlic extract, how big the effect is next to diet and medication, and the bleeding-risk caution with blood thinners.",
+      "anahtar": [
+        "garlic blood pressure",
+        "does garlic lower blood pressure",
+        "raw garlic benefits",
+        "garlic after 50"
+      ],
+      "durum": "bekliyor"
+    },
+    {
       "slug": "frozen-vs-fresh-vegetables",
       "soru": "Are frozen vegetables less nutritious than fresh ones?",
       "aci": "Nutrient loss during storage in the fridge vs blanching and freezing; controlled comparisons of vitamin C, folate and carotenoids after days of storage; when fresh wins, when frozen wins, and how cooking changes the picture.",
@@ -41,6 +53,18 @@
         "frozen vs fresh vegetables nutrition",
         "are frozen vegetables healthy",
         "frozen broccoli nutrients"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "oats-cholesterol",
+      "soru": "What do oats really do to your cholesterol?",
+      "aci": "Oat beta-glucan and LDL cholesterol: the 3 grams a day behind the FDA and EFSA health claims, meta-analyses of the effect size, steel-cut vs rolled vs instant oats, overnight oats, and toppings that cancel the benefit.",
+      "anahtar": [
+        "oats cholesterol",
+        "oatmeal lower cholesterol",
+        "beta glucan cholesterol",
+        "overnight oats benefits"
       ],
       "durum": "bekliyor"
     },
@@ -56,6 +80,18 @@
       "durum": "bekliyor"
     },
     {
+      "slug": "fermented-foods-gut",
+      "soru": "What do yogurt and kefir really do to your gut?",
+      "aci": "The 2021 Stanford trial in which a high fermented-food diet raised gut microbiome diversity and lowered inflammatory markers, what 'live and active cultures' means, kefir vs yogurt, added sugar, and what is and isn't known for older adults.",
+      "anahtar": [
+        "kefir gut health",
+        "yogurt probiotics gut",
+        "fermented foods microbiome",
+        "kefir benefits"
+      ],
+      "durum": "bekliyor"
+    },
+    {
       "slug": "apple-cider-vinegar-blood-sugar",
       "soru": "Does apple cider vinegar really lower blood sugar?",
       "aci": "Small trials of vinegar with starchy meals, the size of the effect in meta-analyses, the acetic acid mechanism (slower stomach emptying), why most studies are short and small, and safety: teeth enamel, the throat, and medication.",
@@ -63,6 +99,18 @@
         "apple cider vinegar blood sugar",
         "vinegar before meals",
         "acv glucose spike"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "beet-juice-blood-pressure",
+      "soru": "What does beet juice really do to your blood pressure?",
+      "aci": "Dietary nitrate turning into nitric oxide, meta-analyses of beetroot juice and blood pressure, why antibacterial mouthwash blunts the effect, how long it lasts, and cautions about kidney stones.",
+      "anahtar": [
+        "beet juice blood pressure",
+        "beetroot nitrate",
+        "beet juice benefits",
+        "nitric oxide foods"
       ],
       "durum": "bekliyor"
     },
@@ -78,6 +126,18 @@
       "durum": "bekliyor"
     },
     {
+      "slug": "olive-oil-heart",
+      "soru": "What does extra virgin olive oil really do to your heart?",
+      "aci": "The PREDIMED trial and its 2018 republication, polyphenols in extra virgin vs refined oil, large cohort studies on olive oil and mortality, whether cooking with olive oil is safe, and how much people in the trials used.",
+      "anahtar": [
+        "olive oil heart health",
+        "extra virgin olive oil benefits",
+        "cooking with olive oil",
+        "olive oil a day"
+      ],
+      "durum": "bekliyor"
+    },
+    {
       "slug": "multivitamins-evidence",
       "soru": "Do multivitamins actually do anything for healthy people?",
       "aci": "Large randomized trials (Physicians' Health Study II, COSMOS), the 2022 US Preventive Services Task Force review, who may genuinely need a supplement (pregnancy and folic acid, vitamin B12 in older adults and vegans, vitamin D), and food first.",
@@ -85,6 +145,18 @@
         "do multivitamins work",
         "are multivitamins worth it",
         "multivitamin study"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "walnuts-heart",
+      "soru": "What do walnuts really do to your heart?",
+      "aci": "Meta-analyses of walnut trials on LDL cholesterol, the two-year Walnuts and Healthy Aging trial in adults aged 63 to 79, plant omega-3 (ALA), what the evidence does and doesn't say about the brain, and calories per handful.",
+      "anahtar": [
+        "walnuts cholesterol",
+        "walnuts heart health",
+        "walnuts benefits",
+        "walnuts brain"
       ],
       "durum": "bekliyor"
     },
@@ -100,6 +172,18 @@
       "durum": "bekliyor"
     },
     {
+      "slug": "cinnamon-blood-sugar",
+      "soru": "What does cinnamon really do to your blood sugar?",
+      "aci": "Mixed results from meta-analyses of cinnamon in type 2 diabetes and prediabetes, why the trials disagree, cassia vs Ceylon cinnamon and the coumarin liver warning, and why it is not a replacement for medication.",
+      "anahtar": [
+        "cinnamon blood sugar",
+        "cinnamon diabetes",
+        "ceylon vs cassia cinnamon",
+        "cinnamon benefits"
+      ],
+      "durum": "bekliyor"
+    },
+    {
       "slug": "breakfast-most-important-meal",
       "soru": "Is breakfast really the most important meal of the day?",
       "aci": "Where the saying came from, observational studies vs randomized trials, the 2019 BMJ meta-analysis, the Bath Breakfast Project, children and school performance, and why the best pattern depends on the person.",
@@ -107,6 +191,18 @@
         "is breakfast important",
         "skipping breakfast",
         "breakfast most important meal myth"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "oily-fish-heart",
+      "soru": "What do oily fish like sardines really do to your heart?",
+      "aci": "Omega-3 EPA and DHA, the American Heart Association's two servings a week, why fish-oil pill trials such as VITAL, REDUCE-IT and STRENGTH gave mixed results, whole fish vs supplements, and mercury in small vs large fish.",
+      "anahtar": [
+        "sardines heart health",
+        "omega 3 fish heart",
+        "fish oil vs eating fish",
+        "sardines benefits"
       ],
       "durum": "bekliyor"
     },

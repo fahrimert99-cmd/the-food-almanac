@@ -99,9 +99,12 @@ def tamamla():
             continue
         try:
             if not y.get("kapak_tamam"):
-                tmp = tempfile.mkdtemp(prefix="kapak_")
-                subprocess.run(["gh", "release", "download", O.etiket(slug), "-D", tmp, "-p", "kapak_yt.jpg"], check=True)
-                yt.thumbnails().set(videoId=y["video_id"], media_body=MediaFileUpload(os.path.join(tmp, "kapak_yt.jpg"))).execute()
+                kapak = os.path.join(O.proje_dir(slug), "kapak_yt.jpg")   # repoya elle konan (yenilenmiş) kapak önceliklidir
+                if not os.path.exists(kapak):
+                    tmp = tempfile.mkdtemp(prefix="kapak_")
+                    subprocess.run(["gh", "release", "download", O.etiket(slug), "-D", tmp, "-p", "kapak_yt.jpg"], check=True)
+                    kapak = os.path.join(tmp, "kapak_yt.jpg")
+                yt.thumbnails().set(videoId=y["video_id"], media_body=MediaFileUpload(kapak)).execute()
                 y["kapak_tamam"] = True
                 O.log(f"✓ {slug}: kapak basıldı")
             if not y.get("liste_tamam"):

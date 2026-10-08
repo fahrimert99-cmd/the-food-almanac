@@ -13,6 +13,8 @@ import ortak as O  # noqa: E402
 KELIME_SN = 2.73            # Piper (norman, length_scale 1.08), sahne araları dahil video süresi: ~2,73 kelime/sn
                             # (ikinci videodan ölçüldü: 1597 kelime -> 584,9 sn)
 SURE_DK = (9.0, 14.5)       # kesin sınır; yazım aşaması --asgari-dk 10 ile daha sıkı denetlenir
+ABARTI_BUYUK = {"really", "never", "always", "stop", "warning", "danger", "what", "this", "does", "your", "eat", "now",
+                "must", "worst", "best", "truth", "secret", "every", "after", "before", "real", "happens"}
 NVIDIA_RISKLI = re.compile(r"\b(blood|gore|wound|anatomy|anatomical|cut-away|label|labels|callout|chart|diagram|text|"
                            r"letters?|numbers?|words?|caption|logo)\b", re.I)
 
@@ -31,6 +33,10 @@ def denetle(slug, asgari_dk=None):
         h.append(f"baslik 20–100 karakter olmalı (şu an {len(b)})")
     if b.isupper() or "!!" in b:
         h.append("baslik tamamen büyük harf ya da '!!' içeremez (sakin, güvenilir ton)")
+    vurgu_harf = [w for w in re.findall(r"\b[A-Z]{3,}\b", b) if w.lower() in ABARTI_BUYUK]   # DASH, HbA1c gibi kısaltmalar serbest
+    if re.search(r"\b(shock\w*|miracle|toxic|poison)\b", b, re.I) or vurgu_harf:
+        h.append("baslik abartılı kelime ('shock', 'miracle', 'toxic', 'poison') ya da vurgu için BÜYÜK harfle yazılmış "
+                 f"kelime içeremez {vurgu_harf or ''}".rstrip())
     if len(p.get("aciklama_giris", "")) < 200:
         h.append("aciklama_giris en az 200 karakter olmalı")
     kay = p.get("kaynaklar") or []
@@ -38,8 +44,9 @@ def denetle(slug, asgari_dk=None):
         h.append("kaynaklar: en az 3 tam kaynak (yazarlar, başlık, dergi, yıl) gerekli")
     k = p.get("kapak") or {}
     sat = k.get("satirlar") or []
-    if not 1 <= len(sat) <= 4 or any(len(x) > 18 for x in sat):
-        h.append("kapak.satirlar: 1–4 satır, her satır en çok 18 karakter (tercihen 2–3 satır)")
+    if not 2 <= len(sat) <= 4 or any(len(x) > 15 for x in sat):
+        h.append("kapak.satirlar: 2–4 satır (tercihen 3–4), her satır en çok 15 karakter (tercihen 14): yazı kapağın sol "
+                 "yarısını dev harflerle doldurur, kısa satır daha büyük yazı demektir")
     if not k.get("gorsel"):
         h.append("kapak.gorsel (kapak görseli tarifi) gerekli")
     if k.get("vurgu") and len(k["vurgu"]) > 6:
