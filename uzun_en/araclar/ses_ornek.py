@@ -76,8 +76,8 @@ def main():
     g = O.json_oku(os.path.join(O.KOK, "ses_ornek.json"), {}) or {}
     m = O.marka()
     metin = g["metin"]
-    ses = m.get("ses", "en_US-norman-medium")
-    piper(metin, ses, float(m.get("length_scale", 1.08)), os.path.join(klasor, f"01_piper_{ses}_simdiki.mp3"))
+    ses = g.get("piper_ses", "en_US-norman-medium")      # karşılaştırma için eski Piper sesi (marka artık Kokoro)
+    piper(metin, ses, float(m.get("length_scale", 1.08)), os.path.join(klasor, f"01_piper_{ses}_eski.mp3"))
     O.log(f"✓ piper {ses}")
     sesler = g.get("kokoro_sesler", ["af_heart"])
     kokoro(metin, sesler, float(g.get("hiz", 1.0)), klasor, 2)
