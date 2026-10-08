@@ -79,7 +79,7 @@ The prompt tells you three things:
 
 ## Step 3: Structure
 
-Aim for about 1,650–1,850 narration words, which is 10–11.5 minutes. Use 50–64 scenes. The validator rejects anything under 9 or over 14.5 minutes.
+Aim for about 1,750–1,900 narration words, which is about 10.5–11.5 minutes. Use 50–64 scenes. The validator rejects anything under 10 or over 14.5 minutes (it counts about 2.73 words per second).
 
 1. **Cold open** (scenes 1–4).
    - Scene 1 has a `bolum` (the first chapter title).
