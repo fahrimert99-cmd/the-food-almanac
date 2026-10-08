@@ -3,8 +3,10 @@ name: Gunluk Denetim (Analiz)
 # Her gün YouTube istatistiklerini çeker ve rapor'u (analiz_rapor.md/.json)
 # repoya yazar. Performans verisi elle gönderilmeden kendiliğinden birikir.
 on:
-  schedule:
-    - cron: "0 6 * * *"   # her gün 06:00 UTC (09:00 TR)
+  # DURDURULDU (2026-10): kanal 'The Food Almanac' (İngilizce uzun video) oldu; Türkçe Shorts hattı zamanlanmış
+  # çalışmaz. Elle 'Run workflow' hâlâ çalışır. Geri açmak için aşağıdaki satırların başındaki '#'i kaldırın.
+  # schedule:
+  #  - cron: "0 6 * * *"   # her gün 06:00 UTC (09:00 TR)
   workflow_dispatch: {}
 
 permissions:

@@ -1,0 +1,18 @@
+# Büyük/üretilen dosyalar git'e girmez (görsel/ses/video GitHub sürümünde: uzun-en-<slug>)
+.model/
+remotion/node_modules/
+remotion/public/
+remotion/out/
+remotion/src/tam/tam.gen.json
+remotion/src/tam/kayit.ts
+remotion/src/tam/sahneler/
+remotion/src/tam/.onizleme-*/
+projeler/*/images/
+projeler/*/ses/
+projeler/*/cikti/
+projeler/*/.indirilen.json
+!projeler/*/tohum/images/
+!projeler/*/tohum/ses/
+calisma/
+!projeler/*/tohum/images/*.jpg
+!projeler/*/tohum/ses/*

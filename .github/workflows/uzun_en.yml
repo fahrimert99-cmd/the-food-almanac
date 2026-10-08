@@ -1,0 +1,533 @@
+name: Uzun Video EN (The Food Almanac, otonom)
+# Haftada 2 İngilizce uzun video (Salı + Cuma 14:00 UTC = 17:00 TR), tamamen otomatik:
+#   plan -> [konu] -> senaryo + bağımsız doğruluk denetimi -> görseller (NVIDIA) + ses (Piper)
+#        -> sahne tasarımı (paralel ajanlar) -> render (Remotion) -> kalite kontrol -> zamanlanmış yükleme
+# Her 3 saatte bir plan.py ne yapılacağına karar verir; çoğu çalıştırma ~20 sn'de "iş yok" der.
+# Kesilen her aşama (kota, hata) bir sonraki çalıştırmada kaldığı yerden devam eder. Slota az kalırsa
+# tasarlanamayan sahneler otomatik şablonla çizilir; video yine zamanında yayınlanır.
+#
+# KREDİ HARCANMAZ:
+#   Claude -> yalnızca CLAUDE_CODE_OAUTH_TOKEN (Pro/Max abonelik kotası). ANTHROPIC_API_KEY / CLAUDE_API_KEY bilerek verilmez.
+#   Gemini -> GEMINI_API_KEY ücretsiz katman (faturalandırma kapalı proje). Claude kotası biterse devralır.
+#   Görsel -> NVIDIA_API_KEY (ücretsiz). Ses -> Piper (yerel, açık kaynak). Müzik -> kodla üretilir.
+# Ayarlar (Settings > Variables, isteğe bağlı): UZUN_CLAUDE_MODEL (ör. opus / sonnet; boş = CLI varsayılanı),
+#   UZUN_GEMINI_MODEL, UZUN_SAHNE_GRUP (paralel sahne ajanı sayısı, varsayılan 8).
+# Durdurmak: Actions > bu iş akışı > "..." > Disable workflow.
+on:
+  schedule:
+    - cron: "23 */3 * * *"
+  push:
+    branches: [main]
+    paths: [uzun_en/calistir.json]
+  workflow_dispatch:
+    inputs:
+      asama:
+        description: "Aşamayı zorla (otomatik = plan.py karar verir)"
+        type: choice
+        options: [otomatik, senaryo, varlik, sahne, render]
+        default: otomatik
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: uzun-en
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  CMODEL: ${{ vars.UZUN_CLAUDE_MODEL }}
+  GMODEL: ${{ vars.UZUN_GEMINI_MODEL }}
+  UZUN_SAHNE_GRUP: ${{ vars.UZUN_SAHNE_GRUP || '8' }}
+
+jobs:
+  # ---------------------------------------------------------------------------------------------
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      is: ${{ steps.p.outputs.is }}
+      slug: ${{ steps.p.outputs.slug }}
+      asama: ${{ steps.p.outputs.asama }}
+      asama_no: ${{ steps.p.outputs.asama_no }}
+      slot: ${{ steps.p.outputs.slot }}
+      sablon: ${{ steps.p.outputs.sablon }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Karar
+        id: p
+        env:
+          UZUN_ZORLA: ${{ inputs.asama }}
+        run: python3 uzun_en/araclar/plan.py
+      - name: Kaydet
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash uzun_en/araclar/kaydet.sh "uzun_en: plan (${{ steps.p.outputs.slug }} / ${{ steps.p.outputs.asama }})" uzun_en/durum.json uzun_en/konular.json
+
+  # ---------------------------------------------------------------------------------------------
+  konu:
+    needs: plan
+    if: needs.plan.outputs.asama == 'konu'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Ajanlar
+        run: npm install -g @anthropic-ai/claude-code @google/gemini-cli >/dev/null 2>&1; claude --version; gemini --version || true
+      - name: Claude yeni konular önerir
+        continue-on-error: true
+        timeout-minutes: 40
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          [ -n "$CLAUDE_CODE_OAUTH_TOKEN" ] || exit 1
+          claude -p "Read uzun_en/gorev/KONU.md and do that task now." ${CMODEL:+--model "$CMODEL"} \
+            --max-turns 80 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+      - name: Gemini yedek
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        run: |
+          N=$(python3 -c "import json;print(sum(1 for k in json.load(open('uzun_en/konular.json'))['konular'] if k.get('durum','bekliyor')=='bekliyor'))")
+          if [ "$N" -lt 3 ] && [ -n "$GEMINI_API_KEY" ]; then
+            mkdir -p .gemini && echo '{"tools":{"exclude":["run_shell_command"]}}' > .gemini/settings.json
+            gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/KONU.md and do that task now." || true
+            rm -rf .gemini
+          fi
+          python3 -c "import json;json.load(open('uzun_en/konular.json'))"
+      - name: Kaydet
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash uzun_en/araclar/kaydet.sh "uzun_en: konu havuzu dolduruldu" uzun_en/konular.json
+
+  # ---------------------------------------------------------------------------------------------
+  senaryo:
+    needs: plan
+    if: needs.plan.outputs.is == 'true' && needs.plan.outputs.asama == 'senaryo'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      SLUG: ${{ needs.plan.outputs.slug }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false   # ajan kendi başına push edemesin
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Ajanlar ve anahtarlar (kredi KULLANILMAZ)
+        env:
+          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GKEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          C=false; G=false
+          if [ -n "$OAUTH" ]; then C=true; npm install -g @anthropic-ai/claude-code >/dev/null 2>&1 && claude --version; else echo "::warning::CLAUDE_CODE_OAUTH_TOKEN yok"; fi
+          if [ -n "$GKEY" ]; then G=true; npm install -g @google/gemini-cli >/dev/null 2>&1 && gemini --version; else echo "::warning::GEMINI_API_KEY yok"; fi
+          { echo "CLAUDE_OK=$C"; echo "GEMINI_OK=$G"; } >> "$GITHUB_ENV"
+          [ "$C" = true ] || [ "$G" = true ] || { echo "::error::Kullanılabilir ajan yok"; exit 1; }
+          python3 - <<'PY' > /tmp/konu.json
+          import json, os
+          k = next((x for x in json.load(open("uzun_en/konular.json"))["konular"] if x["slug"] == os.environ["SLUG"]), {"slug": os.environ["SLUG"]})
+          print(json.dumps(k, ensure_ascii=False))
+          PY
+          cat /tmp/konu.json
+          mkdir -p "uzun_en/projeler/$SLUG"
+      - name: "Senaryo: Claude araştırır ve yazar"
+        if: env.CLAUDE_OK == 'true'
+        continue-on-error: true
+        timeout-minutes: 90
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic (from uzun_en/konular.json): $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json." \
+            ${CMODEL:+--model "$CMODEL"} --max-turns 150 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+      - name: Yapı denetimi (1)
+        id: k1
+        run: python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" | tee /tmp/k1.txt && echo "ok=true" >> "$GITHUB_OUTPUT" || echo "ok=false" >> "$GITHUB_OUTPUT"
+      - name: "Senaryo: düzeltme turu (Claude)"
+        if: steps.k1.outputs.ok != 'true' && env.CLAUDE_OK == 'true' && hashFiles(format('uzun_en/projeler/{0}/proje.json', env.SLUG)) != ''
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "The script uzun_en/projeler/$SLUG/proje.json failed automatic validation (rules: uzun_en/gorev/SENARYO.md). Fix ONLY these problems with minimal edits, keeping all facts sourced: $(grep HATA /tmp/k1.txt)" \
+            ${CMODEL:+--model "$CMODEL"} --max-turns 40 --allowedTools "Read,Write,Edit,Glob,Grep"
+      - name: "Senaryo: Gemini yedek (Claude yoksa / kota bittiyse)"
+        if: env.GEMINI_OK == 'true'
+        continue-on-error: true
+        timeout-minutes: 90
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        run: |
+          python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" > /tmp/k2.txt && { echo "senaryo geçerli, Gemini gerekmiyor"; exit 0; }
+          mkdir -p .gemini && echo '{"tools":{"exclude":["run_shell_command"]}}' > .gemini/settings.json
+          if [ -f "uzun_en/projeler/$SLUG/proje.json" ]; then
+            gemini ${GMODEL:+-m "$GMODEL"} -y -p "The script uzun_en/projeler/$SLUG/proje.json failed validation (rules: uzun_en/gorev/SENARYO.md). Fix these problems with minimal edits: $(grep HATA /tmp/k2.txt)"
+          else
+            gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic: $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json."
+          fi
+          rm -rf .gemini
+      - name: "Doğruluk denetimi: bağımsız editör (Claude, yedek Gemini)"
+        id: dogrula
+        continue-on-error: true
+        timeout-minutes: 90
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        run: |
+          python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" || { echo "senaryo hâlâ geçersiz; denetime geçilmiyor"; exit 1; }
+          P="Read uzun_en/gorev/DOGRULA.md and do that task now for SLUG: $SLUG (files in uzun_en/projeler/$SLUG/)."
+          D="uzun_en/projeler/$SLUG/dogrulama.json"
+          rm -f "$D"
+          if [ "$CLAUDE_OK" = true ]; then
+            claude -p "$P" ${CMODEL:+--model "$CMODEL"} --max-turns 120 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" || true
+          fi
+          if [ ! -f "$D" ] && [ "$GEMINI_OK" = true ]; then
+            mkdir -p .gemini && echo '{"tools":{"exclude":["run_shell_command"]}}' > .gemini/settings.json
+            gemini ${GMODEL:+-m "$GMODEL"} -y -p "$P" || true
+            rm -rf .gemini
+          fi
+          [ -f "$D" ] || { echo "::warning::doğruluk denetimi tamamlanamadı (kota?) — bir sonraki çalıştırmada tekrar"; exit 1; }
+          cat "$D"
+      - name: Karar ve kayıt
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          D="uzun_en/projeler/$SLUG/dogrulama.json"
+          SONUC=$(python3 -c "import json;print(json.load(open('$D')).get('sonuc',''))" 2>/dev/null || echo "")
+          if [ "$SONUC" = "red" ]; then
+            python3 -c "import sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle('$SLUG','reddedildi')"
+            python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" iptal
+            python3 - <<'PY'
+          import json, os
+          p = "uzun_en/durum.json"; d = json.load(open(p)); d["videolar"][os.environ["SLUG"]]["slot"] = None
+          json.dump(d, open(p, "w"), ensure_ascii=False, indent=2)
+          PY
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG doğruluk denetiminde reddedildi (konu değişecek)" uzun_en
+          elif [ "$SONUC" = "onay" ] && python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" >/dev/null; then
+            python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" varlik
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG senaryosu yazıldı ve doğrulandı" uzun_en
+          else
+            echo "Senaryo aşaması tamamlanmadı; bir sonraki çalıştırma yeniden dener."
+            exit 1
+          fi
+
+  # ---------------------------------------------------------------------------------------------
+  varlik:
+    needs: [plan, senaryo]
+    if: always() && needs.plan.outputs.is == 'true' && fromJSON(needs.plan.outputs.asama_no) <= 1 && needs.senaryo.result != 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      SLUG: ${{ needs.plan.outputs.slug }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Aşama hâlâ 'varlik' mı?
+        run: |
+          A=$(python3 -c "import json;print(json.load(open('uzun_en/durum.json'))['videolar'].get('$SLUG',{}).get('asama',''))")
+          echo "aşama: $A"; [ "$A" = "varlik" ] || { echo "DEVAM=false" >> "$GITHUB_ENV"; exit 0; }
+          echo "DEVAM=true" >> "$GITHUB_ENV"
+      - uses: actions/setup-python@v6
+        if: env.DEVAM == 'true'
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıklar
+        if: env.DEVAM == 'true'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null && pip install -q -r requirements.txt numpy piper-tts
+      - uses: actions/cache@v4
+        if: env.DEVAM == 'true'
+        with:
+          path: uzun_en/.model
+          key: piper-${{ hashFiles('uzun_en/marka.json') }}
+      - name: Görseller (NVIDIA FLUX) ve ses (Piper)
+        if: env.DEVAM == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
+          python3 uzun_en/araclar/gorsel.py --proje "$SLUG" || echo "::warning::bazı görseller üretilemedi (bir önceki sahnenin görseli kullanılır; sahne ajanı yeniden dener)"
+          python3 uzun_en/araclar/ses.py --proje "$SLUG"
+          python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG"
+          python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" sahne
+          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG görsel ve sesleri hazır" uzun_en/durum.json
+
+  # ---------------------------------------------------------------------------------------------
+  gruplar:
+    needs: [plan, varlik]
+    if: always() && needs.plan.outputs.is == 'true' && fromJSON(needs.plan.outputs.asama_no) <= 2 && needs.plan.outputs.sablon != 'true' && needs.varlik.result != 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      matris: ${{ steps.g.outputs.matris }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Tasarlanacak sahneleri gruplara böl
+        id: g
+        env:
+          SLUG: ${{ needs.plan.outputs.slug }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          sys.path.insert(0, "uzun_en/araclar")
+          import ortak as O, plan
+          v = O.durum()["videolar"].get(os.environ["SLUG"], {})
+          g = plan.sahne_gruplari(os.environ["SLUG"]) if v.get("asama") == "sahne" else []
+          print("gruplar:", g)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write("matris=" + json.dumps(g) + "\n")
+          PY
+
+  # ---------------------------------------------------------------------------------------------
+  sahne:
+    needs: [plan, gruplar]
+    if: always() && needs.gruplar.result == 'success' && needs.gruplar.outputs.matris != '[]' && needs.gruplar.outputs.matris != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        grup: ${{ fromJSON(needs.gruplar.outputs.matris) }}
+    env:
+      SLUG: ${{ needs.plan.outputs.slug }}
+      SAHNELER: ${{ matrix.grup.sahneler }}
+      GRUP: ${{ matrix.grup.no }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: uzun_en/remotion/package-lock.json
+      - name: Bağımlılıklar
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter >/dev/null
+          pip install -q -r requirements.txt numpy
+          cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
+      - name: Ajanlar (kredi KULLANILMAZ)
+        env:
+          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GKEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          C=false; G=false
+          [ -n "$OAUTH" ] && C=true && npm install -g @anthropic-ai/claude-code >/dev/null 2>&1
+          [ -n "$GKEY" ] && G=true && npm install -g @google/gemini-cli >/dev/null 2>&1
+          { echo "CLAUDE_OK=$C"; echo "GEMINI_OK=$G"; } >> "$GITHUB_ENV"
+      - name: Girdiler (görseller, ses, zaman çizelgesi)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
+          python3 uzun_en/araclar/hazirla.py --proje "$SLUG" --sessiz
+      - name: "Claude sahneleri tasarlar (abonelik kotası)"
+        if: env.CLAUDE_OK == 'true'
+        continue-on-error: true
+        timeout-minutes: 300
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          claude -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: $SAHNELER. Your group number (for the report file name): $GRUP." \
+            ${CMODEL:+--model "$CMODEL"} --max-turns 600 --allowedTools "Bash,Read,Write,Edit,Glob,Grep"
+      - name: Kalan sahneler
+        id: kalan
+        run: |
+          K=$(python3 - <<'PY'
+          import os, sys
+          sys.path.insert(0, "uzun_en/araclar")
+          from hazirla import taslak_mi
+          print(",".join(n for n in os.environ["SAHNELER"].split(",")
+                         if taslak_mi(f"uzun_en/remotion/src/tam/sahneler/S{int(n):02d}.tsx")))
+          PY
+          )
+          echo "kalan=$K" >> "$GITHUB_OUTPUT"; echo "tasarlanmamış: ${K:-yok}"
+      - name: "Gemini kalan sahneleri tasarlar (ücretsiz kota)"
+        if: steps.kalan.outputs.kalan != '' && env.GEMINI_OK == 'true'
+        continue-on-error: true
+        timeout-minutes: 120
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: ${{ steps.kalan.outputs.kalan }}. Your group number: $GRUP."
+      - name: Doğrula ve kaydet (tip hatalı sahne kaydedilmez)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f uzun_en/projeler/"$SLUG"/images/*.aday.*
+          [ -d uzun_en/remotion/node_modules ] || exit 0
+          python3 uzun_en/araclar/sahne_onar.py --proje "$SLUG" || exit 1
+          python3 uzun_en/araclar/hazirla.py --proje "$SLUG" --kaydet --sahneler "$SAHNELER"
+          python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG" --tur gorsel --degisen
+          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG sahneler ($SAHNELER) tasarlandı" uzun_en/projeler/"$SLUG"/sahneler uzun_en/projeler/"$SLUG"/rapor_g"$GRUP".md
+      - name: Önizlemeler
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: onizleme-grup-${{ matrix.grup.no }}
+          path: uzun_en/remotion/out/onizleme/*/temas.jpg
+          if-no-files-found: ignore
+          retention-days: 7
+
+  # ---------------------------------------------------------------------------------------------
+  render:
+    needs: [plan, varlik, gruplar, sahne]
+    if: always() && needs.plan.outputs.is == 'true' && fromJSON(needs.plan.outputs.asama_no) <= 3 && needs.varlik.result != 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      SLUG: ${{ needs.plan.outputs.slug }}
+      SLOT: ${{ needs.plan.outputs.slot }}
+      SABLON: ${{ needs.plan.outputs.sablon }}
+      SAHNE_CALISTI: ${{ needs.sahne.result == 'success' || needs.sahne.result == 'failure' }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Render zamanı mı?
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ "$SAHNE_CALISTI" = "true" ] && python3 uzun_en/araclar/plan.py --sahne-deneme "$SLUG"
+          python3 - <<'PY'
+          import os, sys
+          sys.path.insert(0, "uzun_en/araclar")
+          import ortak as O, plan
+          slug = os.environ["SLUG"]
+          v = O.durum()["videolar"].get(slug, {})
+          kalan = plan.sahne_gruplari(slug, 1)
+          n = len(kalan[0]["sahneler"].split(",")) if kalan else 0
+          devam = v.get("asama") in ("sahne", "render") and (
+              n == 0 or os.environ["SABLON"] == "true" or v.get("sahne_deneme", 0) >= plan.SAHNE_DENEME)
+          print(f"aşama {v.get('asama')}, tasarlanmamış {n} sahne, deneme {v.get('sahne_deneme', 0)} -> render: {devam}")
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write(f"DEVAM={str(devam).lower()}\nSABLON_SAYI={n}\n")
+          PY
+          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG sahne deneme sayacı" uzun_en/durum.json
+      - uses: actions/setup-node@v5
+        if: env.DEVAM == 'true'
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: uzun_en/remotion/package-lock.json
+      - name: Bağımlılıklar
+        if: env.DEVAM == 'true'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter >/dev/null
+          pip install -q -r requirements.txt numpy piper-tts
+          cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
+      - uses: actions/cache@v4
+        if: env.DEVAM == 'true'
+        with:
+          path: uzun_en/.model
+          key: piper-${{ hashFiles('uzun_en/marka.json') }}
+      - name: Girdiler (görsel, ses, zaman çizelgesi, müzik)
+        if: env.DEVAM == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" render
+          python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
+          python3 uzun_en/araclar/ses.py --proje "$SLUG"
+          python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG" --degisen
+          python3 uzun_en/araclar/hazirla.py --proje "$SLUG"
+          python3 uzun_en/araclar/sahne_onar.py --proje "$SLUG"
+      - name: Render (Remotion, 1080p)
+        if: env.DEVAM == 'true'
+        working-directory: uzun_en/remotion
+        run: |
+          ./node_modules/.bin/remotion render src/index.ts Tam out/video_ham.mp4 --concurrency=$(nproc) --crf=18 \
+            --audio-codec=aac --audio-bitrate=192k --log=warn
+          mkdir -p ../projeler/"$SLUG"/cikti
+          ffmpeg -v error -y -i out/video_ham.mp4 -c copy -movflags +faststart ../projeler/"$SLUG"/cikti/video.mp4
+          ls -la ../projeler/"$SLUG"/cikti/
+      - name: Kalite kontrolü, kapak ve açıklama
+        if: env.DEVAM == 'true'
+        run: |
+          python3 uzun_en/araclar/kalite.py --proje "$SLUG"
+          python3 uzun_en/araclar/meta.py --proje "$SLUG" --kapak
+      - name: Arşiv (GitHub sürümü, telefondan izlemelik 720p kopya + kapak)
+        if: env.DEVAM == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          C=uzun_en/projeler/"$SLUG"/cikti
+          ffmpeg -v error -y -i "$C/video.mp4" -vf scale=1280:720 -c:v libx264 -preset veryfast -crf 26 -c:a aac -b:a 128k \
+            -movflags +faststart "$C/onizleme_720p.mp4"
+          python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG" --tur video
+      - name: YouTube'a zamanlanmış yükleme
+        if: env.DEVAM == 'true'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 uzun_en/araclar/yukle.py --proje "$SLUG" --slot "$SLOT"
+      - name: Kaydet
+        if: env.DEVAM == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" yuklendi
+          python3 -c "import sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle('$SLUG','yayinda')"
+          cp uzun_en/projeler/"$SLUG"/cikti/aciklama.txt uzun_en/projeler/"$SLUG"/aciklama.txt
+          # ilk kurulum tohumu artık sürümde: depodan kaldır
+          if [ -d uzun_en/projeler/"$SLUG"/tohum ]; then git rm -rq uzun_en/projeler/"$SLUG"/tohum; fi
+          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG YouTube'a yüklendi (yayın $SLOT)" uzun_en
+      - name: Hata bildirimi
+        if: failure() && env.DEVAM == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          T="Uzun video hattı: $SLUG render/yükleme başarısız"
+          gh issue list --state open --search "$T in:title" --json number --jq '.[0].number' | grep -q . || \
+            gh issue create --title "$T" --body "Çalıştırma: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          Video yüklenmedi. Bir sonraki zamanlanmış çalıştırma yeniden dener; slot kaçarsa sıradaki slota kayar."
+      - name: Video (artifact)
+        if: always() && env.DEVAM == 'true'
+        uses: actions/upload-artifact@v6
+        with:
+          name: uzun-video-${{ needs.plan.outputs.slug }}
+          path: |
+            uzun_en/projeler/${{ needs.plan.outputs.slug }}/cikti/kapak_yt.jpg
+            uzun_en/projeler/${{ needs.plan.outputs.slug }}/cikti/aciklama.txt
+            uzun_en/projeler/${{ needs.plan.outputs.slug }}/cikti/kalite.json
+          if-no-files-found: ignore
+          retention-days: 14

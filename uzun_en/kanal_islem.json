@@ -1,0 +1,5 @@
+{
+  "not": "Bu dosya main'e gelince/değişince 'Kanal Donusumu' iş akışı çalışır. islem: durum | donustur | geri_al. gizle: eski Türkçe videoları ve listeleri private yap (silinmez; geri_al ile döner).",
+  "islem": "donustur",
+  "gizle": true
+}

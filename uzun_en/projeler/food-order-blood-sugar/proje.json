@@ -1,0 +1,547 @@
+{
+  "slug": "food-order-blood-sugar",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Eat Vegetables First? What Food Order Really Does to Your Blood Sugar",
+  "aciklama_giris": "Same lunch, same portions, same person. The only difference is the order you eat it in. In small clinical studies, eating vegetables and protein before carbohydrates lowered the rise in blood sugar after a meal. In this video we look at what those studies actually found, the three mechanisms that may explain it (gastric emptying, fiber and the gut hormone GLP-1), who benefits most, where the evidence runs out, and five practical ways to use it.",
+  "kaynaklar": [
+    "Shukla AP, Iliescu RG, Thomas CE, Aronne LJ. Food order has a significant impact on postprandial glucose and insulin levels. Diabetes Care. 2015.",
+    "Shukla AP, et al. Carbohydrate-last meal pattern lowers postprandial glucose and insulin excursions in type 2 diabetes. BMJ Open Diabetes Research & Care. 2017.",
+    "Shukla AP, et al. The impact of food order on postprandial glycaemic excursions in prediabetes. Diabetes, Obesity and Metabolism. 2019.",
+    "Imai S, et al. A simple meal plan of 'eating vegetables before carbohydrate' was more effective for achieving glycemic control than an exchange-based meal plan in Japanese patients with type 2 diabetes. Asia Pacific Journal of Clinical Nutrition. 2011.",
+    "Imai S, Fukui M, Kajiyama S. Effect of eating vegetables before carbohydrates on glucose excursions in patients with type 2 diabetes. Journal of Clinical Biochemistry and Nutrition. 2014.",
+    "Kuwata H, et al. Meal sequence and glucose excursion, gastric emptying and incretin secretion in type 2 diabetes: a randomised, controlled crossover, exploratory trial. Diabetologia. 2016.",
+    "Reynolds AN, Mann JI, Williams S, Venn BJ. Advice to walk after meals is more effective for lowering postprandial glycaemia in type 2 diabetes mellitus than advice that does not specify timing. Diabetologia. 2016.",
+    "American Diabetes Association. Standards of Care in Diabetes: Diagnosis and Classification of Diabetes (2-hour plasma glucose reference values)."
+  ],
+  "kapak": {
+    "satirlar": [
+      "VEGGIES FIRST –",
+      "WHAT REALLY",
+      "HAPPENS TO YOUR",
+      "BLOOD SUGAR"
+    ],
+    "vurgu": "–37%",
+    "vurgu_alt": "glucose at 1 hour",
+    "gorsel": "a white plate with a fresh green salad in front, a grilled chicken breast in the middle and a slice of ciabatta bread at the back, a cut-away blood vessel with red blood cells and golden glucose spheres beside it, lettuce leaves and basil sprigs in the corners, all placed on the right half of the page, the left half left as empty off-white paper"
+  },
+  "etiketler": [
+    "food order",
+    "blood sugar",
+    "glucose spike",
+    "type 2 diabetes",
+    "prediabetes",
+    "GLP-1",
+    "nutrition science",
+    "healthy eating",
+    "vegetables first",
+    "carbs last"
+  ],
+  "seslendirme_duzelt": {
+    "HbA1c": "H B A 1 C",
+    "GLP-1": "G L P 1"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Same plate, different order",
+      "metin": "Picture the same lunch on two different days. Grilled chicken, a green salad, steamed broccoli, a slice of bread, and a glass of orange juice. Same food. Same portions. Same person.",
+      "gorsel": "a white ceramic plate seen from above holding a grilled chicken breast, a lettuce and tomato salad, steamed broccoli florets and a slice of ciabatta bread, a glass of orange juice beside it, fork and knife, lettuce leaves and basil sprigs decorating the corners"
+    },
+    {
+      "id": 2,
+      "metin": "The only thing that changes is the order you eat it in. And yet, the blood sugar curve that follows can look surprisingly different.",
+      "gorsel": "two identical lunch plates side by side, each with grilled chicken, salad, broccoli and a slice of bread, a fork resting on the bread of one plate and on the salad of the other plate, lettuce leaves in the corners",
+      "baslik": {
+        "satirlar": [
+          "SAME FOOD.",
+          "DIFFERENT ORDER"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "In one small but striking study, eating the vegetables and protein first, and the bread and juice last, kept blood sugar about 37 percent lower one hour after the meal.",
+      "gorsel": "a cut-away blood vessel with red blood cells and a few small golden glucose spheres flowing calmly, a small plate of salad and grilled chicken connected to it by thin dashed callout lines",
+      "etiket": "Shukla et al. · Diabetes Care · 2015",
+      "baslik": {
+        "satirlar": [
+          "1 HOUR",
+          "AFTER LUNCH"
+        ],
+        "vurgu": "–37%",
+        "not": "blood glucose when vegetables and protein came first"
+      }
+    },
+    {
+      "id": 4,
+      "metin": "So is this a real effect, or just another internet food hack? Today we'll look at what the research actually found, why it might work inside your body, who it helps most, and where the evidence runs out.",
+      "gorsel": "a large magnifying glass held over a lunch plate with salad, grilled chicken and bread, small sketches of a blood vessel and simple hexagon ring molecule outlines around it connected by dashed callout lines"
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "Welcome to The Food Almanac. Let's start with what actually happens in your body after you eat.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "The Food Order Effect",
+        "alt": "What eating order does to your blood sugar"
+      }
+    },
+    {
+      "id": 6,
+      "bolum": "What a blood sugar spike is",
+      "metin": "When you eat bread, rice, pasta, potatoes, or anything sweet, your digestive system breaks the starches and sugars down into glucose.",
+      "gorsel": "a slice of bread, a bowl of white rice, a few pieces of pasta and a potato, small golden glucose spheres rising from them, simple chains of hexagon rings breaking apart into single rings",
+      "baslik": {
+        "satirlar": [
+          "STARCH",
+          "→ GLUCOSE"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "That glucose passes through the wall of your small intestine and into your bloodstream. Your blood sugar rises.",
+      "gorsel": "cross-section of the small intestine wall with finger-like villi, golden glucose spheres passing through the wall into a small capillary filled with red blood cells",
+      "baslik": {
+        "satirlar": [
+          "INTO THE",
+          "BLOODSTREAM"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "metin": "In response, your pancreas releases insulin, the hormone that helps move glucose out of the blood and into your muscles, liver, and fat tissue, where it can be used or stored.",
+      "gorsel": "textbook illustration of the pancreas beside the duodenum releasing small green insulin particles into a nearby blood vessel with red blood cells, dashed callout lines to a muscle fiber cross-section and a liver lobe",
+      "baslik": {
+        "satirlar": [
+          "INSULIN"
+        ],
+        "not": "the hormone that moves glucose into your cells"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "In a person without diabetes, blood sugar usually rises after a meal and settles back down within two to three hours, typically staying below about 140 milligrams per deciliter, or 7.8 millimoles per liter, at the two-hour mark.",
+      "gorsel": "an upper arm with a small round glucose sensor patch, beside it a gentle hand-drawn wave line rising and falling like a single rolling hill, a light lunch plate in the corner",
+      "baslik": {
+        "satirlar": [
+          "THE NORMAL",
+          "CURVE"
+        ],
+        "vurgu": "<140",
+        "not": "mg/dL at two hours (7.8 mmol/L)"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "In type 2 diabetes and prediabetes, that system works less smoothly. The body responds less well to insulin, and the pancreas may not keep up. So the same meal can push blood sugar higher, and keep it high for longer.",
+      "gorsel": "a cut-away blood vessel crowded with many golden glucose spheres between red blood cells, next to a muscle cell cross-section with small closed gates on its surface",
+      "baslik": {
+        "satirlar": [
+          "HIGHER",
+          "AND LONGER"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Doctors pay attention to these after-meal peaks because, over months, they add to a person's average blood sugar, measured by a test called HbA1c. That's why a simple way to soften them gets attention.",
+      "gorsel": "a laboratory bench with a rack of small capped blood sample tubes and an antique brass microscope, a circular magnified inset of red blood cells with tiny golden glucose spheres stuck to them",
+      "baslik": {
+        "satirlar": [
+          "HbA1c"
+        ],
+        "not": "your average blood sugar over about three months"
+      }
+    },
+    {
+      "id": 12,
+      "bolum": "The experiment",
+      "tip": "kart",
+      "metin": "In 2015, researchers at Weill Cornell Medicine in New York decided to test the idea directly.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Same meal, two orders",
+        "alt": "Weill Cornell Medicine · New York · 2015"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "They recruited eleven adults with type 2 diabetes. All of them were overweight or had obesity, and all were taking metformin, a common diabetes medicine.",
+      "gorsel": "a quiet clinical research room: a single empty chair at a table, a covered meal tray and a glucose meter on the table, a tall window"
+    },
+    {
+      "id": 14,
+      "metin": "Each volunteer ate the exact same meal on two separate days, a week apart. Ciabatta bread and orange juice for the carbohydrates. Skinless grilled chicken breast for protein. A lettuce and tomato salad, and steamed broccoli with a little butter.",
+      "gorsel": "a research meal arranged on a tray: a slice of ciabatta bread, a glass of orange juice, a skinless grilled chicken breast, a lettuce and tomato salad, and steamed broccoli with a small pat of butter, each item neatly separated",
+      "baslik": {
+        "satirlar": [
+          "THE TEST",
+          "MEAL"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "On one day, they ate the bread and juice first, and fifteen minutes later, the chicken and vegetables. On the other day, the order was reversed: chicken and vegetables first, bread and juice fifteen minutes later.",
+      "gorsel": "an antique round wall clock with a blank face above two plates, the first plate holding bread and a glass of orange juice, the second holding grilled chicken, salad and broccoli, a curved dashed arrow between the plates",
+      "baslik": {
+        "satirlar": [
+          "SAME MEAL,",
+          "REVERSED"
+        ],
+        "vurgu": "15 MIN",
+        "not": "between the two courses"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Blood samples were taken before the meal and at intervals for two hours afterward, to track both glucose and insulin.",
+      "gorsel": "a laboratory bench with a neat row of small capped blood sample tubes in a rack, an antique timer and an open notebook with blank pages"
+    },
+    {
+      "id": 17,
+      "bolum": "What they found",
+      "tip": "grafik",
+      "metin": "When the vegetables and protein came first, glucose levels were about 29 percent lower at thirty minutes, about 37 percent lower at one hour, and about 17 percent lower at two hours.",
+      "grafik": {
+        "baslik": "How much lower blood glucose was",
+        "alt": "Vegetables and protein first vs. carbohydrates first, same meal",
+        "cubuklar": [
+          {
+            "etiket": "30 min",
+            "deger": 28.6,
+            "metin": "−29%"
+          },
+          {
+            "etiket": "60 min",
+            "deger": 36.7,
+            "metin": "−37%"
+          },
+          {
+            "etiket": "120 min",
+            "deger": 16.8,
+            "metin": "−17%"
+          }
+        ],
+        "kaynak": "Shukla et al., Diabetes Care 2015 · 11 adults with type 2 diabetes · single test meal"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Insulin levels were lower too. In other words, the body needed less insulin to handle the very same food.",
+      "gorsel": "a calm cut-away blood vessel with only a few green insulin particles and a few golden glucose spheres among red blood cells, a small pancreas sketch connected by a dashed line",
+      "baslik": {
+        "satirlar": [
+          "LESS",
+          "INSULIN"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "Remember, nothing about the meal changed. Not the calories, not the carbohydrates, not the portion size. Only the sequence.",
+      "gorsel": "a single lunch plate seen from above with grilled chicken, salad, broccoli and bread, a fork placed next to the salad, lots of empty paper around it"
+    },
+    {
+      "id": 20,
+      "metin": "Of course, eleven people and a single meal is a very small experiment. So the same team kept testing.",
+      "gorsel": "a researcher's hands writing in an open notebook with blank lines, next to a lunch plate, a glucose meter and a pair of round eyeglasses"
+    },
+    {
+      "id": 21,
+      "metin": "In a 2017 follow-up, sixteen adults with type 2 diabetes tried three versions of the same meal on different days: carbohydrates first, carbohydrates last, and everything eaten together, sandwich-style.",
+      "gorsel": "three identical lunch plates in a row: the first with the bread placed in front, the second with salad and chicken placed in front, the third with the chicken and salad made into a ciabatta sandwich"
+    },
+    {
+      "id": 22,
+      "metin": "Eating the carbohydrates last produced roughly half the rise in blood sugar compared with eating them first. The all-together sandwich landed in between.",
+      "gorsel": "three glass laboratory cylinders filled with golden glucose spheres to three different heights, tall, medium and short, a small plate of food in front of each cylinder",
+      "etiket": "Shukla et al. · BMJ Open Diabetes Res Care · 2017",
+      "baslik": {
+        "satirlar": [
+          "CARBS",
+          "LAST"
+        ],
+        "vurgu": "≈ HALF",
+        "not": "the glucose rise of eating carbs first"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "And in 2019, a similar study in adults with prediabetes found the same pattern. Carbohydrates last meant a lower, flatter glucose curve after the meal.",
+      "gorsel": "a gently rolling landscape of soft green hills with a slow meandering golden river forming a low, flat curve, calm and minimal",
+      "etiket": "Shukla et al. · Diabetes Obes Metab · 2019"
+    },
+    {
+      "id": 24,
+      "bolum": "The long-term evidence",
+      "metin": "Researchers in Japan had been exploring a similar idea for years, with a simple message for patients. Eat your vegetables before your carbohydrates.",
+      "gorsel": "a traditional Japanese home meal on a wooden tray: a small dish of blanched spinach, a fresh vegetable salad, a bowl of miso soup, grilled fish and a bowl of white rice, chopsticks on a rest"
+    },
+    {
+      "id": 25,
+      "metin": "In one study of people with type 2 diabetes, patients taught this vegetables-first rule were followed for two years. Their HbA1c, the long-term blood sugar marker, improved more than in patients given a standard, more complicated meal plan based on food exchanges.",
+      "gorsel": "hands lifting blanched green vegetables with chopsticks from a small dish while a bowl of rice waits in the background, four tiny trees in the corner showing spring, summer, autumn and winter",
+      "etiket": "Imai et al. · Asia Pac J Clin Nutr · 2011",
+      "baslik": {
+        "satirlar": [
+          "2 YEARS"
+        ],
+        "not": "a simple vegetables-first rule, HbA1c improved more"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "That matters, because it suggests the effect isn't just a one-meal curiosity. A habit simple enough to follow every day may add up over time. But these studies were done in specific groups of people, so the results don't automatically apply to everyone.",
+      "gorsel": "a kitchen windowsill with a bowl of fresh vegetables, broccoli, tomatoes and leafy greens, morning light drawn as fine radiating lines"
+    },
+    {
+      "id": 27,
+      "bolum": "Why order matters",
+      "tip": "kart",
+      "metin": "So why would the order of the same foods change what happens in your blood? There are three main mechanisms, and they work together.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Why order matters",
+        "alt": "Stomach · Fiber · Gut hormones"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "The first is your stomach. Food doesn't go straight from your plate into your bloodstream. The stomach acts like a gatekeeper, releasing food into the small intestine a little at a time.",
+      "gorsel": "textbook illustration of the stomach with its lower valve, the pylorus, releasing a small portion of food into the small intestine, clean educational textbook plate",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "GATEKEEPER"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "metin": "This is called gastric emptying, and its speed strongly shapes how fast glucose reaches your blood. A glass of juice on an empty stomach passes through quickly. A stomach already holding fiber, protein, and fat empties more slowly.",
+      "gorsel": "a glass of orange juice next to an stomach with a fast thin golden stream flowing straight through it, and a second stomach holding green vegetables and chicken that releases food slowly",
+      "baslik": {
+        "satirlar": [
+          "GASTRIC",
+          "EMPTYING"
+        ]
+      }
+    },
+    {
+      "metin": "It's also one reason fruit juice tends to raise blood sugar faster than the same fruit eaten whole. The juice has lost most of its fiber, and liquids leave the stomach quickly.",
+      "gorsel": "two whole oranges and a halved orange next to a tall glass of orange juice, a magnified circular inset showing fibrous orange pulp cells",
+      "id": 30
+    },
+    {
+      "id": 31,
+      "metin": "The second mechanism is fiber. Vegetables are rich in fiber, and some types of fiber absorb water and form a thick, gel-like mixture in the gut.",
+      "gorsel": "a head of broccoli, leafy greens and green beans, a magnified circular inset showing the fibrous plant cell walls"
+    },
+    {
+      "id": 32,
+      "metin": "That gel can slow how quickly digestive enzymes reach starch, and how quickly the released glucose is absorbed. When the vegetables arrive first, that fiber is already in place when the bread shows up.",
+      "gorsel": "inside the small intestine, a soft translucent green fiber mesh slowing down golden glucose spheres above the villi, textbook cross-section",
+      "baslik": {
+        "satirlar": [
+          "FIBER",
+          "BARRIER"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "metin": "The third mechanism is hormonal, and it's the most interesting. When protein and fat reach your intestine, they trigger the release of gut hormones, including one called GLP-1.",
+      "gorsel": "intestinal lining cells in cross-section releasing small coral-colored hormone particles, a grilled chicken breast and a small bottle of olive oil sketched nearby with dashed callout lines"
+    },
+    {
+      "id": 34,
+      "metin": "GLP-1 slows the stomach even further, helps the pancreas release insulin earlier and more efficiently when glucose rises, and helps you feel full. If that name sounds familiar, it's because some modern diabetes and weight-loss medicines are designed to mimic it.",
+      "gorsel": "coral hormone particles traveling along dashed paths from the small intestine to an pancreas, a stomach and a small brain",
+      "baslik": {
+        "satirlar": [
+          "GLP-1"
+        ],
+        "not": "slows the stomach · boosts insulin · helps you feel full"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "A 2016 study from Japan tested exactly this. When people with type 2 diabetes ate fish or meat before rice, their stomachs emptied more slowly, their GLP-1 levels were higher, and their rise in blood sugar was smaller than when they ate the rice first.",
+      "gorsel": "a grilled salmon fillet on a small plate next to a bowl of steamed white rice and chopsticks, an stomach sketched in the corner",
+      "etiket": "Kuwata et al. · Diabetologia · 2016",
+      "baslik": {
+        "satirlar": [
+          "FISH",
+          "BEFORE RICE"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "Put together, the picture looks like this. When vegetables and protein come first, your gut is primed. The stomach slows down, fiber is in place, and hormones are already signaling. By the time the carbohydrates arrive, your body is ready for them.",
+      "gorsel": "a complete digestive system from stomach to small intestine with green fiber strands, coral hormone particles and a calm slow trail of golden glucose spheres, balanced and harmonious",
+      "baslik": {
+        "satirlar": [
+          "A PRIMED",
+          "GUT"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "bolum": "Who it helps and the limits",
+      "tip": "kart",
+      "metin": "Now, the honest part. Who actually benefits from this, and what don't we know yet?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Who it helps most",
+        "alt": "And where the evidence runs out"
+      }
+    },
+    {
+      "id": 38,
+      "metin": "The strongest evidence comes from people with type 2 diabetes and prediabetes. That's where blood sugar spikes are larger, and where softening them may matter most.",
+      "gorsel": "hands preparing a colorful vegetable salad on a wooden cutting board with a knife, tomatoes, cucumber and lettuce"
+    },
+    {
+      "id": 39,
+      "metin": "Studies in people without diabetes have found a similar direction of effect, but their spikes are smaller to begin with, so the absolute difference is smaller too. For most healthy people, a rise in blood sugar after a meal is completely normal.",
+      "gorsel": "a person seen from behind eating lunch at a table by a large window, a plate with salad and bread"
+    },
+    {
+      "id": 40,
+      "metin": "We also need to be clear about the limits. Most of these studies are small, often a few dozen people or fewer. Many tested a single meal in a lab, not years of real life.",
+      "gorsel": "a single lunch plate on a laboratory bench next to a small stack of only a few research papers with blank pages"
+    },
+    {
+      "metin": "There are open questions too. We don't know the shortest gap that still works, or whether this habit changes long-term outcomes like heart disease. Those studies simply haven't been done at scale.",
+      "gorsel": "a quiet research desk with neatly stacked journals with blank covers, an oil lamp and a teacup with rising steam",
+      "id": 41,
+      "baslik": {
+        "satirlar": [
+          "OPEN",
+          "QUESTIONS"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "Food order doesn't remove carbohydrates or calories. A huge plate of refined carbs eaten last is still a huge plate of refined carbs. And it's not a substitute for medication, exercise, or medical care.",
+      "gorsel": "a very large plate piled high with white pasta and several slices of white bread"
+    },
+    {
+      "id": 43,
+      "metin": "Think of it as a free, low-effort habit that can help a good meal work a little better. Not as a magic trick.",
+      "gorsel": "a dinner plate with a grilled chicken breast showing grill marks, a small bowl of green salad, roasted carrot and zucchini pieces, and one slice of brown bread on a wooden table"
+    },
+    {
+      "id": 44,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you actually use this? Here are five practical ways.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Vegetables → Protein → Carbs",
+        "alt": "Five practical ways"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "One. Start with the vegetables. A side salad, a bowl of vegetable soup, or the broccoli on your plate. Eat those first.",
+      "gorsel": "a fork lifting fresh leafy greens from a side salad bowl, a bowl of vegetable soup and broccoli florets nearby"
+    },
+    {
+      "id": 46,
+      "metin": "Two. Move on to protein and healthy fats. Chicken, fish, eggs, tofu, beans, cheese, nuts, or olive oil. These are what trigger those helpful gut hormones.",
+      "gorsel": "an arrangement of protein foods: a grilled fish fillet, halved boiled eggs, tofu cubes, a small bowl of beans, a wedge of cheese, a handful of nuts and a small bottle of olive oil"
+    },
+    {
+      "id": 47,
+      "metin": "Three. Save the bread, rice, pasta, potatoes, and dessert for last. In the studies, the gap was about ten to fifteen minutes. You don't need a stopwatch. The point is simply to give the vegetables and protein a head start.",
+      "gorsel": "a dinner plate where the salad and grilled chicken are mostly eaten and a small portion of rice remains, fork resting on the edge, an antique pocket watch beside it"
+    },
+    {
+      "metin": "In everyday life, that might mean eggs or Greek yogurt before the toast at breakfast. Or at dinner, the salad and the salmon before the potatoes. It works with the foods you already eat.",
+      "gorsel": "a breakfast table with a plate of scrambled eggs, a bowl of yogurt topped with berries, and a slice of brown toast behind them",
+      "id": 48
+    },
+    {
+      "id": 49,
+      "metin": "Four. Be careful with liquid sugar. Juice and sweet drinks pass through the stomach fast. If you have them, have them with or after a meal, not on an empty stomach.",
+      "gorsel": "a glass of orange juice and a glass of water next to a finished lunch plate, a small stomach sketch with a fast golden stream"
+    },
+    {
+      "id": 50,
+      "metin": "Five. At restaurants, let the bread basket wait. Order a salad or a vegetable starter, and if a dish mixes everything together, like a sandwich or a pasta bowl, add a side of vegetables and start there.",
+      "gorsel": "a restaurant table with a bread basket pushed to the side and a fresh green salad starter in front, a folded napkin and cutlery"
+    },
+    {
+      "id": 51,
+      "metin": "And one bonus habit with good evidence behind it. A short, easy walk after your meal. Working muscles pull glucose out of the blood, which can lower the after-meal peak even further.",
+      "gorsel": "walking shoes on a tree-lined park path, a circular inset of a thigh muscle cross-section absorbing golden glucose spheres",
+      "baslik": {
+        "satirlar": [
+          "WALK AFTER",
+          "MEALS"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "One important safety note. If you use insulin, or medicines that can cause low blood sugar such as sulfonylureas, talk to your doctor or diabetes team before changing when you eat your carbohydrates, because the timing of your medication may need to match.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, an insulin pen and a glucose meter",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "metin": "And if you already wear a glucose monitor, this is an easy experiment to try on yourself. The same meal, two different orders, and compare your curves.",
+      "gorsel": "a smartphone lying face down next to a lunch plate and a small round glucose sensor patch"
+    },
+    {
+      "id": 54,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Same food. Different order.",
+        "alt": "Vegetables → Protein → Carbs"
+      }
+    },
+    {
+      "id": 55,
+      "metin": "In small studies, eating vegetables and protein before carbohydrates lowered the rise in blood sugar after a meal. By about a third at the one-hour mark in the original study, and by roughly half in a follow-up.",
+      "gorsel": "the opening lunch plate seen from above, now with the salad half eaten, grilled chicken, broccoli and bread"
+    },
+    {
+      "id": 56,
+      "metin": "It seems to work by slowing the stomach, putting fiber in place, and triggering GLP-1. The evidence is strongest for people with type 2 diabetes and prediabetes, and it's a habit that costs nothing.",
+      "gorsel": "a plate of salad and grilled chicken on the left connected by dashed callout lines to an stomach, small intestine and pancreas on the right, green, coral and golden accents"
+    },
+    {
+      "id": 57,
+      "metin": "Same food. Different order. A small change you can try at your very next meal.",
+      "gorsel": "a fresh salad, grilled chicken and a slice of bread on a wooden table, lettuce leaves and basil sprigs framing the corners"
+    },
+    {
+      "id": 58,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

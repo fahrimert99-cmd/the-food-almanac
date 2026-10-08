@@ -4,8 +4,10 @@ name: Senaryo Bekcisi (dusuk havuz korumasi)
 # (Pazar+Carsamba) uretim gecikse/atlansa bile stok asla kritik seviyeye inmez.
 # Video YUKLEMEZ; yalnizca gerekince senaryo havuzunu buyutur.
 on:
-  schedule:
-    - cron: "0 5 * * *"   # her gun 08:00 TR (gunluk analiz + yayindan once)
+  # DURDURULDU (2026-10): kanal 'The Food Almanac' (İngilizce uzun video) oldu; Türkçe Shorts hattı zamanlanmış
+  # çalışmaz. Elle 'Run workflow' hâlâ çalışır. Geri açmak için aşağıdaki satırların başındaki '#'i kaldırın.
+  # schedule:
+  #  - cron: "0 5 * * *"   # her gun 08:00 TR (gunluk analiz + yayindan once)
   workflow_dispatch:
     inputs:
       esik:
