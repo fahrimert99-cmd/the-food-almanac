@@ -69,6 +69,8 @@ When writing a new description:
   - Choose camera windows that keep defects out of frame for the whole move, or
   - cover them with a paper-coloured radial patch inside `<Kamera>`, or
   - use `Panel` or `Ortu`.
+- **Hero food:** if `proje.json` has `kahraman`, that food is the subject of the video. Keep it visible: do not cover it
+  with cards or titles, and point to it with a callout when the narration talks about it.
 - **Variety:** vary layouts between consecutive scenes. Keep code comments short and in Turkish.
 
 ### d. Verify

@@ -37,6 +37,9 @@ For each statement:
 - Soften claims.
 - Remove a sentence if it cannot be supported.
 - Keep each scene's sentence count and length roughly the same so the pacing stays intact.
+- Keep the opening hook: the cited number in scenes 1–2, the payoff promise, and any forward references. Correct
+  them if they are wrong rather than deleting them. Check that every promise and forward reference is paid off
+  later in the video; if one isn't, fix the promise or add the missing payoff.
 - Do not change `id`s, scene count, `tip`, `gorsel` or `kart` layout fields unless a factual error requires it.
 - `kaynaklar`: fix wrong citations. Remove sources that are not used or not real.
 
