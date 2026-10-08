@@ -54,17 +54,21 @@ jobs:
           IN_ISLEM: ${{ inputs.islem }}
           IN_GIZLE: ${{ inputs.gizle }}
         run: |
+          EK=""
           if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
             I="$IN_ISLEM"; G="$IN_GIZLE"
           elif [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
             I=gizle; G=false
           else
             I=$(jq -r '.islem // "durum"' uzun_en/kanal_islem.json); G=$(jq -r '.gizle // false' uzun_en/kanal_islem.json)
+            [ "$(jq -r '.banner // true' uzun_en/kanal_islem.json)" = "false" ] && EK="--bannersiz"
           fi
           [[ "$I" =~ ^(durum|donustur|gizle|geri_al)$ ]] || { echo "Geçersiz işlem: $I"; exit 1; }
           echo "işlem=$I gizle=$G"
           if [ "$I" = "donustur" ] && [ "$G" = "true" ]; then
-            python3 uzun_en/araclar/kanal.py donustur --gizle
+            python3 uzun_en/araclar/kanal.py donustur --gizle $EK
+          elif [ "$I" = "donustur" ]; then
+            python3 uzun_en/araclar/kanal.py donustur $EK
           else
             python3 uzun_en/araclar/kanal.py "$I"
           fi

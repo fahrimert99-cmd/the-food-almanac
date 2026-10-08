@@ -54,7 +54,7 @@ def durum_yaz(yt):
     return k
 
 
-def donustur(yt, gizle, kuru, azami=70):
+def donustur(yt, gizle, kuru, azami=70, banner=True):
     m = O.marka()
     k = durum_yaz(yt)
     rapor = []
@@ -67,17 +67,21 @@ def donustur(yt, gizle, kuru, azami=70):
     yeni = {"id": k["id"], "brandingSettings": {"channel": ch}}
     if bs.get("image"):
         yeni["brandingSettings"]["image"] = dict(bs["image"])
-    banner = os.path.join(O.REPO, "assets", "marka_en", "banner.jpg")
+    banner_yol = os.path.join(O.REPO, "assets", "marka_en", "banner.jpg")
     if kuru:
-        O.log(f"(kuru) açıklama + {len(m.get('anahtar_kelimeler', []))} anahtar kelime + banner ({banner}) yazılacaktı")
+        O.log(f"(kuru) açıklama + {len(m.get('anahtar_kelimeler', []))} anahtar kelime" + (f" + banner ({banner_yol})" if banner else "")
+              + " yazılacaktı")
     else:
         from googleapiclient.http import MediaFileUpload
-        try:
-            r = yt.channelBanners().insert(media_body=MediaFileUpload(banner, mimetype="image/jpeg")).execute()
-            yeni["brandingSettings"].setdefault("image", {})["bannerExternalUrl"] = r["url"]
-            rapor.append("banner yüklendi")
-        except Exception as e:
-            rapor.append(f"banner YÜKLENEMEDİ: {str(e)[:200]}")
+        if not banner:
+            rapor.append("banner atlandı (Studio'dan elle ayarlandı)")
+        else:
+            try:
+                r = yt.channelBanners().insert(media_body=MediaFileUpload(banner_yol, mimetype="image/jpeg")).execute()
+                yeni["brandingSettings"].setdefault("image", {})["bannerExternalUrl"] = r["url"]
+                rapor.append("banner yüklendi")
+            except Exception as e:
+                rapor.append(f"banner YÜKLENEMEDİ: {str(e)[:200]}")
         yt.channels().update(part="brandingSettings", body=yeni).execute()
         rapor.append("açıklama, anahtar kelimeler ve dil güncellendi")
         try:                                           # kanal adı: API çoğu kanalda izin vermez
@@ -191,6 +195,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("islem", choices=["durum", "donustur", "gizle", "geri_al"])
     ap.add_argument("--azami", type=int, default=70, help="bu çalıştırmada en çok kaç video gizlensin")
+    ap.add_argument("--bannersiz", action="store_true", help="banner'ı yükleme (Studio'dan elle ayarlandıysa)")
     ap.add_argument("--gizle", action="store_true", help="eski videoları ve listeleri private yap")
     ap.add_argument("--kuru", action="store_true")
     a = ap.parse_args()
@@ -203,7 +208,7 @@ def main():
         for x in gizle_eski(yt, kanal(yt), a.kuru, a.azami):
             O.log("• " + x)
     elif a.islem == "donustur":
-        rapor = donustur(yt, a.gizle, a.kuru, a.azami)
+        rapor = donustur(yt, a.gizle, a.kuru, a.azami, banner=not a.bannersiz)
         with open(os.path.join(O.KOK, "kanal_rapor.md"), "w", encoding="utf-8") as f:
             f.write("# Kanal dönüşümü\n\n" + "\n".join(f"- {x}" for x in rapor) + "\n\n"
                     "Elle yapılacaklar (YouTube Studio → Özelleştirme): kanal adı **" + O.marka()["ad"] + "**, herkese açık kullanıcı adı **"

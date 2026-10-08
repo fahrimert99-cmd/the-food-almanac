@@ -51,8 +51,9 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
    - Kanal adı: **The Food Almanac**
    - Herkese açık kullanıcı adı: **@FoodAlmanacTV** (@thefoodalmanac başka bir kanala ait)
    - Profil fotoğrafı: `assets/marka_en/avatar.png`
-3. **Otomatik yapılanlar.** Banner, kanal açıklaması ve anahtar kelimeler, PR birleşince `uzun_en_kanal.yml`
-   tarafından otomatik ayarlanır.
+3. **Otomatik yapılanlar.** Kanal açıklaması ve anahtar kelimeler, PR birleşince `uzun_en_kanal.yml`
+   tarafından otomatik ayarlanır. Banner Studio'dan elle konduğu için API ile üzerine yazılmaz
+   (`kanal_islem.json` → `"banner": false`; dosyası `assets/marka_en/banner.jpg`).
    - Eski Türkçe videolar ve oynatma listeleri **private** yapılır (silinmez).
    - Geri almak için: Actions → **Kanal Donusumu** → Run workflow → `geri_al`.
 
