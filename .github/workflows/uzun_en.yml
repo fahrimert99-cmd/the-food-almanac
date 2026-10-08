@@ -270,13 +270,21 @@ jobs:
           python-version: "3.12"
       - name: Bağımlılıklar
         if: env.DEVAM == 'true'
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null && pip install -q -r requirements.txt numpy piper-tts
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng >/dev/null
+          pip install -q -r requirements.txt numpy piper-tts
+          # Kokoro (torch CPU) yalnızca bu projenin ses motoruysa kurulur
+          if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
+            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
+          fi
       - uses: actions/cache@v4
         if: env.DEVAM == 'true'
         with:
-          path: uzun_en/.model
-          key: piper-${{ hashFiles('uzun_en/marka.json') }}
-      - name: Görseller (NVIDIA FLUX) ve ses (Piper)
+          path: |
+            uzun_en/.model
+            ~/.cache/huggingface
+          key: ses-${{ hashFiles('uzun_en/marka.json') }}
+      - name: Görseller (NVIDIA FLUX) ve ses (Kokoro / Piper)
         if: env.DEVAM == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -474,14 +482,19 @@ jobs:
       - name: Bağımlılıklar
         if: env.DEVAM == 'true'
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter >/dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter espeak-ng >/dev/null
           pip install -q -r requirements.txt numpy piper-tts
+          if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
+            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
+          fi
           cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - uses: actions/cache@v4
         if: env.DEVAM == 'true'
         with:
-          path: uzun_en/.model
-          key: piper-${{ hashFiles('uzun_en/marka.json') }}
+          path: |
+            uzun_en/.model
+            ~/.cache/huggingface
+          key: ses-${{ hashFiles('uzun_en/marka.json') }}
       - name: Girdiler (görsel, ses, zaman çizelgesi, müzik)
         if: env.DEVAM == 'true'
         env:

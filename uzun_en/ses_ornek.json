@@ -1,13 +1,9 @@
 {
   "metin": "Picture the end of a dinner. The plates are cleared, the sofa is right there, and someone suggests a ten minute stroll around the block. It sounds almost too simple to matter. But in a randomized trial of 41 adults with type 2 diabetes, short walks after each meal lowered blood sugar after eating by about 12 percent, compared with one thirty minute walk at any other time of day.",
   "kokoro_sesler": [
-    "am_michael",
-    "am_fenrir",
-    "bm_george",
-    "af_heart",
-    "af_bella"
+    "am_michael"
   ],
   "hiz": 1.0,
-  "tetik": 1,
+  "tetik": 2,
   "not": "Bu dosya main'e gelince Ses Ornegi iş akışı metni mevcut Piper sesiyle ve listedeki Kokoro sesleriyle seslendirip 'ses-ornek' sürümüne MP3 olarak yükler."
 }

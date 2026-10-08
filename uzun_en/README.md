@@ -13,7 +13,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
         ─► SENARYO ajanı: araştırır (WebSearch/WebFetch), kaynaklı senaryoyu proje.json olarak yazar
         ─► proje_kontrol.py: yapı denetimi (+ bir düzeltme turu)
         ─► DOĞRULA ajanı: bağımsız editör, her iddiayı kaynağından kontrol eder; düzeltir ya da reddeder
-        ─► gorsel.py (NVIDIA FLUX gravür) + ses.py (Piper)  ->  GitHub sürümüne (uzun-en-<slug>) arşiv
+        ─► gorsel.py (NVIDIA FLUX gravür) + ses.py (Kokoro) ->  GitHub sürümüne (uzun-en-<slug>) arşiv
         ─► SAHNE ajanları: 8 paralel grup, her sahneyi Remotion'da kelime kelime senkron tasarlar
         ─► hazirla.py (zaman çizelgesi, altyazı, müzik) ─► Remotion render (1080p)
         ─► kalite.py ─► meta.py (başlık, bölümler, kaynaklar, kapak) ─► yukle.py (private + publishAt)
@@ -36,7 +36,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 | Claude | Yalnızca `CLAUDE_CODE_OAUTH_TOKEN` (abonelik kotası). API anahtarı bilerek verilmez. |
 | Gemini | `GEMINI_API_KEY` ücretsiz katman (faturalandırma kapalı). Claude kotası bitince devralır. |
 | Görsel | NVIDIA ücretsiz API |
-| Ses | Piper (yerel) |
+| Ses | Kokoro "Michael" (yerel, açık kaynak; ilk iki video Piper ile) |
 | Müzik | Kodla üretilir |
 | YouTube | Ücretsiz Data API kotası |
 | GitHub Actions | Repo herkese açık olduğu için dakika sınırı yok. |

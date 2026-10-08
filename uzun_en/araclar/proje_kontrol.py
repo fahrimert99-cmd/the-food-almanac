@@ -12,6 +12,9 @@ import ortak as O  # noqa: E402
 
 KELIME_SN = 2.73            # Piper (norman, length_scale 1.08), sahne araları dahil video süresi: ~2,73 kelime/sn
                             # (ikinci videodan ölçüldü: 1597 kelime -> 584,9 sn)
+MOTOR_KELIME_SN = {"piper": KELIME_SN,
+                   "kokoro": 2.47}  # Kokoro am_michael (hız 1.0) aynı metinde Piper'dan ~%10,5 yavaş (ses örneklerinden);
+                                    # ilk Kokoro videosundan sonra yeniden ölçülmeli
 SURE_DK = (9.0, 14.5)       # kesin sınır; yazım aşaması --asgari-dk 10 ile daha sıkı denetlenir
 SAYI = re.compile(r"\d|\b(two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty|"
                   r"sixty|seventy|eighty|ninety|hundred|thousand|percent|half|third|quarter|dozen)\b", re.I)
@@ -137,10 +140,11 @@ def denetle(slug, asgari_dk=None, yazim=False):
     if pay is not None and pay < 0.45:
         h.append(f"kahraman '{p['kahraman']}' görselli sahnelerin yalnızca %{pay * 100:.0f}'inde; en az yarısının "
                  "gorsel tarifinde aynı kelimeyle geçmeli")
-    dk = kelime / KELIME_SN / 60
+    hiz = MOTOR_KELIME_SN.get(p.get("ses_motoru") or O.marka().get("ses_motoru", "piper"), KELIME_SN)
+    dk = kelime / hiz / 60
     alt = asgari_dk or (10.0 if yazim else SURE_DK[0])
     if not alt <= dk <= SURE_DK[1]:
-        h.append(f"tahmini süre {dk:.1f} dk — {alt:g}–{SURE_DK[1]:g} dk olmalı ({kelime} kelime; ~{int(10.75 * 60 * KELIME_SN)} kelime hedefleyin)")
+        h.append(f"tahmini süre {dk:.1f} dk — {alt:g}–{SURE_DK[1]:g} dk olmalı ({kelime} kelime; ~{int(11 * 60 * hiz)} kelime hedefleyin)")
     return h, u + [f"tahmini süre: {dk:.1f} dk ({kelime} kelime, {len(S)} sahne, {len(bolumler)} bölüm)"]
 
 

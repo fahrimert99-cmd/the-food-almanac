@@ -32,6 +32,10 @@ jobs:
           pip install -q -r requirements.txt piper-tts "kokoro>=0.9.4" soundfile
       - name: Örnekleri üret
         run: python3 uzun_en/araclar/ses_ornek.py /tmp/ornek
+      - name: Üretimdeki Kokoro kurulum satırının sınaması
+        run: |
+          # uzun_en.yml'deki koşullu kurulumun yeni projede 'kokoro' döndürdüğünü doğrula
+          python3 -c "import sys;sys.path.insert(0,'uzun_en/araclar');import ses,ortak as O;m=ses.ayarlar({},O.marka());print(m);assert m[0]=='kokoro'"
       - name: Sürüme yükle
         env:
           GH_TOKEN: ${{ github.token }}

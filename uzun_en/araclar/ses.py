@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Piper (yerel, açık kaynak TTS) ile cümle cümle seslendirme — ücretli servis yok.
+"""Cümle cümle seslendirme: Kokoro ya da Piper (ikisi de yerel, açık kaynak TTS) — ücretli servis yok.
 
   python3 uzun_en/araclar/ses.py --proje SLUG
+  python3 uzun_en/araclar/ses.py --proje SLUG --motor     # yalnızca bu projenin ses motorunu yazar (kurulum için)
+
+Motor ve ses marka.json'dan gelir ("ses_motoru", "ses", "ses_hiz" / Piper için "length_scale"); proje.json'daki aynı
+alanlar önceliklidir. Böylece eski projeler kendi seslerinde sabit kalır.
 
 projeler/SLUG/proje.json -> projeler/SLUG/ses/SS_CC.wav + zaman.json (her cümlenin metni, süresi ve
 virgül duraklamaları; animasyon ve altyazı bu sürelere göre senkronlanır).
@@ -80,15 +84,50 @@ def tek_kelime_kirp(yol, durak_db=-38.0, en_az_durak=0.11, en_az_kelime=0.25):
         wf.writeframes(x.tobytes())
 
 
+def ayarlar(proje, m):
+    """(motor, ses, ölçek): proje.json'daki alanlar marka.json'dakilerden önceliklidir."""
+    motor = proje.get("ses_motoru") or m.get("ses_motoru", "piper")
+    ses = proje.get("ses") or m.get("ses", "en_US-norman-medium")
+    if motor == "kokoro":
+        return motor, ses, float(proje.get("ses_hiz", m.get("ses_hiz", 1.0)))
+    return motor, ses, float(proje.get("length_scale", m.get("length_scale", 1.08)))
+
+
+def sentezci(motor, ses, olcek, model_dir):
+    """metin -> WAV dosyası yazan fonksiyon. Model ilk çağrıda yüklenir."""
+    durum = {}
+    if motor == "kokoro":
+        def yaz(metin, yol):
+            import numpy as np
+            if "hat" not in durum:
+                from kokoro import KPipeline
+                durum["hat"] = KPipeline(lang_code=ses[0], repo_id="hexgrad/Kokoro-82M")   # a: Amerikan, b: İngiliz
+            parca = [np.asarray(a, dtype=np.float32) for _, _, a in durum["hat"](metin, voice=ses, speed=olcek)]
+            O.wav_yaz(yol, np.concatenate(parca) if parca else np.zeros(2400, np.float32), 24000)
+        return yaz
+
+    def yaz(metin, yol):
+        from piper import PiperVoice, SynthesisConfig
+        if "voice" not in durum:
+            if not os.path.exists(os.path.join(model_dir, f"{ses}.onnx")):
+                subprocess.run([sys.executable, "-m", "piper.download_voices", "--data-dir", model_dir, ses], check=True)
+            durum["voice"] = PiperVoice.load(os.path.join(model_dir, f"{ses}.onnx"))
+        with wave.open(yol, "wb") as wf:
+            durum["voice"].synthesize_wav(metin, wf, syn_config=SynthesisConfig(length_scale=olcek))
+    return yaz
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
+    ap.add_argument("--motor", action="store_true", help="yalnızca ses motorunu yaz (piper / kokoro)")
     a = ap.parse_args()
     slug = O.aktif_slug(a.proje)
     proje = O.proje(slug)
     m = O.marka()
-    ses = proje.get("ses") or m.get("ses", "en_US-norman-medium")
-    olcek = float(proje.get("length_scale", m.get("length_scale", 1.08)))
+    motor, ses, olcek = ayarlar(proje, m)
+    if a.motor:
+        return print(motor)
     duzelt = proje.get("seslendirme_duzelt") or {}
     cikti = os.path.join(O.proje_dir(slug), "ses")
     os.makedirs(cikti, exist_ok=True)
@@ -97,10 +136,8 @@ def main():
 
     model_dir = os.path.join(O.KOK, ".model")
     os.makedirs(model_dir, exist_ok=True)
-    voice = None
-    from piper import PiperVoice, SynthesisConfig  # noqa: E402
-    ayar = SynthesisConfig(length_scale=olcek)
-    zaman = {"ses": ses, "length_scale": olcek, "sahneler": []}
+    seslendir = sentezci(motor, ses, olcek, model_dir)
+    zaman = {"ses": ses, "motor": motor, "length_scale": olcek, "sahneler": []}
     yeni = tekrar = 0
     for s in proje["sahneler"]:
         kayit = {"id": s["id"], "cumleler": []}
@@ -108,7 +145,9 @@ def main():
             soyle = c
             for e, y in duzelt.items():
                 soyle = soyle.replace(e, y)
-            imza = hashlib.sha1(f"{ses}|{olcek}|{soyle}".encode()).hexdigest()[:12]
+            # Piper imzası eskisiyle aynı kalır (mevcut projelerin sesleri yeniden üretilmesin).
+            imza = hashlib.sha1((f"{ses}|{olcek}|{soyle}" if motor == "piper" else f"{motor}|{ses}|{olcek}|{soyle}")
+                                .encode()).hexdigest()[:12]
             ad = f"{s['id']:02d}_{k:02d}.wav"
             yol = os.path.join(cikti, ad)
             onceki = eski_c.get((s["id"], k))
@@ -117,12 +156,7 @@ def main():
                 kayit["cumleler"].append(dict(onceki, dosya=ad, imza=imza))
                 tekrar += 1
                 continue
-            if voice is None:
-                if not os.path.exists(os.path.join(model_dir, f"{ses}.onnx")):
-                    subprocess.run([sys.executable, "-m", "piper.download_voices", "--data-dir", model_dir, ses], check=True)
-                voice = PiperVoice.load(os.path.join(model_dir, f"{ses}.onnx"))
-            with wave.open(yol, "wb") as wf:
-                voice.synthesize_wav(soyle, wf, syn_config=ayar)
+            seslendir(soyle, yol)
             if len(c.split()) == 1:
                 tek_kelime_kirp(yol)
             sure, duraklar = kirp_ve_olc(yol)
