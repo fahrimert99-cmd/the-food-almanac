@@ -1,5 +1,5 @@
 {
-  "tarih": "2026-10-08T12:31:28Z",
+  "tarih": "2026-10-08T17:30:09Z",
   "aralik": [
     "2026-10-08",
     "2026-10-08"
@@ -14,7 +14,12 @@
   ],
   "yayinda": [],
   "kanal": {
-    "hata": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/videos?part=statistics&id=AxPV1xa_6so&alt=json returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
+    "hata": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=statistics&mine=true&alt=json returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
+  },
+  "rakipler": {
+    "@foodcode1": {
+      "hata": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2Cstatistics%2CcontentDetails&forHandle=%40foodcode1&alt=json returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
+    }
   },
   "erisim": {
     "satirlar": [
