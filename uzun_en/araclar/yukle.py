@@ -5,7 +5,8 @@
   python3 uzun_en/araclar/yukle.py --proje SLUG --slot 2026-10-13T14:00:00Z
   python3 uzun_en/araclar/yukle.py --proje SLUG --slot ... --kuru     # yüklemeden ne gönderileceğini yazdır
   python3 uzun_en/araclar/yukle.py --kota-kontrol                       # YouTube günlük kotası dolu mu? (dolu: çıkış 3)
-  python3 uzun_en/araclar/yukle.py --tamamla                            # eksik kalan kapak / oynatma listesi
+  python3 uzun_en/araclar/yukle.py --tamamla                            # yüklenenleri denetle: silinmişse yeniden yükle,
+                                                                        # eksik kapak / oynatma listesini tamamla
 
 Girdi: cikti/video.mp4, cikti/kapak_yt.jpg, cikti/meta.json (meta.py) ve cikti/kalite.json (geçmiş olmalı).
 Aynı video iki kez yüklenmez: projeler/SLUG/yayin.json ya da kanalda aynı başlıklı son yükleme varsa o kullanılır.
@@ -58,23 +59,45 @@ def liste_ekle(vid, m):
 
 
 def tamamla():
-    """Yüklenmiş ama kapağı (işleme sonrası) ya da oynatma listesi eksik kalmış videoları tamamlar.
-    Plan işi çağırır; eksik yoksa YouTube'a hiç istek atmaz."""
-    import subprocess, tempfile
+    """Yüklenmiş videoları denetler (plan işi her çalıştırmada, karardan ÖNCE çağırır):
+    - yayın saati gelmemiş bir video kanalda yoksa (ör. Studio'dan yanlışlıkla silindiyse) proje 'render'
+      aşamasına döner: aynı çalıştırmada yeniden render edilip yüklenir. Yayınlanmış videolara dokunulmaz.
+    - kapağı (işleme sonrası) ya da oynatma listesi eksik kalmış videoları tamamlar."""
+    import datetime as dt_, subprocess, tempfile
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
     import youtube_yukle as YY
     m = O.marka()
-    eksik = []
+    simdi = dt_.datetime.now(dt_.timezone.utc)
+    adaylar = []
     for slug in O.durum()["videolar"]:
         yol = os.path.join(O.proje_dir(slug), "yayin.json")
         y = O.json_oku(yol, {}) or {}
-        if y.get("video_id") and not (y.get("kapak_tamam") and y.get("liste_tamam")):
-            eksik.append((slug, yol, y))
-    if not eksik:
-        return O.log("tamamlanacak video yok")
+        if not y.get("video_id"):
+            continue
+        bekliyor = bool(y.get("slot")) and dt_.datetime.fromisoformat(y["slot"].replace("Z", "+00:00")) > simdi
+        if bekliyor or not (y.get("kapak_tamam") and y.get("liste_tamam")):
+            adaylar.append((slug, yol, y, bekliyor))
+    if not adaylar:
+        return O.log("denetlenecek video yok")
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
-    for slug, yol, y in eksik:
+    try:
+        ids = ",".join(y["video_id"] for _, _, y, b in adaylar if b)
+        var = {v["id"] for v in yt.videos().list(part="id", id=ids).execute().get("items", [])} if ids else set()
+    except Exception as e:
+        return O.log(f"! denetim yapılamadı ({str(e)[:120]}) — sonraki çalıştırmada tekrar")
+    for slug, yol, y, bekliyor in adaylar:
+        if bekliyor and y["video_id"] not in var:
+            O.log(f"! {slug}: {y['video_id']} kanalda yok (silinmiş) — yeniden render edilip yüklenecek (slot {y['slot']})")
+            os.remove(yol)
+            d = O.durum()
+            v = d["videolar"].setdefault(slug, {})
+            v.update(asama="render", slot=y["slot"])
+            d["aktif"] = slug
+            O.durum_yaz(d)
+            continue
+        if y.get("kapak_tamam") and y.get("liste_tamam"):
+            continue
         try:
             if not y.get("kapak_tamam"):
                 tmp = tempfile.mkdtemp(prefix="kapak_")
@@ -90,7 +113,6 @@ def tamamla():
                 O.json_yaz(yol, y)
                 return O.log("YouTube kotası dolu — sonraki çalıştırmada tekrar denenecek")
         O.json_yaz(yol, y)
-
 
 def main():
     ap = argparse.ArgumentParser()
