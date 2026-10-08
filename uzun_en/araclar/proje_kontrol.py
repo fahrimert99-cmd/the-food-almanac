@@ -3,7 +3,7 @@
 """proje.json yapı ve kural denetimi (senaryo ajanının çıktısı üretime girmeden önce).
 
   python3 uzun_en/araclar/proje_kontrol.py --proje SLUG    # hata varsa çıkış kodu 1; hatalar ve uyarılar yazdırılır
-  python3 uzun_en/araclar/proje_kontrol.py --proje SLUG --asgari-dk 10   # yazım aşaması: en az 10 dk
+  python3 uzun_en/araclar/proje_kontrol.py --proje SLUG --yazim   # yazım aşaması: en az 10 dk, açılışta rakam
 """
 import argparse, os, re, sys
 
@@ -13,13 +13,27 @@ import ortak as O  # noqa: E402
 KELIME_SN = 2.73            # Piper (norman, length_scale 1.08), sahne araları dahil video süresi: ~2,73 kelime/sn
                             # (ikinci videodan ölçüldü: 1597 kelime -> 584,9 sn)
 SURE_DK = (9.0, 14.5)       # kesin sınır; yazım aşaması --asgari-dk 10 ile daha sıkı denetlenir
+SAYI = re.compile(r"\d|\b(two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty|"
+                  r"sixty|seventy|eighty|ninety|hundred|thousand|percent|half|third|quarter|dozen)\b", re.I)
 ABARTI_BUYUK = {"really", "never", "always", "stop", "warning", "danger", "what", "this", "does", "your", "eat", "now",
                 "must", "worst", "best", "truth", "secret", "every", "after", "before", "real", "happens"}
 NVIDIA_RISKLI = re.compile(r"\b(blood|gore|wound|anatomy|anatomical|cut-away|label|labels|callout|chart|diagram|text|"
                            r"letters?|numbers?|words?|caption|logo)\b", re.I)
 
 
-def denetle(slug, asgari_dk=None):
+def kahraman_payi(p):
+    """kahraman (konu yiyeceği) geçen görselli sahnelerin oranı; alan yoksa None."""
+    k = (p.get("kahraman") or "").strip().lower()
+    if not k:
+        return None
+    desen = re.compile(r"\b" + re.escape(k[:-1] if k.endswith("s") else k), re.I)   # tekil/çoğul ikisi de sayılır
+    g = [s for s in p.get("sahneler", []) if s.get("tip", "gorsel") == "gorsel" and s.get("gorsel")]
+    return sum(1 for s in g if desen.search(s["gorsel"])) / max(1, len(g))
+
+
+def denetle(slug, asgari_dk=None, yazim=False):
+    """yazim=True: yazım aşamasının sıkı kuralları (en az 10 dk, açılışta kaynaklı rakam). Yayındaki eski projeler
+    bu kurallardan önce yazıldığı için varsayılan denetim bunları aramaz."""
     p = O.proje(slug)
     h, u = [], []                       # hatalar, uyarılar
     if not p:
@@ -114,8 +128,17 @@ def denetle(slug, asgari_dk=None):
         h.append("son sahne kapanış kartı olmalı ve 'not medical advice' uyarısını içermeli")
     if S and ad and ad.lower() not in S[-1].get("metin", "").lower():
         h.append(f"son sahnede kanal adı geçmeli (abone çağrısı: 'subscribe to {ad}')")
+    if yazim:
+        acilis = " ".join(x.get("metin", "") for x in S[:2])
+        if not SAYI.search(acilis):
+            h.append("açılış: ilk iki sahnede kaynaklı somut bir rakam olmalı (izleyici ilk 15 saniyede karar veriyor); "
+                     "ör. 'in a trial of 41 adults … about 12 percent lower'")
+    pay = kahraman_payi(p)
+    if pay is not None and pay < 0.45:
+        h.append(f"kahraman '{p['kahraman']}' görselli sahnelerin yalnızca %{pay * 100:.0f}'inde; en az yarısının "
+                 "gorsel tarifinde aynı kelimeyle geçmeli")
     dk = kelime / KELIME_SN / 60
-    alt = asgari_dk or SURE_DK[0]
+    alt = asgari_dk or (10.0 if yazim else SURE_DK[0])
     if not alt <= dk <= SURE_DK[1]:
         h.append(f"tahmini süre {dk:.1f} dk — {alt:g}–{SURE_DK[1]:g} dk olmalı ({kelime} kelime; ~{int(10.75 * 60 * KELIME_SN)} kelime hedefleyin)")
     return h, u + [f"tahmini süre: {dk:.1f} dk ({kelime} kelime, {len(S)} sahne, {len(bolumler)} bölüm)"]
@@ -125,9 +148,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
     ap.add_argument("--asgari-dk", type=float, help=f"en kısa tahmini süre (varsayılan {SURE_DK[0]:g})")
+    ap.add_argument("--yazim", action="store_true", help="yazım aşaması: en az 10 dk + açılışta kaynaklı rakam")
     a = ap.parse_args()
     slug = O.aktif_slug(a.proje)
-    h, u = denetle(slug, a.asgari_dk)
+    h, u = denetle(slug, a.asgari_dk, a.yazim)
     for x in u:
         print("UYARI:", x)
     for x in h:

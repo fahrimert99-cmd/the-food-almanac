@@ -97,9 +97,13 @@ The prompt tells you three things:
 
 Aim for about 1,750–1,900 narration words, which is about 10.5–11.5 minutes. Use 50–64 scenes. The validator rejects anything under 10 or over 14.5 minutes (it counts about 2.73 words per second).
 
-1. **Cold open** (scenes 1–4).
+1. **Cold open** (scenes 1–4). Most viewers decide in these first seconds whether to stay.
    - Scene 1 has a `bolum` (the first chapter title).
-   - Open with a concrete everyday picture, then a surprising, cited finding with its number, then what this video will answer.
+   - Within scenes 1–2 (about the first 15 seconds), give a concrete, cited finding with its number: what was studied,
+     in whom, and what changed. A one-sentence everyday picture may come first, but no longer.
+   - Then promise the specific practical payoff the viewer gets by the end, for example "By the end, you'll know when to
+     start walking and how long is enough." The video must deliver it.
+   - Then say what this video will answer. No hype ("you won't believe", "shocking").
 2. **Scene 5: channel card** (`"tip": "kart"`).
    - Narration starts with "Welcome to The Food Almanac." and leads into chapter 1.
    - `kart.ust` is "THE FOOD ALMANAC". `kart.baslik` is the video's short name (at most 32 characters). `kart.alt` is a one-line subtitle.
@@ -109,10 +113,13 @@ Aim for about 1,750–1,900 narration words, which is about 10.5–11.5 minutes.
    - the mechanism: why it might work;
    - the honest part: who it helps, limits of the evidence, what is unknown, common myths;
    - practical use: 3–5 concrete, safe tips, plus a safety note where relevant (medication, pregnancy, kidney disease, allergies and so on).
-4. **Recap.**
+4. **Forward references.** Once or twice in the middle of the video, point briefly to something specific that comes
+   later, for example "In the practical part, there's one timing detail that changes how well this works." Every
+   forward reference must be paid off later in the video. Never promise something the video doesn't deliver.
+5. **Recap.**
    - A `kart` scene with `"bolum": "Recap"`, `kart.ust` "THE TAKEAWAY", and narration "Let's recap."
    - Then 3–4 recap scenes.
-5. **Last scene: outro card.** Use this exact pattern:
+6. **Last scene: outro card.** Use this exact pattern:
    - narration: "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one."
    - `kart`: `{"ust": "THE FOOD ALMANAC", "baslik": "Evidence over hype", "alt": "For education only · not medical advice"}`
 
@@ -144,7 +151,12 @@ Aim for about 1,750–1,900 narration words, which is about 10.5–11.5 minutes.
   - Instead of "cut-away" write "open".
 - Prefer objects over people. No close-up faces. Hands only rarely.
 - Vary compositions across the video.
-- Use the same recurring hero objects (for example the same plate) to give the story continuity.
+- **Hero food.** In a video about one food or drink, that food appears in at least half of the illustrated scenes, drawn
+  the same way each time: whole, sliced, in a bowl, on the plate, or beside the part of the body being discussed.
+  Viewers should always see what the video is about. Set `kahraman` (below) and use exactly that word in those `gorsel`
+  descriptions. The validator counts it.
+- In habit videos (walking, food order and so on), use the same recurring hero objects (for example the same plate or
+  the same pair of shoes) to give the story continuity.
 
 **Top-level fields**
 - `slug`: same as the folder name.
@@ -154,6 +166,8 @@ Aim for about 1,750–1,900 narration words, which is about 10.5–11.5 minutes.
 - `aciklama_giris`: 2 short paragraphs, 400–900 characters. Honestly summarize the finding and list what the video covers. No hashtags, no links.
 - `kaynaklar`: full citations (authors, title, journal, year, plus DOI or PMID when available), in the order they appear.
 - `kapak`: the thumbnail, as described above.
+- `kahraman`: only for videos about one food or drink. The hero food in one or two lowercase words, exactly as written in
+  the `gorsel` descriptions (for example `"garlic"`, `"oats"`, `"beet juice"`). Omit it for habit or myth topics.
 - `etiketler`: 8–12 search tags in lowercase.
 - `seslendirme_duzelt`: pronunciation fixes for the voice only. Example: `{"HbA1c": "H B A 1 C", "GLP-1": "G L P 1"}`. Spell out acronyms the voice would read wrongly.
 

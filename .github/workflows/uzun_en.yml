@@ -174,7 +174,7 @@ jobs:
             ${CMODEL:+--model "$CMODEL"} --max-turns 150 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
       - name: Yapı denetimi (1)
         id: k1
-        run: python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" --asgari-dk 10 | tee /tmp/k1.txt && echo "ok=true" >> "$GITHUB_OUTPUT" || echo "ok=false" >> "$GITHUB_OUTPUT"
+        run: python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" --yazim | tee /tmp/k1.txt && echo "ok=true" >> "$GITHUB_OUTPUT" || echo "ok=false" >> "$GITHUB_OUTPUT"
       - name: "Senaryo: düzeltme turu (Claude)"
         if: steps.k1.outputs.ok != 'true' && env.CLAUDE_OK == 'true' && hashFiles(format('uzun_en/projeler/{0}/proje.json', env.SLUG)) != ''
         continue-on-error: true
@@ -192,7 +192,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_CLI_TRUST_WORKSPACE: "true"
         run: |
-          python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" --asgari-dk 10 > /tmp/k2.txt && { echo "senaryo geçerli, Gemini gerekmiyor"; exit 0; }
+          python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" --yazim > /tmp/k2.txt && { echo "senaryo geçerli, Gemini gerekmiyor"; exit 0; }
           mkdir -p .gemini && echo '{"tools":{"exclude":["run_shell_command"]}}' > .gemini/settings.json
           if [ -f "uzun_en/projeler/$SLUG/proje.json" ]; then
             gemini ${GMODEL:+-m "$GMODEL"} -y -p "The script uzun_en/projeler/$SLUG/proje.json failed validation (rules: uzun_en/gorev/SENARYO.md). Fix these problems with minimal edits: $(grep HATA /tmp/k2.txt)"
