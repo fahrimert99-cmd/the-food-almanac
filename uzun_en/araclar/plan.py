@@ -6,7 +6,7 @@
   python3 uzun_en/araclar/plan.py --goster     # yalnızca durumu yazdır
 
 Yayın: marka.json -> yayin.gunler / yayin.saat_utc (varsayılan Salı ve Cuma 14:00 UTC).
-Üretim, slottan en çok URETIM_ONCE saat önce başlar. Aşamalar: senaryo -> varlik -> sahne -> render -> yuklendi.
+Üretim, slottan en çok URETIM_ONCE saat önce başlar (tek seferlik erken başlatma: calistir.json -> "uretim_once_saat"). Aşamalar: senaryo -> varlik -> sahne -> render -> yuklendi.
 Slota az kaldıysa (SABLON_ESIK) ya da sahne tasarımı defalarca kesildiyse kalan sahneler otomatik şablonla çizilir;
 video yine zamanında yayınlanır.
 """
@@ -165,7 +165,16 @@ def main():
         print("sıradaki slotlar:", [iso(s) for s in slotlar(t)[:6]])
         return
     zorla = (os.environ.get("UZUN_ZORLA") or "").strip()
+    global URETIM_ONCE
+    cyol = os.path.join(O.KOK, "calistir.json")
+    calistir = O.json_oku(cyol, {}) or {}
+    if calistir.get("uretim_once_saat"):                 # tek seferlik: sıradaki videoyu erken başlat
+        URETIM_ONCE = int(calistir["uretim_once_saat"])
     slug, asama, slot, sablon, neden = karar(d, t)
+    if calistir.get("uretim_once_saat") and neden.startswith("yeni proje"):
+        calistir.pop("uretim_once_saat")
+        O.json_yaz(cyol, calistir)
+        O.log("erken başlatma kullanıldı; calistir.json'dan kaldırıldı")
     if zorla in ASAMALAR and slug and slug != "__konu__":
         asama = zorla
         sablon = sablon or zorla == "render"           # elle "render": kalan sahneler şablonla çizilir

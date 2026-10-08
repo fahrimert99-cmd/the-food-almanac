@@ -82,7 +82,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          bash uzun_en/araclar/kaydet.sh "uzun_en: plan (${{ steps.p.outputs.slug }} / ${{ steps.p.outputs.asama }})" uzun_en/durum.json uzun_en/konular.json uzun_en/projeler
+          bash uzun_en/araclar/kaydet.sh "uzun_en: plan (${{ steps.p.outputs.slug }} / ${{ steps.p.outputs.asama }})" uzun_en/durum.json uzun_en/konular.json uzun_en/projeler uzun_en/calistir.json
 
   # ---------------------------------------------------------------------------------------------
   konu:
