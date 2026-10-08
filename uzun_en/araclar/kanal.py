@@ -208,9 +208,15 @@ def sil(yt, kuru, azami=150):
                for s in O.durum()["videolar"]}
     ids = [v for v in kayit.get("videolar", {}) if v not in korunan][:azami]
     durumlar = {}
-    for i in range(0, len(ids), 50):
-        r = yt.videos().list(part="status", id=",".join(ids[i:i + 50])).execute()
-        durumlar.update({v["id"]: v["status"].get("privacyStatus") for v in r.get("items", [])})
+    try:
+        for i in range(0, len(ids), 50):
+            r = yt.videos().list(part="status", id=",".join(ids[i:i + 50])).execute()
+            durumlar.update({v["id"]: v["status"].get("privacyStatus") for v in r.get("items", [])})
+    except Exception as e:
+        if not _kota_mi(e):
+            raise
+        O.log("• YouTube kotası dolu; silme işi kota sıfırlanınca (sonraki günlük çalıştırmada) sürer")
+        return "kota dolu"
     n = atlanan = 0
     kota = False
     for vid in ids:
