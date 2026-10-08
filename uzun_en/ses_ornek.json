@@ -4,6 +4,7 @@
     "am_michael"
   ],
   "hiz": 1.0,
-  "tetik": 2,
-  "not": "Bu dosya main'e gelince Ses Ornegi iş akışı metni mevcut Piper sesiyle ve listedeki Kokoro sesleriyle seslendirip 'ses-ornek' sürümüne MP3 olarak yükler."
+  "tetik": 3,
+  "not": "Bu dosya main'e gelince Ses Ornegi iş akışı metni mevcut Piper sesiyle ve listedeki Kokoro sesleriyle seslendirip 'ses-ornek' sürümüne MP3 olarak yükler.",
+  "piper_ses": "en_US-norman-medium"
 }
