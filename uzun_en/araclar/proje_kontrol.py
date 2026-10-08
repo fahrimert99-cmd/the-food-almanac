@@ -3,19 +3,21 @@
 """proje.json yapı ve kural denetimi (senaryo ajanının çıktısı üretime girmeden önce).
 
   python3 uzun_en/araclar/proje_kontrol.py --proje SLUG    # hata varsa çıkış kodu 1; hatalar ve uyarılar yazdırılır
+  python3 uzun_en/araclar/proje_kontrol.py --proje SLUG --asgari-dk 10   # yazım aşaması: en az 10 dk
 """
 import argparse, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
 
-KELIME_SN = 2.64            # Piper (norman, length_scale 1.08): saniyede ~2,64 kelime (ilk videodan ölçüldü)
-SURE_DK = (9.0, 14.5)
+KELIME_SN = 2.73            # Piper (norman, length_scale 1.08), sahne araları dahil video süresi: ~2,73 kelime/sn
+                            # (ikinci videodan ölçüldü: 1597 kelime -> 584,9 sn)
+SURE_DK = (9.0, 14.5)       # kesin sınır; yazım aşaması --asgari-dk 10 ile daha sıkı denetlenir
 NVIDIA_RISKLI = re.compile(r"\b(blood|gore|wound|anatomy|anatomical|cut-away|label|labels|callout|chart|diagram|text|"
                            r"letters?|numbers?|words?|caption|logo)\b", re.I)
 
 
-def denetle(slug):
+def denetle(slug, asgari_dk=None):
     p = O.proje(slug)
     h, u = [], []                       # hatalar, uyarılar
     if not p:
@@ -106,17 +108,19 @@ def denetle(slug):
     if S and ad and ad.lower() not in S[-1].get("metin", "").lower():
         h.append(f"son sahnede kanal adı geçmeli (abone çağrısı: 'subscribe to {ad}')")
     dk = kelime / KELIME_SN / 60
-    if not SURE_DK[0] <= dk <= SURE_DK[1]:
-        h.append(f"tahmini süre {dk:.1f} dk — {SURE_DK[0]:.0f}–{SURE_DK[1]:.0f} dk olmalı ({kelime} kelime; ~{int(10.5 * 60 * KELIME_SN)} kelime hedefleyin)")
+    alt = asgari_dk or SURE_DK[0]
+    if not alt <= dk <= SURE_DK[1]:
+        h.append(f"tahmini süre {dk:.1f} dk — {alt:g}–{SURE_DK[1]:g} dk olmalı ({kelime} kelime; ~{int(10.75 * 60 * KELIME_SN)} kelime hedefleyin)")
     return h, u + [f"tahmini süre: {dk:.1f} dk ({kelime} kelime, {len(S)} sahne, {len(bolumler)} bölüm)"]
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
+    ap.add_argument("--asgari-dk", type=float, help=f"en kısa tahmini süre (varsayılan {SURE_DK[0]:g})")
     a = ap.parse_args()
     slug = O.aktif_slug(a.proje)
-    h, u = denetle(slug)
+    h, u = denetle(slug, a.asgari_dk)
     for x in u:
         print("UYARI:", x)
     for x in h:
