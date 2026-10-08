@@ -28,6 +28,7 @@ from googleapiclient.discovery import build  # noqa: E402
 from googleapiclient.http import MediaIoBaseDownload  # noqa: E402
 
 CIKTI = os.path.join(O.KOK, "analiz")
+DENEME = 4                                  # 5xx/429 gibi geçici Google hatalarında artan beklemeyle tekrar
 ERISIM_RAPORU = "channel_reach_basic_a1"   # Reporting API: gösterim + tıklama oranı (video, ülke, abone durumu)
 TEMEL = ("views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage,"
          "subscribersGained,subscribersLost,likes,comments,shares")
@@ -45,7 +46,7 @@ def videolar():
 
 def sorgu(ya, **k):
     try:
-        r = ya.reports().query(ids="channel==MINE", **k).execute()
+        r = ya.reports().query(ids="channel==MINE", **k).execute(num_retries=DENEME)
         adlar = [h["name"] for h in r.get("columnHeaders", [])]
         return {"satirlar": [dict(zip(adlar, s)) for s in (r.get("rows") or [])]}
     except Exception as e:  # noqa: BLE001 — her sorgunun hatası rapora yazılır
@@ -57,14 +58,14 @@ def gosterim(kimlik, ids, bas):
     İlk çalıştırmada rapor işi oluşturulur; YouTube ilk raporları birkaç gün içinde üretir."""
     try:
         yr = build("youtubereporting", "v1", credentials=kimlik, cache_discovery=False)
-        isler = yr.jobs().list().execute().get("jobs", [])
+        isler = yr.jobs().list().execute(num_retries=DENEME).get("jobs", [])
         j = next((x for x in isler if x.get("reportTypeId") == ERISIM_RAPORU), None)
         if not j:
-            yr.jobs().create(body={"reportTypeId": ERISIM_RAPORU, "name": "food-almanac-reach"}).execute()
+            yr.jobs().create(body={"reportTypeId": ERISIM_RAPORU, "name": "food-almanac-reach"}).execute()  # tekrar yok: çift iş açılmasın
             return {"durum": "rapor işi oluşturuldu; YouTube ilk raporları birkaç gün içinde üretir"}
         raporlar, sayfa = [], None
         while True:
-            r = yr.jobs().reports().list(jobId=j["id"], pageToken=sayfa).execute()
+            r = yr.jobs().reports().list(jobId=j["id"], pageToken=sayfa).execute(num_retries=DENEME)
             raporlar += r.get("reports", [])
             sayfa = r.get("nextPageToken")
             if not sayfa:
@@ -79,7 +80,7 @@ def gosterim(kimlik, ids, bas):
             indir = MediaIoBaseDownload(tampon, istek, chunksize=-1)
             bitti = False
             while not bitti:
-                _, bitti = indir.next_chunk()
+                _, bitti = indir.next_chunk(num_retries=DENEME)
             for satir in csv.DictReader(io.StringIO(tampon.getvalue().decode("utf-8"))):
                 if satir.get("video_id") not in ids:
                     continue
@@ -113,10 +114,10 @@ def main():
     R = {"tarih": simdi.strftime("%Y-%m-%dT%H:%M:%SZ"), "aralik": [bas, bitis], "videolar": vs,
          "yayinda": [v["id"] for v in yayinda]}
     try:
-        k = yt.channels().list(part="statistics", mine=True).execute()["items"][0]["statistics"]
+        k = yt.channels().list(part="statistics", mine=True).execute(num_retries=DENEME)["items"][0]["statistics"]
         R["kanal"] = {x: k.get(x) for x in ("subscriberCount", "viewCount", "videoCount")}
         if vs:
-            r = yt.videos().list(part="statistics", id=",".join(v["id"] for v in vs)).execute()
+            r = yt.videos().list(part="statistics", id=",".join(v["id"] for v in vs)).execute(num_retries=DENEME)
             R["anlik"] = {i["id"]: i.get("statistics", {}) for i in r.get("items", [])}
     except Exception as e:  # noqa: BLE001
         R["kanal"] = {"hata": str(e)[:500]}
