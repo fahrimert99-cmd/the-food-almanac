@@ -11,6 +11,7 @@ Toplananlar:
   - ülke, trafik kaynağı, abone/abone olmayan, cihaz, yaş ve cinsiyet kırılımları;
   - günlük seyir ve izleyici tutma eğrisi.
 - Reporting API: gösterim ve tıklama oranı (video ve ülke bazında). İlk çalıştırmada rapor işi açılır.
+- analiz/rakipler.json'daki örnek kanalların herkese açık verisi: abone, son videolar, başlık, süre, izlenme.
 Gelir verisi bilerek alınmaz, çünkü repo herkese açık. Analytics verisi YouTube'da 2–3 gün gecikmeli oluşur.
 Bir sorgu başarısız olursa hatası rapora yazılır, diğerleri sürer.
 """
@@ -28,6 +29,7 @@ from googleapiclient.discovery import build  # noqa: E402
 from googleapiclient.http import MediaIoBaseDownload  # noqa: E402
 
 CIKTI = os.path.join(O.KOK, "analiz")
+RAKIPLER = os.path.join(CIKTI, "rakipler.json")     # örnek alınan kanallar (herkese açık veri)
 DENEME = 4                                  # 5xx/429 gibi geçici Google hatalarında artan beklemeyle tekrar
 ERISIM_RAPORU = "channel_reach_basic_a1"   # Reporting API: gösterim + tıklama oranı (video, ülke, abone durumu)
 TEMEL = ("views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage,"
@@ -50,6 +52,35 @@ def sorgu(ya, **k):
         adlar = [h["name"] for h in r.get("columnHeaders", [])]
         return {"satirlar": [dict(zip(adlar, s)) for s in (r.get("rows") or [])]}
     except Exception as e:  # noqa: BLE001 — her sorgunun hatası rapora yazılır
+        return {"hata": str(e)[:500]}
+
+
+def rakip(yt, handle, en_cok=50):
+    """Örnek/rakip kanalın herkese açık verisi (Data API, ~3 birim): kanal bilgisi ve son videoları."""
+    try:
+        r = yt.channels().list(part="snippet,statistics,contentDetails", forHandle=handle).execute(num_retries=DENEME)
+        if not r.get("items"):
+            return {"hata": f"{handle} bulunamadı"}
+        k = r["items"][0]
+        sn, st = k["snippet"], k.get("statistics", {})
+        up = k["contentDetails"]["relatedPlaylists"]["uploads"]
+        ids = [i["contentDetails"]["videoId"] for i in yt.playlistItems().list(
+            part="contentDetails", playlistId=up, maxResults=en_cok).execute(num_retries=DENEME).get("items", [])]
+        vids = []
+        if ids:
+            r = yt.videos().list(part="snippet,statistics,contentDetails", id=",".join(ids)).execute(num_retries=DENEME)
+            for v in r.get("items", []):
+                vs, vt = v["snippet"], v.get("statistics", {})
+                vids.append({"id": v["id"], "baslik": vs["title"], "yayin": vs["publishedAt"],
+                             "sure": v["contentDetails"].get("duration"), "dil": vs.get("defaultAudioLanguage"),
+                             "izlenme": vt.get("viewCount"), "begeni": vt.get("likeCount"),
+                             "yorum": vt.get("commentCount"), "etiketler": (vs.get("tags") or [])[:12],
+                             "aciklama": vs.get("description", "")[:300]})
+        return {"id": k["id"], "ad": sn["title"], "handle": sn.get("customUrl"), "acilis": sn.get("publishedAt"),
+                "ulke": sn.get("country"), "aciklama": sn.get("description", "")[:600],
+                "abone": st.get("subscriberCount"), "izlenme": st.get("viewCount"), "video_sayisi": st.get("videoCount"),
+                "videolar": sorted(vids, key=lambda x: x["yayin"], reverse=True)}
+    except Exception as e:  # noqa: BLE001
         return {"hata": str(e)[:500]}
 
 
@@ -122,6 +153,8 @@ def main():
             R["anlik"] = {i["id"]: i.get("statistics", {}) for i in r.get("items", [])}
     except Exception as e:  # noqa: BLE001
         R["kanal"] = {"hata": str(e)[:500]}
+
+    R["rakipler"] = {h: rakip(yt, h) for h in (O.json_oku(RAKIPLER, {}) or {}).get("kanallar", [])}
 
     # Erişim denetimi: kanal düzeyinde son 7 gün (Analytics API açık mı, izin var mı?)
     R["erisim"] = sorgu(ya, startDate=(simdi.date() - dt.timedelta(days=7)).isoformat(), endDate=bitis,
