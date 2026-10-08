@@ -11,6 +11,20 @@ PROJELER = os.path.join(KOK, "projeler")
 DURUM = os.path.join(KOK, "durum.json")
 
 
+# Tasarlanmamış sahne dosyası (otomatik şablon). numpy gerektirmeyen yerlerde de kullanılır (plan.py).
+TASLAK = ('// TASLAK: henüz tasarlanmadı — otomatik şablon (Genel) kullanılır.\n'
+          'import { Genel } from "../kutuphane";\n\nexport default Genel;\n')
+TASLAK_RE = re.compile(r"export\s+default\s+Genel\s*;")
+
+
+def taslak_mi(yol):
+    try:
+        with open(yol, encoding="utf-8") as f:
+            return bool(TASLAK_RE.search(f.read()))
+    except OSError:
+        return True
+
+
 def log(m):
     print(m, flush=True)
 

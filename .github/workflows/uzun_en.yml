@@ -368,7 +368,7 @@ jobs:
           K=$(python3 - <<'PY'
           import os, sys
           sys.path.insert(0, "uzun_en/araclar")
-          from hazirla import taslak_mi
+          from ortak import taslak_mi
           print(",".join(n for n in os.environ["SAHNELER"].split(",")
                          if taslak_mi(f"uzun_en/remotion/src/tam/sahneler/S{int(n):02d}.tsx")))
           PY

@@ -18,6 +18,7 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
 from hizalama import harita_dp  # noqa: E402
+from ortak import TASLAK, taslak_mi  # noqa: E402,F401  (eski içe aktarımlar için)
 
 FPS = 30
 BASLANGIC = 0.15
@@ -25,9 +26,6 @@ KUYRUK = 0.45          # sahne sonu nefes payı
 BOLUM_ONCESI = 0.55    # yeni bölümden önceki sahneye ek nefes
 KART_KUYRUK = 0.5      # bölüm kartlarına ek süre
 GECIS = 0.35
-TASLAK = ('// TASLAK: henüz tasarlanmadı — otomatik şablon (Genel) kullanılır.\n'
-          'import { Genel } from "../kutuphane";\n\nexport default Genel;\n')
-TASLAK_RE = re.compile(r"export\s+default\s+Genel\s*;")
 OZET_RE = re.compile(r"^(recap|summary|the takeaway|takeaways?|bottom line|wrap[- ]up)\b", re.I)
 
 
@@ -38,14 +36,6 @@ def font_yollari():
         yollar.append(next((y for y in glob.glob(f"/usr/share/fonts/**/{ad}", recursive=True)),
                            f"/usr/share/fonts/opentype/inter/{ad}"))
     return yollar
-
-
-def taslak_mi(yol):
-    try:
-        with open(yol, encoding="utf-8") as f:
-            return bool(TASLAK_RE.search(f.read()))
-    except OSError:
-        return True
 
 
 def bolum_numaralari(sahneler):
