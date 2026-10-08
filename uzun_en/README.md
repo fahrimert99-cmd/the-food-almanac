@@ -49,7 +49,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
    - Diğer secret'lar (`YT_*`, `NVIDIA_API_KEY`, `GEMINI_API_KEY`) zaten var.
 2. **YouTube Studio → Özelleştirme.** API bu üç alanı değiştiremez; elle yapın:
    - Kanal adı: **The Food Almanac**
-   - Herkese açık kullanıcı adı: **@TheFoodAlmanac** (alınmışsa `@FoodAlmanacTV` gibi bir benzeri)
+   - Herkese açık kullanıcı adı: **@FoodAlmanacTV** (@thefoodalmanac başka bir kanala ait)
    - Profil fotoğrafı: `assets/marka_en/avatar.png`
 3. **Otomatik yapılanlar.** Banner, kanal açıklaması ve anahtar kelimeler, PR birleşince `uzun_en_kanal.yml`
    tarafından otomatik ayarlanır.
