@@ -5,7 +5,7 @@ anlatımları yayınlar. Her **Salı ve Cuma 14:00 UTC'de** (17:00 TR) 10–11 d
 GitHub Actions'ta, kendiliğinden yapılır.
 
 ```
-konu → araştırma + senaryo (Claude) → bağımsız doğruluk denetimi → NVIDIA FLUX gravür görselleri + Piper ses
+konu → araştırma + senaryo (Claude) → bağımsız doğruluk denetimi → NVIDIA FLUX gravür görselleri + Kokoro ses
      → 8 paralel ajanla Remotion sahne tasarımı → 1080p render → kalite kontrolü → zamanlanmış YouTube yüklemesi
 ```
 
