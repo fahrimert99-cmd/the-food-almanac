@@ -13,8 +13,8 @@ import ortak as O  # noqa: E402
 KELIME_SN = 2.73            # Piper (norman, length_scale 1.08), sahne araları dahil video süresi: ~2,73 kelime/sn
                             # (ikinci videodan ölçüldü: 1597 kelime -> 584,9 sn)
 MOTOR_KELIME_SN = {"piper": KELIME_SN,
-                   "kokoro": 2.47}  # Kokoro am_michael (hız 1.0) aynı metinde Piper'dan ~%10,5 yavaş (ses örneklerinden);
-                                    # ilk Kokoro videosundan sonra yeniden ölçülmeli
+                   "kokoro": 2.59}  # Kokoro am_michael (hız 1.0), sahne araları dahil: 2. videonun Michael'lı
+                                    # yeniden render'ından ölçüldü (1597 kelime -> 617 sn)
 SURE_DK = (9.0, 14.5)       # kesin sınır; yazım aşaması --asgari-dk 10 ile daha sıkı denetlenir
 SAYI = re.compile(r"\d|\b(two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty|"
                   r"sixty|seventy|eighty|ninety|hundred|thousand|percent|half|third|quarter|dozen)\b", re.I)
