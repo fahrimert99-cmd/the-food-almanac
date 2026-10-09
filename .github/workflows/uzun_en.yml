@@ -69,7 +69,14 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: |
           if ls uzun_en/projeler/*/yayin.json >/dev/null 2>&1; then
-            pip install -q -r requirements.txt && python3 uzun_en/araclar/yukle.py --tamamla
+            pip install -q -r requirements.txt
+            set +e
+            python3 uzun_en/araclar/yukle.py --tamamla 2>&1 | tee /tmp/denetim.txt
+            durum=${PIPESTATUS[0]}
+            set -e
+            # yapılan işlemler ve sorunlar Actions özetinde (annotation) görünsün
+            grep -E "^[[:space:]]*[!•✓]|Traceback|Error" /tmp/denetim.txt | head -20 | sed 's/^/::notice title=Video denetimi::/' || true
+            exit $durum
           else
             echo "yüklenmiş video yok"
           fi

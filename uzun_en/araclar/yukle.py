@@ -65,8 +65,9 @@ def yenile_istegi(yt, adaylar):
     c = O.json_oku(cyol, {}) or {}
     istek = c.get("yenile") or []
     istek = [istek] if isinstance(istek, str) else istek
+    silinen = set()
     if not istek:
-        return
+        return silinen
     for slug, _, y, bekliyor in adaylar:
         if slug not in istek:
             continue
@@ -81,12 +82,14 @@ def yenile_istegi(yt, adaylar):
                 O.log(f"! {slug}: {y['video_id']} herkese açık, silinmez")
             else:
                 yt.videos().delete(id=y["video_id"]).execute()
+                silinen.add(y["video_id"])
                 O.log(f"• {slug}: {y['video_id']} silindi (istek üzerine yeniden render edilip yüklenecek)")
         except Exception as e:
             O.log(f"! {slug}: yenileme yapılamadı ({str(e)[:160]})")
-            return                                          # istek korunur, sonraki çalıştırmada tekrar denenir
+            return silinen                                  # istek korunur, sonraki çalıştırmada tekrar denenir
     c.pop("yenile", None)
     O.json_yaz(cyol, c)
+    return silinen
 
 
 def tamamla():
@@ -112,10 +115,11 @@ def tamamla():
     if not adaylar:
         return O.log("denetlenecek video yok")
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
-    yenile_istegi(yt, adaylar)
+    silinen = yenile_istegi(yt, adaylar)
     try:
         ids = ",".join(y["video_id"] for _, _, y, b in adaylar if b)
         var = {v["id"] for v in yt.videos().list(part="id", id=ids).execute().get("items", [])} if ids else set()
+        var -= silinen                  # YouTube silinen videoyu bir süre daha listeleyebiliyor
     except Exception as e:
         return O.log(f"! denetim yapılamadı ({str(e)[:120]}) — sonraki çalıştırmada tekrar")
     for slug, yol, y, bekliyor in adaylar:
