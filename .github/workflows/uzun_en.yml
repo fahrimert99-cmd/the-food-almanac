@@ -44,7 +44,7 @@ env:
 jobs:
   # ---------------------------------------------------------------------------------------------
   plan:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     outputs:
       is: ${{ steps.p.outputs.is }}
@@ -95,7 +95,7 @@ jobs:
   konu:
     needs: plan
     if: needs.plan.outputs.asama == 'konu'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
@@ -138,7 +138,7 @@ jobs:
   senaryo:
     needs: plan
     if: needs.plan.outputs.is == 'true' && needs.plan.outputs.asama == 'senaryo'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 240
     env:
       SLUG: ${{ needs.plan.outputs.slug }}
@@ -258,7 +258,7 @@ jobs:
   varlik:
     needs: [plan, senaryo]
     if: always() && needs.plan.outputs.is == 'true' && fromJSON(needs.plan.outputs.asama_no) <= 1 && needs.senaryo.result != 'failure'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
       SLUG: ${{ needs.plan.outputs.slug }}
@@ -309,7 +309,7 @@ jobs:
   gruplar:
     needs: [plan, varlik]
     if: always() && needs.plan.outputs.is == 'true' && fromJSON(needs.plan.outputs.asama_no) <= 2 && needs.plan.outputs.sablon != 'true' && needs.varlik.result != 'failure'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:
       matris: ${{ steps.g.outputs.matris }}
@@ -337,7 +337,7 @@ jobs:
   sahne:
     needs: [plan, gruplar]
     if: always() && needs.gruplar.result == 'success' && needs.gruplar.outputs.matris != '[]' && needs.gruplar.outputs.matris != ''
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 340
     strategy:
       fail-fast: false
@@ -436,7 +436,7 @@ jobs:
   render:
     needs: [plan, varlik, gruplar, sahne]
     if: always() && needs.plan.outputs.is == 'true' && fromJSON(needs.plan.outputs.asama_no) <= 3 && needs.varlik.result != 'failure'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 300
     env:
       SLUG: ${{ needs.plan.outputs.slug }}
