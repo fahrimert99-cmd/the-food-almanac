@@ -152,6 +152,36 @@ def tamamla():
                 O.json_yaz(yol, y)
                 return O.log("YouTube kotası dolu — sonraki çalıştırmada tekrar denenecek")
         O.json_yaz(yol, y)
+    liste_temizle(yt, m)
+
+
+def liste_temizle(yt, m):
+    """Oynatma listesinde silinmiş videolara ait girdileri kaldırır. YouTube silinen videoyu listede "Deleted video"
+    olarak bırakıyor (ör. bir video yenilenip yeniden yüklendiğinde). Kendi gizli videolarımız sahibine listelendiği
+    için korunur."""
+    if not m.get("oynatma_listesi"):
+        return
+    import youtube_api as YY
+    try:
+        pid = YY._oynatma_listesi_bul_veya_olustur(yt, m["oynatma_listesi"], m.get("oynatma_listesi_aciklama", ""))
+        ogeler, tok = [], None
+        while True:
+            r = yt.playlistItems().list(part="contentDetails", playlistId=pid, maxResults=50, pageToken=tok).execute()
+            ogeler += r.get("items", [])
+            tok = r.get("nextPageToken")
+            if not tok:
+                break
+        ids = [o["contentDetails"]["videoId"] for o in ogeler]
+        var = set()
+        for i in range(0, len(ids), 50):
+            var |= {v["id"] for v in yt.videos().list(part="id", id=",".join(ids[i:i + 50])).execute().get("items", [])}
+        for o in ogeler:
+            if o["contentDetails"]["videoId"] not in var:
+                yt.playlistItems().delete(id=o["id"]).execute()
+                O.log(f"• oynatma listesinden silinmiş video kaldırıldı ({o['contentDetails']['videoId']})")
+    except Exception as e:
+        O.log(f"! oynatma listesi temizlenemedi: {str(e)[:160]}")
+
 
 def main():
     ap = argparse.ArgumentParser()
