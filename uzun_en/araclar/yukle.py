@@ -57,6 +57,38 @@ def liste_ekle(vid, m):
         return False
 
 
+def yenile_istegi(yt, adaylar):
+    """calistir.json'daki "yenile": ["slug"] isteği: henüz yayınlanmamış (private, slotu gelmemiş) videoyu YouTube'dan
+    siler. Ardından tamamla() onu 'silinmiş' görüp aynı çalıştırmada yeniden render ettirir ve yükletir.
+    Herkese açık ya da yayın saati geçmiş videolara dokunulmaz. İstek bir kez kullanılır ve silinir."""
+    cyol = os.path.join(O.KOK, "calistir.json")
+    c = O.json_oku(cyol, {}) or {}
+    istek = c.get("yenile") or []
+    istek = [istek] if isinstance(istek, str) else istek
+    if not istek:
+        return
+    for slug, _, y, bekliyor in adaylar:
+        if slug not in istek:
+            continue
+        if not bekliyor:
+            O.log(f"! {slug}: yayın saati geçmiş, yenilenmez")
+            continue
+        try:
+            it = yt.videos().list(part="status", id=y["video_id"]).execute().get("items", [])
+            if not it:
+                O.log(f"• {slug}: {y['video_id']} zaten kanalda yok")
+            elif it[0]["status"].get("privacyStatus") != "private":
+                O.log(f"! {slug}: {y['video_id']} herkese açık, silinmez")
+            else:
+                yt.videos().delete(id=y["video_id"]).execute()
+                O.log(f"• {slug}: {y['video_id']} silindi (istek üzerine yeniden render edilip yüklenecek)")
+        except Exception as e:
+            O.log(f"! {slug}: yenileme yapılamadı ({str(e)[:160]})")
+            return                                          # istek korunur, sonraki çalıştırmada tekrar denenir
+    c.pop("yenile", None)
+    O.json_yaz(cyol, c)
+
+
 def tamamla():
     """Yüklenmiş videoları denetler (plan işi her çalıştırmada, karardan ÖNCE çağırır):
     - yayın saati gelmemiş bir video kanalda yoksa (ör. Studio'dan yanlışlıkla silindiyse) proje 'render'
@@ -80,6 +112,7 @@ def tamamla():
     if not adaylar:
         return O.log("denetlenecek video yok")
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
+    yenile_istegi(yt, adaylar)
     try:
         ids = ",".join(y["video_id"] for _, _, y, b in adaylar if b)
         var = {v["id"] for v in yt.videos().list(part="id", id=ids).execute().get("items", [])} if ids else set()
