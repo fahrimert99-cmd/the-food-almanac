@@ -1,5 +1,5 @@
 {
-  "aktif": "walking-after-meals",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -9,7 +9,7 @@
     },
     "walking-after-meals": {
       "slot": "2026-10-13T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-08T11:15:04Z",
       "sahne_deneme": 1
     }
