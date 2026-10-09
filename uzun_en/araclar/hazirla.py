@@ -122,12 +122,29 @@ AKORLAR = [
 ]
 
 
+# Arka fon müziği karışımı: müzik, anlatım sırasında otomatik kısılır (sidechain). Seviye kullanıcıyla dinlenerek seçildi:
+# konuşma aralarında yaklaşık −29/−30 dB, anlatım −15 dB (eski sürüm −34 dB'de neredeyse duyulmuyordu).
+MUZIK_HACIM = 0.34
+MUZIK_FC = ("[0:a]aresample=48000,aformat=channel_layouts=stereo,asplit=2[n][sc];"
+            f"[1:a]aresample=48000,lowpass=f=1400:p=1,volume={MUZIK_HACIM}[m];"
+            "[m][sc]sidechaincompress=threshold=0.05:ratio=4:attack=30:release=400[d];"
+            "[n][d]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-15:TP=-1.5:LRA=11,aresample=48000[out]")
+
+
+def karisim(anlatim_wav, muzik_wav, hedef, ek=()):
+    """Anlatım + müzik -> tek ses dosyası (ffmpeg). ek: çıktı biçimi seçenekleri."""
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", anlatim_wav, "-i", muzik_wav, "-filter_complex", MUZIK_FC,
+                    "-map", "[out]", *(ek or ["-c:a", "pcm_s16le"]), hedef], check=True)
+
+
 def muzik(toplam, bolum_baslari, kart_anlari, kaydir=0, sr=44100):
+    """Kodla üretilen sakin fon müziği (telif yok): sıcak pad (harmonikli, yavaşça nefes alan, hafif koro), yumuşak
+    bas, saniyede bir piyano benzeri arpej notası, bölüm kartlarında çan, basit yankı. Her bölüm farklı akor dizisiyle."""
     hz = lambda m: 440.0 * 2 ** ((m - 69) / 12)
     n = int(toplam * sr)
-    sol = np.zeros(n + sr * 4)
-    sag = np.zeros(n + sr * 4)
+    ses = np.zeros((n + sr * 6, 2))
     blok = 4.0
+    rng = np.random.default_rng(sum(map(ord, str(kaydir))) + 7)
 
     def bolum_no(t):
         return max([i for i, b in enumerate(bolum_baslari) if b <= t] or [0]) + kaydir
@@ -137,46 +154,56 @@ def muzik(toplam, bolum_baslari, kart_anlari, kaydir=0, sr=44100):
         t0 = b * blok
         bn = bolum_no(t0)
         akor = AKORLAR[bn % len(AKORLAR)][b % 4]
-        i0 = max(0, int((t0 - 0.8) * sr))
-        L = int((blok + 1.6) * sr)
+        i0 = max(0, int((t0 - 1.0) * sr))
+        L = int((blok + 2.0) * sr)
         tt = np.arange(L) / sr
-        env = np.clip(tt / 1.2, 0, 1) * np.clip((blok + 1.6 - tt) / 1.2, 0, 1)
-        sl, sg = sol[i0:i0 + L], sag[i0:i0 + L]
-        m = len(sl)
-        for nota in akor:
+        env = np.clip(tt / 1.6, 0, 1) * np.clip((blok + 2.0 - tt) / 1.6, 0, 1)
+        nefes = 0.85 + 0.15 * np.sin(2 * np.pi * 0.12 * (tt + t0))
+        seg = ses[i0:i0 + L]
+        m = len(seg)
+        for nota in akor[1:]:                               # pad: kök hariç üç nota, iki kanalda hafif farklı (koro)
             f = hz(nota)
-            ton = (np.sin(2 * np.pi * f * tt) + 0.25 * np.sin(4 * np.pi * f * tt)) * env
-            sl += (0.05 * ton + 0.03 * np.sin(2 * np.pi * (f + 0.35) * tt) * env)[:m]
-            sg += (0.05 * ton + 0.03 * np.sin(2 * np.pi * (f - 0.35) * tt) * env)[:m]
-        desen = [0, 1, 2, 1, 2, 0, 1, 2] if bn % 2 == 0 else [2, 1, 0, 1, 0, 2, 1, 0]
-        for k in range(8):
-            nt = t0 + k * 0.5
+            for d, kanal in ((+0.6, 0), (-0.6, 1)):
+                ton = (np.sin(2 * np.pi * (f + d) * tt) + 0.30 * np.sin(4 * np.pi * (f + d) * tt)
+                       + 0.10 * np.sin(6 * np.pi * (f + d) * tt))
+                seg[:, kanal] += (0.032 * ton * env * nefes)[:m]
+        fb = hz(akor[0])                                    # bas: kök notası
+        bas = (np.sin(2 * np.pi * fb * tt) + 0.2 * np.sin(4 * np.pi * fb * tt)) * env * 0.05
+        seg[:, 0] += bas[:m]
+        seg[:, 1] += bas[:m]
+        desen = [1, 2, 3, 2] if bn % 2 == 0 else [3, 2, 1, 2]
+        for k in range(4):                                  # piyano benzeri seyrek arpej
+            nt = t0 + k * 1.0 + rng.uniform(-0.02, 0.02)
             j0 = int(nt * sr)
-            Lk = int(1.4 * sr)
+            Lk = int(2.2 * sr)
             ts = np.arange(Lk) / sr
-            nota = np.sin(2 * np.pi * hz(akor[1:][desen[k]] + 12) * ts) * np.exp(-ts * 4.2) * 0.045
-            a_, b_ = sol[j0:j0 + Lk], sag[j0:j0 + Lk]
-            a_ += nota[:len(a_)] * (0.8 if k % 2 else 1.0)
-            b_ += nota[:len(b_)] * (1.0 if k % 2 else 0.8)
+            f = hz(akor[desen[k]] + 12)
+            ton = sum(w * np.sin(2 * np.pi * f * h * ts) * np.exp(-ts * (2.6 + h))
+                      for h, w in ((1, 1.0), (2, 0.45), (3, 0.2), (4, 0.08)))
+            ton *= np.clip(ts / 0.006, 0, 1) * 0.05 * rng.uniform(0.8, 1.0)
+            seg2 = ses[j0:j0 + Lk]
+            pan = 0.6 + 0.4 * (k % 2)
+            seg2[:, 0] += ton[:len(seg2)] * pan
+            seg2[:, 1] += ton[:len(seg2)] * (1.6 - pan)
         b += 1
     for ka in kart_anlari:                                  # bölüm kartlarında yumuşak çan
         j0 = int(ka * sr)
-        Lk = int(3.0 * sr)
+        Lk = int(3.5 * sr)
         ts = np.arange(Lk) / sr
         can = sum(np.sin(2 * np.pi * f * ts) * w for f, w in [(hz(76), 1.0), (hz(83), 0.45), (hz(88), 0.25)])
-        can *= np.exp(-ts * 1.6) * 0.06
-        a_, b_ = sol[j0:j0 + Lk], sag[j0:j0 + Lk]
-        a_ += can[:len(a_)]
-        b_ += can[:len(b_)]
-    for gec, kaz in [(0.11, 0.35), (0.23, 0.22), (0.41, 0.12)]:
+        can *= np.exp(-ts * 1.4) * 0.07
+        seg2 = ses[j0:j0 + Lk]
+        seg2 += can[:len(seg2), None]
+    kuru = ses.copy()                                       # yankı: kanallar arası, azalan gecikmeli kopyalar
+    for gec, kaz in [(0.07, 0.30), (0.13, 0.24), (0.21, 0.18), (0.34, 0.12), (0.55, 0.07)]:
         d = int(gec * sr)
-        sol[d:] += kaz * sag[:-d]
-        sag[d:] += kaz * sol[:-d]
-    sol, sag = sol[:n], sag[:n]
-    ust = max(np.abs(sol).max(), np.abs(sag).max(), 1e-6)
+        ses[d:, 0] += kaz * kuru[:-d, 1]
+        ses[d:, 1] += kaz * kuru[:-d, 0]
+    ses = ses[:n]
     t = np.arange(n) / sr
-    fade = np.clip(np.minimum(t / 2.0, (toplam - t) / 3.0), 0, 1)
-    return (np.stack([sol, sag], axis=1) / ust * 0.5 * fade[:, None]).astype(np.float32), sr
+    fade = np.clip(np.minimum(t / 2.5, (toplam - t) / 3.0), 0, 1)
+    ust = max(np.abs(ses).max(), 1e-6)
+    return (ses / ust * 0.5 * fade[:, None]).astype(np.float32), sr
 
 
 def izgara(kaynak, hedef):
@@ -322,12 +349,7 @@ def main():
         kaydir = sum(map(ord, slug)) % len(AKORLAR)          # her videoda farklı akor sırası
         muz, msr = muzik(toplam, bolum_baslari, kart_anlari, kaydir)
         O.wav_yaz(os.path.join(tmp, "muzik.wav"), muz, msr)
-        fc = ("[0:a]aresample=48000,aformat=channel_layouts=stereo,asplit=2[n][sc];"
-              "[1:a]aresample=48000,volume=0.32[m];[m][sc]sidechaincompress=threshold=0.03:ratio=6:attack=30:release=300[d];"
-              "[n][d]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-15:TP=-1.5:LRA=11,aresample=48000[out]")
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", os.path.join(tmp, "anlatim.wav"),
-                        "-i", os.path.join(tmp, "muzik.wav"), "-filter_complex", fc, "-map", "[out]",
-                        "-c:a", "pcm_s16le", os.path.join(pub, "tam_karisim.wav")], check=True)
+        karisim(os.path.join(tmp, "anlatim.wav"), os.path.join(tmp, "muzik.wav"), os.path.join(pub, "tam_karisim.wav"))
         shutil.rmtree(tmp, ignore_errors=True)
     O.log(f"hazır: {slug} — {toplam:.1f} sn ({toplam / 60:.1f} dk), {len(sahneler)} sahne "
           f"({tasarli} tasarlanmış, {len(sahneler) - tasarli} şablon), {int(round(toplam * FPS))} kare")
