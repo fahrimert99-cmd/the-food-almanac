@@ -1,4 +1,4 @@
 {
   "not": "Bu dosya main'e gelince/değişince 'Uzun Video EN' iş akışı hemen çalışır. tetik sayısını artırmak yeterli. İsteğe bağlı \"uretim_once_saat\": sıradaki videonun üretimini normal 72 saat yerine bu kadar saat önce başlatır (tek seferlik; kullanılınca silinir).",
-  "tetik": 3
+  "tetik": 4
 }
