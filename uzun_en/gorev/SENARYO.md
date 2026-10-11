@@ -98,6 +98,8 @@ off the right edge, a number badge top right. Our first video got only 2.4% clic
 - `vurgu_alt`: 2–4 words explaining that number.
 - `gorsel`: the image model's description. The style (bright, saturated, pure white background) is added automatically.
   - Make the hero food or drink very large, close-up and appetizing.
+  - Group the objects tightly, overlapping (for example sneakers behind the plate), never side by side in a wide row:
+    a wide row has to be shrunk to fit and leaves empty white above and below.
   - Add at most one simple cue for the body effect, when it helps: a glucose meter with a blank screen for blood
     sugar, a red heart symbol for the heart, a blood pressure cuff, a measuring tape for weight, a crescent moon for
     sleep. Or a cheerful person in their 60s when the topic is a habit.
