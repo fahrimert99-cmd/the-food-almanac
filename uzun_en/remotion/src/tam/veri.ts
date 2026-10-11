@@ -23,8 +23,9 @@ export type SahneAyar = { filigran?: boolean; rozet?: boolean };
 export type SP = { t: number; s: SahneTam };
 
 export type KapakVeri = {
-  satirlar: string[]; vurgu?: string | null; vurgu_alt?: string | null; gorsel: string | null;
+  satirlar: string[]; serit?: string | null; vurgu?: string | null; vurgu_alt?: string | null; gorsel: string | null;
   kutu?: number[] | null;  // kapak görselinde konunun sınır kutusu [x0, y0, x1, y1] (0–1), hazirla.py hesaplar
+  zemin?: string | null;   // kapak görselinin zemin rengi (#rrggbb): kapak arka planı bununla aynı olur, görsel dikişsiz karışır
 };
 export const TAM = veri as unknown as {
   fps: number; toplam: number; gecis: number; slug: string; sahneler: SahneTam[]; altyazi: Parca[]; kapak: KapakVeri;

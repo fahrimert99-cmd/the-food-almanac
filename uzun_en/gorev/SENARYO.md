@@ -83,15 +83,27 @@ The prompt tells you three things:
 - The title must match what the evidence actually shows.
 
 **Thumbnail (`kapak`)**
-- `satirlar`: the title compressed into 3–4 UPPERCASE lines that read as one sentence.
-  - Each line at most 14 characters (never more than 15); 5–8 words in total.
-  - The text fills the left half of the thumbnail in very large letters, so fewer characters means bigger text.
-  - The last line is the body outcome, drawn in gold. Example: `["10-MIN WALK", "AFTER MEALS —", "WHAT IT DOES TO", "BLOOD SUGAR"]`.
+
+The thumbnail decides whether anyone clicks. It is a white card: huge text on the left, one big vivid image bleeding
+off the right edge, a number badge top right. Our first video got only 2.4% clicks with long text and a small object.
+
+- `satirlar`: 2–3 UPPERCASE lines, each at most 12 characters, 2–5 words in total.
+  - Every line is enlarged separately to the full width of the text block, so short lines become giant words.
+    Put the topic in the big lines.
+  - The last line is drawn in gold.
+  - Example: `["10-MIN", "WALK", "AFTER MEALS"]`.
+- `serit` (recommended): a short line on a coral banner under the text, at most 30 characters. It carries the curiosity
+  or the outcome, for example `"What it does to blood sugar"`.
 - `vurgu` (optional): one striking but real number from your sources, at most 6 characters (for example `–37%`).
 - `vurgu_alt`: 2–4 words explaining that number.
-- `gorsel`: one large, clear subject for the image model: a single food, drink or object, big, on plain off-white paper.
-  - No decorative leaves, herbs, plants or extra objects unless they are the subject.
-  - Keep it simple and iconic; the subject is placed automatically on the right half.
+- `gorsel`: the image model's description. The style (bright, saturated, pure white background) is added automatically.
+  - Make the hero food or drink very large, close-up and appetizing.
+  - Add at most one simple cue for the body effect, when it helps: a glucose meter with a blank screen for blood
+    sugar, a red heart symbol for the heart, a blood pressure cuff, a measuring tape for weight, a crescent moon for
+    sleep. Or a cheerful person in their 60s when the topic is a habit.
+  - No decorative leaves, herbs or extra props.
+  - Never write "anatomy", "organ", "gore" or "blood" in the description: the image filter returns a black image.
+  - No text in the image; the layout places the subject on the right automatically.
 
 ## Step 3: Structure
 

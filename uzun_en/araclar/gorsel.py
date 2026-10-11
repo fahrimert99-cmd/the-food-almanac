@@ -31,8 +31,13 @@ YASAK = ("Absolutely no text, no letters, no words, no numbers, no labels, no ca
          "no watermark, no logo, no chemical formula letters, no photograph, no 3D render.")
 SAG_BOS = (" Composition: the main illustration fills the left two-thirds of the page, the right "
            "third is left as empty off-white paper.")
-KAPAK_YER = (" Composition: the main subject is large and fills the right half of the page, the left half "
-             "is left as plain empty off-white paper.")
+KAPAK_YER = (" Composition: the subject is very large and close-up, filling the right half of the frame and slightly "
+             "cropped by the right edge; the left half is plain empty pure white background.")
+# Kapak, sahnelerden farklı olarak canlı ve doygun renkli: küçük resimde akışta göze çarpmalı (rakip analizi, ilk
+# videonun %2,4 tıklama oranı). Zemin saf beyaz; kapak arka planı görselin zemin rengine boyanır.
+KAPAK_STIL = ("Bright, vivid hand-painted editorial illustration with bold saturated colors, crisp clean outlines and "
+              "soft shading, appetizing and glossy, high contrast, isolated on a plain pure white background, crisp "
+              "high detail, 16:9 landscape.")
 GEMINI_MODEL = os.environ.get("UZUN_GEMINI_IMAGE_MODEL", "").strip() or "gemini-2.5-flash-image"
 PUAN = {"elle": 100, "nvidia": 90, "gemini": 90, "pollinations": 30, "yedek": 0}
 _KAPALI = set()
@@ -174,7 +179,7 @@ def sahne_prompt(sahne):
 
 
 def kapak_prompt(proje):
-    return f"{proje['kapak']['gorsel'].rstrip('.')}.{KAPAK_YER} {STIL} {YASAK}"
+    return f"{proje['kapak']['gorsel'].rstrip('.')}.{KAPAK_YER} {KAPAK_STIL} {YASAK}"
 
 
 def uret(prompt, hedef, min_puan=-1, tohum=0, sira=None):
