@@ -13,10 +13,11 @@
     "Hashimoto K, Dora K, Murakami Y, et al. Positive impact of a 10-min walk immediately after glucose intake on postprandial glucose levels. Scientific Reports. 2025. doi:10.1038/s41598-025-07312-y."
   ],
   "kapak": {
-    "satirlar": ["10-MIN WALK", "AFTER MEALS —", "WHAT IT DOES TO", "BLOOD SUGAR"],
+    "satirlar": ["10-MIN", "WALK", "AFTER MEALS"],
+    "serit": "What it does to blood sugar",
     "vurgu": "–22%",
     "vurgu_alt": "after evening meals",
-    "gorsel": "a single pair of brown leather walking shoes standing right next to a white dinner plate with a fork, the shoes and the plate close together and large, placed on the right half of the page, the left half left as empty off-white paper"
+    "gorsel": "a pair of bright blue walking sneakers right beside a large white plate of spaghetti with tomato sauce, and a handheld glucose meter with a blank grey screen lying in front of the plate, the three objects close together, large and close-up"
   },
   "etiketler": ["walk after eating blood sugar", "10 minute walk after meals", "post meal walk glucose", "blood sugar", "type 2 diabetes", "prediabetes", "glucose spike", "walking for health", "nutrition science", "healthy habits"],
   "seslendirme_duzelt": {"HbA1c": "H B A 1 C", "GLUT4": "G L U T 4", "AMPK": "A M P K"},

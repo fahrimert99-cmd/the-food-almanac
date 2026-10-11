@@ -270,20 +270,22 @@ def kaydet(slug, yalniz=None):
 
 
 def konu_kutusu(yol, esik=35, pay=0.03):
-    """Kapak görselinde konunun sınır kutusu [x0, y0, x1, y1] (0–1). Kapak bunu sağ panele en büyük hâliyle sığdırır.
-    Kâğıt zemini kenar piksellerinin medyanıdır; zeminden belirgin ayrılan piksellerin %1–99 aralığı alınır."""
+    """Kapak görselinde konunun sınır kutusu [x0, y0, x1, y1] (0–1) ve zemin rengi (#rrggbb): (kutu, zemin).
+    Kapak konuyu sağ panele büyütür ve arka planı zemin rengine boyar (görsel dikişsiz karışır).
+    Zemin, kenar piksellerinin medyanıdır; zeminden belirgin ayrılan piksellerin %1–99 aralığı alınır."""
     try:
         from PIL import Image
         im = np.asarray(Image.open(yol).convert("RGB").resize((320, 180)), dtype=np.int16)
     except Exception:
-        return None
+        return None, None
     zemin = np.median(np.concatenate([im[0], im[-1], im[:, 0], im[:, -1]]), axis=0)
+    renk = "#" + "".join(f"{int(v):02x}" for v in zemin)
     ys, xs = np.nonzero(np.abs(im - zemin).max(axis=2) > esik)
     if len(xs) < 200:                                   # neredeyse boş görsel: varsayılan yerleşim
-        return None
+        return None, renk
     x0, x1 = np.percentile(xs, [1, 99]) / 320
     y0, y1 = np.percentile(ys, [1, 99]) / 180
-    return [round(float(min(max(v, 0), 1)), 3) for v in (x0 - pay, y0 - pay, x1 + pay, y1 + pay)]
+    return [round(float(min(max(v, 0), 1)), 3) for v in (x0 - pay, y0 - pay, x1 + pay, y1 + pay)], renk
 
 
 def main():
@@ -304,11 +306,13 @@ def main():
     gdir = os.path.join(pdir, "images")
     sahneler, toplam = zaman_cizelgesi(proje, zaman, gdir)
     k = proje.get("kapak") or {}
+    kutu, zemin = konu_kutusu(os.path.join(gdir, "kapak.jpg"))
     veri = {"fps": FPS, "toplam": round(toplam, 3), "gecis": GECIS, "slug": slug, "sahneler": sahneler,
             "altyazi": altyazi(sahneler),
-            "kapak": {"satirlar": k.get("satirlar") or [], "vurgu": k.get("vurgu"), "vurgu_alt": k.get("vurgu_alt"),
+            "kapak": {"satirlar": k.get("satirlar") or [], "serit": k.get("serit"), "vurgu": k.get("vurgu"),
+                      "vurgu_alt": k.get("vurgu_alt"),
                       "gorsel": "tam/kapak" if os.path.exists(os.path.join(gdir, "kapak.jpg")) else None,
-                      "kutu": konu_kutusu(os.path.join(gdir, "kapak.jpg"))}}
+                      "kutu": kutu, "zemin": zemin}}
     src = os.path.join(O.REMOTION, "src")
     O.json_yaz(os.path.join(src, "tam", "tam.gen.json"), veri)
     m = O.marka()

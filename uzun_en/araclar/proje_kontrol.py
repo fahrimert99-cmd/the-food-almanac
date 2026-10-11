@@ -3,7 +3,7 @@
 """proje.json yapı ve kural denetimi (senaryo ajanının çıktısı üretime girmeden önce).
 
   python3 uzun_en/araclar/proje_kontrol.py --proje SLUG    # hata varsa çıkış kodu 1; hatalar ve uyarılar yazdırılır
-  python3 uzun_en/araclar/proje_kontrol.py --proje SLUG --yazim   # yazım aşaması: en az 10 dk, açılışta rakam
+  python3 uzun_en/araclar/proje_kontrol.py --proje SLUG --yazim   # yazım aşaması: en az 10 dk, açılışta rakam, kısa kapak
 """
 import argparse, os, re, sys
 
@@ -35,8 +35,8 @@ def kahraman_payi(p):
 
 
 def denetle(slug, asgari_dk=None, yazim=False):
-    """yazim=True: yazım aşamasının sıkı kuralları (en az 10 dk, açılışta kaynaklı rakam). Yayındaki eski projeler
-    bu kurallardan önce yazıldığı için varsayılan denetim bunları aramaz."""
+    """yazim=True: yazım aşamasının sıkı kuralları (en az 10 dk, açılışta kaynaklı rakam, kısa kapak satırları).
+    Yayındaki eski projeler bu kurallardan önce yazıldığı için varsayılan denetim bunları aramaz."""
     p = O.proje(slug)
     h, u = [], []                       # hatalar, uyarılar
     if not p:
@@ -61,9 +61,13 @@ def denetle(slug, asgari_dk=None, yazim=False):
         h.append("kaynaklar: en az 3 tam kaynak (yazarlar, başlık, dergi, yıl) gerekli")
     k = p.get("kapak") or {}
     sat = k.get("satirlar") or []
-    if not 2 <= len(sat) <= 4 or any(len(x) > 15 for x in sat):
-        h.append("kapak.satirlar: 2–4 satır (tercihen 3–4), her satır en çok 15 karakter (tercihen 14): yazı kapağın sol "
-                 "yarısını dev harflerle doldurur, kısa satır daha büyük yazı demektir")
+    if yazim and (not 2 <= len(sat) <= 3 or any(len(x) > 12 for x in sat)):
+        h.append("kapak.satirlar: 2–3 satır, her satır en çok 12 karakter: her satır ayrı ayrı yazı bloğunun genişliğine "
+                 "büyütülür, kısa satır dev yazı demektir; uzun ayrıntı kapak.serit'e")
+    elif not 2 <= len(sat) <= 4 or any(len(x) > 15 for x in sat):
+        h.append("kapak.satirlar: 2–4 satır, her satır en çok 15 karakter")
+    if k.get("serit") and len(k["serit"]) > 30:
+        h.append("kapak.serit en çok 30 karakter (ör. 'What it does to blood sugar')")
     if not k.get("gorsel"):
         h.append("kapak.gorsel (kapak görseli tarifi) gerekli")
     if k.get("vurgu") and len(k["vurgu"]) > 6:

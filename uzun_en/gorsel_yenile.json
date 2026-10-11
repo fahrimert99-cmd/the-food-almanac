@@ -1,8 +1,8 @@
 {
-  "proje": "food-order-blood-sugar",
+  "proje": "walking-after-meals",
   "gorseller": [
     "kapak"
   ],
-  "tetik": 3,
+  "tetik": 4,
   "not": "Bu dosya main'e gelince Gorsel Yenile iş akışı, listelenen görselleri (tarifleri değiştiyse) yeniden üretir ve sürüme yükler. Önce proje.json'daki tarifi değiştirin."
 }
