@@ -4,11 +4,5 @@
     "kapak"
   ],
   "tetik": 5,
-  "not": "Bu dosya main'e gelince Gorsel Yenile iş akışı, listelenen görselleri (tarifleri değiştiyse) yeniden üretir ve sürüme yükler. Önce proje.json'daki tarifi değiştirin. kapak_adaylari: her tarif ayrıca denenir, kapak_aday_N.jpg olarak sürüme yüklenir.",
-  "kapak_adaylari": [
-    "a pair of walking sneakers right beside a large plate of spaghetti, both large and close-up",
-    "a large plate of spaghetti with tomato sauce in front and a pair of walking sneakers behind it, with a small handheld glucose meter beside the plate, all large and close-up",
-    "a cheerful grey-haired man in his sixties in sneakers taking a brisk walk, seen from the waist up, with a large plate of pasta in the foreground",
-    "a pair of walking sneakers stepping beside a dinner plate with rice, grilled chicken and vegetables, large and close-up"
-  ]
+  "not": "Bu dosya main'e gelince Gorsel Yenile iş akışı, listelenen görselleri (tarifleri değiştiyse) yeniden üretir ve sürüme yükler. Önce proje.json'daki tarifi değiştirin. kapak_adaylari: her tarif ayrıca denenir, kapak_aday_N.jpg olarak sürüme yüklenir."
 }
