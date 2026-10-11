@@ -31,8 +31,9 @@ YASAK = ("Absolutely no text, no letters, no words, no numbers, no labels, no ca
          "no watermark, no logo, no chemical formula letters, no photograph, no 3D render.")
 SAG_BOS = (" Composition: the main illustration fills the left two-thirds of the page, the right "
            "third is left as empty off-white paper.")
-KAPAK_YER = (" Composition: the subject is very large and close-up, filling the right half of the frame and slightly "
-             "cropped by the right edge; the left half is plain empty pure white background.")
+KAPAK_YER = (" Composition: one compact, roughly square group with the objects overlapping, not spread out in a wide "
+             "row; very large and close-up, filling the right half of the frame from top to bottom and slightly cropped "
+             "by the right edge; the left half is plain empty pure white background.")
 # Kapak, sahnelerden farklı olarak canlı ve doygun renkli: küçük resimde akışta göze çarpmalı (rakip analizi, ilk
 # videonun %2,4 tıklama oranı). Zemin saf beyaz; kapak arka planı görselin zemin rengine boyanır.
 KAPAK_STIL = ("Bright, vivid hand-painted editorial illustration with bold saturated colors, crisp clean outlines and "
