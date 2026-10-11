@@ -3,6 +3,8 @@ name: Gorsel Yenile (The Food Almanac)
 # (uzun-en-<slug>) yükler. Tarifi değişmeyen görsellere dokunmaz.
 # Tetik: uzun_en/gorsel_yenile.json main'e gelince ({"proje": "<slug>", "gorseller": ["kapak", 4], "tetik": N}); önce
 # proje.json'daki tarifi değiştirin. "gorseller" verilirse yalnızca onlara bakılır (sahne düzenleri bozulmasın).
+# "kapak_adaylari": ["tarif 1", "tarif 2", ...] verilirse her tarif NVIDIA ile ayrıca denenir ve kapak_aday_N.jpg olarak
+# sürüme yüklenir (kapak.jpg'ye dokunmaz); beğenilen tarif sonra proje.json'a yazılır.
 on:
   push:
     branches: [main]
@@ -39,5 +41,36 @@ jobs:
           SADECE=$(python3 -c "import json;print(','.join(map(str, json.load(open('uzun_en/gorsel_yenile.json')).get('gorseller', []))))")
           echo "proje: $SLUG, görseller: ${SADECE:-tarifi değişen hepsi}"
           python3 uzun_en/araclar/varlik.py indir --proje "$SLUG" --tur gorsel
-          python3 uzun_en/araclar/gorsel.py --proje "$SLUG" ${SADECE:+--sadece "$SADECE"}
+          set +e
+          python3 uzun_en/araclar/gorsel.py --proje "$SLUG" ${SADECE:+--sadece "$SADECE"} 2>&1 | tee /tmp/gorsel.txt
+          KOD=${PIPESTATUS[0]}
+          set -e
           python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG" --tur gorsel --degisen
+          exit $KOD
+      - name: Kapak adayları
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          SLUG=$(python3 -c "import json;print(json.load(open('uzun_en/gorsel_yenile.json'))['proje'])")
+          N=$(python3 -c "import json;print(len(json.load(open('uzun_en/gorsel_yenile.json')).get('kapak_adaylari') or []))")
+          [ "$N" -gt 0 ] || { echo "aday yok"; exit 0; }
+          IMG="uzun_en/projeler/$SLUG/images"
+          for i in $(seq 1 "$N"); do
+            A=$(python3 -c "import json,sys;print(json.load(open('uzun_en/gorsel_yenile.json'))['kapak_adaylari'][int(sys.argv[1])-1])" "$i")
+            if python3 uzun_en/araclar/gorsel.py --proje "$SLUG" --sahne 0 --aciklama "$A" 2>&1 | tee -a /tmp/gorsel.txt \
+               && [ -f "$IMG/kapak.aday.jpg" ]; then
+              mv "$IMG/kapak.aday.jpg" "/tmp/kapak_aday_$i.jpg"
+              echo "✓ aday $i üretildi" | tee -a /tmp/gorsel.txt
+            else
+              echo "✗ aday $i üretilemedi" | tee -a /tmp/gorsel.txt
+            fi
+            rm -f "$IMG/kapak.aday.jpg" "$IMG/kapak.aday.json"
+          done
+          ls /tmp/kapak_aday_*.jpg >/dev/null 2>&1 && gh release upload "uzun-en-$SLUG" /tmp/kapak_aday_*.jpg --clobber || true
+      - name: Özet
+        if: always()
+        run: |
+          [ -f /tmp/gorsel.txt ] || exit 0
+          grep -E "✓|✗|!|nvidia|gemini|pollinations|aday|Traceback|Error" /tmp/gorsel.txt | head -30 | sed 's/^/::notice title=Görsel::/' || true
