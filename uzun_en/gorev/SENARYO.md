@@ -100,9 +100,10 @@ off the right edge, a number badge top right. Our first video got only 2.4% clic
   - Make the hero food or drink very large, close-up and appetizing.
   - Group the objects tightly, overlapping (for example sneakers behind the plate), never side by side in a wide row:
     a wide row has to be shrunk to fit and leaves empty white above and below.
-  - Add at most one simple cue for the body effect, when it helps: a glucose meter with a blank screen for blood
-    sugar, a red heart symbol for the heart, a blood pressure cuff, a measuring tape for weight, a crescent moon for
-    sleep. Or a cheerful person in their 60s when the topic is a habit.
+  - Add at most one simple cue for the body effect, when it helps (topic → what to write in `gorsel`):
+    blood sugar → "a glucose meter with a blank screen"; heart → "a red heart symbol"; blood pressure →
+    "a sphygmomanometer cuff"; weight → "a measuring tape"; sleep → "a crescent moon". Or a cheerful person in
+    their 60s when the topic is a habit.
   - No decorative leaves, herbs or extra props.
   - Never write "anatomy", "organ", "gore" or "blood" in the description: the image filter returns a black image.
   - No text in the image; the layout places the subject on the right automatically.
