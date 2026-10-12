@@ -140,6 +140,9 @@ def denetle(slug, asgari_dk=None, yazim=False):
         if not SAYI.search(acilis):
             h.append("açılış: ilk iki sahnede kaynaklı somut bir rakam olmalı (izleyici ilk 15 saniyede karar veriyor); "
                      "ör. 'in a trial of 41 adults … about 12 percent lower'")
+        if S and re.match(r"\s*(picture|imagine|think about|let'?s start|have you ever)\b", S[0].get("metin", ""), re.I):
+            h.append("açılış: ilk cümle sahne kurmamalı ('Picture…', 'Imagine…'); izleyicinin kendi durumuna ya da "
+                     "çarpıcı bulguya doğrudan girmeli (1. videoda izleyicilerin %73'ü ilk 30 saniyede çıktı)")
     pay = kahraman_payi(p)
     if pay is not None and pay < 0.45:
         h.append(f"kahraman '{p['kahraman']}' görselli sahnelerin yalnızca %{pay * 100:.0f}'inde; en az yarısının "

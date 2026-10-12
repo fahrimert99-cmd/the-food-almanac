@@ -114,8 +114,11 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
 
 1. **Cold open** (scenes 1–4). Most viewers decide in these first seconds whether to stay.
    - Scene 1 has a `bolum` (the first chapter title).
+   - The very first sentence goes straight in: it speaks to the viewer's own situation ("If you eat eggs most
+     mornings, …") or states the surprising finding. Never open with scene-setting ("Picture…", "Imagine…"): in our
+     first video 73% of viewers left within 30 seconds, before the number arrived in scene 3.
    - Within scenes 1–2 (about the first 15 seconds), give a concrete, cited finding with its number: what was studied,
-     in whom, and what changed. A one-sentence everyday picture may come first, but no longer.
+     in whom, and what changed. Keep scenes 1–3 short, one or two sentences each.
    - Then promise the specific practical payoff the viewer gets by the end, for example "By the end, you'll know when to
      start walking and how long is enough." The video must deliver it.
    - Then say what this video will answer. No hype ("you won't believe", "shocking").
