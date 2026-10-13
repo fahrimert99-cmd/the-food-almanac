@@ -260,9 +260,28 @@ def hepsi(slug, proje, sadece=None):
             eksik.append(k)
             O.log(f"   ✗ {k} üretilemedi")
 
-    paralel = 2 if re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or "") else 1
-    with cf.ThreadPoolExecutor(max_workers=paralel) as ex:
+    nvidia_var = bool(re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or ""))
+    with cf.ThreadPoolExecutor(max_workers=2 if nvidia_var else 1) as ex:
         list(ex.map(is_, isler))
+    # İkinci tur: NVIDIA'nın geçici hatası (HTTP 500) ya da filtresi yüzünden yedek kaynağa düşen ya da hiç üretilemeyen
+    # görseller kısa bir beklemeden sonra yalnızca NVIDIA ile, farklı tohumla yeniden denenir. Sahneler henüz tasarlanmadığı
+    # için görsel değişmesi düzeni bozmaz. Sıralı çalışır (tohum ayarı iş parçacığı güvenli değil).
+    for tur in (1, 2):
+        tekrar = [(k, pr, h) for k, pr, h in hedefler if not os.path.exists(h)
+                  or ((kay.al(k) or {}).get("kaynak") != "elle" and puan((kay.al(k) or {}).get("kaynak")) < 90)]
+        if not tekrar or not nvidia_var or "nvidia" in _KAPALI:
+            break
+        O.log(f"   {len(tekrar)} görsel NVIDIA ile yeniden deneniyor (tur {tur})")
+        time.sleep(45)
+        for k, pr, hedef in tekrar:
+            r = kay.al(k) or {}
+            kaynak = uret(pr, hedef, min_puan=puan(r.get("kaynak")) if os.path.exists(hedef) else -1, tohum=tur * 7,
+                          sira=["nvidia"])
+            if kaynak:
+                kay.yaz(k, {"hash": _hash(pr), "kaynak": kaynak})
+                if k in eksik:
+                    eksik.remove(k)
+                O.log(f"   ✓ {k} ({kaynak}, tur {tur})")
     dusuk = [k for k, _, h in hedefler if os.path.exists(h) and puan((kay.al(k) or {}).get("kaynak")) < 90]
     O.log(f"görseller bitti: eksik {eksik or 'yok'}, düşük kaliteli {dusuk or 'yok'}")
     return eksik
