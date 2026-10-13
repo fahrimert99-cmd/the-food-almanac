@@ -1,5 +1,5 @@
 {
-  "aktif": "eggs-and-cholesterol",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -15,7 +15,7 @@
     },
     "eggs-and-cholesterol": {
       "slot": "2026-10-16T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-13T14:06:44Z",
       "sahne_deneme": 3
     }
