@@ -1,14 +1,7 @@
-# Grup 1 raporu (sahne 1–8)
+# Rapor — grup 1 (sahne 25, 26)
 
-Hiçbir görsel yeniden üretilmedi. `tsc` temiz, her sahne için `kare.mjs` ile temas sayfası incelendi.
+**S25** — İki cam kavanoz (büyük küreler / küçük taneler) ve ortada yumurta. Vuruşlar: "HYPER-RESPONDERS" + "BIGGER RISE" ve yukarı ok (bigger); "LARGE / LDL PARTICLES" başlığı + sol kavanozda "LARGE LDL" etiketi (large); "THOUGHT LESS HARMFUL" notu (less harmful); sağ kavanozda "SMALL LDL" etiketi (small). Sağ alttaki imza kalıntısı kâğıt rengi yamayla örtüldü. Görsel yeniden üretilmedi.
 
-- **S01** — Yumurta kasesi. Etiketler: EGGS, ONE EGG A DAY (kırık yumurta). Başlık `EGGS, 32 YEARS` + `215,000` rozeti, sonra `NO CLEAR EXTRA RISK`. Kaynak etiketi var. Kusur yok.
-- **S02** — Kitap yığını. `14,806` rozeti (+ not), sonra `TWO STUDIES, / TWO ANSWERS`, kelimelerle senkron. Kusur yok.
-- **S03** — Yumurtalık. `WHO IS RIGHT?` → `RICH IN CHOLESTEROL` etiketi → `EGGS ARE FINE` etiketi → `BOTH CAN BE TRUE`. Kusur yok.
-- **S04** — Tek yumurtalı tabak; solda panel, 3 maddelik liste (HOW MANY EGGS / WHO SHOULD BE CAREFUL / THE REST OF THE PLATE) ve `PRACTICAL PART` hapı. Alt sağdaki imza kalıntısı kamera penceresiyle dışarıda bırakıldı. Sorun: görsel (gri, tek yumurta, tost/domates yok) istemdeki tarife uymuyor, ama kullanılabilir; yeniden üretilmedi.
-- **S05** — Bölüm kartı (`BolumKarti`), 3 görsel kartı (01, 03, 08 kırpımları) ve altında senkron iki hap: WHAT IT IS + WHERE IT COMES FROM.
-- **S06** — Hücre duvarlı yumurta (PART 1 rozeti otomatik). Etiketler: WAXY DROPLETS, CELL WALL; sağ panelde `CHOLESTEROL IS USED TO MAKE` → HORMONES, VITAMIN D. Kusur yok.
-- **S07** — Karaciğer + tabak. Başlıklar `YOUR LIVER MAKES MUCH` → `DIETARY CHOLESTEROL` + `ONLY IN ANIMAL FOODS`; etiketler: LIVER, FOOD, DAIRY / EGGS / MEAT. Sol alttaki sahte karalama yazısı sayfa renginde yamayla örtüldü.
-- **S08** — Tabakta yumurtalar. `185 MG` sayaç + `DIETARY CHOLESTEROL PER LARGE EGG`, `A LOT COMPARED WITH MOST FOODS`, `THE EGG'S REPUTATION`. USDA kaynak etiketi. Tabak altındaki sahte imza yamayla örtüldü.
+**S26** — Test tüpleri, defter, yumurta kasesi. Vuruşlar: sağ üstte "EXTRA LDL" / "STILL DEBATED" / "NOT A FREE PASS" (extra, debated, not); ikinci cümlede "YOUR OWN BLOOD TEST" başlığı, "MATTERS MORE THAN ANY AVERAGE" notu ve tüpte "YOUR BLOOD TEST" etiketi. Defterdeki küçük karalama çizgileri (~x960,y765) örtülmedi; çok küçük ve okunur yazı değil. Görsel yeniden üretilmedi.
 
-Çözülmemiş: yok. Kütüphane hatası görülmedi.
+Çözülmemiş sorun yok; kütüphane hatası görülmedi.
