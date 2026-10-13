@@ -41,7 +41,7 @@ Hazırlayan / Onay: **Fahri Mert**
 ## 2. Sahne sahne senaryo
 
 > Stil cümlesi (her promptun sonunda yer alır):
-> *Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.*
+> *Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.*
 
 ### Bölüm 1 · Açılış
 
@@ -52,7 +52,7 @@ Hazırlayan / Onay: **Fahri Mert**
 **Meta AI promptu:**
 
 ```text
-A single brown egg resting on a plain wooden table, soft morning light from a window, the camera slowly pushes in toward the egg. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A single brown egg resting on a plain wooden table, soft morning light from a window, the camera slowly pushes in toward the egg. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `1 large egg ≈ 186 mg cholesterol`
@@ -64,7 +64,7 @@ A single brown egg resting on a plain wooden table, soft morning light from a wi
 **Meta AI promptu:**
 
 ```text
-A cracked egg on a saucer on the left and an anatomical engraving of a human heart with branching arteries on the right, the two slowly drifting closer together. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A cracked egg on a saucer on the left and an anatomical engraving of a human heart with branching arteries on the right, the two slowly drifting closer together. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S03 · 0:20–0:30 · 25 kelime
@@ -74,7 +74,7 @@ A cracked egg on a saucer on the left and an anatomical engraving of a human hea
 **Meta AI promptu:**
 
 ```text
-A network of branching arteries drawn like old botanical roots, a gentle current of small amber particles winding through them, the camera slowly tracking along. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A network of branching arteries drawn like old botanical roots, a gentle current of small amber particles winding through them, the camera slowly tracking along. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S04 · 0:30–0:40 · 20 kelime
@@ -84,7 +84,7 @@ A network of branching arteries drawn like old botanical roots, a gentle current
 **Meta AI promptu:**
 
 ```text
-An old leather-bound almanac opening on a wooden desk, its blank pages turning by themselves to reveal engraved illustrations of eggs and a heart. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+An old leather-bound almanac opening on a wooden desk, its blank pages turning by themselves to reveal engraved illustrations of eggs and a heart. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Do eggs really raise your cholesterol?`
@@ -98,7 +98,7 @@ An old leather-bound almanac opening on a wooden desk, its blank pages turning b
 **Meta AI promptu:**
 
 ```text
-A detailed anatomical engraving of the human liver, softly glowing amber from within, tiny round particles streaming gently out of it. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A detailed anatomical engraving of the human liver, softly glowing amber from within, tiny round particles streaming gently out of it. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Most of your cholesterol is made by your liver`
@@ -110,7 +110,7 @@ A detailed anatomical engraving of the human liver, softly glowing amber from wi
 **Meta AI promptu:**
 
 ```text
-A microscopic view of round cells with thick outer membranes, small waxy particles slotting into the membranes like bricks into a wall, slow zoom in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A microscopic view of round cells with thick outer membranes, small waxy particles slotting into the membranes like bricks into a wall, slow zoom in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S07 · 1:00–1:10 · 25 kelime
@@ -120,7 +120,7 @@ A microscopic view of round cells with thick outer membranes, small waxy particl
 **Meta AI promptu:**
 
 ```text
-An antique brass balance scale: an engraved liver on one pan, a breakfast plate with an egg on the other, the beam gently tipping and then settling level. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+An antique brass balance scale: an engraved liver on one pan, a breakfast plate with an egg on the other, the beam gently tipping and then settling level. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S08 · 1:10–1:20 · 24 kelime
@@ -130,7 +130,7 @@ An antique brass balance scale: an engraved liver on one pan, a breakfast plate 
 **Meta AI promptu:**
 
 ```text
-A cross-section of the small intestine wall with finger-like villi gently swaying, only some of the drifting amber particles being taken in while the rest float past. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A cross-section of the small intestine wall with finger-like villi gently swaying, only some of the drifting amber particles being taken in while the rest float past. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S09 · 1:20–1:30 · 23 kelime
@@ -140,7 +140,7 @@ A cross-section of the small intestine wall with finger-like villi gently swayin
 **Meta AI promptu:**
 
 ```text
-A circular loop of brass gears and pipes connecting an engraved liver to a breakfast plate, the gears slowing down as more amber particles arrive. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A circular loop of brass gears and pipes connecting an engraved liver to a breakfast plate, the gears slowing down as more amber particles arrive. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S10 · 1:30–1:40 · 22 kelime
@@ -150,7 +150,7 @@ A circular loop of brass gears and pipes connecting an engraved liver to a break
 **Meta AI promptu:**
 
 ```text
-Inside an artery, smooth rounded particles drifting along the vessel, a few of them settling into a soft bulge in the artery wall, slow dolly forward. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Inside an artery, smooth rounded particles drifting along the vessel, a few of them settling into a soft bulge in the artery wall, slow dolly forward. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `LDL`
@@ -162,7 +162,7 @@ Inside an artery, smooth rounded particles drifting along the vessel, a few of t
 **Meta AI promptu:**
 
 ```text
-A slab of butter, a strip of fatty meat and a block of lard on a marble counter beside one small egg, the camera slowly orbiting the group. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A slab of butter, a strip of fatty meat and a block of lard on a marble counter beside one small egg, the camera slowly orbiting the group. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Saturated fat raises LDL more than dietary cholesterol`
@@ -176,7 +176,7 @@ A slab of butter, a strip of fatty meat and a block of lard on a marble counter 
 **Meta AI promptu:**
 
 ```text
-A tall glass measuring cylinder with a single limit line etched near the top, slowly filling with amber liquid poured from a cracked egg until it is mostly full. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A tall glass measuring cylinder with a single limit line etched near the top, slowly filling with amber liquid poured from a cracked egg until it is mostly full. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Old limit: 300 mg/day`
@@ -188,7 +188,7 @@ A tall glass measuring cylinder with a single limit line etched near the top, sl
 **Meta AI promptu:**
 
 ```text
-A home kitchen, a cook's hands separating eggs, the yolks set aside in a bowl and only the whites poured into a frying pan, slow side pan. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A home kitchen, a cook's hands separating eggs, the yolks set aside in a bowl and only the whites poured into a frying pan, slow side pan. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S14 · 2:10–2:20 · 25 kelime
@@ -198,7 +198,7 @@ A home kitchen, a cook's hands separating eggs, the yolks set aside in a bowl an
 **Meta AI promptu:**
 
 ```text
-A long wooden committee table covered with stacked books and papers, a heavy iron chain lying across it slowly coming apart and falling away. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A long wooden committee table covered with stacked books and papers, a heavy iron chain lying across it slowly coming apart and falling away. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `2015: the 300 mg cap was dropped`
@@ -210,7 +210,7 @@ A long wooden committee table covered with stacked books and papers, a heavy iro
 **Meta AI promptu:**
 
 ```text
-Dozens of blank newspaper sheets fluttering through the air like birds around an open egg carton, the camera slowly rising upward. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Dozens of blank newspaper sheets fluttering through the air like birds around an open egg carton, the camera slowly rising upward. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S16 · 2:30–2:40 · 25 kelime
@@ -220,7 +220,7 @@ Dozens of blank newspaper sheets fluttering through the air like birds around an
 **Meta AI promptu:**
 
 ```text
-A wooden garden gate swinging open at dusk while a lantern on the gatepost keeps glowing steadily, slow push-in toward the lantern. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A wooden garden gate swinging open at dusk while a lantern on the gatepost keeps glowing steadily, slow push-in toward the lantern. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `The limit went away. The caution did not.`
@@ -232,7 +232,7 @@ A wooden garden gate swinging open at dusk while a lantern on the gatepost keeps
 **Meta AI promptu:**
 
 ```text
-A large magnifying glass moving slowly across a breakfast plate of eggs, revealing finer engraved detail wherever the lens passes. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A large magnifying glass moving slowly across a breakfast plate of eggs, revealing finer engraved detail wherever the lens passes. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 ### Bölüm 4 · Büyük çalışmalar ne buldu?
@@ -244,7 +244,7 @@ A large magnifying glass moving slowly across a breakfast plate of eggs, reveali
 **Meta AI promptu:**
 
 ```text
-A long winding country road with many small figures walking along it as the trees beside them change from summer to autumn to winter, wide shot. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A long winding country road with many small figures walking along it as the trees beside them change from summer to autumn to winter, wide shot. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S19 · 3:00–3:10 · 24 kelime
@@ -254,7 +254,7 @@ A long winding country road with many small figures walking along it as the tree
 **Meta AI promptu:**
 
 ```text
-Six old wooden filing drawers sliding open one after another, thousands of blank index cards fluttering upward and merging into a single stream. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Six old wooden filing drawers sliding open one after another, thousands of blank index cards fluttering upward and merging into a single stream. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `JAMA 2019 · 6 cohorts · 29,615 adults · 17.5 years`
@@ -266,7 +266,7 @@ Six old wooden filing drawers sliding open one after another, thousands of blank
 **Meta AI promptu:**
 
 ```text
-An antique brass pressure gauge beside a small pile of eggs, its needle slowly rising one small step, warm low light. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+An antique brass pressure gauge beside a small pile of eggs, its needle slowly rising one small step, warm low light. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `+300 mg/day → +17% CVD risk`
@@ -278,7 +278,7 @@ An antique brass pressure gauge beside a small pile of eggs, its needle slowly r
 **Meta AI promptu:**
 
 ```text
-Half an egg in its shell on a saucer, a small brass warning bell hanging above it gently swinging back and forth. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Half an egg in its shell on a saucer, a small brass warning bell hanging above it gently swinging back and forth. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `+½ egg/day → +6% CVD risk`
@@ -290,7 +290,7 @@ Half an egg in its shell on a saucer, a small brass warning bell hanging above i
 **Meta AI promptu:**
 
 ```text
-A vast crowd of small figures in old-fashioned nurse and doctor uniforms standing in rows to the horizon, the camera slowly pulling back to reveal the scale. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A vast crowd of small figures in old-fashioned nurse and doctor uniforms standing in rows to the horizon, the camera slowly pulling back to reveal the scale. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `BMJ 2020 · 215,000+ people · up to 32 years`
@@ -302,7 +302,7 @@ A vast crowd of small figures in old-fashioned nurse and doctor uniforms standin
 **Meta AI promptu:**
 
 ```text
-A single soft-boiled egg in an egg cup on a calm breakfast table, a fine ink heartbeat line moving smoothly and evenly behind it. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A single soft-boiled egg in an egg cup on a calm breakfast table, a fine ink heartbeat line moving smoothly and evenly behind it. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Up to 1 egg/day: no higher risk`
@@ -314,7 +314,7 @@ A single soft-boiled egg in an egg cup on a calm breakfast table, a fine ink hea
 **Meta AI promptu:**
 
 ```text
-Two breakfast trays side by side, one with eggs, fruit and greens, the other with eggs, sausages and fried potatoes, slow overhead pan between them. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Two breakfast trays side by side, one with eggs, fruit and greens, the other with eggs, sausages and fried potatoes, slow overhead pan between them. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S25 · 4:00–4:10 · 26 kelime
@@ -324,7 +324,7 @@ Two breakfast trays side by side, one with eggs, fruit and greens, the other wit
 **Meta AI promptu:**
 
 ```text
-Hands trying to pull apart a tangle of threads that connect an egg, strips of bacon and a butter dish, the threads stubbornly staying linked. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Hands trying to pull apart a tangle of threads that connect an egg, strips of bacon and a butter dish, the threads stubbornly staying linked. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S26 · 4:10–4:20 · 27 kelime
@@ -334,7 +334,7 @@ Hands trying to pull apart a tangle of threads that connect an egg, strips of ba
 **Meta AI promptu:**
 
 ```text
-An old pharmacist's balance holding perfectly steady, two eggs on one pan and a small basket of fruit on the other, slow push-in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+An old pharmacist's balance holding perfectly steady, two eggs on one pan and a small basket of fruit on the other, slow push-in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S27 · 4:20–4:30 · 21 kelime
@@ -344,7 +344,7 @@ An old pharmacist's balance holding perfectly steady, two eggs on one pan and a 
 **Meta AI promptu:**
 
 ```text
-A heavy book with an embossed heart on its cover opening on a wooden lectern under a desk lamp, its blank pages glowing softly. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A heavy book with an embossed heart on its cover opening on a wooden lectern under a desk lamp, its blank pages glowing softly. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `American Heart Association · 2019 advisory`
@@ -356,7 +356,7 @@ A heavy book with an embossed heart on its cover opening on a wooden lectern und
 **Meta AI promptu:**
 
 ```text
-A breakfast table in warm morning light, a younger person's hands beside a plate with one egg and an older person's hands beside a plate with two eggs, slow dolly. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A breakfast table in warm morning light, a younger person's hands beside a plate with one egg and an older person's hands beside a plate with two eggs, slow dolly. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Healthy adults: up to 1 egg/day · Healthy older adults: up to 2`
@@ -370,7 +370,7 @@ A breakfast table in warm morning light, a younger person's hands beside a plate
 **Meta AI promptu:**
 
 ```text
-A long row of identical small figures; about one in every four of them begins to glow amber while the rest stay plain, the camera slowly panning along the row. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A long row of identical small figures; about one in every four of them begins to glow amber while the rest stay plain, the camera slowly panning along the row. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `~1 in 4 people: hyper-responders`
@@ -382,7 +382,7 @@ A long row of identical small figures; about one in every four of them begins to
 **Meta AI promptu:**
 
 ```text
-Two antique brass gauges side by side, both needles rising together at exactly the same pace, gentle warm light. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Two antique brass gauges side by side, both needles rising together at exactly the same pace, gentle warm light. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `LDL ↑  HDL ↑`
@@ -394,7 +394,7 @@ Two antique brass gauges side by side, both needles rising together at exactly t
 **Meta AI promptu:**
 
 ```text
-A doctor's hand placing a small glass sample tube into an old wooden rack, blank calendar pages flipping, then a second tube placed beside the first. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A doctor's hand placing a small glass sample tube into an old wooden rack, blank calendar pages flipping, then a second tube placed beside the first. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S32 · 5:10–5:20 · 21 kelime
@@ -404,7 +404,7 @@ A doctor's hand placing a small glass sample tube into an old wooden rack, blank
 **Meta AI promptu:**
 
 ```text
-An engraved family tree whose branches carry small glowing amber droplets passing down from one generation to the next, slow upward tilt. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+An engraved family tree whose branches carry small glowing amber droplets passing down from one generation to the next, slow upward tilt. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Familial hypercholesterolemia → follow your doctor`
@@ -416,7 +416,7 @@ An engraved family tree whose branches carry small glowing amber droplets passin
 **Meta AI promptu:**
 
 ```text
-A sugar cube and an egg side by side on a dark wooden table, the faint shadow of an anatomical heart appearing behind them, slow push-in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A sugar cube and an egg side by side on a dark wooden table, the faint shadow of an anatomical heart appearing behind them, slow push-in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Type 2 diabetes: the evidence is mixed`
@@ -428,7 +428,7 @@ A sugar cube and an egg side by side on a dark wooden table, the faint shadow of
 **Meta AI promptu:**
 
 ```text
-A sunny kitchen with eucalyptus trees outside the window, a full carton of twelve eggs on the counter, blank calendar pages turning through the seasons. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A sunny kitchen with eucalyptus trees outside the window, a full carton of twelve eggs on the counter, blank calendar pages turning through the seasons. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `DIABEGG trial · 12 eggs/week · 12 months`
@@ -440,7 +440,7 @@ A sunny kitchen with eucalyptus trees outside the window, a full carton of twelv
 **Meta AI promptu:**
 
 ```text
-A plate of eggs with avocado, a drizzle of olive oil, leafy greens and nuts, the camera slowly circling; beside it an antique gauge whose needle stays still. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A plate of eggs with avocado, a drizzle of olive oil, leafy greens and nuts, the camera slowly circling; beside it an antique gauge whose needle stays still. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S36 · 5:50–6:00 · 23 kelime
@@ -450,7 +450,7 @@ A plate of eggs with avocado, a drizzle of olive oil, leafy greens and nuts, the
 **Meta AI promptu:**
 
 ```text
-A large mosaic of a full dinner plate assembling itself tile by tile, the egg only one small tile in the middle, the camera slowly pulling back. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A large mosaic of a full dinner plate assembling itself tile by tile, the egg only one small tile in the middle, the camera slowly pulling back. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 ### Bölüm 6 · Asıl mesele: yumurtanın yanındakiler
@@ -462,7 +462,7 @@ A large mosaic of a full dinner plate assembling itself tile by tile, the egg on
 **Meta AI promptu:**
 
 ```text
-A crowded diner breakfast plate with fried eggs, bacon strips, sausages, buttered white toast and hash browns, steam rising, overhead shot. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A crowded diner breakfast plate with fried eggs, bacon strips, sausages, buttered white toast and hash browns, steam rising, overhead shot. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S38 · 6:10–6:20 · 22 kelime
@@ -472,7 +472,7 @@ A crowded diner breakfast plate with fried eggs, bacon strips, sausages, buttere
 **Meta AI promptu:**
 
 ```text
-Bacon and sausages sizzling in a cast-iron pan while a salt shaker showers heavy salt over them, close-up. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Bacon and sausages sizzling in a cast-iron pan while a salt shaker showers heavy salt over them, close-up. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S39 · 6:20–6:30 · 21 kelime
@@ -482,7 +482,7 @@ Bacon and sausages sizzling in a cast-iron pan while a salt shaker showers heavy
 **Meta AI promptu:**
 
 ```text
-A split scene: on the left an egg frying in a pool of melting butter, on the right an egg gently poaching in simmering water, slow push-in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A split scene: on the left an egg frying in a pool of melting butter, on the right an egg gently poaching in simmering water, slow push-in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S40 · 6:30–6:40 · 21 kelime
@@ -492,7 +492,7 @@ A split scene: on the left an egg frying in a pool of melting butter, on the rig
 **Meta AI promptu:**
 
 ```text
-A cracked egg's yolk and white resting in a clear glass bowl, the yolk glowing a slightly deeper amber, slow rotating close-up. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A cracked egg's yolk and white resting in a clear glass bowl, the yolk glowing a slightly deeper amber, slow rotating close-up. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `1 egg: ~5 g fat · ~1.5 g saturated`
@@ -504,7 +504,7 @@ A cracked egg's yolk and white resting in a clear glass bowl, the yolk glowing a
 **Meta AI promptu:**
 
 ```text
-A sliced boiled egg on a wooden board; delicate engraved symbols of a muscle fiber, a small sun and a human eye float gently upward from it. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A sliced boiled egg on a wooden board; delicate engraved symbols of a muscle fiber, a small sun and a human eye float gently upward from it. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `~6 g protein · choline · vitamin D · lutein`
@@ -516,7 +516,7 @@ A sliced boiled egg on a wooden board; delicate engraved symbols of a muscle fib
 **Meta AI promptu:**
 
 ```text
-Two plates side by side: a poached egg with spinach, tomatoes and whole-grain toast, and fried eggs buried under sausages and fried potatoes, slow pan left to right. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+Two plates side by side: a poached egg with spinach, tomatoes and whole-grain toast, and fried eggs buried under sausages and fried potatoes, slow pan left to right. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 ### Bölüm 7 · Pratikte ne yapmalı?
@@ -528,7 +528,7 @@ Two plates side by side: a poached egg with spinach, tomatoes and whole-grain to
 **Meta AI promptu:**
 
 ```text
-A calm kitchen table with one boiled egg, a bowl of fruit and a glass of water in soft morning light, gentle push-in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A calm kitchen table with one boiled egg, a bowl of fruit and a glass of water in soft morning light, gentle push-in. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `1. Healthy? About one egg a day is reasonable`
@@ -540,7 +540,7 @@ A calm kitchen table with one boiled egg, a bowl of fruit and a glass of water i
 **Meta AI promptu:**
 
 ```text
-A hand lifting strips of bacon off a breakfast plate and replacing them with roasted vegetables and a spoonful of beans beside the eggs. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A hand lifting strips of bacon off a breakfast plate and replacing them with roasted vegetables and a spoonful of beans beside the eggs. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `2. Change what comes with the eggs`
@@ -552,7 +552,7 @@ A hand lifting strips of bacon off a breakfast plate and replacing them with roa
 **Meta AI promptu:**
 
 ```text
-A doctor's wooden desk with a stethoscope, an egg in an egg cup and an open notebook, a hand slowly writing with a fountain pen. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A doctor's wooden desk with a stethoscope, an egg in an egg cup and an open notebook, a hand slowly writing with a fountain pen. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `3. High LDL or diabetes? Ask your doctor`
@@ -564,7 +564,7 @@ A doctor's wooden desk with a stethoscope, an egg in an egg cup and an open note
 **Meta AI promptu:**
 
 ```text
-A wall calendar with blank pages turning from month to month, two small glass sample tubes placed in a rack, one at the start and one at the end. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A wall calendar with blank pages turning from month to month, two small glass sample tubes placed in a rack, one at the start and one at the end. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `Lipid panel: before → after`
@@ -578,7 +578,7 @@ A wall calendar with blank pages turning from month to month, two small glass sa
 **Meta AI promptu:**
 
 ```text
-A single egg standing upright in the middle of a vast engraved landscape of fields, orchards, rivers and grain, the camera pulling far back. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+A single egg standing upright in the middle of a vast engraved landscape of fields, orchards, rivers and grain, the camera pulling far back. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 #### S48 · 7:50–8:00 · 22 kelime
@@ -588,7 +588,7 @@ A single egg standing upright in the middle of a vast engraved landscape of fiel
 **Meta AI promptu:**
 
 ```text
-The old leather-bound almanac from the opening slowly closing on a wooden desk beside a single egg, the lamp light gently dimming. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape, no text, no letters, no numbers, no logos.
+The old leather-bound almanac from the opening slowly closing on a wooden desk beside a single egg, the lamp light gently dimming. Vintage 19th-century science-book engraving brought to life: fine black cross-hatched ink lines on warm cream paper, muted sepia tones with soft egg-yolk amber accents, slow smooth camera movement, soft even lighting, 16:9 landscape. Exactly 10 seconds, one continuous shot with no cuts. Silent b-roll for a voiceover added later: no dialogue, no narration, no one speaking, no lip movement, no music, no sound. No text, no letters, no numbers, no subtitles, no logos.
 ```
 
 **Ekran yazısı:** `The Food Almanac`
