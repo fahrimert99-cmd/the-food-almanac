@@ -1,0 +1,603 @@
+{
+  "slug": "eggs-and-cholesterol",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Eggs and Cholesterol: What an Egg a Day Really Does to Your Heart",
+  "aciklama_giris": "Do eggs really raise your cholesterol? A little, in trials: more eggs raised LDL cholesterol by about 5.6 milligrams per deciliter on average. But in large Harvard cohorts following more than 215,000 health professionals, up to one egg a day was not linked with more heart disease or stroke, while another pooled analysis found a small link. The evidence is observational and not fully settled.\n\nIn this video we look at dietary versus blood cholesterol, why U.S. guidelines dropped the 300 milligram limit, what the meta-analyses and cohort studies show, the 2019 American Heart Association advisory, why some people respond more than others, what we know about people with diabetes, and what eggs are usually eaten with.",
+  "kaynaklar": [
+    "Drouin-Chartier JP, Chen S, Li Y, et al. Egg consumption and risk of cardiovascular disease: three large prospective US cohort studies, systematic review, and updated meta-analysis. BMJ. 2020;368:m513. doi:10.1136/bmj.m513.",
+    "Zhong VW, Van Horn L, Cornelis MC, et al. Associations of dietary cholesterol or egg consumption with incident cardiovascular disease and mortality. JAMA. 2019;321(11):1081-1095. doi:10.1001/jama.2019.1572. PMID 30874756.",
+    "Rouhani MH, Rashidi-Pourfard N, Salehi-Abargouei A, Karimi M, Haghighatdoost F. Effects of egg consumption on blood lipids: a systematic review and meta-analysis of randomized clinical trials. J Am Coll Nutr. 2018;37(2):99-110. doi:10.1080/07315724.2017.1366878. PMID 29111915.",
+    "Vincent MJ, Allen B, Palacios OM, Haber LT, Maki KC. Meta-regression analysis of the effects of dietary cholesterol intake on LDL and HDL cholesterol: an update. Am J Clin Nutr. 2019;109(1):7-16. doi:10.1093/ajcn/nqy273. PMID 30596814.",
+    "Fernandez ML. Dietary cholesterol provided by eggs and plasma lipoproteins in healthy populations. Curr Opin Clin Nutr Metab Care. 2006;9(1):8-12. doi:10.1097/01.mco.0000171152.51034.bf. PMID 16340654.",
+    "Fuller NR, Sainsbury A, Caterson ID, et al. Effect of a high-egg diet on cardiometabolic risk factors in people with type 2 diabetes: the Diabetes and Egg (DIABEGG) Study, randomized weight-loss and follow-up phase. Am J Clin Nutr. 2018;107(6):921-931. PMID 29741558.",
+    "Carson JAS, Lichtenstein AH, Anderson CAM, et al. Dietary cholesterol and cardiovascular risk: a science advisory from the American Heart Association. Circulation. 2020;141(3):e39-e53. doi:10.1161/CIR.0000000000000743.",
+    "U.S. Department of Agriculture and U.S. Department of Health and Human Services. Dietary Guidelines for Americans 2015-2020 and the 2015 Dietary Guidelines Advisory Committee Scientific Report (dietary cholesterol).",
+    "U.S. Department of Agriculture. FoodData Central: Egg, whole, raw, fresh (cholesterol content)."
+  ],
+  "kapak": {
+    "satirlar": [
+      "EGGS",
+      "AND YOUR",
+      "CHOLESTEROL"
+    ],
+    "serit": "What the studies show",
+    "vurgu": "1 EGG",
+    "vurgu_alt": "a day: no clear link",
+    "gorsel": "three big brown and white eggs, one cracked open with a golden yolk, grouped tightly and overlapping, very large and close up, with a small red heart symbol tucked behind them"
+  },
+  "kahraman": "eggs",
+  "etiketler": [
+    "eggs",
+    "cholesterol",
+    "are eggs bad for cholesterol",
+    "how many eggs a day",
+    "eggs and heart disease",
+    "ldl cholesterol",
+    "dietary cholesterol",
+    "nutrition science",
+    "heart health",
+    "type 2 diabetes"
+  ],
+  "seslendirme_duzelt": {
+    "BMJ": "B M J",
+    "LDL": "L D L",
+    "HDL": "H D L",
+    "JAMA": "JAMA",
+    "DASH": "dash",
+    "DIABEGG": "dye a beg"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "One egg a day, 32 years",
+      "metin": "If you eat eggs most mornings, here is something worth knowing. Harvard researchers followed more than 215,000 nurses and other health professionals for up to 32 years. Those who ate at least one egg a day had no clear extra risk of heart disease or stroke.",
+      "gorsel": "a wooden bowl heaped with brown and white eggs, one cracked egg with a golden yolk in the foreground, soft morning light from a kitchen window",
+      "etiket": "Drouin-Chartier et al. · BMJ · 2020",
+      "baslik": {
+        "satirlar": [
+          "EGGS,",
+          "32 YEARS"
+        ],
+        "vurgu": "215,000",
+        "not": "people followed"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "That is 14,806 heart attacks, heart disease deaths and strokes counted along the way. And yet, a different large study pointed the other way.",
+      "gorsel": "a stack of old paper record folders tied with string beside a wire basket of eggs, an antique magnifying glass resting on top",
+      "baslik": {
+        "satirlar": [
+          "TWO STUDIES,",
+          "TWO ANSWERS"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "So who is right? Eggs are rich in cholesterol, yet your doctor may also tell you that eggs are fine. Both can be true, and this video explains why.",
+      "gorsel": "a single egg in a white egg cup on a wooden table, a second egg beside it cracked open, a silver spoon, calm morning light"
+    },
+    {
+      "id": 4,
+      "metin": "By the end, you'll know how many eggs the research supports, who should be more careful, and why the rest of the plate matters. There is one detail about that in the practical part.",
+      "gorsel": "a breakfast plate with two fried eggs, a slice of toast and a few sliced tomatoes on a linen cloth, a fork and knife beside it"
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "Welcome to The Food Almanac. Let's start with a simple question: what is cholesterol, and where does it come from?",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Eggs and Cholesterol",
+        "alt": "What an egg a day really does"
+      }
+    },
+    {
+      "id": 6,
+      "bolum": "Two kinds of cholesterol",
+      "metin": "Cholesterol is a waxy substance your body needs. It builds the walls of every cell, and it is used to make hormones and vitamin D.",
+      "gorsel": "a simple textbook engraving of a single cell membrane, small pale golden waxy droplets in its wall, a cracked egg and a sunlit window beside it"
+    },
+    {
+      "id": 7,
+      "metin": "Much of it is made by your own liver. Some comes from food. That food share is called dietary cholesterol, and it is found only in animal foods, such as eggs, meat and dairy.",
+      "gorsel": "a liver drawn as a simple textbook engraving beside a plate with eggs, a slice of cheese and a small piece of meat, dashed lines joining them",
+      "baslik": {
+        "satirlar": [
+          "YOUR LIVER",
+          "MAKES MUCH"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "metin": "A large egg has about 185 milligrams of dietary cholesterol. That is a lot compared with most foods, and it is why eggs got their reputation.",
+      "gorsel": "a single large egg cracked open with its yolk resting on a small plate, beside it the empty shell halves and two whole eggs",
+      "baslik": {
+        "satirlar": [
+          "185 MG",
+          "PER LARGE EGG"
+        ]
+      },
+      "etiket": "USDA FoodData Central"
+    },
+    {
+      "id": 9,
+      "metin": "Blood cholesterol is something else. It is the cholesterol travelling through your bloodstream in particles. LDL particles are the ones doctors worry about, because too many of them can build up in artery walls.",
+      "gorsel": "a tube-shaped vessel with small red discs and round pale particles drifting along, a plaque of yellow deposit narrowing the wall, textbook engraving",
+      "baslik": {
+        "satirlar": [
+          "LDL",
+          "THE ONE TO WATCH"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "metin": "So the real question is this. When you eat cholesterol, does your blood cholesterol rise? And if it does, does that mean more heart disease? Those are two different questions.",
+      "gorsel": "two eggs on the left connected by a long curved dashed line to a tube-shaped vessel with small red discs on the right, a question mark shaped like a hook of rope",
+      "baslik": {
+        "satirlar": [
+          "TWO QUESTIONS"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "metin": "For decades, doctors assumed the answer to both was yes. As recently as 2010, U.S. guidelines said to stay under 300 milligrams of cholesterol a day.",
+      "gorsel": "an antique clock face beside a carton of eggs and a small brass kitchen scale, vintage kitchen shelf with jars",
+      "etiket": "Dietary Guidelines for Americans · 2010"
+    },
+    {
+      "id": 12,
+      "metin": "A single large egg uses up more than half of that limit. That is why, for a generation, people ate egg white omelets and skipped the yolk.",
+      "gorsel": "an omelet pan with a fluffy white egg omelet, a bowl of discarded yolks and eggshell halves beside it, wooden spoon"
+    },
+    {
+      "id": 13,
+      "tip": "kart",
+      "metin": "Then the guidelines changed. Why?",
+      "kart": {
+        "ust": "A BIG REVERSAL",
+        "baslik": "The limit disappears",
+        "alt": "U.S. guidelines · 2015"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "In 2015, the committee that advises the U.S. government on diet reviewed the evidence. Its report said cholesterol is not a nutrient of concern for overconsumption, and the final guidelines no longer carried the 300 milligram limit.",
+      "gorsel": "a formal round table with a stack of binders, a pitcher of water and a basket of eggs in the center, tall window",
+      "baslik": {
+        "satirlar": [
+          "2015",
+          "NO MORE LIMIT"
+        ]
+      },
+      "etiket": "U.S. Dietary Guidelines · 2015"
+    },
+    {
+      "id": 15,
+      "metin": "The committee said the evidence showed no appreciable relationship between the cholesterol people eat and the cholesterol in their blood.",
+      "gorsel": "a measuring cup and a brass kitchen scale beside two eggs, a pencil lying across an open blank notebook"
+    },
+    {
+      "id": 16,
+      "metin": "But here is the part that headlines skipped. The guidelines also said the change does not mean dietary cholesterol no longer matters for a healthy eating pattern.",
+      "gorsel": "a plate of eggs with vegetables seen from above on a wooden table, a pair of reading glasses lying beside it"
+    },
+    {
+      "id": 17,
+      "metin": "And newer reviews found the opposite of no effect. Blood cholesterol does respond to what you eat, only the effect is smaller than people once thought.",
+      "gorsel": "a pair of balance scales, one pan holding eggs and the other holding a small pile of pale round particles, nearly level",
+      "baslik": {
+        "satirlar": [
+          "A SMALL",
+          "BUT REAL EFFECT"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "bolum": "What eggs do to LDL",
+      "tip": "kart",
+      "metin": "That brings us to the evidence itself. Let's begin with the trials that measured blood cholesterol directly.",
+      "kart": {
+        "ust": "THE TRIALS",
+        "baslik": "What eggs do to LDL",
+        "alt": "Randomized trials · blood cholesterol"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "Researchers pooled 28 randomized trials in which people ate more eggs, and compared them with people on other diets. The more-egg groups ended up with LDL cholesterol about 5.6 milligrams per deciliter higher.",
+      "gorsel": "a row of three glass jars filled with pale round particles to slightly different heights, eggs set in front of two of the jars",
+      "etiket": "Rouhani et al. · J Am Coll Nutr · 2018",
+      "baslik": {
+        "satirlar": [
+          "+5.6 MG/DL",
+          "LDL"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "metin": "Their HDL, the so-called good cholesterol, rose too, by about 2.1 milligrams per deciliter. The ratio of the two, which doctors often use as a guide to risk, did not clearly change.",
+      "gorsel": "a balanced seesaw with a few pale round particles on one end and a few golden round particles on the other, an egg as the pivot",
+      "baslik": {
+        "satirlar": [
+          "HDL ROSE",
+          "TOO"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "A second analysis looked at 55 studies with 2,652 people. For every extra 100 milligrams of dietary cholesterol a day, LDL rose by roughly 2 to 4.5 milligrams per deciliter, depending on how the data were modeled.",
+      "gorsel": "an open ledger book with blank ruled columns, a stack of eggs, and a small brass weighing scale",
+      "etiket": "Vincent et al. · Am J Clin Nutr · 2019"
+    },
+    {
+      "id": 22,
+      "metin": "So in a typical person, one extra egg a day nudges LDL up by a few milligrams per deciliter. That is real, but small.",
+      "gorsel": "a single egg on a small pedestal beside a short stone step, soft light",
+      "baslik": {
+        "satirlar": [
+          "SMALL,",
+          "BUT REAL"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "tip": "kart",
+      "metin": "Still, not everyone responds the same way, and that is the next part of the story.",
+      "kart": {
+        "ust": "INDIVIDUAL DIFFERENCES",
+        "baslik": "Not everyone responds alike",
+        "alt": "Hyper-responders"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "In one review, researchers estimated that about seventy percent of people show only a mild rise, or none, in blood cholesterol when they eat more dietary cholesterol. The remaining group is sometimes called hyper-responders.",
+      "gorsel": "a crowd of small figures drawn as simple silhouettes in a field, a few standing apart near a basket of eggs, engraving style",
+      "etiket": "Fernandez · Curr Opin Clin Nutr Metab Care · 2006",
+      "baslik": {
+        "satirlar": [
+          "ABOUT 70%",
+          "MILD OR NONE"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Hyper-responders see a bigger rise. But the same review reported that much of it goes into large LDL particles, which are thought to be less harmful than small ones.",
+      "gorsel": "two glass jars, one with large smooth pale spheres and one with small pale grains, an egg set between them",
+      "baslik": {
+        "satirlar": [
+          "LARGE",
+          "LDL PARTICLES"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Whether that makes the extra LDL harmless is still debated, so this is not a free pass. It is one more reason why your own blood test matters more than any average.",
+      "gorsel": "a clinical laboratory bench with capped sample tubes in a rack, a few eggs in a bowl beside a small notebook"
+    },
+    {
+      "id": 27,
+      "bolum": "Eggs and heart disease",
+      "tip": "kart",
+      "metin": "Which brings up the big question. Does a small bump in LDL turn into more heart attacks? For that, we need studies that followed people for years.",
+      "kart": {
+        "ust": "THE LONG-TERM STUDIES",
+        "baslik": "Heart disease in the data",
+        "alt": "Cohorts · 32 years"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "The Harvard study we started with used three large cohorts. 83,349 women in the Nurses' Health Study, 90,214 women in its second study, and 42,055 men in the Health Professionals study. All were free of heart disease and diabetes at the start.",
+      "gorsel": "a long wooden table with a stack of paper questionnaires, a pen, a cup of tea and a basket of eggs, afternoon light",
+      "etiket": "Drouin-Chartier et al. · BMJ · 2020"
+    },
+    {
+      "id": 29,
+      "metin": "Every few years, they answered detailed questions about what they ate. Researchers then counted who developed heart disease or stroke. Compared with people who ate fewer than one egg a month, those eating one egg a day or more had about seven percent lower risk, a difference that could easily be chance.",
+      "gorsel": "a calendar page with no writing on it beside a bowl of eggs, a pocket watch and a pencil, vintage desk",
+      "baslik": {
+        "satirlar": [
+          "AT LEAST",
+          "1 EGG A DAY"
+        ],
+        "vurgu": "HR 0.93",
+        "not": "difference not statistically significant"
+      }
+    },
+    {
+      "id": 30,
+      "tip": "grafik",
+      "metin": "The team also combined this with earlier studies, in total 1.7 million people. For each extra egg a day, the pooled risk of heart disease was about the same, with a risk ratio of 0.98.",
+      "grafik": {
+        "baslik": "Heart disease risk per extra egg a day",
+        "alt": "Risk ratio · 1.0 means no difference",
+        "cubuklar": [
+          {
+            "etiket": "All studies",
+            "deger": 0.98,
+            "metin": "0.98"
+          },
+          {
+            "etiket": "US",
+            "deger": 1.01,
+            "metin": "1.01"
+          },
+          {
+            "etiket": "Europe",
+            "deger": 1.05,
+            "metin": "1.05"
+          },
+          {
+            "etiket": "Asia",
+            "deger": 0.92,
+            "metin": "0.92"
+          }
+        ],
+        "kaynak": "Drouin-Chartier et al., BMJ 2020 · meta-analysis, 1.7 million people, 139,195 events"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "Look at the regions. In the United States, the ratio was 1.01, in Europe 1.05, and in Asia 0.92. Only the Asian result was below 1 by more than chance, and the difference between regions was not clear-cut.",
+      "gorsel": "a vintage world map engraving without any writing, three small clusters of eggs placed on three regions, simple compass rose"
+    },
+    {
+      "id": 32,
+      "metin": "The authors concluded that up to one egg a day was not linked with heart disease risk in the general population. That is an association, not proof, but it is a large and long one.",
+      "gorsel": "a single egg on a small stack of heavy books in a sunlit library, a brass reading lamp beside it"
+    },
+    {
+      "id": 33,
+      "tip": "kart",
+      "metin": "Now the study that pointed the other way.",
+      "kart": {
+        "ust": "THE OTHER STUDY",
+        "baslik": "A different answer",
+        "alt": "JAMA · 2019"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "In 2019, American researchers pooled six American cohorts, 29,615 people followed for a median of 17.5 years. They asked how dietary cholesterol and eggs related to heart disease.",
+      "gorsel": "a university lecture hall seen from the front with empty wooden benches, a table with a bowl of eggs and a stack of binders",
+      "etiket": "Zhong et al. · JAMA · 2019"
+    },
+    {
+      "id": 35,
+      "metin": "For every extra 300 milligrams of dietary cholesterol a day, about one and a half eggs, the risk of heart disease and stroke was 17 percent higher. For half an egg a day, it was 6 percent higher.",
+      "gorsel": "one and a half eggs laid on a small wooden board beside a pocket calculator with a blank screen and a pen",
+      "baslik": {
+        "satirlar": [
+          "HALF AN EGG",
+          "MORE A DAY"
+        ],
+        "vurgu": "+6%",
+        "not": "heart disease risk, association"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "The authors concluded that eating more cholesterol or eggs was linked with a higher risk. But in absolute terms the numbers were small, about one extra case for every hundred people over the whole follow-up from half an egg a day.",
+      "gorsel": "a hundred small round pebbles in a glass dish with one painted gold, an egg beside the dish"
+    },
+    {
+      "id": 37,
+      "metin": "So how do two big studies disagree? The honest answer is that nobody knows for certain, but several things stand out.",
+      "gorsel": "two doors in a stone wall, one slightly ajar, a few eggs resting on the threshold",
+      "baslik": {
+        "satirlar": [
+          "WHY THEY",
+          "DISAGREE"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "First, both are observational. They can show a link, but not a cause. Second, people who eat more eggs may eat differently in other ways. In the Harvard data, adjusting for lifestyle and diet moved the risk estimate from about 10 percent higher to about 7 percent lower.",
+      "gorsel": "two plates, one with eggs and bacon with white toast and the other with eggs and vegetables, set on a checkered table",
+      "baslik": {
+        "satirlar": [
+          "ADJUSTING",
+          "CHANGED IT"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "And third, in the JAMA analysis, the link with eggs disappeared once dietary cholesterol was accounted for, which suggests the cholesterol in eggs may be what drives the link. That fits the small LDL effect we saw in trials.",
+      "gorsel": "a quiet research desk with a magnifying glass over a cracked egg, a notebook with blank pages and a fountain pen"
+    },
+    {
+      "id": 40,
+      "metin": "The fair reading is that eggs probably carry a small effect, easy to see in blood tests, and hard to see in heart disease. That is why the American Heart Association summed it up in a late 2019 advisory.",
+      "gorsel": "a balance scale with a single egg on one side and a small bundle of vegetables on the other, level, soft studio light"
+    },
+    {
+      "id": 41,
+      "metin": "That advisory said guidance should focus on overall healthy eating patterns, such as the Mediterranean and DASH diets, which are naturally low in cholesterol. A specific daily cholesterol target, it said, is hard to apply.",
+      "gorsel": "a Mediterranean table with a bowl of olives, a plate of grilled fish, vegetables, whole grain bread and a couple of boiled eggs",
+      "etiket": "Carson et al. · Circulation · 2020",
+      "baslik": {
+        "satirlar": [
+          "PATTERNS,",
+          "NOT NUMBERS"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "bolum": "Who should be more careful",
+      "tip": "kart",
+      "metin": "Next, the group where the question matters most.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Who should be careful",
+        "alt": "Diabetes · high LDL · heart disease"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "People with type 2 diabetes have a higher baseline risk of heart disease, so any small effect counts for more. In the Harvard cohorts, the hazard for people with diabetes eating at least an egg a day was 1.06, with a wide margin of error.",
+      "gorsel": "a glucose meter with a blank screen beside a plate of boiled eggs and a small salad, a folded napkin",
+      "baslik": {
+        "satirlar": [
+          "TYPE 2",
+          "DIABETES"
+        ]
+      },
+      "etiket": "Drouin-Chartier et al. · BMJ · 2020"
+    },
+    {
+      "id": 44,
+      "metin": "The pooled analysis hinted at higher risk with more eggs, a ratio of 1.25 per egg a day, but the range included no effect, and the studies were quite inconsistent with one another. So the question is open, not settled.",
+      "gorsel": "a closed notebook, an open question mark drawn as a curl of ribbon and two eggs on a wooden desk",
+      "baslik": {
+        "satirlar": [
+          "OPEN,",
+          "NOT SETTLED"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "What happens in a trial? The DIABEGG study randomized 128 adults with prediabetes or type 2 diabetes to a high-egg diet of at least 12 eggs a week, or a low-egg diet with fewer than 2, during a weight-loss program.",
+      "gorsel": "a refrigerator shelf with two egg cartons, one nearly full and one almost empty, a blank clipboard hanging on the door",
+      "etiket": "Fuller et al. · Am J Clin Nutr · 2018",
+      "baslik": {
+        "satirlar": [
+          "12 EGGS",
+          "A WEEK"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "By the end of follow-up, there were no differences between the groups in blood sugar, cholesterol or inflammation markers. Both groups lost the same amount of weight, about 3 kilograms.",
+      "gorsel": "a tape measure curled beside a plate of poached eggs and green vegetables on a white tablecloth",
+      "baslik": {
+        "satirlar": [
+          "NO DIFFERENCE",
+          "IN THE TRIAL"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "That is reassuring, though it is one modest trial in people losing weight on a low saturated fat diet. It does not mean eggs are right for everyone with diabetes.",
+      "gorsel": "a small consultation desk with a stethoscope, a closed folder and a plate holding a boiled egg"
+    },
+    {
+      "id": 48,
+      "metin": "If you already have heart disease, very high LDL, or a family history of high cholesterol, the right number of eggs is a question for your doctor. This video can't answer it for you.",
+      "gorsel": "an examination room with a cushioned chair, a stethoscope on a hook and a bowl of eggs on a side table",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "DOCTOR"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "bolum": "How to use this",
+      "tip": "kart",
+      "metin": "Now let's turn all of this into something practical.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Eggs on the plate",
+        "alt": "Five practical ideas"
+      }
+    },
+    {
+      "id": 50,
+      "metin": "One. For most healthy adults, up to one egg a day fits the evidence. That is what the large Harvard study looked at. If you eat more, or eat several a day, check your cholesterol numbers.",
+      "gorsel": "a single boiled egg in an egg cup beside a slice of whole grain toast and a small pat of butter, window light"
+    },
+    {
+      "id": 51,
+      "metin": "Two. Look at what is next to the eggs. This is the detail I mentioned earlier. Eggs are often served with bacon, sausage, butter and white toast, and those add saturated fat. The American Heart Association advisory stresses the whole eating pattern, not one food.",
+      "gorsel": "a breakfast plate with eggs, bacon, sausage and buttered white toast on the left, and eggs with vegetables on the right, a dashed divider",
+      "baslik": {
+        "satirlar": [
+          "WHAT SITS",
+          "NEXT TO IT"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "Three. Swap the sides instead of skipping the eggs. Scrambled eggs with spinach and tomatoes, an omelet with mushrooms, or a boiled egg on whole grain toast are all good patterns.",
+      "gorsel": "an omelet filled with spinach and mushrooms, a bowl of cherry tomatoes and a slice of whole grain toast, eggs in a basket behind"
+    },
+    {
+      "id": 53,
+      "metin": "Four. Cook with olive oil or a little vegetable oil rather than a lot of butter or bacon fat. Poaching and boiling add no fat at all.",
+      "gorsel": "a small pot of water with a poached egg lifted on a slotted spoon, a bottle of olive oil beside a bowl of eggs"
+    },
+    {
+      "id": 54,
+      "metin": "Five. Know your own numbers. If your LDL is high, or you take a statin or other medicine, keep taking it and talk to your doctor before changing how many eggs you eat.",
+      "gorsel": "a laboratory bench with a rack of capped sample tubes and a bowl of eggs, a doctor's clipboard with blank pages",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "Remember, eggs are one food in a whole diet. The advisory points to patterns rich in vegetables, whole grains, nuts, lean proteins and liquid vegetable oils, which are naturally low in cholesterol.",
+      "gorsel": "a table spread with a bowl of oats, a dish of beans, a handful of nuts, a grilled fish and a few eggs, seen from above"
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Eggs and cholesterol",
+        "alt": "The honest answer"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Eggs do contain cholesterol, about 185 milligrams each. In trials, eating more eggs raises LDL by a few milligrams per deciliter on average, though some people respond more than others.",
+      "gorsel": "a single egg beside a small glass jar of pale round particles, a tube-shaped vessel with small red discs behind them"
+    },
+    {
+      "id": 58,
+      "metin": "In large studies, up to one egg a day is not linked with more heart disease or stroke in the general population. One big pooled analysis found a small link, so the question is not fully closed.",
+      "gorsel": "two stacks of research papers, a bowl of eggs between them, calm reading lamp light"
+    },
+    {
+      "id": 59,
+      "metin": "What you eat with eggs, and your overall diet, may matter as much as the egg itself. And if you have diabetes, high LDL, or heart disease, ask your doctor what is right for you.",
+      "gorsel": "a breakfast plate with a boiled egg, vegetables and whole grain toast on a wooden table, morning sunlight"
+    },
+    {
+      "id": 60,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
