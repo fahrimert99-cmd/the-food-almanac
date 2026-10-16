@@ -33,7 +33,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 
 | İş | Ne kullanılır |
 |---|---|
-| Claude | Önce `CLAUDE_ANA_TOKEN`, kota/yetki hatasında `CLAUDE_CODE_OAUTH_TOKEN` (yedek); `araclar/claude_calistir.sh`. OAuth token abonelik kotası kullanır; `sk-ant-api...` anahtarı kredi harcar. |
+| Claude | Önce `CLAUDE_ANA_TOKEN`, kota/yetki hatasında `CLAUDE_CODE_OAUTH_TOKEN` (yedek); `araclar/claude_calistir.sh`. İkisi de abonelik kotası; `sk-ant-api...` API anahtarları kredi harcamamak için atlanır. |
 | Gemini | `GEMINI_API_KEY` ücretsiz katman (faturalandırma kapalı). Claude kotası bitince devralır. |
 | Görsel | NVIDIA ücretsiz API |
 | Ses | Kokoro "Michael" (yerel, açık kaynak; ilk iki video Piper ile) |

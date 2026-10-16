@@ -30,7 +30,7 @@ Ayrıntılı kullanım için: **[uzun_en/README.md](uzun_en/README.md)**
 | Secret | Ne için |
 |---|---|
 | `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` | YouTube'a yükleme. Değerler bir kez `python3 uzun_en/araclar/token_al.py` ile alınır. |
-| `CLAUDE_ANA_TOKEN` | Claude ana anahtarı (önce bu denenir). OAuth token ise abonelik kotası, `sk-ant-api...` ise API kredisi kullanır. |
+| `CLAUDE_ANA_TOKEN` | Claude ana anahtarı (önce bu denenir). Diğer hesapta `claude setup-token` ile alınan OAuth token (abonelik kotası). API anahtarı kabul edilmez. |
 | `CLAUDE_CODE_OAUTH_TOKEN` | Claude yedek anahtarı: ana anahtarın kotası/yetkisi biterse senaryo, doğrulama ve sahne ajanları bununla sürer. |
 | `GEMINI_API_KEY` | Claude kotası biterse yedek ajan (ücretsiz katman) |
 | `NVIDIA_API_KEY` | Gravür görselleri (ücretsiz) |

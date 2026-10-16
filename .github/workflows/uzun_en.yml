@@ -8,7 +8,7 @@ name: Uzun Video EN (The Food Almanac, otonom)
 #
 # KREDİ HARCANMAZ:
 #   Claude -> önce CLAUDE_ANA_TOKEN, kotası/yetkisi biterse CLAUDE_CODE_OAUTH_TOKEN (yedek) — uzun_en/araclar/claude_calistir.sh.
-#             OAuth token (claude setup-token) abonelik kotası kullanır; "sk-ant-api..." anahtarı ise API kredisi harcar.
+#             İkisi de OAuth token (claude setup-token, abonelik kotası). API anahtarı (sk-ant-api...) verilse bile kullanılmaz.
 #   Gemini -> GEMINI_API_KEY ücretsiz katman (faturalandırma kapalı proje). Claude kotası biterse devralır.
 #   Görsel -> NVIDIA_API_KEY (ücretsiz). Ses -> Piper (yerel, açık kaynak). Müzik -> kodla üretilir.
 # Ayarlar (Settings > Variables, isteğe bağlı): UZUN_CLAUDE_MODEL (ör. opus / sonnet; boş = CLI varsayılanı),
