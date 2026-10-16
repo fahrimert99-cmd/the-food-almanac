@@ -6,7 +6,7 @@
 # Her token kota/yetki hatasında sıradakine geçer; başarısız token aynı job içinde tekrar denenmez.
 set -u
 BITTI=/tmp/claude_bitti
-LIMIT='usage limit|limit reached|hit your limit|limit will reset|rate.?limit|credit balance|quota|insufficient|invalid (api key|bearer|x-api-key)|authentication|unauthori[sz]ed|oauth token|token (has )?expired|/login|\b(401|403|429)\b'
+LIMIT="usage[[:space:]]+limit|limit[[:space:]]+reached|hit[[:space:]]+your|you('ve| have)?[[:space:]]+hit|weekly[[:space:]]+limit|daily[[:space:]]+limit|limit[[:space:]]+will[[:space:]]+reset|rate.?limit|credit[[:space:]]+balance|quota|insufficient|invalid[[:space:]]+(api[[:space:]]+key|bearer|x-api-key)|authentication|unauthori[sz]ed|oauth[[:space:]]+token|token[[:space:]]+(has[[:space:]]+)?expired|/login|\b(401|403|429)\b"
 
 temizle() { printf '%s' "$1" | tr -d '[:space:]'; }
 ANA=$(temizle "${CLAUDE_ANA:-}"); YEDEK=$(temizle "${CLAUDE_YEDEK:-}"); YEDEK2=$(temizle "${CLAUDE_YEDEK2:-}")
@@ -29,7 +29,7 @@ for pair in "ANA:$ANA" "YEDEK:$YEDEK" "YEDEK2:$YEDEK2"; do
   isim=${pair%%:*}; k=${pair#*:}
   [ -n "$k" ] || continue
   [ -f "/tmp/claude_${isim}_bitti" ] && continue
-  echo "Claude: $isim tokenı"
+  echo "Claude: $isim tokenı (fallback slot)"
   calistir "$k" "$@" 2>&1 | tee "$LOG"; RC=${PIPESTATUS[0]}
   [ "$RC" -eq 0 ] && { rm -f "$LOG"; exit 0; }
   if ! tail -n 40 "$LOG" | grep -qiE "$LIMIT"; then rm -f "$LOG"; exit "$RC"; fi
