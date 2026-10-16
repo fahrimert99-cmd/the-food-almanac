@@ -1,0 +1,21 @@
+{
+  "experiment": "claude-suz-food-order-short",
+  "source_project": "food-order-blood-sugar",
+  "claude_used": false,
+  "renderer": "HyperFrames 0.8.164",
+  "voice": "Charon via Manus speech generation",
+  "aspect_ratio": "9:16",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration_seconds": 62.32,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "lint_errors": 0,
+  "lint_warnings": 10,
+  "render_seconds": 98.8,
+  "notes": [
+    "Warnings are non-blocking: stable Studio IDs, nested section structure, and narration is muxed after the silent render.",
+    "The source channel video and its Claude-generated assets were not modified."
+  ]
+}

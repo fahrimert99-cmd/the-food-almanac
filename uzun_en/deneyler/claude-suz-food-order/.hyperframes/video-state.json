@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "historyId": "cf64f773-4223-473b-8c44-7222dc7676e4",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "README.md": {
+      "hash": "f352c875d387a855b145d5ac343e6fe8375db5ed32c65b51a59b27f98a599432",
+      "content": "/home/ubuntu/.cache/hyperframes/history/cf64f773-4223-473b-8c44-7222dc7676e4/blobs/f3/f352c875d387a855b145d5ac343e6fe8375db5ed32c65b51a59b27f98a599432"
+    },
+    "assets/cover.jpg": {
+      "hash": "1f151f10d18c5ef1dbb5e2edc2317df306c31bcb9dc1220c8a7838237850a15b",
+      "content": "/home/ubuntu/.cache/hyperframes/history/cf64f773-4223-473b-8c44-7222dc7676e4/blobs/1f/1f151f10d18c5ef1dbb5e2edc2317df306c31bcb9dc1220c8a7838237850a15b"
+    },
+    "index.html": {
+      "hash": "4e8086afd08155f1535748a17269834f651b3d8a95b150879dbf05050210fa67",
+      "content": "/home/ubuntu/.cache/hyperframes/history/cf64f773-4223-473b-8c44-7222dc7676e4/blobs/4e/4e8086afd08155f1535748a17269834f651b3d8a95b150879dbf05050210fa67"
+    },
+    "narration.txt": {
+      "hash": "9a0114504ef505c89b906dffb3da98165b431c3e8a2e08c38cd8bcb0616df917",
+      "content": "/home/ubuntu/.cache/hyperframes/history/cf64f773-4223-473b-8c44-7222dc7676e4/blobs/9a/9a0114504ef505c89b906dffb3da98165b431c3e8a2e08c38cd8bcb0616df917"
+    },
+    "out/lint.json": {
+      "hash": "37041c4a93ecc0afeafdf2e07fd85ecc9edb9f0fa12401e6ea7e665eba4f769c",
+      "content": "/home/ubuntu/.cache/hyperframes/history/cf64f773-4223-473b-8c44-7222dc7676e4/blobs/37/37041c4a93ecc0afeafdf2e07fd85ecc9edb9f0fa12401e6ea7e665eba4f769c"
+    },
+    "narration.wav": {
+      "hash": "25fcc22f187cd988c9e4eea9210596cbb15481907df5b0f393a644d687cefcc7",
+      "content": "/home/ubuntu/.cache/hyperframes/history/cf64f773-4223-473b-8c44-7222dc7676e4/blobs/25/25fcc22f187cd988c9e4eea9210596cbb15481907df5b0f393a644d687cefcc7"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "9cf257f7-d6d0-46af-a850-4b8e47cb308f",
+      "completedAt": 1792164011504,
+      "output": "/home/ubuntu/the-food-almanac/uzun_en/deneyler/claude-suz-food-order/out/video_silent.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}
