@@ -33,7 +33,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 
 | İş | Ne kullanılır |
 |---|---|
-| Claude | Önce `CLAUDE_ANA_TOKEN`, kota/yetki hatasında `CLAUDE_CODE_OAUTH_TOKEN` (yedek); `araclar/claude_calistir.sh`. İkisi de abonelik kotası; `sk-ant-api...` API anahtarları kredi harcamamak için atlanır. |
+| Claude | Sırayla `CLAUDE_ANA_TOKEN` → `CLAUDE_CODE_OAUTH_TOKEN` → `CLAUDE_YEDEK2_TOKEN` (kota/yetki hatasında sıradaki); `araclar/claude_calistir.sh`. Hepsi abonelik kotası; `sk-ant-api...` API anahtarları kredi harcamamak için atlanır. |
 | Gemini | `GEMINI_API_KEY` ücretsiz katman (faturalandırma kapalı). Claude kotası bitince devralır. |
 | Görsel | NVIDIA ücretsiz API |
 | Ses | Kokoro "Michael" (yerel, açık kaynak; ilk iki video Piper ile) |
@@ -43,7 +43,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 
 ## Kurulum (yapıldı)
 
-1. **Secret'lar:** `CLAUDE_ANA_TOKEN`, `CLAUDE_CODE_OAUTH_TOKEN`, `GEMINI_API_KEY`, `NVIDIA_API_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`,
+1. **Secret'lar:** `CLAUDE_ANA_TOKEN`, `CLAUDE_CODE_OAUTH_TOKEN`, `CLAUDE_YEDEK2_TOKEN`, `GEMINI_API_KEY`, `NVIDIA_API_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`,
    `YT_REFRESH_TOKEN`.
    - YouTube token'ı yenilemek gerekirse: `python3 uzun_en/araclar/token_al.py` (bilgisayarda bir kez).
    - Claude token'ı yenilemek gerekirse: `claude setup-token`.
