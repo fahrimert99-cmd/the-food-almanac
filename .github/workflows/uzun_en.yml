@@ -7,7 +7,8 @@ name: Uzun Video EN (The Food Almanac, otonom)
 # tasarlanamayan sahneler otomatik şablonla çizilir; video yine zamanında yayınlanır.
 #
 # KREDİ HARCANMAZ:
-#   Claude -> yalnızca CLAUDE_CODE_OAUTH_TOKEN (Pro/Max abonelik kotası). ANTHROPIC_API_KEY / CLAUDE_API_KEY bilerek verilmez.
+#   Claude -> önce CLAUDE_ANA_TOKEN, kotası/yetkisi biterse CLAUDE_CODE_OAUTH_TOKEN (yedek) — uzun_en/araclar/claude_calistir.sh.
+#             İkisi de OAuth token (claude setup-token, abonelik kotası). API anahtarı (sk-ant-api...) verilse bile kullanılmaz.
 #   Gemini -> GEMINI_API_KEY ücretsiz katman (faturalandırma kapalı proje). Claude kotası biterse devralır.
 #   Görsel -> NVIDIA_API_KEY (ücretsiz). Ses -> Piper (yerel, açık kaynak). Müzik -> kodla üretilir.
 # Ayarlar (Settings > Variables, isteğe bağlı): UZUN_CLAUDE_MODEL (ör. opus / sonnet; boş = CLI varsayılanı),
@@ -111,10 +112,11 @@ jobs:
         continue-on-error: true
         timeout-minutes: 40
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_ANA: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
-          [ -n "$CLAUDE_CODE_OAUTH_TOKEN" ] || exit 1
-          claude -p "Read uzun_en/gorev/KONU.md and do that task now." ${CMODEL:+--model "$CMODEL"} \
+          [ -n "$CLAUDE_ANA$CLAUDE_YEDEK" ] || exit 1
+          bash uzun_en/araclar/claude_calistir.sh -p "Read uzun_en/gorev/KONU.md and do that task now." ${CMODEL:+--model "$CMODEL"} \
             --max-turns 80 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
       - name: Gemini yedek
         env:
@@ -155,11 +157,11 @@ jobs:
           node-version: "22"
       - name: Ajanlar ve anahtarlar (kredi KULLANILMAZ)
         env:
-          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          OAUTH: ${{ secrets.CLAUDE_ANA_TOKEN }}${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GKEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           C=false; G=false
-          if [ -n "$OAUTH" ]; then C=true; npm install -g @anthropic-ai/claude-code >/dev/null 2>&1 && claude --version; else echo "::warning::CLAUDE_CODE_OAUTH_TOKEN yok"; fi
+          if [ -n "$OAUTH" ]; then C=true; npm install -g @anthropic-ai/claude-code >/dev/null 2>&1 && claude --version; else echo "::warning::CLAUDE_ANA_TOKEN / CLAUDE_CODE_OAUTH_TOKEN yok"; fi
           if [ -n "$GKEY" ]; then G=true; npm install -g @google/gemini-cli >/dev/null 2>&1 && gemini --version; else echo "::warning::GEMINI_API_KEY yok"; fi
           { echo "CLAUDE_OK=$C"; echo "GEMINI_OK=$G"; } >> "$GITHUB_ENV"
           [ "$C" = true ] || [ "$G" = true ] || { echo "::error::Kullanılabilir ajan yok"; exit 1; }
@@ -175,9 +177,10 @@ jobs:
         continue-on-error: true
         timeout-minutes: 90
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_ANA: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
-          claude -p "Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic (from uzun_en/konular.json): $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json." \
+          bash uzun_en/araclar/claude_calistir.sh -p "Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic (from uzun_en/konular.json): $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json." \
             ${CMODEL:+--model "$CMODEL"} --max-turns 150 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
       - name: Yapı denetimi (1)
         id: k1
@@ -187,9 +190,10 @@ jobs:
         continue-on-error: true
         timeout-minutes: 30
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_ANA: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
-          claude -p "The script uzun_en/projeler/$SLUG/proje.json failed automatic validation (rules: uzun_en/gorev/SENARYO.md). Fix ONLY these problems with minimal edits, keeping all facts sourced: $(grep HATA /tmp/k1.txt)" \
+          bash uzun_en/araclar/claude_calistir.sh -p "The script uzun_en/projeler/$SLUG/proje.json failed automatic validation (rules: uzun_en/gorev/SENARYO.md). Fix ONLY these problems with minimal edits, keeping all facts sourced: $(grep HATA /tmp/k1.txt)" \
             ${CMODEL:+--model "$CMODEL"} --max-turns 40 --allowedTools "Read,Write,Edit,Glob,Grep"
       - name: "Senaryo: Gemini yedek (Claude yoksa / kota bittiyse)"
         if: env.GEMINI_OK == 'true'
@@ -212,7 +216,8 @@ jobs:
         continue-on-error: true
         timeout-minutes: 90
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_ANA: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_CLI_TRUST_WORKSPACE: "true"
         run: |
@@ -221,7 +226,7 @@ jobs:
           D="uzun_en/projeler/$SLUG/dogrulama.json"
           rm -f "$D"
           if [ "$CLAUDE_OK" = true ]; then
-            claude -p "$P" ${CMODEL:+--model "$CMODEL"} --max-turns 120 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" || true
+            bash uzun_en/araclar/claude_calistir.sh -p "$P" ${CMODEL:+--model "$CMODEL"} --max-turns 120 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" || true
           fi
           if [ ! -f "$D" ] && [ "$GEMINI_OK" = true ]; then
             mkdir -p .gemini && echo '{"tools":{"exclude":["run_shell_command"]}}' > .gemini/settings.json
@@ -367,7 +372,7 @@ jobs:
           cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Ajanlar (kredi KULLANILMAZ)
         env:
-          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          OAUTH: ${{ secrets.CLAUDE_ANA_TOKEN }}${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GKEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           C=false; G=false
@@ -385,10 +390,11 @@ jobs:
         continue-on-error: true
         timeout-minutes: 300
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_ANA: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
         run: |
-          claude -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: $SAHNELER. Your group number (for the report file name): $GRUP." \
+          bash uzun_en/araclar/claude_calistir.sh -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: $SAHNELER. Your group number (for the report file name): $GRUP." \
             ${CMODEL:+--model "$CMODEL"} --max-turns 600 --allowedTools "Bash,Read,Write,Edit,Glob,Grep"
       - name: Kalan sahneler
         id: kalan
