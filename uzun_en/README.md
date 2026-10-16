@@ -85,6 +85,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 | `gorev/*.md` | Ajan görevleri: KONU, SENARYO, DOGRULA, SAHNE |
 | `araclar/` | Python araçları (her birinin başında kullanım yazar) |
 | `remotion/` | Remotion projesi. `TASARIM.md` sahne tasarım rehberidir. |
+| `hyperframes/` | HTML tabanlı HyperFrames önizleme/render projesi; Remotion'a alternatif hızlı prototipleme hattı. |
 | `projeler/<slug>/` | proje.json, arastirma.md, dogrulama.md, sahneler/, yayin.json. Görsel ve ses dosyaları sürümdedir. |
 
 Yerelde deneme (YouTube'a yüklemez):
@@ -93,3 +94,14 @@ Yerelde deneme (YouTube'a yüklemez):
 python3 uzun_en/araclar/hazirla.py --proje food-order-blood-sugar
 cd uzun_en/remotion && npx remotion studio
 ```
+
+HyperFrames ile HTML kompozisyonunu önizlemek veya MP4 üretmek için:
+
+```bash
+cd uzun_en/hyperframes
+npm run dev
+npm run render -- -o out/video.mp4
+```
+
+HyperFrames Node.js 22+ ve FFmpeg gerektirir. Remotion hattı mevcut üretim akışının varsayılanıdır;
+HyperFrames HTML/CSS tabanlı sahneleri hızlıca denemek ve ayrı render etmek için eklenmiştir.
