@@ -1,0 +1,526 @@
+{
+  "slug": "garlic-blood-pressure",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "What Garlic Really Does to Your Blood Pressure",
+  "aciklama_giris": "In randomized trials, garlic supplements lowered blood pressure in people who already had high readings. A 2019 meta-analysis of 12 trials found about 8 points lower systolic and 5.5 points lower diastolic pressure, though most of the evidence comes from one research group, small trials and supplements rather than kitchen garlic. In this video we look at what the reviews and two key trials found, how crushing and heat change garlic's compounds, how big the effect is next to diet and medication, and the bleeding caution for people on blood thinners.\n\nWe also cover what is still unknown, why garlic is an add-on and not a replacement for prescribed treatment, and five practical points for using it safely.",
+  "kaynaklar": [
+    "Ried K. Garlic lowers blood pressure in hypertensive individuals, regulates serum cholesterol, and stimulates immunity: an updated meta-analysis and review. Journal of Nutrition. 2016;146(2):389S-396S. PMID 26764326. DOI 10.3945/jn.114.202192.",
+    "Ried K. Garlic lowers blood pressure in hypertensive subjects, improves arterial stiffness and gut microbiota: a review and meta-analysis. Experimental and Therapeutic Medicine. 2019;19(2):1472-1478. PMID 32010325. DOI 10.3892/etm.2019.8374.",
+    "Ried K, Frank OR, Stocks NP. Aged garlic extract lowers blood pressure in patients with treated but uncontrolled hypertension: a randomised controlled trial. Maturitas. 2010;67(2):144-150. PMID 20594781.",
+    "Ried K, Frank OR, Stocks NP. Aged garlic extract reduces blood pressure in hypertensives: a dose-response trial. European Journal of Clinical Nutrition. 2013;67(1):64-70. PMID 23169470. DOI 10.1038/ejcn.2012.178.",
+    "Song K, Milner JA. The influence of heating on the anticancer properties of garlic. Journal of Nutrition. 2001;131(3s):1054S-1057S. PMID 11238815. DOI 10.1093/jn/131.3.1054S.",
+    "Sacks FM, et al. Effects on blood pressure of reduced dietary sodium and the Dietary Approaches to Stop Hypertension (DASH) diet. New England Journal of Medicine. 2001;344(1):3-10. PMID 11136953.",
+    "Law MR, Morris JK, Wald NJ. Use of blood pressure lowering drugs in the prevention of cardiovascular disease: meta-analysis of 147 randomised trials. BMJ. 2009;338:b1665. PMID 19454737.",
+    "Macan H, et al. Aged garlic extract may be safe for patients on warfarin therapy. Journal of Nutrition. 2006;136(3 Suppl):793S-795S. PMID 16484565.",
+    "National Center for Complementary and Integrative Health (NIH). Garlic. https://www.nccih.nih.gov/health/garlic"
+  ],
+  "kapak": {
+    "satirlar": [
+      "GARLIC:",
+      "BLOOD",
+      "PRESSURE"
+    ],
+    "serit": "What the trials really show",
+    "vurgu": "–8.7",
+    "vurgu_alt": "points systolic, high BP",
+    "gorsel": "a huge close-up bulb of garlic with several peeled cloves heaped in front of it, overlapping a sphygmomanometer cuff with a round gauge with a blank dial, tightly grouped"
+  },
+  "kahraman": "garlic",
+  "etiketler": [
+    "garlic blood pressure",
+    "does garlic lower blood pressure",
+    "raw garlic benefits",
+    "garlic after 50",
+    "aged garlic extract",
+    "allicin",
+    "hypertension",
+    "garlic supplement",
+    "garlic and blood thinners",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "S-allylcysteine": "S allyl sis teen",
+    "alliinase": "al ee in ace",
+    "alliin": "al ee in",
+    "DASH": "dash",
+    "NCCIH": "N C C I H",
+    "NIH": "N I H",
+    "INR": "I N R"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Garlic and your blood pressure",
+      "metin": "If you have high blood pressure, you've probably heard that garlic can help. A 2016 review pooled 20 trials and 970 people, and found garlic supplements lowered systolic blood pressure by about five points.",
+      "gorsel": "a whole garlic bulb and a few peeled garlic cloves on a wooden kitchen table, a sphygmomanometer cuff with a round gauge with a blank dial lying beside them",
+      "etiket": "Ried · J Nutr · 2016"
+    },
+    {
+      "id": 2,
+      "metin": "In people who started with high blood pressure, the drop was bigger, nearly nine points. That is the finding. The real question is how much to trust it.",
+      "gorsel": "a garlic bulb beside a sphygmomanometer cuff with a gauge with a blank dial, a gentle downward curved arrow drawn between them",
+      "baslik": {
+        "satirlar": [
+          "HIGH BP:",
+          "GARLIC"
+        ],
+        "vurgu": "–8.7",
+        "not": "points systolic in the 2016 review"
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know how big the effect really is, which garlic was actually tested, and one safety point if you take blood thinners.",
+      "gorsel": "a garlic bulb, three peeled garlic cloves and an antique brass pocket watch on a plain linen cloth"
+    },
+    {
+      "id": 4,
+      "metin": "So does garlic really lower blood pressure, or is it a kitchen legend? Let's see what the trials found.",
+      "gorsel": "a large magnifying glass held over a head of garlic and a sphygmomanometer cuff, small sketches of a garlic clove and a heart around them connected by dashed lines"
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "Welcome to The Food Almanac. First, a quick look at what blood pressure actually measures.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Garlic and Blood Pressure",
+        "alt": "What the trials really show"
+      }
+    },
+    {
+      "id": 6,
+      "bolum": "What blood pressure means",
+      "metin": "Blood pressure is the force of blood pushing against your artery walls. It's written as two numbers. Systolic is the pressure when your heart beats. Diastolic is the pressure between beats.",
+      "gorsel": "a simple textbook engraving of a heart connected to a tube-shaped vessel with small red discs flowing inside, a sphygmomanometer cuff around an upper arm",
+      "baslik": {
+        "satirlar": [
+          "SYSTOLIC",
+          "DIASTOLIC"
+        ],
+        "not": "pressure during and between heartbeats"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Both are measured in millimeters of mercury. Doctors watch them because pressure that stays high for years puts strain on your heart and arteries.",
+      "gorsel": "an antique mercury column sphygmomanometer with a rubber bulb and cuff on a wooden desk, a stethoscope beside it"
+    },
+    {
+      "id": 8,
+      "metin": "Even small drops matter. In a 2009 analysis of 147 drug trials by Malcolm Law and colleagues, a ten point drop in systolic pressure went with about 22 percent fewer coronary events and 41 percent fewer strokes.",
+      "gorsel": "a sphygmomanometer gauge with a blank dial, a red heart symbol and a small tube-shaped vessel with small red discs, a garlic clove in the corner",
+      "etiket": "Law et al. · BMJ · 2009",
+      "baslik": {
+        "satirlar": [
+          "10 POINTS",
+          "LOWER"
+        ],
+        "vurgu": "–41%",
+        "not": "strokes, in blood pressure drug trials"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "So every point counts. Later, we'll set garlic's effect next to diet changes and medication, so you can see where it fits.",
+      "gorsel": "a garlic bulb sitting on one pan of an antique balance scale, a bowl of green vegetables and a pill bottle on the other side"
+    },
+    {
+      "id": 10,
+      "bolum": "The big reviews",
+      "tip": "kart",
+      "metin": "Now the evidence. Let's start with the big reviews that pool many trials together.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "The big reviews",
+        "alt": "Pooled trials · 2016 and 2019"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Researcher Karin Ried pooled 20 randomized trials with 970 adults. Each compared a garlic preparation with a placebo, a dummy pill.",
+      "gorsel": "a row of small glass jars, one of them holding peeled garlic cloves and the others empty, a stack of paper files with blank covers beside them",
+      "etiket": "Ried · J Nutr · 2016"
+    },
+    {
+      "id": 12,
+      "tip": "grafik",
+      "metin": "Across everyone, garlic lowered systolic pressure by about five points and diastolic by two and a half. In people with high blood pressure, systolic fell nearly nine points, and diastolic about six.",
+      "grafik": {
+        "baslik": "Points lower than placebo",
+        "alt": "Garlic supplements vs. placebo, mm Hg",
+        "cubuklar": [
+          {
+            "etiket": "Systolic, all",
+            "deger": 5.1,
+            "metin": "−5.1"
+          },
+          {
+            "etiket": "Diastolic, all",
+            "deger": 2.5,
+            "metin": "−2.5"
+          },
+          {
+            "etiket": "Systolic, high BP",
+            "deger": 8.7,
+            "metin": "−8.7"
+          },
+          {
+            "etiket": "Diastolic, high BP",
+            "deger": 6.1,
+            "metin": "−6.1"
+          }
+        ],
+        "kaynak": "Ried, J Nutr 2016 · 20 randomized trials, 970 adults"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "So the benefit shows up mostly in people whose pressure was already high. In the 2010 trial we'll meet shortly, people with lower starting pressure saw no clear difference.",
+      "gorsel": "two sphygmomanometer cuffs side by side, one with its gauge needle high and one low, a garlic bulb between them"
+    },
+    {
+      "id": 14,
+      "metin": "In 2019, Ried repeated the analysis for hypertension only. It covered 12 trials and 553 people. Garlic lowered systolic pressure by about eight points and diastolic by about five and a half.",
+      "gorsel": "a garlic bulb and peeled garlic cloves in a shallow wooden bowl, next to an open notebook with blank lines and a sphygmomanometer gauge",
+      "etiket": "Ried · Exp Ther Med · 2019",
+      "baslik": {
+        "satirlar": [
+          "12 TRIALS",
+          "553 PEOPLE"
+        ],
+        "vurgu": "–8.3",
+        "not": "points systolic, hypertension only"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Those numbers match the 2016 review closely. But it's the same author and partly the same trials, so it's an update, not an independent confirmation.",
+      "gorsel": "two identical stacks of paper files with blank covers on a desk, one garlic clove resting on each stack"
+    },
+    {
+      "id": 16,
+      "metin": "The US National Institutes of Health takes a careful line. Its center for complementary medicine says limited evidence suggests garlic supplements may reduce blood pressure to a small extent.",
+      "gorsel": "a stately library reading room with a garlic bulb on a wooden lectern and a closed leather book beside it"
+    },
+    {
+      "id": 17,
+      "bolum": "Two trials up close",
+      "tip": "kart",
+      "metin": "Let's look inside two of the trials behind these reviews.",
+      "kart": {
+        "ust": "THE TRIALS",
+        "baslik": "Two trials up close",
+        "alt": "Ried, Frank and Stocks · 2010 and 2013"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "In the 2010 trial, 50 people were already treated for high blood pressure, but their pressure was still uncontrolled. Half added aged garlic extract, four capsules a day. Half took matching placebo, for 12 weeks.",
+      "gorsel": "a row of capsules and a glass of water on a small tray, beside a garlic bulb and a sphygmomanometer cuff",
+      "etiket": "Ried et al. · Maturitas · 2010"
+    },
+    {
+      "id": 19,
+      "metin": "Neither the patients nor the researchers knew who got which. That's called double-blind, and it guards against wishful thinking.",
+      "gorsel": "two identical brown medicine bottles with blank labels side by side on a laboratory bench, a garlic clove between them"
+    },
+    {
+      "id": 20,
+      "metin": "Among people whose systolic pressure started at 140 or higher, the garlic group ended about ten points lower than the placebo group. For those starting below 140, there was no clear difference.",
+      "gorsel": "a garlic bulb next to a sphygmomanometer gauge with a blank dial whose needle points high, a smaller gauge with its needle low beside it",
+      "baslik": {
+        "satirlar": [
+          "STARTING",
+          "AT 140+"
+        ],
+        "vurgu": "–10",
+        "not": "points systolic vs. placebo, 12 weeks"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "A 2013 follow-up tested doses in 79 people with uncontrolled systolic pressure. Two capsules a day lowered it by about twelve points versus placebo. One capsule didn't clearly help.",
+      "gorsel": "three small glass dishes holding one, two and four garlic cloves in a row, a bottle of capsules behind them",
+      "etiket": "Ried et al. · Eur J Clin Nutr · 2013"
+    },
+    {
+      "id": 22,
+      "metin": "Four capsules did not do better than two. More isn't automatically better, and the doses were tested on top of regular medication.",
+      "gorsel": "a garlic bulb on a small wooden shelf beside a bottle of capsules and a sphygmomanometer cuff",
+      "baslik": {
+        "satirlar": [
+          "MORE ISN'T",
+          "BETTER"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Both trials came from the same research team and used the same product. That's why independent confirmation matters.",
+      "gorsel": "a long bench in an old laboratory with a microscope, a stack of paper files and a single garlic bulb in a shallow dish"
+    },
+    {
+      "id": 24,
+      "bolum": "Crushing, allicin and heat",
+      "tip": "kart",
+      "metin": "Now to the garlic itself. How a clove is crushed and heated may change what it contains. We'll turn that into a kitchen tip in the practical part.",
+      "kart": {
+        "ust": "INSIDE THE CLOVE",
+        "baslik": "Where allicin comes from",
+        "alt": "Crushing · Heat · Aged extract"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "A whole garlic clove has little smell. The smell comes when you crush or chop it, which breaks cells open and lets an enzyme called alliinase meet a compound called alliin.",
+      "gorsel": "a garlic clove being pressed under the flat side of a chef's knife on a wooden board, a magnified circular inset of garlic cells breaking open",
+      "baslik": {
+        "satirlar": [
+          "CRUSH",
+          "GARLIC"
+        ],
+        "not": "alliinase meets alliin"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Together they make allicin, the first of a family of allyl sulfur compounds that researchers think are behind much of garlic's activity.",
+      "gorsel": "a mortar and pestle holding crushed garlic, fine radiating lines of aroma rising from it, simple hexagon ring molecule outlines drawn above",
+      "baslik": {
+        "satirlar": [
+          "ALLICIN"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Heat matters. In a 2001 rat study, Song and Milner found that 60 seconds in a microwave, or 45 minutes in an oven, wiped out garlic's protective effect in a cancer-related test. The loss matched the loss of alliinase.",
+      "gorsel": "a garlic bulb beside a vintage microwave-style oven and a roasting pan, small hexagon ring molecule outlines fading away above them",
+      "etiket": "Song & Milner · J Nutr · 2001",
+      "baslik": {
+        "satirlar": [
+          "HEAT AND",
+          "ALLIINASE"
+        ],
+        "not": "a rat study, not about blood pressure"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "But when crushed garlic stood for ten minutes before microwaving, much of that activity was kept. The enzyme had time to do its work before the heat arrived.",
+      "gorsel": "crushed garlic on a small plate beside an antique wall clock with a blank face, a garlic bulb resting nearby",
+      "baslik": {
+        "satirlar": [
+          "WAIT",
+          "10 MINUTES"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "metin": "The trials used a manufactured product, aged garlic extract, standardized to a compound called S-allylcysteine. The four-capsule dose held 2.4 milligrams. It's not the same thing as a raw clove.",
+      "gorsel": "a small bottle with spilled capsules on a tray, a whole garlic bulb sitting beside it for comparison"
+    },
+    {
+      "id": 30,
+      "metin": "Most of the other trials in the 2019 review used garlic powder, mostly 600 to 900 milligrams a day, in one case 2,400, and the trials ran from 8 to 24 weeks.",
+      "gorsel": "a heap of white garlic powder in a small wooden scoop beside dried garlic slices and a garlic bulb"
+    },
+    {
+      "id": 31,
+      "metin": "So here's an honest gap. Every preparation in that review was a supplement. Raw and cooked garlic from the kitchen weren't what was measured.",
+      "gorsel": "a kitchen table with a garlic bulb, a pan with sliced garlic cloves and a jar of capsules, an empty open notebook",
+      "baslik": {
+        "satirlar": [
+          "AN HONEST",
+          "GAP"
+        ],
+        "not": "no kitchen-garlic trial in the review"
+      }
+    },
+    {
+      "id": 32,
+      "bolum": "How big is the effect?",
+      "tip": "kart",
+      "metin": "How big is eight or nine points, really? Let's put it in proportion.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Putting it in proportion",
+        "alt": "Garlic · diet · medication"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "In the DASH-Sodium trial, 412 adults ate controlled diets. The DASH eating pattern plus low sodium lowered systolic pressure by 11.5 points in people with hypertension, compared with a typical diet high in sodium.",
+      "gorsel": "a dinner table with a plate of green vegetables, a bowl of fruit, a glass of milk and an unsalted wooden salt shaker with no salt",
+      "etiket": "Sacks et al. · NEJM · 2001",
+      "baslik": {
+        "satirlar": [
+          "DASH DIET",
+          "+ LOW SALT"
+        ],
+        "vurgu": "–11.5",
+        "not": "points systolic in hypertension"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "So garlic's eight or nine points sits in the same range as a major diet change. But the garlic figure comes from small trials of different products, while DASH was one carefully controlled study.",
+      "gorsel": "an antique balance scale with a garlic bulb on one pan and a bowl of vegetables and fruit on the other, level with each other"
+    },
+    {
+      "id": 35,
+      "metin": "The 2010 authors compared their result with first-line blood pressure drugs. But that was a comparison across studies, not a head-to-head trial. In these studies, garlic was added to medicine, not swapped for it.",
+      "gorsel": "a pill organizer box with a garlic clove resting beside it, a sphygmomanometer gauge with a blank dial in the background",
+      "baslik": {
+        "satirlar": [
+          "ADD-ON,",
+          "NOT SWAP"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "That's the key point. Garlic was an add-on to prescribed treatment. Please don't stop or replace a blood pressure medicine because of a supplement. Any change should go through your doctor.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a pill bottle, a garlic bulb at the edge of the desk"
+    },
+    {
+      "id": 37,
+      "metin": "Another limit. Lower pressure should mean fewer heart attacks and strokes, as the drug trials show. But the garlic trials measured blood pressure, not heart attacks. Long-term studies are still needed.",
+      "gorsel": "a red heart symbol beside a garlic bulb and a sphygmomanometer cuff, a question-mark shaped garlic stem curling above them"
+    },
+    {
+      "id": 38,
+      "metin": "The trials were also small, some results resting on as few as six people in a group, and they pooled different products and doses. The reviewer ran four of the included trials herself.",
+      "gorsel": "a small group of six empty wooden chairs around a table in a quiet clinic room, a garlic bulb on the table"
+    },
+    {
+      "id": 39,
+      "metin": "So you'll sometimes hear that a clove a day replaces your pills, or that garlic works as well as medicine. The evidence doesn't say that.",
+      "gorsel": "a single garlic clove standing upright next to a closed pill bottle on a plain wooden table"
+    },
+    {
+      "id": 40,
+      "bolum": "Safety and blood thinners",
+      "tip": "kart",
+      "metin": "Now the safety part, especially if you take blood thinners.",
+      "kart": {
+        "ust": "SAFETY FIRST",
+        "baslik": "Bleeding and blood thinners",
+        "alt": "What the NIH and a small trial say"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "For most people garlic by mouth is safe. The NIH says it's been used safely in studies lasting up to seven years. Common side effects are breath and body odor, stomach pain, gas and nausea.",
+      "gorsel": "a garlic bulb and peeled garlic cloves beside a glass of water on a kitchen table, morning light drawn as fine radiating lines"
+    },
+    {
+      "id": 42,
+      "metin": "But it also says garlic supplements may increase the risk of bleeding. If you take warfarin, aspirin or another blood thinner, talk with your doctor or pharmacist before starting a garlic supplement.",
+      "gorsel": "a pharmacist's counter with a mortar and pestle, a garlic bulb and a few capsule bottles with blank labels",
+      "baslik": {
+        "satirlar": [
+          "BLOOD THINNERS:",
+          "ASK FIRST"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "metin": "The research is mixed but partly reassuring. In a 2006 pilot trial of 52 people on warfarin, Macan and colleagues gave aged garlic extract or placebo for 12 weeks. They saw no increased bleeding in either group.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes, an open notebook with blank pages and a garlic bulb",
+      "etiket": "Macan et al. · J Nutr · 2006"
+    },
+    {
+      "id": 44,
+      "metin": "But that was one small trial of one liquid product. It says little about other pills or higher doses. So the cautious advice stands: tell your doctor before you start.",
+      "gorsel": "a doctor's desk with a stethoscope, a garlic bulb and a small bottle of capsules with a blank label"
+    },
+    {
+      "id": 45,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you use all this? Here are five practical points.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five practical points",
+        "alt": "Measure · Ask · Choose · Crush · Add"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "One. Know your numbers first. The effect was seen in people with high pressure, so a clinic or home reading tells you whether this even applies to you.",
+      "gorsel": "a home sphygmomanometer with an upper arm cuff on a kitchen table, a garlic bulb beside it"
+    },
+    {
+      "id": 47,
+      "metin": "Two. Keep taking any medicine you're prescribed, and tell your doctor or pharmacist before adding a garlic supplement, especially if you use warfarin, aspirin or another blood thinner.",
+      "gorsel": "a weekly pill organizer box next to a garlic bulb and a folded paper napkin"
+    },
+    {
+      "id": 48,
+      "metin": "Three. If you try a supplement, look for the types used in trials, aged garlic extract or standardized garlic powder, and be patient. The trials ran 8 to 24 weeks.",
+      "gorsel": "a bottle of capsules and a small scoop of garlic powder on a tray, beside an antique calendar page with blank squares and a garlic bulb"
+    },
+    {
+      "id": 49,
+      "metin": "Four. In the kitchen, crush or chop fresh garlic and let it sit about ten minutes before it hits the pan. Based on the enzyme research, that may preserve more of what forms when garlic is crushed. It hasn't been tested for blood pressure.",
+      "gorsel": "chopped garlic resting on a wooden board with a chef's knife, a pan waiting on a stove in the background, an antique clock face beside the board"
+    },
+    {
+      "id": 50,
+      "metin": "Five. Keep it in context. Cutting salt and following a pattern like DASH have far stronger backing, and you can do them alongside garlic.",
+      "gorsel": "a dinner plate with green vegetables, roasted garlic cloves and grilled fish, a garlic bulb beside the plate",
+      "baslik": {
+        "satirlar": [
+          "KEEP IT IN",
+          "CONTEXT"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "And if a supplement upsets your stomach, or you notice unusual bleeding, talk to your doctor. Never put raw garlic on your skin either. The NIH warns it can cause chemical burns.",
+      "gorsel": "a garlic bulb on a clean white plate beside a glass of water and a cup of tea, a calm morning table"
+    },
+    {
+      "id": 52,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A modest add-on, not a cure",
+        "alt": "Garlic and blood pressure"
+      }
+    },
+    {
+      "id": 53,
+      "metin": "In randomized trials, garlic supplements lowered blood pressure in people with high readings, by about eight or nine points systolic in pooled analyses. Most of the evidence comes from one research group and from supplements.",
+      "gorsel": "a garlic bulb and peeled cloves beside a sphygmomanometer cuff with a gauge with a blank dial, a calm kitchen table"
+    },
+    {
+      "id": 54,
+      "metin": "That's about the range of a big diet change, but it was an add-on to treatment, and nobody has shown it prevents heart attacks. Raw and cooked garlic haven't been tested.",
+      "gorsel": "a garlic bulb sitting beside a bowl of vegetables and a pill bottle on a wooden table"
+    },
+    {
+      "id": 55,
+      "metin": "Check your numbers, ask your doctor if you take blood thinners, and let crushed garlic rest before cooking. Small habits, kept honest.",
+      "gorsel": "crushed garlic cloves on a wooden board with a chef's knife and a home sphygmomanometer cuff beside them"
+    },
+    {
+      "id": 56,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
