@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Sahne görselleri: NVIDIA FLUX gravür illüstrasyonları (yedek: Gemini, Pollinations).
+"""Sahne görselleri: NVIDIA FLUX gravür illüstrasyonları (yedek: Cloudflare FLUX, Gemini, Pollinations).
 
   python3 uzun_en/araclar/gorsel.py --proje SLUG                     # eksik görselleri (ve kapak arka planını) üret
   python3 uzun_en/araclar/gorsel.py --proje SLUG --sadece kapak      # yalnızca tarifi değişen kapak görselini üret
@@ -41,7 +41,7 @@ KAPAK_STIL = ("Bright, vivid hand-painted editorial illustration with bold satur
               "soft shading, appetizing and glossy, high contrast, isolated on a plain pure white background, crisp "
               "high detail, 16:9 landscape.")
 GEMINI_MODEL = os.environ.get("UZUN_GEMINI_IMAGE_MODEL", "").strip() or "gemini-2.5-flash-image"
-PUAN = {"elle": 100, "nvidia": 90, "gemini": 90, "pollinations": 30, "yedek": 0}
+PUAN = {"elle": 100, "nvidia": 90, "cloudflare": 90, "gemini": 90, "pollinations": 30, "yedek": 0}
 KALITE_ESIK = 0.2      # görsellerin bundan fazlası eksik ya da yedek kaynaklıysa (NVIDIA/Gemini değil) kalite düşük
 _KAPALI = set()
 _NVIDIA_HATA = [0]
@@ -81,6 +81,30 @@ def _guvenli_prompt(prompt):
                  ("blood", ""), ("muscle fiber cross-section", "fiber bundle"), ("cut-away", "open")):
         yeni = re.sub(a, b, yeni, flags=re.I)
     return re.sub(r"\s{2,}", " ", yeni)
+
+
+def _cloudflare(prompt, cikti, tohum=0):
+    """NVIDIA çöktüğünde aynı FLUX ailesi (Cloudflare Workers AI, günlük ücretsiz kota)."""
+    if "cloudflare" in _KAPALI:
+        return None
+    try:
+        import cloudflare_gorsel as CF
+    except Exception as e:
+        _kapat("cloudflare", f"modül yüklenemedi: {e}")
+        return None
+    if not CF.var_mi():
+        return None
+    for pr in (prompt, _guvenli_prompt(prompt)):
+        kaynak = CF.uret(pr, cikti, tohum)
+        if not kaynak:
+            if all(m in CF._KAPALI for m in CF.MODELLER):
+                _kapat("cloudflare", "günlük kota bitti ya da yetki yok")
+            return None
+        if not _bos_mu(cikti):
+            return kaynak
+        O.log(f"      {kaynak} boş/siyah görsel (güvenlik filtresi)" + (" -> yumuşatılmış tarifle tekrar" if pr is prompt else ""))
+        os.remove(cikti)
+    return None
 
 
 def _kapla(src, hedef, boyut=(W, H), kalite=92, alt_kirp=0.0):
@@ -188,12 +212,13 @@ def kapak_prompt(proje):
 def uret(prompt, hedef, min_puan=-1, tohum=0, sira=None):
     """Sağlayıcı zinciriyle görsel üretir, 1920x1080'e oturtur. Kaynak adı | None (hedef yalnızca başarıda yazılır)."""
     ham = hedef + ".ham"
-    sira = sira or [x.strip() for x in (os.environ.get("UZUN_GORSEL_SIRA") or "nvidia,gemini,pollinations").split(",")]
+    sira = sira or [x.strip() for x in (os.environ.get("UZUN_GORSEL_SIRA") or "nvidia,cloudflare,gemini,pollinations").split(",")]
     kaynak, alt_kirp = None, 0.0
     for x in sira:
         if PUAN.get(x, 0) <= min_puan:
             continue
-        kaynak = (_nvidia(prompt, ham, tohum) if x == "nvidia" else _gemini(prompt, ham) if x == "gemini"
+        kaynak = (_nvidia(prompt, ham, tohum) if x == "nvidia" else _cloudflare(prompt, ham, tohum) if x == "cloudflare"
+                  else _gemini(prompt, ham) if x == "gemini"
                   else _pollinations(prompt, ham, tohum) if x == "pollinations" else None)
         if kaynak == "pollinations":
             alt_kirp = 0.07                                   # sağ alttaki filigranı at
@@ -210,6 +235,11 @@ def uret(prompt, hedef, min_puan=-1, tohum=0, sira=None):
         if os.path.exists(ham):
             os.remove(ham)
     return kaynak
+
+
+def _cf_var():
+    return bool(re.sub(r"\s", "", os.environ.get("CLOUDFLARE_ACCOUNT_ID") or "")
+                and re.sub(r"\s", "", os.environ.get("CLOUDFLARE_API_TOKEN") or ""))
 
 
 class Kayit:
@@ -250,10 +280,10 @@ def kalite(slug, proje):
     hedefler = _hedefler(proje, img)
     zayif = [k for k, _, h in hedefler if _zayif(kay, k, h)]
     oran = len(zayif) / max(1, len(hedefler))
-    O.log(f"görsel kalitesi: {len(hedefler) - len(zayif)}/{len(hedefler)} NVIDIA/Gemini; eksik ya da yedek kaynaklı "
+    O.log(f"görsel kalitesi: {len(hedefler) - len(zayif)}/{len(hedefler)} FLUX/Gemini; eksik ya da yedek kaynaklı "
           f"{len(zayif)} (%{oran * 100:.0f}, eşik %{KALITE_ESIK * 100:.0f}){': ' + str(zayif) if zayif else ''}")
     if "kapak" in zayif:                                     # kapak tıklamayı belirler: tek başına bile yedek olamaz
-        O.log("kapak görseli NVIDIA/Gemini'den gelmedi — kapak yedek kaynakla bırakılmaz")
+        O.log("kapak görseli NVIDIA/Cloudflare/Gemini'den gelmedi — kapak yedek kaynakla bırakılmaz")
     sys.exit(3 if oran > KALITE_ESIK or "kapak" in zayif else 0)
 
 
@@ -289,25 +319,27 @@ def hepsi(slug, proje, sadece=None):
             O.log(f"   ✗ {k} üretilemedi")
 
     nvidia_var = bool(re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or ""))
+    flux_var = nvidia_var or _cf_var()
     with cf.ThreadPoolExecutor(max_workers=2 if nvidia_var else 1) as ex:
         list(ex.map(is_, isler))
     # İkinci tur: NVIDIA'nın geçici hatası (HTTP 500) ya da filtresi yüzünden yedek kaynağa düşen ya da hiç üretilemeyen
-    # görseller bir beklemeden sonra yalnızca NVIDIA ile, farklı tohumla yeniden denenir. İlk geçişte art arda hatalar
+    # görseller bir beklemeden sonra yalnızca FLUX kaynaklarıyla (NVIDIA, Cloudflare), farklı tohumla yeniden denenir. İlk geçişte art arda hatalar
     # yüzünden kapatılan NVIDIA her turda yeniden açılır (16 Ekim'de kısa bir HTTP 500 dalgası tüm videoyu yedek
     # kaynağa düşürmüştü). Sahneler henüz tasarlanmadığı için görsel değişmesi düzeni bozmaz. Sıralı çalışır.
     for tur in (1, 2):
         tekrar = [(k, pr, h) for k, pr, h in hedefler if _zayif(kay, k, h)]
-        if not tekrar or not nvidia_var:
+        if not tekrar or not flux_var:
             break
-        O.log(f"   {len(tekrar)} görsel NVIDIA ile yeniden deneniyor (tur {tur})")
+        O.log(f"   {len(tekrar)} görsel NVIDIA/Cloudflare ile yeniden deneniyor (tur {tur})")
         time.sleep(45 * tur * tur)
         with _kilit:
             _KAPALI.discard("nvidia")
+            _KAPALI.discard("cloudflare")
             _NVIDIA_HATA[0] = 0
         for k, pr, hedef in tekrar:
             r = kay.al(k) or {}
             kaynak = uret(pr, hedef, min_puan=puan(r.get("kaynak")) if os.path.exists(hedef) else -1, tohum=tur * 7,
-                          sira=["nvidia"])
+                          sira=["nvidia", "cloudflare"])
             if kaynak:
                 kay.yaz(k, {"hash": _hash(pr), "kaynak": kaynak})
                 if k in eksik:
@@ -338,17 +370,17 @@ def aday(slug, proje, n, aciklama, tohum, kabul):
                                                               "aciklama": m.get("aciklama") or None, "tohum": m.get("tohum")})
         O.log(f"kabul edildi: images/{ad}.jpg")
         return
-    if not os.environ.get("NVIDIA_API_KEY", "").strip():
-        raise SystemExit("NVIDIA_API_KEY yok")
+    if not os.environ.get("NVIDIA_API_KEY", "").strip() and not _cf_var():
+        raise SystemExit("NVIDIA_API_KEY ya da CLOUDFLARE_ACCOUNT_ID/CLOUDFLARE_API_TOKEN yok")
     if sahne is None:
         if aciklama:
             proje = dict(proje, kapak=dict(proje["kapak"], gorsel=aciklama))
         pr = kapak_prompt(proje)
     else:
         pr = sahne_prompt(dict(sahne, gorsel=aciklama) if aciklama else sahne)
-    kaynak = uret(pr, ay, tohum=tohum, sira=["nvidia"])
+    kaynak = uret(pr, ay, tohum=tohum, sira=["nvidia", "cloudflare"])
     if not kaynak:
-        raise SystemExit("NVIDIA görsel üretemedi (filtre/hata) — tarifi yumuşatıp tekrar deneyin")
+        raise SystemExit("NVIDIA/Cloudflare görsel üretemedi (filtre/hata) — tarifi yumuşatıp tekrar deneyin")
     O.json_yaz(aym, {"kaynak": kaynak, "aciklama": aciklama, "tohum": tohum})
     O.log(f"aday: {os.path.relpath(ay, O.REPO)} ({kaynak}) — Read ile inceleyin; uygunsa --kabul")
 

@@ -34,6 +34,7 @@ Ayrıntılı kullanım için: **[uzun_en/README.md](uzun_en/README.md)**
 | `CLAUDE_CODE_OAUTH_TOKEN` | Claude yedek anahtarı: ana anahtarın kotası/yetkisi biterse senaryo, doğrulama ve sahne ajanları bununla sürer. |
 | `GEMINI_API_KEY` | Claude kotası biterse yedek ajan (ücretsiz katman) |
 | `NVIDIA_API_KEY` | Gravür görselleri (ücretsiz) |
+| `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN` | NVIDIA çökerse aynı FLUX ailesiyle görsel (Workers AI, günde 10.000 neuron ücretsiz) |
 
 Hiçbir adım ücretli API kredisi kullanmaz.
 
