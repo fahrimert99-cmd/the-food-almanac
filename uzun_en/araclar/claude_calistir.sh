@@ -6,7 +6,7 @@
 # olarak verilir. "sk-ant-api..." ile başlayan API anahtarları kredi harcayacağı için atlanır.
 # Kotası biten token bu iş (job) boyunca bir daha denenmez.
 set -u
-LIMIT='usage limit|limit reached|hit your limit|limit will reset|rate.?limit|credit balance|quota|insufficient|invalid (api key|bearer|x-api-key)|authentication|unauthori[sz]ed|oauth token|token (has )?expired|/login|\b(401|403|429)\b'
+LIMIT='(usage|session|weekly|daily|opus|sonnet) limit|limit reached|hit your [a-z ]{0,20}limit|limit will reset|resets [0-9]|rate.?limit|credit balance|quota|insufficient|invalid (api key|bearer|x-api-key)|authentication|unauthori[sz]ed|oauth token|token (has )?expired|/login|\b(401|403|429)\b'
 ADLAR=(CLAUDE_ANA CLAUDE_YEDEK CLAUDE_YEDEK2)
 
 temizle() { printf '%s' "$1" | tr -d '[:space:]'; }
