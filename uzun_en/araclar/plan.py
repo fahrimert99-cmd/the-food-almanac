@@ -19,6 +19,7 @@ URETIM_ONCE = 72          # saat: slottan en çok bu kadar önce üretime başla
 EN_AZ_ONCE = 5            # saat: bundan yakın slota yeni video yetiştirilmez
 SABLON_ESIK = 14          # saat: slota bundan az kaldıysa sahne tasarımı atlanır (şablon)
 SAHNE_DENEME = 3          # sahne aşaması en çok bu kadar çalıştırma alır
+GORSEL_BEKLE = 30         # saat: görseller çoğunlukla yedek kaynaktan geldiyse slota bundan fazla varken beklenir
 ASAMALAR = ["senaryo", "varlik", "sahne", "render", "yuklendi"]
 GRUP_SAYISI = int(os.environ.get("UZUN_SAHNE_GRUP", "6") or 6)
 
@@ -142,8 +143,16 @@ def main():
     ap.add_argument("--goster", action="store_true")
     ap.add_argument("--asama-yaz", nargs=2, metavar=("SLUG", "ASAMA"), help="aşamayı güncelle (iş akışı kullanır)")
     ap.add_argument("--sahne-deneme", metavar="SLUG", help="sahne aşaması deneme sayacını artır")
+    ap.add_argument("--gorsel-bekle", metavar="SLUG",
+                    help="görseller zayıfken beklenmeli mi? (çıkış 0: evet, slota GORSEL_BEKLE saatten fazla var)")
     a = ap.parse_args()
     d = O.durum()
+    if a.gorsel_bekle:
+        v = d["videolar"].get(a.gorsel_bekle, {})
+        kalan = (tarih(v["slot"]) - simdi()).total_seconds() / 3600 if v.get("slot") else 0
+        bekle = kalan > GORSEL_BEKLE
+        O.log(f"slota {kalan:.0f} saat; görsel yeniden denemesi için " + ("beklenir" if bekle else "zaman yok, devam"))
+        sys.exit(0 if bekle else 1)
     if a.asama_yaz:
         slug, asama = a.asama_yaz
         v = d["videolar"].setdefault(slug, {})

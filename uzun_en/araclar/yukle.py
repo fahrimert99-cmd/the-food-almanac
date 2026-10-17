@@ -12,7 +12,7 @@ Girdi: cikti/video.mp4, cikti/kapak_yt.jpg, cikti/meta.json (meta.py) ve cikti/k
 Aynı video iki kez yüklenmez: projeler/SLUG/yayin.json ya da kanalda aynı başlıklı son yükleme varsa o kullanılır.
 Gerekli: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (youtube.force-ssl izni).
 """
-import argparse, datetime as dt, os, sys, time
+import argparse, datetime as dt, glob, os, shutil, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
@@ -57,19 +57,45 @@ def liste_ekle(vid, m):
         return False
 
 
+def bastan_sifirla(slug, yol, slot):
+    """Videoyu görsel aşamasından yeniden üretime alır. Doğrulanmış senaryo ve ses korunur; yayın kaydı, sahne tasarımları
+    ve ajan raporları silinir. Yedek kaynaklı (düşük kaliteli) görseller varlik aşamasında NVIDIA ile yeniden üretilir."""
+    pdir = O.proje_dir(slug)
+    if os.path.exists(yol):
+        os.remove(yol)
+    shutil.rmtree(os.path.join(pdir, "sahneler"), ignore_errors=True)
+    for f in glob.glob(os.path.join(pdir, "rapor_g*.md")):
+        os.remove(f)
+    d = O.durum()
+    v = d["videolar"].setdefault(slug, {})
+    v.update(asama="varlik", sahne_deneme=0, slot=slot)
+    d["aktif"] = slug
+    O.durum_yaz(d)
+    O.log(f"• {slug}: baştan üretime alındı (aşama varlik, slot {slot})")
+
+
 def yenile_istegi(yt, adaylar):
     """calistir.json'daki "yenile": ["slug"] isteği: henüz yayınlanmamış (private, slotu gelmemiş) videoyu YouTube'dan
     siler. Ardından tamamla() onu 'silinmiş' görüp aynı çalıştırmada yeniden render ettirir ve yükletir.
-    Herkese açık ya da yayın saati geçmiş videolara dokunulmaz. İstek bir kez kullanılır ve silinir."""
+    "bastan": ["slug"] aynı silmeyi yapar ama projeyi görsel aşamasına döndürür (bastan_sifirla): görseller yeniden
+    üretilir, sahneler yeniden tasarlanır, sonra render edilip aynı slota yüklenir.
+    Herkese açık ya da yayın saati geçmiş videolara dokunulmaz. İstek bir kez kullanılır ve silinir.
+    Döner: (silinen video id'leri, baştan alınan slug'lar)."""
     cyol = os.path.join(O.KOK, "calistir.json")
     c = O.json_oku(cyol, {}) or {}
     istek = c.get("yenile") or []
     istek = [istek] if isinstance(istek, str) else istek
-    silinen = set()
-    if not istek:
-        return silinen
-    for slug, _, y, bekliyor in adaylar:
-        if slug not in istek:
+    bastan = c.get("bastan") or []
+    bastan = [bastan] if isinstance(bastan, str) else bastan
+    silinen, sifirlanan = set(), set()
+    if not istek and not bastan:
+        return silinen, sifirlanan
+    aktif = O.durum().get("aktif")
+    for slug, yol, y, bekliyor in adaylar:
+        if slug not in istek and slug not in bastan:
+            continue
+        if slug in bastan and aktif not in (None, slug):
+            O.log(f"! {slug}: başka bir proje ({aktif}) üretimde, baştan alınamaz")
             continue
         if not bekliyor:
             O.log(f"! {slug}: yayın saati geçmiş, yenilenmez")
@@ -80,16 +106,21 @@ def yenile_istegi(yt, adaylar):
                 O.log(f"• {slug}: {y['video_id']} zaten kanalda yok")
             elif it[0]["status"].get("privacyStatus") != "private":
                 O.log(f"! {slug}: {y['video_id']} herkese açık, silinmez")
+                continue
             else:
                 yt.videos().delete(id=y["video_id"]).execute()
                 silinen.add(y["video_id"])
-                O.log(f"• {slug}: {y['video_id']} silindi (istek üzerine yeniden render edilip yüklenecek)")
+                O.log(f"• {slug}: {y['video_id']} silindi (istek üzerine yeniden üretilip yüklenecek)")
+            if slug in bastan:
+                bastan_sifirla(slug, yol, y["slot"])
+                sifirlanan.add(slug)
         except Exception as e:
             O.log(f"! {slug}: yenileme yapılamadı ({str(e)[:160]})")
-            return silinen                                  # istek korunur, sonraki çalıştırmada tekrar denenir
+            return silinen, sifirlanan                      # istek korunur, sonraki çalıştırmada tekrar denenir
     c.pop("yenile", None)
+    c.pop("bastan", None)
     O.json_yaz(cyol, c)
-    return silinen
+    return silinen, sifirlanan
 
 
 def tamamla():
@@ -115,7 +146,8 @@ def tamamla():
     if not adaylar:
         return O.log("denetlenecek video yok")
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
-    silinen = yenile_istegi(yt, adaylar)
+    silinen, sifirlanan = yenile_istegi(yt, adaylar)
+    adaylar = [a for a in adaylar if a[0] not in sifirlanan]
     try:
         ids = ",".join(y["video_id"] for _, _, y, b in adaylar if b)
         var = {v["id"] for v in yt.videos().list(part="id", id=ids).execute().get("items", [])} if ids else set()

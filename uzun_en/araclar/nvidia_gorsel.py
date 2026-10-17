@@ -8,7 +8,8 @@ import base64, json, os, re, time, urllib.error, urllib.request
 
 # flux.1-dev hesapta erişilebilir görsel model (SDXL/SD3 -> 404, schnell -> zaman aşımı); >=~30 adım ister.
 GORSEL_MODEL = os.environ.get("NVIDIA_GORSEL_MODEL", "").strip() or "black-forest-labs/flux.1-dev"
-GORSEL_YEDEK = os.environ.get("NVIDIA_GORSEL_YEDEK", "google/diffusiongemma-26b-a4b-it").strip()
+# Yedek model varsayılan olarak yok: google/diffusiongemma-26b-a4b-it hesapta 404 veriyor (2026-10-16).
+GORSEL_YEDEK = os.environ.get("NVIDIA_GORSEL_YEDEK", "").strip()
 
 
 def _anahtar():
