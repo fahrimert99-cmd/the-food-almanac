@@ -14,9 +14,33 @@ MODELLER = [m.strip() for m in (os.environ.get("CLOUDFLARE_GORSEL_MODELLER") or
 _KAPALI = set()
 
 
+_UYARILDI = set()
+
+
+def _uyar(neden):
+    if neden not in _UYARILDI:
+        _UYARILDI.add(neden)
+        print(f"::warning::Cloudflare görsel yedeği kullanılamıyor: {neden}")
+
+
 def _hesap():
-    return (re.sub(r"\s", "", os.environ.get("CLOUDFLARE_ACCOUNT_ID") or ""),
-            re.sub(r"\s", "", os.environ.get("CLOUDFLARE_API_TOKEN") or ""))
+    """(hesap_id, token). Secret'a yanlışlıkla 'curl ...' komutu yapıştırıldıysa içinden ayıklar; hesap kimliği
+    32 haneli onaltılık değilse ('Could not route to /accounts/curl...' 404'ü) Cloudflare hiç denenmez."""
+    ham_h = os.environ.get("CLOUDFLARE_ACCOUNT_ID") or ""
+    ham_t = os.environ.get("CLOUDFLARE_API_TOKEN") or ""
+    if not ham_h.strip() or not ham_t.strip():
+        return "", ""
+    m = re.search(r"\b[0-9a-f]{32}\b", ham_h, re.I)
+    if not m:
+        _uyar("CLOUDFLARE_ACCOUNT_ID 32 haneli hesap kimliği değil (Cloudflare panelinde Account ID; "
+              "'curl ...' komutu değil) — secret'ı düzeltin")
+        return "", ""
+    t = re.search(r"Bearer\s+([A-Za-z0-9_\-]{20,})", ham_t)
+    token = t.group(1) if t else re.sub(r"\s", "", ham_t)
+    if not re.fullmatch(r"[A-Za-z0-9_\-]{20,}", token):
+        _uyar("CLOUDFLARE_API_TOKEN geçerli bir API token'ı gibi görünmüyor — secret'ı düzeltin")
+        return "", ""
+    return m.group(0).lower(), token
 
 
 def var_mi():
@@ -76,6 +100,10 @@ def uret(prompt, cikti, tohum=0, w=1344, h=768, timeout=180):
             except Exception:
                 govde = ""
             print(f"      (Cloudflare [{model}] HTTP {he.code}: {govde})")
+            if he.code in (400, 404) and re.search(r"7003|7000|Could not route|No route", govde):
+                _KAPALI.update(MODELLER)                       # adres/hesap hatası: hiçbir model çalışmaz
+                _uyar(f"adres/hesap hatası (HTTP {he.code}) — CLOUDFLARE_ACCOUNT_ID'yi kontrol edin")
+                return None
             if he.code in (401, 403, 429) or re.search(r"allocation|quota|limit|4006", govde, re.I):
                 _KAPALI.add(model)
                 print(f"      (Cloudflare [{model}] bu çalıştırmada kapatıldı: kota/yetki)")
