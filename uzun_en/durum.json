@@ -1,5 +1,5 @@
 {
-  "aktif": "garlic-blood-pressure",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -21,7 +21,7 @@
     },
     "garlic-blood-pressure": {
       "slot": "2026-10-20T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-16T13:53:22Z",
       "sahne_deneme": 1
     }
