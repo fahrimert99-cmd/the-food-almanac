@@ -7,6 +7,7 @@
   python3 uzun_en/araclar/gorsel.py --proje SLUG --sahne 43          # tek sahne için ADAY üret (NN.aday.jpg)
   python3 uzun_en/araclar/gorsel.py --proje SLUG --sahne 43 --aciklama "..." --tohum 7
   python3 uzun_en/araclar/gorsel.py --proje SLUG --sahne 43 --kabul  # adayı kalıcı yap
+  python3 uzun_en/araclar/gorsel.py --proje SLUG --kalite            # çıkış 3: görsellerin çoğu yedek kaynaktan/eksik
 
 Görseller projeler/SLUG/images/ altına yazılır (git'e girmez; GitHub sürümünde arşivlenir), uretim.json
 hangi tarifle ve hangi sağlayıcıyla üretildiklerini tutar. Kart/grafik sahnelerinde görsel yoktur: yazılar ve
@@ -41,6 +42,7 @@ KAPAK_STIL = ("Bright, vivid hand-painted editorial illustration with bold satur
               "high detail, 16:9 landscape.")
 GEMINI_MODEL = os.environ.get("UZUN_GEMINI_IMAGE_MODEL", "").strip() or "gemini-2.5-flash-image"
 PUAN = {"elle": 100, "nvidia": 90, "gemini": 90, "pollinations": 30, "yedek": 0}
+KALITE_ESIK = 0.2      # görsellerin bundan fazlası eksik ya da yedek kaynaklıysa (NVIDIA/Gemini değil) kalite düşük
 _KAPALI = set()
 _NVIDIA_HATA = [0]
 _kilit = threading.Lock()
@@ -226,15 +228,38 @@ class Kayit:
             O.json_yaz(self.yol, self.d)
 
 
+def _hedefler(proje, img):
+    hedefler = [(s["id"], sahne_prompt(s), os.path.join(img, f"{s['id']:02d}.jpg"))
+                for s in proje["sahneler"] if s.get("tip", "gorsel") == "gorsel" and s.get("gorsel")]
+    if (proje.get("kapak") or {}).get("gorsel"):
+        hedefler.append(("kapak", kapak_prompt(proje), os.path.join(img, "kapak.jpg")))
+    return hedefler
+
+
+def _zayif(kay, k, hedef):
+    """Eksik ya da yedek kaynaktan (pollinations) gelmiş görsel mi? Elle konanlar hiçbir zaman zayıf sayılmaz."""
+    r = kay.al(k) or {}
+    return not os.path.exists(hedef) or (r.get("kaynak") != "elle" and puan(r.get("kaynak")) < 90)
+
+
+def kalite(slug, proje):
+    """Görsellerin kaçı eksik/yedek kaynaklı? Oran KALITE_ESIK'i aşarsa 3 ile çıkar (iş akışı aşamayı ilerletmez)."""
+    img = os.path.join(O.proje_dir(slug), "images")
+    kay = Kayit(os.path.join(img, "uretim.json"))
+    hedefler = _hedefler(proje, img)
+    zayif = [k for k, _, h in hedefler if _zayif(kay, k, h)]
+    oran = len(zayif) / max(1, len(hedefler))
+    O.log(f"görsel kalitesi: {len(hedefler) - len(zayif)}/{len(hedefler)} NVIDIA/Gemini; eksik ya da yedek kaynaklı "
+          f"{len(zayif)} (%{oran * 100:.0f}, eşik %{KALITE_ESIK * 100:.0f}){': ' + str(zayif) if zayif else ''}")
+    sys.exit(3 if oran > KALITE_ESIK else 0)
+
+
 def hepsi(slug, proje, sadece=None):
     """sadece: yalnızca bu anahtarlar ('kapak', 4, 7 ...) ele alınır; diğer görsellere dokunulmaz."""
     img = os.path.join(O.proje_dir(slug), "images")
     os.makedirs(img, exist_ok=True)
     kay = Kayit(os.path.join(img, "uretim.json"))
-    hedefler = [(s["id"], sahne_prompt(s), os.path.join(img, f"{s['id']:02d}.jpg"))
-                for s in proje["sahneler"] if s.get("tip", "gorsel") == "gorsel" and s.get("gorsel")]
-    if (proje.get("kapak") or {}).get("gorsel"):
-        hedefler.append(("kapak", kapak_prompt(proje), os.path.join(img, "kapak.jpg")))
+    hedefler = _hedefler(proje, img)
     if sadece:
         hedefler = [h for h in hedefler if str(h[0]) in sadece]
     isler = []
@@ -264,15 +289,18 @@ def hepsi(slug, proje, sadece=None):
     with cf.ThreadPoolExecutor(max_workers=2 if nvidia_var else 1) as ex:
         list(ex.map(is_, isler))
     # İkinci tur: NVIDIA'nın geçici hatası (HTTP 500) ya da filtresi yüzünden yedek kaynağa düşen ya da hiç üretilemeyen
-    # görseller kısa bir beklemeden sonra yalnızca NVIDIA ile, farklı tohumla yeniden denenir. Sahneler henüz tasarlanmadığı
-    # için görsel değişmesi düzeni bozmaz. Sıralı çalışır (tohum ayarı iş parçacığı güvenli değil).
+    # görseller bir beklemeden sonra yalnızca NVIDIA ile, farklı tohumla yeniden denenir. İlk geçişte art arda hatalar
+    # yüzünden kapatılan NVIDIA her turda yeniden açılır (16 Ekim'de kısa bir HTTP 500 dalgası tüm videoyu yedek
+    # kaynağa düşürmüştü). Sahneler henüz tasarlanmadığı için görsel değişmesi düzeni bozmaz. Sıralı çalışır.
     for tur in (1, 2):
-        tekrar = [(k, pr, h) for k, pr, h in hedefler if not os.path.exists(h)
-                  or ((kay.al(k) or {}).get("kaynak") != "elle" and puan((kay.al(k) or {}).get("kaynak")) < 90)]
-        if not tekrar or not nvidia_var or "nvidia" in _KAPALI:
+        tekrar = [(k, pr, h) for k, pr, h in hedefler if _zayif(kay, k, h)]
+        if not tekrar or not nvidia_var:
             break
         O.log(f"   {len(tekrar)} görsel NVIDIA ile yeniden deneniyor (tur {tur})")
-        time.sleep(45)
+        time.sleep(45 * tur * tur)
+        with _kilit:
+            _KAPALI.discard("nvidia")
+            _NVIDIA_HATA[0] = 0
         for k, pr, hedef in tekrar:
             r = kay.al(k) or {}
             kaynak = uret(pr, hedef, min_puan=puan(r.get("kaynak")) if os.path.exists(hedef) else -1, tohum=tur * 7,
@@ -282,7 +310,7 @@ def hepsi(slug, proje, sadece=None):
                 if k in eksik:
                     eksik.remove(k)
                 O.log(f"   ✓ {k} ({kaynak}, tur {tur})")
-    dusuk = [k for k, _, h in hedefler if os.path.exists(h) and puan((kay.al(k) or {}).get("kaynak")) < 90]
+    dusuk = [k for k, _, h in hedefler if os.path.exists(h) and _zayif(kay, k, h)]
     O.log(f"görseller bitti: eksik {eksik or 'yok'}, düşük kaliteli {dusuk or 'yok'}")
     return eksik
 
@@ -330,9 +358,12 @@ def main():
     ap.add_argument("--tohum", type=int, default=0)
     ap.add_argument("--kabul", action="store_true")
     ap.add_argument("--sadece", default="", help="yalnızca bu görseller (ör. kapak veya 4,7); diğerlerine dokunulmaz")
+    ap.add_argument("--kalite", action="store_true", help="görsel kalitesini denetle (çıkış 3: çoğu yedek/eksik)")
     a = ap.parse_args()
     slug = O.aktif_slug(a.proje)
     proje = O.proje(slug)
+    if a.kalite:
+        return kalite(slug, proje)
     if a.sahne is not None:
         return aday(slug, proje, a.sahne, a.aciklama, a.tohum, a.kabul)
     eksik = hepsi(slug, proje, {x.strip() for x in a.sadece.split(",") if x.strip()} or None)

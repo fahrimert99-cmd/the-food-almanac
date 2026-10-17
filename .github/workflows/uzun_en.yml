@@ -311,6 +311,12 @@ jobs:
           python3 uzun_en/araclar/gorsel.py --proje "$SLUG" || echo "::warning::bazı görseller üretilemedi (bir önceki sahnenin görseli kullanılır; sahne ajanı yeniden dener)"
           python3 uzun_en/araclar/ses.py --proje "$SLUG"
           python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG"
+          # Kalite kapısı: görsellerin çoğu NVIDIA'dan gelmediyse (geçici NVIDIA arızası) ve slota zaman varsa aşama
+          # ilerlemez; bir sonraki çalıştırma (3 saat sonra) yalnızca zayıf görselleri yeniden dener.
+          if ! python3 uzun_en/araclar/gorsel.py --proje "$SLUG" --kalite && python3 uzun_en/araclar/plan.py --gorsel-bekle "$SLUG"; then
+            echo "::warning::görsellerin çoğu yedek kaynaktan geldi (NVIDIA arızası?) — sahne aşamasına geçilmedi, sonraki çalıştırmada yeniden denenecek"
+            exit 0
+          fi
           python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" sahne
           bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG görsel ve sesleri hazır" uzun_en/durum.json
 
