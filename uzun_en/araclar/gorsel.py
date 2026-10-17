@@ -243,7 +243,8 @@ def _zayif(kay, k, hedef):
 
 
 def kalite(slug, proje):
-    """Görsellerin kaçı eksik/yedek kaynaklı? Oran KALITE_ESIK'i aşarsa 3 ile çıkar (iş akışı aşamayı ilerletmez)."""
+    """Görsellerin kaçı eksik/yedek kaynaklı? Oran KALITE_ESIK'i aşarsa ya da kapak görseli yedek kaynaklıysa 3 ile
+    çıkar (iş akışı aşamayı ilerletmez)."""
     img = os.path.join(O.proje_dir(slug), "images")
     kay = Kayit(os.path.join(img, "uretim.json"))
     hedefler = _hedefler(proje, img)
@@ -251,7 +252,9 @@ def kalite(slug, proje):
     oran = len(zayif) / max(1, len(hedefler))
     O.log(f"görsel kalitesi: {len(hedefler) - len(zayif)}/{len(hedefler)} NVIDIA/Gemini; eksik ya da yedek kaynaklı "
           f"{len(zayif)} (%{oran * 100:.0f}, eşik %{KALITE_ESIK * 100:.0f}){': ' + str(zayif) if zayif else ''}")
-    sys.exit(3 if oran > KALITE_ESIK else 0)
+    if "kapak" in zayif:                                     # kapak tıklamayı belirler: tek başına bile yedek olamaz
+        O.log("kapak görseli NVIDIA/Gemini'den gelmedi — kapak yedek kaynakla bırakılmaz")
+    sys.exit(3 if oran > KALITE_ESIK or "kapak" in zayif else 0)
 
 
 def hepsi(slug, proje, sadece=None):
