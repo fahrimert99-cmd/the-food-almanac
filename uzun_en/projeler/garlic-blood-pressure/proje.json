@@ -2,7 +2,7 @@
   "slug": "garlic-blood-pressure",
   "kanal": "The Food Almanac",
   "dil": "en",
-  "baslik": "What Garlic Really Does to Your Blood Pressure",
+  "baslik": "Does Garlic Really Lower Blood Pressure?",
   "aciklama_giris": "In randomized trials, garlic supplements lowered blood pressure in people who already had high readings. A 2019 meta-analysis of 12 trials found about 8 points lower systolic and 5.5 points lower diastolic pressure, though most of the evidence comes from one research group, small trials and supplements rather than kitchen garlic. In this video we look at what the reviews and two key trials found, how crushing and heat change garlic's compounds, how big the effect is next to diet and medication, and the bleeding caution for people on blood thinners.\n\nWe also cover what is still unknown, why garlic is an add-on and not a replacement for prescribed treatment, and five practical points for using it safely.",
   "kaynaklar": [
     "Ried K. Garlic lowers blood pressure in hypertensive individuals, regulates serum cholesterol, and stimulates immunity: an updated meta-analysis and review. Journal of Nutrition. 2016;146(2):389S-396S. PMID 26764326. DOI 10.3945/jn.114.202192.",
@@ -17,13 +17,11 @@
   ],
   "kapak": {
     "satirlar": [
-      "GARLIC:",
-      "BLOOD",
-      "PRESSURE"
+      "GARLIC",
+      "LOWERS BP?"
     ],
-    "serit": "What the trials really show",
     "vurgu": "–8.7",
-    "vurgu_alt": "points systolic, high BP",
+    "vurgu_alt": "points",
     "gorsel": "a huge close-up bulb of garlic with several peeled cloves heaped in front of it, overlapping a sphygmomanometer cuff with a round gauge with a blank dial, tightly grouped"
   },
   "kahraman": "garlic",
