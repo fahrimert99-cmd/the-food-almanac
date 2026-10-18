@@ -72,6 +72,11 @@ def denetle(slug, asgari_dk=None, yazim=False):
     if yazim and kelime > 4:
         h.append(f"kapak: tüm yazı (satirlar + serit + vurgu_alt) en çok 4 kelimelik kısa bir kanca olmalı (şu an {kelime}); "
                  "ör. satirlar ['GARLIC', 'LOWERS BP?'], serit yok")
+    yr = (p.get("yorum") or "").strip()
+    if yazim and not yr:
+        h.append("yorum: kanalın ilk yorumu gerekli (izleyiciye deneyimini soran 1–2 kısa cümle, soru ile biter)")
+    if yr and (len(yr) > 280 or "http" in yr.lower() or "#" in yr or "?" not in yr):
+        h.append("yorum: en çok 280 karakter, bağlantı ve hashtag yok, bir soru içermeli")
     if k.get("serit") and len(k["serit"]) > 30:
         h.append("kapak.serit en çok 30 karakter (ör. 'What it does to blood sugar')")
     if not k.get("gorsel"):

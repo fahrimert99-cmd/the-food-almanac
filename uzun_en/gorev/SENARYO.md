@@ -184,6 +184,10 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
 - `aciklama_giris`: 2 short paragraphs, 400–900 characters. Honestly summarize the finding and list what the video covers. No hashtags, no links.
 - `kaynaklar`: full citations (authors, title, journal, year, plus DOI or PMID when available), in the order they appear.
 - `kapak`: the thumbnail, as described above.
+- `yorum`: the channel's own first comment, posted automatically when the video goes public. One or two short
+  sentences that end with a question inviting viewers to share their own experience (for example "How many eggs do
+  you eat in a typical week? Has your doctor ever told you to cut back?"). At most 280 characters; no links, no
+  hashtags, no advice, no claims about the channel (such as "I read every comment").
 - `kahraman`: only for videos about one food or drink. The hero food in one or two lowercase words, exactly as written in
   the `gorsel` descriptions (for example `"garlic"`, `"oats"`, `"beet juice"`). Omit it for habit or myth topics.
 - `etiketler`: 8–12 search tags in lowercase.
