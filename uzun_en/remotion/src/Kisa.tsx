@@ -17,11 +17,13 @@ type BaslikVeri = { satirlar: string[]; vurgu?: string; not?: string } | null;
 export type KisaVeri = {
   fps: number; toplam: number; baslik: string[]; kanal: string; kapanis: number; kanca_son?: number; kapak?: string | null;
   parcalar: { gorsel: string; bas: number; son: number; kutu: number[] | null; odak?: number; etiket?: string | null;
-    baslik?: BaslikVeri; kaydir?: boolean }[];
+    baslik?: BaslikVeri; kaydir?: boolean; yer?: { olcek: number; dy: number } | null }[];
   altyazi: { t0: number; t1: number; kelimeler: Kelime[] }[];
 };
 
 const GECIS = 0.35;
+const KENAR = "linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%), "
+  + "linear-gradient(180deg, transparent 0, #000 6%, #000 94%, transparent 100%)";
 const GOLGE = "0 4px 18px rgba(0,0,0,0.85), 0 0 4px rgba(0,0,0,0.9)";
 const SAYI = /\d/;
 const ara = (t: number, a: number[], b: number[]) => interpolate(t, a, b, { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
@@ -120,10 +122,26 @@ export const Kisa: React.FC<KisaVeri> = (v) => {
         const orta = p.odak ?? 50;
         const ox = p.kaydir ? ara(t, [Math.max(0, bas), son], [8, 92])
           : ara(t, [Math.max(0, bas), son], i % 2 === 0 ? [orta - 3, orta + 3] : [orta + 3, orta - 3]);
+        const op = i === 0 ? 1 : ara(t, [bas, p.bas], [0, 1]);
+        const kb = ara(t, [Math.max(0, bas), son], [1.0, p.yer ? 1.06 : 1.1]);
+        if (p.yer) {
+          // Konu altyazının ve YouTube arayüzünün altında kalmasın: görsel küçültülüp yukarı taşınır (kisa.py dikey_yer);
+          // açılan kenarlar aynı görselin bulanık kopyasıyla dolar.
+          const src = staticFile(`img/${p.gorsel}.jpg`);
+          return (
+            <AbsoluteFill key={i} style={{ opacity: op }}>
+              <Img src={src} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+                filter: "blur(36px) brightness(0.72)", transform: "scale(1.2)" }} />
+              <Img src={src} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+                objectPosition: `${ox}% 50%`, transform: `translateY(${p.yer.dy * 1920}px) scale(${p.yer.olcek * kb})`,
+                WebkitMaskImage: KENAR, WebkitMaskComposite: "source-in", maskImage: KENAR, maskComposite: "intersect" }} />
+            </AbsoluteFill>
+          );
+        }
         return (
           <Img key={i} src={staticFile(`img/${p.gorsel}.jpg`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%",
-            objectFit: "cover", objectPosition: `${ox}% 50%`, transformOrigin: `${orta}% 50%`,
-            opacity: i === 0 ? 1 : ara(t, [bas, p.bas], [0, 1]), transform: `scale(${ara(t, [Math.max(0, bas), son], [1.0, 1.1])})` }} />
+            objectFit: "cover", objectPosition: `${ox}% 50%`, transformOrigin: `${orta}% 50%`, opacity: op,
+            transform: `scale(${kb})` }} />
         );
       })}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,16,28,0.82) 0%, rgba(10,16,28,0.5) 22%, "

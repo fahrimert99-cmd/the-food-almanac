@@ -44,6 +44,39 @@ def dikey_odak(yol, w=0.30):
     return round(float(np.clip((c - w / 2) / (1 - w), 0, 1)) * 100, 1)
 
 
+# Dikey görselde konunun gireceği bant (yükseklik oranı): başlık + kaynak çipinin altı ile altyazının üstü arası.
+# Altyazı ~0.64'ten, YouTube'un alt arayüzü ~0.77'den başlar; konu bu bandın dışına taşarsa yazıların altında kalır.
+BANT = (0.25, 0.66)
+
+
+def _yogun_bant(yol, h):
+    """Sahne görsellerinde (konu kutusu tüm çerçeve) ayrıntının en yoğun olduğu h yüksekliğindeki yatay bandın ortası."""
+    from PIL import Image
+    im = np.asarray(Image.open(yol).convert("L").resize((216, 384)), dtype=np.float32)
+    kenar = np.zeros_like(im)
+    kenar[:, 1:] += np.abs(np.diff(im, axis=1))
+    kenar[1:, :] += np.abs(np.diff(im, axis=0))
+    satir = kenar.sum(axis=1)
+    n = int(round(h * len(satir)))
+    return (int(np.argmax(np.convolve(satir, np.ones(n), mode="valid"))) + n / 2) / len(satir)
+
+
+def dikey_yer(kutu, yol, kucult=True):
+    """Konuyu BANT'a taşıyan ölçek ve dikey kayma ({"olcek", "dy"}; dy çerçeve yüksekliği oranı). Konu kutusu tüm
+    çerçeveyse (sahne görseli) ayrıntının en yoğun bandı ortalanır. Açılan kenarlar Kisa.tsx'te bulanık kopyayla dolar.
+    kucult=False: yalnızca kaydırılır (yatay görsel zaten kırpılıyor; küçültülürse dar bir şerit kalır)."""
+    if not kutu:
+        return None
+    y0, y1 = kutu[1], kutu[3]
+    h, c = y1 - y0, (y0 + y1) / 2
+    if h > 0.85:
+        h = BANT[1] - BANT[0]
+        c = _yogun_bant(yol, h)
+    olcek = min(1.0, (BANT[1] - BANT[0]) / h) if kucult else 1.0
+    dy = (BANT[0] + BANT[1]) / 2 - (0.5 + olcek * (c - 0.5))
+    return {"olcek": round(olcek, 3), "dy": round(dy, 3)}
+
+
 def satirlar(metin, sure, nokta, t):
     """Altyazı satırları (en çok 4 kelime) ve kelime anları; t = cümlenin videodaki başlangıcı."""
     out, konum, baslar = [], 0, []
@@ -110,9 +143,10 @@ def main():
         # Uzun videonun mekanikleri: kaynak etiketi, kinetik başlık, sayı rozeti (proje.json sahnesinden; kisa.json'da
         # parça bazında "baslik" ile değiştirilebilir ya da null ile kapatılabilir). Geniş kompozisyonlar yatay kaydırılır.
         baslik = p["baslik"] if "baslik" in p else sp.get("baslik")
+        yer = dikey_yer(kutu, g, kucult=dikey)       # yatay yedek görsel de çerçeve yüksekliğine oturduğundan oranlar aynı
         parcalar.append({"gorsel": f"kisa/{gn:02d}", "bas": round(bas, 3), "son": round(t, 3), "kutu": kutu,
                          "odak": 50 if dikey else p.get("odak", dikey_odak(g)), "etiket": p.get("etiket", sp.get("etiket")),
-                         "baslik": baslik, "dikey": dikey,
+                         "baslik": baslik, "dikey": dikey, "yer": yer,
                          "kaydir": bool(p.get("kaydir")) and not dikey})   # yatay karşılaştırma görselleri kaydırılır
         if pi + 1 < len(tanim["parcalar"]):            # aynı sahnenin cümleleri sürüyorsa cümle arası kadar
             t += ARA if tanim["parcalar"][pi + 1]["sahne"] == p["sahne"] else PARCA_ARA
