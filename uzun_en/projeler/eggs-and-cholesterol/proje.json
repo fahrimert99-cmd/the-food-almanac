@@ -2,7 +2,7 @@
   "slug": "eggs-and-cholesterol",
   "kanal": "The Food Almanac",
   "dil": "en",
-  "baslik": "Eggs and Cholesterol: What an Egg a Day Really Does to Your Heart",
+  "baslik": "Is 1 Egg a Day Bad for Your Heart?",
   "yorum": "How many eggs do you eat in a typical week? Has your doctor ever told you to cut back on them?",
   "aciklama_giris": "Do eggs really raise your cholesterol? A little, in trials: more eggs raised LDL cholesterol by about 5.6 milligrams per deciliter on average. But in large Harvard cohorts following more than 215,000 health professionals, up to one egg a day was not linked with more heart disease or stroke, while another pooled analysis found a small link. The evidence is observational and not fully settled.\n\nIn this video we look at dietary versus blood cholesterol, why U.S. guidelines dropped the 300 milligram limit, what the meta-analyses and cohort studies show, the 2019 American Heart Association advisory, why some people respond more than others, what we know about people with diabetes, and what eggs are usually eaten with.",
   "kaynaklar": [
@@ -18,13 +18,9 @@
   ],
   "kapak": {
     "satirlar": [
-      "EGGS",
-      "AND YOUR",
-      "CHOLESTEROL"
+      "1 EGG A DAY",
+      "HEART RISK?"
     ],
-    "serit": "What the studies show",
-    "vurgu": "1 EGG",
-    "vurgu_alt": "a day: no clear link",
     "gorsel": "three big brown and white eggs, one cracked open with a golden yolk, grouped tightly and overlapping, very large and close up, with a small red heart symbol tucked behind them"
   },
   "kahraman": "eggs",

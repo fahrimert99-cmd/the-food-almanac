@@ -169,7 +169,8 @@ def tamamla():
         if not y.get("video_id"):
             continue
         bekliyor = bool(y.get("slot")) and dt_.datetime.fromisoformat(y["slot"].replace("Z", "+00:00")) > simdi
-        if bekliyor or not (y.get("kapak_tamam") and y.get("liste_tamam") and y.get("yorum_tamam")):
+        if bekliyor or not (y.get("kapak_tamam") and y.get("liste_tamam") and y.get("yorum_tamam")) \
+                or baslik_farkli(slug, y):
             adaylar.append((slug, yol, y, bekliyor))
     if not adaylar:
         return O.log("denetlenecek video yok")
@@ -192,9 +193,13 @@ def tamamla():
             d["aktif"] = slug
             O.durum_yaz(d)
             continue
-        if y.get("kapak_tamam") and y.get("liste_tamam") and (bekliyor or y.get("yorum_tamam")):
+        if y.get("kapak_tamam") and y.get("liste_tamam") and (bekliyor or y.get("yorum_tamam")) \
+                and not baslik_farkli(slug, y):
             continue
         try:
+            if baslik_farkli(slug, y):
+                y["baslik"] = baslik_guncelle(yt, y["video_id"], O.proje(slug)["baslik"])
+                O.log(f"✓ {slug}: başlık güncellendi -> {y['baslik']}")
             if not y.get("kapak_tamam"):
                 kapak = os.path.join(O.proje_dir(slug), "kapak_yt.jpg")   # repoya elle konan (yenilenmiş) kapak önceliklidir
                 if not os.path.exists(kapak):
@@ -217,6 +222,21 @@ def tamamla():
                 return O.log("YouTube kotası dolu — sonraki çalıştırmada tekrar denenecek")
         O.json_yaz(yol, y)
     liste_temizle(yt, m)
+
+
+def baslik_farkli(slug, y):
+    """proje.json'daki başlık sonradan değiştirildiyse (ör. tıklama oranı için) YouTube'daki başlık da güncellenir."""
+    p = O.proje(slug) or {}
+    return bool(p.get("baslik")) and bool(y.get("baslik")) and p["baslik"][:100] != y["baslik"]
+
+
+def baslik_guncelle(yt, vid, baslik):
+    """Yalnızca başlığı değiştirir; videos.update snippet'in tamamını istediği için mevcut snippet korunur (50 birim)."""
+    sn = yt.videos().list(part="snippet", id=vid).execute()["items"][0]["snippet"]
+    yeni = {k: sn[k] for k in ("description", "tags", "categoryId", "defaultLanguage", "defaultAudioLanguage") if k in sn}
+    yeni["title"] = baslik[:100]
+    yt.videos().update(part="snippet", body={"id": vid, "snippet": yeni}).execute()
+    return yeni["title"]
 
 
 def liste_temizle(yt, m):
