@@ -77,19 +77,28 @@ def _yogun_bant(yol, h):
     return (int(np.argmax(np.convolve(satir, np.ones(n), mode="valid"))) + n / 2) / len(satir)
 
 
+OLCEK_ALT = 0.8         # dikey görsel en çok bu kadar küçültülür (daha küçüğü yanlarda bulanık şeritle kart gibi durur)
+
+
 def dikey_yer(kutu, yol, kucult=True):
     """Konuyu BANT'a taşıyan ölçek ve dikey kayma ({"olcek", "dy"}; dy çerçeve yüksekliği oranı). Konu kutusu tüm
-    çerçeveyse (sahne görseli) ayrıntının en yoğun bandı ortalanır. Açılan kenarlar Kisa.tsx'te bulanık kopyayla dolar.
-    kucult=False: yalnızca kaydırılır (yatay görsel zaten kırpılıyor; küçültülürse dar bir şerit kalır)."""
+    çerçeveyse (sahne görseli) ayrıntının en yoğun bandı ortalanır. Küçültme OLCEK_ALT ile sınırlıdır; konu yine de
+    banttan uzunsa üstü bandın üstüne hizalanır (dikey istem alt üçte biri boş yüzey bırakır; altyazının arkasına o düşer).
+    Açılan kenarlar Kisa.tsx'te bulanık kopyayla dolar. kucult=False: yalnızca kaydırılır (yatay görsel zaten kırpılıyor)."""
     if not kutu:
         return None
     y0, y1 = kutu[1], kutu[3]
     h, c = y1 - y0, (y0 + y1) / 2
+    bant = BANT[1] - BANT[0]
     if h > 0.85:
-        h = BANT[1] - BANT[0]
+        h = bant
         c = _yogun_bant(yol, h)
-    olcek = min(1.0, (BANT[1] - BANT[0]) / h) if kucult else 1.0
-    dy = (BANT[0] + BANT[1]) / 2 - (0.5 + olcek * (c - 0.5))
+        y0 = c - h / 2
+    olcek = max(OLCEK_ALT, min(1.0, bant / h)) if kucult else 1.0
+    if olcek * h > bant + 1e-3:
+        dy = BANT[0] - (0.5 + olcek * (y0 - 0.5))
+    else:
+        dy = (BANT[0] + BANT[1]) / 2 - (0.5 + olcek * (c - 0.5))
     return {"olcek": round(olcek, 3), "dy": round(dy, 3)}
 
 

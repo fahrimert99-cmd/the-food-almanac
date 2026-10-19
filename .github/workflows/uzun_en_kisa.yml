@@ -22,7 +22,7 @@ on:
         description: "Proje (boş = Shorts'u eksik en yeni yüklenmiş video)"
         required: false
         default: ""
-      no:
+      sira:   # "no" olamaz: YAML onu false okur
         description: "Kaçıncı Shorts (boş = projenin sıradaki eksik Shorts'u)"
         required: false
         default: ""
@@ -56,7 +56,7 @@ jobs:
       - name: Proje seç
         env:
           GIRDI: ${{ github.event.inputs.proje }}
-          GIRDI_NO: ${{ github.event.inputs.no }}
+          GIRDI_NO: ${{ github.event.inputs.sira }}
           OLAY: ${{ github.event_name }}
         run: |
           python3 - <<'PY'
@@ -272,7 +272,7 @@ jobs:
         run: |
           S=$(python3 -c "import json;print(json.load(open('uzun_en/marka.json')).get('kisa_sayisi', 2))")
           if [ "$KNO" -lt "$S" ]; then
-            gh workflow run uzun_en_kisa.yml --repo "$GITHUB_REPOSITORY" --ref main -f proje="$SLUG" -f no=$((KNO + 1)) \
+            gh workflow run uzun_en_kisa.yml --repo "$GITHUB_REPOSITORY" --ref main -f proje="$SLUG" -f sira=$((KNO + 1)) \
               || echo "::warning::sıradaki Shorts başlatılamadı; günlük tarama yakalar"
           fi
       - name: Hata bildirimi

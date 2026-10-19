@@ -93,7 +93,8 @@ const Altyazi: React.FC<{ v: KisaVeri; t: number; ust: number }> = ({ v, t, ust 
         const aktif = t >= k.t && (i + 1 >= satir.kelimeler.length || t < satir.kelimeler[i + 1].t);
         return (
           <span key={i} style={{ color: aktif || SAYI.test(k.w) ? RENK.altinAcik : "#FFFFFF", display: "inline-block",
-            margin: "0 12px", transform: aktif ? "scale(1.08)" : "none" }}>{k.w}</span>
+            // etkin kelime büyür; uzun kelimede büyüme yanındaki boşluğu yemesin (her yana en çok ~8 px)
+            margin: "0 12px", transform: aktif ? `scale(${Math.min(1.08, 1 + 16 / (k.w.length * 50))})` : "none" }}>{k.w}</span>
         );
       })}
     </div>
