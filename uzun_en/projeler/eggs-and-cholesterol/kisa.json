@@ -1,0 +1,108 @@
+{
+  "baslik": [
+    "1 EGG A DAY",
+    "HEART RISK?"
+  ],
+  "parcalar": [
+    {
+      "sahne": 1,
+      "cumleler": [
+        0
+      ],
+      "baslik": null,
+      "etiket": null
+    },
+    {
+      "sahne": 1,
+      "cumleler": [
+        1
+      ],
+      "gorsel": 29,
+      "baslik": {
+        "satirlar": [
+          "EGGS,",
+          "32 YEARS"
+        ],
+        "vurgu": "215,000",
+        "not": "people followed"
+      },
+      "etiket": "Drouin-Chartier et al. · BMJ · 2020"
+    },
+    {
+      "sahne": 1,
+      "cumleler": [
+        2
+      ],
+      "gorsel": 32,
+      "baslik": {
+        "satirlar": [
+          "1 EGG A DAY:",
+          "NO CLEAR RISK"
+        ]
+      },
+      "etiket": "Drouin-Chartier et al. · BMJ · 2020",
+      "odak": 55
+    },
+    {
+      "sahne": 2,
+      "cumleler": [
+        1
+      ]
+    },
+    {
+      "sahne": 34,
+      "cumleler": [
+        1
+      ]
+    },
+    {
+      "sahne": 35,
+      "cumleler": [
+        1
+      ]
+    },
+    {
+      "sahne": 40,
+      "cumleler": [
+        0
+      ],
+      "baslik": {
+        "satirlar": [
+          "SMALL,",
+          "BUT REAL"
+        ]
+      },
+      "kaydir": true
+    },
+    {
+      "sahne": 50,
+      "cumleler": [
+        1
+      ],
+      "baslik": {
+        "satirlar": [
+          "UP TO 1 EGG",
+          "A DAY"
+        ]
+      }
+    },
+    {
+      "sahne": 51,
+      "cumleler": [
+        1,
+        3
+      ],
+      "kaydir": true
+    }
+  ],
+  "cta": [
+    {
+      "dosya": "kisa_cta_1.wav",
+      "metin": "Want the full story, with every study? Watch the full video on our channel."
+    },
+    {
+      "dosya": "kisa_cta_2.wav",
+      "metin": "And subscribe to The Food Almanac for more food science, explained calmly and honestly."
+    }
+  ]
+}
