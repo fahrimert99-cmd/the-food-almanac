@@ -1,0 +1,40 @@
+name: Kisa ses deneme (gecici)
+# Gecici: deneme Shorts'un kapanis seslendirmesini uzun videoyla ayni Kokoro sesiyle uretir ve
+# yumurta videosunun surumune yukler. Shorts asamasi hatta eklenince bu dosya silinecek.
+on:
+  push:
+    branches: [claude/blissful-bell-13i9f9]
+    paths: [deneme_short/cta.txt]
+permissions:
+  contents: write
+jobs:
+  ses:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bagimliliklar
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng >/dev/null
+          pip install -q numpy && pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
+      - name: Seslendirme
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          sys.path.insert(0, "uzun_en/araclar")
+          import ses
+          yaz = ses.sentezci("kokoro", "am_michael", 1.0, "uzun_en/.model")
+          os.makedirs("out", exist_ok=True)
+          for i, m in enumerate(l.strip() for l in open("deneme_short/cta.txt") if l.strip()):
+              yol = f"out/kisa_cta_{i + 1}.wav"
+              yaz(m, yol)
+              sure, _ = ses.kirp_ve_olc(yol)
+              print(yol, round(sure, 2), m)
+          PY
+      - name: Surume yukle
+        run: gh release upload uzun-en-eggs-and-cholesterol out/kisa_cta_*.wav --clobber
