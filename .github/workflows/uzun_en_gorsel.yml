@@ -5,6 +5,7 @@ name: Gorsel Yenile (The Food Almanac)
 # proje.json'daki tarifi değiştirin. "gorseller" verilirse yalnızca onlara bakılır (sahne düzenleri bozulmasın).
 # "kapak_adaylari": ["tarif 1", "tarif 2", ...] verilirse her tarif NVIDIA ile ayrıca denenir ve kapak_aday_N.jpg olarak
 # sürüme yüklenir (kapak.jpg'ye dokunmaz); beğenilen tarif sonra proje.json'a yazılır.
+# "dikey": [1, 29, ...] verilirse Shorts için bu sahnelerin 9:16 görselleri üretilir ve dikey_NN.jpg olarak sürüme yüklenir.
 on:
   push:
     branches: [main]
@@ -73,6 +74,17 @@ jobs:
             rm -f "$IMG/kapak.aday.jpg" "$IMG/kapak.aday.json"
           done
           ls /tmp/kapak_aday_*.jpg >/dev/null 2>&1 && gh release upload "uzun-en-$SLUG" /tmp/kapak_aday_*.jpg --clobber || true
+      - name: Dikey görseller (Shorts)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          SLUG=$(python3 -c "import json;print(json.load(open('uzun_en/gorsel_yenile.json'))['proje'])")
+          D=$(python3 -c "import json;print(','.join(map(str, json.load(open('uzun_en/gorsel_yenile.json')).get('dikey') or [])))")
+          [ -n "$D" ] || { echo "dikey görsel istenmedi"; exit 0; }
+          python3 uzun_en/araclar/gorsel.py --proje "$SLUG" --dikey "$D" --cikti /tmp/dikey 2>&1 | tee -a /tmp/gorsel.txt || true
+          ls /tmp/dikey/dikey_*.jpg >/dev/null 2>&1 && gh release upload "uzun-en-$SLUG" /tmp/dikey/dikey_*.jpg --clobber || true
       - name: Özet
         if: always()
         run: |
