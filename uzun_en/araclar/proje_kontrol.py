@@ -48,6 +48,8 @@ def denetle(slug, asgari_dk=None, yazim=False):
     b = p.get("baslik", "")
     if not 20 <= len(b) <= 100:
         h.append(f"baslik 20–100 karakter olmalı (şu an {len(b)})")
+    elif yazim and len(b) > 60:
+        h.append(f"baslik kısa olmalı: 30–55 karakter, en çok 60 (şu an {len(b)}); 'Really', 'Your' gibi dolgu kelimeleri atın")
     if b.isupper() or "!!" in b:
         h.append("baslik tamamen büyük harf ya da '!!' içeremez (sakin, güvenilir ton)")
     vurgu_harf = [w for w in re.findall(r"\b[A-Z]{3,}\b", b) if w.lower() in ABARTI_BUYUK]   # DASH, HbA1c gibi kısaltmalar serbest
@@ -66,6 +68,15 @@ def denetle(slug, asgari_dk=None, yazim=False):
                  "büyütülür, kısa satır dev yazı demektir; uzun ayrıntı kapak.serit'e")
     elif not 2 <= len(sat) <= 4 or any(len(x) > 15 for x in sat):
         h.append("kapak.satirlar: 2–4 satır, her satır en çok 15 karakter")
+    kelime = sum(len(str(x).split()) for x in [*sat, k.get("serit") or "", k.get("vurgu_alt") or ""])
+    if yazim and kelime > 4:
+        h.append(f"kapak: tüm yazı (satirlar + serit + vurgu_alt) en çok 4 kelimelik kısa bir kanca olmalı (şu an {kelime}); "
+                 "ör. satirlar ['GARLIC', 'LOWERS BP?'], serit yok")
+    yr = (p.get("yorum") or "").strip()
+    if yazim and not yr:
+        h.append("yorum: kanalın ilk yorumu gerekli (izleyiciye deneyimini soran 1–2 kısa cümle, soru ile biter)")
+    if yr and (len(yr) > 280 or "http" in yr.lower() or "#" in yr or "?" not in yr):
+        h.append("yorum: en çok 280 karakter, bağlantı ve hashtag yok, bir soru içermeli")
     if k.get("serit") and len(k["serit"]) > 30:
         h.append("kapak.serit en çok 30 karakter (ör. 'What it does to blood sugar')")
     if not k.get("gorsel"):

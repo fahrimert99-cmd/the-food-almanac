@@ -1,5 +1,5 @@
 {
-  "aktif": "eggs-and-cholesterol",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -15,8 +15,20 @@
     },
     "eggs-and-cholesterol": {
       "slot": "2026-10-16T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-13T14:06:44Z",
+      "sahne_deneme": 3
+    },
+    "garlic-blood-pressure": {
+      "slot": "2026-10-20T14:00:00Z",
+      "asama": "yuklendi",
+      "baslangic": "2026-10-16T13:53:22Z",
+      "sahne_deneme": 1
+    },
+    "frozen-vs-fresh-vegetables": {
+      "slot": "2026-10-23T14:00:00Z",
+      "asama": "yuklendi",
+      "baslangic": "2026-10-19T05:06:33Z",
       "sahne_deneme": 1
     }
   }

@@ -70,12 +70,12 @@ The prompt tells you three things:
 
 **Title (`baslik`)**
 - An honest, curiosity-driven statement or question, in Title Case.
-- Best-performing pattern in this niche: one concrete food, drink or habit, plus the one thing it does in the body.
-  - Form: "What [food or habit] Really Does to Your [body part or measure]", optionally after a short question.
-  - Examples: "What a 10-Minute Walk After Meals Really Does to Your Blood Sugar", "Eat Vegetables First? What Food Order
-    Really Does to Your Blood Sugar".
+- Short and punchy: one concrete food, drink or habit, plus the one thing it does in the body. Put the food first.
+  - Forms: a short honest question ("Does Garlic Really Lower Blood Pressure?") or "[Food]: What It Does to [measure]".
+  - Examples: "Does Garlic Really Lower Blood Pressure?", "Walking After Meals: What It Does to Blood Sugar",
+    "Eggs and Cholesterol: What Studies Show".
   - One food or habit and one outcome. Do not stack two organs ("... to Your Heart and Muscles").
-- Ideally 45–70 characters; never more than 100.
+- 30–55 characters; never more than 60. Cut filler words ("Really", "Your", "Actually") before cutting meaning.
 - Age angle: when your sources studied older adults, or the effect clearly matters more with age, you may add "After 50"
   (or "After 60" when the studies were in that age group). Only when the evidence supports it.
 - Banned: fear or hype words ("shock", "shocking", "never", "poison", "toxic", "doctors hate", "miracle", "destroys",
@@ -87,15 +87,15 @@ The prompt tells you three things:
 The thumbnail decides whether anyone clicks. It is a white card: huge text on the left, one big vivid image bleeding
 off the right edge, a number badge top right. Our first video got only 2.4% clicks with long text and a small object.
 
-- `satirlar`: 2–3 UPPERCASE lines, each at most 12 characters, 2–5 words in total.
+- The whole thumbnail is a 3–4 word hook. Count every word in `satirlar`, `serit` and `vurgu_alt` together: at most
+  4 words. Long thumbnail text is unreadable on a phone and lost clicks.
+- `satirlar`: 2–3 UPPERCASE lines, each at most 12 characters, together 2–4 words: the food plus the hook.
   - Every line is enlarged separately to the full width of the text block, so short lines become giant words.
-    Put the topic in the big lines.
-  - The last line is drawn in gold.
-  - Example: `["10-MIN", "WALK", "AFTER MEALS"]`.
-- `serit` (recommended): a short line on a coral banner under the text, at most 30 characters. It carries the curiosity
-  or the outcome, for example `"What it does to blood sugar"`.
+  - The last line is drawn in gold. A question mark makes a good hook.
+  - Examples: `["GARLIC", "LOWERS BP?"]`, `["WALK", "AFTER MEALS"]`, `["EGGS", "VS HEART?"]`.
+- `serit`: leave it out. Use it only when `satirlar` has 2 words and one more word is truly needed.
 - `vurgu` (optional): one striking but real number from your sources, at most 6 characters (for example `–37%`).
-- `vurgu_alt`: 2–4 words explaining that number.
+- `vurgu_alt` (optional): at most 1 word under that number (for example `"points"`), counted in the 4 words.
 - `gorsel`: the image model's description. The style (bright, saturated, pure white background) is added automatically.
   - Make the hero food or drink very large, close-up and appetizing.
   - Group the objects tightly, overlapping (for example sneakers behind the plate), never side by side in a wide row:
@@ -184,6 +184,10 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
 - `aciklama_giris`: 2 short paragraphs, 400–900 characters. Honestly summarize the finding and list what the video covers. No hashtags, no links.
 - `kaynaklar`: full citations (authors, title, journal, year, plus DOI or PMID when available), in the order they appear.
 - `kapak`: the thumbnail, as described above.
+- `yorum`: the channel's own first comment, posted automatically when the video goes public. One or two short
+  sentences that end with a question inviting viewers to share their own experience (for example "How many eggs do
+  you eat in a typical week? Has your doctor ever told you to cut back?"). At most 280 characters; no links, no
+  hashtags, no advice, no claims about the channel (such as "I read every comment").
 - `kahraman`: only for videos about one food or drink. The hero food in one or two lowercase words, exactly as written in
   the `gorsel` descriptions (for example `"garlic"`, `"oats"`, `"beet juice"`). Omit it for habit or myth topics.
 - `etiketler`: 8–12 search tags in lowercase.

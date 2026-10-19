@@ -12,7 +12,7 @@ Girdi: cikti/video.mp4, cikti/kapak_yt.jpg, cikti/meta.json (meta.py) ve cikti/k
 Aynı video iki kez yüklenmez: projeler/SLUG/yayin.json ya da kanalda aynı başlıklı son yükleme varsa o kullanılır.
 Gerekli: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (youtube.force-ssl izni).
 """
-import argparse, datetime as dt, os, sys, time
+import argparse, datetime as dt, glob, os, re, shutil, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
@@ -57,19 +57,45 @@ def liste_ekle(vid, m):
         return False
 
 
+def bastan_sifirla(slug, yol, slot):
+    """Videoyu görsel aşamasından yeniden üretime alır. Doğrulanmış senaryo ve ses korunur; yayın kaydı, sahne tasarımları
+    ve ajan raporları silinir. Yedek kaynaklı (düşük kaliteli) görseller varlik aşamasında NVIDIA ile yeniden üretilir."""
+    pdir = O.proje_dir(slug)
+    if os.path.exists(yol):
+        os.remove(yol)
+    shutil.rmtree(os.path.join(pdir, "sahneler"), ignore_errors=True)
+    for f in glob.glob(os.path.join(pdir, "rapor_g*.md")):
+        os.remove(f)
+    d = O.durum()
+    v = d["videolar"].setdefault(slug, {})
+    v.update(asama="varlik", sahne_deneme=0, slot=slot)
+    d["aktif"] = slug
+    O.durum_yaz(d)
+    O.log(f"• {slug}: baştan üretime alındı (aşama varlik, slot {slot})")
+
+
 def yenile_istegi(yt, adaylar):
     """calistir.json'daki "yenile": ["slug"] isteği: henüz yayınlanmamış (private, slotu gelmemiş) videoyu YouTube'dan
     siler. Ardından tamamla() onu 'silinmiş' görüp aynı çalıştırmada yeniden render ettirir ve yükletir.
-    Herkese açık ya da yayın saati geçmiş videolara dokunulmaz. İstek bir kez kullanılır ve silinir."""
+    "bastan": ["slug"] aynı silmeyi yapar ama projeyi görsel aşamasına döndürür (bastan_sifirla): görseller yeniden
+    üretilir, sahneler yeniden tasarlanır, sonra render edilip aynı slota yüklenir.
+    Herkese açık ya da yayın saati geçmiş videolara dokunulmaz. İstek bir kez kullanılır ve silinir.
+    Döner: (silinen video id'leri, baştan alınan slug'lar)."""
     cyol = os.path.join(O.KOK, "calistir.json")
     c = O.json_oku(cyol, {}) or {}
     istek = c.get("yenile") or []
     istek = [istek] if isinstance(istek, str) else istek
-    silinen = set()
-    if not istek:
-        return silinen
-    for slug, _, y, bekliyor in adaylar:
-        if slug not in istek:
+    bastan = c.get("bastan") or []
+    bastan = [bastan] if isinstance(bastan, str) else bastan
+    silinen, sifirlanan = set(), set()
+    if not istek and not bastan:
+        return silinen, sifirlanan
+    aktif = O.durum().get("aktif")
+    for slug, yol, y, bekliyor in adaylar:
+        if slug not in istek and slug not in bastan:
+            continue
+        if slug in bastan and aktif not in (None, slug):
+            O.log(f"! {slug}: başka bir proje ({aktif}) üretimde, baştan alınamaz")
             continue
         if not bekliyor:
             O.log(f"! {slug}: yayın saati geçmiş, yenilenmez")
@@ -80,23 +106,56 @@ def yenile_istegi(yt, adaylar):
                 O.log(f"• {slug}: {y['video_id']} zaten kanalda yok")
             elif it[0]["status"].get("privacyStatus") != "private":
                 O.log(f"! {slug}: {y['video_id']} herkese açık, silinmez")
+                continue
             else:
                 yt.videos().delete(id=y["video_id"]).execute()
                 silinen.add(y["video_id"])
-                O.log(f"• {slug}: {y['video_id']} silindi (istek üzerine yeniden render edilip yüklenecek)")
+                O.log(f"• {slug}: {y['video_id']} silindi (istek üzerine yeniden üretilip yüklenecek)")
+            if slug in bastan:
+                bastan_sifirla(slug, yol, y["slot"])
+                sifirlanan.add(slug)
         except Exception as e:
             O.log(f"! {slug}: yenileme yapılamadı ({str(e)[:160]})")
-            return silinen                                  # istek korunur, sonraki çalıştırmada tekrar denenir
+            return silinen, sifirlanan                      # istek korunur, sonraki çalıştırmada tekrar denenir
     c.pop("yenile", None)
+    c.pop("bastan", None)
     O.json_yaz(cyol, c)
-    return silinen
+    return silinen, sifirlanan
+
+
+def yorum_metni(slug):
+    """Kanalın kendi ilk yorumu: proje.json 'yorum' (senaryo ajanı yazar); yoksa genel bir soru."""
+    metin = re.sub(r"\s+", " ", str((O.proje(slug) or {}).get("yorum") or "")).strip()
+    if metin and len(metin) <= 280 and "http" not in metin.lower():
+        return metin
+    return "Did anything in this video surprise you? Tell us about your own experience in the comments."
+
+
+def yorum_gonder(yt, video_id, metin):
+    """Kanalın kendi videosuna yorum yazar (eski Türkçe hattaki yorum_at.py'den). Video bu kanala ait ve herkese açık
+    olmalı; aynı metin daha önce yazılmışsa tekrar yazmaz (zaman aşımı sonrası tekrar çalıştırmada çift yorum olmasın).
+    Yorumun id'sini döndürür. YouTube API yorum sabitlemeyi desteklemez: sabitlemek isteyen Studio'dan elle yapar."""
+    kanal = (yt.channels().list(part="id", mine=True).execute().get("items") or [{}])[0].get("id")
+    it = yt.videos().list(part="snippet,status", id=video_id).execute().get("items", [])
+    if not kanal or not it or it[0]["snippet"].get("channelId") != kanal:
+        raise RuntimeError("video bu kanala ait değil ya da bulunamadı; yorum yazılmadı")
+    if it[0]["status"].get("privacyStatus") != "public":
+        raise RuntimeError("video henüz herkese açık değil; yorum sonraki çalıştırmada")
+    for t in yt.commentThreads().list(part="snippet", videoId=video_id, maxResults=100, order="time").execute().get("items", []):
+        top = t["snippet"]["topLevelComment"]["snippet"]
+        if (top.get("authorChannelId") or {}).get("value") == kanal and top.get("textOriginal", "").strip() == metin:
+            return t["id"]
+    r = yt.commentThreads().insert(part="snippet", body={"snippet": {
+        "videoId": video_id, "topLevelComment": {"snippet": {"textOriginal": metin}}}}).execute()
+    return r["id"]
 
 
 def tamamla():
     """Yüklenmiş videoları denetler (plan işi her çalıştırmada, karardan ÖNCE çağırır):
     - yayın saati gelmemiş bir video kanalda yoksa (ör. Studio'dan yanlışlıkla silindiyse) proje 'render'
       aşamasına döner: aynı çalıştırmada yeniden render edilip yüklenir. Yayınlanmış videolara dokunulmaz.
-    - kapağı (işleme sonrası) ya da oynatma listesi eksik kalmış videoları tamamlar."""
+    - kapağı (işleme sonrası) ya da oynatma listesi eksik kalmış videoları tamamlar;
+    - yayına çıkmış videolara kanalın ilk yorumunu (proje.json 'yorum') bir kez yazar."""
     import datetime as dt_, subprocess, tempfile
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
@@ -110,12 +169,13 @@ def tamamla():
         if not y.get("video_id"):
             continue
         bekliyor = bool(y.get("slot")) and dt_.datetime.fromisoformat(y["slot"].replace("Z", "+00:00")) > simdi
-        if bekliyor or not (y.get("kapak_tamam") and y.get("liste_tamam")):
+        if bekliyor or not (y.get("kapak_tamam") and y.get("liste_tamam") and y.get("yorum_tamam")):
             adaylar.append((slug, yol, y, bekliyor))
     if not adaylar:
         return O.log("denetlenecek video yok")
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
-    silinen = yenile_istegi(yt, adaylar)
+    silinen, sifirlanan = yenile_istegi(yt, adaylar)
+    adaylar = [a for a in adaylar if a[0] not in sifirlanan]
     try:
         ids = ",".join(y["video_id"] for _, _, y, b in adaylar if b)
         var = {v["id"] for v in yt.videos().list(part="id", id=ids).execute().get("items", [])} if ids else set()
@@ -132,7 +192,7 @@ def tamamla():
             d["aktif"] = slug
             O.durum_yaz(d)
             continue
-        if y.get("kapak_tamam") and y.get("liste_tamam"):
+        if y.get("kapak_tamam") and y.get("liste_tamam") and (bekliyor or y.get("yorum_tamam")):
             continue
         try:
             if not y.get("kapak_tamam"):
@@ -146,6 +206,10 @@ def tamamla():
                 O.log(f"✓ {slug}: kapak basıldı")
             if not y.get("liste_tamam"):
                 y["liste_tamam"] = liste_ekle(y["video_id"], m)
+            if not bekliyor and not y.get("yorum_tamam"):
+                y["yorum_id"] = yorum_gonder(yt, y["video_id"], yorum_metni(slug))
+                y["yorum_tamam"] = True
+                O.log(f"✓ {slug}: kanal yorumu yazıldı")
         except Exception as e:
             O.log(f"! {slug}: {str(e)[:160]}")
             if "quota" in str(e).lower():

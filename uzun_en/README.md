@@ -33,9 +33,9 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 
 | İş | Ne kullanılır |
 |---|---|
-| Claude | Yalnızca `CLAUDE_CODE_OAUTH_TOKEN` (abonelik kotası). API anahtarı bilerek verilmez. |
+| Claude | Önce `CLAUDE_ANA_TOKEN`, kota/yetki hatasında `CLAUDE_CODE_OAUTH_TOKEN` (yedek); `araclar/claude_calistir.sh`. İkisi de abonelik kotası; `sk-ant-api...` API anahtarları kredi harcamamak için atlanır. |
 | Gemini | `GEMINI_API_KEY` ücretsiz katman (faturalandırma kapalı). Claude kotası bitince devralır. |
-| Görsel | NVIDIA ücretsiz API |
+| Görsel | NVIDIA ücretsiz API; çökerse Cloudflare Workers AI FLUX (günlük ücretsiz kota) |
 | Ses | Kokoro "Michael" (yerel, açık kaynak; ilk iki video Piper ile) |
 | Müzik | Kodla üretilir |
 | YouTube | Ücretsiz Data API kotası |
@@ -43,7 +43,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 
 ## Kurulum (yapıldı)
 
-1. **Secret'lar:** `CLAUDE_CODE_OAUTH_TOKEN`, `GEMINI_API_KEY`, `NVIDIA_API_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`,
+1. **Secret'lar:** `CLAUDE_ANA_TOKEN`, `CLAUDE_CODE_OAUTH_TOKEN`, `GEMINI_API_KEY`, `NVIDIA_API_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`,
    `YT_REFRESH_TOKEN`.
    - YouTube token'ı yenilemek gerekirse: `python3 uzun_en/araclar/token_al.py` (bilgisayarda bir kez).
    - Claude token'ı yenilemek gerekirse: `claude setup-token`.
@@ -85,6 +85,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 | `gorev/*.md` | Ajan görevleri: KONU, SENARYO, DOGRULA, SAHNE |
 | `araclar/` | Python araçları (her birinin başında kullanım yazar) |
 | `remotion/` | Remotion projesi. `TASARIM.md` sahne tasarım rehberidir. |
+| `hyperframes/` | HTML tabanlı HyperFrames önizleme/render projesi; Remotion'a alternatif hızlı prototipleme hattı. |
 | `projeler/<slug>/` | proje.json, arastirma.md, dogrulama.md, sahneler/, yayin.json. Görsel ve ses dosyaları sürümdedir. |
 
 Yerelde deneme (YouTube'a yüklemez):
@@ -93,3 +94,14 @@ Yerelde deneme (YouTube'a yüklemez):
 python3 uzun_en/araclar/hazirla.py --proje food-order-blood-sugar
 cd uzun_en/remotion && npx remotion studio
 ```
+
+HyperFrames ile HTML kompozisyonunu önizlemek veya MP4 üretmek için:
+
+```bash
+cd uzun_en/hyperframes
+npm run dev
+npm run render -- -o out/video.mp4
+```
+
+HyperFrames Node.js 22+ ve FFmpeg gerektirir. Remotion hattı mevcut üretim akışının varsayılanıdır;
+HyperFrames HTML/CSS tabanlı sahneleri hızlıca denemek ve ayrı render etmek için eklenmiştir.

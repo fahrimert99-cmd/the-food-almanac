@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "historyId": "543ba05d-683d-4d32-82f6-24d509f5448f",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5",
+      "content": "/home/ubuntu/.cache/hyperframes/history/543ba05d-683d-4d32-82f6-24d509f5448f/blobs/1d/1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5"
+    },
+    "CLAUDE.md": {
+      "hash": "1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5",
+      "content": "/home/ubuntu/.cache/hyperframes/history/543ba05d-683d-4d32-82f6-24d509f5448f/blobs/1d/1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/home/ubuntu/.cache/hyperframes/history/543ba05d-683d-4d32-82f6-24d509f5448f/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "b5096c9d2b89063967ce0aac5f63512f58c1c9253f2902b1c57c96ea1129725f",
+      "content": "/home/ubuntu/.cache/hyperframes/history/543ba05d-683d-4d32-82f6-24d509f5448f/blobs/b5/b5096c9d2b89063967ce0aac5f63512f58c1c9253f2902b1c57c96ea1129725f"
+    },
+    "meta.json": {
+      "hash": "606752ec191f114cf846addc9b093774e842ccb0f54cede4d084b345c039c229",
+      "content": "/home/ubuntu/.cache/hyperframes/history/543ba05d-683d-4d32-82f6-24d509f5448f/blobs/60/606752ec191f114cf846addc9b093774e842ccb0f54cede4d084b345c039c229"
+    },
+    "package.json": {
+      "hash": "170e472e5b48b9ecae1c78754c9a4a6fcda46e5dd757b2ee7ad7b39866885610",
+      "content": "/home/ubuntu/.cache/hyperframes/history/543ba05d-683d-4d32-82f6-24d509f5448f/blobs/17/170e472e5b48b9ecae1c78754c9a4a6fcda46e5dd757b2ee7ad7b39866885610"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  }
+}

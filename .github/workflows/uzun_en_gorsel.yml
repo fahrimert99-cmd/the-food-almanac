@@ -35,6 +35,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           SLUG=$(python3 -c "import json;print(json.load(open('uzun_en/gorsel_yenile.json'))['proje'])")
@@ -52,6 +54,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           SLUG=$(python3 -c "import json;print(json.load(open('uzun_en/gorsel_yenile.json'))['proje'])")
           N=$(python3 -c "import json;print(len(json.load(open('uzun_en/gorsel_yenile.json')).get('kapak_adaylari') or []))")
