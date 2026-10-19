@@ -2,21 +2,25 @@
 # -*- coding: utf-8 -*-
 """Uzun videodan dikey Shorts (1080x1920) için veri + ses hazırlar; Remotion 'Kisa' kompozisyonu çizer.
 
-  python3 uzun_en/araclar/kisa.py --proje SLUG --ses DIR --gorsel DIR --cikti DIR
+  python3 uzun_en/araclar/kisa.py --proje SLUG --liste       # ajan için cümle listesi: cikti/kisa_liste.md
+  python3 uzun_en/araclar/kisa.py --proje SLUG --kontrol     # kisa.json kurallara uyuyor mu (HATA satırları, çıkış 1)
+  python3 uzun_en/araclar/kisa.py --proje SLUG --gorseller   # dikey görseli gereken sahneler: "1,29,32"
+  python3 uzun_en/araclar/kisa.py --proje SLUG               # veri + ses (kapanış çağrısı yoksa seslendirir)
 
-Girdi: projeler/SLUG/kisa.json -> {"baslik": ["SATIR 1", "SATIR 2"], "parcalar": [{"sahne": 1, "cumleler": [0, 1]}, ...]}
-  cumleler: zaman.json'daki cümle sıraları (0'dan). Her parçada o sahnenin görseli kullanılır.
-Çıktı: CIKTI/kisa_props.json (Remotion --props), CIKTI/kisa_ses.wav (anlatım + müzik), public/img/kisa/*.jpg.
-Yeni seslendirme yapılmaz: uzun videonun Michael cümleleri olduğu gibi kullanılır.
+Girdi: projeler/SLUG/kisa.json (görev: gorev/KISA.md) ->
+  {"baslik": ["SATIR 1", "SATIR 2"], "baslik_yt": "...", "aciklama": "...", "parcalar": [{"sahne": 1, "cumleler": [0, 1]}, ...]}
+  cumleler: zaman.json'daki cümle sıraları (0'dan). Her parçada o sahnenin (ya da "gorsel" sahnesinin) görseli kullanılır.
+Klasörler (varsayılan): ses/ (cümle WAV'ları + zaman.json), images/ (NN.jpg), cikti/dikey/ (dikey_NN.jpg),
+  cikti/kisa_cta/ (kapanış sesleri), kapak_yt.jpg (projede ya da cikti/).
+Çıktı: cikti/kisa/kisa_props.json (Remotion --props), cikti/kisa/kisa_ses.wav (anlatım + müzik), public/img/kisa/*.jpg.
+Uzun videonun cümleleri olduğu gibi kullanılır; yalnızca kapanış çağrısı aynı sesle seslendirilir.
 """
-import argparse, json, os, shutil, sys
+import argparse, hashlib, json, os, shutil, sys
 
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
-import hazirla as H  # noqa: E402
-from hizalama import harita_dp  # noqa: E402
 
 FPS = 30
 BAS = 0.6        # ilk sesten önce (kanca başlığı görünsün)
@@ -24,6 +28,17 @@ ARA = 0.30       # cümleler arası
 PARCA_ARA = 0.45 # parçalar arası
 CTA_ARA = 0.6    # içerikten kapanış çağrısına geçiş
 SON = 0.8        # son sesten sonra
+
+# Kapanış çağrısı (kisa.json "cta" ile değiştirilebilir). {ad}: kanal adı.
+CTA = ["Want the full story, with every study? Watch the full video on our channel.",
+       "And subscribe to {ad} for more food science, explained calmly and honestly."]
+CTA_TAHMIN = 10.0  # seslendirilmemiş kapanış çağrısının tahmini süresi (sn), denetim için
+
+# Kurallar (gorev/KISA.md ile aynı)
+ICERIK = (25.0, 52.0)   # anlatım süresi (ilk cümlenin başından son cümlenin sonuna), sn
+TOPLAM_AZAMI = 65.0     # kapanış dahil
+PARCA_AZAMI = 9.0       # birden çok cümleli bir parçanın süresi (tek görsel çok uzun kalmasın)
+SATIR_AZAMI = 14        # kanca ve parça başlığı satırı (karakter)
 
 
 def dikey_odak(yol, w=0.30):
@@ -97,24 +112,170 @@ def satirlar(metin, sure, nokta, t):
     return out
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--proje", required=True)
-    ap.add_argument("--ses", required=True, help="cümle WAV'ları + zaman.json klasörü")
-    ap.add_argument("--gorsel", required=True, help="sahne görselleri (NN.jpg) klasörü")
-    ap.add_argument("--cikti", required=True)
-    ap.add_argument("--dikey", default="", help="dikey (9:16) sahne görselleri klasörü: NN.jpg varsa yatay görsel yerine o")
-    ap.add_argument("--cta", default="", help="kapanış çağrısı WAV'ları klasörü (kisa.json 'cta' dosyaları) + kapak_yt.jpg")
-    a = ap.parse_args()
-    proje = O.proje(a.proje)
-    tanim = O.json_oku(os.path.join(O.proje_dir(a.proje), "kisa.json"))
-    zaman = O.json_oku(os.path.join(a.ses, "zaman.json"))
+def _yollar(slug):
+    pdir = O.proje_dir(slug)
+    c = os.path.join(pdir, "cikti")
+    return {"ses": os.path.join(pdir, "ses"), "gorsel": os.path.join(pdir, "images"), "dikey": os.path.join(c, "dikey"),
+            "cta": os.path.join(c, "kisa_cta"), "cikti": os.path.join(c, "kisa"),
+            "kapak": next((y for y in (os.path.join(pdir, "kapak_yt.jpg"), os.path.join(c, "kapak_yt.jpg")) if os.path.exists(y)),
+                          None)}
+
+
+def _tanim(slug):
+    return O.json_oku(os.path.join(O.proje_dir(slug), "kisa.json"))
+
+
+def _sahneler(slug, ses):
+    zaman = O.json_oku(os.path.join(ses, "zaman.json"))
+    if not zaman:
+        raise SystemExit(f"{ses}/zaman.json yok — önce varlik.py indir --proje {slug}")
+    return {z["id"]: z for z in zaman["sahneler"]}
+
+
+def _gorsel_no(p):
+    return p.get("gorsel", p["sahne"])           # görsel başka bir sahneden alınabilir (uzun bölümü bölmek için)
+
+
+def cta_metinleri(tanim):
+    ad = O.marka().get("ad", "")
+    return [(c if isinstance(c, str) else c["metin"]).replace("{ad}", ad) for c in (tanim.get("cta") or CTA)]
+
+
+def liste(slug):
+    """Ajanın cümle seçeceği liste: her sahnenin görsel tarifi, ekrandaki başlığı ve süreli cümleleri."""
+    proje, y = O.proje(slug), _yollar(slug)
+    zs = _sahneler(slug, y["ses"])
+    out = [f"# {proje['baslik']}: sentences available for the Short", "",
+           "Format: `[sentence index] (seconds) text`. Use the scene number and the sentence indices in kisa.json.", ""]
+    for s in proje["sahneler"]:
+        z = zs.get(s["id"])
+        if not z:
+            continue
+        out.append(f"## Scene {s['id']}" + (f": {s['bolum']}" if s.get("bolum") else ""))
+        out.append(f"- image: {s.get('gorsel', '(none)')}")
+        if s.get("baslik"):
+            out.append(f"- on-screen title: {json.dumps(s['baslik'], ensure_ascii=False)}")
+        if s.get("etiket"):
+            out.append(f"- source chip: {s['etiket']}")
+        out += [f"- [{i}] ({c['sure']:.1f} s) {c['metin']}" for i, c in enumerate(z["cumleler"])]
+        out.append("")
+    yol = os.path.join(O.proje_dir(slug), "cikti", "kisa_liste.md")
+    os.makedirs(os.path.dirname(yol), exist_ok=True)
+    with open(yol, "w", encoding="utf-8") as f:
+        f.write("\n".join(out))
+    O.log(f"liste: {yol}")
+
+
+def _satir_hatalari(ad, satirlar, hata):
+    if not isinstance(satirlar, list) or not 1 <= len(satirlar) <= 2 or not all(isinstance(x, str) and x.strip() for x in satirlar):
+        hata.append(f"{ad}: 1-2 satırlık metin listesi olmalı")
+        return
+    for x in satirlar:
+        if len(x) > SATIR_AZAMI:
+            hata.append(f"{ad}: '{x}' {len(x)} karakter (en çok {SATIR_AZAMI})")
+        if x != x.upper():
+            hata.append(f"{ad}: '{x}' BÜYÜK HARF olmalı")
+
+
+def kontrol(slug):
+    """kisa.json'u denetler; hata listesi döndürür (boşsa geçerli)."""
+    proje, y, tanim = O.proje(slug), _yollar(slug), _tanim(slug)
+    if not tanim:
+        return ["kisa.json yok ya da geçersiz JSON"]
+    zs = _sahneler(slug, y["ses"])
+    sahne_p = {s["id"]: s for s in proje["sahneler"]}
+    hata = []
+    _satir_hatalari("baslik", tanim.get("baslik"), hata)
+    b = tanim.get("baslik_yt")
+    if not isinstance(b, str) or not 15 <= len(b) <= 70 or "#" in b:
+        hata.append("baslik_yt: 15-70 karakter, '#' içermeyen YouTube başlığı olmalı")
+    a = tanim.get("aciklama")
+    if not isinstance(a, str) or not 40 <= len(a) <= 300 or "http" in a or "#" in a:
+        hata.append("aciklama: 40-300 karakter, bağlantı ve '#' içermeyen 1-2 cümle olmalı")
+    pl = tanim.get("parcalar")
+    if not isinstance(pl, list) or not 5 <= len(pl) <= 14:
+        return hata + ["parcalar: 5-14 parça olmalı"]
+    t, gorulen = 0.0, set()
+    for i, p in enumerate(pl, 1):
+        ad = f"parça {i}"
+        z = zs.get(p.get("sahne"))
+        if not z:
+            hata.append(f"{ad}: sahne {p.get('sahne')} yok")
+            continue
+        ci = p.get("cumleler")
+        if not isinstance(ci, list) or not ci or any(not isinstance(k, int) or not 0 <= k < len(z["cumleler"]) for k in ci):
+            hata.append(f"{ad}: sahne {p['sahne']} için geçerli cümle sıraları yok (0-{len(z['cumleler']) - 1})")
+            continue
+        if ci != sorted(set(ci)):
+            hata.append(f"{ad}: cümle sıraları artan ve tekrarsız olmalı")
+        for k in ci:
+            if (p["sahne"], k) in gorulen:
+                hata.append(f"{ad}: sahne {p['sahne']} cümle {k} iki kez kullanılmış")
+            gorulen.add((p["sahne"], k))
+        gn = _gorsel_no(p)
+        if not isinstance(gn, int) or not (sahne_p.get(gn) or {}).get("gorsel"):
+            hata.append(f"{ad}: görsel sahnesi {gn} yok ya da görsel tarifi yok")
+        sure = sum(z["cumleler"][k]["sure"] for k in ci) + ARA * (len(ci) - 1)
+        if len(ci) > 1 and sure > PARCA_AZAMI:
+            hata.append(f"{ad}: {sure:.1f} sn tek görselde (en çok {PARCA_AZAMI:.0f} sn); cümleleri ayrı parçalara bölün")
+        if "baslik" in p and p["baslik"] is not None:
+            if not isinstance(p["baslik"], dict):
+                hata.append(f"{ad}: baslik null ya da {{'satirlar': [...], 'vurgu'?, 'not'?}} olmalı")
+            else:
+                _satir_hatalari(f"{ad} baslik", p["baslik"].get("satirlar"), hata)
+                if len(str(p["baslik"].get("vurgu") or "")) > 9:
+                    hata.append(f"{ad}: vurgu en çok 9 karakter")
+                if len(str(p["baslik"].get("not") or "")) > 28:
+                    hata.append(f"{ad}: not en çok 28 karakter")
+        if p.get("etiket") and len(p["etiket"]) > 40:
+            hata.append(f"{ad}: etiket en çok 40 karakter")
+        t += sure + (0 if i == len(pl) else (ARA if pl[i]["sahne"] == p["sahne"] else PARCA_ARA))
+    if not ICERIK[0] <= t <= ICERIK[1]:
+        hata.append(f"anlatım {t:.1f} sn; {ICERIK[0]:.0f}-{ICERIK[1]:.0f} sn olmalı (hedef 38-45 sn)")
+    toplam = BAS + t + CTA_ARA + CTA_TAHMIN + SON
+    if toplam > TOPLAM_AZAMI:
+        hata.append(f"kapanışla birlikte ~{toplam:.0f} sn; en çok {TOPLAM_AZAMI:.0f} sn")
+    O.log(f"kısa denetim: {len(pl)} parça, anlatım {t:.1f} sn, kapanışla ~{toplam:.0f} sn")
+    return hata
+
+
+def gorseller(slug):
+    return sorted({_gorsel_no(p) for p in _tanim(slug)["parcalar"]})
+
+
+def cta_sesleri(slug, tanim, klasor):
+    """Kapanış çağrısını projenin anlatıcı sesiyle seslendirir (metin + ses imzasıyla adlandırılır, varsa yeniden üretilmez)."""
+    import ses as S
+    proje = O.proje(slug)
+    motor, ses_ad, olcek = S.ayarlar(proje, O.marka())
+    os.makedirs(klasor, exist_ok=True)
+    yaz, out = None, []
+    for metin in cta_metinleri(tanim):
+        ad = "cta_" + hashlib.sha1(f"{motor}|{ses_ad}|{olcek}|{metin}".encode()).hexdigest()[:10] + ".wav"
+        yol = os.path.join(klasor, ad)
+        if not os.path.exists(yol):
+            if yaz is None:
+                model_dir = os.path.join(O.KOK, ".model")
+                os.makedirs(model_dir, exist_ok=True)
+                yaz = S.sentezci(motor, ses_ad, olcek, model_dir)
+            yaz(metin, yol)
+            S.kirp_ve_olc(yol)
+            O.log(f"kapanış seslendirildi: {metin}")
+        out.append((yol, metin))
+    return out
+
+
+def uret(slug):
+    import hazirla as H
+    from hizalama import harita_dp
+    y = _yollar(slug)
+    proje, tanim = O.proje(slug), _tanim(slug)
+    zs = _sahneler(slug, y["ses"])
     duzelt = proje.get("seslendirme_duzelt") or {}
-    zs = {z["id"]: z for z in zaman["sahneler"]}
     pub = os.path.join(O.REMOTION, "public", "img", "kisa")
     shutil.rmtree(pub, ignore_errors=True)
     os.makedirs(pub)
-    os.makedirs(a.cikti, exist_ok=True)
+    os.makedirs(y["cikti"], exist_ok=True)
 
     sr = None
     parcalar, altyazi, sesler = [], [], []
@@ -124,16 +285,17 @@ def main():
     for pi, p in enumerate(tanim["parcalar"]):
         z = zs[p["sahne"]]
         sp = sahne_p.get(p["sahne"], {})
-        gn = p.get("gorsel", p["sahne"])           # görsel başka bir sahneden alınabilir (uzun bölümü bölmek için)
-        dg = os.path.join(a.dikey, f"{gn:02d}.jpg") if a.dikey else ""
-        dikey = bool(dg) and os.path.exists(dg)      # NVIDIA ile üretilmiş dikey görsel varsa kırpma gerekmez
-        g = dg if dikey else os.path.join(a.gorsel, f"{gn:02d}.jpg")
+        gn = _gorsel_no(p)
+        dg = next((d for d in (os.path.join(y["dikey"], f"dikey_{gn:02d}.jpg"), os.path.join(y["dikey"], f"{gn:02d}.jpg"))
+                   if os.path.exists(d)), None)
+        dikey = bool(dg)                              # NVIDIA ile üretilmiş dikey görsel varsa kırpma gerekmez
+        g = dg or os.path.join(y["gorsel"], f"{gn:02d}.jpg")
         kutu, _ = H.konu_kutusu(g)
         shutil.copy(g, os.path.join(pub, f"{gn:02d}.jpg"))
         bas = t
         for k, ci in enumerate(p["cumleler"]):
             c = z["cumleler"][ci]
-            x, sr0 = O.wav_oku(os.path.join(a.ses, c["dosya"]))
+            x, sr0 = O.wav_oku(os.path.join(y["ses"], c["dosya"]))
             sr = sr or sr0
             sesler.append((t, x))
             altyazi += satirlar(c["metin"], c["sure"], harita_dp(c["metin"], c["sure"], c.get("duraklar"), duzelt), t)
@@ -152,32 +314,56 @@ def main():
             t += ARA if tanim["parcalar"][pi + 1]["sahne"] == p["sahne"] else PARCA_ARA
     cta_bas = t + CTA_ARA
     t = cta_bas
-    for k, c in enumerate(tanim.get("cta") or []):
-        x, sr0 = O.wav_oku(os.path.join(a.cta, c["dosya"]))
-        sure = len(x) / sr0
+    for yol, metin in cta_sesleri(slug, tanim, y["cta"]):
+        x, sr0 = O.wav_oku(yol)
+        if sr0 != sr:                                  # anlatımla aynı motor; yine de örnekleme farkını düzelt
+            x = np.interp(np.arange(0, len(x), sr0 / sr), np.arange(len(x)), x).astype(np.float32)
+        sure = len(x) / sr
         sesler.append((t, x))
-        altyazi += satirlar(c["metin"], sure, harita_dp(c["metin"], sure, None), t)
+        altyazi += satirlar(metin, sure, harita_dp(metin, sure, None), t)
         t += sure + ARA
-    if a.cta and os.path.exists(os.path.join(a.cta, "kapak_yt.jpg")):
-        shutil.copy(os.path.join(a.cta, "kapak_yt.jpg"), os.path.join(pub, "kapak.jpg"))
+    if y["kapak"]:
+        shutil.copy(y["kapak"], os.path.join(pub, "kapak.jpg"))
     toplam = t + SON
 
     anlatim = np.zeros(int(toplam * sr) + sr)
     for t0, x in sesler:
         i = int(t0 * sr)
         anlatim[i:i + len(x)] += x
-    aw = os.path.join(a.cikti, "kisa_anlatim.wav")
+    aw = os.path.join(y["cikti"], "kisa_anlatim.wav")
     O.wav_yaz(aw, anlatim, sr)
     muz, msr = H.muzik(toplam, [0], [], kaydir=2)
-    mw = os.path.join(a.cikti, "kisa_muzik.wav")
+    mw = os.path.join(y["cikti"], "kisa_muzik.wav")
     O.wav_yaz(mw, muz, msr)
-    H.karisim(aw, mw, os.path.join(a.cikti, "kisa_ses.wav"))
+    H.karisim(aw, mw, os.path.join(y["cikti"], "kisa_ses.wav"))
 
     props = {"fps": FPS, "toplam": round(toplam, 3), "baslik": tanim["baslik"], "kanal": O.marka()["ad"],
              "parcalar": parcalar, "altyazi": altyazi, "kapanis": round(cta_bas, 3), "kanca_son": round(kanca_son, 3),
              "kapak": "kisa/kapak" if os.path.exists(os.path.join(pub, "kapak.jpg")) else None}
-    O.json_yaz(os.path.join(a.cikti, "kisa_props.json"), props)
-    O.log(f"kısa: {toplam:.1f} sn, {len(parcalar)} parça, {len(altyazi)} altyazı satırı")
+    O.json_yaz(os.path.join(y["cikti"], "kisa_props.json"), props)
+    eksik = [p["gorsel"] for p in parcalar if not p["dikey"]]
+    O.log(f"kısa: {toplam:.1f} sn, {len(parcalar)} parça, {len(altyazi)} altyazı satırı"
+          + (f"; dikey görseli olmayan (yatay kırpıldı): {', '.join(eksik)}" if eksik else ""))
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--proje", required=True)
+    ap.add_argument("--liste", action="store_true", help="ajan için cümle listesi (cikti/kisa_liste.md)")
+    ap.add_argument("--kontrol", action="store_true", help="kisa.json denetimi (HATA satırları; geçersizse çıkış 1)")
+    ap.add_argument("--gorseller", action="store_true", help="dikey görseli gereken sahne numaraları")
+    a = ap.parse_args()
+    if a.liste:
+        return liste(a.proje)
+    if a.kontrol:
+        hata = kontrol(a.proje)
+        for h in hata:
+            print(f"HATA: {h}")
+        print("kisa.json geçerli" if not hata else f"kisa.json geçersiz: {len(hata)} hata")
+        sys.exit(1 if hata else 0)
+    if a.gorseller:
+        return print(",".join(map(str, gorseller(a.proje))))
+    uret(a.proje)
 
 
 if __name__ == "__main__":

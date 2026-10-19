@@ -83,7 +83,7 @@ def _guvenli_prompt(prompt):
     return re.sub(r"\s{2,}", " ", yeni)
 
 
-def _cloudflare(prompt, cikti, tohum=0):
+def _cloudflare(prompt, cikti, tohum=0, w=1344, h=768):
     """NVIDIA çöktüğünde aynı FLUX ailesi (Cloudflare Workers AI, günlük ücretsiz kota)."""
     if "cloudflare" in _KAPALI:
         return None
@@ -95,7 +95,7 @@ def _cloudflare(prompt, cikti, tohum=0):
     if not CF.var_mi():
         return None
     for pr in (prompt, _guvenli_prompt(prompt)):
-        kaynak = CF.uret(pr, cikti, tohum)
+        kaynak = CF.uret(pr, cikti, tohum, w=w, h=h)
         if not kaynak:
             if all(m in CF._KAPALI for m in CF.MODELLER):
                 _kapat("cloudflare", "günlük kota bitti ya da yetki yok")
@@ -219,8 +219,9 @@ def dikey_prompt(sahne):
 
 
 def dikey(proje, idler, cikti):
-    """Shorts için seçili sahnelerin dikey görsellerini üretir: cikti/dikey_NN.jpg (1080x1920). Yalnızca NVIDIA;
-    başarısızsa farklı tohumla bir kez daha dener. Üretilemeyenlerin listesini döndürür."""
+    """Shorts için seçili sahnelerin dikey görsellerini üretir: cikti/dikey_NN.jpg (1080x1920). Önce NVIDIA (iki tohum),
+    olmazsa Cloudflare FLUX; ikisi de olmazsa kisa.py yatay görseli kırpar. Var olan dosyalar yeniden üretilmez.
+    Üretilemeyenlerin listesini döndürür."""
     os.makedirs(cikti, exist_ok=True)
     sahneler = {s["id"]: s for s in proje["sahneler"]}
     eksik = []
@@ -231,12 +232,16 @@ def dikey(proje, idler, cikti):
             eksik.append(n)
             continue
         ham, hedef = os.path.join(cikti, f"dikey_{n:02d}.ham"), os.path.join(cikti, f"dikey_{n:02d}.jpg")
+        if os.path.exists(hedef):
+            continue
         kaynak = None
         for tohum in (0, 11):
             kaynak = _nvidia(dikey_prompt(s), ham, tohum=tohum, w=768, h=1344)
             if kaynak and os.path.exists(ham) and not _bos_mu(ham):
                 break
             kaynak = None
+        if not kaynak:
+            kaynak = _cloudflare(dikey_prompt(s), ham, w=768, h=1344)
         if kaynak:
             _kapla(ham, hedef, boyut=(1080, 1920))
             O.log(f"   ✓ dikey {n} ({kaynak})")
