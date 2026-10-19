@@ -1,0 +1,17 @@
+{
+  "baslik": ["GARLIC FOR", "HIGH BP?"],
+  "baslik_yt": "Does Garlic Lower Blood Pressure? What Trials Found",
+  "aciklama": "A pooled review of 20 trials found garlic supplements lowered blood pressure, mostly in people whose pressure was already high. Here is what that means, and what it does not.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 12, "cumleler": [0], "gorsel": 1,
+     "baslik": {"satirlar": ["20 TRIALS", "970 PEOPLE"], "vurgu": "-5 MMHG", "not": "systolic, all adults"},
+     "etiket": "Ried · J Nutr · 2016"},
+    {"sahne": 2, "cumleler": [0], "etiket": "Ried · J Nutr · 2016"},
+    {"sahne": 20, "cumleler": [0],
+     "etiket": "Ried et al. · Maturitas · 2010"},
+    {"sahne": 36, "cumleler": [1, 2]},
+    {"sahne": 37, "cumleler": [2], "baslik": {"satirlar": ["NO HEART", "ATTACK DATA"]}, "etiket": null},
+    {"sahne": 55, "cumleler": [0], "baslik": {"satirlar": ["CHECK, ASK,", "LET IT REST"]}, "etiket": null}
+  ]
+}
