@@ -207,8 +207,8 @@ def sahne_prompt(sahne):
 
 # Shorts için dikey (9:16) sahne görseli: aynı tarif ve gravür stili, konu dikey çerçevenin ortasında; üstte başlık,
 # altta altyazı için sakin alan. NVIDIA 768x1344 üretir, 1080x1920'ye oturtulur (yatay görseli kırpmaktan çok daha net).
-DIKEY_YER = (" Composition: tall vertical 9:16 portrait frame; the main subject is large and centered in the middle of the "
-             "frame, with calm simple background at the top and at the bottom.")
+DIKEY_YER = (" Composition: tall vertical 9:16 portrait frame, close-up; the main subject is very large and fills the middle "
+             "of the frame from about one quarter to three quarters of its height; plain calm background above and below it.")
 
 
 def dikey_prompt(sahne):
