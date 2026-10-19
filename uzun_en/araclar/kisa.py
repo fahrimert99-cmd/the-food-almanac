@@ -6,6 +6,7 @@
   python3 uzun_en/araclar/kisa.py --proje SLUG --kontrol     # kisa.json kurallara uyuyor mu (HATA satırları, çıkış 1)
   python3 uzun_en/araclar/kisa.py --proje SLUG --gorseller   # dikey görseli gereken sahneler: "1,29,32"
   python3 uzun_en/araclar/kisa.py --proje SLUG               # veri + ses (kapanış çağrısı yoksa seslendirir)
+  --no 2 ile ikinci Shorts: kisa_2.json, cikti/kisa_2/, kisa_2_liste.md (birincinin cümleleri kullanılamaz).
 
 Girdi: projeler/SLUG/kisa.json (görev: gorev/KISA.md) ->
   {"baslik": ["SATIR 1", "SATIR 2"], "baslik_yt": "...", "aciklama": "...", "parcalar": [{"sahne": 1, "cumleler": [0, 1]}, ...]}
@@ -112,17 +113,37 @@ def satirlar(metin, sure, nokta, t):
     return out
 
 
-def _yollar(slug):
+def ad(no=1):
+    """Shorts'un dosya adı kökü: 1. Shorts 'kisa' (kisa.json, cikti/kisa/), sonrakiler 'kisa_N'."""
+    return "kisa" if no == 1 else f"kisa_{no}"
+
+
+def _yollar(slug, no=1):
     pdir = O.proje_dir(slug)
     c = os.path.join(pdir, "cikti")
     return {"ses": os.path.join(pdir, "ses"), "gorsel": os.path.join(pdir, "images"), "dikey": os.path.join(c, "dikey"),
-            "cta": os.path.join(c, "kisa_cta"), "cikti": os.path.join(c, "kisa"),
+            "cta": os.path.join(c, "kisa_cta"), "cikti": os.path.join(c, ad(no)),
             "kapak": next((y for y in (os.path.join(pdir, "kapak_yt.jpg"), os.path.join(c, "kapak_yt.jpg")) if os.path.exists(y)),
                           None)}
 
 
-def _tanim(slug):
-    return O.json_oku(os.path.join(O.proje_dir(slug), "kisa.json"))
+def _tanim(slug, no=1):
+    return O.json_oku(os.path.join(O.proje_dir(slug), f"{ad(no)}.json"))
+
+
+def _digerleri(slug, no):
+    """Projenin diğer Shorts tanımları: {no: tanım}. Aynı cümle iki Shorts'ta kullanılmaz."""
+    out = {}
+    for n in range(1, 10):
+        t = _tanim(slug, n) if n != no else None
+        if isinstance(t, dict):
+            out[n] = t
+    return out
+
+
+def _kullanilan(tanimlar):
+    return {(p.get("sahne"), k): n for n, t in tanimlar.items() for p in (t.get("parcalar") or []) if isinstance(p, dict)
+            for k in (p.get("cumleler") or [])}
 
 
 def _sahneler(slug, ses):
@@ -141,12 +162,20 @@ def cta_metinleri(tanim):
     return [(c if isinstance(c, str) else c["metin"]).replace("{ad}", ad) for c in (tanim.get("cta") or CTA)]
 
 
-def liste(slug):
-    """Ajanın cümle seçeceği liste: her sahnenin görsel tarifi, ekrandaki başlığı ve süreli cümleleri."""
-    proje, y = O.proje(slug), _yollar(slug)
+def liste(slug, no=1):
+    """Ajanın cümle seçeceği liste: her sahnenin görsel tarifi, ekrandaki başlığı ve süreli cümleleri. Başka bir
+    Shorts'ta kullanılmış cümleler işaretlenir."""
+    proje, y = O.proje(slug), _yollar(slug, no)
     zs = _sahneler(slug, y["ses"])
-    out = [f"# {proje['baslik']}: sentences available for the Short", "",
-           "Format: `[sentence index] (seconds) text`. Use the scene number and the sentence indices in kisa.json.", ""]
+    diger = _digerleri(slug, no)
+    kullanilan = _kullanilan(diger)
+    out = [f"# {proje['baslik']}: sentences available for Short {no}", "",
+           f"Format: `[sentence index] (seconds) text`. Use the scene number and the sentence indices in {ad(no)}.json.",
+           "Sentences marked USED are already in another Short of this video: do not use them."]
+    for n, t in sorted(diger.items()):
+        out.append(f"Short {n} ({ad(n)}.json) is titled \"{t.get('baslik_yt', '')}\" with hook {t.get('baslik')}: "
+                   "pick a different angle and a different hook.")
+    out.append("")
     for s in proje["sahneler"]:
         z = zs.get(s["id"])
         if not z:
@@ -157,9 +186,10 @@ def liste(slug):
             out.append(f"- on-screen title: {json.dumps(s['baslik'], ensure_ascii=False)}")
         if s.get("etiket"):
             out.append(f"- source chip: {s['etiket']}")
-        out += [f"- [{i}] ({c['sure']:.1f} s) {c['metin']}" for i, c in enumerate(z["cumleler"])]
+        out += [f"- [{i}] ({c['sure']:.1f} s) " + (f"USED in Short {kullanilan[(s['id'], i)]}: " if (s["id"], i) in kullanilan else "")
+                + c["metin"] for i, c in enumerate(z["cumleler"])]
         out.append("")
-    yol = os.path.join(O.proje_dir(slug), "cikti", "kisa_liste.md")
+    yol = os.path.join(O.proje_dir(slug), "cikti", f"{ad(no)}_liste.md")
     os.makedirs(os.path.dirname(yol), exist_ok=True)
     with open(yol, "w", encoding="utf-8") as f:
         f.write("\n".join(out))
@@ -177,11 +207,13 @@ def _satir_hatalari(ad, satirlar, hata):
             hata.append(f"{ad}: '{x}' BÜYÜK HARF olmalı")
 
 
-def kontrol(slug):
-    """kisa.json'u denetler; hata listesi döndürür (boşsa geçerli)."""
-    proje, y, tanim = O.proje(slug), _yollar(slug), _tanim(slug)
+def kontrol(slug, no=1):
+    """kisa.json'u (no > 1: kisa_N.json) denetler; hata listesi döndürür (boşsa geçerli)."""
+    proje, y, tanim = O.proje(slug), _yollar(slug, no), _tanim(slug, no)
     if not tanim:
-        return ["kisa.json yok ya da geçersiz JSON"]
+        return [f"{ad(no)}.json yok ya da geçersiz JSON"]
+    diger = _digerleri(slug, no)
+    kullanilan = _kullanilan(diger)
     zs = _sahneler(slug, y["ses"])
     sahne_p = {s["id"]: s for s in proje["sahneler"]}
     hata = []
@@ -189,6 +221,11 @@ def kontrol(slug):
     b = tanim.get("baslik_yt")
     if not isinstance(b, str) or not 15 <= len(b) <= 70 or "#" in b:
         hata.append("baslik_yt: 15-70 karakter, '#' içermeyen YouTube başlığı olmalı")
+    for n, t in diger.items():
+        if str(t.get("baslik_yt", "")).strip().lower() == str(b).strip().lower():
+            hata.append(f"baslik_yt: Shorts {n} ile aynı; farklı bir başlık yazın")
+        if [str(x).upper() for x in (t.get("baslik") or [])] == [str(x).upper() for x in (tanim.get("baslik") or [])]:
+            hata.append(f"baslik: Shorts {n} ile aynı kanca; farklı bir kanca yazın")
     a = tanim.get("aciklama")
     if not isinstance(a, str) or not 40 <= len(a) <= 300 or "http" in a or "#" in a:
         hata.append("aciklama: 40-300 karakter, bağlantı ve '#' içermeyen 1-2 cümle olmalı")
@@ -197,38 +234,40 @@ def kontrol(slug):
         return hata + ["parcalar: 5-14 parça olmalı"]
     t, gorulen = 0.0, set()
     for i, p in enumerate(pl, 1):
-        ad = f"parça {i}"
+        pa = f"parça {i}"
         z = zs.get(p.get("sahne"))
         if not z:
-            hata.append(f"{ad}: sahne {p.get('sahne')} yok")
+            hata.append(f"{pa}: sahne {p.get('sahne')} yok")
             continue
         ci = p.get("cumleler")
         if not isinstance(ci, list) or not ci or any(not isinstance(k, int) or not 0 <= k < len(z["cumleler"]) for k in ci):
-            hata.append(f"{ad}: sahne {p['sahne']} için geçerli cümle sıraları yok (0-{len(z['cumleler']) - 1})")
+            hata.append(f"{pa}: sahne {p['sahne']} için geçerli cümle sıraları yok (0-{len(z['cumleler']) - 1})")
             continue
         if ci != sorted(set(ci)):
-            hata.append(f"{ad}: cümle sıraları artan ve tekrarsız olmalı")
+            hata.append(f"{pa}: cümle sıraları artan ve tekrarsız olmalı")
         for k in ci:
             if (p["sahne"], k) in gorulen:
-                hata.append(f"{ad}: sahne {p['sahne']} cümle {k} iki kez kullanılmış")
+                hata.append(f"{pa}: sahne {p['sahne']} cümle {k} iki kez kullanılmış")
             gorulen.add((p["sahne"], k))
+            if (p["sahne"], k) in kullanilan:
+                hata.append(f"{pa}: sahne {p['sahne']} cümle {k} Shorts {kullanilan[(p['sahne'], k)]}'de kullanılmış")
         gn = _gorsel_no(p)
         if not isinstance(gn, int) or not (sahne_p.get(gn) or {}).get("gorsel"):
-            hata.append(f"{ad}: görsel sahnesi {gn} yok ya da görsel tarifi yok")
+            hata.append(f"{pa}: görsel sahnesi {gn} yok ya da görsel tarifi yok")
         sure = sum(z["cumleler"][k]["sure"] for k in ci) + ARA * (len(ci) - 1)
         if len(ci) > 1 and sure > PARCA_AZAMI:
-            hata.append(f"{ad}: {sure:.1f} sn tek görselde (en çok {PARCA_AZAMI:.0f} sn); cümleleri ayrı parçalara bölün")
+            hata.append(f"{pa}: {sure:.1f} sn tek görselde (en çok {PARCA_AZAMI:.0f} sn); cümleleri ayrı parçalara bölün")
         if "baslik" in p and p["baslik"] is not None:
             if not isinstance(p["baslik"], dict):
-                hata.append(f"{ad}: baslik null ya da {{'satirlar': [...], 'vurgu'?, 'not'?}} olmalı")
+                hata.append(f"{pa}: baslik null ya da {{'satirlar': [...], 'vurgu'?, 'not'?}} olmalı")
             else:
-                _satir_hatalari(f"{ad} baslik", p["baslik"].get("satirlar"), hata)
+                _satir_hatalari(f"{pa} baslik", p["baslik"].get("satirlar"), hata)
                 if len(str(p["baslik"].get("vurgu") or "")) > 9:
-                    hata.append(f"{ad}: vurgu en çok 9 karakter")
+                    hata.append(f"{pa}: vurgu en çok 9 karakter")
                 if len(str(p["baslik"].get("not") or "")) > 28:
-                    hata.append(f"{ad}: not en çok 28 karakter")
+                    hata.append(f"{pa}: not en çok 28 karakter")
         if p.get("etiket") and len(p["etiket"]) > 40:
-            hata.append(f"{ad}: etiket en çok 40 karakter")
+            hata.append(f"{pa}: etiket en çok 40 karakter")
         t += sure + (0 if i == len(pl) else (ARA if pl[i].get("sahne") == p["sahne"] else PARCA_ARA))
     if not ICERIK[0] <= t <= ICERIK[1]:
         hata.append(f"anlatım {t:.1f} sn; {ICERIK[0]:.0f}-{ICERIK[1]:.0f} sn olmalı (hedef 38-45 sn)")
@@ -239,8 +278,8 @@ def kontrol(slug):
     return hata
 
 
-def gorseller(slug):
-    return sorted({_gorsel_no(p) for p in _tanim(slug)["parcalar"]})
+def gorseller(slug, no=1):
+    return sorted({_gorsel_no(p) for p in _tanim(slug, no)["parcalar"]})
 
 
 def cta_sesleri(slug, tanim, klasor):
@@ -265,11 +304,11 @@ def cta_sesleri(slug, tanim, klasor):
     return out
 
 
-def uret(slug):
+def uret(slug, no=1):
     import hazirla as H
     from hizalama import harita_dp
-    y = _yollar(slug)
-    proje, tanim = O.proje(slug), _tanim(slug)
+    y = _yollar(slug, no)
+    proje, tanim = O.proje(slug), _tanim(slug, no)
     zs = _sahneler(slug, y["ses"])
     duzelt = proje.get("seslendirme_duzelt") or {}
     pub = os.path.join(O.REMOTION, "public", "img", "kisa")
@@ -352,21 +391,22 @@ def main():
     ap.add_argument("--liste", action="store_true", help="ajan için cümle listesi (cikti/kisa_liste.md)")
     ap.add_argument("--kontrol", action="store_true", help="kisa.json denetimi (HATA satırları; geçersizse çıkış 1)")
     ap.add_argument("--gorseller", action="store_true", help="dikey görseli gereken sahne numaraları")
+    ap.add_argument("--no", type=int, default=1, help="kaçıncı Shorts (1: kisa.json, 2: kisa_2.json)")
     a = ap.parse_args()
     if a.liste:
-        return liste(a.proje)
+        return liste(a.proje, a.no)
     if a.kontrol:
         try:
-            hata = kontrol(a.proje)
+            hata = kontrol(a.proje, a.no)
         except (AttributeError, KeyError, TypeError, ValueError) as e:   # ajanın yazdığı yapı bozuksa
-            hata = [f"kisa.json yapısı gorev/KISA.md'deki biçimde değil ({type(e).__name__}: {e})"]
+            hata = [f"{ad(a.no)}.json yapısı gorev/KISA.md'deki biçimde değil ({type(e).__name__}: {e})"]
         for h in hata:
             print(f"HATA: {h}")
-        print("kisa.json geçerli" if not hata else f"kisa.json geçersiz: {len(hata)} hata")
+        print(f"{ad(a.no)}.json geçerli" if not hata else f"{ad(a.no)}.json geçersiz: {len(hata)} hata")
         sys.exit(1 if hata else 0)
     if a.gorseller:
-        return print(",".join(map(str, gorseller(a.proje))))
-    uret(a.proje)
+        return print(",".join(map(str, gorseller(a.proje, a.no))))
+    uret(a.proje, a.no)
 
 
 if __name__ == "__main__":
