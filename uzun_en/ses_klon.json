@@ -1,6 +1,6 @@
 {
   "not": "Ses klonu denemesi (.github/workflows/ses_klon.yml). Bu dosya main'e gelince örnekler üretilir; tetik sayısını artırmak yeterli. Ses örneği uzun_en/assets/ses/referans.enc olarak şifreli durur.",
-  "tetik": 1,
+  "tetik": 2,
   "metinler": [
     "If you eat eggs most mornings, here is something worth knowing.",
     "Harvard researchers followed more than 215,000 nurses and other health professionals for up to 32 years.",
@@ -10,7 +10,13 @@
     "And subscribe to The Food Almanac for more food science, explained calmly and honestly."
   ],
   "modeller": [
-    {"ad": "turbo"},
-    {"ad": "standart", "exaggeration": 0.4, "cfg_weight": 0.4}
+    {
+      "ad": "turbo"
+    },
+    {
+      "ad": "standart",
+      "exaggeration": 0.4,
+      "cfg_weight": 0.4
+    }
   ]
 }
