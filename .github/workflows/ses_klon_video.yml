@@ -1,0 +1,133 @@
+name: Ses Klonu Video Önizleme (The Food Almanac)
+# Yayınlanmış bir projeyi anlatıcının ses klonuyla (Chatterbox Turbo, "klon" motoru) yeniden seslendirir ve önizleme
+# videoları üretir: Shorts (kisa.json) ve uzun video (720p). YouTube'a YÜKLEMEZ; depoya ses yazmaz.
+# Ses örneği ve çıktılar şifrelidir (uzun_en/araclar/sifre.sh; bkz. ses_klon.yml): önizlemeler
+# uzun_en/assets/klon_cikti.pub ile şifrelenip 'ses-klon' sürümüne yüklenir.
+# Tetik: uzun_en/ses_klon_video.json main'e gelince ({"proje": "<slug>", "kisa": true, "uzun": true, "tetik": N}).
+on:
+  push:
+    branches: [main]
+    paths: [uzun_en/ses_klon_video.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ses-klon-video
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  UZUN_SES_MOTORU: klon
+  SES_KLON_REFERANS: /tmp/k/referans.wav
+
+jobs:
+  onizleme:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        tur: [kisa, uzun]
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: uzun_en/remotion/package-lock.json
+      - name: Proje
+        run: |
+          python3 - <<'PY' >> "$GITHUB_ENV"
+          import json, os
+          d = json.load(open("uzun_en/ses_klon_video.json"))
+          istek = d.get(os.environ["TUR"], False)
+          print(f"SLUG={d['proje']}")
+          print(f"YAP={'true' if istek else 'false'}")
+          PY
+        env:
+          TUR: ${{ matrix.tur }}
+      - name: Ses örneği (şifreli -> çözülmüş, yalnızca bu çalıştırmada)
+        if: env.YAP == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KEK: ${{ secrets.YT_CLIENT_SECRET }}
+        run: |
+          mkdir -p /tmp/k
+          gh release download ses-klon -D /tmp/k -p klon_anahtar.enc
+          bash uzun_en/araclar/sifre.sh ozel /tmp/k /tmp/k/ozel.pem
+          bash uzun_en/araclar/sifre.sh coz /tmp/k/ozel.pem uzun_en/assets/ses/referans /tmp/k/referans.ses
+          rm -f /tmp/k/ozel.pem
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter >/dev/null
+          ffmpeg -v error -y -i /tmp/k/referans.ses -ac 1 -ar 24000 "$SES_KLON_REFERANS" && rm -f /tmp/k/referans.ses
+      - name: Bağımlılıklar (CPU, ücretsiz)
+        if: env.YAP == 'true'
+        run: |
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q chatterbox-tts==0.1.7 -r requirements.txt
+          cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
+      - uses: actions/cache@v4
+        if: env.YAP == 'true'
+        with:
+          path: ~/.cache/huggingface
+          key: ses-klon-chatterbox-0.1.7
+      - name: Girdiler
+        if: env.YAP == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          P=uzun_en/projeler/"$SLUG"
+          python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
+          if [ "${{ matrix.tur }}" = kisa ]; then
+            gh release download "uzun-en-$SLUG" -D "$P/cikti/dikey" --clobber -p "dikey_*.jpg" || true
+            [ -f "$P/kapak_yt.jpg" ] || gh release download "uzun-en-$SLUG" -D "$P/cikti" --clobber -p kapak_yt.jpg || true
+          fi
+      - name: Seslendirme (ses klonu)
+        if: env.YAP == 'true'
+        run: |
+          if [ "${{ matrix.tur }}" = kisa ]; then
+            python3 uzun_en/araclar/ses.py --proje "$SLUG" --sadece "$(python3 uzun_en/araclar/kisa.py --proje "$SLUG" --cumleler)"
+          else
+            python3 uzun_en/araclar/ses.py --proje "$SLUG"
+          fi
+      - name: Shorts önizleme
+        if: env.YAP == 'true' && matrix.tur == 'kisa'
+        run: |
+          python3 uzun_en/araclar/hazirla.py --proje "$SLUG" --sessiz
+          python3 uzun_en/araclar/kisa.py --proje "$SLUG"
+          K=../projeler/"$SLUG"/cikti/kisa
+          cd uzun_en/remotion
+          ./node_modules/.bin/remotion render src/index.ts Kisa out/kisa_sessiz.mp4 --props="$K/kisa_props.json" \
+            --concurrency=$(nproc) --crf=20 --log=warn
+          mkdir -p /tmp/onizleme
+          ffmpeg -v error -y -i out/kisa_sessiz.mp4 -i "$K/kisa_ses.wav" -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 160k \
+            -shortest -movflags +faststart /tmp/onizleme/onizleme_kisa.mp4
+      - name: Uzun video önizleme (720p)
+        if: env.YAP == 'true' && matrix.tur == 'uzun'
+        run: |
+          python3 uzun_en/araclar/hazirla.py --proje "$SLUG"
+          python3 uzun_en/araclar/sahne_onar.py --proje "$SLUG"
+          cd uzun_en/remotion
+          ./node_modules/.bin/remotion render src/index.ts Tam out/video_ham.mp4 --concurrency=$(nproc) --crf=18 \
+            --audio-codec=aac --audio-bitrate=192k --log=warn
+          mkdir -p /tmp/onizleme
+          ffmpeg -v error -y -i out/video_ham.mp4 -vf scale=1280:720 -c:v libx264 -preset veryfast -crf 26 -c:a aac -b:a 128k \
+            -movflags +faststart /tmp/onizleme/onizleme_uzun.mp4
+      - name: Şifrele ve sürüme yükle
+        if: always() && env.YAP == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f "$SES_KLON_REFERANS"
+          F=/tmp/onizleme/onizleme_${{ matrix.tur }}.mp4
+          [ -f "$F" ] || { echo "::warning::önizleme üretilemedi"; exit 0; }
+          echo "::notice title=Önizleme ${{ matrix.tur }}::$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$F") sn"
+          bash uzun_en/araclar/sifre.sh sifrele uzun_en/assets/klon_cikti.pub "$F" /tmp/onizleme/onizleme_${{ matrix.tur }}
+          gh release upload ses-klon /tmp/onizleme/onizleme_${{ matrix.tur }}.enc /tmp/onizleme/onizleme_${{ matrix.tur }}.key.enc --clobber
+          rm -rf /tmp/onizleme

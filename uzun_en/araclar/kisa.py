@@ -401,7 +401,10 @@ def main():
     ap.add_argument("--kontrol", action="store_true", help="kisa.json denetimi (HATA satırları; geçersizse çıkış 1)")
     ap.add_argument("--gorseller", action="store_true", help="dikey görseli gereken sahne numaraları")
     ap.add_argument("--no", type=int, default=1, help="kaçıncı Shorts (1: kisa.json, 2: kisa_2.json)")
+    ap.add_argument("--cumleler", action="store_true", help="kullanılan cümleler (sahne:sıra; ses.py --sadece için)")
     a = ap.parse_args()
+    if a.cumleler:
+        return print(",".join(f"{p['sahne']}:{k}" for p in _tanim(a.proje, a.no)["parcalar"] for k in p["cumleler"]))
     if a.liste:
         return liste(a.proje, a.no)
     if a.kontrol:

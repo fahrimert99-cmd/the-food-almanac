@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Cümle cümle seslendirme: Kokoro ya da Piper (ikisi de yerel, açık kaynak TTS) — ücretli servis yok.
+"""Cümle cümle seslendirme: Kokoro, Piper ya da anlatıcının ses klonu (Chatterbox Turbo); hepsi yerel ve açık kaynak,
+ücretli servis yok.
 
   python3 uzun_en/araclar/ses.py --proje SLUG
   python3 uzun_en/araclar/ses.py --proje SLUG --motor     # yalnızca bu projenin ses motorunu yazar (kurulum için)
+  python3 uzun_en/araclar/ses.py --proje SLUG --sadece 1:0,29:2   # yalnızca bu cümleler (sahne:sıra, 0'dan)
 
 Motor ve ses marka.json'dan gelir ("ses_motoru", "ses", "ses_hiz" / Piper için "length_scale"); proje.json'daki aynı
-alanlar önceliklidir. Böylece eski projeler kendi seslerinde sabit kalır.
+alanlar önceliklidir. Böylece eski projeler kendi seslerinde sabit kalır. UZUN_SES_MOTORU ortam değişkeni ikisini de
+geçersiz kılar (önizleme). "klon" motoru: SES_KLON_REFERANS (çözülmüş ses örneği, bkz. sifre.sh) ve chatterbox-tts gerekir.
 
 projeler/SLUG/proje.json -> projeler/SLUG/ses/SS_CC.wav + zaman.json (her cümlenin metni, süresi ve
 virgül duraklamaları; animasyon ve altyazı bu sürelere göre senkronlanır).
@@ -85,8 +88,10 @@ def tek_kelime_kirp(yol, durak_db=-38.0, en_az_durak=0.11, en_az_kelime=0.25):
 
 
 def ayarlar(proje, m):
-    """(motor, ses, ölçek): proje.json'daki alanlar marka.json'dakilerden önceliklidir."""
-    motor = proje.get("ses_motoru") or m.get("ses_motoru", "piper")
+    """(motor, ses, ölçek): UZUN_SES_MOTORU > proje.json > marka.json."""
+    motor = os.environ.get("UZUN_SES_MOTORU") or proje.get("ses_motoru") or m.get("ses_motoru", "piper")
+    if motor == "klon":                       # ses adı yalnızca imza içindir: referans değişirse "klon_ses" artırılır
+        return motor, m.get("klon_ses", "anlatici-1"), 1.0
     ses = proje.get("ses") or m.get("ses", "en_US-norman-medium")
     if motor == "kokoro":
         return motor, ses, float(proje.get("ses_hiz", m.get("ses_hiz", 1.0)))
@@ -96,6 +101,29 @@ def ayarlar(proje, m):
 def sentezci(motor, ses, olcek, model_dir):
     """metin -> WAV dosyası yazan fonksiyon. Model ilk çağrıda yüklenir."""
     durum = {}
+    if motor == "klon":
+        def yaz(metin, yol):
+            import numpy as np
+            import torch
+            if "m" not in durum:
+                ref = os.environ.get("SES_KLON_REFERANS") or ""
+                if not os.path.exists(ref):
+                    raise SystemExit("klon sesi: SES_KLON_REFERANS (çözülmüş ses örneği) yok")
+                torch.set_num_threads(os.cpu_count() or 4)
+                from chatterbox.tts_turbo import ChatterboxTurboTTS
+                durum["m"] = ChatterboxTurboTTS.from_pretrained(device="cpu")
+                durum["m"].prepare_conditionals(ref)
+            m = durum["m"]
+            kelime = max(1, len(metin.split()))
+            for deneme in range(3):               # nadiren yutulan / uzayan çıktı: kelime başına süre makul olmalı
+                torch.manual_seed(int(hashlib.sha1(metin.encode()).hexdigest()[:8], 16) + deneme)
+                with torch.inference_mode():
+                    x = m.generate(metin).squeeze(0).cpu().numpy().astype(np.float32)
+                if 0.17 <= len(x) / m.sr / kelime <= 1.1 or kelime < 3:
+                    break
+                O.log(f"   klon: olağandışı süre ({len(x) / m.sr:.1f} sn / {kelime} kelime), yeniden")
+            O.wav_yaz(yol, x, m.sr)
+        return yaz
     if motor == "kokoro":
         def yaz(metin, yol):
             import numpy as np
@@ -120,8 +148,10 @@ def sentezci(motor, ses, olcek, model_dir):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
-    ap.add_argument("--motor", action="store_true", help="yalnızca ses motorunu yaz (piper / kokoro)")
+    ap.add_argument("--motor", action="store_true", help="yalnızca ses motorunu yaz (piper / kokoro / klon)")
+    ap.add_argument("--sadece", default="", help="yalnızca bu cümleler (sahne:sıra, 0'dan; ör. 1:0,29:2)")
     a = ap.parse_args()
+    sadece = {tuple(int(v) for v in x.split(":")) for x in a.sadece.split(",") if x.strip()}
     slug = O.aktif_slug(a.proje)
     proje = O.proje(slug)
     m = O.marka()
@@ -151,6 +181,10 @@ def main():
             ad = f"{s['id']:02d}_{k:02d}.wav"
             yol = os.path.join(cikti, ad)
             onceki = eski_c.get((s["id"], k))
+            if sadece and (s["id"], k - 1) not in sadece and onceki and os.path.exists(yol):
+                kayit["cumleler"].append(dict(onceki, dosya=ad))      # listede olmayan cümle olduğu gibi kalır
+                tekrar += 1
+                continue
             if onceki and os.path.exists(yol) and (onceki.get("imza") == imza or
                                                    (not onceki.get("imza") and onceki.get("metin") == c)):
                 kayit["cumleler"].append(dict(onceki, dosya=ad, imza=imza))

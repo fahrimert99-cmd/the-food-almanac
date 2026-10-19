@@ -1,0 +1,7 @@
+{
+  "not": "Ses klonu önizlemesi (.github/workflows/ses_klon_video.yml): projeyi anlatıcının ses klonuyla yeniden seslendirip önizleme videoları üretir; YouTube'a yüklemez. tetik sayısını artırmak yeterli.",
+  "proje": "eggs-and-cholesterol",
+  "kisa": true,
+  "uzun": false,
+  "tetik": 1
+}
