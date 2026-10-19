@@ -118,7 +118,7 @@ def _kapla(src, hedef, boyut=(W, H), kalite=92, alt_kirp=0.0):
     im.crop((x, y, x + tw, y + th)).save(hedef, "JPEG", quality=kalite)
 
 
-def _nvidia(prompt, cikti, tohum=0):
+def _nvidia(prompt, cikti, tohum=0, w=1344, h=768):
     if not re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or "") or "nvidia" in _KAPALI:
         return None
     try:
@@ -133,7 +133,7 @@ def _nvidia(prompt, cikti, tohum=0):
             if tohum:                                          # farklı kompozisyon için FLUX tohumu
                 NA._gorsel_govde = lambda mm, p, w, h: dict(govde(mm, p, w, h), seed=tohum)
             try:
-                ok = NA._gorsel_tek(m, pr, cikti, 1344, 768, 300)
+                ok = NA._gorsel_tek(m, pr, cikti, w, h, 300)
             finally:
                 NA._gorsel_govde = govde
             if not ok:
@@ -203,6 +203,46 @@ def _pollinations(prompt, cikti, tohum=0):
 def sahne_prompt(sahne):
     yer = SAG_BOS if sahne.get("baslik") else ""
     return f"{sahne['gorsel'].rstrip('.')}.{yer} {STIL} {YASAK}"
+
+
+# Shorts için dikey (9:16) sahne görseli: aynı tarif ve gravür stili, konu dikey çerçevenin ortasında; üstte başlık,
+# altta altyazı için sakin alan. NVIDIA 768x1344 üretir, 1080x1920'ye oturtulur (yatay görseli kırpmaktan çok daha net).
+DIKEY_YER = (" Composition: tall vertical 9:16 portrait frame; the main subject is large and centered in the middle of the "
+             "frame, with calm simple background at the top and at the bottom.")
+
+
+def dikey_prompt(sahne):
+    return f"{sahne['gorsel'].rstrip('.')}.{DIKEY_YER} {STIL} {YASAK}"
+
+
+def dikey(proje, idler, cikti):
+    """Shorts için seçili sahnelerin dikey görsellerini üretir: cikti/dikey_NN.jpg (1080x1920). Yalnızca NVIDIA;
+    başarısızsa farklı tohumla bir kez daha dener. Üretilemeyenlerin listesini döndürür."""
+    os.makedirs(cikti, exist_ok=True)
+    sahneler = {s["id"]: s for s in proje["sahneler"]}
+    eksik = []
+    for n in idler:
+        s = sahneler.get(n)
+        if not s or not s.get("gorsel"):
+            O.log(f"   ✗ dikey {n}: sahnede görsel tarifi yok")
+            eksik.append(n)
+            continue
+        ham, hedef = os.path.join(cikti, f"dikey_{n:02d}.ham"), os.path.join(cikti, f"dikey_{n:02d}.jpg")
+        kaynak = None
+        for tohum in (0, 11):
+            kaynak = _nvidia(dikey_prompt(s), ham, tohum=tohum, w=768, h=1344)
+            if kaynak and os.path.exists(ham) and not _bos_mu(ham):
+                break
+            kaynak = None
+        if kaynak:
+            _kapla(ham, hedef, boyut=(1080, 1920))
+            O.log(f"   ✓ dikey {n} ({kaynak})")
+        else:
+            eksik.append(n)
+            O.log(f"   ✗ dikey {n} üretilemedi")
+        if os.path.exists(ham):
+            os.remove(ham)
+    return eksik
 
 
 def kapak_prompt(proje):
@@ -394,11 +434,16 @@ def main():
     ap.add_argument("--kabul", action="store_true")
     ap.add_argument("--sadece", default="", help="yalnızca bu görseller (ör. kapak veya 4,7); diğerlerine dokunulmaz")
     ap.add_argument("--kalite", action="store_true", help="görsel kalitesini denetle (çıkış 3: çoğu yedek/eksik)")
+    ap.add_argument("--dikey", default="", help="Shorts için dikey görseller (ör. 1,29,32); --cikti klasörüne dikey_NN.jpg")
+    ap.add_argument("--cikti", default="/tmp/dikey")
     a = ap.parse_args()
     slug = O.aktif_slug(a.proje)
     proje = O.proje(slug)
     if a.kalite:
         return kalite(slug, proje)
+    if a.dikey:
+        eksik = dikey(proje, [int(x) for x in a.dikey.split(",") if x.strip()], a.cikti)
+        sys.exit(1 if eksik else 0)
     if a.sahne is not None:
         return aday(slug, proje, a.sahne, a.aciklama, a.tohum, a.kabul)
     eksik = hepsi(slug, proje, {x.strip() for x in a.sadece.split(",") if x.strip()} or None)

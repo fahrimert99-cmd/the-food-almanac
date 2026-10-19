@@ -1,8 +1,19 @@
 {
-  "proje": "garlic-blood-pressure",
+  "proje": "eggs-and-cholesterol",
   "gorseller": [
-    "kapak"
+    "-"
   ],
-  "tetik": 6,
-  "not": "Bu dosya main'e gelince Gorsel Yenile iş akışı, listelenen görselleri (tarifleri değiştiyse) yeniden üretir ve sürüme yükler. Önce proje.json'daki tarifi değiştirin. kapak_adaylari: her tarif ayrıca denenir, kapak_aday_N.jpg olarak sürüme yüklenir."
+  "tetik": 7,
+  "not": "Bu dosya main'e gelince Gorsel Yenile iş akışı, listelenen görselleri (tarifleri değiştiyse) yeniden üretir ve sürüme yükler. Önce proje.json'daki tarifi değiştirin. kapak_adaylari: her tarif ayrıca denenir, kapak_aday_N.jpg olarak sürüme yüklenir.",
+  "dikey": [
+    1,
+    29,
+    32,
+    2,
+    34,
+    35,
+    40,
+    50,
+    51
+  ]
 }
