@@ -340,6 +340,8 @@ def kisa_yukle(slug, kuru=False):
     p, m = O.proje(slug), O.marka()
     tanim = O.json_oku(os.path.join(pdir, "kisa.json"), {}) or {}
     baslik = M.temiz(tanim.get("baslik_yt") or p["baslik"])[:100]
+    if baslik.strip().lower() == str(y.get("baslik") or p["baslik"]).strip().lower():
+        baslik = (baslik[:91] + " #Shorts")       # uzun videoyla aynı başlık olmasın (ayni_baslikli onu bulmasın)
     simdi = dt.datetime.now(dt.timezone.utc)
     slot = kisa_slot(slug, simdi).strftime("%Y-%m-%dT%H:%M:%SZ")
     body = {"snippet": {"title": baslik, "description": kisa_aciklama(slug, y["video_id"]), "tags": M.etiket_listesi(p, m),
@@ -356,7 +358,7 @@ def kisa_yukle(slug, kuru=False):
     import youtube_api as YY
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
     vid = ayni_baslikli(yt, baslik)
-    if vid:
+    if vid and vid != y["video_id"]:
         O.log(f"kanalda aynı başlıklı video var, yeniden yüklenmiyor: {vid}")
     else:
         vid = video_yukle(yt, body, video)

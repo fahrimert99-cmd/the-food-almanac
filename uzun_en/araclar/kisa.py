@@ -229,7 +229,7 @@ def kontrol(slug):
                     hata.append(f"{ad}: not en çok 28 karakter")
         if p.get("etiket") and len(p["etiket"]) > 40:
             hata.append(f"{ad}: etiket en çok 40 karakter")
-        t += sure + (0 if i == len(pl) else (ARA if pl[i]["sahne"] == p["sahne"] else PARCA_ARA))
+        t += sure + (0 if i == len(pl) else (ARA if pl[i].get("sahne") == p["sahne"] else PARCA_ARA))
     if not ICERIK[0] <= t <= ICERIK[1]:
         hata.append(f"anlatım {t:.1f} sn; {ICERIK[0]:.0f}-{ICERIK[1]:.0f} sn olmalı (hedef 38-45 sn)")
     toplam = BAS + t + CTA_ARA + CTA_TAHMIN + SON
@@ -356,7 +356,10 @@ def main():
     if a.liste:
         return liste(a.proje)
     if a.kontrol:
-        hata = kontrol(a.proje)
+        try:
+            hata = kontrol(a.proje)
+        except (AttributeError, KeyError, TypeError, ValueError) as e:   # ajanın yazdığı yapı bozuksa
+            hata = [f"kisa.json yapısı gorev/KISA.md'deki biçimde değil ({type(e).__name__}: {e})"]
         for h in hata:
             print(f"HATA: {h}")
         print("kisa.json geçerli" if not hata else f"kisa.json geçersiz: {len(hata)} hata")
