@@ -207,8 +207,11 @@ def sahne_prompt(sahne):
 
 # Shorts için dikey (9:16) sahne görseli: aynı tarif ve gravür stili, konu dikey çerçevenin ortasında; üstte başlık,
 # altta altyazı için sakin alan. NVIDIA 768x1344 üretir, 1080x1920'ye oturtulur (yatay görseli kırpmaktan çok daha net).
-DIKEY_YER = (" Composition: tall vertical 9:16 portrait frame, close-up; the main subject is very large and fills the middle "
-             "of the frame from about one quarter to three quarters of its height; plain calm background above and below it.")
+# Shorts'ta üstte başlık, altta altyazı ve YouTube arayüzü var: konu çerçevenin ortasında (yüksekliğin ~%25-65'i), alt üçte
+# bir boş kalmalı (kisa.py BANT). Konu yine de aşağıda kalırsa kisa.py dikey_yer görseli yukarı taşır.
+DIKEY_YER = (" Composition: tall vertical 9:16 portrait frame, close-up; the main subject is large and centered in the middle "
+             "of the frame, between about one quarter and two thirds of its height; the bottom third of the frame is plain empty "
+             "surface or soft background with nothing important in it; plain calm background above the subject.")
 
 
 def dikey_prompt(sahne):
