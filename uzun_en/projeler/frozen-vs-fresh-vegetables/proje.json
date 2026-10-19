@@ -1,0 +1,524 @@
+{
+  "slug": "frozen-vs-fresh-vegetables",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Are Frozen Vegetables Less Nutritious?",
+  "yorum": "How often do frozen vegetables end up in your cart, and do they ever feel like second best? Tell us what you keep in your freezer.",
+  "aciklama_giris": "Frozen vegetables often get treated as the second-best choice. In lab comparisons, vitamin C in frozen vegetables was often similar to, and sometimes higher than, vegetables kept fresh in the fridge for days. In one broccoli experiment, 35 days of chilled storage cost about 39 percent of the vitamin C, and freezing also cost some, mostly during the quick heating step before freezing.\n\nIn this video we look at what happens to vegetables after harvest, what the head-to-head studies found, the one nutrient where some frozen vegetables fell behind, how boiling, steaming and microwaving change the picture, and five practical tips for buying and cooking both.",
+  "kaynaklar": [
+    "Bouzari A, Holstege D, Barrett DM. Vitamin retention in eight fruits and vegetables: a comparison of refrigerated and frozen storage. Journal of Agricultural and Food Chemistry. 2015;63(3):957-962. PMID 25526594.",
+    "Li L, Pegg RB, Eitenmiller RR, Chun JY, Kerrihard AL. Selected nutrient analyses of fresh, fresh-stored, and frozen fruits and vegetables. Journal of Food Composition and Analysis. 2017;59:8-17. DOI 10.1016/j.jfca.2017.02.002.",
+    "Favell DJ. A comparison of the vitamin C content of fresh and frozen vegetables. Food Chemistry. 1998;62(1):59-64. DOI 10.1016/S0308-8146(97)00165-9.",
+    "Galgano F, Favati F, Caruso M, Pietrafesa A, Natella S. The influence of processing and preservation on the retention of health-promoting compounds in broccoli. Journal of Food Science. 2007;72(2):S130-S135. DOI 10.1111/j.1750-3841.2006.00258.x. PMID 17995854.",
+    "Rickman JC, Barrett DM, Bruhn CM. Nutritional comparison of fresh, frozen and canned fruits and vegetables. Part 1. Vitamins C and B and phenolic compounds. Journal of the Science of Food and Agriculture. 2007;87(6):930-944. DOI 10.1002/jsfa.2825.",
+    "Rickman JC, Bruhn CM, Barrett DM. Nutritional comparison of fresh, frozen, and canned fruits and vegetables. Part 2. Vitamin A and carotenoids, vitamin E, minerals and fiber. Journal of the Science of Food and Agriculture. 2007;87(7):1185-1196. DOI 10.1002/jsfa.2824.",
+    "Razzak A, Mahjabin T, Khan MRM, Hossain M, Sadia U, Zzaman W. Effect of cooking methods on the nutritional quality of selected vegetables at Sylhet City. Heliyon. 2023;9(11):e21709. DOI 10.1016/j.heliyon.2023.e21709. PMID 38027907.",
+    "Yuan GF, Sun B, Yuan J, Wang QM. Effects of different cooking methods on health-promoting compounds of broccoli. Journal of Zhejiang University Science B. 2009;10(8):580-588. DOI 10.1631/jzus.b0920051. PMID 19650196.",
+    "Miglio C, Chiavaro E, Visconti A, Fogliano V, Pellegrini N. Effects of different cooking methods on nutritional and physicochemical characteristics of selected vegetables. Journal of Agricultural and Food Chemistry. 2008;56(1):139-147. PMID 18069785.",
+    "NHS. 5 A DAY: what counts. nhs.uk."
+  ],
+  "kapak": {
+    "satirlar": [
+      "FROZEN",
+      "VS FRESH?"
+    ],
+    "gorsel": "a huge close-up heap of bright green broccoli florets, half of them glistening with white frost crystals, overlapping a few whole fresh broccoli heads, packed tightly together, with a simple blue snowflake symbol"
+  },
+  "kahraman": "broccoli",
+  "etiketler": [
+    "frozen vs fresh vegetables",
+    "are frozen vegetables healthy",
+    "frozen broccoli nutrients",
+    "vitamin C",
+    "nutrition science",
+    "healthy eating",
+    "food myths",
+    "cooking vegetables",
+    "blanching",
+    "evidence based nutrition"
+  ],
+  "seslendirme_duzelt": {
+    "NHS": "N H S",
+    "sulforaphane": "sul FOR a fane"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Frozen versus fresh",
+      "metin": "If you buy frozen vegetables and wonder whether you're settling for second best, this is for you. In a 2007 lab study, broccoli stored chilled for 35 days lost about 39 percent of its vitamin C.",
+      "gorsel": "a fresh head of broccoli on a wooden kitchen table beside an open refrigerator drawer, soft morning light drawn as fine radiating lines",
+      "etiket": "Galgano et al. · J Food Sci · 2007",
+      "baslik": {
+        "satirlar": [
+          "35 DAYS",
+          "CHILLED"
+        ],
+        "vurgu": "–39%",
+        "not": "vitamin C lost from stored broccoli"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "Broccoli frozen for 60 days lost a similar amount, mostly in a quick heating step before freezing. So which one is really better for you?",
+      "gorsel": "two bowls of broccoli florets side by side, one with fresh glossy florets and one with frost-covered frozen florets, a wooden spoon between them"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know when fresh wins, when frozen wins, and which way of cooking keeps the most nutrients.",
+      "gorsel": "a kitchen scale with a bunch of broccoli on one side and a heap of frozen broccoli florets on the other, in balance"
+    },
+    {
+      "id": 4,
+      "metin": "Today we'll look at what happens to vegetables after harvest, what careful side-by-side comparisons found, and the one place where frozen really does slip.",
+      "gorsel": "a large magnifying glass held over a head of broccoli and a handful of frozen broccoli florets, small dashed callout lines pointing to tiny sketches of a snowflake and a pot"
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "Welcome to The Food Almanac. Let's start with what happens to a vegetable after it's picked.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Frozen vs Fresh Vegetables",
+        "alt": "What the nutrient studies actually show"
+      }
+    },
+    {
+      "id": 6,
+      "bolum": "After the harvest",
+      "metin": "A vegetable doesn't stop changing the moment it's picked. Over days, a fresh vegetable slowly loses some of its vitamins, and the loss can be larger than most people assume.",
+      "gorsel": "a freshly picked head of broccoli lying on dark garden soil, next to a wooden crate, a pocket watch beside it",
+      "baslik": {
+        "satirlar": [
+          "PICKED,",
+          "THEN WAITING"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Vitamin C is especially fragile. It dissolves in water, and it is easily destroyed by heat and by oxygen. That's why it's the vitamin researchers usually track.",
+      "gorsel": "a halved lemon and a head of broccoli beside a glass of water, tiny golden sparkles drifting up from them, a small flame sketched in the corner",
+      "etiket": "Rickman et al. · J Sci Food Agric · 2007",
+      "baslik": {
+        "satirlar": [
+          "VITAMIN C",
+          "IS FRAGILE"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "metin": "Fresh vegetables often spend days travelling from farm to warehouse to shop, and then more days in your fridge. In 1998, researcher D J Favell set out to measure that whole journey.",
+      "gorsel": "a delivery crate of broccoli on a wooden cart in front of a small market stall, a refrigerator door slightly open in the background",
+      "etiket": "Favell · Food Chemistry · 1998"
+    },
+    {
+      "id": 9,
+      "metin": "Commercial freezing works differently. Vegetables are picked, briefly heated in hot water or steam, a step called blanching, cooled quickly, and then frozen.",
+      "gorsel": "broccoli florets being lifted from a pot of steaming water in a wire basket, a bowl of ice water waiting beside it",
+      "baslik": {
+        "satirlar": [
+          "BLANCH,",
+          "THEN FREEZE"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "metin": "A big review by Rickman and colleagues found that frozen vegetables lose some nutrients in that brief blanching step, and then lose more slowly during months in the freezer. We'll see where frozen can slip a little later.",
+      "gorsel": "a freezer drawer filled with neat bags of frosted broccoli florets and green peas, a small antique clock on the lid",
+      "etiket": "Rickman et al. · J Sci Food Agric · 2007"
+    },
+    {
+      "id": 11,
+      "metin": "And in the cooking chapter, there's a detail that can matter as much as whether you buy frozen or fresh.",
+      "gorsel": "a saucepan with a lid and a small bowl of broccoli florets on a stove, a wisp of steam rising"
+    },
+    {
+      "id": 12,
+      "bolum": "The head-to-head studies",
+      "tip": "kart",
+      "metin": "So what happens when researchers measure them side by side?",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Fresh, fresh-stored, frozen",
+        "alt": "Three controlled comparisons"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Favell compared fresh vegetables at different stages of distribution and storage with the same vegetables, commercially frozen and kept in a deep freezer for up to twelve months. Vitamin C was the yardstick.",
+      "gorsel": "a row of glass laboratory jars: one with broccoli florets, one with green peas, one with spinach leaves, a thermometer standing beside them",
+      "etiket": "Favell · Food Chemistry · 1998"
+    },
+    {
+      "id": 14,
+      "metin": "Frozen peas and broccoli came out close to the typical shop-bought vegetable, and better than peas stored at home for several days. Frozen spinach beat all of the market spinach that was tested.",
+      "gorsel": "a bowl of frozen green peas and a bowl of broccoli florets, a loose pile of spinach leaves wilting at the side",
+      "baslik": {
+        "satirlar": [
+          "FROZEN",
+          "HELD UP"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Freezing caused no loss of vitamin C in green beans or carrots compared with the vegetables at harvest. So the freshest vegetable is the one just picked. But after a trip through the market and your kitchen, frozen can match it or beat it.",
+      "gorsel": "a pile of green beans and carrots on a wooden board, a bag of frozen broccoli beside them, a sprinkle of frost on the bag",
+      "etiket": "Favell · Food Chemistry · 1998"
+    },
+    {
+      "id": 16,
+      "metin": "In 2015, researchers led by Ali Bouzari and Diane Barrett compared eight fruits and vegetables kept refrigerated or frozen, including broccoli, spinach, peas, carrots and green beans.",
+      "gorsel": "a laboratory bench with a tray holding broccoli, carrots, green beans, spinach and peas in small glass dishes, an antique brass microscope behind",
+      "etiket": "Bouzari et al. · J Agric Food Chem · 2015"
+    },
+    {
+      "id": 17,
+      "metin": "For vitamin C, there was no significant difference in five of the eight foods. In the other three, vitamin C was higher in the frozen samples.",
+      "gorsel": "eight small glass dishes in two rows holding broccoli, peas, spinach and berries, five of them equal in size and three with a taller heap of frosted produce",
+      "etiket": "Bouzari et al. · J Agric Food Chem · 2015",
+      "baslik": {
+        "satirlar": [
+          "5 OF 8:",
+          "NO DIFFERENCE"
+        ],
+        "not": "vitamin C, frozen vs refrigerated"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Vitamin E was higher in frozen samples of three foods. Riboflavin, a B vitamin, differed in only two: higher in frozen broccoli, lower in frozen peas.",
+      "gorsel": "a bowl of frozen broccoli florets and a bowl of green peas on a white cloth, a small mortar and pestle beside them"
+    },
+    {
+      "id": 19,
+      "metin": "In 2017, Linshan Li, Ronald Pegg and colleagues ran a two-year study of eight foods, including broccoli, spinach, green peas and strawberries. They added a third group, fresh-stored: produce kept in the refrigerator for five days, like at home.",
+      "gorsel": "three wooden trays in a row: one with fresh broccoli, one with broccoli under a small refrigerator shelf, one with frosted frozen broccoli, a calendar page with blank squares behind",
+      "etiket": "Li et al. · J Food Compos Anal · 2017",
+      "baslik": {
+        "satirlar": [
+          "FRESH,",
+          "FRESH-STORED,",
+          "FROZEN"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "metin": "They measured vitamin C, beta-carotene, which the body can turn into vitamin A, and folate, a B vitamin that supports healthy cells.",
+      "gorsel": "an orange carrot, a head of broccoli and a bunch of spinach leaves arranged together, with a small brass balance scale in front"
+    },
+    {
+      "id": 21,
+      "metin": "Most comparisons showed no significant difference at all. When there was one, frozen beat fresh-stored more often than the other way around.",
+      "gorsel": "a balance scale holding a bundle of frosted broccoli on one pan and a bundle of fresh broccoli on the other, the frosted one slightly lower",
+      "etiket": "Li et al. · J Food Compos Anal · 2017",
+      "baslik": {
+        "satirlar": [
+          "MOSTLY",
+          "NO DIFFERENCE"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Notice what that doesn't say. It doesn't say frozen is always better. It says that once fresh vegetables have sat in your fridge for a few days, the advantage people imagine for fresh is mostly not there, at least for these nutrients.",
+      "gorsel": "a refrigerator shelf holding a head of broccoli, a bag of spinach and a carton, next to a freezer drawer with a bag of frozen broccoli"
+    },
+    {
+      "id": 23,
+      "bolum": "The broccoli experiment",
+      "tip": "kart",
+      "metin": "Now let's go back to the broccoli from the start.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "One broccoli, many fates",
+        "alt": "Galgano et al. · Journal of Food Science · 2007"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "Galgano and colleagues stored broccoli in the fridge, froze it, and cooked it five different ways. Then they measured vitamin C, and also sulforaphane, a plant compound found in broccoli.",
+      "gorsel": "a laboratory bench with a head of broccoli, a small pot, a microwave bowl, a steamer basket and a freezer bag, arranged in a neat row",
+      "etiket": "Galgano et al. · J Food Sci · 2007"
+    },
+    {
+      "id": 25,
+      "tip": "grafik",
+      "metin": "Stored cold and humid for 35 days, broccoli lost about 39 percent of its vitamin C. Boiling cost about 34 percent, and steaming about 22 percent.",
+      "grafik": {
+        "baslik": "Broccoli: share of vitamin C lost",
+        "alt": "Chilled storage vs two cooking methods",
+        "cubuklar": [
+          {
+            "etiket": "Chilled 35 days",
+            "deger": 39,
+            "metin": "−39%"
+          },
+          {
+            "etiket": "Boiled",
+            "deger": 34,
+            "metin": "−34%"
+          },
+          {
+            "etiket": "Steamed",
+            "deger": 22,
+            "metin": "−22%"
+          }
+        ],
+        "kaynak": "Galgano et al., J Food Sci 2007 · broccoli, laboratory study"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Freezing at minus 18 degrees Celsius for 60 days caused similar vitamin C losses. Most of it happened during the blanching step before freezing, not in the freezer itself.",
+      "gorsel": "broccoli florets in a wire basket over steaming water on the left and a frosted bag of broccoli florets in a freezer drawer on the right, a dashed arrow between them",
+      "etiket": "Galgano et al. · J Food Sci · 2007"
+    },
+    {
+      "id": 27,
+      "metin": "That's a useful reminder. Frozen vegetables aren't free of loss. They lose some early, then slowly in the freezer. Fresh ones lose gradually, and the longer they wait, the more they lose.",
+      "gorsel": "two heads of broccoli on a table, one bright and crisp, the other slightly yellowed and limp, a frosted bag of broccoli between them"
+    },
+    {
+      "id": 28,
+      "metin": "One caution. Thirty-five days is far longer than most of us keep broccoli. The 2017 study used five days, which is closer to real life.",
+      "gorsel": "a kitchen calendar with a few blank squares circled, a head of broccoli resting on a refrigerator shelf",
+      "baslik": {
+        "satirlar": [
+          "5 DAYS",
+          "IN THE FRIDGE"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "bolum": "Where frozen falls short",
+      "tip": "kart",
+      "metin": "So is there anything frozen does worse? Yes, and it's worth being honest about.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Where frozen falls short",
+        "alt": "Beta-carotene · texture · labels"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "Beta-carotene is where some frozen vegetables did worse. In the 2015 study, it fell drastically in some of the frozen foods, and how much depended on the vegetable.",
+      "gorsel": "an orange carrot and a frosted bag of frozen carrot slices beside a bunch of broccoli, a small downward dashed arrow drawn over the frozen bag",
+      "etiket": "Bouzari et al. · J Agric Food Chem · 2015",
+      "baslik": {
+        "satirlar": [
+          "BETA-CAROTENE",
+          "FELL"
+        ],
+        "not": "in some frozen vegetables"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "Yet the large review by Rickman and colleagues found carotenoids were generally similar across fresh and processed forms, and often higher in canned ones, possibly because of how they were measured, or because heat frees them from the plant.",
+      "gorsel": "a halved pumpkin, a bowl of carrot slices and a few broccoli florets on a wooden table, soft light drawn as fine lines",
+      "etiket": "Rickman et al. · J Sci Food Agric · 2007"
+    },
+    {
+      "id": 32,
+      "metin": "So the picture isn't one-sided. Results vary by vegetable and by nutrient, which is why researchers keep recommending variety rather than one winner.",
+      "gorsel": "a wide wooden market crate holding broccoli, carrots, green beans, spinach and peas in separate sections"
+    },
+    {
+      "id": 33,
+      "metin": "Frozen also has limits that vitamin tests don't capture. Long storage can soften texture, and some products come with added sauces, butter or salt.",
+      "gorsel": "a bowl of plain frozen broccoli florets next to a bowl of broccoli in a creamy sauce with a small saltshaker, a spoon resting on each"
+    },
+    {
+      "id": 34,
+      "metin": "One more thing to know. Reports say a frozen-food industry foundation helped fund some of this research. The methods are standard, but that's a good reason to look at the whole body of evidence, not one study.",
+      "gorsel": "a quiet research desk with a stack of journals with blank covers, a magnifying glass resting on top, and a small bowl of broccoli florets beside a teacup"
+    },
+    {
+      "id": 35,
+      "metin": "And these studies measured nutrients in the food, not health outcomes in people. They tell us what's in the bowl, not what happens to your heart or your gut over the years.",
+      "gorsel": "a white ceramic bowl of steamed broccoli on a plain table beside an open notebook with blank pages and a pencil"
+    },
+    {
+      "id": 36,
+      "metin": "The NHS treats them alike. It says that eighty grams of fresh, canned or frozen fruit and vegetables counts as one portion of your five a day.",
+      "gorsel": "a kitchen scale with a small heap of frozen broccoli florets in the pan, a bowl of fresh broccoli and a tin of peas beside it",
+      "baslik": {
+        "satirlar": [
+          "COUNTS AS",
+          "ONE PORTION"
+        ],
+        "vurgu": "80 g",
+        "not": "fresh, canned or frozen (NHS)"
+      }
+    },
+    {
+      "id": 37,
+      "bolum": "Cooking changes the picture",
+      "tip": "kart",
+      "metin": "Now to the detail I promised. Cooking changes vegetables, whether they start fresh or frozen.",
+      "kart": {
+        "ust": "INSIDE THE POT",
+        "baslik": "How you cook matters",
+        "alt": "Boiling · steaming · microwaving"
+      }
+    },
+    {
+      "id": 38,
+      "metin": "In a study of six vegetables, boiling cost between about ten and 71 percent of the vitamin C, with spinach losing the most. Water and heat both work against this fragile vitamin.",
+      "gorsel": "a deep pot of boiling water with broccoli florets and spinach leaves bobbing in it, steam rising, a small golden sparkle drawn leaving each floret",
+      "etiket": "Razzak et al. · Heliyon · 2023",
+      "baslik": {
+        "satirlar": [
+          "BOILING",
+          "COSTS MOST"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "In that study, microwaving kept more than 90 percent of the vitamin C. And in the broccoli experiment, microwaving and pressure cooking also kept more than 90 percent, while boiling and steaming lost more.",
+      "gorsel": "a glass bowl of broccoli florets with a splash of water inside a microwave oven, the door open, beside a small pressure cooker",
+      "etiket": "Galgano et al. · J Food Sci · 2007",
+      "baslik": {
+        "satirlar": [
+          "OVER 90%",
+          "KEPT"
+        ],
+        "not": "vitamin C after microwaving or pressure cooking"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Results do differ between studies. A 2009 broccoli study found steaming kept the most nutrients overall, while other methods caused significant losses of chlorophyll and vitamin C. Time and water seem to matter.",
+      "gorsel": "a steamer basket of bright green broccoli over a pot, the lid propped beside it, a pocket watch on the counter",
+      "etiket": "Yuan et al. · J Zhejiang Univ Sci B · 2009"
+    },
+    {
+      "id": 41,
+      "metin": "Carotenoids behave differently. In research on carrots, zucchini and broccoli, boiling and steaming kept carotenoids best, and lab measures of antioxidant activity actually rose after cooking, partly because softening makes compounds easier to extract.",
+      "gorsel": "orange carrot slices, sliced zucchini and broccoli florets steaming gently on a plate, a small magnifying glass over the carrots",
+      "etiket": "Miglio et al. · J Agric Food Chem · 2008",
+      "baslik": {
+        "satirlar": [
+          "COOKING CAN",
+          "HELP TOO"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "So cooking isn't simply a loss. Some nutrients are lost, others become easier to extract, and the best method depends on the vegetable and on the nutrient you care about.",
+      "gorsel": "a plate of cooked broccoli, carrots and green beans on a wooden table with a fork, a raw head of broccoli behind it"
+    },
+    {
+      "id": 43,
+      "metin": "For frozen vegetables, the blanching has already been done, so there's no need to cook them long. A short steam or microwave with a little water is a simple way to limit losses.",
+      "gorsel": "a microwave-safe glass dish of frozen broccoli florets with a spoonful of water, next to a lid and a pair of oven mitts"
+    },
+    {
+      "id": 44,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you put this to use? Here are five practical tips.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Fresh, frozen, cooked well",
+        "alt": "Five practical tips"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "One. Treat frozen as a reliable default, not a compromise. If fresh vegetables would sit in your fridge for more than a few days, frozen may match or beat them for vitamin C.",
+      "gorsel": "an open freezer drawer with several bags of frosted broccoli florets, spinach and peas neatly stacked"
+    },
+    {
+      "id": 46,
+      "metin": "Two. Buy fresh when it's truly fresh, from a farm stand or your own garden, and eat it within a day or two. Just-picked is when fresh is at its best.",
+      "gorsel": "a farm stand table with crates of freshly picked broccoli, carrots and green beans, a hand-lettered blank board hanging above",
+      "baslik": {
+        "satirlar": [
+          "JUST PICKED",
+          "IS BEST"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Three. Use fresh vegetables within a few days, and don't leave them waiting. The longer they sit, the more vitamin C they lose.",
+      "gorsel": "a refrigerator shelf with a head of broccoli at the front, a bag of spinach and a carton behind, a small pocket watch on the shelf"
+    },
+    {
+      "id": 48,
+      "metin": "Four. Cook gently and briefly. Microwave or steam with a little water rather than boiling for a long time, and if you do boil, use the cooking water in a soup, since some of the vitamins end up there.",
+      "gorsel": "a steaming pot of vegetable soup with broccoli florets floating in it, a ladle resting on the rim, a small bowl of broccoli beside it"
+    },
+    {
+      "id": 49,
+      "metin": "Five. Read the label. Plain frozen vegetables, without added sauce, butter or salt, keep the choice in your hands. And mix things up, because variety matters more than any single winner.",
+      "gorsel": "a plain bag of frozen broccoli florets beside a bag of mixed frozen vegetables on a counter, a bowl of broccoli in front",
+      "baslik": {
+        "satirlar": [
+          "READ",
+          "THE LABEL"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "metin": "A short note. If a doctor or dietitian has given you specific advice about vegetables, for example because of a medical condition or a medicine, keep following it.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a small bowl of steamed broccoli",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Frozen holds up well",
+        "alt": "Fresh at harvest · frozen after days"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "In controlled comparisons, frozen vegetables had vitamin C and other vitamins at levels comparable to fresh ones kept in the fridge, and sometimes higher.",
+      "gorsel": "a bowl of frosted broccoli florets and a bowl of fresh broccoli florets side by side on a white cloth, equal in size"
+    },
+    {
+      "id": 53,
+      "metin": "Fresh wins when it's truly fresh, just picked and eaten quickly. Frozen can win when fresh has travelled and waited. Beta-carotene is one nutrient where some frozen vegetables fell behind.",
+      "gorsel": "a head of broccoli with a few drops of dew on a garden bed on the left, a frosted bag of broccoli florets on a kitchen counter on the right"
+    },
+    {
+      "id": 54,
+      "metin": "And how you cook matters. Short, gentle cooking, like microwaving, keeps more vitamin C than long boiling.",
+      "gorsel": "a glass dish of bright green steamed broccoli florets on a table, a thin curl of steam rising"
+    },
+    {
+      "id": 55,
+      "metin": "The best vegetables are the ones you actually eat. Fresh or frozen, the goal is more vegetables on your plate.",
+      "gorsel": "a dinner plate with a generous portion of broccoli, carrots and green beans next to a piece of grilled fish, on a wooden table"
+    },
+    {
+      "id": 56,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
