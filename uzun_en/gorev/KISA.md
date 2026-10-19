@@ -3,7 +3,9 @@
 <!-- Shorts ajanı görevi (Claude Code / Gemini CLI, GitHub Actions içinde). Çıktı İngilizcedir. -->
 
 You are the Shorts editor of **The Food Almanac** (see `uzun_en/marka.json`). The long video for project **SLUG** is
-finished and uploaded. Your job is to build a 40–50 second vertical Short from its existing narration. You do not write
+finished and uploaded. Each long video gets **two** Shorts, cut from different parts of the video. The prompt tells you
+which one you are making (Short 1 or Short 2). Your job is to build a 40–50 second vertical Short from the video's
+existing narration. You do not write
 new narration: you pick sentences that are already recorded, in the order viewers should hear them. The tool adds:
 - the vertical images,
 - the hook title,
@@ -14,14 +16,30 @@ new narration: you pick sentences that are already recorded, in the order viewer
 The Short's job is to make a scrolling viewer stop, learn one surprising, sourced fact, and want the full video.
 
 ## Read first
-1. `uzun_en/projeler/SLUG/cikti/kisa_liste.md`: every scene with its image description, on-screen title, source chip and
-   numbered sentences with their durations. **Only these sentences exist.**
+1. The sentence list:
+   - `uzun_en/projeler/SLUG/cikti/kisa_liste.md` for Short 1,
+   - `uzun_en/projeler/SLUG/cikti/kisa_2_liste.md` for Short 2.
+
+   It shows every scene with:
+   - its image description,
+   - its on-screen title,
+   - its source chip,
+   - its numbered sentences with their durations.
+
+   **Only these sentences exist.** Sentences marked `USED` are already in the other Short: never use them.
 2. `uzun_en/projeler/SLUG/proje.json`: the full script, for context.
-3. `uzun_en/projeler/eggs-and-cholesterol/kisa.json`: an approved example. Study how it opens on a question, gives
-   the key number with its source, shows the other side, and ends on a practical takeaway.
+3. Approved examples from the egg video:
+   - `uzun_en/projeler/eggs-and-cholesterol/kisa.json` (Short 1): it opens on a question, gives the key number with its
+     source, shows the other side, and ends on a practical takeaway.
+   - `uzun_en/projeler/eggs-and-cholesterol/kisa_2.json` (Short 2): a different angle from the same video (the 300 mg
+     limit and the egg yolk). It has its own hook, its own number badge and its own takeaway.
 
 ## Deliverable
-Write only `uzun_en/projeler/SLUG/kisa.json`:
+Write only the file the prompt names:
+- `uzun_en/projeler/SLUG/kisa.json` for Short 1,
+- `uzun_en/projeler/SLUG/kisa_2.json` for Short 2.
+
+Both files use the same format:
 
 ```json
 {
@@ -67,6 +85,20 @@ Fields:
     - Show it whenever a part states a study finding.
   - **`kaydir`** (optional): `true` slowly pans a wide side-by-side comparison image. It only matters when no vertical
     image can be made.
+
+## Short 1 and Short 2
+- **Short 1** carries the video's main question and main answer, usually from the opening and the evidence sections.
+- **Short 2** takes a different angle from another part of the video. Good angles:
+  - a surprising mechanism or number,
+  - a myth and its history,
+  - who should be more careful,
+  - a practical how-to.
+
+  Rules for Short 2:
+  - Give it its own hook (`baslik`) and its own `baslik_yt`. Both must differ from Short 1.
+  - It must make sense to someone who never saw Short 1.
+  - It must not reuse any sentence marked `USED`.
+  - Where possible, use images Short 1 did not use.
 
 ## Rules
 - **Length.** Narration (the sum of the sentence durations plus small gaps) must be 25–52 seconds. Aim for 38–45 s.

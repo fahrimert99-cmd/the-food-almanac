@@ -7,7 +7,7 @@
   python3 uzun_en/araclar/yukle.py --kota-kontrol                       # YouTube günlük kotası dolu mu? (dolu: çıkış 3)
   python3 uzun_en/araclar/yukle.py --tamamla                            # yüklenenleri denetle: silinmişse yeniden yükle,
                                                                         # eksik kapak / oynatma listesini tamamla
-  python3 uzun_en/araclar/yukle.py --proje SLUG --kisa [--kuru]         # Shorts'u (cikti/kisa/kisa.mp4) zamanlanmış yükle
+  python3 uzun_en/araclar/yukle.py --proje SLUG --kisa [--no 2] [--kuru]  # Shorts'u (cikti/kisa/kisa.mp4) zamanlanmış yükle
 
 Girdi: cikti/video.mp4, cikti/kapak_yt.jpg, cikti/meta.json (meta.py) ve cikti/kalite.json (geçmiş olmalı).
 Aynı video iki kez yüklenmez: projeler/SLUG/yayin.json ya da kanalda aynı başlıklı son yükleme varsa o kullanılır.
@@ -290,30 +290,53 @@ def liste_temizle(yt, m):
         O.log(f"! oynatma listesi temizlenemedi: {str(e)[:160]}")
 
 
-def kisa_slot(slug, simdi):
-    """Shorts'un yayın zamanı: uzun videodan sonraki, uzun video günü olmayan ve başka bir Shorts'a ayrılmamış ilk gün,
-    kanalın yayın saatinde. Uzun videolar Salı/Cuma çıkar; Shorts'lar aradaki günlere yayılır."""
+def kisa_ad(no=1):
+    return "kisa" if no == 1 else f"kisa_{no}"          # kisa.py ad() ile aynı
+
+
+def kisa_slot(slug, simdi, no=1):
+    """Shorts'un yayın zamanı (kanalın yayın saatinde, günde en çok bir Shorts):
+    - Yeni video: N. Shorts uzun videodan N gün sonra (Salı videosu: Çarşamba + Perşembe, Cuma videosu: Cumartesi +
+      Pazar); o gün doluysa videonun öteki Shorts günü.
+    - Eski video (o günler geçmiş ya da dolu): yeni videolara ayrılan günlere dokunmadan ilk boş Pazartesi, Salı ya da
+      Cuma; uzun videodan ve aynı videonun önceki Shorts'undan en az bir gün sonra."""
     yayin = O.marka()["yayin"]
     sa, dk = map(int, yayin["saat_utc"].split(":"))
-    y = O.json_oku(os.path.join(O.proje_dir(slug), "yayin.json"), {}) or {}
+    ayrilan = {(g + k) % 7 for g in yayin["gunler"] for k in (1, 2)}      # Çarşamba, Perşembe, Cumartesi, Pazar
+    pdir = O.proje_dir(slug)
+    y = O.json_oku(os.path.join(pdir, "yayin.json"), {}) or {}
+    dolu = {(O.json_oku(y_, {}) or {}).get("slot", "")[:10] for y_ in glob.glob(os.path.join(O.PROJELER, "*", "kisa*_yayin.json"))}
+
+    def saat(g):
+        return dt.datetime(g.year, g.month, g.day, sa, dk, tzinfo=dt.timezone.utc)
+
+    def tarih(t):
+        return dt.datetime.fromisoformat(t.replace("Z", "+00:00"))
+
     alt = simdi + dt.timedelta(hours=3)
+    for n in range(1, no):                            # aynı videonun önceki Shorts'undan sonra
+        t = (O.json_oku(os.path.join(pdir, f"{kisa_ad(n)}_yayin.json"), {}) or {}).get("slot")
+        if t:
+            alt = max(alt, tarih(t) + dt.timedelta(hours=20))
     uzun = y.get("slot") or y.get("yuklenme")
     if uzun:
-        alt = max(alt, dt.datetime.fromisoformat(uzun.replace("Z", "+00:00")) + dt.timedelta(hours=20))
-    dolu = {(O.json_oku(os.path.join(O.PROJELER, s, "kisa_yayin.json"), {}) or {}).get("slot", "")[:10]
-            for s in os.listdir(O.PROJELER)}
+        L = tarih(uzun).date()
+        for k in [no] + [k for k in (1, 2) if k != no]:
+            g = L + dt.timedelta(days=k)
+            if saat(g) >= alt and g.isoformat() not in dolu:
+                return saat(g)
+        alt = max(alt, tarih(uzun) + dt.timedelta(hours=20))
     g = alt.date()
     while True:
-        aday = dt.datetime(g.year, g.month, g.day, sa, dk, tzinfo=dt.timezone.utc)
-        if aday >= alt and g.weekday() not in yayin["gunler"] and g.isoformat() not in dolu:
-            return aday
+        if saat(g) >= alt and g.weekday() not in ayrilan and g.isoformat() not in dolu:
+            return saat(g)
         g += dt.timedelta(days=1)
 
 
-def kisa_aciklama(slug, uzun_id):
+def kisa_aciklama(slug, uzun_id, no=1):
     import meta as M
     p, m = O.proje(slug), O.marka()
-    tanim = O.json_oku(os.path.join(O.proje_dir(slug), "kisa.json"), {}) or {}
+    tanim = O.json_oku(os.path.join(O.proje_dir(slug), f"{kisa_ad(no)}.json"), {}) or {}
     parca = [tanim.get("aciklama") or "", f"Full video: https://youtu.be/{uzun_id}"]
     if p.get("kaynaklar"):
         parca.append("SOURCES\n" + "\n".join(f"{i}. {k}" for i, k in enumerate(p["kaynaklar"], 1)))
@@ -323,28 +346,29 @@ def kisa_aciklama(slug, uzun_id):
     return M.temiz("\n\n".join(x for x in parca if x))[:4900]
 
 
-def kisa_yukle(slug, kuru=False):
-    """cikti/kisa/kisa.mp4'ü Shorts olarak zamanlanmış yükler; açıklamada uzun videonun bağlantısı. Bir kez yüklenir
-    (projeler/SLUG/kisa_yayin.json ya da kanalda aynı başlıklı son yükleme)."""
+def kisa_yukle(slug, kuru=False, no=1):
+    """cikti/kisa/kisa.mp4'ü (no > 1: cikti/kisa_N/kisa_N.mp4) Shorts olarak zamanlanmış yükler; açıklamada uzun videonun
+    bağlantısı. Bir kez yüklenir (projeler/SLUG/kisa_yayin.json ya da kanalda aynı başlıklı son yükleme)."""
     import meta as M
     pdir = O.proje_dir(slug)
-    kyol = os.path.join(pdir, "kisa_yayin.json")
+    ad = kisa_ad(no)
+    kyol = os.path.join(pdir, f"{ad}_yayin.json")
     if (O.json_oku(kyol, {}) or {}).get("video_id"):
         return O.log(f"Shorts zaten yüklü: {O.json_oku(kyol)['video_id']}")
     y = O.json_oku(os.path.join(pdir, "yayin.json"), {}) or {}
     if not y.get("video_id"):
         raise SystemExit("uzun video henüz yüklenmemiş — Shorts yüklenmiyor")
-    video = os.path.join(pdir, "cikti", "kisa", "kisa.mp4")
+    video = os.path.join(pdir, "cikti", ad, f"{ad}.mp4")
     if not os.path.exists(video):
-        raise SystemExit("cikti/kisa/kisa.mp4 yok — önce Shorts render edilmeli")
+        raise SystemExit(f"cikti/{ad}/{ad}.mp4 yok — önce Shorts render edilmeli")
     p, m = O.proje(slug), O.marka()
-    tanim = O.json_oku(os.path.join(pdir, "kisa.json"), {}) or {}
+    tanim = O.json_oku(os.path.join(pdir, f"{ad}.json"), {}) or {}
     baslik = M.temiz(tanim.get("baslik_yt") or p["baslik"])[:100]
     if baslik.strip().lower() == str(y.get("baslik") or p["baslik"]).strip().lower():
         baslik = (baslik[:91] + " #Shorts")       # uzun videoyla aynı başlık olmasın (ayni_baslikli onu bulmasın)
     simdi = dt.datetime.now(dt.timezone.utc)
-    slot = kisa_slot(slug, simdi).strftime("%Y-%m-%dT%H:%M:%SZ")
-    body = {"snippet": {"title": baslik, "description": kisa_aciklama(slug, y["video_id"]), "tags": M.etiket_listesi(p, m),
+    slot = kisa_slot(slug, simdi, no).strftime("%Y-%m-%dT%H:%M:%SZ")
+    body = {"snippet": {"title": baslik, "description": kisa_aciklama(slug, y["video_id"], no), "tags": M.etiket_listesi(p, m),
                         "categoryId": m.get("kategori", "27"), "defaultLanguage": m.get("dil", "en"),
                         "defaultAudioLanguage": m.get("dil", "en")},
             "status": {"privacyStatus": "private", "publishAt": slot, "selfDeclaredMadeForKids": False,
@@ -358,7 +382,9 @@ def kisa_yukle(slug, kuru=False):
     import youtube_api as YY
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
     vid = ayni_baslikli(yt, baslik)
-    if vid and vid != y["video_id"]:
+    digerleri = {y["video_id"]} | {(O.json_oku(k, {}) or {}).get("video_id")
+                                    for k in glob.glob(os.path.join(pdir, "kisa*_yayin.json"))}
+    if vid and vid not in digerleri:
         O.log(f"kanalda aynı başlıklı video var, yeniden yüklenmiyor: {vid}")
     else:
         vid = video_yukle(yt, body, video)
@@ -367,25 +393,27 @@ def kisa_yukle(slug, kuru=False):
 
 
 def kisa_baglanti_guncelle(yt):
-    """Uzun video yeniden yüklendiyse (yeni id) Shorts açıklamasındaki bağlantıyı yeniler (50 birim)."""
+    """Uzun video yeniden yüklendiyse (yeni id) Shorts açıklamalarındaki bağlantıyı yeniler (Shorts başına 50 birim)."""
     for slug in O.durum()["videolar"]:
-        kyol = os.path.join(O.proje_dir(slug), "kisa_yayin.json")
-        k = O.json_oku(kyol, {}) or {}
         uzun = (O.json_oku(os.path.join(O.proje_dir(slug), "yayin.json"), {}) or {}).get("video_id")
-        if not k.get("video_id") or not uzun or k.get("uzun_id") == uzun:
-            continue
-        try:
-            it = yt.videos().list(part="snippet", id=k["video_id"]).execute().get("items", [])
-            if it:
-                sn = it[0]["snippet"]
-                yeni = {x: sn[x] for x in ("title", "tags", "categoryId", "defaultLanguage", "defaultAudioLanguage") if x in sn}
-                yeni["description"] = kisa_aciklama(slug, uzun)
-                yt.videos().update(part="snippet", body={"id": k["video_id"], "snippet": yeni}).execute()
-                O.log(f"✓ {slug}: Shorts açıklamasındaki uzun video bağlantısı yenilendi ({uzun})")
-            k["uzun_id"] = uzun
-            O.json_yaz(kyol, k)
-        except Exception as e:
-            O.log(f"! {slug}: Shorts bağlantısı yenilenemedi ({str(e)[:120]})")
+        for kyol in sorted(glob.glob(os.path.join(O.proje_dir(slug), "kisa*_yayin.json"))):
+            no = int(re.search(r"kisa_?(\d*)_yayin", kyol).group(1) or 1)
+            k = O.json_oku(kyol, {}) or {}
+            if not k.get("video_id") or not uzun or k.get("uzun_id") == uzun:
+                continue
+            try:
+                it = yt.videos().list(part="snippet", id=k["video_id"]).execute().get("items", [])
+                if it:
+                    sn = it[0]["snippet"]
+                    yeni = {x: sn[x] for x in ("title", "tags", "categoryId", "defaultLanguage", "defaultAudioLanguage")
+                            if x in sn}
+                    yeni["description"] = kisa_aciklama(slug, uzun, no)
+                    yt.videos().update(part="snippet", body={"id": k["video_id"], "snippet": yeni}).execute()
+                    O.log(f"✓ {slug}: Shorts {no} açıklamasındaki uzun video bağlantısı yenilendi ({uzun})")
+                k["uzun_id"] = uzun
+                O.json_yaz(kyol, k)
+            except Exception as e:
+                O.log(f"! {slug}: Shorts {no} bağlantısı yenilenemedi ({str(e)[:120]})")
 
 
 def main():
@@ -396,13 +424,14 @@ def main():
     ap.add_argument("--kota-kontrol", action="store_true")
     ap.add_argument("--tamamla", action="store_true", help="eksik kalan kapak / oynatma listesi")
     ap.add_argument("--kisa", action="store_true", help="Shorts'u (cikti/kisa/kisa.mp4) zamanlanmış yükle")
+    ap.add_argument("--no", type=int, default=1, help="--kisa ile: kaçıncı Shorts (2: kisa_2.json, cikti/kisa_2/)")
     a = ap.parse_args()
     if a.kota_kontrol:
         return kota_kontrol()
     if a.tamamla:
         return tamamla()
     if a.kisa:
-        return kisa_yukle(O.aktif_slug(a.proje), a.kuru)
+        return kisa_yukle(O.aktif_slug(a.proje), a.kuru, a.no)
     if not a.slot:
         ap.error("--slot gerekli")
     slug = O.aktif_slug(a.proje)
