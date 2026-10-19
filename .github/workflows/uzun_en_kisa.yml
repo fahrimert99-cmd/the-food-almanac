@@ -1,0 +1,265 @@
+name: Shorts EN (The Food Almanac)
+# Yüklenmiş her uzun videodan dikey bir Shorts (~1 dk) üretir ve zamanlanmış yükler:
+#   cümle seçimi (Claude, yedek Gemini; gorev/KISA.md -> projeler/SLUG/kisa.json) -> denetim (kisa.py --kontrol)
+#   -> dikey görseller (NVIDIA, yedek Cloudflare) -> kapanış çağrısı (aynı anlatıcı sesi) -> render (Remotion "Kisa")
+#   -> GitHub sürümüne arşiv -> YouTube (uzun video günü olmayan ilk güne, açıklamada uzun videonun bağlantısı).
+# Tetik: uzun video yüklenince uzun_en.yml başlatır; ayrıca günlük tarama (Shorts'u olmayan en yeni video) ve
+# uzun_en/kisa_islem.json main'e gelince ({"proje": "<slug>", "tetik": N}). Bir projede Shorts istenmezse
+# proje.json'a "kisa_yok": true yazılır.
+# KREDİ HARCANMAZ: Claude yalnızca OAuth tokenlarıyla (claude_calistir.sh), Gemini ücretsiz katman, görseller ücretsiz kota.
+on:
+  schedule:
+    - cron: "41 7 * * *"
+  push:
+    branches: [main]
+    paths: [uzun_en/kisa_islem.json]
+  workflow_dispatch:
+    inputs:
+      proje:
+        description: "Proje (boş = Shorts'u olmayan en yeni yüklenmiş video)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: uzun-en-kisa
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  CMODEL: ${{ vars.UZUN_CLAUDE_MODEL }}
+  GMODEL: ${{ vars.UZUN_GEMINI_MODEL }}
+
+jobs:
+  kisa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false   # ajan kendi başına push edemesin (kaydet.sh token'ı kendisi kurar)
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Proje seç
+        env:
+          GIRDI: ${{ github.event.inputs.proje }}
+          OLAY: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          sys.path.insert(0, "uzun_en/araclar")
+          import ortak as O
+          istek = (os.environ.get("GIRDI") or "").strip()
+          if not istek and os.environ["OLAY"] == "push":
+              istek = ((O.json_oku("uzun_en/kisa_islem.json", {}) or {}).get("proje") or "").strip()
+          adaylar = []
+          for slug in O.durum()["videolar"]:
+              y = O.json_oku(os.path.join(O.proje_dir(slug), "yayin.json"), {}) or {}
+              k = O.json_oku(os.path.join(O.proje_dir(slug), "kisa_yayin.json"), {}) or {}
+              if y.get("video_id") and not k.get("video_id") and not (O.proje(slug) or {}).get("kisa_yok"):
+                  adaylar.append((y.get("slot") or y.get("yuklenme") or "", slug))
+          bekleyen = [s for _, s in sorted(adaylar, reverse=True)]
+          slug = istek if istek in bekleyen else ("" if istek else (bekleyen[0] if bekleyen else ""))
+          print(f"Shorts bekleyen: {bekleyen or 'yok'}; istek: {istek or '-'} -> {slug or 'iş yok'}")
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write(f"SLUG={slug}\n")
+          PY
+      - name: YouTube kotası (doluysa render boşuna yapılmaz)
+        if: env.SLUG != ''
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          pip install -q -r requirements.txt numpy
+          set +e; python3 uzun_en/araclar/yukle.py --kota-kontrol; K=$?; set -e
+          if [ "$K" = "3" ]; then echo "SLUG=" >> "$GITHUB_ENV"; elif [ "$K" != "0" ]; then exit "$K"; fi
+      - uses: actions/setup-node@v5
+        if: env.SLUG != ''
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: uzun_en/remotion/package-lock.json
+      - name: Bağımlılıklar
+        if: env.SLUG != ''
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter espeak-ng >/dev/null
+          pip install -q -r requirements.txt numpy piper-tts
+          if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
+            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
+          fi
+          cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
+      - uses: actions/cache@v4
+        if: env.SLUG != ''
+        with:
+          path: |
+            uzun_en/.model
+            ~/.cache/huggingface
+          key: ses-${{ hashFiles('uzun_en/marka.json') }}
+      - name: Girdiler (görsel, ses, dikey görseller, kapak)
+        if: env.SLUG != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          P=uzun_en/projeler/"$SLUG"
+          python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
+          gh release download "uzun-en-$SLUG" -D "$P/cikti/dikey" --clobber -p "dikey_*.jpg" || true
+          [ -f "$P/kapak_yt.jpg" ] || gh release download "uzun-en-$SLUG" -D "$P/cikti" --clobber -p kapak_yt.jpg || true
+          python3 uzun_en/araclar/hazirla.py --proje "$SLUG" --sessiz     # Remotion paketi uzun videonun verisini de ister
+          python3 uzun_en/araclar/kisa.py --proje "$SLUG" --liste
+      - name: Ajanlar (kredi KULLANILMAZ)
+        if: env.SLUG != '' && hashFiles(format('uzun_en/projeler/{0}/kisa.json', env.SLUG)) == ''
+        env:
+          OAUTH: ${{ secrets.CLAUDE_YEDEK2_TOKEN || secrets.CLAUDE_ANA_TOKEN || secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GKEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          C=false; G=false
+          [ -n "$OAUTH" ] && C=true && npm install -g @anthropic-ai/claude-code >/dev/null 2>&1
+          [ -n "$GKEY" ] && G=true && npm install -g @google/gemini-cli >/dev/null 2>&1
+          { echo "CLAUDE_OK=$C"; echo "GEMINI_OK=$G"; echo "SECIM=true"; } >> "$GITHUB_ENV"
+      - name: "Seçim: Claude cümleleri seçer"
+        if: env.SECIM == 'true' && env.CLAUDE_OK == 'true'
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          CLAUDE_ANA: ${{ secrets.CLAUDE_YEDEK2_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK2: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          bash uzun_en/araclar/claude_calistir.sh -p "Read uzun_en/gorev/KISA.md and do that task now. SLUG: $SLUG. Write uzun_en/projeler/$SLUG/kisa.json." \
+            ${CMODEL:+--model "$CMODEL"} --max-turns 40 --allowedTools "Read,Write,Edit,Glob,Grep"
+      - name: Denetim (1)
+        id: k1
+        if: env.SECIM == 'true'
+        run: python3 uzun_en/araclar/kisa.py --proje "$SLUG" --kontrol | tee /tmp/k1.txt && echo "ok=true" >> "$GITHUB_OUTPUT" || echo "ok=false" >> "$GITHUB_OUTPUT"
+      - name: "Seçim: düzeltme turu (Claude)"
+        if: env.SECIM == 'true' && steps.k1.outputs.ok != 'true' && env.CLAUDE_OK == 'true' && hashFiles(format('uzun_en/projeler/{0}/kisa.json', env.SLUG)) != ''
+        continue-on-error: true
+        timeout-minutes: 15
+        env:
+          CLAUDE_ANA: ${{ secrets.CLAUDE_YEDEK2_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK2: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          bash uzun_en/araclar/claude_calistir.sh -p "uzun_en/projeler/$SLUG/kisa.json failed automatic validation (rules: uzun_en/gorev/KISA.md, sentences: uzun_en/projeler/$SLUG/cikti/kisa_liste.md). Fix ONLY these problems with minimal edits: $(grep HATA /tmp/k1.txt)" \
+            ${CMODEL:+--model "$CMODEL"} --max-turns 20 --allowedTools "Read,Write,Edit,Glob,Grep"
+      - name: "Seçim: Gemini yedek (Claude yoksa / kota bittiyse)"
+        if: env.SECIM == 'true' && env.GEMINI_OK == 'true'
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        run: |
+          python3 uzun_en/araclar/kisa.py --proje "$SLUG" --kontrol > /tmp/k2.txt && { echo "seçim geçerli, Gemini gerekmiyor"; exit 0; }
+          mkdir -p .gemini && echo '{"tools":{"exclude":["run_shell_command"]}}' > .gemini/settings.json
+          if [ -f "uzun_en/projeler/$SLUG/kisa.json" ]; then
+            gemini ${GMODEL:+-m "$GMODEL"} -y -p "uzun_en/projeler/$SLUG/kisa.json failed validation (rules: uzun_en/gorev/KISA.md, sentences: uzun_en/projeler/$SLUG/cikti/kisa_liste.md). Fix these problems with minimal edits: $(grep HATA /tmp/k2.txt)"
+          else
+            gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/KISA.md and do that task now. SLUG: $SLUG. Write uzun_en/projeler/$SLUG/kisa.json."
+          fi
+          rm -rf .gemini
+      - name: Denetim (son) ve seçimi kaydet
+        if: env.SLUG != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 uzun_en/araclar/kisa.py --proje "$SLUG" --kontrol
+          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG Shorts seçimi" uzun_en/projeler/"$SLUG"/kisa.json
+      - name: Dikey görseller (NVIDIA, yedek Cloudflare)
+        if: env.SLUG != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          D=uzun_en/projeler/"$SLUG"/cikti/dikey
+          G=$(python3 uzun_en/araclar/kisa.py --proje "$SLUG" --gorseller)
+          echo "dikey görsel gereken sahneler: $G"
+          python3 uzun_en/araclar/gorsel.py --proje "$SLUG" --dikey "$G" --cikti "$D" \
+            || echo "::warning::bazı dikey görseller üretilemedi; o parçalarda yatay görsel kırpılır"
+          ls "$D"/dikey_*.jpg >/dev/null 2>&1 && gh release upload "uzun-en-$SLUG" "$D"/dikey_*.jpg --clobber || true
+      - name: Shorts verisi ve sesi
+        if: env.SLUG != ''
+        run: python3 uzun_en/araclar/kisa.py --proje "$SLUG"
+      - name: Render (Remotion, 1080x1920)
+        if: env.SLUG != ''
+        working-directory: uzun_en/remotion
+        run: |
+          K=../projeler/"$SLUG"/cikti/kisa
+          ./node_modules/.bin/remotion render src/index.ts Kisa out/kisa_sessiz.mp4 --props="$K/kisa_props.json" \
+            --concurrency=$(nproc) --crf=20 --log=warn
+          ffmpeg -v error -y -i out/kisa_sessiz.mp4 -i "$K/kisa_ses.wav" -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 160k \
+            -shortest -movflags +faststart "$K/kisa.mp4"
+      - name: Kalite kontrolü
+        if: env.SLUG != ''
+        run: |
+          V=uzun_en/projeler/"$SLUG"/cikti/kisa/kisa.mp4
+          python3 - "$V" <<'PY'
+          import json, re, subprocess, sys
+          v = sys.argv[1]
+          r = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", v],
+                                        capture_output=True, text=True, check=True).stdout)
+          vs = [s for s in r["streams"] if s["codec_type"] == "video"]
+          aus = [s for s in r["streams"] if s["codec_type"] == "audio"]
+          sure = float(r["format"]["duration"])
+          hata = []
+          if not vs or (vs[0]["width"], vs[0]["height"]) != (1080, 1920):
+              hata.append("görüntü 1080x1920 değil")
+          if not aus:
+              hata.append("ses yok")
+          if not 20 <= sure <= 70:
+              hata.append(f"süre {sure:.1f} sn")
+          ses = subprocess.run(["ffmpeg", "-v", "info", "-i", v, "-af", "volumedetect", "-vn", "-f", "null", "-"],
+                               capture_output=True, text=True).stderr
+          m = re.search(r"mean_volume:\s*(-?[\d.]+)", ses)
+          if not m or float(m.group(1)) < -40:
+              hata.append(f"ses çok kısık ya da sessiz ({m.group(1) if m else '?'} dB)")
+          print(f"Shorts: {sure:.1f} sn, {vs[0]['width']}x{vs[0]['height']}, ortalama ses {m.group(1) if m else '?'} dB")
+          if hata:
+              sys.exit("kalite kontrolü geçmedi: " + "; ".join(hata))
+          PY
+      - name: Arşiv (GitHub sürümü)
+        if: env.SLUG != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "uzun-en-$SLUG" uzun_en/projeler/"$SLUG"/cikti/kisa/kisa.mp4 --clobber
+      - name: YouTube'a zamanlanmış yükleme
+        if: env.SLUG != ''
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 uzun_en/araclar/yukle.py --proje "$SLUG" --kisa
+      - name: Kaydet
+        if: env.SLUG != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 -c "import json;k=json.load(open('uzun_en/projeler/$SLUG/kisa_yayin.json'));print('::notice title=Shorts::', k['url'], 'yayın', k['slot'])"
+          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG Shorts YouTube'a yüklendi" uzun_en/projeler/"$SLUG"/kisa_yayin.json
+      - name: Hata bildirimi
+        if: failure() && env.SLUG != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          T="Shorts hattı: $SLUG başarısız"
+          gh issue list --state open --search "$T in:title" --json number --jq '.[0].number' | grep -q . || \
+            gh issue create --title "$T" --body "Çalıştırma: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          Shorts yüklenmedi. Günlük tarama yeniden dener."
+      - name: Shorts (artifact)
+        if: always() && env.SLUG != ''
+        uses: actions/upload-artifact@v6
+        with:
+          name: shorts-${{ env.SLUG }}
+          path: |
+            uzun_en/projeler/${{ env.SLUG }}/kisa.json
+            uzun_en/projeler/${{ env.SLUG }}/cikti/kisa_liste.md
+          if-no-files-found: ignore
+          retention-days: 14

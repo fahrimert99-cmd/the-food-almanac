@@ -3,6 +3,8 @@
     "1 EGG A DAY",
     "HEART RISK?"
   ],
+  "baslik_yt": "1 Egg a Day: What 32 Years of Data Show",
+  "aciklama": "Harvard researchers followed more than 215,000 people for up to 32 years. Here is what one egg a day did to their heart risk, and what it is usually eaten with.",
   "parcalar": [
     {
       "sahne": 1,
@@ -93,16 +95,6 @@
         3
       ],
       "kaydir": true
-    }
-  ],
-  "cta": [
-    {
-      "dosya": "kisa_cta_1.wav",
-      "metin": "Want the full story, with every study? Watch the full video on our channel."
-    },
-    {
-      "dosya": "kisa_cta_2.wav",
-      "metin": "And subscribe to The Food Almanac for more food science, explained calmly and honestly."
     }
   ]
 }

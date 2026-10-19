@@ -7,6 +7,7 @@
   python3 uzun_en/araclar/yukle.py --kota-kontrol                       # YouTube günlük kotası dolu mu? (dolu: çıkış 3)
   python3 uzun_en/araclar/yukle.py --tamamla                            # yüklenenleri denetle: silinmişse yeniden yükle,
                                                                         # eksik kapak / oynatma listesini tamamla
+  python3 uzun_en/araclar/yukle.py --proje SLUG --kisa [--kuru]         # Shorts'u (cikti/kisa/kisa.mp4) zamanlanmış yükle
 
 Girdi: cikti/video.mp4, cikti/kapak_yt.jpg, cikti/meta.json (meta.py) ve cikti/kalite.json (geçmiş olmalı).
 Aynı video iki kez yüklenmez: projeler/SLUG/yayin.json ya da kanalda aynı başlıklı son yükleme varsa o kullanılır.
@@ -28,6 +29,27 @@ def ayni_baslikli(yt, baslik):
         if it["snippet"]["title"].strip() == baslik.strip():
             return it["snippet"]["resourceId"]["videoId"]
     return None
+
+
+def video_yukle(yt, body, yol):
+    """Sürdürülebilir yükleme (geçici ağ hatasında kaldığı yerden devam eder); video id'sini döndürür."""
+    from googleapiclient.http import MediaFileUpload
+    media = MediaFileUpload(yol, chunksize=16 * 1024 * 1024, resumable=True, mimetype="video/mp4")
+    istek = yt.videos().insert(part="snippet,status", body=body, media_body=media)
+    yanit, hata = None, 0
+    while yanit is None:
+        try:
+            durum, yanit = istek.next_chunk()
+            if durum:
+                O.log(f"   %{int(durum.progress() * 100)}")
+        except Exception as e:                       # geçici ağ hatası: kaldığı yerden devam
+            hata += 1
+            if hata > 6:
+                raise
+            O.log(f"   yükleme hatası ({e}); {5 * hata} sn sonra devam")
+            time.sleep(5 * hata)
+    O.log(f"✓ yüklendi: https://youtu.be/{yanit['id']}")
+    return yanit["id"]
 
 
 def kota_kontrol():
@@ -221,6 +243,7 @@ def tamamla():
                 O.json_yaz(yol, y)
                 return O.log("YouTube kotası dolu — sonraki çalıştırmada tekrar denenecek")
         O.json_yaz(yol, y)
+    kisa_baglanti_guncelle(yt)
     liste_temizle(yt, m)
 
 
@@ -267,6 +290,104 @@ def liste_temizle(yt, m):
         O.log(f"! oynatma listesi temizlenemedi: {str(e)[:160]}")
 
 
+def kisa_slot(slug, simdi):
+    """Shorts'un yayın zamanı: uzun videodan sonraki, uzun video günü olmayan ve başka bir Shorts'a ayrılmamış ilk gün,
+    kanalın yayın saatinde. Uzun videolar Salı/Cuma çıkar; Shorts'lar aradaki günlere yayılır."""
+    yayin = O.marka()["yayin"]
+    sa, dk = map(int, yayin["saat_utc"].split(":"))
+    y = O.json_oku(os.path.join(O.proje_dir(slug), "yayin.json"), {}) or {}
+    alt = simdi + dt.timedelta(hours=3)
+    uzun = y.get("slot") or y.get("yuklenme")
+    if uzun:
+        alt = max(alt, dt.datetime.fromisoformat(uzun.replace("Z", "+00:00")) + dt.timedelta(hours=20))
+    dolu = {(O.json_oku(os.path.join(O.PROJELER, s, "kisa_yayin.json"), {}) or {}).get("slot", "")[:10]
+            for s in os.listdir(O.PROJELER)}
+    g = alt.date()
+    while True:
+        aday = dt.datetime(g.year, g.month, g.day, sa, dk, tzinfo=dt.timezone.utc)
+        if aday >= alt and g.weekday() not in yayin["gunler"] and g.isoformat() not in dolu:
+            return aday
+        g += dt.timedelta(days=1)
+
+
+def kisa_aciklama(slug, uzun_id):
+    import meta as M
+    p, m = O.proje(slug), O.marka()
+    tanim = O.json_oku(os.path.join(O.proje_dir(slug), "kisa.json"), {}) or {}
+    parca = [tanim.get("aciklama") or "", f"Full video: https://youtu.be/{uzun_id}"]
+    if p.get("kaynaklar"):
+        parca.append("SOURCES\n" + "\n".join(f"{i}. {k}" for i, k in enumerate(p["kaynaklar"], 1)))
+    if m.get("aciklama_sonu"):
+        parca.append(m["aciklama_sonu"].strip())
+    parca.append(("#Shorts " + M.hashtag(p.get("etiketler", []), n=2)).strip())
+    return M.temiz("\n\n".join(x for x in parca if x))[:4900]
+
+
+def kisa_yukle(slug, kuru=False):
+    """cikti/kisa/kisa.mp4'ü Shorts olarak zamanlanmış yükler; açıklamada uzun videonun bağlantısı. Bir kez yüklenir
+    (projeler/SLUG/kisa_yayin.json ya da kanalda aynı başlıklı son yükleme)."""
+    import meta as M
+    pdir = O.proje_dir(slug)
+    kyol = os.path.join(pdir, "kisa_yayin.json")
+    if (O.json_oku(kyol, {}) or {}).get("video_id"):
+        return O.log(f"Shorts zaten yüklü: {O.json_oku(kyol)['video_id']}")
+    y = O.json_oku(os.path.join(pdir, "yayin.json"), {}) or {}
+    if not y.get("video_id"):
+        raise SystemExit("uzun video henüz yüklenmemiş — Shorts yüklenmiyor")
+    video = os.path.join(pdir, "cikti", "kisa", "kisa.mp4")
+    if not os.path.exists(video):
+        raise SystemExit("cikti/kisa/kisa.mp4 yok — önce Shorts render edilmeli")
+    p, m = O.proje(slug), O.marka()
+    tanim = O.json_oku(os.path.join(pdir, "kisa.json"), {}) or {}
+    baslik = M.temiz(tanim.get("baslik_yt") or p["baslik"])[:100]
+    if baslik.strip().lower() == str(y.get("baslik") or p["baslik"]).strip().lower():
+        baslik = (baslik[:91] + " #Shorts")       # uzun videoyla aynı başlık olmasın (ayni_baslikli onu bulmasın)
+    simdi = dt.datetime.now(dt.timezone.utc)
+    slot = kisa_slot(slug, simdi).strftime("%Y-%m-%dT%H:%M:%SZ")
+    body = {"snippet": {"title": baslik, "description": kisa_aciklama(slug, y["video_id"]), "tags": M.etiket_listesi(p, m),
+                        "categoryId": m.get("kategori", "27"), "defaultLanguage": m.get("dil", "en"),
+                        "defaultAudioLanguage": m.get("dil", "en")},
+            "status": {"privacyStatus": "private", "publishAt": slot, "selfDeclaredMadeForKids": False,
+                       "containsSyntheticMedia": bool(m.get("sentetik_beyan", True)), "embeddable": True,
+                       "license": "youtube", "publicStatsViewable": True}}
+    O.log(f"Shorts yükleme: '{baslik}' -> zamanlanmış {slot} (uzun video {y['video_id']})")
+    if kuru:
+        print(body["snippet"]["description"])
+        return O.log(f"(kuru çalışma) status: {body['status']}")
+    from googleapiclient.discovery import build
+    import youtube_api as YY
+    yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
+    vid = ayni_baslikli(yt, baslik)
+    if vid and vid != y["video_id"]:
+        O.log(f"kanalda aynı başlıklı video var, yeniden yüklenmiyor: {vid}")
+    else:
+        vid = video_yukle(yt, body, video)
+    O.json_yaz(kyol, {"video_id": vid, "url": f"https://youtube.com/shorts/{vid}", "slot": slot, "baslik": baslik,
+                      "uzun_id": y["video_id"], "yuklenme": simdi.strftime("%Y-%m-%dT%H:%M:%SZ")})
+
+
+def kisa_baglanti_guncelle(yt):
+    """Uzun video yeniden yüklendiyse (yeni id) Shorts açıklamasındaki bağlantıyı yeniler (50 birim)."""
+    for slug in O.durum()["videolar"]:
+        kyol = os.path.join(O.proje_dir(slug), "kisa_yayin.json")
+        k = O.json_oku(kyol, {}) or {}
+        uzun = (O.json_oku(os.path.join(O.proje_dir(slug), "yayin.json"), {}) or {}).get("video_id")
+        if not k.get("video_id") or not uzun or k.get("uzun_id") == uzun:
+            continue
+        try:
+            it = yt.videos().list(part="snippet", id=k["video_id"]).execute().get("items", [])
+            if it:
+                sn = it[0]["snippet"]
+                yeni = {x: sn[x] for x in ("title", "tags", "categoryId", "defaultLanguage", "defaultAudioLanguage") if x in sn}
+                yeni["description"] = kisa_aciklama(slug, uzun)
+                yt.videos().update(part="snippet", body={"id": k["video_id"], "snippet": yeni}).execute()
+                O.log(f"✓ {slug}: Shorts açıklamasındaki uzun video bağlantısı yenilendi ({uzun})")
+            k["uzun_id"] = uzun
+            O.json_yaz(kyol, k)
+        except Exception as e:
+            O.log(f"! {slug}: Shorts bağlantısı yenilenemedi ({str(e)[:120]})")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
@@ -274,11 +395,14 @@ def main():
     ap.add_argument("--kuru", action="store_true")
     ap.add_argument("--kota-kontrol", action="store_true")
     ap.add_argument("--tamamla", action="store_true", help="eksik kalan kapak / oynatma listesi")
+    ap.add_argument("--kisa", action="store_true", help="Shorts'u (cikti/kisa/kisa.mp4) zamanlanmış yükle")
     a = ap.parse_args()
     if a.kota_kontrol:
         return kota_kontrol()
     if a.tamamla:
         return tamamla()
+    if a.kisa:
+        return kisa_yukle(O.aktif_slug(a.proje), a.kuru)
     if not a.slot:
         ap.error("--slot gerekli")
     slug = O.aktif_slug(a.proje)
@@ -310,30 +434,13 @@ def main():
         return O.log(f"(kuru çalışma) etiketler: {meta['etiketler']}\nstatus: {status}")
 
     from googleapiclient.discovery import build
-    from googleapiclient.http import MediaFileUpload
     import youtube_api as YY
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
     vid = ayni_baslikli(yt, meta["baslik"])
     if vid:
         O.log(f"kanalda aynı başlıklı video var, yeniden yüklenmiyor: {vid}")
     else:
-        media = MediaFileUpload(os.path.join(cikti, "video.mp4"), chunksize=16 * 1024 * 1024, resumable=True,
-                                mimetype="video/mp4")
-        istek = yt.videos().insert(part="snippet,status", body=body, media_body=media)
-        yanit, hata = None, 0
-        while yanit is None:
-            try:
-                durum, yanit = istek.next_chunk()
-                if durum:
-                    O.log(f"   %{int(durum.progress() * 100)}")
-            except Exception as e:                       # geçici ağ hatası: kaldığı yerden devam
-                hata += 1
-                if hata > 6:
-                    raise
-                O.log(f"   yükleme hatası ({e}); {5 * hata} sn sonra devam")
-                time.sleep(5 * hata)
-        vid = yanit["id"]
-        O.log(f"✓ yüklendi: https://youtu.be/{vid}")
+        vid = video_yukle(yt, body, os.path.join(cikti, "video.mp4"))
     yayin = {"video_id": vid, "url": f"https://youtu.be/{vid}", "slot": a.slot if zamanli else None,
              "baslik": meta["baslik"], "yuklenme": simdi.strftime("%Y-%m-%dT%H:%M:%SZ")}
     O.json_yaz(yayin_yol, yayin)

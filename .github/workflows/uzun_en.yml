@@ -2,6 +2,7 @@ name: Uzun Video EN (The Food Almanac, otonom)
 # Haftada 2 İngilizce uzun video (Salı + Cuma 14:00 UTC = 17:00 TR), tamamen otomatik:
 #   plan -> [konu] -> senaryo + bağımsız doğruluk denetimi -> görseller (NVIDIA) + ses (Piper)
 #        -> sahne tasarımı (paralel ajanlar) -> render (Remotion) -> kalite kontrol -> zamanlanmış yükleme
+#        -> Shorts (ayrı iş akışı: uzun_en_kisa.yml)
 # Her 3 saatte bir plan.py ne yapılacağına karar verir; çoğu çalıştırma ~20 sn'de "iş yok" der.
 # Kesilen her aşama (kota, hata) bir sonraki çalıştırmada kaldığı yerden devam eder. Slota az kalırsa
 # tasarlanamayan sahneler otomatik şablonla çizilir; video yine zamanında yayınlanır.
@@ -31,6 +32,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write   # yükleme sonrası Shorts iş akışını başlatmak için (uzun_en_kisa.yml)
 
 concurrency:
   group: uzun-en
@@ -577,6 +579,13 @@ jobs:
           # ilk kurulum tohumu artık sürümde: depodan kaldır
           if [ -d uzun_en/projeler/"$SLUG"/tohum ]; then git rm -rq uzun_en/projeler/"$SLUG"/tohum; fi
           bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG YouTube'a yüklendi (yayın $SLOT)" uzun_en
+      - name: Shorts'u başlat (uzun_en_kisa.yml)
+        if: env.DEVAM == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run uzun_en_kisa.yml --repo "$GITHUB_REPOSITORY" --ref main -f proje="$SLUG" \
+            || echo "::warning::Shorts iş akışı başlatılamadı; günlük tarama yakalar"
       - name: Hata bildirimi
         if: failure() && env.DEVAM == 'true'
         env:
