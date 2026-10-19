@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "frozen-vs-fresh-vegetables",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -24,6 +24,12 @@
       "asama": "yuklendi",
       "baslangic": "2026-10-16T13:53:22Z",
       "sahne_deneme": 1
+    },
+    "frozen-vs-fresh-vegetables": {
+      "slot": "2026-10-23T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-10-19T05:06:33Z",
+      "sahne_deneme": 0
     }
   }
 }
