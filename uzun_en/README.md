@@ -76,6 +76,21 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   | `UZUN_CLAUDE_MODEL` | `opus` ya da `sonnet`. Sonnet kotayı daha az tüketir. |
   | `UZUN_SAHNE_GRUP` | Paralel sahne ajanı sayısı (varsayılan 8). |
 
+## Bekleyen kararlar
+
+- **Anlatıcı sesi (19 Ekim 2026):** Kanal sahibinin kendi ses klonu (Chatterbox Turbo, `klon` motoru) hazır ve
+  denendi. Yumurta videosunun Shorts ve uzun önizlemesi üretildi (`ses_klon_video.yml`), kanal sahibi beğendi.
+  - **Karar:** Ses ŞİMDİLİK DEĞİŞMEYECEK. Önce Michael (Kokoro) sesli videoların verilerine bakılacak:
+    - ilk 30 saniyede kalan izleyici,
+    - ortalama izlenme süresi,
+    - Shorts'ta kaydırmadan izleyenlerin oranı.
+  - Geçişe kanal sahibiyle birlikte karar verilecek. O zamana kadar `marka.json` → `ses_motoru: kokoro` kalır.
+  - Hiçbir oturum ya da ajan sesi kendi başına değiştirmez.
+  - Geçiş yapılırsa:
+    - yayınlanmış projeler `proje.json`'da `ses_motoru: kokoro` ile sabitlenir;
+    - üretim işlerine ses örneğinin çözülmesi ve `chatterbox-tts` kurulumu eklenir (`ses_klon.yml`'deki adımlar).
+  - Ses örneği yalnızca şifreli durur: `assets/ses/referans.enc`, `araclar/sifre.sh`.
+
 ## Dosyalar
 
 | Yol | Ne |
