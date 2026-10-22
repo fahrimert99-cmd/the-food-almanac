@@ -49,9 +49,13 @@ jobs:
       - name: Sıradaki Reels
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 uzun_en/araclar/reels.py --dizin /tmp/medya
+        run: |
+          ozet() { (cd /tmp/medya && find . -type f ! -path "./.git/*" -exec md5sum {} + | sort | md5sum); }
+          once=$(ozet)
+          python3 uzun_en/araclar/reels.py --dizin /tmp/medya
+          [ "$once" = "$(ozet)" ] || echo "MEDYA_DEGISTI=1" >> "$GITHUB_ENV"
       - name: Medya dalını yayınla
-        if: env.REELS != ''
+        if: env.MEDYA_DEGISTI == '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -60,9 +64,9 @@ jobs:
           git config user.name "uzun-en-bot"
           git config user.email "uzun-en-bot@users.noreply.github.com"
           printf '# reels-medya\nInstagram Reels kuyruğu: .github/workflows/reels.yml üretir; elle düzenlemeyin.\n' > README.md
-          git add -A && git commit -qm "Reels: $REELS"
+          git add -A && git commit -qm "Reels: ${REELS:-medya güncellendi}"
           git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:reels-medya
-          echo "::notice title=Reels::$REELS kuyruğa girdi (Make 14:00 UTC'de Instagram'a gönderir)"
+          [ -z "${REELS:-}" ] || echo "::notice title=Reels::$REELS kuyruğa girdi (Make 14:00 UTC'de Instagram, Facebook ve Pinterest'e gönderir)"
       - name: Kaydet
         if: env.REELS != ''
         env:
