@@ -64,7 +64,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   sıradaki videodur.
 - **Hemen çalıştırmak:** `uzun_en/calistir.json` içindeki `tetik` sayısını artırın, ya da Actions → Run workflow.
 - **Önde üretim:** Hat boşta kaldığında sıradaki slotların videolarını önceden üretir ve YouTube'a zamanlanmış yükler.
-  - En çok 4 video önde durur (yaklaşık 2 hafta). Sayıyı `marka.json` → `onde_uretim_azami` değiştirir.
+  - En çok 8 video önde durur (yaklaşık 4 hafta; hafta sonu boşta kalan kotalar da kullanılır). Sayıyı `marka.json` → `onde_uretim_azami` değiştirir.
   - Slota 72 saatten fazla varken iş yalnızca Claude kotasıyla yürür; kota bitince yedek modele geçilmez, sonraki
     çalıştırma (saatte bir) kaldığı yerden devam eder.
   - Slot yaklaşınca (72 saat) normal kurallar geçerlidir: gerekirse Gemini ve şablon sahneler devreye girer.
