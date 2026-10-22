@@ -265,15 +265,20 @@ jobs:
         run: |
           python3 -c "import json;k=json.load(open('uzun_en/projeler/$SLUG/${AD}_yayin.json'));print('::notice title=Shorts $KNO::', k['url'], 'yayın', k['slot'])"
           bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG Shorts $KNO YouTube'a yüklendi" uzun_en/projeler/"$SLUG"/"$AD"_yayin.json
-      - name: Aynı videonun sıradaki Shorts'u
+      - name: Sıradaki Shorts (aynı videonunki, yoksa Shorts'u eksik bir sonraki video)
         if: env.SLUG != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # Hat boş beklemesin: başarıyla biten her Shorts'tan sonra sıradaki iş hemen başlar. Proje verilmeyen
+          # çalıştırma Shorts'u eksik en yeni videoyu seçer; eksik kalmadıysa hiçbir şey yapmadan biter (zincir durur).
           S=$(python3 -c "import json;print(json.load(open('uzun_en/marka.json')).get('kisa_sayisi', 2))")
           if [ "$KNO" -lt "$S" ]; then
             gh workflow run uzun_en_kisa.yml --repo "$GITHUB_REPOSITORY" --ref main -f proje="$SLUG" -f sira=$((KNO + 1)) \
               || echo "::warning::sıradaki Shorts başlatılamadı; günlük tarama yakalar"
+          else
+            gh workflow run uzun_en_kisa.yml --repo "$GITHUB_REPOSITORY" --ref main \
+              || echo "::warning::Shorts taraması başlatılamadı; günlük tarama yakalar"
           fi
       - name: Hata bildirimi
         if: failure() && env.SLUG != ''

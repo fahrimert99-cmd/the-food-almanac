@@ -591,6 +591,14 @@ jobs:
         run: |
           gh workflow run uzun_en_kisa.yml --repo "$GITHUB_REPOSITORY" --ref main -f proje="$SLUG" \
             || echo "::warning::Shorts iş akışı başlatılamadı; günlük tarama yakalar"
+      - name: Sıradaki uzun video (önde üretim; 3 saatlik zamanlayıcıyı beklemeden)
+        if: env.DEVAM == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # plan.py iş yoksa (önde yeterli video var / boş slot yok) hemen biter; zincir orada durur.
+          gh workflow run uzun_en.yml --repo "$GITHUB_REPOSITORY" --ref main \
+            || echo "::warning::sıradaki çalıştırma başlatılamadı; 3 saatlik zamanlayıcı yakalar"
       - name: Hata bildirimi
         if: failure() && env.DEVAM == 'true'
         env:

@@ -68,6 +68,9 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   - Slota 72 saatten fazla varken iş yalnızca Claude kotasıyla yürür; kota bitince yedek modele geçilmez, sonraki
     çalıştırma (3 saatte bir) kaldığı yerden devam eder.
   - Slot yaklaşınca (72 saat) normal kurallar geçerlidir: gerekirse Gemini ve şablon sahneler devreye girer.
+  - Hat boş beklemez: uzun video yüklenince plan hemen yeniden çalışır. Her Shorts başarıyla bitince de sıradaki
+    Shorts başlar: önce aynı videonunki, sonra Shorts'u eksik bir sonraki video. İş kalmayınca zincir kendiliğinden
+    durur.
 - **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**.
 - **Durum:** `uzun_en/durum.json` her videonun aşamasını, slotunu ve YouTube kimliğini tutar
   (`projeler/<slug>/yayin.json`).
