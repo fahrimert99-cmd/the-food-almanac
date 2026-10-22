@@ -73,3 +73,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           bash uzun_en/araclar/kaydet.sh "uzun_en: Reels kuyruğu $REELS" uzun_en/reels.json
+      - name: TikTok (gizli paylaşım; kanal sahibi uygulamadan herkese açar)
+        if: env.REELS != ''
+        continue-on-error: true      # TikTok sorunu Reels kuyruğunu (Instagram/Facebook/Pinterest/X) durdurmasın
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KEK: ${{ secrets.YT_CLIENT_SECRET }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+        run: |
+          [ -n "$TIKTOK_CLIENT_KEY" ] || { echo "TikTok gizli ayarları yok; atlandı"; exit 0; }
+          gh release view tiktok >/dev/null 2>&1 || { echo "TikTok henüz bağlanmadı (tiktok_baglan.yml); atlandı"; exit 0; }
+          python3 uzun_en/araclar/tiktok.py --gonder "$REELS" --dizin /tmp/medya
