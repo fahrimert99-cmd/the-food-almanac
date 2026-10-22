@@ -11,7 +11,7 @@ name: Uzun Video EN (The Food Almanac, otonom)
 #   Claude -> önce CLAUDE_YEDEK2_TOKEN, sonra CLAUDE_ANA_TOKEN, sonra CLAUDE_CODE_OAUTH_TOKEN — uzun_en/araclar/claude_calistir.sh.
 #             İkisi de OAuth token (claude setup-token, abonelik kotası). API anahtarı (sk-ant-api...) verilse bile kullanılmaz.
 #   Gemini -> GEMINI_API_KEY ücretsiz katman (faturalandırma kapalı proje). Claude kotası biterse devralır.
-#   Görsel -> NVIDIA_API_KEY (ücretsiz); NVIDIA çökerse Cloudflare Workers AI FLUX (CLOUDFLARE_ACCOUNT_ID/API_TOKEN, günlük ücretsiz kota). Ses -> Piper (yerel, açık kaynak). Müzik -> kodla üretilir.
+#   Görsel -> NVIDIA_API_KEY (ücretsiz); NVIDIA çökerse Cloudflare Workers AI FLUX (CLOUDFLARE_ACCOUNT_ID/API_TOKEN, kota bitince ikinci hesap CLOUDFLARE_ACCOUNT_ID_2/API_TOKEN_2; günlük ücretsiz kota). Ses -> Piper (yerel, açık kaynak). Müzik -> kodla üretilir.
 # Ayarlar (Settings > Variables, isteğe bağlı): UZUN_CLAUDE_MODEL (ör. opus / sonnet; boş = CLI varsayılanı),
 #   UZUN_GEMINI_MODEL, UZUN_SAHNE_GRUP (paralel sahne ajanı sayısı, varsayılan 8).
 # Durdurmak: Actions > bu iş akışı > "..." > Disable workflow.
@@ -313,6 +313,8 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID_2: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_2 }}
+          CLOUDFLARE_API_TOKEN_2: ${{ secrets.CLOUDFLARE_API_TOKEN_2 }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
@@ -415,6 +417,8 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID_2: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_2 }}
+          CLOUDFLARE_API_TOKEN_2: ${{ secrets.CLOUDFLARE_API_TOKEN_2 }}
         run: |
           bash uzun_en/araclar/claude_calistir.sh -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: $SAHNELER. Your group number (for the report file name): $GRUP." \
             ${CMODEL:+--model "$CMODEL"} --max-turns 600 --allowedTools "Bash,Read,Write,Edit,Glob,Grep"
@@ -440,6 +444,8 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID_2: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_2 }}
+          CLOUDFLARE_API_TOKEN_2: ${{ secrets.CLOUDFLARE_API_TOKEN_2 }}
         run: |
           gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: ${{ steps.kalan.outputs.kalan }}. Your group number: $GRUP."
       - name: Doğrula ve kaydet (tip hatalı sahne kaydedilmez)

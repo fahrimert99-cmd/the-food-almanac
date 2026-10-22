@@ -35,7 +35,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 |---|---|
 | Claude | Önce `CLAUDE_ANA_TOKEN`, kota/yetki hatasında `CLAUDE_CODE_OAUTH_TOKEN` (yedek); `araclar/claude_calistir.sh`. İkisi de abonelik kotası; `sk-ant-api...` API anahtarları kredi harcamamak için atlanır. |
 | Gemini | `GEMINI_API_KEY` ücretsiz katman (faturalandırma kapalı). Claude kotası bitince devralır. |
-| Görsel | NVIDIA ücretsiz API; çökerse Cloudflare Workers AI FLUX (günlük ücretsiz kota) |
+| Görsel | NVIDIA ücretsiz API; çökerse Cloudflare Workers AI FLUX (günlük ücretsiz kota; ilk hesabın kotası bitince ikinci ücretsiz hesap `CLOUDFLARE_ACCOUNT_ID_2`/`CLOUDFLARE_API_TOKEN_2`) |
 | Ses | Kokoro "Michael" (yerel, açık kaynak; ilk iki video Piper ile) |
 | Müzik | Kodla üretilir |
 | YouTube | Ücretsiz Data API kotası |

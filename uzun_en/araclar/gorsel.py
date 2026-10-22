@@ -97,7 +97,7 @@ def _cloudflare(prompt, cikti, tohum=0, w=1344, h=768):
     for pr in (prompt, _guvenli_prompt(prompt)):
         kaynak = CF.uret(pr, cikti, tohum, w=w, h=h)
         if not kaynak:
-            if all(m in CF._KAPALI for m in CF.MODELLER):
+            if CF.tukendi():
                 _kapat("cloudflare", "günlük kota bitti ya da yetki yok")
             return None
         if not _bos_mu(cikti):
@@ -286,8 +286,8 @@ def uret(prompt, hedef, min_puan=-1, tohum=0, sira=None):
 
 
 def _cf_var():
-    return bool(re.sub(r"\s", "", os.environ.get("CLOUDFLARE_ACCOUNT_ID") or "")
-                and re.sub(r"\s", "", os.environ.get("CLOUDFLARE_API_TOKEN") or ""))
+    return any(re.sub(r"\s", "", os.environ.get(f"CLOUDFLARE_ACCOUNT_ID{ek}") or "")
+               and re.sub(r"\s", "", os.environ.get(f"CLOUDFLARE_API_TOKEN{ek}") or "") for ek in ("", "_2", "_3"))
 
 
 class Kayit:
