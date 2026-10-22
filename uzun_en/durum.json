@@ -1,5 +1,5 @@
 {
-  "aktif": "fermented-foods-gut",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -45,7 +45,7 @@
     },
     "fermented-foods-gut": {
       "slot": "2026-11-03T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-22T14:31:22Z",
       "sahne_deneme": 0
     }
