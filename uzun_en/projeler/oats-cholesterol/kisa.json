@@ -1,0 +1,17 @@
+{
+  "baslik": ["OATS VS", "CHOLESTEROL?"],
+  "baslik_yt": "Do Oats Really Lower Cholesterol? 28 Trials",
+  "aciklama": "Pooled analyses of randomized trials found that about three grams of oat fiber a day lowered LDL cholesterol. Here is how big that effect is, and what the studies cannot tell us.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1],
+     "baslik": {"satirlar": ["28 TRIALS"], "vurgu": "-10", "not": "mg/dL LDL, 3 g oat fiber"},
+     "etiket": "Whitehead et al. · Am J Clin Nutr · 2014"},
+    {"sahne": 2, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 6, "cumleler": [0, 1]},
+    {"sahne": 18, "cumleler": [0]},
+    {"sahne": 25, "cumleler": [0], "baslik": {"satirlar": ["BLOOD TEST,", "NOT HEART"]}},
+    {"sahne": 25, "cumleler": [2], "gorsel": 25, "baslik": null},
+    {"sahne": 54, "cumleler": [0], "baslik": {"satirlar": ["PLAIN OATS,", "DAILY"]}}
+  ]
+}
