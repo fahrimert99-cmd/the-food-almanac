@@ -1,11 +1,11 @@
 name: ModelArk Seedance Test
-
 on:
   workflow_dispatch:
-
+  push:
+    paths:
+      - '.github/workflows/modelark-test.yml'
 permissions:
   contents: read
-
 jobs:
   test:
     runs-on: ubuntu-24.04
