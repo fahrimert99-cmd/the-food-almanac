@@ -1,0 +1,15 @@
+{
+  "baslik": ["A SECOND DOOR", "FOR SUGAR?"],
+  "baslik_yt": "How Walking Moves Sugar Into Your Muscles",
+  "aciklama": "Insulin is one key that lets glucose into muscle cells. Muscle contraction is a second, separate one. Here is why a walk may help, and what it does not prove.",
+  "parcalar": [
+    {"sahne": 25, "cumleler": [0], "gorsel": 10, "baslik": null, "etiket": null},
+    {"sahne": 26, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 26, "cumleler": [1]},
+    {"sahne": 27, "cumleler": [0], "baslik": {"satirlar": ["FIRST KEY:", "INSULIN"]}, "etiket": null},
+    {"sahne": 28, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 28, "cumleler": [1]},
+    {"sahne": 29, "cumleler": [0], "baslik": {"satirlar": ["TYPE 2", "DIABETES"]}, "etiket": null},
+    {"sahne": 48, "cumleler": [2], "baslik": {"satirlar": ["SOME MOVEMENT", "BEATS NONE"]}, "etiket": null}
+  ]
+}
