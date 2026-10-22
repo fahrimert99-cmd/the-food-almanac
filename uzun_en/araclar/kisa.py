@@ -39,6 +39,7 @@ CTA_TAHMIN = 10.0  # seslendirilmemiş kapanış çağrısının tahmini süresi
 ICERIK = (25.0, 52.0)   # anlatım süresi (ilk cümlenin başından son cümlenin sonuna), sn
 TOPLAM_AZAMI = 65.0     # kapanış dahil
 PARCA_AZAMI = 9.0       # birden çok cümleli bir parçanın süresi (tek görsel çok uzun kalmasın)
+PARCA_PAYI = 0.4        # ses ölçümündeki küçük sapmalar (9.0x sn) seçimi düşürmesin
 SATIR_AZAMI = 14        # kanca ve parça başlığı satırı (karakter)
 
 
@@ -264,7 +265,7 @@ def kontrol(slug, no=1):
         if not isinstance(gn, int) or not (sahne_p.get(gn) or {}).get("gorsel"):
             hata.append(f"{pa}: görsel sahnesi {gn} yok ya da görsel tarifi yok")
         sure = sum(z["cumleler"][k]["sure"] for k in ci) + ARA * (len(ci) - 1)
-        if len(ci) > 1 and sure > PARCA_AZAMI:
+        if len(ci) > 1 and sure > PARCA_AZAMI + PARCA_PAYI:
             hata.append(f"{pa}: {sure:.1f} sn tek görselde (en çok {PARCA_AZAMI:.0f} sn); cümleleri ayrı parçalara bölün")
         if "baslik" in p and p["baslik"] is not None:
             if not isinstance(p["baslik"], dict):
