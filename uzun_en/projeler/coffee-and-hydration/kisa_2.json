@@ -1,0 +1,14 @@
+{
+  "baslik": ["HOW MUCH", "CAFFEINE?"],
+  "baslik_yt": "How Much Caffeine Is Safe? FDA and EFSA Limits",
+  "aciklama": "Two major agencies have given a daily caffeine limit for most healthy adults. Here is the number, the two cautions, and what counts toward it.",
+  "parcalar": [
+    {"sahne": 39, "cumleler": [0], "gorsel": 43, "baslik": null, "etiket": null},
+    {"sahne": 40, "cumleler": [0], "baslik": {"satirlar": ["400 MG", "A DAY"], "vurgu": "400 MG", "not": "most adults, FDA"}, "etiket": "FDA · Spilling the Beans · 2024"},
+    {"sahne": 40, "cumleler": [1], "baslik": null},
+    {"sahne": 41, "cumleler": [0]},
+    {"sahne": 42, "cumleler": [1]},
+    {"sahne": 42, "cumleler": [2], "gorsel": 50, "baslik": {"satirlar": ["PREGNANCY"], "vurgu": "200 MG", "not": "daily limit, all sources"}},
+    {"sahne": 48, "cumleler": [1, 2], "baslik": {"satirlar": ["ALL SOURCES", "COUNT"]}}
+  ]
+}
