@@ -1,0 +1,71 @@
+name: Instagram Reels kuyruğu (The Food Almanac)
+# YouTube'da yayınlanmış Shorts'ları günde en çok bir tane Instagram Reels kuyruğuna koyar (uzun_en/araclar/reels.py).
+# Video Instagram koşullarına göre yeniden kodlanıp "reels-medya" dalına (tek commit, eski videolar silinir) ve
+# reels.xml beslemesine yazılır. Yayını Make yapar: "Food Almanac – Instagram Reels" senaryosu beslemeyi her gün 14:00 UTC'de
+# izler, yeni öğeyi Instagram'a Reels olarak gönderir. Kayıt: uzun_en/reels.json (main).
+# Tetik: her gün 12:23 UTC (Shorts'un YouTube yayınından önce), uzun_en/reels_islem.json main'e gelince ya da elle.
+# KREDİ HARCANMAZ: yalnızca ffmpeg ve GitHub.
+on:
+  schedule:
+    - cron: "23 12 * * *"
+  push:
+    branches: [main]
+    paths: [uzun_en/reels_islem.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reels
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  reels:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Araçlar
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Medya dalı
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/medya
+          if git ls-remote --exit-code --heads origin reels-medya >/dev/null; then
+            git fetch -q --depth 1 origin reels-medya
+            git archive FETCH_HEAD | tar -x -C /tmp/medya
+          fi
+          ls -la /tmp/medya
+      - name: Sıradaki Reels
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 uzun_en/araclar/reels.py --dizin /tmp/medya
+      - name: Medya dalını yayınla
+        if: env.REELS != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd /tmp/medya
+          git init -q -b reels-medya
+          git config user.name "uzun-en-bot"
+          git config user.email "uzun-en-bot@users.noreply.github.com"
+          printf '# reels-medya\nInstagram Reels kuyruğu: .github/workflows/reels.yml üretir; elle düzenlemeyin.\n' > README.md
+          git add -A && git commit -qm "Reels: $REELS"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:reels-medya
+          echo "::notice title=Reels::$REELS kuyruğa girdi (Make 14:00 UTC'de Instagram'a gönderir)"
+      - name: Kaydet
+        if: env.REELS != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash uzun_en/araclar/kaydet.sh "uzun_en: Reels kuyruğu $REELS" uzun_en/reels.json
