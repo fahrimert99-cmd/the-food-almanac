@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "coffee-and-hydration",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -35,6 +35,12 @@
       "slot": "2026-10-27T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-10-22T08:09:28Z",
+      "sahne_deneme": 0
+    },
+    "coffee-and-hydration": {
+      "slot": "2026-10-30T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-10-22T10:10:40Z",
       "sahne_deneme": 0
     }
   }
