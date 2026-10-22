@@ -8,8 +8,9 @@
 Seçim: kisa*_yayin.json'u olan, YouTube yayın saati (slot) bugün ya da daha önce olan, henüz kuyruğa girmemiş en eski
 Shorts. O gün (UTC) zaten bir Reels eklendiyse hiçbiri. Video GitHub sürümünden (uzun-en-SLUG/kisa*.mp4) indirilip
 Instagram koşullarına göre yeniden kodlanır (H.264 ≤ 4,5 Mbps, kapalı GOP, AAC 128k 48 kHz, faststart) ve MEDYA/SLUG-N.mp4
-olarak yazılır. MEDYA/reels.xml (RSS) yeniden üretilir: Make senaryosu ("Food Almanac – Instagram Reels") bu beslemeyi
-izler, yeni öğenin bağlantısındaki videoyu açıklamasıyla Reels olarak yayınlar. MEDYA, depodaki "reels-medya" dalıdır
+olarak yazılır; yanına kapak karesi (SLUG-N.jpg, Pinterest video pini için) konur. MEDYA/reels.xml (RSS) yeniden
+üretilir: Make senaryosu ("Food Almanac – Instagram + Facebook Reels") bu beslemeyi izler, yeni öğenin bağlantısındaki
+videoyu açıklamasıyla Instagram'a, Facebook Sayfasına ve Pinterest'e gönderir (<source url> = uzun videonun bağlantısı). MEDYA, depodaki "reels-medya" dalıdır
 (raw.githubusercontent.com doğrudan 200 döner; sürüm bağlantıları yönlendirme yaptığından Instagram onları indiremeyebilir).
 Kuyruk kaydı: uzun_en/reels.json.
 """
@@ -88,6 +89,22 @@ def kodla(girdi, cikti):
                     "-movflags", "+faststart", "-map_metadata", "-1", cikti], check=True)
 
 
+def kapak(dizin, dosya):
+    """Videonun ilk karelerinden (altyazı başlamadan) dikey kapak karesi (aynı ad, .jpg); varsa dokunmaz."""
+    jpg = os.path.join(dizin, dosya[:-4] + ".jpg")
+    if os.path.exists(os.path.join(dizin, dosya)) and not os.path.exists(jpg):
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", "0.3", "-i", os.path.join(dizin, dosya), "-frames:v", "1",
+                        "-vf", "scale=1000:-2", "-q:v", "3", jpg], check=True)
+
+
+def uzun_url(r):
+    """Shorts'un ait olduğu uzun videonun bağlantısı (kayıtta yoksa kisa*_yayin.json'dan)."""
+    if r.get("uzun_url"):
+        return r["uzun_url"]
+    y = O.json_oku(os.path.join(O.proje_dir(r["proje"]), f"{ad(r['no'])}_yayin.json"), {}) or {}
+    return f"https://youtu.be/{y['uzun_id']}" if y.get("uzun_id") else "https://www.youtube.com/@FoodAlmanacTV"
+
+
 def besleme(dizin, k):
     m = O.marka()
     ogeler = []
@@ -102,6 +119,7 @@ def besleme(dizin, k):
             f"    <pubDate>{email.utils.format_datetime(tarih(r['eklenme']))}</pubDate>\n"
             f"    <description><![CDATA[{r['aciklama'].replace(']]>', ']] >')}]]></description>\n"
             f"    <enclosure url=\"{escape(r['video_url'])}\" type=\"video/mp4\" length=\"{r['boyut']}\"/>\n"
+            f"    <source url=\"{escape(uzun_url(r))}\">{escape(m.get('ad', 'The Food Almanac'))} on YouTube</source>\n"
             "  </item>")
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n'
            f"  <title>{escape(m.get('ad', 'The Food Almanac'))} – Instagram Reels</title>\n"
@@ -113,9 +131,9 @@ def besleme(dizin, k):
 
 
 def temizle(dizin, k, simdi):
-    tut = {r["dosya"] for r in k["reels"] if simdi - tarih(r["eklenme"]) < dt.timedelta(days=SAKLA_GUN)}
-    for yol in glob.glob(os.path.join(dizin, "*.mp4")):
-        if os.path.basename(yol) not in tut:
+    tut = {r["dosya"][:-4] for r in k["reels"] if simdi - tarih(r["eklenme"]) < dt.timedelta(days=SAKLA_GUN)}
+    for yol in glob.glob(os.path.join(dizin, "*.mp4")) + glob.glob(os.path.join(dizin, "*.jpg")):
+        if os.path.basename(yol)[:-4] not in tut:
             os.remove(yol)
 
 
@@ -142,6 +160,7 @@ def gun(dizin, kuru=False, simdi=None):
         k["reels"].append({"proje": slug, "no": no, "yt_id": y["video_id"], "guid": f"{slug}-{no}",
                            "baslik": tanim.get("baslik_yt") or O.proje(slug)["baslik"],
                            "aciklama": aciklama(slug, no), "dosya": dosya,
+                           "uzun_url": f"https://youtu.be/{y['uzun_id']}" if y.get("uzun_id") else "",
                            "video_url": f"https://raw.githubusercontent.com/{depo()}/{DAL}/{dosya}",
                            "boyut": os.path.getsize(os.path.join(dizin, dosya)),
                            "eklenme": simdi.strftime("%Y-%m-%dT%H:%M:%SZ")})
@@ -152,6 +171,8 @@ def gun(dizin, kuru=False, simdi=None):
                 f.write(f"REELS={slug}-{no}\n")
     if not kuru:
         temizle(dizin, k, simdi)
+        for r in k["reels"]:
+            kapak(dizin, r["dosya"])
         besleme(dizin, k)
     return s
 

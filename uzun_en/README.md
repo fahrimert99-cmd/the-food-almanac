@@ -75,8 +75,11 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
     - Videoyu Instagram koşullarına göre yeniden kodlar.
     - Videoyu `reels-medya` dalına ve `reels.xml` beslemesine koyar.
     - Kaydı `uzun_en/reels.json` dosyasına yazar.
-  - **Yayın:** Make senaryosu "Food Almanac – Instagram Reels" beslemeyi her gün 14:00 UTC'de okur ve yeni öğeyi
-    yayınlar (Instagram for Business → Create a reel post).
+  - **Yayın:** Make senaryosu "Food Almanac – Instagram + Facebook Reels" beslemeyi her gün 14:00 UTC'de okur.
+    Yeni öğeyi sırayla şuralara gönderir:
+    - Instagram @foodalmanactv (Create a reel post),
+    - Facebook Sayfası FoodAlmanactv (Publish a Reel),
+    - Pinterest (video pin; kapak karesi `SLUG-N.jpg`, bağlantı uzun video).
   - **Hemen kuyruğa almak:** `reels_islem.json` içindeki sayıyı artırın. Günde birden fazla Reels eklenmez.
 - **Ayarlar** (Settings → Variables, isteğe bağlı):
 
