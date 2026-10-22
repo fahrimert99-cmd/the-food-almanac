@@ -1,0 +1,18 @@
+{
+  "baslik": ["DOES COFFEE", "DEHYDRATE YOU?"],
+  "baslik_yt": "Does Coffee Really Dehydrate You? The Trial Data",
+  "aciklama": "A trial of 50 daily coffee drinkers compared four servings of coffee a day with water. Here is what total body water showed, and what the studies can't tell us.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 6, "cumleler": [0, 1], "baslik": {"satirlar": ["CAFFEINE:", "MILD DIURETIC"]}, "etiket": null},
+    {"sahne": 1, "cumleler": [1], "gorsel": 14,
+     "baslik": {"satirlar": ["4 CUPS A DAY,", "VS WATER"], "vurgu": "50 MEN", "not": "daily coffee drinkers"},
+     "etiket": "Killer et al. · PLoS One · 2014"},
+    {"sahne": 2, "cumleler": [0]},
+    {"sahne": 32, "cumleler": [1]},
+    {"sahne": 32, "cumleler": [2], "gorsel": 9, "baslik": null},
+    {"sahne": 34, "cumleler": [0], "baslik": {"satirlar": ["MEN ONLY,", "SHORT TRIALS"]}, "etiket": null},
+    {"sahne": 45, "cumleler": [1], "baslik": {"satirlar": ["COUNT IT", "AS FLUID"]}, "etiket": null},
+    {"sahne": 46, "cumleler": [1], "baslik": null, "etiket": null}
+  ]
+}
