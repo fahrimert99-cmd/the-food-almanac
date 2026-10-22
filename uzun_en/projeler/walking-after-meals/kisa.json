@@ -1,0 +1,13 @@
+{
+  "baslik": ["10-MIN WALK", "AFTER DINNER?"],
+  "baslik_yt": "Does a Short Walk After Dinner Lower Blood Sugar?",
+  "aciklama": "In a randomized trial of 41 adults with type 2 diabetes, short walks after meals beat one long walk. Here is what that does and does not mean.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 2, "cumleler": [0]},
+    {"sahne": 3, "cumleler": [0, 1], "etiket": "Reynolds et al. · Diabetologia · 2016"},
+    {"sahne": 16, "cumleler": [1, 2], "baslik": null, "etiket": null},
+    {"sahne": 44, "cumleler": [1, 2], "baslik": {"satirlar": ["LARGEST", "MEAL"], "vurgu": "10 MIN", "not": "easy walk after eating"}, "etiket": null},
+    {"sahne": 54, "cumleler": [0, 1], "baslik": null, "etiket": null}
+  ]
+}
