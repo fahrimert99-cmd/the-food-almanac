@@ -6,7 +6,7 @@ beslenme ve gıda bilimi anlatımlarıdır.
 
 ## Akış
 
-Bütün akış `.github/workflows/uzun_en.yml` içindedir ve 3 saatte bir kendiliğinden çalışır.
+Bütün akış `.github/workflows/uzun_en.yml` içindedir ve saatte bir (gece dahil) kendiliğinden çalışır.
 
 ```
 plan.py ─► (konu havuzu boşsa) KONU ajanı
@@ -66,7 +66,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 - **Önde üretim:** Hat boşta kaldığında sıradaki slotların videolarını önceden üretir ve YouTube'a zamanlanmış yükler.
   - En çok 4 video önde durur (yaklaşık 2 hafta). Sayıyı `marka.json` → `onde_uretim_azami` değiştirir.
   - Slota 72 saatten fazla varken iş yalnızca Claude kotasıyla yürür; kota bitince yedek modele geçilmez, sonraki
-    çalıştırma (3 saatte bir) kaldığı yerden devam eder.
+    çalıştırma (saatte bir) kaldığı yerden devam eder.
   - Slot yaklaşınca (72 saat) normal kurallar geçerlidir: gerekirse Gemini ve şablon sahneler devreye girer.
   - Hat boş beklemez: uzun video yüklenince plan hemen yeniden çalışır. Her Shorts başarıyla bitince de sıradaki
     Shorts başlar: önce aynı videonunki, sonra Shorts'u eksik bir sonraki video. İş kalmayınca zincir kendiliğinden

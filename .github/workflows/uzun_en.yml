@@ -3,7 +3,7 @@ name: Uzun Video EN (The Food Almanac, otonom)
 #   plan -> [konu] -> senaryo + bağımsız doğruluk denetimi -> görseller (NVIDIA) + ses (Piper)
 #        -> sahne tasarımı (paralel ajanlar) -> render (Remotion) -> kalite kontrol -> zamanlanmış yükleme
 #        -> Shorts (ayrı iş akışı: uzun_en_kisa.yml)
-# Her 3 saatte bir plan.py ne yapılacağına karar verir; çoğu çalıştırma ~20 sn'de "iş yok" der.
+# Her saat (gece dahil) plan.py ne yapılacağına karar verir; çoğu çalıştırma ~20 sn'de "iş yok" der.
 # Kesilen her aşama (kota, hata) bir sonraki çalıştırmada kaldığı yerden devam eder. Slota az kalırsa
 # tasarlanamayan sahneler otomatik şablonla çizilir; video yine zamanında yayınlanır.
 #
@@ -17,7 +17,7 @@ name: Uzun Video EN (The Food Almanac, otonom)
 # Durdurmak: Actions > bu iş akışı > "..." > Disable workflow.
 on:
   schedule:
-    - cron: "23 */3 * * *"
+    - cron: "23 * * * *"     # saatte bir: NVIDIA düzelince / Cloudflare kotası (03:00 TR) açılınca hemen devam
   push:
     branches: [main]
     paths: [uzun_en/calistir.json]
@@ -320,7 +320,7 @@ jobs:
           python3 uzun_en/araclar/ses.py --proje "$SLUG"
           python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG"
           # Kalite kapısı: görsellerin çoğu NVIDIA'dan gelmediyse (geçici NVIDIA arızası) ve slota zaman varsa aşama
-          # ilerlemez; bir sonraki çalıştırma (3 saat sonra) yalnızca zayıf görselleri yeniden dener.
+          # ilerlemez; bir sonraki çalıştırma (1 saat sonra) yalnızca zayıf görselleri yeniden dener.
           if ! python3 uzun_en/araclar/gorsel.py --proje "$SLUG" --kalite && python3 uzun_en/araclar/plan.py --gorsel-bekle "$SLUG"; then
             echo "::warning::görsellerin çoğu yedek kaynaktan geldi (NVIDIA arızası?) — sahne aşamasına geçilmedi, sonraki çalıştırmada yeniden denenecek"
             exit 0
@@ -593,14 +593,14 @@ jobs:
         run: |
           gh workflow run uzun_en_kisa.yml --repo "$GITHUB_REPOSITORY" --ref main -f proje="$SLUG" \
             || echo "::warning::Shorts iş akışı başlatılamadı; günlük tarama yakalar"
-      - name: Sıradaki uzun video (önde üretim; 3 saatlik zamanlayıcıyı beklemeden)
+      - name: Sıradaki uzun video (önde üretim; saatlik zamanlayıcıyı beklemeden)
         if: env.DEVAM == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           # plan.py iş yoksa (önde yeterli video var / boş slot yok) hemen biter; zincir orada durur.
           gh workflow run uzun_en.yml --repo "$GITHUB_REPOSITORY" --ref main \
-            || echo "::warning::sıradaki çalıştırma başlatılamadı; 3 saatlik zamanlayıcı yakalar"
+            || echo "::warning::sıradaki çalıştırma başlatılamadı; saatlik zamanlayıcı yakalar"
       - name: Hata bildirimi
         if: failure() && env.DEVAM == 'true'
         env:
