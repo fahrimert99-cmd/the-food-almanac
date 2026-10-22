@@ -1,0 +1,17 @@
+{
+  "baslik": ["SAME LUNCH,", "NEW ORDER?"],
+  "baslik_yt": "Same Meal, Different Order: Blood Sugar Test",
+  "aciklama": "Researchers fed people the exact same meal in two different orders and measured blood sugar. Here is what changed, how small the studies were, and what to try at your next meal.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [2, 3, 4], "gorsel": 2, "baslik": null, "etiket": null},
+    {"sahne": 2, "cumleler": [0]},
+    {"sahne": 3, "cumleler": [0]},
+    {"sahne": 22, "cumleler": [0]},
+    {"sahne": 40, "cumleler": [1], "baslik": {"satirlar": ["SMALL", "STUDIES"]}, "etiket": null},
+    {"sahne": 42, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 42, "cumleler": [2], "gorsel": 52, "baslik": null, "etiket": null},
+    {"sahne": 47, "cumleler": [1], "baslik": {"satirlar": ["CARBS", "LAST"]}, "etiket": null},
+    {"sahne": 47, "cumleler": [4], "baslik": null, "etiket": null}
+  ]
+}
