@@ -8,7 +8,8 @@
 Seçim: kisa*_yayin.json'u olan, YouTube yayın saati (slot) bugün ya da daha önce olan, henüz kuyruğa girmemiş en eski
 Shorts. O gün (UTC) zaten bir Reels eklendiyse hiçbiri. Video GitHub sürümünden (uzun-en-SLUG/kisa*.mp4) indirilip
 Instagram koşullarına göre yeniden kodlanır (H.264 ≤ 4,5 Mbps, kapalı GOP, AAC 128k 48 kHz, faststart) ve MEDYA/SLUG-N.mp4
-olarak yazılır; yanına kapak karesi (SLUG-N.jpg, Pinterest video pini için) konur. MEDYA/reels.xml (RSS) yeniden
+olarak yazılır; yanına Pinterest video pini için kapak karesi (SLUG-N.jpg) ve 5 MB altı 720p kopya (SLUG-N-pin.mp4;
+Make ücretsiz planı 5 MB'tan büyük dosya işlemez) konur. MEDYA/reels.xml (RSS) yeniden
 üretilir: Make senaryosu ("Food Almanac – Instagram + Facebook Reels") bu beslemeyi izler, yeni öğenin bağlantısındaki
 videoyu açıklamasıyla Instagram'a, Facebook Sayfasına ve Pinterest'e gönderir (<source url> = uzun videonun bağlantısı). MEDYA, depodaki "reels-medya" dalıdır
 (raw.githubusercontent.com doğrudan 200 döner; sürüm bağlantıları yönlendirme yaptığından Instagram onları indiremeyebilir).
@@ -25,6 +26,7 @@ KAYIT = os.path.join(O.KOK, "reels.json")
 DAL = "reels-medya"
 SAKLA_GUN = 14            # medya dalında bu kadar günden eski videolar silinir (Instagram hemen indirir)
 BESLEME_AZAMI = 30
+PIN_AZAMI = 4_700_000     # Pinterest kopyasının üst sınırı (bayt); Make ücretsiz planı dosya sınırı 5 MB
 
 
 def depo():
@@ -97,6 +99,27 @@ def kapak(dizin, dosya):
                         "-vf", "scale=1000:-2", "-q:v", "3", jpg], check=True)
 
 
+def pin_kopyasi(dizin, dosya):
+    """Pinterest için 720x1280, PIN_AZAMI altında kopya (SLUG-N-pin.mp4); varsa dokunmaz."""
+    girdi, cikti = os.path.join(dizin, dosya), os.path.join(dizin, dosya[:-4] + "-pin.mp4")
+    if not os.path.exists(girdi) or os.path.exists(cikti):
+        return
+    sure = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", girdi],
+                                capture_output=True, text=True, check=True).stdout)
+    hedef = PIN_AZAMI * 0.9
+    for _ in range(4):
+        vk = max(250, int(hedef * 8 / sure / 1000) - 64)            # kbps (ses 64k)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", girdi, "-vf", "scale=720:1280", "-c:v", "libx264",
+                        "-profile:v", "high", "-pix_fmt", "yuv420p", "-preset", "slow", "-b:v", f"{vk}k",
+                        "-maxrate", f"{int(vk * 1.3)}k", "-bufsize", f"{vk * 2}k", "-c:a", "aac", "-b:a", "64k",
+                        "-ar", "44100", "-movflags", "+faststart", "-map_metadata", "-1", cikti], check=True)
+        if os.path.getsize(cikti) <= PIN_AZAMI:
+            return
+        hedef *= 0.85
+    os.remove(cikti)
+    O.log(f"⚠ {dosya}: Pinterest kopyası {PIN_AZAMI} baytın altına indirilemedi")
+
+
 def uzun_url(r):
     """Shorts'un ait olduğu uzun videonun bağlantısı (kayıtta yoksa kisa*_yayin.json'dan)."""
     if r.get("uzun_url"):
@@ -133,7 +156,7 @@ def besleme(dizin, k):
 def temizle(dizin, k, simdi):
     tut = {r["dosya"][:-4] for r in k["reels"] if simdi - tarih(r["eklenme"]) < dt.timedelta(days=SAKLA_GUN)}
     for yol in glob.glob(os.path.join(dizin, "*.mp4")) + glob.glob(os.path.join(dizin, "*.jpg")):
-        if os.path.basename(yol)[:-4] not in tut:
+        if re.sub(r"-pin$", "", os.path.basename(yol)[:-4]) not in tut:
             os.remove(yol)
 
 
@@ -173,6 +196,7 @@ def gun(dizin, kuru=False, simdi=None):
         temizle(dizin, k, simdi)
         for r in k["reels"]:
             kapak(dizin, r["dosya"])
+            pin_kopyasi(dizin, r["dosya"])
         besleme(dizin, k)
     return s
 
