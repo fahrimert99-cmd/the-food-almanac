@@ -1,0 +1,17 @@
+{
+  "baslik": ["DOES YOGURT", "HELP YOUR GUT?"],
+  "baslik_yt": "Yogurt and Kefir: What One Stanford Trial Found",
+  "aciklama": "In a Stanford trial, ten weeks of a fermented food diet changed gut and immune markers in healthy adults. Here is what it shows, and what it does not.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 19, "cumleler": [0], "etiket": "Wastyk et al. · Cell · 2021"},
+    {"sahne": 20, "cumleler": [0],
+     "baslik": {"satirlar": ["19 MARKERS", "LOWER"], "vurgu": "19", "not": "inflammatory proteins down"},
+     "etiket": "Wastyk et al. · Cell · 2021"},
+    {"sahne": 2, "cumleler": [0], "etiket": "Wastyk et al. · Cell · 2021"},
+    {"sahne": 24, "cumleler": [0]},
+    {"sahne": 24, "cumleler": [1], "gorsel": 25, "baslik": {"satirlar": ["MARKERS,", "NOT DISEASE"]}},
+    {"sahne": 25, "cumleler": [1], "baslik": null},
+    {"sahne": 59, "cumleler": [0], "baslik": null}
+  ]
+}
