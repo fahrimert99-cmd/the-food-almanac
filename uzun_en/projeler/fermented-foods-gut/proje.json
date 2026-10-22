@@ -1,0 +1,588 @@
+{
+  "slug": "fermented-foods-gut",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Yogurt and Kefir: What They Do to Your Gut",
+  "yorum": "Do you eat yogurt or drink kefir most days? Have you ever noticed a difference in how your gut feels?",
+  "aciklama_giris": "In a 2021 Stanford trial of 36 healthy adults, ten weeks on a diet rich in fermented foods such as yogurt and kefir raised gut microbiome diversity and lowered 19 inflammatory proteins in the blood, while a high fiber diet did not in that time. But it was small, it tested a whole diet, and kefir trials since then show modest, mixed changes.\n\nIn this video we look at what the Stanford researchers actually did, what live and active cultures means on a label, how kefir and yogurt compare, how much sugar can hide in a yogurt cup, what is still unknown for older adults, and five practical ways to use what the evidence supports.",
+  "kaynaklar": [
+    "Wastyk HC, Fragiadakis GK, Perelman D, et al. Gut-microbiota-targeted diets modulate human immune status. Cell. 2021;184(16):4137-4153. doi:10.1016/j.cell.2021.06.019.",
+    "Marco ML, et al. The International Scientific Association for Probiotics and Prebiotics (ISAPP) consensus statement on fermented foods. Nature Reviews Gastroenterology & Hepatology. 2021;18(3):196-208. doi:10.1038/s41575-020-00390-5.",
+    "International Dairy Foods Association. Live & Active Cultures Seal requirements (yogurt and cultured dairy). idfa.org/live-active-cultures-seal.",
+    "Bellikci-Koyu E, et al. Effects of regular kefir consumption on gut microbiota in patients with metabolic syndrome: a parallel-group, randomized, controlled study. Nutrients. 2019. PMC6769690.",
+    "Black EG, Bugarcic A, Lauche R, El-Omar E, El-Assaad F. The effects of kefir on the human oral and gut microbiome. Nutrients. 2025;17(24):3861.",
+    "Hamsho M, et al. Kefir: a potential gut microbiota modulator: a systematic review of human interventional studies. MicrobiologyOpen. 2026;15(3):e70297.",
+    "Moore JB, Horti A, Fielding BA. Evaluation of the nutrient content of yogurts: a comprehensive survey of yogurt products in the major UK supermarkets. BMJ Open. 2018;8(8):e021387. doi:10.1136/bmjopen-2017-021387."
+  ],
+  "kapak": {
+    "satirlar": [
+      "YOGURT",
+      "OR KEFIR?"
+    ],
+    "gorsel": "a huge close-up bowl of creamy white plain yogurt with a spoon lifting a scoop, overlapping a tall glass of kefir right behind it, bright, fresh and appetizing"
+  },
+  "kahraman": "yogurt",
+  "etiketler": [
+    "yogurt",
+    "kefir",
+    "gut health",
+    "microbiome",
+    "probiotics",
+    "fermented foods",
+    "live and active cultures",
+    "kefir vs yogurt",
+    "nutrition science",
+    "healthy eating after 50"
+  ],
+  "seslendirme_duzelt": {
+    "kefir": "kuh feer",
+    "Actinobacteria": "Ack tin oh bacteria",
+    "bifidobacteria": "biff id oh bacteria",
+    "lactobacilli": "lack toe bass ill eye",
+    "kombucha": "kom boo cha",
+    "kimchi": "kim chee"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Yogurt, kefir and your gut",
+      "metin": "If you eat yogurt or drink kefir for your gut, here is what one Stanford trial found. In 36 healthy adults, ten weeks of a high fermented food diet raised gut microbiome diversity and lowered 19 inflammatory proteins in the blood.",
+      "gorsel": "a white bowl of plain yogurt with a spoon beside a tall glass of kefir on a wooden kitchen table, a small cloth napkin, soft morning light",
+      "etiket": "Wastyk et al. · Cell · 2021",
+      "baslik": {
+        "satirlar": [
+          "10 WEEKS",
+          "FERMENTED FOODS"
+        ],
+        "vurgu": "19",
+        "not": "inflammatory proteins went down"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "In that same trial, a high fiber diet did not lower those inflammatory proteins.",
+      "gorsel": "two bowls side by side on a table, one holding plain yogurt with a spoon, the other holding oats, lentils and chopped vegetables",
+      "baslik": {
+        "satirlar": [
+          "FERMENTED",
+          "VS FIBER"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "So what does that mean for a bowl of yogurt or a glass of kefir? The honest answer is more careful than the headlines.",
+      "gorsel": "a single spoonful of thick plain yogurt held above a bowl, a glass of kefir blurred in the background, a thoughtful quiet kitchen scene"
+    },
+    {
+      "id": 4,
+      "metin": "By the end, you'll know what live and active cultures really means, how kefir and yogurt compare, how to spot the sugar in your yogurt, and what we still don't know for older adults.",
+      "gorsel": "an antique brass magnifying glass held over a bowl of plain yogurt, a glass of kefir and a small jar of berries beside it"
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "Welcome to The Food Almanac. Let's begin with the gut community these foods are meant to change.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Yogurt, Kefir and Your Gut",
+        "alt": "What the research actually shows"
+      }
+    },
+    {
+      "id": 6,
+      "bolum": "What fermented really means",
+      "metin": "Your gut is home to a vast community of microbes, mostly bacteria, known together as the gut microbiome. Researchers often look at how varied that community is, which they call diversity.",
+      "gorsel": "textbook engraving of the small intestine with finger-like villi, tiny rod-shaped and round bacteria drawn in many shapes nestled between them, a bowl of yogurt sketched in the corner",
+      "baslik": {
+        "satirlar": [
+          "THE GUT",
+          "MICROBIOME"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "The Stanford researchers noted that diversity tends to be lower, and inflammation higher, in industrialized societies. They wondered whether food could shift both.",
+      "gorsel": "a city skyline with chimneys on one side and a green farm field with a cow on the other, a bowl of plain yogurt in the foreground"
+    },
+    {
+      "id": 8,
+      "metin": "Fermented foods are foods made through desired microbial growth. Bacteria or yeasts change the food, which gives yogurt its tang and its thick texture.",
+      "gorsel": "a glass jar of milk with tiny bacteria drawn in a circular magnified inset, a bowl of thick plain yogurt and a wooden spoon beside it",
+      "baslik": {
+        "satirlar": [
+          "FERMENTED",
+          "FOODS"
+        ],
+        "not": "made through desired microbial growth"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Yogurt is milk fermented by bacteria. Kefir is also a fermented milk drink, but it is made with a starter that contains both bacteria and yeasts.",
+      "gorsel": "on the left a bowl of plain yogurt, on the right a tall glass of kefir with a small bowl of pale kefir grains, overlapping closely on a wooden board"
+    },
+    {
+      "id": 10,
+      "metin": "Other fermented foods include kimchi, sauerkraut, kombucha and miso. Some, like bread, are heated afterward, which kills the microbes before you ever eat them.",
+      "gorsel": "a wooden table with a jar of kimchi, a jar of sauerkraut, a bottle of kombucha, a bowl of miso soup and a bowl of plain yogurt in front"
+    },
+    {
+      "id": 11,
+      "metin": "That brings us to a phrase on many yogurt tubs: live and active cultures. It means the product contains living microbes, not just that it was fermented at some point.",
+      "gorsel": "a small plastic tub of plain yogurt with the lid off and a spoon, a tiny round magnified inset showing lively rod-shaped bacteria",
+      "baslik": {
+        "satirlar": [
+          "LIVE AND",
+          "ACTIVE CULTURES"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "metin": "In the United States, a voluntary seal from the dairy industry asks for at least 100 million cultures per gram when the yogurt is made. That's the count at manufacture, not on the day you eat it.",
+      "gorsel": "a factory-fresh row of small yogurt cups on a clean steel production table with a brass pocket watch beside them",
+      "etiket": "IDFA · Live & Active Cultures Seal",
+      "baslik": {
+        "satirlar": [
+          "AT THE",
+          "FACTORY"
+        ],
+        "vurgu": "100M",
+        "not": "cultures per gram, counted when made"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Experts add one more distinction. A probiotic has to be a defined microbe shown to give a health benefit. A fermented food only has to be made with microbes.",
+      "gorsel": "a bowl of plain yogurt on one side of a brass balance scale, a small glass vial of probiotic capsules on the other side, a wooden table",
+      "etiket": "Marco et al. · Nat Rev Gastroenterol Hepatol · 2021",
+      "baslik": {
+        "satirlar": [
+          "FERMENTED",
+          "IS NOT",
+          "PROBIOTIC"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Keep that in mind, because it changes how you read a package. In the practical part, there's one check on the pack that matters more than the word probiotic.",
+      "gorsel": "a hand holding a tub of plain yogurt at a grocery shelf lined with many different yogurt tubs and kefir bottles"
+    },
+    {
+      "id": 15,
+      "bolum": "The Stanford trial",
+      "tip": "kart",
+      "metin": "In 2021, a team at Stanford University ran a trial that got a lot of attention.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Fermented vs high fiber",
+        "alt": "Stanford University · Cell · 2021"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Thirty six healthy adults were randomly assigned to one of two diets for ten weeks. One group added fermented foods. The other added high fiber plant foods, such as legumes, whole grains and vegetables.",
+      "gorsel": "a clinical research room with two covered meal trays on a table, one beside a glass of kefir and a bowl of yogurt, the other beside a bowl of beans and whole grain bread",
+      "baslik": {
+        "satirlar": [
+          "36 ADULTS",
+          "2 DIETS"
+        ],
+        "vurgu": "10 WEEKS"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "The fermented food group ate things like yogurt, kefir, fermented vegetables and kombucha. The fiber group was not a comparison with nothing. It was a healthy diet of its own.",
+      "gorsel": "a table spread with a bowl of plain yogurt, a glass of kefir, a jar of fermented vegetables and a bottle of kombucha, grouped closely"
+    },
+    {
+      "id": 18,
+      "metin": "Before the diets, during them, and for four weeks afterward, the researchers collected samples and measured the microbiome and the immune system.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes, an antique brass microscope and an open notebook with blank pages, a bowl of yogurt at the edge"
+    },
+    {
+      "id": 19,
+      "metin": "In the fermented food group, gut microbiome diversity went up steadily over the ten weeks.",
+      "gorsel": "a small intestine engraving with villi, many different shapes of bacteria drawn in rich variety, a spoonful of yogurt hovering above",
+      "baslik": {
+        "satirlar": [
+          "DIVERSITY",
+          "WENT UP"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "metin": "And 19 inflammatory proteins measured in the blood went down. One of them was interleukin six, a signal scientists have linked with several chronic conditions. Four types of immune cells also showed less activation.",
+      "gorsel": "a tube-shaped vessel with small red discs and a few small coral-colored signal particles, a bowl of plain yogurt and a glass of kefir sketched beside it",
+      "baslik": {
+        "satirlar": [
+          "19 MARKERS",
+          "LOWER"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "The high fiber group told a different story. Its microbiome diversity stayed about the same on average, and those 19 proteins did not fall the way they did in the fermented group.",
+      "gorsel": "a bowl of lentils, oats and chopped vegetables beside a small bowl of plain yogurt, a calm flat line drawn in the sand of a tray"
+    },
+    {
+      "id": 22,
+      "metin": "That may seem surprising, since fiber is the usual hero of gut health. The researchers noted that ten weeks may simply not be long enough for fiber to show its full effect.",
+      "gorsel": "a pocket watch lying beside a bowl of oats, beans and a bowl of plain yogurt, a small seedling growing from a pot behind them"
+    },
+    {
+      "id": 23,
+      "metin": "In the high fiber group, the study's main immune score did not change overall. But three different patterns of response appeared, linked to each person's starting microbiome diversity.",
+      "gorsel": "three gently different winding paths through a green meadow, a bowl of yogurt resting on a stone at the start of the paths",
+      "baslik": {
+        "satirlar": [
+          "3 PATTERNS"
+        ],
+        "not": "in the high fiber group"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "Importantly, this was a small proof-of-concept trial of healthy adults, with 18 people in each group. It measured markers in the lab, not whether anyone got sick less often.",
+      "gorsel": "a single empty chair at a laboratory table with a glass of kefir and a bowl of yogurt, a tall window, a few sample tubes in a rack"
+    },
+    {
+      "id": 25,
+      "metin": "So what it shows is that, in healthy adults, a diet rich in fermented foods shifted gut and immune markers within weeks. It does not show that these foods prevent any disease.",
+      "gorsel": "a bowl of yogurt and a glass of kefir on a wooden table, a pair of round eyeglasses and a closed notebook beside them",
+      "baslik": {
+        "satirlar": [
+          "MARKERS,",
+          "NOT DISEASE"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "metin": "It also tested a whole fermented diet, not one cup of yogurt. We can't say how much of the effect came from yogurt or kefir alone.",
+      "gorsel": "a large bowl of plain yogurt in the foreground, behind it a crowd of small jars of kimchi, kombucha and kefir in soft focus"
+    },
+    {
+      "id": 27,
+      "bolum": "Kefir versus yogurt",
+      "tip": "kart",
+      "metin": "So how do kefir and yogurt compare when researchers look straight at the gut?",
+      "kart": {
+        "ust": "THE COMPARISON",
+        "baslik": "Kefir vs yogurt",
+        "alt": "What human trials show"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "Kefir has been studied more directly. A 2025 review in the journal Nutrients gathered human studies of kefir, mostly lasting four to twelve weeks, with doses of about 180 to 400 milliliters per serving.",
+      "gorsel": "a tall glass of kefir beside a measuring jug and a small bowl of yogurt, a stack of closed books with blank covers in the background",
+      "etiket": "Black et al. · Nutrients · 2025",
+      "baslik": {
+        "satirlar": [
+          "KEFIR",
+          "TRIALS"
+        ],
+        "vurgu": "4–12 WK"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "The results were inconsistent. Some studies saw a rise in lactobacilli, a group of friendly bacteria, but changes in overall diversity were often not significant.",
+      "gorsel": "a glass of kefir on a table with a magnified circular inset of rod-shaped bacteria, a bowl of yogurt beside it, a gentle uneven wave line drawn on paper"
+    },
+    {
+      "id": 30,
+      "metin": "A 2026 systematic review in MicrobiologyOpen found eight human studies. Kefir was linked with modest, inconsistent shifts, and bifidobacteria, another friendly group, rose in three of the four studies that measured them.",
+      "gorsel": "a neat stack of eight research folders beside a glass of kefir and a bowl of yogurt, an antique brass microscope in the background",
+      "etiket": "Hamsho et al. · MicrobiologyOpen · 2026",
+      "baslik": {
+        "satirlar": [
+          "8 STUDIES"
+        ],
+        "not": "modest, inconsistent shifts"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "Researchers also found kefir's own microbes in stool samples. The reviewers read that as the microbes surviving the trip, perhaps only temporarily.",
+      "gorsel": "a glass of kefir with small bacteria drawn travelling along a winding dashed path through the stomach and small intestine, a bowl of yogurt at the start"
+    },
+    {
+      "id": 32,
+      "metin": "One randomized trial in adults with metabolic syndrome gave 180 milliliters of kefir or plain milk every day for twelve weeks. Only 22 people finished: 12 on kefir and 10 on milk.",
+      "gorsel": "a glass of kefir and a glass of plain milk side by side on a table, a small bowl of yogurt behind them, a calendar page with blank squares",
+      "etiket": "Bellikci-Koyu et al. · Nutrients · 2019",
+      "baslik": {
+        "satirlar": [
+          "KEFIR VS",
+          "MILK"
+        ],
+        "vurgu": "12 WEEKS"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Kefir raised one broad group of bacteria, called Actinobacteria. But compared with the milk group, there was no significant difference in any group of bacteria, and none in diversity.",
+      "gorsel": "two identical glass cylinders with small colored spheres at nearly the same height, one beside a glass of kefir, the other beside a glass of milk, a bowl of yogurt behind"
+    },
+    {
+      "id": 34,
+      "metin": "Plain milk shifted the gut bacteria a little too. That is why a control group matters: small trials can see changes that are not caused by the kefir itself.",
+      "gorsel": "a glass of milk next to a glass of kefir and a bowl of yogurt, a pair of antique brass scales in the background",
+      "baslik": {
+        "satirlar": [
+          "WHY CONTROLS",
+          "MATTER"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "What about yogurt alone? Large, long trials of plain yogurt on the gut microbiome are hard to find. In the Stanford trial it was one of several fermented foods, so its own effect can't be separated out.",
+      "gorsel": "a lone bowl of plain yogurt on a wooden table, a spoon standing in it, long soft shadows and a question-shaped curl of steam rising"
+    },
+    {
+      "id": 36,
+      "metin": "So which is better? Neither has been shown to be clearly better for the gut. Kefir has more small trials aimed at the microbiome, and the results are mixed.",
+      "gorsel": "a bowl of plain yogurt and a tall glass of kefir placed neatly side by side on a wooden board, balanced and calm"
+    },
+    {
+      "id": 37,
+      "bolum": "The sugar catch",
+      "tip": "kart",
+      "metin": "Now to the catch. A fermented food can come with a lot of sugar.",
+      "kart": {
+        "ust": "THE CATCH",
+        "baslik": "The sugar in the cup",
+        "alt": "What a UK supermarket survey found"
+      }
+    },
+    {
+      "id": 38,
+      "metin": "In 2018, researchers surveyed about 900 yogurts sold by five large UK online supermarkets, and compared the sugar in each type.",
+      "gorsel": "a supermarket shelf crowded with many small yogurt cups and tubs in rows, a shopping basket below it",
+      "etiket": "Moore et al. · BMJ Open · 2018"
+    },
+    {
+      "id": 39,
+      "tip": "grafik",
+      "metin": "Plain or Greek yogurts had a median of about 5 grams of sugar per 100 grams, mostly naturally occurring lactose. Fruit and flavored yogurts had about 12, organic about 13, and dessert style yogurts about 16.",
+      "grafik": {
+        "baslik": "Median total sugar per 100 grams of yogurt",
+        "alt": "Grams of sugar by yogurt type, UK supermarkets",
+        "cubuklar": [
+          {
+            "etiket": "Plain/Greek",
+            "deger": 5.0,
+            "metin": "5.0 g"
+          },
+          {
+            "etiket": "Fruit",
+            "deger": 11.9,
+            "metin": "11.9 g"
+          },
+          {
+            "etiket": "Flavored",
+            "deger": 12.0,
+            "metin": "12.0 g"
+          },
+          {
+            "etiket": "Organic",
+            "deger": 13.1,
+            "metin": "13.1 g"
+          },
+          {
+            "etiket": "Dessert",
+            "deger": 16.4,
+            "metin": "16.4 g"
+          }
+        ],
+        "kaynak": "Moore et al., BMJ Open 2018 · 898 UK supermarket yogurts · total sugar including lactose"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "That total includes lactose, the sugar found naturally in milk, so it overstates added sugar. Still, fewer than 9 percent of the yogurts were low in sugar.",
+      "gorsel": "a spoon of plain yogurt beside a small heap of white sugar crystals and a glass of milk, on a clean wooden table",
+      "baslik": {
+        "satirlar": [
+          "UNDER 9%",
+          "LOW SUGAR"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "Even among low fat yogurts, 55 percent had 10 to 20 grams of sugar per 100 grams. This is UK data from 2016, so your own store may differ, but the lesson travels.",
+      "gorsel": "a row of three small yogurt pots with fruit drawn on them, a teaspoon and a small mound of sugar crystals in front"
+    },
+    {
+      "id": 42,
+      "metin": "Plain versions leave you in charge of what goes in. Sugar adds calories without adding cultures, and that matters if you're watching your blood sugar or your weight.",
+      "gorsel": "a bowl of plain yogurt topped with a few fresh berries and a sprinkle of oats, a spoon resting beside it, soft window light",
+      "baslik": {
+        "satirlar": [
+          "YOU CHOOSE",
+          "THE SUGAR"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What do we actually know, and what don't we?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What we really know",
+        "alt": "And what about older adults?"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "Here is what is reasonably supported. In one randomized trial in healthy adults, a diet rich in fermented foods raised microbiome diversity and lowered inflammatory markers.",
+      "gorsel": "a bowl of yogurt and a glass of kefir on a table with a bright green sprig growing from a small pot behind them"
+    },
+    {
+      "id": 45,
+      "metin": "Here is what is uncertain. We don't know how much of that effect one daily serving of yogurt or kefir would give, how long it lasts, or whether it changes outcomes like heart disease or infections.",
+      "gorsel": "a bowl of plain yogurt beside a foggy window with a winding country path fading into mist",
+      "baslik": {
+        "satirlar": [
+          "STILL",
+          "UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "And for older adults? The Stanford trial studied healthy adults, and the kefir trial we looked at enrolled adults aged 18 to 65. Most of the gut microbiome evidence is from younger or mixed age groups, so what we know specifically for people over 60 is thin.",
+      "gorsel": "a cheerful gray-haired person in their 60s sitting at a kitchen table smiling over a bowl of plain yogurt with berries, a glass of kefir beside the bowl",
+      "baslik": {
+        "satirlar": [
+          "OLDER",
+          "ADULTS?"
+        ],
+        "not": "evidence for people over 60 is thin"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Now, a myth to set aside. Some news coverage linked fermented foods with preventing cancer, obesity and diabetes. The Stanford trial did not measure any of those outcomes.",
+      "gorsel": "a stack of old newspapers with blank columns beside a bowl of plain yogurt, a pair of round eyeglasses on top"
+    },
+    {
+      "id": 48,
+      "metin": "Another myth is that more cultures always means better. A count on the package tells you how many microbes were there at manufacture. It does not tell you what they do inside your gut.",
+      "gorsel": "a tub of plain yogurt next to a handful of tiny round bacteria drawn on an old paper page, a spoon beside the tub",
+      "baslik": {
+        "satirlar": [
+          "MORE CULTURES",
+          "IS NOT BETTER"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how can you use this? Here are five practical habits.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five simple habits",
+        "alt": "Based on what the evidence supports"
+      }
+    },
+    {
+      "id": 50,
+      "metin": "One. Choose plain. Start with plain yogurt or plain kefir, and add your own fruit or a few nuts. Then you decide how much sugar goes in.",
+      "gorsel": "a bowl of plain yogurt with a spoon, a small dish of walnuts and a bowl of fresh blueberries arranged around it on a wooden table"
+    },
+    {
+      "id": 51,
+      "metin": "Two. Check the package. This is the check I promised earlier. Look at the sugar per serving, and look for the words live and active cultures. Remember that count is from manufacture, so glance at the date too.",
+      "gorsel": "a hand holding a tub of plain yogurt turned to show its side, a pair of reading glasses resting on the shelf edge nearby",
+      "baslik": {
+        "satirlar": [
+          "CHECK THE",
+          "PACKAGE"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "Three. Make it regular. The trial that saw changes had people eating fermented foods regularly for ten weeks, so think of this as a steady habit, not a one-off.",
+      "gorsel": "a bowl of yogurt on a breakfast table beside a seven-day pill-box style calendar of small blank squares, morning sunlight"
+    },
+    {
+      "id": 53,
+      "metin": "Four. Mix your ferments. The Stanford diet included several kinds, such as yogurt, kefir, fermented vegetables and kombucha, so variety may matter. A spoonful of kimchi beside a meal counts too.",
+      "gorsel": "a bowl of plain yogurt, a small glass of kefir, a small dish of kimchi and a glass of kombucha grouped closely on a wooden tray"
+    },
+    {
+      "id": 54,
+      "metin": "Five. Pair them with fiber. The two are not rivals, and fiber foods are worth eating for many reasons. Plain yogurt with berries and oats is an easy combination.",
+      "gorsel": "a bowl of plain yogurt topped with raspberries, blueberries and oats, a wooden spoon, a small jar of oats nearby",
+      "baslik": {
+        "satirlar": [
+          "FERMENTED",
+          "PLUS FIBER"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "One safety note. If your immune system is weakened, or you have a serious illness, ask your doctor before adding probiotic products or fermented foods. And if you take medication, check with your doctor or pharmacist about what suits you.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a bowl of plain yogurt, a window with soft light",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Helpful, not magic",
+        "alt": "Yogurt, kefir and your gut"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "In a small Stanford trial of 36 healthy adults, ten weeks of a high fermented food diet raised microbiome diversity and lowered 19 inflammatory proteins.",
+      "gorsel": "the opening kitchen table with a bowl of plain yogurt and a tall glass of kefir, a spoon resting beside the bowl, soft morning light"
+    },
+    {
+      "id": 58,
+      "metin": "Kefir trials show modest, mixed changes in gut bacteria, and plain yogurt has fewer direct tests. Neither is proven to be better, and neither is proven to prevent disease.",
+      "gorsel": "a bowl of yogurt and a glass of kefir placed on either side of a small brass balance scale resting level"
+    },
+    {
+      "id": 59,
+      "metin": "Choose plain versions, check the sugar, eat them regularly, and enjoy them as one part of a varied diet. Small, calm habits beat big promises.",
+      "gorsel": "a bowl of plain yogurt with berries and oats on a sunny breakfast table, a glass of kefir and a spoon beside it"
+    },
+    {
+      "id": 60,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
