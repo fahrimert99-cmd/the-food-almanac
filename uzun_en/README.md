@@ -63,6 +63,11 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 - **Konu eklemek ya da sırayı değiştirmek:** `uzun_en/konular.json` dosyasında `bekliyor` durumundaki ilk konu
   sıradaki videodur.
 - **Hemen çalıştırmak:** `uzun_en/calistir.json` içindeki `tetik` sayısını artırın, ya da Actions → Run workflow.
+- **Önde üretim:** Hat boşta kaldığında sıradaki slotların videolarını önceden üretir ve YouTube'a zamanlanmış yükler.
+  - En çok 4 video önde durur (yaklaşık 2 hafta). Sayıyı `marka.json` → `onde_uretim_azami` değiştirir.
+  - Slota 72 saatten fazla varken iş yalnızca Claude kotasıyla yürür; kota bitince yedek modele geçilmez, sonraki
+    çalıştırma (3 saatte bir) kaldığı yerden devam eder.
+  - Slot yaklaşınca (72 saat) normal kurallar geçerlidir: gerekirse Gemini ve şablon sahneler devreye girer.
 - **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**.
 - **Durum:** `uzun_en/durum.json` her videonun aşamasını, slotunu ve YouTube kimliğini tutar
   (`projeler/<slug>/yayin.json`).

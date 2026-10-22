@@ -7,6 +7,9 @@
 
 Yayın: marka.json -> yayin.gunler / yayin.saat_utc (varsayılan Salı ve Cuma 14:00 UTC).
 Üretim, slottan en çok URETIM_ONCE saat önce başlar (tek seferlik erken başlatma: calistir.json -> "uretim_once_saat"). Aşamalar: senaryo -> varlik -> sahne -> render -> yuklendi.
+Önde üretim: aktif proje yoksa ve yayınlanmayı bekleyen (slotu gelecekte) video sayısı marka.json "onde_uretim_azami"dan
+(varsayılan 4) azsa, sıradaki boş slotun videosu erkenden üretilip zamanlanmış yüklenir. Slota ACIL saatten fazla
+varken ("onde" çıktısı) iş yalnızca Claude kotasıyla yürür: kota bitince yedek modele geçilmez, sonraki çalıştırma bekler.
 Slota az kaldıysa (SABLON_ESIK) ya da sahne tasarımı defalarca kesildiyse kalan sahneler otomatik şablonla çizilir;
 video yine zamanında yayınlanır.
 """
@@ -16,6 +19,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
 
 URETIM_ONCE = 72          # saat: slottan en çok bu kadar önce üretime başla
+ACIL = 72                 # saat: slota bundan az kaldıysa yedek model (Gemini) ve şablon devreye girebilir
+ONDE_AZAMI = 4            # yayınlanmayı bekleyen en çok video (marka.json "onde_uretim_azami" ile değişir)
 EN_AZ_ONCE = 5            # saat: bundan yakın slota yeni video yetiştirilmez
 SABLON_ESIK = 14          # saat: slota bundan az kaldıysa sahne tasarımı atlanır (şablon)
 SAHNE_DENEME = 3          # sahne aşaması en çok bu kadar çalıştırma alır
@@ -37,7 +42,7 @@ def tarih(s):
     return dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
 
 
-def slotlar(bas, gun=21):
+def slotlar(bas, gun=42):
     y = O.marka().get("yayin", {})
     gunler = y.get("gunler", [1, 4])
     sa, dk = (int(x) for x in y.get("saat_utc", "14:00").split(":"))
@@ -50,6 +55,16 @@ def slotlar(bas, gun=21):
             if t > bas:
                 out.append(t)
     return out
+
+
+def ileride(d, t):
+    """Slotu gelecekte olan (üretimde ya da yüklenip yayın bekleyen) video sayısı."""
+    return sum(1 for v in d["videolar"].values()
+               if v.get("slot") and v.get("asama") != "iptal" and tarih(v["slot"]) > t)
+
+
+def onde_azami():
+    return int(O.marka().get("onde_uretim_azami", ONDE_AZAMI))
 
 
 def dolu_slotlar(d):
@@ -121,7 +136,11 @@ def karar(d, t):
         return None, None, None, False, "boş slot yok"
     kalan = (bos[0] - t).total_seconds() / 3600
     if kalan > URETIM_ONCE:
-        return None, None, iso(bos[0]), False, f"sıradaki slot {iso(bos[0])} ({kalan:.0f} saat sonra) — henüz erken"
+        n = ileride(d, t)
+        if n >= onde_azami():
+            return None, None, iso(bos[0]), False, (f"sıradaki slot {iso(bos[0])} ({kalan:.0f} saat sonra) — "
+                                                    f"önde {n} video hazır, yeterli")
+        O.log(f"önde üretim: yayın bekleyen {n} video (en çok {onde_azami()}), sıradaki slot {iso(bos[0])}")
     # kuyrukta senaryosu hazır (ör. elle eklenmiş) bir proje var mı?
     for slug, v in d["videolar"].items():
         if v.get("asama") != "yuklendi" and not v.get("slot"):
@@ -192,8 +211,9 @@ def main():
         O.durum_yaz(d)
     is_var = bool(slug) and asama not in (None, "yuklendi")
     no = ASAMALAR.index(asama) if asama in ASAMALAR else 9
+    onde = bool(slot) and tarih(slot) - t > dt.timedelta(hours=ACIL)
     cikti = {"is": str(is_var).lower(), "slug": slug or "", "asama": asama or "", "asama_no": str(no), "slot": slot or "",
-             "sablon": str(sablon).lower()}
+             "sablon": str(sablon).lower(), "onde": str(onde).lower()}
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             for k, v in cikti.items():
