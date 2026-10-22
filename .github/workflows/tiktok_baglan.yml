@@ -1,0 +1,62 @@
+name: TikTok bağlantısı (The Food Almanac)
+# TikTok'u bağlar ya da elle bir video gönderir (uzun_en/araclar/tiktok.py). Günlük gönderim reels.yml'de.
+#   kod:    TikTok yetki sayfasından dönen adresteki "code=" değeri (tek kullanımlık, birkaç dakika geçerli).
+#           Token şifrelenip "tiktok" ön-sürümüne konur; açık metin hiçbir yere yazılmaz.
+#   gonder: reels.json'daki bir öğenin guid'i (ör. eggs-and-cholesterol-1): o video TikTok'a gönderilir (deneme).
+# Gerekli gizli ayarlar: TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET (TikTok geliştirici uygulamasından).
+on:
+  workflow_dispatch:
+    inputs:
+      kod:
+        description: "TikTok yetki kodu (adres çubuğundaki code= değeri)"
+        required: false
+        default: ""
+      gonder:
+        description: "Deneme için gönderilecek Reels guid'i (boş = gönderme)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tiktok
+  cancel-in-progress: false
+
+jobs:
+  tiktok:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      KEK: ${{ secrets.YT_CLIENT_SECRET }}
+      TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+      TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bağlan
+        if: github.event.inputs.kod != ''
+        env:
+          KOD: ${{ github.event.inputs.kod }}
+        run: |
+          echo "::add-mask::$KOD"
+          # adresin tamamı yapıştırıldıysa code= değerini ayıkla
+          K=$(python3 -c "import os,urllib.parse as u;k=os.environ['KOD'].strip();q=u.parse_qs(u.urlparse(k).query);print(q.get('code',[k])[0])")
+          echo "::add-mask::$K"
+          python3 uzun_en/araclar/tiktok.py --baglan "$K"
+      - name: Hesap durumu
+        run: python3 uzun_en/araclar/tiktok.py --durum
+      - name: Deneme gönderimi
+        if: github.event.inputs.gonder != ''
+        env:
+          GUID: ${{ github.event.inputs.gonder }}
+        run: |
+          mkdir -p /tmp/medya
+          git fetch -q --depth 1 origin reels-medya && git archive FETCH_HEAD | tar -x -C /tmp/medya
+          python3 uzun_en/araclar/tiktok.py --gonder "$GUID" --dizin /tmp/medya

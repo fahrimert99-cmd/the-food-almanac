@@ -89,6 +89,11 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
     - Facebook Sayfası FoodAlmanactv (Publish a Reel),
     - Pinterest (video pin; kapak karesi `SLUG-N.jpg`, bağlantı uzun video).
   - **Hemen kuyruğa almak:** `reels_islem.json` içindeki sayıyı artırın. Günde birden fazla Reels eklenmez.
+  - **TikTok:** Aynı video `reels.yml` içinde doğrudan TikTok'a gider (`araclar/tiktok.py`). İncelemeden geçmemiş
+    TikTok uygulamaları yalnızca gizli paylaşabildiğinden video gizli yüklenir; kanal sahibi uygulamadan herkese açar.
+    - Bağlantı: `tiktok_baglan.yml` (yetki kodu). Token "tiktok" ön-sürümünde şifreli durur.
+    - Gerekli gizli ayarlar: `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`.
+    - `marka.json` → `tiktok_mod: "taslak"` ile video gizli paylaşım yerine TikTok gelen kutusuna taslak olarak gider.
 - **Ayarlar** (Settings → Variables, isteğe bağlı):
 
   | Değişken | Ne işe yarar |
