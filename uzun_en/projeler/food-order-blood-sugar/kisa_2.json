@@ -1,0 +1,14 @@
+{
+  "baslik": ["WHY DOES FOOD", "ORDER MATTER?"],
+  "baslik_yt": "3 Ways Your Gut Handles Food Order",
+  "aciklama": "The same foods can hit your blood sugar differently depending on the order you eat them. Here are the three gut mechanisms researchers point to: the stomach, fiber and GLP-1.",
+  "parcalar": [
+    {"sahne": 27, "cumleler": [0], "gorsel": 36, "baslik": null, "etiket": null},
+    {"sahne": 28, "cumleler": [2], "baslik": {"satirlar": ["1. THE", "GATEKEEPER"]}, "etiket": null},
+    {"sahne": 29, "cumleler": [2], "baslik": {"satirlar": ["SLOWER", "EMPTYING"]}, "etiket": null},
+    {"sahne": 31, "cumleler": [1], "gorsel": 32, "baslik": {"satirlar": ["2. FIBER", "BARRIER"]}, "etiket": null},
+    {"sahne": 33, "cumleler": [1], "baslik": {"satirlar": ["3. GUT", "HORMONES"]}, "etiket": null},
+    {"sahne": 34, "cumleler": [0], "baslik": {"satirlar": ["GLP-1"], "not": "slows gut · boosts insulin"}, "etiket": null},
+    {"sahne": 36, "cumleler": [2, 3], "baslik": {"satirlar": ["A PRIMED", "GUT"]}, "etiket": null}
+  ]
+}
