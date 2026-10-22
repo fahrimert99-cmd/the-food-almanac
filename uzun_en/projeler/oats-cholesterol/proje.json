@@ -1,0 +1,565 @@
+{
+  "slug": "oats-cholesterol",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Do Oats Lower Cholesterol? What Studies Show",
+  "yorum": "Do you eat oatmeal most mornings, and did your last cholesterol test change how you think about breakfast? How do you like your oats: plain, sweet, or overnight in the fridge?",
+  "aciklama_giris": "Oatmeal has one of the oldest food-and-heart claims on record. In pooled analyses of randomized trials, eating at least three grams a day of oat beta-glucan, the soluble fiber in oats, lowered LDL cholesterol by roughly 7 to 10 milligrams per deciliter. That is a real but modest effect, and most trials lasted only a few weeks.\n\nIn this video we look at how beta-glucan works in the gut, what the FDA and European Food Safety Authority concluded, what two meta-analyses and one trial actually found, how many servings it takes to reach three grams, what we know and don't know about steel-cut, rolled, instant and overnight oats, and which toppings are worth a second look.",
+  "kaynaklar": [
+    "Whitehead A, Beck EJ, Tosh S, Wolever TMS. Cholesterol-lowering effects of oat beta-glucan: a meta-analysis of randomized controlled trials. American Journal of Clinical Nutrition. 2014;100(6):1413-1421. doi:10.3945/ajcn.114.086108. PMID 25411276.",
+    "Ho HVT, Sievenpiper JL, Zurbau A, et al. The effect of oat beta-glucan on LDL-cholesterol, non-HDL-cholesterol and apoB for CVD risk reduction: a systematic review and meta-analysis of randomised-controlled trials. British Journal of Nutrition. 2016;116(8):1369-1382. doi:10.1017/S000711451600341X. PMID 27724985.",
+    "Queenan KM, Stewart ML, Smith KN, Thomas W, Fulcher RG, Slavin JL. Concentrated oat beta-glucan, a fermentable fiber, lowers serum cholesterol in hypercholesterolemic adults in a randomized controlled trial. Nutrition Journal. 2007;6:6. doi:10.1186/1475-2891-6-6. PMC1847683.",
+    "Rebello CJ, Chu YF, Johnson WD, et al. Acute effects of oatmeal on subjective measures of appetite and satiety compared to a ready-to-eat breakfast cereal: a randomized crossover trial. Nutrition Journal. 2014;13:49. PMC4052334.",
+    "European Food Safety Authority, Panel on Dietetic Products, Nutrition and Allergies. Scientific Opinion on the substantiation of a health claim related to oat beta glucan and lowering blood cholesterol and reduced risk of (coronary) heart disease. EFSA Journal. 2010;8(12):1885. doi:10.2903/j.efsa.2010.1885.",
+    "Health Canada. Summary of Health Canada's assessment of a health claim about oat products and blood cholesterol lowering (including the 1997 US FDA final rule and the 2006 systematic review it cites).",
+    "American Heart Association. How much sugar is too much? (recommended limits for added sugars)."
+  ],
+  "kapak": {
+    "satirlar": [
+      "OATS",
+      "LOWER LDL?"
+    ],
+    "vurgu": "3 g",
+    "gorsel": "a large close-up bowl of hot rolled oats porridge with a wooden spoon resting in it, a small heap of dry rolled oats spilling in front of the bowl, and a bright red heart symbol overlapping behind the bowl"
+  },
+  "kahraman": "oats",
+  "etiketler": [
+    "oats cholesterol",
+    "oatmeal lower cholesterol",
+    "beta glucan cholesterol",
+    "overnight oats benefits",
+    "LDL cholesterol",
+    "oat fiber",
+    "heart healthy breakfast",
+    "steel cut vs rolled oats",
+    "nutrition science",
+    "soluble fiber"
+  ],
+  "seslendirme_duzelt": {
+    "LDL": "L D L",
+    "HDL": "H D L",
+    "FDA": "F D A"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Oats and LDL in brief",
+      "metin": "If you eat oatmeal to look after your heart, here is what the research shows. A 2014 analysis pooled 28 randomized trials, and found that at least three grams a day of oat fiber lowered LDL cholesterol by about ten milligrams per deciliter.",
+      "gorsel": "a white bowl of steaming oats porridge on a wooden kitchen table, a wooden spoon lifting a spoonful of oats, soft morning light drawn as fine radiating lines",
+      "etiket": "Whitehead et al. · Am J Clin Nutr · 2014",
+      "baslik": {
+        "satirlar": [
+          "28 TRIALS"
+        ],
+        "vurgu": "–10",
+        "not": "mg/dL LDL at 3 grams of oat fiber a day"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "That is a real effect, but a modest one. And it depends on how much you eat, which oats you choose, and what goes on top.",
+      "gorsel": "a bowl of oats beside a small heap of dry rolled oats and a tall glass of milk, a red heart symbol drawn small in the corner"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you will know how many servings it takes to reach three grams, whether steel-cut, rolled or instant matters, and which toppings deserve a second look.",
+      "gorsel": "three bowls in a row on a table holding steel-cut oats, rolled oats and instant oats, each in its own bowl with a wooden spoon",
+      "baslik": {
+        "satirlar": [
+          "STEEL-CUT?",
+          "ROLLED?",
+          "INSTANT?"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "So what do oats really do to your cholesterol? Let us look at what the research actually found, and where it runs out.",
+      "gorsel": "a large magnifying glass held over a bowl of oats, a few loose oat flakes scattered on the cloth beside it"
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "Welcome to The Food Almanac. Let's start with what is actually inside an oat.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Oats and Cholesterol",
+        "alt": "What beta-glucan really does to LDL"
+      }
+    },
+    {
+      "id": 6,
+      "bolum": "What is inside an oat",
+      "metin": "Oats contain a soluble fiber called beta-glucan. Soluble means it dissolves in water, and in your gut it forms a thick, gel-like mixture.",
+      "gorsel": "a stalk of ripe oats with drooping grains beside a small glass bowl of oats, a magnified circular inset showing a grain's cross-section with thick cell walls",
+      "baslik": {
+        "satirlar": [
+          "BETA-GLUCAN"
+        ],
+        "not": "the soluble fiber in oats"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Cholesterol travels through your bloodstream in particles. LDL is the type linked with a higher risk of heart disease, which is why lowering it is a main goal of heart-health advice.",
+      "gorsel": "a tube-shaped vessel with small red discs and a few pale yellow round particles drifting among them, a small bowl of oats sketched in the corner",
+      "baslik": {
+        "satirlar": [
+          "LDL"
+        ],
+        "not": "the cholesterol particle doctors try to lower"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "Here is how the European Food Safety Authority describes the effect. The thick gel in the small intestine reduces how much bile acid is taken back up into the body.",
+      "gorsel": "the inside of the small intestine drawn as a textbook cross-section with finger-like villi, a soft translucent oats gel layer coating the surface, small green droplets held in the gel",
+      "etiket": "EFSA · EFSA Journal · 2010"
+    },
+    {
+      "id": 9,
+      "metin": "Bile acids are made from cholesterol. So when more of them are lost, the liver uses more cholesterol to make new ones, and the LDL circulating in your blood falls.",
+      "gorsel": "a liver lobe in textbook engraving style with small green bile droplets leaving it, and a tube-shaped vessel with red discs beside it, a bowl of oats at the bottom of the page",
+      "baslik": {
+        "satirlar": [
+          "MORE BILE,",
+          "LESS LDL"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "metin": "The thickness of that gel matters. It depends on how much beta-glucan there is, how large its molecules are, and how well it dissolves. Remember that. It explains something about steel-cut, rolled and instant oats later.",
+      "gorsel": "a spoon of thick oats porridge slowly dripping back into a bowl, a thin glass of water beside it for contrast, studio-lit still life",
+      "baslik": {
+        "satirlar": [
+          "THICK GEL"
+        ],
+        "not": "viscosity depends on amount, size and solubility"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Regulators noticed this decades ago. In 1997, the US Food and Drug Administration approved a health claim linking at least three grams a day of oat beta-glucan with a lower risk of heart disease.",
+      "gorsel": "an antique government office desk with a rubber stamp, an inkwell and a box of oats with a plain blank front, a quill pen resting beside it",
+      "baslik": {
+        "satirlar": [
+          "FDA · 1997"
+        ],
+        "vurgu": "3 g",
+        "not": "of oat beta-glucan a day"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "In 2010, the European Food Safety Authority reviewed 22 references submitted in support of the claim, including three meta-analyses and 19 randomized trials, and concluded that oat beta-glucan lowers LDL cholesterol at three grams a day.",
+      "gorsel": "a European library table with a neat stack of bound journals with blank covers and a bowl of oats on top of a closed folder, an oil lamp beside them",
+      "etiket": "EFSA · EFSA Journal · 2010"
+    },
+    {
+      "id": 13,
+      "metin": "Where does three grams come from? Health Canada's review says it was the lowest daily amount seen to work in early trials. It is a practical benchmark, not a magic line.",
+      "gorsel": "a kitchen scale with a small pile of oats on its pan and a measuring spoon beside it, a bowl of oats behind",
+      "baslik": {
+        "satirlar": [
+          "WHY",
+          "THREE GRAMS?"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "bolum": "What the studies found",
+      "tip": "kart",
+      "metin": "Now the key question. How big is the effect in real people?",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "How big is the effect?",
+        "alt": "Two meta-analyses and one trial"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "A team led by Whitehead pooled 28 randomized controlled trials. Participants ate at least three grams of oat beta-glucan a day, for between two and twelve weeks, and were compared with control diets.",
+      "gorsel": "a researcher's desk with a stack of folders with blank covers, an open notebook with blank lines and a bowl of oats beside a pair of round eyeglasses",
+      "etiket": "Whitehead et al. · Am J Clin Nutr · 2014"
+    },
+    {
+      "id": 16,
+      "tip": "grafik",
+      "metin": "Compared with control diets, LDL cholesterol was lower by 0.25 millimoles per liter, which is about ten milligrams per deciliter. Total cholesterol was lower by 0.30.",
+      "grafik": {
+        "baslik": "How much lower cholesterol was",
+        "alt": "At least 3 g/day oat beta-glucan vs control, change in mmol/L",
+        "cubuklar": [
+          {
+            "etiket": "LDL",
+            "deger": 0.25,
+            "metin": "−0.25"
+          },
+          {
+            "etiket": "Total",
+            "deger": 0.3,
+            "metin": "−0.30"
+          }
+        ],
+        "kaynak": "Whitehead et al., Am J Clin Nutr 2014 · meta-analysis of 28 randomized trials"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "HDL, the so-called good cholesterol, and triglycerides, another type of blood fat, did not change significantly. So the effect is concentrated on LDL and total cholesterol.",
+      "gorsel": "a bowl of oats on the left and a simple balance scale on the right holding a pale yellow particle on one pan and nothing on the other, the scale level and calm"
+    },
+    {
+      "id": 18,
+      "metin": "The benefit was larger in people who started with higher LDL. If your cholesterol is already low, you may see a smaller change.",
+      "gorsel": "two tall glass cylinders filled with pale yellow beads to different heights, a bowl of oats standing in front of the taller cylinder",
+      "baslik": {
+        "satirlar": [
+          "HIGHER START,",
+          "BIGGER DROP"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "A larger analysis in 2016, by Ho, John Sievenpiper and colleagues, pooled 58 trials with nearly four thousand participants. The median dose was three and a half grams a day, for a median of six weeks.",
+      "gorsel": "a long wooden library shelf with many bound volumes with blank spines, a bowl of oats on a reading table in front of it",
+      "etiket": "Ho et al. · Br J Nutr · 2016",
+      "baslik": {
+        "satirlar": [
+          "58 TRIALS"
+        ],
+        "vurgu": "3,974",
+        "not": "participants pooled"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "LDL came out lower by 0.19 millimoles per liter, about seven milligrams per deciliter. That is slightly smaller than the first analysis, but it points the same way. A different team, a larger set of trials, and the same direction.",
+      "gorsel": "a bowl of oats beside a short glass cylinder holding fewer pale yellow beads, next to a taller empty cylinder outline drawn in thin dashed lines",
+      "etiket": "Ho et al. · Br J Nutr · 2016",
+      "baslik": {
+        "satirlar": [
+          "ABOUT",
+          "–7 MG/DL"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "To see what one trial looks like, take a University of Minnesota study from 2007, led by Queenan and Slavin. Seventy-five adults with high cholesterol took six grams a day of concentrated oat beta-glucan, or a placebo of dextrose, for six weeks.",
+      "gorsel": "two identical small glass jars on a laboratory bench, one holding pale oats powder and one holding white powder, a bowl of oats and a measuring spoon beside them",
+      "etiket": "Queenan et al. · Nutr J · 2007"
+    },
+    {
+      "id": 22,
+      "metin": "LDL fell by about 0.3 millimoles per liter in the oat group, around twelve milligrams per deciliter, and barely moved in the placebo group. The difference between the groups was statistically significant, though the study was small.",
+      "gorsel": "two glass cylinders side by side, the first with pale yellow beads at a low level and the second nearly full, a bowl of oats in front of the first cylinder",
+      "etiket": "Queenan et al. · Nutr J · 2007",
+      "baslik": {
+        "satirlar": [
+          "OAT FIBER",
+          "VS PLACEBO"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What do these numbers mean, and what don't they show?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Real, but modest",
+        "alt": "What the evidence can and cannot say"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "A drop of seven to ten milligrams per deciliter is real, but modest. In the early regulatory estimates, three grams of beta-glucan was expected to lower LDL by roughly eight percent. That is a small step, not a leap, which is why oats are best seen as one piece of a heart-healthy pattern.",
+      "gorsel": "a small bowl of oats on a wooden table beside a modest stack of three oat cookies, soft side light, calm and plain",
+      "baslik": {
+        "satirlar": [
+          "MODEST,",
+          "NOT MAGIC"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "It is also a change in a blood test, not in heart attacks. These analyses measured cholesterol levels. Lower LDL is linked with lower heart risk, but these trials were not built to count heart attacks.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes and a bowl of oats, a brass microscope in the background"
+    },
+    {
+      "id": 26,
+      "metin": "The quality of the evidence has limits too. In the 2016 analysis, results varied widely between trials, and only nine of the 58 were rated higher quality. That matters, because weaker trials can exaggerate or hide an effect.",
+      "gorsel": "a row of fifty-eight small identical oats bowls in tidy rows seen from above, nine of them drawn larger and with a thin gold rim",
+      "etiket": "Ho et al. · Br J Nutr · 2016",
+      "baslik": {
+        "satirlar": [
+          "9 OF 58"
+        ],
+        "not": "trials rated higher quality"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Most trials were short, between two and twelve weeks in the first analysis. So we know oats lower LDL in the short term. Long-term effects are less certain, because long trials of daily oat eating with cholesterol measured throughout are scarce.",
+      "gorsel": "a wall calendar page with a few days crossed off beside a bowl of oats, an antique pocket watch resting on the page"
+    },
+    {
+      "id": 28,
+      "metin": "And oats are not a replacement for treatment. If you take a statin or another cholesterol medicine, oats are something to eat alongside it, not instead of it. Talk to your doctor before changing any medication.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a bowl of oats beside a small pill organizer",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "bolum": "Which oats, how much",
+      "tip": "kart",
+      "metin": "So how do you actually reach three grams? And does the type of oat matter?",
+      "kart": {
+        "ust": "THE BOWL",
+        "baslik": "How much, which oats?",
+        "alt": "Steel-cut · Rolled · Instant · Overnight"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "In a 2014 trial at the Pennington Biomedical Research Center, a serving of oatmeal made from old-fashioned or instant oats supplied about 1.6 grams of beta-glucan. That study was funded by the cereal maker PepsiCo, so treat the details with care.",
+      "gorsel": "two bowls of oatmeal on a table, one made from old-fashioned oats with visible flakes and one smooth instant oats, a spoon in each",
+      "etiket": "Rebello et al. · Nutr J · 2014",
+      "baslik": {
+        "satirlar": [
+          "1.6 G",
+          "PER SERVING"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "That means roughly two servings a day to reach three grams. One bowl at breakfast gets you about halfway. Brands and serving sizes differ, so check the package for beta-glucan or soluble fiber.",
+      "gorsel": "two bowls of cooked oats side by side, one in morning light by a window and one on a late afternoon table, a small kitchen clock between them",
+      "baslik": {
+        "satirlar": [
+          "ABOUT TWO",
+          "BOWLS"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Now the question people ask most. Steel-cut, rolled or instant? Health Canada describes rolled oats as whole oat groats that are steamed, cut, rolled and flaked, and it sets a minimum beta-glucan content for them.",
+      "gorsel": "a heap of whole oat groats, a heap of steel-cut oats and a heap of flat rolled oats on a wooden board in a neat row of three, a small scoop in each"
+    },
+    {
+      "id": 33,
+      "metin": "Instant oats are processed further. Processing can change how thick the beta-glucan gel gets, which is the detail we flagged earlier.",
+      "gorsel": "a close-up of finely flaked instant oats in a bowl with hot water being poured over them, steam rising",
+      "baslik": {
+        "satirlar": [
+          "PROCESSING",
+          "AND GEL"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "But in the 2014 trial, old-fashioned and instant oatmeal supplied the same 1.6 grams of beta-glucan. Instant oatmeal actually produced the thickest meal at the start.",
+      "gorsel": "two spoons of porridge held over a bowl, one lifting a thick clump of oats and the other a looser spoonful, bowls of oats beneath each",
+      "etiket": "Rebello et al. · Nutr J · 2014"
+    },
+    {
+      "id": 35,
+      "metin": "That trial measured fullness, not cholesterol. And we could not find any study that compared steel-cut, rolled and instant oats head to head on LDL. So nobody can honestly say one lowers cholesterol more.",
+      "gorsel": "three bowls of oats under three small glass domes on a laboratory bench, a single empty notebook with blank pages open in front of them",
+      "baslik": {
+        "satirlar": [
+          "NO HEAD-TO-HEAD",
+          "TRIAL"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "The practical rule is simple. Pick the oats you will actually eat every day. Plain steel-cut, rolled or instant are all reasonable, and flavored packets deserve a glance at the sugar on the package.",
+      "gorsel": "a kitchen shelf with three jars of oats, steel-cut, rolled and instant, and a single paper packet of flavored oatmeal lying on its side with a plain blank front"
+    },
+    {
+      "id": 37,
+      "metin": "What about overnight oats? Soaking rolled oats in milk or yogurt in the fridge is popular, but we found no trial testing it on cholesterol. So it is a convenient way to eat oats, not a proven different one.",
+      "gorsel": "a glass jar of overnight oats with a creamy layer, standing in an open refrigerator shelf next to a bottle of milk, a spoon beside the jar",
+      "baslik": {
+        "satirlar": [
+          "OVERNIGHT",
+          "OATS"
+        ],
+        "not": "no cholesterol trial found"
+      }
+    },
+    {
+      "id": 38,
+      "bolum": "What goes on top",
+      "tip": "kart",
+      "metin": "And now, the toppings.",
+      "kart": {
+        "ust": "THE TOPPINGS",
+        "baslik": "What goes on top",
+        "alt": "Sugar is the thing to watch"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "First, a correction to a popular idea. We found no study showing that toppings cancel the fiber's effect on LDL. The trouble is something else.",
+      "gorsel": "a bowl of plain oats on a table with a spoon of dried fruit hovering above it, a small honey jar and a fruit bowl behind"
+    },
+    {
+      "id": 40,
+      "metin": "The trouble is sugar. The American Heart Association suggests no more than six teaspoons of added sugar a day for women, and nine for men. Brown sugar, syrup and sweetened packets can use that up fast.",
+      "gorsel": "a bowl of oats with a heaped spoon of brown sugar, a jar of syrup tipped over it and a row of six small sugar cubes on the table",
+      "etiket": "American Heart Association",
+      "baslik": {
+        "satirlar": [
+          "ADDED SUGAR"
+        ],
+        "vurgu": "6 · 9",
+        "not": "teaspoons a day, women · men"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "So a bowl of oats buried in sweetener is a different meal from plain oats, even though the fiber is the same. The sugar is the thing to watch, not the oats.",
+      "gorsel": "two bowls of oats side by side, one plain with a spoon and one heaped with sweet syrup and sugar, both on the same wooden table"
+    },
+    {
+      "id": 42,
+      "metin": "Toppings that add flavor without added sugar are easy. Berries, sliced banana, chopped nuts, cinnamon, or a spoonful of plain yogurt.",
+      "gorsel": "a bowl of oats topped with fresh berries, banana slices and chopped nuts, a small bowl of plain yogurt and a cinnamon stick nearby",
+      "baslik": {
+        "satirlar": [
+          "FLAVOR,",
+          "NOT SUGAR"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So here are four practical ways to use all this.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Four practical ways",
+        "alt": "Three grams · Daily · Whole plate · Gut"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "One. Aim for about three grams of beta-glucan a day. For many people that is roughly two servings of oatmeal, and it can be split, for example a bowl at breakfast and another later in the day.",
+      "gorsel": "two bowls of oats, one beside a coffee cup in morning light and the other on a late afternoon table beside a teapot",
+      "baslik": {
+        "satirlar": [
+          "ONE:",
+          "3 GRAMS"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Two. Be consistent. In the trials, the effects were measured after weeks of daily use, so think of oats as a daily habit rather than an occasional bowl.",
+      "gorsel": "a wall calendar with a bowl of oats on a table in front of it, each day neatly crossed off with a small pencil drawn beside it",
+      "baslik": {
+        "satirlar": [
+          "TWO:",
+          "EVERY DAY"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Three. Keep the rest of your plate in mind. The FDA claim is worded around oats as part of a diet low in saturated fat and cholesterol, not as a cure for a rich diet.",
+      "gorsel": "a dinner plate with grilled fish, steamed green beans and a small scoop of cooked oats pilaf, a bowl of oats beside the plate",
+      "baslik": {
+        "satirlar": [
+          "THREE:",
+          "WHOLE PLATE"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Four. Notice how your gut feels. In the Minnesota trial, people taking the oat fiber reported more gas, so a smaller portion is a sensible place to begin.",
+      "gorsel": "a small bowl with a modest portion of oats and a large spoon resting beside it, a glass of water on the table",
+      "baslik": {
+        "satirlar": [
+          "FOUR:",
+          "START SMALL"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "One more safety note. If you have high cholesterol, take cholesterol medicine, or have a heart condition, keep taking your treatment and ask your doctor how oats fit in. Oats are food, not a prescription.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a bowl of oats, a red heart symbol drawn small on the notebook cover",
+      "baslik": {
+        "satirlar": [
+          "TALK TO",
+          "YOUR DOCTOR"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "And at your next cholesterol test, look for the LDL number. That is the one the oat studies actually moved.",
+      "gorsel": "a clipboard with a blank sheet beside a bowl of oats and a pen, a stethoscope curled behind them"
+    },
+    {
+      "id": 50,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Real, modest, daily",
+        "alt": "About 3 grams of oat beta-glucan a day"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "In pooled analyses of randomized trials, about three grams a day of oat beta-glucan lowered LDL cholesterol by roughly seven to ten milligrams per deciliter.",
+      "gorsel": "the opening bowl of oats porridge on the wooden table with the wooden spoon, a red heart symbol drawn small beside it"
+    },
+    {
+      "id": 52,
+      "metin": "It works by forming a gel in the gut that helps your body lose bile acids made from cholesterol. The effect is modest, and may be larger when LDL starts high.",
+      "gorsel": "the small intestine in textbook cross-section with an oats gel layer on the villi, a bowl of oats sketched in the corner"
+    },
+    {
+      "id": 53,
+      "metin": "Steel-cut, rolled and instant oats have not been compared on cholesterol, and overnight oats have not been tested. The toppings to watch are the sugary ones.",
+      "gorsel": "three bowls of oats in a row, steel-cut, rolled and instant, with a jar of overnight oats behind them"
+    },
+    {
+      "id": 54,
+      "metin": "Plain oats, eaten regularly, alongside your doctor's advice. A small daily habit with real, if modest, evidence. If you enjoy oats, there is good reason to keep eating them.",
+      "gorsel": "a bowl of oats topped with berries on a sunlit breakfast table, a spoon resting on the rim, a red heart symbol drawn small in the corner"
+    },
+    {
+      "id": 55,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
