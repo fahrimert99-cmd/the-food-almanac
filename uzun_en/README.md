@@ -69,6 +69,15 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 - **Analiz:** Kanal Analizi iş akışı her pazartesi YouTube Analytics verisini `analiz/<tarih>.json` dosyasına
   yazar: ülke, trafik kaynağı, abone durumu, izleyici tutma. Gelir verisi alınmaz. Hemen çalıştırmak için
   `analiz/tetik.json` içindeki sayıyı artırın.
+- **Instagram Reels:** YouTube'da yayınlanan Shorts'lar günde en çok bir tane Reels olarak paylaşılır.
+  - **Kuyruk:** `reels.yml` her gün 12:23 UTC'de çalışır (`araclar/reels.py`).
+    - Yayınlanmış ve henüz paylaşılmamış en eski Shorts'u seçer.
+    - Videoyu Instagram koşullarına göre yeniden kodlar.
+    - Videoyu `reels-medya` dalına ve `reels.xml` beslemesine koyar.
+    - Kaydı `uzun_en/reels.json` dosyasına yazar.
+  - **Yayın:** Make senaryosu "Food Almanac – Instagram Reels" beslemeyi her gün 14:00 UTC'de okur ve yeni öğeyi
+    yayınlar (Instagram for Business → Create a reel post).
+  - **Hemen kuyruğa almak:** `reels_islem.json` içindeki sayıyı artırın. Günde birden fazla Reels eklenmez.
 - **Ayarlar** (Settings → Variables, isteğe bağlı):
 
   | Değişken | Ne işe yarar |
