@@ -1,5 +1,5 @@
 {
-  "aktif": "oats-cholesterol",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -33,7 +33,7 @@
     },
     "oats-cholesterol": {
       "slot": "2026-10-27T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-22T08:09:28Z",
       "sahne_deneme": 0
     }
