@@ -7,9 +7,10 @@
 
 Yayın: marka.json -> yayin.gunler / yayin.saat_utc (varsayılan Salı ve Cuma 14:00 UTC).
 Üretim, slottan en çok URETIM_ONCE saat önce başlar (tek seferlik erken başlatma: calistir.json -> "uretim_once_saat"). Aşamalar: senaryo -> varlik -> sahne -> render -> yuklendi.
-Önde üretim: aktif proje yoksa ve yayınlanmayı bekleyen (slotu gelecekte) video sayısı marka.json "onde_uretim_azami"dan
-(varsayılan 4) azsa, sıradaki boş slotun videosu erkenden üretilip zamanlanmış yüklenir. Slota ACIL saatten fazla
+Önde üretim: yayınlanmayı bekleyen (slotu gelecekte) video sayısı marka.json "onde_uretim_azami"dan
+(varsayılan 4; 0 = önde üretim kapalı) azsa, sıradaki boş slotun videosu erkenden üretilip zamanlanmış yüklenir. Slota ACIL saatten fazla
 varken ("onde" çıktısı) iş yalnızca Claude kotasıyla yürür: kota bitince yedek modele geçilmez, sonraki çalıştırma bekler.
+Sınıra ulaşıldıysa yarıda kalmış aktif proje de bekletilir; slota URETIM_ONCE saat kala kaldığı aşamadan devam eder.
 Slota az kaldıysa (SABLON_ESIK) ya da sahne tasarımı defalarca kesildiyse kalan sahneler otomatik şablonla çizilir;
 video yine zamanında yayınlanır.
 """
@@ -127,6 +128,12 @@ def karar(d, t):
                 O.log(f"slot kaçtı -> {v['slot']}")
         asama = v.get("asama", "senaryo")
         kalan = (slot - t).total_seconds() / 3600
+        diger = ileride(d, t) - 1                         # bu projenin dışında yayın bekleyenler
+        if (kalan > URETIM_ONCE and diger >= onde_azami()
+                and (os.environ.get("UZUN_ZORLA") or "").strip() not in ASAMALAR):
+            return None, None, v["slot"], False, (f"aktif proje {aktif} ({asama}) bekletiliyor: slota {kalan:.0f} saat, "
+                                                  f"önde {diger} video hazır (en çok {onde_azami()}); "
+                                                  f"slota {URETIM_ONCE} saat kala kaldığı yerden devam eder")
         sablon = asama == "sahne" and (kalan < SABLON_ESIK or v.get("sahne_deneme", 0) >= SAHNE_DENEME)
         if sablon:
             asama = "render"
