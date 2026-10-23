@@ -3,10 +3,13 @@ name: Instagram Reels kuyruğu (The Food Almanac)
 # Video Instagram koşullarına göre yeniden kodlanıp "reels-medya" dalına (tek commit, eski videolar silinir) ve
 # reels.xml beslemesine yazılır. Yayını Make yapar: "Food Almanac – Instagram Reels" senaryosu beslemeyi her gün 14:00 UTC'de
 # izler, yeni öğeyi Instagram'a Reels olarak gönderir. Kayıt: uzun_en/reels.json (main).
-# Tetik: her gün 12:23 UTC (Shorts'un YouTube yayınından önce), uzun_en/reels_islem.json main'e gelince ya da elle.
+# Tetik: her gün 06:23, 10:23 ve 12:23 UTC (GitHub zamanlayıcısı saatlerce gecikebiliyor ya da çalıştırmayı atlıyor;
+# günde en çok bir Reels eklendiği için fazladan çalıştırmalar bir şey yapmaz), reels_islem.json main'e gelince ya da elle.
 # KREDİ HARCANMAZ: yalnızca ffmpeg ve GitHub.
 on:
   schedule:
+    - cron: "23 6 * * *"
+    - cron: "23 10 * * *"
     - cron: "23 12 * * *"
   push:
     branches: [main]
