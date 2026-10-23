@@ -35,7 +35,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Araçlar
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+        run: bash uzun_en/araclar/apt_kur.sh ffmpeg
       - name: Medya dalı
         env:
           GH_TOKEN: ${{ github.token }}

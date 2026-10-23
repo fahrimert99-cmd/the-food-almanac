@@ -109,7 +109,7 @@ jobs:
       - name: Bağımlılıklar
         if: env.SLUG != ''
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter espeak-ng >/dev/null
+          bash uzun_en/araclar/apt_kur.sh ffmpeg fonts-inter espeak-ng
           pip install -q -r requirements.txt numpy piper-tts
           if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
             pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
