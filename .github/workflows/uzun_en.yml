@@ -293,7 +293,7 @@ jobs:
       - name: Bağımlılıklar
         if: env.DEVAM == 'true'
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng >/dev/null
+          bash uzun_en/araclar/apt_kur.sh ffmpeg espeak-ng
           pip install -q -r requirements.txt numpy piper-tts
           # Kokoro (torch CPU) yalnızca bu projenin ses motoruysa kurulur
           if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
@@ -388,7 +388,7 @@ jobs:
           cache-dependency-path: uzun_en/remotion/package-lock.json
       - name: Bağımlılıklar
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter >/dev/null
+          bash uzun_en/araclar/apt_kur.sh ffmpeg fonts-inter
           pip install -q -r requirements.txt numpy
           cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Ajanlar (kredi KULLANILMAZ)
@@ -527,7 +527,7 @@ jobs:
       - name: Bağımlılıklar
         if: env.DEVAM == 'true'
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter espeak-ng >/dev/null
+          bash uzun_en/araclar/apt_kur.sh ffmpeg fonts-inter espeak-ng
           pip install -q -r requirements.txt numpy piper-tts
           if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
             pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
