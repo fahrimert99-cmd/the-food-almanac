@@ -81,7 +81,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   yazar: ülke, trafik kaynağı, abone durumu, izleyici tutma. Gelir verisi alınmaz. Hemen çalıştırmak için
   `analiz/tetik.json` içindeki sayıyı artırın.
 - **Instagram Reels:** YouTube'da yayınlanan Shorts'lar günde en çok bir tane Reels olarak paylaşılır.
-  - **Kuyruk:** `reels.yml` her gün 12:23 UTC'de çalışır (`araclar/reels.py`).
+  - **Kuyruk:** `reels.yml` her gün 06:23, 10:23 ve 12:23 UTC'de çalışır (`araclar/reels.py`); GitHub zamanlayıcısı gecikebildiği için üç deneme var, günde yine en çok bir Reels eklenir.
     - Yayınlanmış ve henüz paylaşılmamış en eski Shorts'u seçer.
     - Videoyu Instagram koşullarına göre yeniden kodlar.
     - Videoyu `reels-medya` dalına ve `reels.xml` beslemesine koyar.
