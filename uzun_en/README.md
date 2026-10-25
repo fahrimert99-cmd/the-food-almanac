@@ -64,8 +64,8 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   sıradaki videodur.
 - **Hemen çalıştırmak:** `uzun_en/calistir.json` içindeki `tetik` sayısını artırın, ya da Actions → Run workflow.
 - **Önde üretim:** Hat boşta kaldığında sıradaki slotların videolarını önceden üretir ve YouTube'a zamanlanmış yükler.
-  - **Şu an 4** (`marka.json` → `onde_uretim_azami`, 25 Ekim 2026; 23–25 Ekim arası 0 idi): yayın bekleyen 4 video
-    olana kadar (yaklaşık 2 hafta) üretim sürer. 0 yapılırsa her video slotuna 72 saat kala üretilir. Görsel kotası (iki ücretsiz Cloudflare hesabı) günde yaklaşık
+  - **Şu an 6** (`marka.json` → `onde_uretim_azami`, 25 Ekim 2026): yayın bekleyen 6 video olana kadar (yaklaşık
+    3 hafta) üretim kota oldukça sürer; kota bitince bekler. 0 yapılırsa her video slotuna 72 saat kala üretilir. Görsel kotası (iki ücretsiz Cloudflare hesabı) günde yaklaşık
     2 uzun video taşır; yüksek sınır kotayı tüketip sonraki videoları bekletebilir.
   - Sınıra ulaşıldıysa yarıda kalmış video da bekletilir; slotuna 72 saat kala kaldığı aşamadan devam eder.
   - Slota 72 saatten fazla varken iş yalnızca Claude kotasıyla yürür; kota bitince yedek modele geçilmez, sonraki
