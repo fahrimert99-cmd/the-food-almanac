@@ -1,0 +1,17 @@
+{
+  "baslik": ["VINEGAR SHOT", "SAFE?"],
+  "baslik_yt": "Apple Cider Vinegar: The Safety Points Nobody Mentions",
+  "aciklama": "Undiluted vinegar can burn, and acid can wear down teeth. Here are the safety points to know before making apple cider vinegar a daily habit.",
+  "parcalar": [
+    {"sahne": 41, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 39, "cumleler": [1],
+     "baslik": {"satirlar": ["TEETH", "IN ACID"], "vurgu": "190", "not": "teeth, 9 acidic liquids"},
+     "etiket": "Maladkar et al. · Eur J Dent · 2022"},
+    {"sahne": 39, "cumleler": [2], "baslik": {"satirlar": ["MOST MINERAL", "LOSS"]}, "etiket": "Maladkar et al. · Eur J Dent · 2022"},
+    {"sahne": 40, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 40, "cumleler": [1], "baslik": {"satirlar": ["DILUTE IT,", "DON'T SIP"]}, "etiket": null},
+    {"sahne": 43, "cumleler": [1]},
+    {"sahne": 43, "cumleler": [2]},
+    {"sahne": 44, "cumleler": [1], "baslik": {"satirlar": ["ASK YOUR", "DOCTOR FIRST"]}, "etiket": null}
+  ]
+}
