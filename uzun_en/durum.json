@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "turmeric-knee-arthritis",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -59,6 +59,12 @@
       "slot": "2026-11-10T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-10-25T16:52:02Z",
+      "sahne_deneme": 0
+    },
+    "turmeric-knee-arthritis": {
+      "slot": "2026-11-13T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-10-25T18:32:05Z",
       "sahne_deneme": 0
     }
   }
