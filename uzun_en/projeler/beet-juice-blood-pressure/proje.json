@@ -1,0 +1,636 @@
+{
+  "slug": "beet-juice-blood-pressure",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Beet Juice and Blood Pressure: What Studies Show",
+  "yorum": "Have you ever tried beet juice, and did you notice any change in your blood pressure readings at home? Do you use antibacterial mouthwash, and did you know it could matter here?",
+  "aciklama_giris": "Across 22 trials pooled in a 2017 meta-analysis, people who drank beet juice had systolic blood pressure about 3.5 points lower than comparison groups. Results in patients with high blood pressure are mixed: one four-week trial found a drop of about 8 points, while a one-week trial in treated patients found none.\n\nIn this video we look at how dietary nitrate becomes nitric oxide with help from bacteria in your mouth, what the main trials found, how long one glass lasts, why antibacterial mouthwash may blunt the effect, the kidney stone caution, and five practical, safe ways to approach it.",
+  "kaynaklar": [
+    "Bahadoran Z, Mirmiran P, Kabir A, Azizi F, Ghasemi A. The Nitrate-Independent Blood Pressure–Lowering Effect of Beetroot Juice: A Systematic Review and Meta-Analysis. Advances in Nutrition. 2017;8(6):830–838. DOI 10.3945/an.117.016717.",
+    "Kapil V, Khambata RS, Robertson A, Caulfield MJ, Ahluwalia A. Dietary nitrate provides sustained blood pressure lowering in hypertensive patients: a randomized, phase 2, double-blind, placebo-controlled study. Hypertension. 2015;65(2):320–327. DOI 10.1161/HYPERTENSIONAHA.114.04675.",
+    "Bondonno CP, Liu AH, Croft KD, Ward NC, Shinde S, Moodley Y, Lundberg JO, Puddey IB, Woodman RJ, Hodgson JM. Absence of an effect of high nitrate intake from beetroot juice on blood pressure in treated hypertensive individuals: a randomized controlled trial. American Journal of Clinical Nutrition. 2015;102(2):368–375. DOI 10.3945/ajcn.114.101188.",
+    "Webb AJ, Patel N, Loukogeorgakis S, et al. Acute blood pressure lowering, vasoprotective, and antiplatelet properties of dietary nitrate via bioconversion to nitrite. Hypertension. 2008;51(3):784–790. DOI 10.1161/HYPERTENSIONAHA.107.103523.",
+    "Kapil V, Haydar SMA, Pearl V, Lundberg JO, Weitzberg E, Ahluwalia A. Physiological role for nitrate-reducing oral bacteria in blood pressure control. Free Radical Biology and Medicine. 2013;55:93–100. DOI 10.1016/j.freeradbiomed.2012.11.013.",
+    "Bondonno CP, Liu AH, Croft KD, Considine MJ, Puddey IB, Woodman RJ, Hodgson JM. Antibacterial mouthwash blunts oral nitrate reduction and increases blood pressure in treated hypertensive men and women. American Journal of Hypertension. 2015;28(5):572–575. DOI 10.1093/ajh/hpu192.",
+    "National Kidney Foundation. Kidney Stones Diet and Prevention. https://www.kidney.org/node/154344"
+  ],
+  "kapak": {
+    "satirlar": [
+      "BEET JUICE",
+      "LOWERS BP?"
+    ],
+    "vurgu": "–3.55",
+    "gorsel": "a tall glass of deep red beet juice in the foreground with a whole beetroot and a halved beetroot overlapping in front of it, a sphygmomanometer cuff tucked behind the glass, large, close up and appetizing"
+  },
+  "kahraman": "beet juice",
+  "etiketler": [
+    "beet juice blood pressure",
+    "beetroot juice",
+    "beetroot nitrate",
+    "beet juice benefits",
+    "nitric oxide foods",
+    "dietary nitrate",
+    "high blood pressure",
+    "antibacterial mouthwash",
+    "kidney stones oxalate",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "mmHg": "millimeters of mercury",
+    "mL": "milliliters"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "What the trials add up to",
+      "metin": "Across 22 trials, beet juice drinkers had systolic blood pressure about three and a half points lower than comparison groups.",
+      "gorsel": "a tall glass of deep red beet juice beside a whole beetroot and a halved beetroot on a wooden kitchen table, a sphygmomanometer cuff coiled behind",
+      "etiket": "Bahadoran et al. · Adv Nutr · 2017",
+      "baslik": {
+        "satirlar": [
+          "22 TRIALS"
+        ],
+        "vurgu": "–3.55",
+        "not": "points of systolic pressure"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But one trial in treated patients found no effect at all, and an everyday bathroom habit may cancel part of the benefit.",
+      "gorsel": "a glass of beet juice on a bathroom shelf next to a bottle of mouthwash and a toothbrush in a cup, soft morning light",
+      "baslik": {
+        "satirlar": [
+          "THE CATCH"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what to expect, how long it lasts, and who should be careful.",
+      "gorsel": "a glass of beet juice on a table with a folded napkin, a whole beetroot and a small clock with a blank face beside it"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what a beet actually brings to the table.",
+      "gorsel": "a heap of whole beetroots with leafy stems on a wooden crate, one halved beetroot showing concentric rings, a jug of beet juice beside it"
+    },
+    {
+      "id": 5,
+      "metin": "Beets are a deep red root vegetable that is naturally rich in dietary nitrate, a compound plants take up from the soil. Leafy greens contain it too.",
+      "gorsel": "a whole beetroot growing in dark soil with its roots reaching down, small dotted lines suggesting nitrate rising into the leaves, a glass of beet juice at the edge of the soil",
+      "baslik": {
+        "satirlar": [
+          "BEETS",
+          "ARE RICH IN",
+          "NITRATE"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "The amount varies a lot. Soil, fertilizer and harvest time all matter. Even bottled juices and supplements can differ widely in how much nitrate they actually hold.",
+      "gorsel": "three bottles of beet juice of different sizes on a shelf next to a small brass kitchen scale, a whole beetroot in front",
+      "baslik": {
+        "satirlar": [
+          "NO TWO",
+          "BOTTLES ALIKE"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "bolum": "How beets reach your arteries",
+      "tip": "kart",
+      "metin": "So how could a vegetable affect your arteries? It starts with a short chain reaction, and your mouth is part of it.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "From beet to nitric oxide",
+        "alt": "Nitrate · Mouth bacteria · Nitrite"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "You swallow the juice, and the nitrate is absorbed. Your salivary glands then send some of it back into your mouth, so levels in saliva climb sharply.",
+      "gorsel": "a glass of beet juice beside a simple engraving of a head in profile, with a small red stream travelling from the throat up to the mouth, salivary glands softly shaded",
+      "baslik": {
+        "satirlar": [
+          "BACK TO",
+          "THE MOUTH"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "metin": "There, bacteria that live on your tongue turn nitrate into nitrite. This is the step that makes the whole pathway work.",
+      "gorsel": "a magnified circular inset of a tongue surface with tiny rod-shaped bacteria, a glass of beet juice drawn in the corner connected by a dashed line",
+      "baslik": {
+        "satirlar": [
+          "NITRATE",
+          "→ NITRITE"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "metin": "Swallowed nitrite can then become nitric oxide, a gas that tells artery walls to relax. Wider arteries mean less pressure. Later, I'll show why that mouth step matters for your bathroom shelf.",
+      "gorsel": "a tube-shaped vessel with small red discs, its wall relaxing and widening, a small glass of beet juice drawn beside it, softly glowing nitric oxide drawn as pale blue puffs",
+      "baslik": {
+        "satirlar": [
+          "NITRIC OXIDE",
+          "RELAXES",
+          "ARTERIES"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "metin": "A London team led by Amrita Ahluwalia tested this in 2008. In 14 healthy volunteers, about 500 milliliters of beet juice lowered systolic pressure by around 10 points at its lowest, compared with water.",
+      "gorsel": "a research room with a table holding a large glass of beet juice, a jug of water, and an upper arm cuff on a cushion, a window behind",
+      "etiket": "Webb et al. · Hypertension · 2008",
+      "baslik": {
+        "satirlar": [
+          "ONE GLASS,",
+          "14 VOLUNTEERS"
+        ],
+        "vurgu": "–10.4",
+        "not": "systolic points at the lowest"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "In a smaller test of six people, those who spat out their saliva instead of swallowing it did not get the pressure drop. That points to the mouth as an important step.",
+      "gorsel": "a small white bowl on a table with a glass of beet juice beside it, a folded napkin, a spoon, a single whole beetroot",
+      "etiket": "Webb et al. · Hypertension · 2008",
+      "baslik": {
+        "satirlar": [
+          "NO SALIVA,",
+          "NO DROP"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "bolum": "What the trials found",
+      "tip": "kart",
+      "metin": "One small experiment is not enough. So what happens when researchers pool many trials together?",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Pooling the trials",
+        "alt": "Meta-analysis · 22 trials"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "In 2017, Zahra Bahadoran and colleagues pooled 22 trials of beetroot juice, with about 650 people in the beet juice groups. They found systolic pressure about three and a half points lower, and diastolic about one and a third points lower.",
+      "gorsel": "a stack of study folders tied with string on a desk, a glass of beet juice and a magnifying glass on top, a whole beetroot beside them",
+      "etiket": "Bahadoran et al. · Adv Nutr · 2017",
+      "baslik": {
+        "satirlar": [
+          "22 TRIALS",
+          "POOLED"
+        ],
+        "vurgu": "–3.55",
+        "not": "systolic points"
+      }
+    },
+    {
+      "id": 15,
+      "tip": "grafik",
+      "metin": "The dose seemed to matter. With 70 to 140 milliliters a day the drop was about two and a half points, with 250 milliliters about three, and with 500 milliliters nearly five.",
+      "grafik": {
+        "baslik": "Systolic drop by daily dose of beet juice",
+        "alt": "Points of systolic pressure lower than comparison groups",
+        "cubuklar": [
+          {
+            "etiket": "70–140 mL",
+            "deger": 2.37,
+            "metin": "−2.4"
+          },
+          {
+            "etiket": "250 mL",
+            "deger": 3.22,
+            "metin": "−3.2"
+          },
+          {
+            "etiket": "500 mL",
+            "deger": 4.78,
+            "metin": "−4.8"
+          }
+        ],
+        "kaynak": "Bahadoran et al., Adv Nutr 2017 · 22 trials, mostly short, varied populations"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Duration mattered too. Trials lasting two weeks or longer averaged about five points lower, while shorter ones averaged under three.",
+      "gorsel": "a wall calendar with a glass of beet juice standing on the desk below it, two weeks marked with small red circles, a whole beetroot beside the glass",
+      "baslik": {
+        "satirlar": [
+          "2 WEEKS",
+          "OR MORE"
+        ],
+        "vurgu": "–5.1",
+        "not": "systolic points in longer trials"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "That is a modest change, and it is not a replacement for medicine. The authors also warned that the trials varied widely, many were short, and many were designed to study exercise, not blood pressure.",
+      "gorsel": "a pair of old brass balance scales holding a glass of beet juice on one side and a small pill bottle on the other, evenly balanced",
+      "baslik": {
+        "satirlar": [
+          "MODEST,",
+          "NOT MAGIC"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Interestingly, products with less nitrate sometimes showed bigger drops. The authors suggested that something else in beets may help too, but that idea is still only a hypothesis.",
+      "gorsel": "a halved beetroot with fine concentric rings drawn under a magnifying glass, a small glass of beet juice and a question mark made of curled beet stems",
+      "baslik": {
+        "satirlar": [
+          "SOMETHING",
+          "ELSE IN BEETS?"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "bolum": "People with high blood pressure",
+      "tip": "kart",
+      "metin": "Pooled averages mix healthy people and patients. What about people who actually have high blood pressure?",
+      "kart": {
+        "ust": "THE KEY TRIALS",
+        "baslik": "Patients with hypertension",
+        "alt": "Two trials · two different answers"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "In a 2014 trial in London, 68 adults with high blood pressure were randomly assigned to drink 250 milliliters of beet juice a day for four weeks. Another four weeks used a placebo juice with the nitrate removed. Half of them were already taking blood pressure medicine.",
+      "gorsel": "two identical glasses of dark juice on a clinic table, one glass of beet juice and one glass of pale placebo juice, with a chair and an arm cuff on the table",
+      "etiket": "Kapil et al. · Hypertension · 2015",
+      "baslik": {
+        "satirlar": [
+          "68 ADULTS,",
+          "4 WEEKS"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "tip": "grafik",
+      "metin": "Compared with placebo, the beet juice lowered the top number by about eight points, whether measured over twenty-four hours or at home. The bottom number fell by about four to five points.",
+      "grafik": {
+        "baslik": "Pressure lower on beet juice than on placebo",
+        "alt": "Points lower after 4 weeks of 250 mL beet juice a day",
+        "cubuklar": [
+          {
+            "etiket": "24-hour top",
+            "deger": 7.7,
+            "metin": "−7.7"
+          },
+          {
+            "etiket": "Home top",
+            "deger": 8.1,
+            "metin": "−8.1"
+          },
+          {
+            "etiket": "24-hour bottom",
+            "deger": 5.2,
+            "metin": "−5.2"
+          },
+          {
+            "etiket": "Home bottom",
+            "deger": 3.8,
+            "metin": "−3.8"
+          }
+        ],
+        "kaynak": "Kapil et al., Hypertension 2015 · 64 analysed adults with hypertension, 4 weeks"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "The drop did not fade over the four weeks, and pressure drifted back toward baseline after the juice stopped. A measure of artery stiffness, pulse wave velocity, also improved a little. That is encouraging, though it is still a small trial.",
+      "gorsel": "a glass of beet juice beside an old pocket watch and a tube-shaped vessel with small red discs flowing evenly, a whole beetroot at the side",
+      "baslik": {
+        "satirlar": [
+          "SUSTAINED,",
+          "WHILE DRINKING"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Some honesty here. It was four weeks in one centre, and one author is a director of a company that sells nitrate products. A longer, independent trial would be reassuring.",
+      "gorsel": "a quiet laboratory bench with a glass of beet juice, a closed notebook and a small row of sample vials, a window with soft light"
+    },
+    {
+      "id": 24,
+      "metin": "Now the other side. In a separate trial by Bondonno and colleagues, 27 people with treated high blood pressure drank nitrate-rich beet juice for one week, and nitrate-depleted juice for another.",
+      "gorsel": "a kitchen table with two small bottles, one of beet juice and one of paler juice, a week calendar and a weekly pill organizer beside them",
+      "etiket": "Bondonno et al. · Am J Clin Nutr · 2015",
+      "baslik": {
+        "satirlar": [
+          "27 PEOPLE,",
+          "1 WEEK"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Their nitrate levels rose about threefold, so the juice was absorbed. But home and twenty-four hour blood pressure showed no difference from placebo.",
+      "gorsel": "a glass of beet juice next to a home pressure monitor with a blank screen, a flat straight line of small stones laid out on the table",
+      "baslik": {
+        "satirlar": [
+          "NO",
+          "DIFFERENCE"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Possible reasons include differences in starting pressure, in medicines, or in the time of day the juice is taken. But that question is still unresolved.",
+      "gorsel": "a bedside table with a glass of beet juice, a small alarm clock with a blank face and a morning window next to an evening window, a whole beetroot"
+    },
+    {
+      "id": 27,
+      "metin": "So the fair summary is this. Pooled results lean toward a small drop, while trials in patients disagree. Your own result could be bigger, smaller, or absent.",
+      "gorsel": "a glass of beet juice in the middle of a table with three small paths of pebbles leading away from it in different directions, soft light",
+      "baslik": {
+        "satirlar": [
+          "BIGGER,",
+          "SMALLER, OR NONE"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "bolum": "How long one glass lasts",
+      "tip": "kart",
+      "metin": "Many people ask how long one glass keeps working. The timing studies are worth a look.",
+      "kart": {
+        "ust": "TIMING",
+        "baslik": "How long it lasts",
+        "alt": "Hours · Days · Weeks"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "In the 2008 volunteers, systolic pressure was lowest about two and a half hours after drinking, and diastolic about three hours after.",
+      "gorsel": "an antique clock with a blank face beside a glass of beet juice, a gentle hill of small red stones sloping down and back up",
+      "etiket": "Webb et al. · Hypertension · 2008",
+      "baslik": {
+        "satirlar": [
+          "LOWEST AT",
+          "2.5 HOURS"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "By twenty-four hours, systolic pressure was still about four points below the water day, but in that small group the difference was no longer statistically clear. That is one reason the trials used daily doses.",
+      "gorsel": "a morning kitchen scene with an empty glass stained red from beet juice on a window sill, an alarm clock and a whole beetroot, sunrise light",
+      "baslik": {
+        "satirlar": [
+          "NEXT DAY:",
+          "FADING"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "In the four-week patient trial, the effect held for as long as people kept drinking it, and pressure drifted back toward baseline after they stopped. That suggests the benefit is something you maintain, not something you bank.",
+      "gorsel": "a row of seven small glasses of beet juice lined up on a long wooden shelf, the last few glasses empty, a whole beetroot at the end of the row"
+    },
+    {
+      "id": 32,
+      "bolum": "The mouthwash catch",
+      "tip": "kart",
+      "metin": "Now for that bathroom habit I mentioned earlier. Remember where the key step happens.",
+      "kart": {
+        "ust": "THE CATCH",
+        "baslik": "The mouthwash problem",
+        "alt": "Bacteria · Nitrite · Pressure"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Bacteria in your mouth turn nitrate into nitrite. Antibacterial mouthwash is designed to reduce bacteria. So what happens to the pathway?",
+      "gorsel": "a bottle of mouthwash and a small glass of beet juice facing each other on a bathroom counter, a toothbrush in a cup between them",
+      "baslik": {
+        "satirlar": [
+          "MOUTHWASH",
+          "VS BACTERIA"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "In a 2013 study, 19 healthy young adults used an antiseptic mouthwash twice a day for seven days. Their oral nitrite production dropped by about ninety percent, and nitrite in the plasma fell by about a quarter.",
+      "gorsel": "a bathroom sink with a small cup, a bottle of mouthwash and a toothbrush, a magnified circular inset of rod-shaped bacteria fading away",
+      "etiket": "Kapil et al. · Free Radic Biol Med · 2013",
+      "baslik": {
+        "satirlar": [
+          "–90%",
+          "ORAL NITRITE"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Their blood pressure rose, by roughly two and a half points over twenty-four hours. This study had no placebo group and no randomization, so it is a clue rather than proof.",
+      "gorsel": "an upper arm cuff on a bathroom counter beside a mouthwash bottle and a small mirror, a glass of beet juice pushed to the side"
+    },
+    {
+      "id": 36,
+      "metin": "A randomized crossover trial then tested 15 adults with treated high blood pressure, average age 65. After three days of antibacterial mouthwash, their salivary nitrite was lower and systolic pressure was 2.3 points higher than after water.",
+      "gorsel": "two cups side by side on a bathroom shelf, one holding clear water and one holding blue mouthwash, a small calendar with three days marked and a bottle of beet juice behind them",
+      "etiket": "Bondonno et al. · Am J Hypertens · 2015",
+      "baslik": {
+        "satirlar": [
+          "+2.3",
+          "SYSTOLIC POINTS"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "metin": "Notice what these studies tested. They used mouthwash alone, not beet juice plus mouthwash. But the logic fits with the spitting experiment: if the bacteria are quieted, less nitrite is made.",
+      "gorsel": "a balanced scale with a mouthwash bottle on one side and a glass of beet juice on the other, a toothbrush lying in front",
+      "baslik": {
+        "satirlar": [
+          "A CLUE,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "Based on that mechanism, and not on a direct trial, it seems sensible not to rinse with an antiseptic right around the time you drink beet juice. Ask your dentist before changing your oral care. This is a precaution, not a rule.",
+      "gorsel": "a bathroom shelf with a glass of beet juice on the left, a bottle of mouthwash set far on the right, a clock with a blank face hanging between them"
+    },
+    {
+      "id": 39,
+      "bolum": "Who should be careful",
+      "tip": "kart",
+      "metin": "Now the honest part. Who should be careful with beet juice, and what do we still not know?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Who should be careful",
+        "alt": "Kidney stones · Medicines · Limits"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "The first caution is kidney stones. The National Kidney Foundation lists beets among foods high in oxalate. People who form calcium oxalate stones may be told by their doctor or dietitian to limit such foods.",
+      "gorsel": "a sliced beetroot on a cutting board beside a glass of beet juice, a small kidney drawn as a clean textbook engraving in the corner",
+      "etiket": "National Kidney Foundation",
+      "baslik": {
+        "satirlar": [
+          "OXALATE",
+          "AND STONES"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "The authors of the 2014 hypertension trial also noted that people prone to oxalate stones may need caution with high-oxalate, high-nitrate vegetables. We found no trial that measured stones in people drinking beet juice, so this caution rests on oxalate content, not direct evidence.",
+      "gorsel": "a glass of beet juice on a table next to a small stack of closed journals and a pair of round eyeglasses, a whole beetroot in front",
+      "baslik": {
+        "satirlar": [
+          "CAUTION,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "The kidney foundation also says not to give up calcium foods unless your doctor tells you to, because calcium eaten with oxalate foods helps. And drinking enough fluid is the most basic step.",
+      "gorsel": "a glass of water, a small bowl of plain yogurt and a glass of beet juice on a breakfast table, a pitcher of water beside them"
+    },
+    {
+      "id": 43,
+      "metin": "Second, medicine. If you take blood pressure medicine, beet juice is not a replacement for it, and nothing here suggests changing it. Mention the juice to your doctor, especially if you feel dizzy or lightheaded.",
+      "gorsel": "a consultation desk with a stethoscope, a weekly pill organizer and a glass of beet juice, a closed notebook",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "metin": "Third, a harmless surprise. Beet juice can turn urine pink and stool reddish. In the patient trial, this was expected, and no serious side effects were reported.",
+      "gorsel": "a glass of beet juice on a bathroom shelf beside a roll of paper and a small hand mirror, pink ripples in the glass, a whole beetroot",
+      "baslik": {
+        "satirlar": [
+          "PINK URINE",
+          "IS EXPECTED"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Finally, the limits. The trials last weeks, not years. No one has shown that beet juice prevents heart attacks or strokes. A lower reading is a good sign, but it is not the same as fewer events, and those studies would take years.",
+      "gorsel": "a long winding road of small stones leading from a glass of beet juice toward a distant horizon with a faint hill, a whole beetroot at the start",
+      "baslik": {
+        "satirlar": [
+          "WEEKS,",
+          "NOT YEARS"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you approach this sensibly? Here are five practical points.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five practical points",
+        "alt": "Safe · Simple · Realistic"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "One. Talk to your doctor first if you take blood pressure medicine, have kidney disease, or have had kidney stones.",
+      "gorsel": "a doctor's desk with a glass of beet juice, a prescription pad with blank lines and a small model of a kidney drawn as an engraving"
+    },
+    {
+      "id": 48,
+      "metin": "Two. Start with the amount that was studied. The patient trial used 250 milliliters, about one cup, a day. Bigger doses averaged larger drops in the pooled data, but that does not prove more is safer.",
+      "gorsel": "a single measuring cup filled with beet juice to the one cup mark beside a whole beetroot, a wooden spoon, on a kitchen counter",
+      "baslik": {
+        "satirlar": [
+          "ABOUT",
+          "ONE CUP"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Three. Think in weeks, not days. The bigger effects came in trials of two weeks or more, and the benefit faded when the juice stopped.",
+      "gorsel": "a glass of beet juice on a kitchen table beside a calendar with a long row of small red dots, a whole beetroot on a plate"
+    },
+    {
+      "id": 50,
+      "metin": "Four. Mind your mouth. Skip antiseptic mouthwash around the time you drink it, and ask your dentist about your routine.",
+      "gorsel": "a glass of beet juice beside a plain toothbrush in a cup, a closed mouthwash bottle placed far at the back of the shelf"
+    },
+    {
+      "id": 51,
+      "metin": "Five. Measure at home. Check your pressure at the same time each day, and bring the readings to your doctor, so you can see whether it works for you. Home readings are what the trial itself relied on, too.",
+      "gorsel": "a home pressure monitor with a blank screen on a kitchen table next to a glass of beet juice, a notebook with blank lines and a pen",
+      "baslik": {
+        "satirlar": [
+          "MEASURE",
+          "AT HOME"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "One last point. Most trials used juice. We cannot say a plate of boiled beets or a salad gives the same drop, even though leafy greens and beets both contain nitrate. That needs more research.",
+      "gorsel": "a plate of sliced boiled beetroot and leafy greens beside a glass of beet juice, a fork resting on the plate"
+    },
+    {
+      "id": 53,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A small drop, with caveats",
+        "alt": "Beet juice and blood pressure"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Pooled trials show a small drop in systolic pressure, around three and a half points, bigger with longer use. In patients, one four-week trial found about eight points lower, and a one-week trial found none.",
+      "gorsel": "a glass of beet juice and a whole beetroot on a wooden table, an upper arm cuff coiled behind, soft kitchen light"
+    },
+    {
+      "id": 55,
+      "metin": "It works through bacteria in your mouth, so antiseptic mouthwash can blunt it. The effect peaks within hours, and fades when you stop.",
+      "gorsel": "a glass of beet juice with a simple engraving of a mouth and tongue beside it, small rod-shaped bacteria drawn in a circle, a mouthwash bottle at the side"
+    },
+    {
+      "id": 56,
+      "metin": "Beets are high in oxalate, so anyone who forms kidney stones should check with their doctor. And this is an addition to medical care, never a replacement for it.",
+      "gorsel": "a glass of beet juice and a halved beetroot on a doctor's desk beside a stethoscope, a closed notebook, warm light"
+    },
+    {
+      "id": 57,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
