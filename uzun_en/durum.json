@@ -1,5 +1,5 @@
 {
-  "aktif": "apple-cider-vinegar-blood-sugar",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -51,7 +51,7 @@
     },
     "apple-cider-vinegar-blood-sugar": {
       "slot": "2026-11-06T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-22T17:03:40Z",
       "sahne_deneme": 0
     }
