@@ -105,10 +105,17 @@ Fields:
   The closing call to action adds about 12 s; the whole Short must stay under 60 s.
 - **One image must not stay too long.** A part with more than one sentence may last at most 9 s. Single sentences of
   about 8 s are fine, but give them a strong image or a number badge.
-- **Open with the hook.** The first part is one short sentence (ideally under 5 s) that raises the question. Viewers
-  decide in the first 2 seconds.
-  - Prefer the video's own opening question.
+- **Open with the hook: the first 2 seconds decide everything.** Channel data (25 October 2026): only 18–30% of
+  people who saw our Shorts in the feed kept watching; the rest swiped away in the first seconds. Those who stayed
+  watched about 40% of the Short.
+  - The first part is one short sentence, ideally under 4 s (never over 5 s). It must hit immediately: the most
+    surprising number, a direct claim, or the viewer's own situation ("One egg a day, every day, for 32 years.").
+    Avoid slow scene-setting openers ("If you eat oatmeal to look after your heart, here is what the research shows").
+  - The hook title (`baslik`) must work on its own, with the sound off: a short question or sharp claim, ideally
+    with a number or a verdict word ("3 G A DAY?", "MYTH OR FACT?", "-10 LDL?"). Not just the food's name.
+  - The key number must be on screen by the second part (about 5 s in), as a `vurgu` badge with its source chip.
   - Avoid sentences that start with "So", "And", "But" or "That" and need earlier context.
+  - No sentence that only restates the question ("So what does the research say?") anywhere in the first 10 s.
 - **Self-contained.** Every sentence must make sense without the ones you skipped. Check pronouns ("this", "they",
   "that study") and numbers that refer back. When in doubt, choose another sentence.
 - **Stay honest.**
