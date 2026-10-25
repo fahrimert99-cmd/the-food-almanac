@@ -297,7 +297,7 @@ jobs:
           pip install -q -r requirements.txt numpy piper-tts
           # Kokoro (torch CPU) yalnızca bu projenin ses motoruysa kurulur
           if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
-            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
+            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile "preshed<3.0.14"  # preshed 3.0.14 spaCy modelini bozuyor (OverflowError, 25 Eki 2026)
           fi
       - uses: actions/cache@v4
         if: env.DEVAM == 'true'
@@ -530,7 +530,7 @@ jobs:
           bash uzun_en/araclar/apt_kur.sh ffmpeg fonts-inter espeak-ng
           pip install -q -r requirements.txt numpy piper-tts
           if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
-            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
+            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile "preshed<3.0.14"  # preshed 3.0.14 spaCy modelini bozuyor (OverflowError, 25 Eki 2026)
           fi
           cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - uses: actions/cache@v4
