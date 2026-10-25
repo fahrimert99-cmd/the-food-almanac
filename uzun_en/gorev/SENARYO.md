@@ -30,6 +30,8 @@ The prompt tells you three things:
   - every field format.
 
   Study it closely. Then write a **new** video on your topic in the same style. Do not copy its sentences.
+  Exception: its opening (scenes 1–5, with a "Welcome" card) predates the current rules. Build scenes 1–4 as described
+  in Step 3 below, not like the reference.
 - `uzun_en/marka.json` gives the channel name and audience.
 
 ## Deliverables (write only these files)
@@ -112,19 +114,24 @@ off the right edge, a number badge top right. Our first video got only 2.4% clic
 
 Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes with the current narrator voice. Use 50–64 scenes. The validator rejects anything under 10 or over 14.5 minutes (it counts about 2.59 words per second).
 
-1. **Cold open** (scenes 1–4). Most viewers decide in these first seconds whether to stay.
+1. **Cold open** (scenes 1–3, at most 60 words together, about 25 seconds). Most viewers decide here whether to stay.
+   Channel data (25 October 2026): more than half of viewers left within the first 5% of the video, and on two videos
+   the average viewer stayed only 36 seconds. Every sentence in the cold open must earn the next one.
    - Scene 1 has a `bolum` (the first chapter title).
    - The very first sentence goes straight in: it speaks to the viewer's own situation ("If you eat eggs most
-     mornings, …") or states the surprising finding. Never open with scene-setting ("Picture…", "Imagine…"): in our
-     first video 73% of viewers left within 30 seconds, before the number arrived in scene 3.
-   - Within scenes 1–2 (about the first 15 seconds), give a concrete, cited finding with its number: what was studied,
-     in whom, and what changed. Keep scenes 1–3 short, one or two sentences each.
-   - Then promise the specific practical payoff the viewer gets by the end, for example "By the end, you'll know when to
-     start walking and how long is enough." The video must deliver it.
-   - Then say what this video will answer. No hype ("you won't believe", "shocking").
-2. **Scene 5: channel card** (`"tip": "kart"`).
-   - Narration starts with "Welcome to The Food Almanac." and leads into chapter 1.
-   - `kart.ust` is "THE FOOD ALMANAC". `kart.baslik` is the video's short name (at most 32 characters). `kart.alt` is a one-line subtitle.
+     mornings, …") or states the surprising finding. Never open with scene-setting ("Picture…", "Imagine…").
+   - Scene 1 gives the concrete, cited finding with its number: what was studied, in whom, and what changed.
+   - Scene 2 opens a curiosity gap: the twist, the condition or the catch that the video resolves ("But it only
+     worked for one group, and most people get the dose wrong.").
+   - Scene 3 promises the specific practical payoff the viewer gets by the end, for example "By the end, you'll know
+     when to start walking and how long is enough." The video must deliver it.
+   - No filler that restates the question ("So what does the research really say? Let's take a look."). No hype ("you
+     won't believe", "shocking"). All three scenes are illustrated; no `kart` in the cold open.
+2. **Scene 4: channel name, then straight into chapter 1.**
+   - A normal illustrated scene (not a `kart`). One short sentence names the channel and moves on, for example
+     "This is The Food Almanac. Let's start with what's actually inside an oat." The validator requires the channel
+     name in the first 8 scenes.
+   - Do not use a separate "Welcome" title card: a text-only card at about 30 seconds is where viewers were leaving.
 3. **5–7 chapters.** Each chapter's first scene has `bolum` (at most 40 characters). Most chapters open with a `kart` scene whose `ust` is a short kicker ("THE EXPERIMENT", "INSIDE YOUR BODY", "THE HONEST PART", "HOW TO USE IT"). A good arc:
    - the basics: what the thing is and how it works in the body, in plain language;
    - the key study or studies: what was done and what was found, with one `grafik` scene of real numbers;
