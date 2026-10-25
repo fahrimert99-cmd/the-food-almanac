@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "beet-juice-blood-pressure",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -53,6 +53,12 @@
       "slot": "2026-11-06T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-10-22T17:03:40Z",
+      "sahne_deneme": 0
+    },
+    "beet-juice-blood-pressure": {
+      "slot": "2026-11-10T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-10-25T16:52:02Z",
       "sahne_deneme": 0
     }
   }
