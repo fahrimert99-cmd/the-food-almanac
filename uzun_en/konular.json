@@ -115,6 +115,18 @@
       "durum": "uretimde"
     },
     {
+      "slug": "turmeric-knee-arthritis",
+      "soru": "Does turmeric really help knee arthritis pain?",
+      "aci": "Curcumin trials in knee osteoarthritis compared with placebo and with ibuprofen, why absorption is the catch, the meta-analyses and their limits, and safety with blood thinners and gallbladder problems. Most viewers are over 55 and many live with joint pain.",
+      "anahtar": [
+        "turmeric for knee pain",
+        "curcumin osteoarthritis",
+        "does turmeric help arthritis",
+        "turmeric joint pain after 60"
+      ],
+      "durum": "bekliyor"
+    },
+    {
       "slug": "cooling-rice-resistant-starch",
       "soru": "Does cooling rice or potatoes really change the carbs?",
       "aci": "Starch retrogradation and resistant starch; the cooled-and-reheated rice study, how big the change in glucose response really is, potatoes and pasta, food safety of leftover rice, and why it is a small tweak, not a hack.",
@@ -122,6 +134,18 @@
         "cooled rice resistant starch",
         "reheated rice blood sugar",
         "cold potatoes resistant starch"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "calcium-vitamin-d-fractures",
+      "soru": "Do calcium and vitamin D supplements prevent fractures after 60?",
+      "aci": "What the large trials (VITAL, Women's Health Initiative) and the US Preventive Services Task Force found for people living at home versus in care homes, food sources versus pills, how much is enough, and the kidney stone and heart questions.",
+      "anahtar": [
+        "vitamin d and calcium fractures",
+        "calcium supplements after 60",
+        "vitamin d bone health older adults",
+        "do calcium supplements work"
       ],
       "durum": "bekliyor"
     },
@@ -138,6 +162,18 @@
       "durum": "bekliyor"
     },
     {
+      "slug": "grapefruit-medications",
+      "soru": "Why can grapefruit interfere with some medications?",
+      "aci": "How grapefruit blocks the CYP3A4 enzyme in the gut, which common drugs are affected (some statins, blood pressure and heart drugs) according to the FDA, why one glass can matter for a day or more, and which citrus fruits do the same. Practical: ask your pharmacist, never stop a medicine on your own.",
+      "anahtar": [
+        "grapefruit and medication",
+        "grapefruit statin interaction",
+        "grapefruit drug interactions list",
+        "why can't you eat grapefruit with medicine"
+      ],
+      "durum": "bekliyor"
+    },
+    {
       "slug": "multivitamins-evidence",
       "soru": "Do multivitamins actually do anything for healthy people?",
       "aci": "Large randomized trials (Physicians' Health Study II, COSMOS), the 2022 US Preventive Services Task Force review, who may genuinely need a supplement (pregnancy and folic acid, vitamin B12 in older adults and vegans, vitamin D), and food first.",
@@ -145,6 +181,18 @@
         "do multivitamins work",
         "are multivitamins worth it",
         "multivitamin study"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "mind-diet-memory",
+      "soru": "Can the MIND diet slow memory decline?",
+      "aci": "The observational studies behind the MIND diet, the 2023 randomized trial in older adults that found no clear difference, what that does and does not mean, and the habits with the best evidence for brain health after 60.",
+      "anahtar": [
+        "mind diet memory",
+        "diet and dementia risk",
+        "foods for brain health after 60",
+        "does diet prevent dementia"
       ],
       "durum": "bekliyor"
     },
@@ -161,13 +209,38 @@
       "durum": "bekliyor"
     },
     {
-      "slug": "how-much-protein",
-      "soru": "How much protein do you actually need?",
-      "aci": "The RDA of 0.8 grams per kilogram and where it comes from, higher needs in older adults and people doing strength training, the meta-analysis on protein and muscle gains, spreading protein across meals, and when to be careful (kidney disease).",
+      "slug": "leafy-greens-warfarin",
+      "soru": "Do you have to avoid leafy greens on warfarin?",
+      "aci": "Vitamin K and how warfarin works, why guidelines advise a steady intake rather than avoiding greens, what the studies on vitamin K intake and INR stability show, and why newer blood thinners are different. Always with the advice to talk to your doctor or anticoagulation clinic.",
       "anahtar": [
-        "how much protein per day",
-        "protein requirements",
-        "too much protein"
+        "warfarin and leafy greens",
+        "vitamin k and warfarin",
+        "foods to avoid on warfarin",
+        "spinach and blood thinners"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "how-much-protein",
+      "soru": "How much protein do you actually need after 60?",
+      "aci": "The RDA of 0.8 grams per kilogram and where it comes from, why many experts suggest more for adults over 60 to protect muscle (sarcopenia), the trials on protein, strength training and muscle in older adults, spreading protein across meals, and when to be careful (kidney disease).",
+      "anahtar": [
+        "how much protein after 60",
+        "protein for older adults",
+        "protein and muscle loss",
+        "how much protein per day"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "b12-after-60",
+      "soru": "Why is vitamin B12 deficiency so common after 60?",
+      "aci": "Lower stomach acid with age, common medicines (metformin, acid reducers) that lower B12, how often deficiency is found in older adults, the signs that are easy to miss (tiredness, numbness, memory), food sources, and when a blood test makes sense.",
+      "anahtar": [
+        "b12 deficiency older adults",
+        "metformin and b12",
+        "vitamin b12 after 60",
+        "signs of low b12"
       ],
       "durum": "bekliyor"
     },

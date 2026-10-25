@@ -12,9 +12,14 @@ The channel publishes calm, evidence-based explainers about everyday food questi
 
 Two videos go out every week. Your work is published automatically, so accuracy is everything.
 
-**Audience.** English-speaking viewers, mostly in the US and UK. The core of this niche is adults over 50, who care
-about blood sugar, heart, muscle, joints, gut and brain health. Write for them: plain words, practical takeaways, no jargon
-without an explanation. Do not exclude younger viewers.
+**Audience.** English-speaking viewers, mostly in the US and UK. Channel data (YouTube Analytics, 18–24 October 2026):
+all viewers with a known age were **55 or older**: 46% aged 55–64 and **54% aged 65+**. Women and men in about equal
+numbers (53% / 47%). They care about blood sugar, heart and blood pressure, cholesterol, muscle, bones, joints, gut and
+memory, and many take daily medicines. Write for them:
+- plain words, practical takeaways, no jargon without an explanation;
+- prefer studies in older adults, and say so when a study was done in younger people;
+- mention medicine interactions and "ask your doctor or pharmacist" where they are relevant;
+- do not address one gender only, and do not exclude younger viewers.
 
 The prompt tells you three things:
 - the project **SLUG**,
