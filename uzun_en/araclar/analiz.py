@@ -11,6 +11,8 @@ Toplananlar:
   - ülke, trafik kaynağı, abone/abone olmayan, cihaz, yaş ve cinsiyet kırılımları;
   - günlük seyir ve izleyici tutma eğrisi.
 - Reporting API: gösterim ve tıklama oranı (video ve ülke bazında). İlk çalıştırmada rapor işi açılır.
+- Shorts (kisa_yayin.json, kisa_2_yayin.json) ayrı bölümlerde (kisa_*): izlenme, kaydırmadan izlenen (engagedViews),
+  trafik kaynağı, abone durumu, ülke, günlük seyir ve izleyici tutma. Uzun video bölümleri değişmez.
 - analiz/rakipler.json'daki örnek kanalların herkese açık verisi: abone, son videolar, başlık, süre, izlenme.
 Gelir verisi bilerek alınmaz, çünkü repo herkese açık. Analytics verisi YouTube'da 2–3 gün gecikmeli oluşur.
 Bir sorgu başarısız olursa hatası rapora yazılır, diğerleri sürer.
@@ -43,6 +45,18 @@ def videolar():
         if d.get("video_id"):
             v.append({"slug": os.path.basename(os.path.dirname(y)), "id": d["video_id"],
                       "baslik": d.get("baslik", ""), "slot": d.get("slot") or ""})
+    return sorted(v, key=lambda x: x["slot"])
+
+
+def kisalar():
+    """Shorts'lar (kisa_yayin.json, kisa_2_yayin.json): uzun videolardan ayrı raporlanır."""
+    v = []
+    for y in glob.glob(os.path.join(O.PROJELER, "*", "kisa*_yayin.json")):
+        d = O.json_oku(y, {}) or {}
+        if d.get("video_id"):
+            no = 2 if os.path.basename(y).startswith("kisa_2") else 1
+            v.append({"slug": os.path.basename(os.path.dirname(y)), "no": no, "id": d["video_id"],
+                      "baslik": d.get("baslik", ""), "slot": d.get("slot") or "", "uzun_id": d.get("uzun_id", "")})
     return sorted(v, key=lambda x: x["slot"])
 
 
@@ -179,11 +193,40 @@ def main():
 
         R["gosterim"] = gosterim(kimlik, {v["id"] for v in vs}, bas)
 
+    # Shorts: ayrı bölüm (kanal izlenmesinin çoğu buradan geliyor)
+    ks = kisalar()
+    kyayinda = [v for v in ks if v["slot"] and v["slot"] <= simdi.strftime("%Y-%m-%dT%H:%M:%SZ")]
+    R["kisa_videolar"] = ks
+    if ks:
+        try:
+            R["kisa_anlik"] = {}
+            for i in range(0, len(ks), 50):
+                r = yt.videos().list(part="statistics", id=",".join(v["id"] for v in ks[i:i + 50])).execute(
+                    num_retries=DENEME)
+                R["kisa_anlik"].update({x["id"]: x.get("statistics", {}) for x in r.get("items", [])})
+        except Exception as e:  # noqa: BLE001
+            R["kisa_anlik"] = {"hata": str(e)[:500]}
+    if kyayinda:
+        kb = min(v["slot"][:10] for v in kyayinda)
+        K = dict(startDate=kb, endDate=bitis, filters="video==" + ",".join(v["id"] for v in kyayinda))
+        R["kisa_video"] = sorgu(ya, metrics=TEMEL, dimensions="video", sort="-views", maxResults=200, **K)
+        # engagedViews: Shorts'ta kaydırmadan izlenen görüntülemeler (API desteklemezse hata yazılır)
+        R["kisa_izlenen"] = sorgu(ya, metrics="views,engagedViews", dimensions="video", sort="-views", **K)
+        R["kisa_trafik"] = sorgu(ya, metrics="views,estimatedMinutesWatched", dimensions="insightTrafficSourceType",
+                                 sort="-views", **K)
+        R["kisa_abone_durumu"] = sorgu(ya, metrics="views,averageViewPercentage", dimensions="subscribedStatus", **K)
+        R["kisa_ulke"] = sorgu(ya, metrics="views", dimensions="country", sort="-views", maxResults=15, **K)
+        R["kisa_gunluk"] = sorgu(ya, metrics="views,subscribersGained", dimensions="day", sort="day", **K)
+        R["kisa_tutma"] = {v["id"]: sorgu(ya, metrics="audienceWatchRatio", dimensions="elapsedVideoTimeRatio",
+                                          startDate=kb, endDate=bitis, filters=f"video=={v['id']}")
+                           for v in kyayinda}
+
     os.makedirs(CIKTI, exist_ok=True)
     yol = os.path.join(CIKTI, f"{bitis}.json")
     O.json_yaz(yol, R)
     hatalar = {a: b["hata"][:160] for a, b in R.items() if isinstance(b, dict) and "hata" in b}
-    print(f"rapor: {os.path.relpath(yol, O.REPO)} | {len(vs)} video ({len(yayinda)} yayında) | kanal: {R.get('kanal')}")
+    print(f"rapor: {os.path.relpath(yol, O.REPO)} | {len(vs)} video ({len(yayinda)} yayında), {len(ks)} Shorts "
+          f"({len(kyayinda)} yayında) | kanal: {R.get('kanal')}")
     print("Analytics erişimi:", "TAMAM" if "satirlar" in R["erisim"] else f"HATA — {R['erisim']['hata'][:300]}")
     for a, b in hatalar.items():
         print(f"  sorgu hatası [{a}]: {b}")
