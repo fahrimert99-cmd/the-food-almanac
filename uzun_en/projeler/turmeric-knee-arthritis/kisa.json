@@ -1,0 +1,17 @@
+{
+  "baslik": ["TURMERIC VS", "IBUPROFEN?"],
+  "baslik_yt": "Turmeric vs Ibuprofen for Knee Pain: The Trials",
+  "aciklama": "A Thai trial of 367 adults found a turmeric extract eased knee arthritis pain about as well as ibuprofen. Here is what the placebo trials add, and why the evidence is only modest.",
+  "parcalar": [
+    {"sahne": 12, "cumleler": [1], "gorsel": 1, "baslik": null, "etiket": "Kuptniratsaikul et al. · CIA · 2014"},
+    {"sahne": 10, "cumleler": [0],
+     "baslik": {"satirlar": ["THAI", "TRIAL"], "vurgu": "367", "not": "adults, knee arthritis"},
+     "etiket": "Kuptniratsaikul et al. · CIA · 2014"},
+    {"sahne": 11, "cumleler": [0]},
+    {"sahne": 11, "cumleler": [1], "gorsel": 1, "baslik": {"satirlar": ["TURMERIC", "VS IBUPROFEN"], "not": "4 weeks"}},
+    {"sahne": 12, "cumleler": [0], "etiket": "Kuptniratsaikul et al. · CIA · 2014"},
+    {"sahne": 15, "cumleler": [1, 2], "baslik": {"satirlar": ["ONLY", "4 WEEKS"]}},
+    {"sahne": 18, "cumleler": [1, 2], "etiket": "Wang et al. · Ann Intern Med · 2020"},
+    {"sahne": 31, "cumleler": [0], "baslik": {"satirlar": ["AN ADD-ON,", "NOT A CURE"]}}
+  ]
+}
