@@ -1,0 +1,549 @@
+{
+  "slug": "turmeric-knee-arthritis",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "ses_motoru": "piper",
+  "ses": "en_US-norman-medium",
+  "baslik": "Does Turmeric Help Knee Arthritis Pain?",
+  "yorum": "Have you ever tried turmeric or curcumin for sore knees or joints? What made you decide to try it, and did you notice any change?",
+  "aciklama_giris": "In a four-week trial of 367 adults with knee osteoarthritis, a turmeric extract eased pain about as well as ibuprofen. Other trials against placebo found smaller gains, and a 2022 review of 15 trials called the evidence promising but uneven. In this video we look at what those studies actually found, why curcumin is so hard for the body to absorb, and what the research can and cannot tell us about the joint itself.\n\nWe also cover the safety points that matter for many older adults: rare cases of liver injury, a report of a warfarin interaction, and cautions for people with gallbladder problems. Ask your doctor or pharmacist before starting any turmeric supplement. This video is for education only and is not medical advice.",
+  "kaynaklar": [
+    "Kuptniratsaikul V, Dajpratham P, Taechaarpornkul W, et al. Efficacy and safety of Curcuma domestica extracts compared with ibuprofen in patients with knee osteoarthritis: a multicenter study. Clinical Interventions in Aging. 2014;9:451-458. doi:10.2147/CIA.S58535. PMID 24672232.",
+    "Wang Z, Jones G, Winzenberg T, et al. Effectiveness of Curcuma longa extract for the treatment of symptoms and effusion-synovitis of knee osteoarthritis: a randomized trial. Annals of Internal Medicine. 2020;173(11):861-869. doi:10.7326/M20-0990.",
+    "Lopresti AL, Smith SJ, Jackson-Michel S, Fairchild T. An investigation into the effects of a curcumin extract (Curcugen) on osteoarthritis pain of the knee: a randomised, double-blind, placebo-controlled study. Nutrients. 2022;14(1):41. doi:10.3390/nu14010041. PMID 35010916.",
+    "Feng J, Li Z, Tian L, et al. Efficacy and safety of curcuminoids alone in alleviating pain and dysfunction for knee osteoarthritis: a systematic review and meta-analysis of randomized controlled trials. BMC Complementary Medicine and Therapies. 2022;22:276. doi:10.1186/s12906-022-03740-9. PMID 36261810.",
+    "Anand P, Kunnumakkara AB, Newman RA, Aggarwal BB. Bioavailability of curcumin: problems and promises. Molecular Pharmaceutics. 2007;4(6):807-818.",
+    "National Center for Complementary and Integrative Health (NIH). Turmeric. nccih.nih.gov/health/turmeric.",
+    "Halegoua-DeMarzio D, Navarro V, Ahmad J, et al. Liver injury associated with turmeric: a growing problem? Ten cases from the Drug-Induced Liver Injury Network (DILIN). American Journal of Medicine. 2023;136(2):200-206. PMID 36252717.",
+    "Medsafe (New Zealand Medicines and Medical Devices Safety Authority). Turmeric/curcumin and warfarin: early warning system communication. 30 April 2018. medsafe.govt.nz/safety/ews/2018/Turmeric.asp.",
+    "European Medicines Agency, Committee on Herbal Medicinal Products. European Union herbal monograph on Curcuma longa L., rhizome (revision 1). 2018."
+  ],
+  "kapak": {
+    "satirlar": [
+      "TURMERIC",
+      "FOR KNEES?"
+    ],
+    "gorsel": "a heaped wooden bowl of bright golden turmeric powder in front, several fresh orange turmeric roots piled tightly around and overlapping it, a few split roots showing deep orange flesh, large close-up and appetizing"
+  },
+  "kahraman": "turmeric",
+  "etiketler": [
+    "turmeric",
+    "curcumin",
+    "knee osteoarthritis",
+    "knee pain",
+    "arthritis",
+    "joint pain after 60",
+    "turmeric vs ibuprofen",
+    "turmeric supplements",
+    "turmeric safety",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "INR": "I N R",
+    "MRI": "M R I",
+    "NSAIDs": "en sades",
+    "NSAID": "en said",
+    "piperine": "PIP er een",
+    "diclofenac": "DYE kloh fen ak",
+    "Curcuma": "Kur koo ma",
+    "Medsafe": "Med safe"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The spice and the knee",
+      "metin": "In a four-week Thai trial of 367 adults with knee arthritis, a turmeric extract eased pain about as well as ibuprofen.",
+      "gorsel": "a heaped bowl of golden turmeric powder with fresh turmeric roots in front of it, beside a small bottle of white ibuprofen tablets, a wooden table",
+      "etiket": "Kuptniratsaikul et al. · Clin Interv Aging · 2014",
+      "baslik": {
+        "satirlar": [
+          "TURMERIC",
+          "VS IBUPROFEN"
+        ],
+        "vurgu": "367",
+        "not": "adults with knee arthritis, four weeks"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But those capsules were not a sprinkle of kitchen spice, and the key ingredient is hard to absorb.",
+      "gorsel": "a single pinch of golden turmeric powder falling from fingers onto a small pile beside a row of turmeric capsules, whole turmeric roots behind them",
+      "baslik": {
+        "satirlar": [
+          "HARD TO",
+          "ABSORB"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what the trials show, and what to check if you take it, especially with blood thinners.",
+      "gorsel": "an open pill organizer beside a bowl of turmeric powder and two fresh turmeric roots, a pair of round reading glasses resting on the table"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with the knee itself, and with the spice.",
+      "gorsel": "a sunlit kitchen shelf with glass jars of turmeric powder, whole turmeric roots in a wooden dish, a mortar and pestle and a teaspoon"
+    },
+    {
+      "id": 5,
+      "metin": "Knee osteoarthritis is the wear-and-tear kind of arthritis. Over the years, the cartilage that cushions the joint thins, and the knee can become painful and stiff, especially after sitting still.",
+      "gorsel": "a textbook engraving of a human knee joint seen from the side, the thighbone, shin bone and kneecap with a smooth cushion of cartilage between them",
+      "baslik": {
+        "satirlar": [
+          "KNEE",
+          "OSTEOARTHRITIS"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Turmeric is the golden spice made from the root of a plant called Curcuma longa. Its best-known active compound is curcumin, and that is what most supplements and studies focus on.",
+      "gorsel": "a turmeric plant with broad green leaves and its orange turmeric roots pulled from the soil, one root sliced open to show bright orange flesh",
+      "baslik": {
+        "satirlar": [
+          "CURCUMIN"
+        ],
+        "not": "the main active compound in turmeric"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Here is a first catch. Curcumin is only a small share of the spice, so a spoonful of turmeric powder is not the same thing as the extracts used in trials. We'll come back to why that matters.",
+      "gorsel": "a wooden spoon of turmeric powder next to a small glass vial of dark orange turmeric extract and a whole turmeric root, laid out on a plain table"
+    },
+    {
+      "id": 8,
+      "metin": "In the lab, curcumin is thought to calm inflammation. But lab results do not always carry over to people, so researchers did what counts. They tested it in men and women with sore knees.",
+      "gorsel": "a laboratory bench with a glass flask of golden liquid, a bowl of turmeric powder and fresh turmeric roots, and an antique brass microscope"
+    },
+    {
+      "id": 9,
+      "bolum": "Turmeric versus ibuprofen",
+      "tip": "kart",
+      "metin": "Let's start with the trial from the opening.",
+      "kart": {
+        "ust": "THE FIRST TRIAL",
+        "baslik": "Turmeric vs ibuprofen",
+        "alt": "Thailand · 367 adults · 4 weeks"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "A team at eight hospitals in Thailand recruited 367 adults with knee osteoarthritis. All were 50 or older, the average age was about 60, and about nine in ten were women.",
+      "gorsel": "a bright hospital clinic waiting room with a row of wooden chairs, a walking cane leaning on one chair, a bowl of turmeric roots on a side table",
+      "etiket": "Kuptniratsaikul et al. · Clin Interv Aging · 2014",
+      "baslik": {
+        "satirlar": [
+          "367 ADULTS"
+        ],
+        "not": "average age about 60, knee pain from osteoarthritis"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Half took a turmeric extract, 1,500 milligrams a day. The other half took ibuprofen, 1,200 milligrams a day. The patients did not know which they were getting, and the study lasted four weeks.",
+      "gorsel": "two identical rows of plain capsules on a tray, one row golden turmeric colored and one row white, with fresh turmeric roots at one side",
+      "baslik": {
+        "satirlar": [
+          "TWO",
+          "CAPSULES"
+        ],
+        "vurgu": "4 WEEKS"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "At the end, pain and daily-function scores were very similar in the two groups. Statistically, the turmeric extract was not worse than ibuprofen. The distance people could walk in six minutes was also about the same.",
+      "gorsel": "a pair of worn walking shoes on a park path beside a small bowl of turmeric powder and a turmeric root, soft morning light",
+      "baslik": {
+        "satirlar": [
+          "ABOUT THE",
+          "SAME"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "There was one gap. On stiffness, the researchers could not formally show that the extract was as good. And no trial like this proves that turmeric works the same way in every person.",
+      "gorsel": "an old wooden door hinge and a stiff rusty knee brace on a table next to a bowl of turmeric powder"
+    },
+    {
+      "id": 14,
+      "metin": "Stomach trouble was a little less common with turmeric. About 11 percent had abdominal pain or bloating, compared with 18 percent on ibuprofen. Seven people on ibuprofen dropped out over side effects, against one on turmeric.",
+      "gorsel": "a ceramic cup of warm water and a small plate of plain crackers beside turmeric roots, a folded blanket in the background",
+      "etiket": "Kuptniratsaikul et al. · Clin Interv Aging · 2014",
+      "baslik": {
+        "satirlar": [
+          "FEWER",
+          "STOMACH ISSUES"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Two cautions. Four weeks is short, and most volunteers were women. So this shows a turmeric extract in the same range as ibuprofen for a month. It does not show that it can replace anything you already take.",
+      "gorsel": "a pair of balance scales on a wooden desk, a white ibuprofen tablet on one pan and a golden turmeric root on the other, almost level"
+    },
+    {
+      "id": 16,
+      "bolum": "Turmeric versus placebo",
+      "tip": "kart",
+      "metin": "A fairer test of an effect is a placebo, a look-alike capsule with nothing active inside.",
+      "kart": {
+        "ust": "THE PLACEBO TEST",
+        "baslik": "Turmeric vs placebo",
+        "alt": "Tasmania · 70 adults · 12 weeks"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "In Australia, researchers at the University of Tasmania tested a turmeric extract in 70 adults with knee osteoarthritis and visible swelling inside the joint. For twelve weeks, they took two capsules a day, either turmeric extract or placebo.",
+      "gorsel": "two matching brown glass bottles on a shelf, one filled with golden turmeric capsules, with a bowl of fresh turmeric roots between them",
+      "etiket": "Wang et al. · Ann Intern Med · 2020",
+      "baslik": {
+        "satirlar": [
+          "12 WEEKS"
+        ],
+        "not": "turmeric extract or placebo, 70 adults"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Pain fell more with turmeric. On a standard pain line, the difference was about 9 millimeters. That is a modest gain, and the range of possible effects was wide. Side effects were similar in both groups.",
+      "gorsel": "a simple hand-drawn ruler laid beside a golden turmeric root, a small sketch of a knee in the corner",
+      "baslik": {
+        "satirlar": [
+          "A MODEST",
+          "GAIN"
+        ],
+        "vurgu": "9 MM",
+        "not": "on a pain line, versus placebo"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "The team also scanned the knees with M R I. Joint swelling and cartilage did not change. So the extract seemed to ease pain, without any sign that it changed the joint itself.",
+      "gorsel": "a large antique medical imaging machine in a quiet room, a turmeric root and a small bowl of turmeric powder on a stool beside it",
+      "baslik": {
+        "satirlar": [
+          "NO CHANGE",
+          "IN THE JOINT"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "metin": "A third trial gave 101 adults with knee osteoarthritis either a curcumin extract, 500 milligrams twice a day, or a placebo, for eight weeks.",
+      "gorsel": "a weekly pill organizer with golden curcumin capsules in the morning and evening slots, a fresh turmeric root and a glass of water beside it",
+      "etiket": "Lopresti et al. · Nutrients · 2022"
+    },
+    {
+      "id": 21,
+      "metin": "Curcumin lowered knee pain scores more than placebo, and people did better on a timed get-up-and-walk test and a six-minute walk. But a chair-stand test and a fast-walking test showed no clear benefit.",
+      "gorsel": "a sturdy wooden chair and a short measured walking path marked by two cones on a park lawn, a turmeric root resting on the chair seat"
+    },
+    {
+      "id": 22,
+      "tip": "grafik",
+      "metin": "More people on curcumin also cut back their pain-relief medicine: 37 percent, compared with 13 percent on placebo.",
+      "grafik": {
+        "baslik": "Cut back on pain medicine",
+        "alt": "Curcumin extract vs placebo, 8 weeks",
+        "cubuklar": [
+          {
+            "etiket": "Placebo",
+            "deger": 13,
+            "metin": "13%"
+          },
+          {
+            "etiket": "Curcumin",
+            "deger": 37,
+            "metin": "37%"
+          }
+        ],
+        "kaynak": "Lopresti et al., Nutrients 2022 · 101 adults with knee osteoarthritis"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Notice the pattern. Small to moderate gains in pain, in short trials, with some physical tests unchanged. That is a promising signal, not a cure. And in the last part, there are three safety checks worth knowing.",
+      "gorsel": "a quiet desk with a turmeric root, an open notebook with blank pages, a pair of round glasses and a cup of tea with rising steam"
+    },
+    {
+      "id": 24,
+      "bolum": "Pooling the trials",
+      "tip": "kart",
+      "metin": "What happens when you pool many trials together?",
+      "kart": {
+        "ust": "THE BIG PICTURE",
+        "baslik": "Fifteen trials together",
+        "alt": "Meta-analysis · 2022 · 1,670 patients"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "In 2022, a research team led by Feng pooled 15 randomized trials with 1,670 people. Compared with placebo, curcuminoids lowered knee pain by about 1.8 points on a pain scale, which the authors judged big enough to be noticeable.",
+      "gorsel": "a tall stack of fifteen bound research journals with blank covers on a desk, a bowl of turmeric powder and a turmeric root on top",
+      "etiket": "Feng et al. · BMC Complement Med Ther · 2022",
+      "baslik": {
+        "satirlar": [
+          "15 TRIALS"
+        ],
+        "vurgu": "1,670",
+        "not": "patients pooled together"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Against anti-inflammatory painkillers such as ibuprofen and diclofenac, the pooled difference was small and not statistically significant. In the trials, side effects were no more common than with placebo.",
+      "gorsel": "a bowl of golden turmeric powder and a bottle of white painkiller tablets set side by side on a kitchen counter, a turmeric root in front"
+    },
+    {
+      "id": 27,
+      "metin": "But the trials disagreed with one another quite a lot. Some had weak methods, the products and doses differed, and none followed people for longer than six months.",
+      "gorsel": "several different bottles and jars of turmeric supplements of different sizes lined up unevenly along a shelf, turmeric roots at the end",
+      "baslik": {
+        "satirlar": [
+          "THE TRIALS",
+          "DISAGREE"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "metin": "The authors rated the certainty of the evidence on pain as anywhere from moderate to very low, and they urged a cautious recommendation. Some of the trials we covered were funded by or linked to the extract's maker, so it is worth knowing who paid.",
+      "gorsel": "a quiet research desk with a turmeric root, a magnifying glass over a blank page and a small brass balance scale"
+    },
+    {
+      "id": 29,
+      "metin": "So what do we not know? The best product and dose. Whether the benefit lasts beyond a few months. And whether people in their seventies and eighties respond the same way as the volunteers in these trials.",
+      "gorsel": "a winding country path in soft hills that disappears into mist, a turmeric root and a small bowl of turmeric powder in the foreground",
+      "baslik": {
+        "satirlar": [
+          "OPEN",
+          "QUESTIONS"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "We also know that in the trial we covered that scanned the knee, turmeric did not change the swelling or the cartilage. So even if it eases pain, it has not been shown to slow arthritis itself.",
+      "gorsel": "a textbook engraving of an open knee joint with smooth cartilage and a calm still joint space, a small turmeric root sketched beside it"
+    },
+    {
+      "id": 31,
+      "metin": "Think of turmeric as, at most, an add-on for pain. Your doctor or a physiotherapist can talk through the other options for your knee, and what fits with the medicines you already take.",
+      "gorsel": "a consultation desk with a stethoscope, a closed folder and a bowl of turmeric powder, a walking cane hooked on the chair"
+    },
+    {
+      "id": 32,
+      "bolum": "The absorption catch",
+      "tip": "kart",
+      "metin": "Now, back to the catch from the beginning.",
+      "kart": {
+        "ust": "THE CATCH",
+        "baslik": "Getting curcumin in",
+        "alt": "Absorption · Piperine · Formulations"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Curcumin is hard for the body to use. Reviews describe poor uptake from the gut, quick breakdown, and fast removal, so very little reaches your bloodstream and tissues.",
+      "gorsel": "a cross-section of the small intestine wall with finger-like villi, a few tiny golden turmeric particles resting on the surface and only one passing through",
+      "baslik": {
+        "satirlar": [
+          "HARD TO",
+          "ABSORB"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Makers try to solve this in several ways. The best known is adding piperine, a compound from black pepper. The US National Center for Complementary and Integrative Health notes it is one way to raise curcumin levels.",
+      "gorsel": "a pepper mill and a small dish of black peppercorns beside a bowl of golden turmeric powder and a turmeric root",
+      "etiket": "NCCIH · NIH · Turmeric",
+      "baslik": {
+        "satirlar": [
+          "ADD",
+          "BLACK PEPPER"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Other products use special formulations to help absorption. That may help, but it also means different products behave differently, and each trial result belongs only to the specific extract that was tested.",
+      "gorsel": "three different small supplement bottles in a row on a white shelf, each beside its own small pile of turmeric powder, a turmeric root in front"
+    },
+    {
+      "id": 36,
+      "metin": "That is why a trial result cannot simply be copied onto any bottle. The Thai trial used one extract, the Tasmanian trial another, and the third trial a branded curcumin product. Different products, different doses.",
+      "gorsel": "three different labeled-blank turmeric capsule bottles of different shapes on a table, three small piles of turmeric powder in front of them"
+    },
+    {
+      "id": 37,
+      "metin": "It also means kitchen turmeric is a different story. Cooking with turmeric is a pleasure, and nothing here says to stop. But none of these trials tested a pinch of spice in your curry.",
+      "gorsel": "a simmering pot of golden curry with a wooden spoon, a bowl of turmeric powder and fresh turmeric roots on the counter beside it",
+      "baslik": {
+        "satirlar": [
+          "IN YOUR",
+          "CURRY?"
+        ],
+        "not": "not what the trials tested"
+      }
+    },
+    {
+      "id": 38,
+      "bolum": "Safety first",
+      "tip": "kart",
+      "metin": "Here are the safety checks I promised. Natural doesn't always mean risk-free.",
+      "kart": {
+        "ust": "SAFETY FIRST",
+        "baslik": "Before you try it",
+        "alt": "Liver · Blood thinners · Gallbladder"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "The US National Center for Complementary and Integrative Health says ordinary turmeric by mouth is likely safe in recommended amounts for up to two or three months. Common side effects are an upset stomach, reflux, nausea, and loose or hard stools.",
+      "gorsel": "a ceramic bowl of turmeric powder and a glass of water on a calm kitchen table, a small hand-held fan folded beside them",
+      "etiket": "NCCIH · NIH · Turmeric"
+    },
+    {
+      "id": 40,
+      "metin": "The more serious concern is the liver. Researchers from the Drug-Induced Liver Injury Network described ten people with liver injury linked to turmeric supplements, found over about eighteen years. Five were hospitalized, and one died.",
+      "gorsel": "a textbook engraving of a human liver on a plain background, a turmeric root and a small turmeric capsule sketched beside it",
+      "etiket": "Halegoua-DeMarzio et al. · Am J Med · 2023",
+      "baslik": {
+        "satirlar": [
+          "THE LIVER"
+        ],
+        "vurgu": "10",
+        "not": "cases over about 18 years, linked to turmeric supplements"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "That is rare, and a case series cannot tell us how often it happens. Seven of the ten carried a particular gene variant, and three of the seven supplements tested also contained black pepper extract.",
+      "gorsel": "a rack of small sealed supplement bottles on a laboratory shelf, a magnifying glass and a turmeric root in front"
+    },
+    {
+      "id": 42,
+      "metin": "If you notice unusual tiredness, nausea, poor appetite, dark urine, or yellow skin or eyes while taking turmeric, stop and contact a health care provider. That advice comes from the same federal center.",
+      "gorsel": "a bedside table with a lamp, a glass of water, a small bottle of turmeric capsules and a telephone, soft evening light"
+    },
+    {
+      "id": 43,
+      "metin": "Next, blood thinners. New Zealand's medicines regulator, Medsafe, reported a person on warfarin whose clotting test, the I N R, rose above 10 within weeks of starting a turmeric product. That is a single report, not a trial, but an I N R that high carries a risk of serious bleeding.",
+      "gorsel": "a small weekly pill organizer holding white tablets next to a bottle of turmeric capsules, a calendar page with no writing",
+      "etiket": "Medsafe · New Zealand · 2018",
+      "baslik": {
+        "satirlar": [
+          "BLOOD",
+          "THINNERS"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "metin": "Curcumin may also have mild antiplatelet effects, which could add to bleeding risk with other medicines that affect bleeding. Medsafe's warning is about supplements, not turmeric in food, and no one should stop a prescribed medicine on their own.",
+      "gorsel": "a pharmacist's counter with a mortar, a row of glass bottles and a bottle of turmeric capsules being checked against a list"
+    },
+    {
+      "id": 45,
+      "metin": "Third, the gallbladder. Turmeric may stimulate bile flow, so European herbal guidance advises against turmeric supplements in people with gallstones, a blocked bile duct, or liver disease. If that is you, ask your doctor first.",
+      "gorsel": "a textbook engraving of the liver, gallbladder and bile duct on a plain background, a small turmeric root sketched in the corner",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "GALLBLADDER"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So if you are curious, how should you approach it? Here are five practical points.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "If you decide to try it",
+        "alt": "Five practical points"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "One. Talk to your doctor or pharmacist first, especially if you take a blood thinner, have gallstones, or have liver problems. Bring the bottle, and tell them about every supplement you use.",
+      "gorsel": "a bottle of turmeric capsules and a list of medicines on a consultation desk, a stethoscope curled beside them"
+    },
+    {
+      "id": 48,
+      "metin": "Two. Read the label. The trials used specific extracts at stated doses, so look for a product that lists its curcuminoid amount. A label that only says turmeric root powder is not what was tested.",
+      "gorsel": "a supplement bottle with a blank label held up beside a bowl of turmeric powder, a turmeric root and a pair of reading glasses",
+      "baslik": {
+        "satirlar": [
+          "READ THE",
+          "LABEL"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Three. Give it a fair, limited test. The trials lasted four to twelve weeks, and the federal center considers up to two or three months likely safe. Note your pain before you start, and check how you feel after a month or two.",
+      "gorsel": "a plain wall calendar with a single golden turmeric root resting on it, a pencil beside, a cup of tea",
+      "baslik": {
+        "satirlar": [
+          "A FAIR",
+          "TEST"
+        ],
+        "not": "trials ran 4 to 12 weeks"
+      }
+    },
+    {
+      "id": 50,
+      "metin": "Four. Be careful with high-absorption formulas, and don't start several new supplements at once. The federal center notes liver damage with highly bioavailable products. A stronger-sounding label has not been shown to be better.",
+      "gorsel": "a crowded shelf of many small supplement bottles of different colors, one bottle of turmeric capsules pulled forward, a turmeric root in front"
+    },
+    {
+      "id": 51,
+      "metin": "Five. Keep taking any arthritis treatment your doctor has prescribed. Turmeric in your cooking is a pleasant habit, but it is not a treatment, and no supplement should be used in place of medical care.",
+      "gorsel": "a dinner table with a bowl of golden turmeric rice, a glass of water and a small pill dish, a pair of walking shoes by the door"
+    },
+    {
+      "id": 52,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A modest signal, not a cure",
+        "alt": "Ask before you take it"
+      }
+    },
+    {
+      "id": 53,
+      "metin": "In short trials, turmeric extracts eased knee arthritis pain a little more than placebo, and in one four-week trial they were in the same range as ibuprofen.",
+      "gorsel": "a bowl of golden turmeric powder with two turmeric roots and a pair of walking shoes beside it on a wooden table"
+    },
+    {
+      "id": 54,
+      "metin": "The evidence is uneven, the benefit is modest, and the one trial with joint scans showed no change. What a trial found belongs to the product tested, not to the turmeric in your kitchen.",
+      "gorsel": "a turmeric root and a small pile of turmeric powder beside a brass balance scale holding a single capsule, evenly weighed"
+    },
+    {
+      "id": 55,
+      "metin": "Check with your doctor or pharmacist first, especially with blood thinners, gallbladder or liver problems, and stop and call if you notice signs of liver trouble.",
+      "gorsel": "a bottle of turmeric capsules beside a stethoscope and a small notebook with blank pages on a clean desk"
+    },
+    {
+      "id": 56,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
