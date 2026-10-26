@@ -19,6 +19,11 @@ concurrency:
   group: uzun-en-gorsel
   cancel-in-progress: false
 
+# shell: bash -> -eo pipefail: "python3 gorsel.py ... | tee" borusunda gorsel.py hatası gizlenmez.
+defaults:
+  run:
+    shell: bash
+
 jobs:
   gorsel:
     runs-on: ubuntu-24.04

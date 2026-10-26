@@ -36,6 +36,10 @@ concurrency:
   group: uzun-en-kisa
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+
 env:
   PYTHONDONTWRITEBYTECODE: "1"
   CMODEL: ${{ vars.UZUN_CLAUDE_MODEL }}
@@ -187,6 +191,13 @@ jobs:
             gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/KISA.md and do that task now. SLUG: $SLUG. This is Short $KNO: read uzun_en/projeler/$SLUG/cikti/${AD}_liste.md and write uzun_en/projeler/$SLUG/$AD.json."
           fi
           rm -rf .gemini
+      - name: "Ajan değişikliklerini sınırla (yalnızca AD.json kalır)"
+        if: always() && env.SECIM == 'true'
+        run: |
+          rm -rf .gemini
+          git ls-files -z -m -d -- . ":(exclude)uzun_en/projeler/$SLUG/$AD.json" | xargs -0 -r git checkout HEAD --
+          git ls-files -z -o --exclude-standard -- . ":(exclude)uzun_en/projeler/$SLUG/$AD.json" ":(exclude)uzun_en/projeler/$SLUG/cikti" | xargs -0 -r rm -f
+          git status --short
       - name: Denetim (son) ve seçimi kaydet
         if: env.SLUG != ''
         env:
@@ -267,7 +278,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 -c "import json;k=json.load(open('uzun_en/projeler/$SLUG/${AD}_yayin.json'));print('::notice title=Shorts $KNO::', k['url'], 'yayın', k['slot'])"
+          python3 -c "import json,os;k=json.load(open(f'uzun_en/projeler/{os.environ[\"SLUG\"]}/{os.environ[\"AD\"]}_yayin.json'));print(f'::notice title=Shorts {os.environ[\"KNO\"]}::', k['url'], 'yayın', k['slot'])"
           bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG Shorts $KNO YouTube'a yüklendi" uzun_en/projeler/"$SLUG"/"$AD"_yayin.json
       - name: Sıradaki Shorts (aynı videonunki, yoksa Shorts'u eksik bir sonraki video)
         if: env.SLUG != ''
