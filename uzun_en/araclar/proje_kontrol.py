@@ -45,6 +45,11 @@ def denetle(slug, asgari_dk=None, yazim=False):
     ad = m.get("ad", "")
     if p.get("slug") != slug:
         h.append(f"slug '{p.get('slug')}' klasör adıyla ('{slug}') aynı olmalı")
+    # Ses kanal genelinde marka.json'dan gelir. Senaryo ajanı referans projeden (food-order-blood-sugar, Piper ile
+    # seslendirilmişti) "ses_motoru"/"ses" alanlarını kopyalayınca zerdeçal ve B12 videoları eski Piper sesiyle çıktı.
+    farkli = [a for a in ("ses_motoru", "ses", "length_scale", "ses_hiz") if a in p and p[a] != m.get(a)]
+    if yazim and farkli:
+        h.append(f"{', '.join(farkli)} alan(lar)ını silin: anlatıcı sesi marka.json'dan gelir, proje sesi değiştiremez")
     b = p.get("baslik", "")
     if not 20 <= len(b) <= 100:
         h.append(f"baslik 20–100 karakter olmalı (şu an {len(b)})")
