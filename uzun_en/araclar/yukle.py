@@ -96,6 +96,29 @@ def bastan_sifirla(slug, yol, slot):
     O.log(f"• {slug}: baştan üretime alındı (aşama varlik, slot {slot})")
 
 
+def kisalari_sil(yt, slug):
+    """bastan için: projenin henüz yayınlanmamış (private) Shorts'larını YouTube'dan siler ve kayıtlarını kaldırır;
+    uzun video yeniden yüklenince Shorts hattı aynı seçimle (kisa*.json korunur) yeni sesle yeniden üretir.
+    Herkese açık ya da yayın saati geçmiş Shorts'a dokunulmaz."""
+    simdi = dt.datetime.now(dt.timezone.utc)
+    for kyol in sorted(glob.glob(os.path.join(O.proje_dir(slug), "kisa*_yayin.json"))):
+        k = O.json_oku(kyol, {}) or {}
+        if not k.get("video_id"):
+            continue
+        slot = dt.datetime.fromisoformat(str(k.get("slot", "")).replace("Z", "+00:00") or "1970-01-01T00:00:00+00:00")
+        if slot <= simdi:
+            O.log(f"! {slug}: Shorts {k['video_id']} yayın saati geçmiş, silinmez")
+            continue
+        it = yt.videos().list(part="status", id=k["video_id"]).execute().get("items", [])
+        if it and it[0]["status"].get("privacyStatus") != "private":
+            O.log(f"! {slug}: Shorts {k['video_id']} herkese açık, silinmez")
+            continue
+        if it:
+            yt.videos().delete(id=k["video_id"]).execute()
+        os.remove(kyol)
+        O.log(f"• {slug}: Shorts {k['video_id']} silindi (yeniden üretilecek)")
+
+
 def yenile_istegi(yt, adaylar):
     """calistir.json'daki "yenile": ["slug"] isteği: henüz yayınlanmamış (private, slotu gelmemiş) videoyu YouTube'dan
     siler. Ardından tamamla() onu 'silinmiş' görüp aynı çalıştırmada yeniden render ettirir ve yükletir.
@@ -134,6 +157,7 @@ def yenile_istegi(yt, adaylar):
                 silinen.add(y["video_id"])
                 O.log(f"• {slug}: {y['video_id']} silindi (istek üzerine yeniden üretilip yüklenecek)")
             if slug in bastan:
+                kisalari_sil(yt, slug)
                 bastan_sifirla(slug, yol, y["slot"])
                 sifirlanan.add(slug)
         except Exception as e:
