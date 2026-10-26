@@ -5,7 +5,7 @@
 #   1. varsayılan ayna (süre sınırlı),
 #   2. ana Ubuntu aynası (archive.ubuntu.com),
 #   3. apt yine olmazsa yedekler: ffmpeg -> GitHub'daki statik derleme (BtbN/FFmpeg-Builds),
-#      fonts-inter -> repodaki Inter yazı tipleri, espeak-ng -> atlanır (Piper/Kokoro pip paketleri kendi
+#      fonts-inter -> repodaki Inter yazı tipleri (assets/font), espeak-ng -> atlanır (Piper/Kokoro pip paketleri kendi
 #      espeak verisini taşır; gerekirse sonraki adım açık hata verir).
 set -u
 
@@ -43,10 +43,14 @@ for p in "${PAKETLER[@]}"; do
       fi
       rm -rf "$d" ;;
     fonts-inter)
-      mkdir -p "$HOME/.local/share/fonts" &&
-        cp "$(dirname "$0")"/../remotion/public/fonts/Inter-*.otf "$HOME/.local/share/fonts/" &&
-        fc-cache -f >/dev/null 2>&1
-      echo "::notice::Inter yazı tipi repodan kuruldu" ;;
+      # fonts-inter paketinin koyduğu yere (hazirla.py ve Remotion orada arar)
+      if sudo mkdir -p /usr/share/fonts/opentype/inter &&
+         sudo cp "$(dirname "$0")"/../../assets/font/Inter-*.otf /usr/share/fonts/opentype/inter/ &&
+         { fc-cache -f >/dev/null 2>&1 || true; }; then
+        echo "::notice::Inter yazı tipi repodan (assets/font) kuruldu"
+      else
+        echo "::error::Inter yazı tipi kurulamadı"; eksik=1
+      fi ;;
     espeak-ng)
       command -v espeak-ng >/dev/null || echo "::warning::espeak-ng kurulamadı; atlandı (pip paketleri kendi verisini taşır)" ;;
     *)
