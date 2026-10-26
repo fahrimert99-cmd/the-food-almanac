@@ -33,8 +33,9 @@ def font_yollari():
     anton = [os.path.join(O.REPO, "assets", "font", "Anton-Regular.ttf"), os.path.expanduser("~/.fonts/Anton-Regular.ttf")]
     yollar = [next((y for y in anton if os.path.exists(y)), anton[0])]
     for ad in ("Inter-Medium.otf", "Inter-Bold.otf", "Inter-ExtraBold.otf"):
+        # sistemdeki fonts-inter; apt kurulamadıysa repodaki kopya (assets/font)
         yollar.append(next((y for y in glob.glob(f"/usr/share/fonts/**/{ad}", recursive=True)),
-                           f"/usr/share/fonts/opentype/inter/{ad}"))
+                           os.path.join(O.REPO, "assets", "font", ad)))
     return yollar
 
 
