@@ -1,0 +1,646 @@
+{
+  "slug": "b12-after-60",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "ses_motoru": "piper",
+  "ses": "en_US-norman-medium",
+  "baslik": "Why Is B12 Deficiency So Common After 60?",
+  "yorum": "Do you take metformin or an acid reducer, or has your doctor ever checked your B12? What made you or your doctor decide to test?",
+  "aciklama_giris": "Low vitamin B12 is easy to miss and surprisingly common in older adults. In a study of 3,299 adults aged 60 and older, 38 percent of those with atrophic gastritis, a thinning of the stomach lining, were low in B12, compared with 15 percent of a comparison group. Two very common kinds of medicine, metformin and acid reducers, have also been linked with lower B12 over time.\n\nIn this video we look at why aging stomachs struggle to release B12 from food, what the metformin, proton-pump inhibitor and H2 blocker studies actually found, why B12 in fortified foods and supplements is easier to absorb, the quiet signs that are easy to blame on age, and when it makes sense to ask your doctor for a blood test.",
+  "kaynaklar": [
+    "Porter KM, Hoey L, Hughes CF, et al. Associations of atrophic gastritis and proton-pump inhibitor drug use with vitamin B-12 status, and the impact of fortified foods, in older adults. American Journal of Clinical Nutrition. 2021;114(4):1286-1294. PMC8488868.",
+    "Aroda VR, Edelstein SL, Goldberg RB, et al. Long-term metformin use and vitamin B12 deficiency in the Diabetes Prevention Program Outcomes Study. Journal of Clinical Endocrinology & Metabolism. 2016;101(4):1754-1761. doi:10.1210/jc.2015-3754. PMC4880159.",
+    "Lam JR, Schneider JL, Zhao W, Corley DA. Proton pump inhibitor and histamine 2 receptor antagonist use and vitamin B12 deficiency. JAMA. 2013;310(22):2435-2442. PMID 24327038.",
+    "Tucker KL, et al. Plasma vitamin B-12 concentrations relate to intake source in the Framingham Offspring Study. American Journal of Clinical Nutrition. 2000;71(2):514-522. PMID 10648266.",
+    "Andrès E, et al. Vitamin B12 (cobalamin) deficiency in elderly patients. Canadian Medical Association Journal. 2004;171(3):251-259. doi:10.1503/cmaj.1031155. PMID 15289425.",
+    "National Institutes of Health, Office of Dietary Supplements. Vitamin B12: Fact Sheet for Consumers. https://ods.od.nih.gov/factsheets/VitaminB12-Consumer/"
+  ],
+  "kapak": {
+    "satirlar": [
+      "B12",
+      "AFTER 60?"
+    ],
+    "vurgu": "38%",
+    "vurgu_alt": "LOW",
+    "gorsel": "a large close-up bowl of fortified breakfast cereal with a glass of milk, a small open bottle with a few round tablets spilled in front, all tightly grouped and overlapping, bright and appetizing"
+  },
+  "etiketler": [
+    "vitamin b12",
+    "b12 deficiency older adults",
+    "metformin and b12",
+    "vitamin b12 after 60",
+    "signs of low b12",
+    "atrophic gastritis",
+    "proton pump inhibitors",
+    "fortified foods",
+    "healthy aging",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "B12": "B 12",
+    "PPI": "P P I",
+    "PPIs": "P P Is",
+    "H2": "H 2",
+    "NIH": "N I H",
+    "omeprazole": "oh-mep-ra-zole",
+    "famotidine": "fuh-mot-uh-deen",
+    "pepsinogen": "pep-sin-oh-jen"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "A quiet shortage",
+      "metin": "In a study of 3,299 adults over 60, 38 percent of those with a thinning stomach lining were low in B12. In a comparison group, it was 15 percent.",
+      "gorsel": "an antique engraving of a human stomach shown open, its inner lining drawn thin and smooth, a small glass vial with a few tablets standing beside it",
+      "etiket": "Porter et al. · Am J Clin Nutr · 2021",
+      "baslik": {
+        "satirlar": [
+          "38% VS 15%"
+        ],
+        "not": "low B12 with and without a thinning stomach lining"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But the stomach isn't the only cause. Common pills play a part too.",
+      "gorsel": "a weekly pill organizer with open compartments holding a few tablets, a glass of water and a pair of round eyeglasses on a wooden table"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what to watch for, and when to ask for a blood test.",
+      "gorsel": "a doctor's desk with a stethoscope, a small stoppered sample tube and a closed notebook, soft window light"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what vitamin B12 actually does.",
+      "gorsel": "an antique brass microscope beside a bowl of breakfast cereal, a glass of milk and a boiled egg on a kitchen table"
+    },
+    {
+      "id": 5,
+      "bolum": "What vitamin B12 does",
+      "metin": "Vitamin B12 helps your body make healthy red blood cells, and it keeps your nerves working properly. It's a small vitamin with a big job.",
+      "gorsel": "a tube-shaped vessel with small red discs flowing calmly, beside a branching nerve fiber drawn as fine lines, textbook engraving",
+      "baslik": {
+        "satirlar": [
+          "NERVES AND",
+          "RED CELLS"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "B12 is found naturally only in animal foods, such as meat, fish, eggs, and dairy. That's why strict vegetarians and vegans can also run short.",
+      "gorsel": "a kitchen table with a grilled fish fillet, two boiled eggs, a wedge of cheese, a glass of milk and a small piece of beef"
+    },
+    {
+      "id": 7,
+      "metin": "Your body keeps a large reserve of B12, so a shortage can build quietly. According to the National Institutes of Health, symptoms may take several years to appear.",
+      "gorsel": "an old wooden storage cupboard with its doors open, shelves slowly emptying, a dusty hourglass on the top shelf",
+      "baslik": {
+        "satirlar": [
+          "SLOW TO",
+          "SHOW UP"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "metin": "That slow pace is one reason deficiency is so easy to miss. A 2004 review in the Canadian Medical Association Journal found it occurs in more than 20 percent of older adults, and is often unrecognized because the signs are subtle. That is more than one in five in the groups studied, and many may not know it.",
+      "gorsel": "a group of five simple wooden chairs in a sunny waiting room, one of them with a folded cardigan on it, a window and a potted plant",
+      "etiket": "Andrès et al. · CMAJ · 2004",
+      "baslik": {
+        "satirlar": [
+          "OVER 20%",
+          "OF OLDER ADULTS"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Often, the problem isn't eating too little B12. It's absorbing it. That is where your stomach comes in. Later, we'll also see why a pill can work even when the B12 in food doesn't.",
+      "gorsel": "a plate with grilled fish, an egg and a glass of milk, a thin dashed arrow leading to a simple engraving of a stomach"
+    },
+    {
+      "id": 10,
+      "bolum": "The stomach acid problem",
+      "tip": "kart",
+      "metin": "Let's look at what happens to B12 after you swallow it.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Getting B12 out of food",
+        "alt": "Stomach acid · Atrophic gastritis"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "In food, B12 is attached to protein. Stomach acid helps free it, so that it can be absorbed further down the digestive tract.",
+      "gorsel": "a textbook engraving of a stomach with its lining drawn as folds, tiny golden particles being released from a piece of fish into the stomach",
+      "baslik": {
+        "satirlar": [
+          "ACID SETS",
+          "B12 FREE"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "metin": "With age, many people make less stomach acid. A common reason is atrophic gastritis, a long-term inflammation that thins the lining of the stomach.",
+      "gorsel": "two stomachs drawn side by side as textbook engravings, one with thick folded lining and one with a thin smooth lining",
+      "baslik": {
+        "satirlar": [
+          "A THINNING",
+          "LINING"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "The National Institutes of Health notes that many older adults simply don't have enough stomach acid to absorb the B12 that's naturally in food. People with atrophic gastritis may also make too little of a helper protein called intrinsic factor, which B12 needs in order to be absorbed.",
+      "gorsel": "a boiled egg and a slice of beef on a small plate, beside an engraving of a stomach with only a faint trickle of fluid inside"
+    },
+    {
+      "id": 14,
+      "metin": "A research team studying older adults in Ireland and Northern Ireland looked at 3,299 people aged 60 and older. They used a blood marker, the pepsinogen ratio, to spot atrophic gastritis.",
+      "gorsel": "a laboratory bench with a rack of small stoppered sample tubes, an open notebook with blank pages and an antique brass microscope"
+    },
+    {
+      "id": 15,
+      "tip": "grafik",
+      "metin": "Among those not taking acid reducers, about 15 percent had atrophic gastritis. Of those, 38 percent were low in B12, compared with 21 percent of people taking an acid-reducing pill, and 15 percent of those with neither.",
+      "grafik": {
+        "baslik": "Share with low B12 status",
+        "alt": "Adults aged 60 and older",
+        "cubuklar": [
+          {
+            "etiket": "Neither",
+            "deger": 15,
+            "metin": "15%"
+          },
+          {
+            "etiket": "Acid reducer",
+            "deger": 21,
+            "metin": "21%"
+          },
+          {
+            "etiket": "Atrophic gastritis",
+            "deger": 38,
+            "metin": "38%"
+          }
+        ],
+        "kaynak": "Porter et al., Am J Clin Nutr 2021 · n = 3,299, adults aged 60 and older, Ireland and Northern Ireland"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "This was an observational study, so it shows a link, not proof of cause. And the pepsinogen ratio is a screening tool, not a final diagnosis. Still, the pattern fits what we know about stomach acid.",
+      "gorsel": "a magnifying glass resting on an open empty notebook, beside a stoppered sample tube and a pen",
+      "baslik": {
+        "satirlar": [
+          "A LINK,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "metin": "A smaller share of cases comes from pernicious anemia, a condition in which the body can't absorb B12 properly. In the 2004 review, it made up 15 to 20 percent of cases, while problems freeing B12 from food made up more than 60 percent.",
+      "gorsel": "a simple pie-shaped wooden board cut into three unequal wedges, one large, one small, one medium, on a kitchen table beside a bowl of cereal",
+      "etiket": "Andrès et al. · CMAJ · 2004",
+      "baslik": {
+        "satirlar": [
+          "OVER 60%",
+          "FROM FOOD"
+        ],
+        "not": "of cases: B12 not freed from food"
+      }
+    },
+    {
+      "id": 18,
+      "bolum": "Common medicines",
+      "tip": "kart",
+      "metin": "Now to the pills. Two common kinds of medicine have been linked with lower B12 over time.",
+      "kart": {
+        "ust": "THE MEDICINE CABINET",
+        "baslik": "Metformin and acid reducers",
+        "alt": "Two widely used prescriptions"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "The first is metformin, a widely used medicine for type 2 diabetes and prediabetes. It works well, and nothing here is a reason to stop it. But researchers wanted to know what it does to B12 over many years.",
+      "gorsel": "a kitchen counter with a small amber pill bottle, a glass of water, a glucose meter with a blank screen and a pill organizer",
+      "baslik": {
+        "satirlar": [
+          "METFORMIN",
+          "AND B12"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "metin": "In a large American trial, about 2,150 adults at high risk for diabetes were randomly assigned to metformin or placebo. Those on metformin then kept taking it for about nine more years.",
+      "gorsel": "two identical small pill bottles side by side on a table, one with a plain round tablet in front of it and one with a plain oval tablet, a calendar page with blank squares behind",
+      "etiket": "Aroda et al. · J Clin Endocrinol Metab · 2016"
+    },
+    {
+      "id": 21,
+      "tip": "grafik",
+      "metin": "At about five years, low B12 was found in 4.3 percent of metformin users and 2.3 percent on placebo. Counting borderline levels too, it was 19.1 percent versus 9.5 percent.",
+      "grafik": {
+        "baslik": "Share with low or borderline B12 at 5 years",
+        "alt": "Placebo vs metformin",
+        "cubuklar": [
+          {
+            "etiket": "Placebo, low",
+            "deger": 2.3,
+            "metin": "2.3%"
+          },
+          {
+            "etiket": "Metformin, low",
+            "deger": 4.3,
+            "metin": "4.3%"
+          },
+          {
+            "etiket": "Placebo, low or borderline",
+            "deger": 9.5,
+            "metin": "9.5%"
+          },
+          {
+            "etiket": "Metformin, low or borderline",
+            "deger": 19.1,
+            "metin": "19.1%"
+          }
+        ],
+        "kaynak": "Aroda et al., J Clin Endocrinol Metab 2016 · n = 2,155 adults at high risk for diabetes, DPP Outcomes Study"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "At about 13 years, the gap in clearly low B12 was no longer statistically significant. But low or borderline levels were still more common on metformin, 20.3 percent versus 15.6 percent. Borderline means a gray zone: not clearly low, but not comfortably normal either.",
+      "gorsel": "a long winding garden path through bare trees marked with small stone steps, a pill bottle sitting at the start of the path",
+      "baslik": {
+        "satirlar": [
+          "13 YEARS",
+          "LATER"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Each additional year of metformin use was linked with 13 percent higher odds of deficiency. Participants averaged about 64 to 66 years old by the later visits, but just 51 at the start, so this wasn't only an older-adult study.",
+      "gorsel": "a row of five wooden calendars of increasing thickness on a shelf, an antique pocket watch resting on the thickest",
+      "baslik": {
+        "satirlar": [
+          "+13%",
+          "PER YEAR"
+        ],
+        "not": "higher odds of deficiency per year of metformin"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "The researchers concluded that routine B12 testing should be considered for people taking metformin. If you take it, a sensible step is to ask your doctor about checking your level.",
+      "gorsel": "a consultation desk with a stethoscope, a glucose meter, a small pill bottle and a closed notebook",
+      "baslik": {
+        "satirlar": [
+          "ASK ABOUT",
+          "A B12 TEST"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "The second group is acid-reducing medicines. Proton-pump inhibitors, or PPIs, such as omeprazole. And H2 blockers, such as famotidine. Both lower stomach acid, which brings us back to the same bottleneck.",
+      "gorsel": "a small bottle with a few capsules and a second small bottle with round tablets, next to a glass of water and an engraving of a stomach",
+      "baslik": {
+        "satirlar": [
+          "ACID",
+          "REDUCERS"
+        ],
+        "not": "PPIs and H2 blockers"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Researchers at Kaiser Permanente Northern California compared 25,956 patients diagnosed with B12 deficiency to 184,199 patients without it, and looked back at their medicines.",
+      "gorsel": "two tall stacks of plain paper folders with blank covers, one much taller than the other, on a long wooden archive table",
+      "etiket": "Lam et al. · JAMA · 2013"
+    },
+    {
+      "id": 27,
+      "tip": "grafik",
+      "metin": "People who had been dispensed two or more years of PPIs had about 65 percent higher odds of a B12 deficiency diagnosis. For H2 blockers, it was about 25 percent higher odds.",
+      "grafik": {
+        "baslik": "Higher odds of a B12 deficiency diagnosis",
+        "alt": "Two or more years of use vs no use",
+        "cubuklar": [
+          {
+            "etiket": "H2 blockers",
+            "deger": 25,
+            "metin": "+25%"
+          },
+          {
+            "etiket": "PPIs",
+            "deger": 65,
+            "metin": "+65%"
+          }
+        ],
+        "kaynak": "Lam et al., JAMA 2013 · 25,956 cases and 184,199 controls, Kaiser Permanente Northern California"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "Higher doses were linked with higher odds, and the link was weaker after people stopped. But this was an observational study, and the authors couldn't fully rule out other factors.",
+      "gorsel": "a balance scale on a wooden table with a small pill bottle on one side and a folded paper on the other, level and still",
+      "baslik": {
+        "satirlar": [
+          "OBSERVED,",
+          "NOT PROVEN"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "metin": "That is not a reason to stop on your own. Many people truly need these medicines. The useful step is to tell your doctor or pharmacist how long you've taken them, and ask whether your B12 should be checked.",
+      "gorsel": "a pharmacy counter with a pharmacist's white coat on a hook, a paper bag, a small pill bottle and a notepad with blank lines",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "bolum": "Why supplements still work",
+      "tip": "kart",
+      "metin": "Now for the good news, and the payoff of that earlier clue.",
+      "kart": {
+        "ust": "THE GOOD NEWS",
+        "baslik": "A different kind of B12",
+        "alt": "Fortified foods and supplements"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "The B12 added to fortified foods and supplements is in a free form. It isn't tied to food protein, so it doesn't depend on stomach acid to be set loose.",
+      "gorsel": "a bowl of fortified breakfast cereal with milk beside a small open bottle of tablets, a simple engraving of a stomach with golden particles passing straight through",
+      "baslik": {
+        "satirlar": [
+          "NO ACID",
+          "NEEDED"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "metin": "That's why the National Institutes of Health advises that people over 50 get most of their B12 from fortified foods or supplements. Their bodies can usually absorb B12 from those sources.",
+      "gorsel": "a kitchen shelf with a box of breakfast cereal, a loaf of bread, a small bottle of tablets and a carton of milk in warm morning light"
+    },
+    {
+      "id": 33,
+      "metin": "The evidence backs that up. In the Framingham Offspring Study of 2,999 adults, ages 26 to 83, 8 percent of supplement users had a low B12 blood level, compared with 20 percent of non-users.",
+      "gorsel": "a small bottle with a few tablets in front of a bowl of fortified breakfast cereal, a calm engraved wave line rising and falling behind",
+      "etiket": "Tucker et al. · Am J Clin Nutr · 2000",
+      "baslik": {
+        "satirlar": [
+          "8% VS 20%"
+        ],
+        "not": "low B12: supplement users vs non-users"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Among people who took no supplements, those eating fortified cereal more than four times a week were low 12 percent of the time, versus 23 percent for those who ate none. This study included younger adults too, and it only shows a link.",
+      "gorsel": "a breakfast table with a bowl of fortified breakfast cereal, a glass of milk, a spoon and a folded newspaper with blank columns"
+    },
+    {
+      "id": 35,
+      "tip": "grafik",
+      "metin": "In the older Irish and Northern Irish adults, eating fortified foods five or more times a week went with lower deficiency. With atrophic gastritis, it was 30 percent versus 50 percent.",
+      "grafik": {
+        "baslik": "Share with low B12 status",
+        "alt": "Fortified foods five or more times a week vs less often",
+        "cubuklar": [
+          {
+            "etiket": "Neither, often",
+            "deger": 10,
+            "metin": "10%"
+          },
+          {
+            "etiket": "Neither, less often",
+            "deger": 21,
+            "metin": "21%"
+          },
+          {
+            "etiket": "Atrophic gastritis, often",
+            "deger": 30,
+            "metin": "30%"
+          },
+          {
+            "etiket": "Atrophic gastritis, less often",
+            "deger": 50,
+            "metin": "50%"
+          }
+        ],
+        "kaynak": "Porter et al., Am J Clin Nutr 2021 · n = 3,299, adults aged 60 and older"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "It wasn't a perfect fix. Even regular fortified-food eaters with atrophic gastritis were low 30 percent of the time. So food alone doesn't always solve it, and a blood test can show where you stand.",
+      "gorsel": "a half-full glass jar on a wooden table, golden grains inside reaching just past the middle, a bowl of cereal beside it",
+      "baslik": {
+        "satirlar": [
+          "HELPS,",
+          "NOT PERFECT"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "bolum": "Signs mistaken for aging",
+      "tip": "kart",
+      "metin": "So what might low B12 feel like? Often, nothing you'd call dramatic.",
+      "kart": {
+        "ust": "THE QUIET SIGNS",
+        "baslik": "Easy to blame on age",
+        "alt": "Fatigue · Tingling · Memory"
+      }
+    },
+    {
+      "id": 38,
+      "metin": "The National Institutes of Health lists tiredness and weakness, linked to a type of anemia. Many people shrug that off as a normal part of getting older.",
+      "gorsel": "an armchair by a window with a folded blanket and a teacup, a pair of reading glasses resting on an open book",
+      "baslik": {
+        "satirlar": [
+          "TIRED AND",
+          "WEAK"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "Low B12 can also affect nerves. Hands and feet may feel numb or tingly, and balance can suffer.",
+      "gorsel": "a pair of sturdy walking shoes at the foot of a staircase with a handrail, a pair of work gloves on a bench beside them",
+      "baslik": {
+        "satirlar": [
+          "NUMB OR",
+          "TINGLY"
+        ],
+        "not": "hands and feet"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "And it can touch the mind. The list includes poor memory, confusion, and depression. Nerve damage can happen even without anemia, so the National Institutes of Health stresses that early treatment matters.",
+      "gorsel": "a quiet writing desk with a notepad of blank lines, a pencil, a small calendar and a cup of tea, a lamp casting soft light",
+      "baslik": {
+        "satirlar": [
+          "MEMORY",
+          "SLIPS"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "Of course, tiredness, tingling, and memory slips have many causes, and plenty have nothing to do with B12. That's exactly why a blood test is a better guide than guessing. If you've been told your symptoms are just age, it's reasonable to ask whether B12 has ever been checked.",
+      "gorsel": "a doctor's table with a stoppered sample tube in a small rack, a clipboard with blank paper and a pen",
+      "baslik": {
+        "satirlar": [
+          "TEST,",
+          "DON'T GUESS"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "In the metformin trial, a nerve exam found more neuropathy among metformin users with low B12 at year nine. But that rested on only 13 cases, so it's a hint, not a firm finding.",
+      "gorsel": "a close view of an open hand resting on a table with a thin feather lying across the palm, soft window light",
+      "etiket": "Aroda et al. · J Clin Endocrinol Metab · 2016"
+    },
+    {
+      "id": 43,
+      "bolum": "When to ask for a test",
+      "tip": "kart",
+      "metin": "As promised, here is when it makes sense to ask your doctor about a B12 blood test.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "When to ask for a test",
+        "alt": "Three situations, then three habits"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "One. You've taken metformin for a long time. The trial authors suggested considering routine testing in people who take it.",
+      "gorsel": "a small amber pill bottle with a few round tablets in front, an antique calendar with blank squares behind it",
+      "baslik": {
+        "satirlar": [
+          "ONE:",
+          "METFORMIN"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Two. You've taken a PPI or an H2 blocker for years, including the kinds sold over the counter, which many people buy without a prescription.",
+      "gorsel": "a store shelf with a few plain bottles and boxes with blank labels, a hand basket on the shelf below",
+      "baslik": {
+        "satirlar": [
+          "TWO: ACID",
+          "REDUCERS"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Three. You have lasting symptoms, such as numb or tingling hands and feet, balance trouble, or new memory problems. Strict vegetarians and vegans should ask too.",
+      "gorsel": "a person's two hands resting on a wooden table beside a notebook and pen, a cup of tea with rising steam",
+      "baslik": {
+        "satirlar": [
+          "THREE:",
+          "SYMPTOMS"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Now the habits. First, look at the label. Many breakfast cereals and some other packaged foods are fortified, and the Nutrition Facts panel lists vitamin B12.",
+      "gorsel": "a box of breakfast cereal on a grocery shelf next to a loaf of bread, a hand reaching toward the box, plain blank label panels",
+      "baslik": {
+        "satirlar": [
+          "READ THE",
+          "LABEL"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "Second, if you're over 50, remember the National Institutes of Health advice: get most of your B12 from fortified foods or supplements. Ask your doctor or pharmacist which form and amount fit you.",
+      "gorsel": "a kitchen table with a bowl of fortified cereal and milk, a small bottle of tablets and a pill organizer neatly arranged",
+      "baslik": {
+        "satirlar": [
+          "OVER 50:",
+          "FORTIFIED"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Third, write down your medicines, and any tingling, balance trouble, or memory changes. Bring that list to your next checkup. It helps your doctor decide whether a test makes sense, and it saves you from trying to remember everything in a short appointment.",
+      "gorsel": "a notepad with blank lines, a pen, a pill organizer and a pair of eyeglasses on a kitchen table in morning light"
+    },
+    {
+      "id": 50,
+      "metin": "One last safety note. Don't stop or change any prescription on your own. And try not to treat symptoms with B12 pills before you've been checked, because B12 is only one possible cause.",
+      "gorsel": "a closed medicine cabinet door with a small brass key in its lock, a stethoscope hanging beside it",
+      "baslik": {
+        "satirlar": [
+          "CHECK",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Less acid, less B12",
+        "alt": "Know the causes, ask for the test"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "With age, many people make less stomach acid, so they struggle to free B12 from food. In older adults with atrophic gastritis, 38 percent were low, versus 15 percent in a comparison group.",
+      "gorsel": "an engraving of a stomach with a thin smooth lining beside a plate of fish, an egg and a glass of milk"
+    },
+    {
+      "id": 53,
+      "metin": "Long-term metformin, and years of PPIs or H2 blockers, have also been linked with lower B12. These are links in studies, not reasons to stop a medicine.",
+      "gorsel": "a small pill bottle and a second small pill bottle beside a glass of water and a pill organizer on a wooden table"
+    },
+    {
+      "id": 54,
+      "metin": "B12 in fortified foods and supplements is easier to absorb, and the National Institutes of Health advises people over 50 to get most of theirs that way.",
+      "gorsel": "a bowl of fortified breakfast cereal with milk next to a small bottle of tablets in warm morning light"
+    },
+    {
+      "id": 55,
+      "metin": "And if you take these medicines, or have tingling, balance trouble, or memory slips that won't go away, ask your doctor about a simple blood test.",
+      "gorsel": "a doctor's desk with a stoppered sample tube, a stethoscope and an open notebook, soft window light"
+    },
+    {
+      "id": 56,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
