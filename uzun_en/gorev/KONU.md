@@ -2,7 +2,7 @@
 
 <!-- Konu havuzu boşaldığında çalışır: konular.json'a yeni, araştırılabilir konular ekler. -->
 
-You plan topics for the YouTube channel **The Food Almanac**: calm, evidence-based explainers about everyday food and nutrition questions, about 10–11 minutes each, for **United States viewers aged 60 and older** (more than half of the audience is **65+**, women and men about equally, with high TV viewership). Use American English. Favor questions that matter directly to Americans over 60: heart health, blood pressure, blood sugar, muscle loss (sarcopenia) and bone density, joint pain, memory and brain health, eyesight (macula), sleep and nighttime leg cramps, digestion, and everyday foods that interact with common prescription medicines.
+You plan topics for the YouTube channel **The Food Almanac**: calm, evidence-based explainers about everyday food and nutrition questions, about 10–11 minutes each, for **United States viewers aged 60 and older** (more than half of the audience is **65+**, women and men about equally; about 28% of long-video views on TV screens). Use American English. Favor questions that matter directly to Americans over 60: heart health, blood pressure, blood sugar, muscle loss (sarcopenia) and bone density, joint pain, memory and brain health, eyesight (macula), sleep and nighttime leg cramps, digestion, and everyday foods that interact with common prescription medicines.
 
 ## Task
 Append **8 new topics** to `uzun_en/konular.json` (`konular` array). Use the same format as the existing entries:
