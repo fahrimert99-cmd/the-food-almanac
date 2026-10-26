@@ -1,0 +1,586 @@
+{
+  "slug": "grapefruit-medications",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Grapefruit and Medications: Why It Matters After 60",
+  "yorum": "Do you take a daily medicine, and has your pharmacist ever asked about grapefruit? What do you reach for at breakfast instead?",
+  "aciklama_giris": "Grapefruit juice can raise the blood level of certain medicines. In a 1991 study of six men with borderline high blood pressure, juice raised felodipine exposure to about 284 percent of the level taken with water. The FDA lists some cholesterol, blood pressure and heart-rhythm medicines among those that can be affected, and a review in the Canadian Medical Association Journal describes older adults as especially exposed.\n\nIn this video we cover how grapefruit's natural compounds block an enzyme called CYP3A4 in the small intestine, which medicines the FDA names, why taking your pill hours apart does not fix it, how strong the evidence really is, which citrus fruits are lower risk, and what to ask your pharmacist. Never stop or change a medicine on your own.",
+  "kaynaklar": [
+    "US Food and Drug Administration. Grapefruit Juice and Some Drugs Don't Mix. FDA Consumer Update. https://www.fda.gov/consumers/consumer-updates/grapefruit-juice-and-some-drugs-dont-mix",
+    "Bailey DG, Spence JD, Munoz C, Arnold JMO. Interaction of citrus juices with felodipine and nifedipine. Lancet. 1991;337:268-269. PMID 1671113.",
+    "Lown KS, Bailey DG, Fontana RJ, et al. Grapefruit juice increases felodipine oral availability in humans by decreasing intestinal CYP3A protein expression. Journal of Clinical Investigation. 1997;99(10):2545-2553. doi:10.1172/JCI119439. PMID 9153299.",
+    "Lilja JJ, Neuvonen M, Neuvonen PJ. Effects of regular consumption of grapefruit juice on the pharmacokinetics of simvastatin. British Journal of Clinical Pharmacology. 2004;58(1):56-60. PMC1884539.",
+    "Libersa CC, Brique SA, Motte KB, et al. Dramatic inhibition of amiodarone metabolism induced by grapefruit juice. British Journal of Clinical Pharmacology. 2000;49(4):373-378. PMC2014943.",
+    "Malhotra S, Bailey DG, Paine MF, Watkins PB. Seville orange juice-felodipine interaction: comparison with dilute grapefruit juice and involvement of furocoumarins. Clinical Pharmacology & Therapeutics. 2001;69(1):14-23.",
+    "Maskalyk J. Grapefruit juice: potential drug interactions. CMAJ. 2002;167(3):279-280. PMC117477.",
+    "Bailey DG, Dresser G, Arnold JMO. Grapefruit-medication interactions: forbidden fruit or avoidable consequences? CMAJ. 2013;185(4):309-316. doi:10.1503/cmaj.120951. PMID 23184849.",
+    "Dugrand-Judek A, et al. The distribution of coumarins and furanocoumarins in Citrus species closely matches Citrus phylogeny and reflects the organization of biosynthetic pathways. PLoS ONE. 2015;10(11):e0142757.",
+    "Harvard Health Publishing. Grapefruit juice and statins. https://www.health.harvard.edu/heart-health/grapefruit-juice-and-statins"
+  ],
+  "kapak": {
+    "satirlar": [
+      "GRAPEFRUIT",
+      "AND PILLS?"
+    ],
+    "vurgu": "3.6×",
+    "gorsel": "a large halved ruby-pink grapefruit with a whole grapefruit behind it, in front of them an amber pill bottle with a white cap and a few white round tablets, all tightly grouped and overlapping, huge and appetizing"
+  },
+  "kahraman": "grapefruit",
+  "etiketler": [
+    "grapefruit and medication",
+    "grapefruit statin interaction",
+    "grapefruit blood pressure medication",
+    "grapefruit drug interactions",
+    "can i eat grapefruit with medicine",
+    "CYP3A4",
+    "seniors health",
+    "medication safety",
+    "citrus fruit",
+    "food and drug interactions"
+  ],
+  "seslendirme_duzelt": {
+    "CYP3A4": "C Y P 3 A 4",
+    "FDA": "F D A",
+    "CMAJ": "C M A J",
+    "furanocoumarins": "fur an oh coo ma rins",
+    "bergamottin": "bur guh mot in",
+    "amiodarone": "a mee oh da rone",
+    "felodipine": "fe lod ih peen",
+    "nifedipine": "nye fed ih peen",
+    "simvastatin": "sim vuh stat in",
+    "atorvastatin": "uh tor vuh stat in",
+    "cyclosporine": "sigh clo spor een",
+    "buspirone": "byoo spy rone",
+    "budesonide": "byoo des oh nide",
+    "fexofenadine": "fex oh fen uh deen",
+    "Zocor": "ZOE core",
+    "Pacerone": "PACE er own"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "What grapefruit does in your gut",
+      "metin": "If you take a daily pill, your grapefruit may matter. In one 1991 study, grapefruit juice nearly tripled the level of a blood pressure medicine in six men.",
+      "gorsel": "a glass of grapefruit juice beside a halved grapefruit and an amber pill bottle with a few white tablets spilled on a kitchen table",
+      "baslik": {
+        "satirlar": [
+          "GRAPEFRUIT",
+          "+ A PILL"
+        ],
+        "vurgu": "284%",
+        "not": "felodipine level with juice vs water"
+      },
+      "etiket": "Bailey et al. · Lancet · 1991"
+    },
+    {
+      "id": 2,
+      "metin": "But there's a catch. Taking the pill at a different time of day doesn't fix it.",
+      "gorsel": "an antique clock beside a whole grapefruit and a pill bottle, a curved dashed arrow that loops back to the grapefruit"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know which medicines are involved, and which fruits are lower risk.",
+      "gorsel": "a bowl holding a halved grapefruit, whole oranges and lemons, a pharmacist's mortar and pestle beside the bowl"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what happens when grapefruit meets your gut.",
+      "gorsel": "a whole grapefruit and a halved grapefruit on a wooden cutting board, a small stomach and intestine sketch drawn beside it as a textbook engraving"
+    },
+    {
+      "id": 5,
+      "metin": "A grapefruit is more than vitamin C and a bitter tang. Its pulp and juice also contain natural compounds called furanocoumarins, with names like bergamottin.",
+      "gorsel": "a halved grapefruit with a magnified circular inset showing hexagon ring molecule outlines drifting out of the juicy segments",
+      "baslik": {
+        "satirlar": [
+          "FURANO-",
+          "COUMARINS"
+        ],
+        "not": "natural compounds in grapefruit"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Plants make these compounds as a chemical defense. In people, they have an unexpected side effect, and it starts in the small intestine, not the stomach.",
+      "gorsel": "a grapefruit tree branch with a ripe grapefruit hanging among leaves, a small stomach and a coiled small intestine sketched in the corner"
+    },
+    {
+      "id": 7,
+      "metin": "The wall of your small intestine contains an enzyme called CYP3A4. Think of it as a gatekeeper that breaks down many medicines before they reach your bloodstream.",
+      "gorsel": "cross-section of the small intestine wall with finger-like villi, small round tablets crumbling into pieces at the surface, a tube-shaped vessel with small red discs below",
+      "baslik": {
+        "satirlar": [
+          "CYP3A4",
+          "THE GATEKEEPER"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "metin": "Because of that gatekeeper, only part of a pill's dose normally gets through. Your prescription is set with that in mind.",
+      "gorsel": "an amber pill bottle on a table, five white tablets passing through a narrow gate drawn as an iron garden gate, only two continuing beyond it, a grapefruit at the side"
+    },
+    {
+      "id": 9,
+      "metin": "The FDA explains that grapefruit juice can block the action of this intestinal enzyme. With the gatekeeper switched off, more of the medicine slips through into your blood.",
+      "gorsel": "the same small intestine wall with the gate swung wide open, many white tablets streaming through into a tube-shaped vessel with small red discs, a halved grapefruit beside it",
+      "baslik": {
+        "satirlar": [
+          "GATE",
+          "BLOCKED"
+        ],
+        "not": "more medicine reaches the blood and stays longer"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "It's like taking a bigger dose than your doctor intended, without changing a single pill. And later, you'll see why moving the pill to another time of day doesn't undo it.",
+      "gorsel": "a balance scale with a single white tablet on one side and a pile of tablets on the other, a halved grapefruit sitting on the heavier side"
+    },
+    {
+      "id": 11,
+      "bolum": "The first evidence",
+      "tip": "kart",
+      "metin": "The first clear evidence came from a research team including David Bailey, published in the medical journal The Lancet in 1991.",
+      "kart": {
+        "ust": "THE FIRST EVIDENCE",
+        "baslik": "Juice meets a pill",
+        "alt": "The Lancet · 1991"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Six men with borderline high blood pressure took the same dose of felodipine, a calcium-channel blocker, on different days. Once with water, once with grapefruit juice, and once with orange juice.",
+      "gorsel": "three tall glasses in a row on a laboratory bench, one of water, one of grapefruit juice, one of orange juice, a blister of white tablets in front of them, a halved grapefruit at the end",
+      "etiket": "Bailey et al. · Lancet · 1991"
+    },
+    {
+      "id": 13,
+      "tip": "grafik",
+      "metin": "With grapefruit juice, felodipine levels averaged about 284 percent of the level with water. A related drug, nifedipine, rose to about 134 percent in a separate group of six healthy men.",
+      "grafik": {
+        "baslik": "Drug level compared with water",
+        "alt": "Taken with grapefruit juice, water = 100 percent",
+        "cubuklar": [
+          {
+            "etiket": "With water",
+            "deger": 100,
+            "metin": "100%"
+          },
+          {
+            "etiket": "Nifedipine + juice",
+            "deger": 134,
+            "metin": "134%"
+          },
+          {
+            "etiket": "Felodipine + juice",
+            "deger": 284,
+            "metin": "284%"
+          }
+        ],
+        "kaynak": "Bailey et al., Lancet 1991 · 6 men with borderline hypertension (felodipine), 6 healthy men (nifedipine)"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "With the extra drug came lower blood pressure, a faster heart rate, and more side effects from widened blood vessels. Orange juice produced none of those changes.",
+      "gorsel": "a sphygmomanometer cuff and a stethoscope on a table beside a glass of grapefruit juice and a glass of orange juice, a halved grapefruit nearby",
+      "baslik": {
+        "satirlar": [
+          "ORANGE JUICE:",
+          "NO CHANGE"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "These were tiny studies that measured drug levels, not hospital visits. But they opened a whole field of research.",
+      "gorsel": "a quiet research desk with a small stack of journals with blank covers, a halved grapefruit and a brass microscope"
+    },
+    {
+      "id": 16,
+      "metin": "And the drugs on the list have kept growing, as you'll hear. First, let's look at which medicines the FDA says are involved.",
+      "gorsel": "a long wooden pharmacy shelf with rows of amber pill bottles, a single grapefruit sitting at the end of the shelf"
+    },
+    {
+      "id": 17,
+      "bolum": "Which medicines are affected",
+      "tip": "kart",
+      "metin": "So which medicines are affected? The FDA publishes examples, and the list is longer than most people expect.",
+      "kart": {
+        "ust": "THE LIST",
+        "baslik": "Who it affects",
+        "alt": "Examples from the FDA"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Cholesterol-lowering statins are the best-known group. The FDA names simvastatin, sold as Zocor, and atorvastatin, sold as Lipitor.",
+      "gorsel": "an amber pill bottle with white tablets and a halved grapefruit side by side, a small red heart symbol drawn above them",
+      "baslik": {
+        "satirlar": [
+          "STATINS"
+        ],
+        "not": "simvastatin and atorvastatin are on the FDA list"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "In a 2004 randomized crossover study of 10 healthy volunteers, three days of a daily glass of grapefruit juice, about 7 ounces, raised levels of a single simvastatin dose about 3.6 times.",
+      "gorsel": "a small glass of grapefruit juice next to a halved grapefruit, beside it three glass laboratory cylinders filled to a short, a taller and a tallest level with golden liquid",
+      "etiket": "Lilja et al. · Br J Clin Pharmacol · 2004",
+      "baslik": {
+        "satirlar": [
+          "SIMVASTATIN"
+        ],
+        "vurgu": "3.6×",
+        "not": "higher levels with daily juice, 10 healthy adults"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "Higher statin levels can raise the risk of muscle problems. For atorvastatin the effect looks smaller than for simvastatin, but the FDA still lists both.",
+      "gorsel": "a bowed upper arm muscle in textbook engraving style, a pill bottle and a halved grapefruit on the table beside it"
+    },
+    {
+      "id": 21,
+      "metin": "The second group is blood pressure medicines, specifically some calcium-channel blockers. The FDA names nifedipine, sold as Procardia and Adalat CC. Felodipine, from the first study, belongs to the same family.",
+      "gorsel": "a sphygmomanometer cuff on a wooden table next to an amber pill bottle and a halved grapefruit",
+      "baslik": {
+        "satirlar": [
+          "BLOOD",
+          "PRESSURE PILLS"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Higher levels can lower blood pressure more than intended, which is why that 1991 study saw extra side effects from widened blood vessels.",
+      "gorsel": "a tube-shaped vessel with small red discs, gently widened, beside a whole grapefruit and a glass of grapefruit juice"
+    },
+    {
+      "id": 23,
+      "metin": "The third group is heart-rhythm medicines. The FDA lists amiodarone, sold as Pacerone. In a study of 11 healthy volunteers, grapefruit juice raised its levels by about half after a single dose.",
+      "gorsel": "a textbook engraving of a human heart beside a halved grapefruit and an amber pill bottle on a table",
+      "etiket": "Libersa et al. · Br J Clin Pharmacol · 2000",
+      "baslik": {
+        "satirlar": [
+          "HEART-RHYTHM",
+          "DRUGS"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "metin": "The FDA's list goes on. The transplant drug cyclosporine. The anti-anxiety medicine buspirone. And budesonide, a steroid used for Crohn's disease and ulcerative colitis.",
+      "gorsel": "four amber pill bottles of different sizes in a neat row, a whole grapefruit placed in front of them"
+    },
+    {
+      "id": 25,
+      "metin": "And one surprise. For the allergy medicine fexofenadine, sold as Allegra, grapefruit does the opposite. Less of the drug is absorbed, so it may work less well.",
+      "gorsel": "a single white tablet with a thin dashed arrow pointing away from the intestine wall, a halved grapefruit beside it",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "OPPOSITE CASE"
+        ],
+        "not": "fexofenadine, an allergy medicine"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "The FDA also notes that grapefruit does not affect every drug in these classes. So you can't tell from the drug family alone. The only way to know is to ask.",
+      "gorsel": "a pharmacy counter with a mortar and pestle, a stack of paper bags, a whole grapefruit and a pair of round eyeglasses"
+    },
+    {
+      "id": 27,
+      "metin": "This matters for a simple reason. After 60, many people take several daily medicines, and a 2013 review in the Canadian Medical Association Journal described older adults as especially exposed.",
+      "gorsel": "a weekly pill organizer with seven small compartments filled with tablets, a halved grapefruit beside it",
+      "etiket": "Bailey et al. · CMAJ · 2013"
+    },
+    {
+      "id": 28,
+      "metin": "The authors counted drugs with potentially serious grapefruit interactions rising from 17 to 43 between 2008 and 2012, as newer medicines reached the market.",
+      "gorsel": "a grapefruit with two stacks of amber pill bottles, a short stack and a much taller stack, drawn side by side",
+      "baslik": {
+        "satirlar": [
+          "17 → 43"
+        ],
+        "not": "drugs with serious potential interactions, 2008 to 2012"
+      }
+    },
+    {
+      "id": 29,
+      "bolum": "Why timing doesn't fix it",
+      "tip": "kart",
+      "metin": "Now to the idea many people hope will work. Take your pill in the morning, eat grapefruit at lunch, and call it even.",
+      "kart": {
+        "ust": "A COMMON HOPE",
+        "baslik": "Why spacing doesn't help",
+        "alt": "The enzyme stays blocked"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "Unfortunately, it doesn't work that way. Furanocoumarins don't just get in the enzyme's way for a moment. They can inactivate it.",
+      "gorsel": "a halved grapefruit above a small intestine wall where one enzyme shape drawn as a gear has a lock clamped over it",
+      "baslik": {
+        "satirlar": [
+          "ENZYME",
+          "SWITCHED OFF"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "In a 1997 study from the University of Michigan, 10 healthy men drank grapefruit juice three times a day for six days. Gut biopsies showed about 62 percent less CYP3A4 protein in the small intestine.",
+      "gorsel": "a laboratory bench with a rack of small tubes, three glasses of grapefruit juice in a row and a halved grapefruit, an antique microscope behind them",
+      "etiket": "Lown et al. · J Clin Invest · 1997",
+      "baslik": {
+        "satirlar": [
+          "–62%"
+        ],
+        "not": "intestinal CYP3A4 protein after six days of juice"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Liver enzyme activity didn't change. So the effect is mainly in the wall of the gut, exactly where many pills are first absorbed.",
+      "gorsel": "a textbook engraving of the liver beside the small intestine, a halved grapefruit near the intestine only, the liver left plain"
+    },
+    {
+      "id": 33,
+      "metin": "To get the enzyme back, the cells lining your intestine have to make new enzyme, and that takes time. The reduction begins within about four hours and can last up to 24 hours, according to a CMAJ review.",
+      "gorsel": "an antique clock with a blank face next to a halved grapefruit, a curved dashed arrow circling the clock once all the way around",
+      "etiket": "Maskalyk · CMAJ · 2002",
+      "baslik": {
+        "satirlar": [
+          "UP TO",
+          "24 HOURS"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Some sources describe effects lasting up to 72 hours. Either way, a few hours between your pill and your grapefruit doesn't protect you. As that review put it, separating the two does not prevent interference.",
+      "gorsel": "a breakfast table with a pill bottle at one end and a bowl of grapefruit at the far end, a long dashed line between them that bends back toward the pill bottle"
+    },
+    {
+      "id": 35,
+      "metin": "Amount matters less than you'd hope, too. The same review notes that as little as 250 milliliters, about one cup, can change how some drugs are handled. And the whole fruit counts as well as the juice.",
+      "gorsel": "a measuring cup of grapefruit juice at the one-cup line beside a whole grapefruit and a halved grapefruit"
+    },
+    {
+      "id": 36,
+      "metin": "Harvard Health points out that half a grapefruit is less risky than a glass of juice, because a glass takes several fruits. But for any one medicine, nobody can hand you a universal safe amount.",
+      "gorsel": "a glass of grapefruit juice with four whole grapefruits arranged behind it to show how many fruits go into one glass"
+    },
+    {
+      "id": 37,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. How worried should you be?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "How big is the risk?",
+        "alt": "Solid science · limited outcomes"
+      }
+    },
+    {
+      "id": 38,
+      "metin": "The enzyme science is solid, and the changes in drug levels are real. But most studies used small groups of healthy volunteers, often a single dose, and measured drug levels rather than health outcomes.",
+      "gorsel": "a single chair at a laboratory table with a covered tray, a glass of grapefruit juice and a halved grapefruit, a tall window"
+    },
+    {
+      "id": 39,
+      "metin": "Some experts disagree about how common real harm is. Two researchers wrote to the same journal saying they knew of no validated evidence of serious harm, and called the review's list predicted risk. Their letter disclosed ties to the Florida Department of Citrus.",
+      "gorsel": "an open letter on a desk beside a quill pen, a halved grapefruit and a brass inkwell, the page showing only blank lines",
+      "baslik": {
+        "satirlar": [
+          "DO EXPERTS",
+          "AGREE?"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Both things can be true. The change in drug levels is real, and the number of people actually harmed is hard to measure. For a drug with a narrow safety margin, a small rise can matter. For another drug, it may not matter at all.",
+      "gorsel": "a pair of antique brass scales with a pill bottle on one pan and a halved grapefruit on the other, almost level"
+    },
+    {
+      "id": 41,
+      "metin": "That uncertainty is why the FDA's advice isn't simply never eat grapefruit. It's to ask your doctor or pharmacist whether grapefruit affects your medicine.",
+      "gorsel": "a friendly pharmacy counter with a mortar and pestle, a whole grapefruit and a small paper bag, soft morning light",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "And one firm rule. Never stop or change a medicine on your own because of this video. A missed dose of a statin or a blood pressure pill can cause its own problems.",
+      "gorsel": "a weekly pill organizer closed and untouched on a table beside a whole grapefruit and a folded pair of reading glasses",
+      "baslik": {
+        "satirlar": [
+          "NEVER STOP",
+          "ON YOUR OWN"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "bolum": "Which citrus fruits are safer",
+      "tip": "kart",
+      "metin": "Here's the good news. Citrus fruits are not all alike, and some make an easy swap.",
+      "kart": {
+        "ust": "THE CITRUS GUIDE",
+        "baslik": "Safer and riskier",
+        "alt": "Oranges · Lemons · Pomelos"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "In the 1991 study, orange juice did not raise felodipine levels. And the CMAJ review states that there is no similar reaction with orange juice.",
+      "gorsel": "a glass of orange juice and a halved orange on a sunny breakfast table, a halved grapefruit sitting apart on a separate plate",
+      "baslik": {
+        "satirlar": [
+          "ORANGE",
+          "JUICE"
+        ],
+        "not": "no similar reaction was seen"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Common sweet oranges are a reasonable swap. A 2001 study of 10 volunteers used ordinary orange juice as its comparison, precisely because it didn't act like grapefruit.",
+      "gorsel": "a wooden crate of round Valencia oranges, one peeled in segments on a plate, a single halved grapefruit set aside to the left",
+      "etiket": "Malhotra et al. · Clin Pharmacol Ther · 2001"
+    },
+    {
+      "id": 46,
+      "metin": "Lemons and limes are generally thought to be low in these compounds, especially the juice. The evidence is thinner, though, and peel holds more than pulp does. So if you use lots of zest, ask your pharmacist.",
+      "gorsel": "a halved lemon and a whole lime on a cutting board with a fine grater, a halved grapefruit set apart behind them"
+    },
+    {
+      "id": 47,
+      "metin": "Now the fruits to watch. The FDA says Seville oranges, pomelos, and tangelos might have the same effect as grapefruit juice. Seville oranges are also called sour oranges.",
+      "gorsel": "a pomelo, a Seville orange and a tangelo arranged next to a halved grapefruit, all four fruits close together",
+      "baslik": {
+        "satirlar": [
+          "SAME EFFECT?",
+          "WATCH THESE"
+        ],
+        "not": "Seville orange, pomelo and tangelo"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "In that 2001 study, Seville orange juice raised felodipine exposure by 76 percent, compared with 93 percent for grapefruit juice.",
+      "gorsel": "two glasses of juice side by side, one pale gold Seville orange juice and one pink grapefruit juice, a halved grapefruit between them",
+      "etiket": "Malhotra et al. · Clin Pharmacol Ther · 2001",
+      "baslik": {
+        "satirlar": [
+          "SEVILLE",
+          "+76%"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "French researchers measured 61 citrus species. Pomelos and citrons made high amounts of furanocoumarins, while mandarins had practically none. That study measured the compounds, not drug interactions, but it points to mandarins as lower risk.",
+      "gorsel": "a mandarin with its peel partly removed, a pomelo and a halved grapefruit on a wooden tray",
+      "etiket": "Dugrand-Judek et al. · PLoS ONE · 2015"
+    },
+    {
+      "id": 50,
+      "metin": "And read labels. Some fruit juice blends contain grapefruit, and the FDA advises checking.",
+      "gorsel": "a row of unmarked juice bottles on a grocery shelf, one with a pink grapefruit drawn on its side, a whole grapefruit in front"
+    },
+    {
+      "id": 51,
+      "bolum": "What to do about it",
+      "tip": "kart",
+      "metin": "So what should you actually do? Here are four practical steps.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Four practical steps",
+        "alt": "Pharmacist first"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "One. Ask your pharmacist. With every new prescription, ask whether grapefruit affects it. They can usually check in moments, and it costs nothing.",
+      "gorsel": "a pharmacist's counter with a computer terminal, an amber pill bottle and a halved grapefruit, a paper bag waiting"
+    },
+    {
+      "id": 53,
+      "metin": "Two. Check the paper information that comes with your medicine, or its Drug Facts label, for the word grapefruit. The FDA recommends this too.",
+      "gorsel": "a folded leaflet beside an amber pill bottle, a magnifying glass resting on the leaflet, a halved grapefruit at the corner",
+      "baslik": {
+        "satirlar": [
+          "READ THE",
+          "INSERT"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Three. If your medicine is affected, don't rely on timing. Skip grapefruit, its juice, pomelos, Seville oranges and tangelos, unless your doctor or pharmacist says a small amount is fine for you.",
+      "gorsel": "a breakfast table where a halved grapefruit has been pushed to the edge of the plate, an orange and a pill organizer in front"
+    },
+    {
+      "id": 55,
+      "metin": "Four. Swap in a safer flavor. An orange at breakfast, or lemon in your water. You keep the citrus, and you lose the worry.",
+      "gorsel": "a tall glass of water with lemon slices beside a peeled orange on a sunny kitchen table, a single grapefruit left in the fruit bowl behind"
+    },
+    {
+      "id": 56,
+      "metin": "If you've been eating grapefruit with an affected medicine, don't panic, and don't stop the medicine. Call your pharmacist or doctor, and report unusual muscle pain, dizziness, or an irregular heartbeat.",
+      "gorsel": "an old-fashioned telephone on a kitchen table beside a whole grapefruit and a pill organizer, a soft window light",
+      "baslik": {
+        "satirlar": [
+          "CALL, DON'T",
+          "STOP"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Ask before you squeeze",
+        "alt": "Grapefruit · medicines · citrus swaps"
+      }
+    },
+    {
+      "id": 58,
+      "metin": "Grapefruit's natural compounds block CYP3A4 in your small intestine, so more of certain medicines reaches your blood. The FDA lists some statins, blood pressure drugs and heart-rhythm drugs, among others.",
+      "gorsel": "a halved grapefruit beside the small intestine wall with the gate open and white tablets streaming through, textbook engraving"
+    },
+    {
+      "id": 59,
+      "metin": "Spacing the doses doesn't fix it, because the enzyme stays blocked for many hours, up to a day or more. Not every drug is affected, so ask your pharmacist about yours.",
+      "gorsel": "an antique clock above a pill bottle and a whole grapefruit, a long dashed line connecting the clock to the grapefruit"
+    },
+    {
+      "id": 60,
+      "metin": "Common oranges are the easy swap. Lemons are likely low risk. Seville oranges, pomelos and tangelos may act like grapefruit. And never stop a medicine on your own.",
+      "gorsel": "a sunny table with whole oranges and a glass of water with lemon, a halved grapefruit gently moved to the far corner"
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
