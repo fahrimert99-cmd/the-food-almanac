@@ -1,0 +1,24 @@
+{
+  "baslik": ["PILLS LOWER", "YOUR B12?"],
+  "baslik_yt": "Metformin, Acid Reducers and Your B12 Level",
+  "aciklama": "Two common kinds of medicine have been linked with lower B12 over time. Here is what large studies found, and why you should not stop a prescription on your own.",
+  "parcalar": [
+    {"sahne": 18, "cumleler": [1], "gorsel": 2,
+     "baslik": null, "etiket": null},
+    {"sahne": 19, "cumleler": [0],
+     "baslik": {"satirlar": ["METFORMIN", "AND B12"], "vurgu": "2 TYPES", "not": "of pills linked to low B12"},
+     "etiket": null},
+    {"sahne": 23, "cumleler": [0],
+     "baslik": {"satirlar": ["+13%", "PER YEAR"], "vurgu": "+13%", "not": "higher odds per year"},
+     "etiket": "Aroda et al. · JCEM · 2016"},
+    {"sahne": 25, "cumleler": [0, 1], "baslik": {"satirlar": ["ACID", "REDUCERS"], "not": "PPIs and H2 blockers"}, "etiket": null},
+    {"sahne": 27, "cumleler": [0], "gorsel": 26,
+     "baslik": {"satirlar": ["2+ YEARS", "OF PPIS"], "vurgu": "+65%", "not": "higher odds of deficiency"},
+     "etiket": "Lam et al. · JAMA · 2013"},
+    {"sahne": 27, "cumleler": [1], "gorsel": 53,
+     "baslik": {"satirlar": ["H2 BLOCKERS"], "vurgu": "+25%", "not": "higher odds of deficiency"},
+     "etiket": "Lam et al. · JAMA · 2013"},
+    {"sahne": 28, "cumleler": [1], "baslik": {"satirlar": ["OBSERVED,", "NOT PROVEN"]}, "etiket": "Lam et al. · JAMA · 2013"},
+    {"sahne": 29, "cumleler": [0, 2], "baslik": {"satirlar": ["SAFETY", "FIRST"]}, "etiket": null}
+  ]
+}
