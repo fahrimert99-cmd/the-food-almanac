@@ -34,6 +34,8 @@ The prompt tells you three things:
   Study it closely. Then write a **new** video on your topic in the same style. Do not copy its sentences.
   Exception: its opening (scenes 1–5, with a "Welcome" card) predates the current rules. Build scenes 1–4 as described
   in Step 3 below, not like the reference.
+  Also do not copy its `ses_motoru`, `ses` or `length_scale` fields: that video used an older voice. The narrator voice
+  comes from `uzun_en/marka.json`, so leave these fields out of your `proje.json`.
 - `uzun_en/marka.json` gives the channel name and audience.
 
 ## Deliverables (write only these files)
