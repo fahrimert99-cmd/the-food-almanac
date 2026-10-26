@@ -1,0 +1,23 @@
+{
+  "baslik": ["B12 LOW", "AFTER 60?"],
+  "baslik_yt": "Why B12 Runs Low After 60, and Who Should Test",
+  "aciklama": "In a study of 3,299 adults over 60, a thinning stomach lining went with much more low B12. Here is why it happens, what the medicine links show, and when to ask for a blood test.",
+  "parcalar": [
+    {"sahne": 12, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 52, "cumleler": [1], "gorsel": 1,
+     "baslik": {"satirlar": ["LOW B12", "AGE 60+"], "vurgu": "38%", "not": "vs 15% in comparison group"},
+     "etiket": "Porter et al. · Am J Clin Nutr · 2021"},
+    {"sahne": 16, "cumleler": [0]},
+    {"sahne": 12, "cumleler": [1]},
+    {"sahne": 53, "cumleler": [0],
+     "baslik": {"satirlar": ["PILLS TOO?", "METFORMIN"]},
+     "etiket": "Aroda 2016 · Lam JAMA 2013"},
+    {"sahne": 53, "cumleler": [1], "gorsel": 29,
+     "baslik": {"satirlar": ["LINKS,", "NOT PROOF"]},
+     "etiket": null},
+    {"sahne": 32, "cumleler": [0],
+     "baslik": {"satirlar": ["OVER 50:", "FORTIFIED"]}},
+    {"sahne": 55, "cumleler": [0],
+     "baslik": {"satirlar": ["ASK ABOUT", "A B12 TEST"]}}
+  ]
+}
