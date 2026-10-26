@@ -38,6 +38,7 @@ Ayrıntılı kullanım için: **[uzun_en/README.md](uzun_en/README.md)**
 | `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN` | NVIDIA çökerse aynı FLUX ailesiyle görsel (Workers AI, günde 10.000 neuron ücretsiz) |
 | `CLOUDFLARE_ACCOUNT_ID_2`, `CLOUDFLARE_API_TOKEN_2` | İlk Cloudflare hesabının kotası bitince kullanılan ikinci hesap |
 | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET` | Shorts'ların TikTok'a yüklenmesi (`reels.yml`, `araclar/tiktok.py`) |
+| `X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_SECRET` | Shorts'ların X'e (Twitter) video + YouTube bağlantısıyla paylaşılması (`reels.yml`, `araclar/x.py`) |
 
 Hiçbir adım ücretli API kredisi kullanmaz.
 

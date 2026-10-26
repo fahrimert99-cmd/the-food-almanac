@@ -6,6 +6,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import plan  # noqa: E402
+import x as X  # noqa: E402
 
 
 MARKA = {"yayin": {"gunler": [1, 4], "saat_utc": "14:00"}, "onde_uretim_azami": 2}
@@ -78,6 +79,17 @@ class TestPlan(unittest.TestCase):
         self.assertEqual(slug, "temiz-konu")
         self.assertEqual(asama, "senaryo")
         self.assertEqual(slot, "2026-10-27T14:00:00Z")
+
+    def test_x_metin_280_siniri(self):
+        r = {
+            "proje": "garlic-blood-pressure",
+            "no": 1,
+            "baslik": "Does Garlic Lower Blood Pressure? What Trials Found",
+            "uzun_url": "https://youtu.be/5QYM4NhE2b8",
+        }
+        m = X.metin_hazirla(r)
+        self.assertLessEqual(len(m), 280)
+        self.assertIn("https://youtu.be/5QYM4NhE2b8", m)
 
 
 if __name__ == "__main__":

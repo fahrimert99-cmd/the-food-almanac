@@ -92,3 +92,14 @@ jobs:
           [ -n "$TIKTOK_CLIENT_KEY" ] || { echo "TikTok gizli ayarları yok; atlandı"; exit 0; }
           gh release view tiktok >/dev/null 2>&1 || { echo "TikTok henüz bağlanmadı (tiktok_baglan.yml); atlandı"; exit 0; }
           python3 uzun_en/araclar/tiktok.py --gonder "$REELS" --dizin /tmp/medya
+      - name: X (Twitter) paylaşımı (video + uzun video bağlantısı)
+        if: env.REELS != ''
+        continue-on-error: true      # X sorunu diğer platformları durdurmasın
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          [ -n "$X_API_KEY" ] && [ -n "$X_ACCESS_TOKEN" ] || { echo "X gizli ayarları yok; atlandı"; exit 0; }
+          python3 uzun_en/araclar/x.py --gonder "$REELS" --dizin /tmp/medya
