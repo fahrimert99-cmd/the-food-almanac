@@ -1,0 +1,19 @@
+{
+  "baslik": ["GRAPEFRUIT", "+ YOUR PILL?"],
+  "baslik_yt": "Grapefruit and Your Daily Pill: The Gut Gatekeeper",
+  "aciklama": "In a 1991 study, grapefruit juice nearly tripled the level of a blood pressure drug. Here is the gut enzyme behind it, and the one question to ask your pharmacist.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1],
+     "baslik": {"satirlar": ["GRAPEFRUIT", "+ A PILL"], "vurgu": "284%", "not": "felodipine, 6 men, 1991"},
+     "etiket": "Bailey et al. · Lancet · 1991"},
+    {"sahne": 7, "cumleler": [0]},
+    {"sahne": 7, "cumleler": [1], "baslik": null},
+    {"sahne": 9, "cumleler": [1]},
+    {"sahne": 58, "cumleler": [1], "gorsel": 18,
+     "baslik": {"satirlar": ["STATINS · BP", "HEART RHYTHM"]}, "etiket": null},
+    {"sahne": 40, "cumleler": [1], "etiket": null},
+    {"sahne": 52, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["ASK YOUR", "PHARMACIST"]}, "etiket": null}
+  ]
+}
