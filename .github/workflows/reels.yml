@@ -93,7 +93,9 @@ jobs:
           gh release view tiktok >/dev/null 2>&1 || { echo "TikTok henüz bağlanmadı (tiktok_baglan.yml); atlandı"; exit 0; }
           python3 uzun_en/araclar/tiktok.py --gonder "$REELS" --dizin /tmp/medya
       - name: X (Twitter) paylaşımı (video + uzun video bağlantısı)
-        if: env.REELS != ''
+        # X'e paylaşımı Make senaryosundaki Buffer adımı yapıyor ("hemen paylaş", kanal sahibinin kararı, 26 Eki 2026).
+        # Çift gönderi olmasın diye bu doğrudan yol yalnızca depo değişkeni X_DOGRUDAN=true ise çalışır.
+        if: env.REELS != '' && vars.X_DOGRUDAN == 'true'
         continue-on-error: true      # X sorunu diğer platformları durdurmasın
         env:
           X_API_KEY: ${{ secrets.X_API_KEY }}
