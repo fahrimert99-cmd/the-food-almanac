@@ -15,7 +15,7 @@
     "saat_utc": "14:00",
     "not": "Python haftanın günü: 0=Pazartesi ... 1=Salı, 4=Cuma. 14:00 UTC = 17:00 TR = 10:00 New York."
   },
-  "onde_uretim_azami": 7,
+  "onde_uretim_azami": 8,
   "kapak_stil": "koyu",
   "oynatma_listesi": "Food Myths, Checked",
   "oynatma_listesi_aciklama": "One popular food claim per episode, checked against the research.",
