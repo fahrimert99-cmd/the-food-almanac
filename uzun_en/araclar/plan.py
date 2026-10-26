@@ -27,7 +27,12 @@ SABLON_ESIK = 14          # saat: slota bundan az kaldıysa sahne tasarımı atl
 SAHNE_DENEME = 3          # sahne aşaması en çok bu kadar çalıştırma alır
 GORSEL_BEKLE = 30         # saat: görseller çoğunlukla yedek kaynaktan geldiyse slota bundan fazla varken beklenir
 ASAMALAR = ["senaryo", "varlik", "sahne", "render", "yuklendi"]
-GRUP_SAYISI = int(os.environ.get("UZUN_SAHNE_GRUP", "6") or 6)
+GRUP_SAYISI = int(os.environ.get("UZUN_SAHNE_GRUP", "8") or 8)
+SLUG_DESEN = re.compile(r"[a-z0-9][a-z0-9-]{1,79}")   # slug'ı yapay zekâ üretir; kabuk/yol/kod enjeksiyonuna karşı
+
+
+def slug_gecerli(slug):
+    return isinstance(slug, str) and bool(SLUG_DESEN.fullmatch(slug))
 
 
 def simdi():
@@ -76,6 +81,9 @@ def konu_sec():
     k = O.json_oku(os.path.join(O.KOK, "konular.json"), {"konular": []})
     for x in k["konular"]:
         if x.get("durum", "bekliyor") == "bekliyor":
+            if not slug_gecerli(x.get("slug")):
+                O.log(f"geçersiz slug atlandı: {x.get('slug')!r} (yalnızca a-z, 0-9 ve '-')")
+                continue
             return x
     return None
 
@@ -150,7 +158,7 @@ def karar(d, t):
         O.log(f"önde üretim: yayın bekleyen {n} video (en çok {onde_azami()}), sıradaki slot {iso(bos[0])}")
     # kuyrukta senaryosu hazır (ör. elle eklenmiş) bir proje var mı?
     for slug, v in d["videolar"].items():
-        if v.get("asama") != "yuklendi" and not v.get("slot"):
+        if v.get("asama") != "yuklendi" and not v.get("slot") and slug_gecerli(slug):
             v["slot"] = iso(bos[0])
             d["aktif"] = slug
             return slug, v.get("asama", "senaryo"), v["slot"], False, "kuyruktaki proje başlatıldı"

@@ -9,6 +9,12 @@ on:
 permissions:
   contents: read
 
+# shell açıkça "bash" olunca GitHub -eo pipefail ile çalıştırır: "komut | tail" gibi borularda
+# ilk komutun hatası gizlenmez (yoksa proje_kontrol.py başarısız olsa da CI yeşil görünür).
+defaults:
+  run:
+    shell: bash
+
 jobs:
   kontrol:
     runs-on: ubuntu-24.04

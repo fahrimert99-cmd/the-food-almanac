@@ -10,9 +10,11 @@ if [ -n "${GH_TOKEN:-}" ]; then
 fi
 for p in "$@"; do git add -A -- "$p" 2>/dev/null || true; done
 if git diff --cached --quiet; then echo "kaydedilecek değişiklik yok"; exit 0; fi
-git commit -qm "$MESAJ"
+# Hook'lar kapalı: Bash yetkili bir ajan .git/hooks içine betik yazmış olsa bile commit/pull sırasında
+# (GH_TOKEN ortamdayken) çalışmaz.
+git -c core.hooksPath=/dev/null commit --no-verify -qm "$MESAJ"
 for i in 1 2 3 4 5 6; do
-  if git pull -q --rebase --autostash origin main && git push -q origin HEAD:main; then
+  if git -c core.hooksPath=/dev/null pull -q --rebase --autostash origin main && git -c core.hooksPath=/dev/null push --no-verify -q origin HEAD:main; then
     echo "kaydedildi: $MESAJ"; exit 0
   fi
   echo "push denemesi $i başarısız, bekleniyor..."; sleep $((i * 4))

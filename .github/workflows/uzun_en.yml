@@ -1,6 +1,6 @@
 name: Uzun Video EN (The Food Almanac, otonom)
 # Haftada 2 İngilizce uzun video (Salı + Cuma 14:00 UTC = 17:00 TR), tamamen otomatik:
-#   plan -> [konu] -> senaryo + bağımsız doğruluk denetimi -> görseller (NVIDIA) + ses (Piper)
+#   plan -> [konu] -> senaryo + bağımsız doğruluk denetimi -> görseller (NVIDIA) + ses (Kokoro; eski projeler Piper)
 #        -> sahne tasarımı (paralel ajanlar) -> render (Remotion) -> kalite kontrol -> zamanlanmış yükleme
 #        -> Shorts (ayrı iş akışı: uzun_en_kisa.yml)
 # Her saat (gece dahil) plan.py ne yapılacağına karar verir; çoğu çalıştırma ~20 sn'de "iş yok" der.
@@ -9,9 +9,9 @@ name: Uzun Video EN (The Food Almanac, otonom)
 #
 # KREDİ HARCANMAZ:
 #   Claude -> önce CLAUDE_YEDEK2_TOKEN, sonra CLAUDE_ANA_TOKEN, sonra CLAUDE_CODE_OAUTH_TOKEN — uzun_en/araclar/claude_calistir.sh.
-#             İkisi de OAuth token (claude setup-token, abonelik kotası). API anahtarı (sk-ant-api...) verilse bile kullanılmaz.
+#             Üçü de OAuth token (claude setup-token, abonelik kotası). API anahtarı (sk-ant-api...) verilse bile kullanılmaz.
 #   Gemini -> GEMINI_API_KEY ücretsiz katman (faturalandırma kapalı proje). Claude kotası biterse devralır.
-#   Görsel -> NVIDIA_API_KEY (ücretsiz); NVIDIA çökerse Cloudflare Workers AI FLUX (CLOUDFLARE_ACCOUNT_ID/API_TOKEN, kota bitince ikinci hesap CLOUDFLARE_ACCOUNT_ID_2/API_TOKEN_2; günlük ücretsiz kota). Ses -> Piper (yerel, açık kaynak). Müzik -> kodla üretilir.
+#   Görsel -> NVIDIA_API_KEY (ücretsiz); NVIDIA çökerse Cloudflare Workers AI FLUX (CLOUDFLARE_ACCOUNT_ID/API_TOKEN, kota bitince ikinci hesap CLOUDFLARE_ACCOUNT_ID_2/API_TOKEN_2; günlük ücretsiz kota). Ses -> Kokoro (yerel, açık kaynak; eski projeler Piper). Müzik -> kodla üretilir.
 # Ayarlar (Settings > Variables, isteğe bağlı): UZUN_CLAUDE_MODEL (ör. opus / sonnet; boş = CLI varsayılanı),
 #   UZUN_GEMINI_MODEL, UZUN_SAHNE_GRUP (paralel sahne ajanı sayısı, varsayılan 8).
 # Durdurmak: Actions > bu iş akışı > "..." > Disable workflow.
@@ -37,6 +37,11 @@ permissions:
 concurrency:
   group: uzun-en
   cancel-in-progress: false
+
+# shell açıkça "bash" olunca GitHub -eo pipefail ile çalıştırır: borularda (| tee, | grep) hata gizlenmez.
+defaults:
+  run:
+    shell: bash
 
 env:
   PYTHONDONTWRITEBYTECODE: "1"
@@ -220,6 +225,15 @@ jobs:
             gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic: $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json."
           fi
           rm -rf .gemini
+      - name: "Ajan değişikliklerini sınırla (yalnızca uzun_en/projeler/SLUG kalır)"
+        if: always()
+        run: |
+          # Web'den beslenen ajan (prompt injection) araç kodunu (araclar/*.py, kaydet.sh ...) değiştirmiş olabilir;
+          # sonraki adımlar bu kodu GH_TOKEN ile çalıştırır. Proje klasörü dışındaki her değişiklik geri alınır.
+          rm -rf .gemini
+          git ls-files -z -m -d -- . ":(exclude)uzun_en/projeler/$SLUG" | xargs -0 -r git checkout HEAD --
+          git ls-files -z -o --exclude-standard -- . ":(exclude)uzun_en/projeler/$SLUG" | xargs -0 -r rm -f
+          git status --short
       - name: "Doğruluk denetimi: bağımsız editör (Claude, yedek Gemini)"
         id: dogrula
         continue-on-error: true
@@ -245,25 +259,32 @@ jobs:
           fi
           [ -f "$D" ] || { echo "::warning::doğruluk denetimi tamamlanamadı (kota?) — bir sonraki çalıştırmada tekrar"; exit 1; }
           cat "$D"
+      - name: "Ajan değişikliklerini sınırla (doğrulama ajanından sonra)"
+        if: always()
+        run: |
+          rm -rf .gemini
+          git ls-files -z -m -d -- . ":(exclude)uzun_en/projeler/$SLUG" | xargs -0 -r git checkout HEAD --
+          git ls-files -z -o --exclude-standard -- . ":(exclude)uzun_en/projeler/$SLUG" | xargs -0 -r rm -f
+          git status --short
       - name: Karar ve kayıt
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           D="uzun_en/projeler/$SLUG/dogrulama.json"
-          SONUC=$(python3 -c "import json;print(json.load(open('$D')).get('sonuc',''))" 2>/dev/null || echo "")
+          SONUC=$(D="$D" python3 -c "import json,os;print(json.load(open(os.environ['D'])).get('sonuc',''))" 2>/dev/null || echo "")
           if [ "$SONUC" = "red" ]; then
-            python3 -c "import sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle('$SLUG','reddedildi')"
+            python3 -c "import os,sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle(os.environ['SLUG'],'reddedildi')"
             python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" iptal
             python3 - <<'PY'
           import json, os
           p = "uzun_en/durum.json"; d = json.load(open(p)); d["videolar"][os.environ["SLUG"]]["slot"] = None
           json.dump(d, open(p, "w"), ensure_ascii=False, indent=2)
           PY
-            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG doğruluk denetiminde reddedildi (konu değişecek)" uzun_en
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG doğruluk denetiminde reddedildi (konu değişecek)" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG"
           elif [ "$SONUC" = "onay" ] && python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" >/dev/null; then
             python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" varlik
-            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG senaryosu yazıldı ve doğrulandı" uzun_en
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG senaryosu yazıldı ve doğrulandı" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG"
           else
             echo "Senaryo aşaması tamamlanmadı; bir sonraki çalıştırma yeniden dener."
             exit 1
@@ -283,7 +304,7 @@ jobs:
           ref: main
       - name: Aşama hâlâ 'varlik' mı?
         run: |
-          A=$(python3 -c "import json;print(json.load(open('uzun_en/durum.json'))['videolar'].get('$SLUG',{}).get('asama',''))")
+          A=$(python3 -c "import json,os;print(json.load(open('uzun_en/durum.json'))['videolar'].get(os.environ['SLUG'],{}).get('asama',''))")
           echo "aşama: $A"; [ "$A" = "varlik" ] || { echo "DEVAM=false" >> "$GITHUB_ENV"; exit 0; }
           echo "DEVAM=true" >> "$GITHUB_ENV"
       - uses: actions/setup-python@v6
@@ -448,6 +469,16 @@ jobs:
           CLOUDFLARE_API_TOKEN_2: ${{ secrets.CLOUDFLARE_API_TOKEN_2 }}
         run: |
           gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: ${{ steps.kalan.outputs.kalan }}. Your group number: $GRUP."
+      - name: "Ajan değişikliklerini sınırla (araç kodu geri alınır)"
+        if: always()
+        run: |
+          # Sonraki adım araclar/*.py ve kaydet.sh'yi GH_TOKEN ile çalıştırır; Bash yetkili ajan bunları
+          # değiştirmiş olabilir. Sahne dosyaları (remotion/src/tam/sahneler, projeler/SLUG) dokunulmadan kalır.
+          rm -rf .gemini
+          git checkout HEAD -- uzun_en/araclar uzun_en/gorev requirements.txt .github
+          git clean -fdq -- uzun_en/araclar uzun_en/gorev .github
+          rm -rf .git/hooks && mkdir -p .git/hooks
+          git config --local --unset-all core.hooksPath || true
       - name: Doğrula ve kaydet (tip hatalı sahne kaydedilmez)
         if: always()
         env:
@@ -587,7 +618,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" yuklendi
-          python3 -c "import sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle('$SLUG','yayinda')"
+          python3 -c "import os,sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle(os.environ['SLUG'],'yayinda')"
           cp uzun_en/projeler/"$SLUG"/cikti/aciklama.txt uzun_en/projeler/"$SLUG"/aciklama.txt
           # ilk kurulum tohumu artık sürümde: depodan kaldır
           if [ -d uzun_en/projeler/"$SLUG"/tohum ]; then git rm -rq uzun_en/projeler/"$SLUG"/tohum; fi
