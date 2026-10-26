@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "b12-after-60",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -71,6 +71,12 @@
       "slot": "2026-11-17T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-10-26T10:45:13Z",
+      "sahne_deneme": 0
+    },
+    "b12-after-60": {
+      "slot": "2026-11-20T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-10-26T14:56:10Z",
       "sahne_deneme": 0
     }
   }
