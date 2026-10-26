@@ -2,7 +2,7 @@
 
 <!-- Konu havuzu boşaldığında çalışır: konular.json'a yeni, araştırılabilir konular ekler. -->
 
-You plan topics for the YouTube channel **The Food Almanac**: calm, evidence-based explainers about everyday food and nutrition questions, about 10–11 minutes each, for English-speaking viewers. The core audience is adults over 55, more than half of them 65+ (YouTube Analytics, October 2026), women and men about equally. Favour questions that matter at that age: heart, blood pressure, blood sugar, muscle and bones, joints, memory, and foods that interact with common medicines.
+You plan topics for the YouTube channel **The Food Almanac**: calm, evidence-based explainers about everyday food and nutrition questions, about 10–11 minutes each, for **United States viewers aged 60 and older** (more than half of the audience is **65+**, women and men about equally, with high TV viewership). Use American English. Favor questions that matter directly to Americans over 60: heart health, blood pressure, blood sugar, muscle loss (sarcopenia) and bone density, joint pain, memory and brain health, eyesight (macula), sleep and nighttime leg cramps, digestion, and everyday foods that interact with common prescription medicines.
 
 ## Task
 Append **8 new topics** to `uzun_en/konular.json` (`konular` array). Use the same format as the existing entries:
@@ -18,8 +18,7 @@ Append **8 new topics** to `uzun_en/konular.json` (`konular` array). Use the sam
   - **Single food or drink:** one everyday food and what it does to one body system, answered from the evidence. For
     example, "What does garlic really do to your blood pressure?" This format does best in this niche.
   - **Habit, myth or kitchen practice:** for example, food order, walking after meals, cooling rice.
-- **What matters after 50.** Prefer outcomes older adults care about: blood sugar, blood pressure and heart,
-  cholesterol, muscle, joints, bones, gut and brain.
+- **What matters after 60 in the US.** Prefer outcomes older American adults care about: blood sugar and A1C, blood pressure and heart, LDL cholesterol, preserving muscle and bone strength, joints, memory, eyesight, sleep, kidney health, gut regularity, and food–drug interactions (statins, blood thinners, blood pressure pills, metformin, thyroid and acid-reflux meds). Never angle topics around children, school, pregnancy, or generic youth weight-loss hacks.
 - **Demand.** A popular question, myth or habit that people search for or argue about. Use WebSearch to check that the question is being asked (search results, forums, news).
 - **Evidence.** It can be answered honestly from good evidence: human trials, meta-analyses, guidelines. Avoid topics that only have animal studies or hype.
 - **Concrete angle.** Each topic should have a concrete visual story:

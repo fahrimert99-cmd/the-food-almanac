@@ -127,20 +127,69 @@
       "durum": "yayinda"
     },
     {
-      "slug": "cooling-rice-resistant-starch",
-      "soru": "Does cooling rice or potatoes really change the carbs?",
-      "aci": "Starch retrogradation and resistant starch; the cooled-and-reheated rice study, how big the change in glucose response really is, potatoes and pasta, food safety of leftover rice, and why it is a small tweak, not a hack.",
+      "slug": "grapefruit-medications",
+      "soru": "Why can grapefruit interfere with common medications after 60?",
+      "aci": "How grapefruit furanocoumarins block the CYP3A4 enzyme in the small intestine, which widely prescribed US drugs are affected (certain statins like atorvastatin and simvastatin, blood pressure calcium-channel blockers, heart-rhythm drugs) according to the FDA, why separating the dose by a few hours does not fix it, and which citrus fruits are safe alternatives (Valencia oranges, lemons). Practical: check with your pharmacist and never stop a medicine on your own.",
       "anahtar": [
-        "cooled rice resistant starch",
-        "reheated rice blood sugar",
-        "cold potatoes resistant starch"
+        "grapefruit and medication",
+        "grapefruit statin interaction",
+        "grapefruit blood pressure medication",
+        "why can't you eat grapefruit with medicine"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "b12-after-60",
+      "soru": "Why is vitamin B12 deficiency so common after 60?",
+      "aci": "Age-related drop in stomach acid (atrophic gastritis) that prevents releasing B12 from food, common US prescriptions (metformin, proton-pump inhibitors and H2 blockers) that lower B12 over time, why crystalline B12 in fortified foods or supplements still absorbs well, subtle signs often mistaken for normal aging (fatigue, tingling in hands or feet, memory slips), and when to ask your doctor for a blood test.",
+      "anahtar": [
+        "b12 deficiency older adults",
+        "metformin and b12",
+        "vitamin b12 after 60",
+        "signs of low b12 after 60"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "olive-oil-heart",
+      "soru": "What does extra virgin olive oil really do to your heart?",
+      "aci": "The PREDIMED trial (adults aged 55 to 80) and its 2018 republication, US nurse and health-professional cohort studies on ½ tablespoon a day, polyphenols in extra virgin vs regular refined olive oil on American supermarket shelves, whether cooking with extra virgin olive oil is safe, and how much people in the trials actually used.",
+      "anahtar": [
+        "olive oil heart health",
+        "extra virgin olive oil benefits",
+        "cooking with olive oil",
+        "olive oil a day after 60"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "how-much-protein",
+      "soru": "How much protein do you actually need after 60?",
+      "aci": "The standard US RDA of 0.8 grams per kilogram and why geriatric nutrition groups (PROT-AGE) recommend 1.0 to 1.2 grams per kilogram after 60 to counter anabolic resistance and muscle loss (sarcopenia), trials combining protein with resistance exercise, why spreading 25 to 30 grams across breakfast, lunch and dinner beats one big dinner, and the kidney-disease exception.",
+      "anahtar": [
+        "how much protein after 60",
+        "protein for older adults",
+        "prevent muscle loss after 60",
+        "protein per meal seniors"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "walnuts-heart",
+      "soru": "What do walnuts really do to your heart and cholesterol?",
+      "aci": "Meta-analyses of walnut trials on LDL cholesterol and apolipoprotein B, the two-year Walnuts and Healthy Aging (WAHA) randomized trial in adults aged 63 to 79, plant omega-3 (ALA), what the WAHA trial found for cognition and high-risk subgroups, and portion size in ounces and handfuls.",
+      "anahtar": [
+        "walnuts cholesterol",
+        "walnuts heart health after 60",
+        "walnuts benefits seniors",
+        "walnuts brain aging"
       ],
       "durum": "bekliyor"
     },
     {
       "slug": "calcium-vitamin-d-fractures",
       "soru": "Do calcium and vitamin D supplements prevent fractures after 60?",
-      "aci": "What the large trials (VITAL, Women's Health Initiative) and the US Preventive Services Task Force found for people living at home versus in care homes, food sources versus pills, how much is enough, and the kidney stone and heart questions.",
+      "aci": "What large US trials (VITAL, Women's Health Initiative) and the US Preventive Services Task Force found for community-dwelling older adults versus those in care homes or with low levels, why getting calcium from food (dairy, fortified foods, canned salmon with bones) differs from high-dose pills, kidney stone and arterial calcification questions, and when doctors do prescribe them (osteoporosis, osteopenia).",
       "anahtar": [
         "vitamin d and calcium fractures",
         "calcium supplements after 60",
@@ -150,198 +199,158 @@
       "durum": "bekliyor"
     },
     {
-      "slug": "olive-oil-heart",
-      "soru": "What does extra virgin olive oil really do to your heart?",
-      "aci": "The PREDIMED trial and its 2018 republication, polyphenols in extra virgin vs refined oil, large cohort studies on olive oil and mortality, whether cooking with olive oil is safe, and how much people in the trials used.",
+      "slug": "leafy-greens-warfarin",
+      "soru": "Do you have to avoid leafy greens on blood thinners?",
+      "aci": "How vitamin K interacts with warfarin (Coumadin), why AHA and anticoagulation clinics advise a consistent weekly intake of spinach, kale and broccoli rather than avoiding greens altogether, trials showing steadier INR with stable vitamin K intake, and why newer direct oral anticoagulants (apixaban/Eliquis, rivaroxaban/Xarelto) do not have the vitamin K interaction.",
       "anahtar": [
-        "olive oil heart health",
-        "extra virgin olive oil benefits",
-        "cooking with olive oil",
-        "olive oil a day"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "grapefruit-medications",
-      "soru": "Why can grapefruit interfere with some medications?",
-      "aci": "How grapefruit blocks the CYP3A4 enzyme in the gut, which common drugs are affected (some statins, blood pressure and heart drugs) according to the FDA, why one glass can matter for a day or more, and which citrus fruits do the same. Practical: ask your pharmacist, never stop a medicine on your own.",
-      "anahtar": [
-        "grapefruit and medication",
-        "grapefruit statin interaction",
-        "grapefruit drug interactions list",
-        "why can't you eat grapefruit with medicine"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "multivitamins-evidence",
-      "soru": "Do multivitamins actually do anything for healthy people?",
-      "aci": "Large randomized trials (Physicians' Health Study II, COSMOS), the 2022 US Preventive Services Task Force review, who may genuinely need a supplement (pregnancy and folic acid, vitamin B12 in older adults and vegans, vitamin D), and food first.",
-      "anahtar": [
-        "do multivitamins work",
-        "are multivitamins worth it",
-        "multivitamin study"
+        "warfarin and leafy greens",
+        "vitamin k and blood thinners",
+        "foods to avoid on warfarin",
+        "eliquis vs warfarin diet"
       ],
       "durum": "bekliyor"
     },
     {
       "slug": "mind-diet-memory",
-      "soru": "Can the MIND diet slow memory decline?",
-      "aci": "The observational studies behind the MIND diet, the 2023 randomized trial in older adults that found no clear difference, what that does and does not mean, and the habits with the best evidence for brain health after 60.",
+      "soru": "Can the MIND diet slow memory decline after 60?",
+      "aci": "The Rush University observational cohorts behind the MIND diet (berries, leafy greens, olive oil, nuts, fish), the 2023 three-year New England Journal of Medicine randomized trial in older adults (aged 65+) that found similar cognitive changes in both groups, why both groups improved, and the food habits with the strongest evidence for aging brains.",
       "anahtar": [
-        "mind diet memory",
+        "mind diet memory after 60",
         "diet and dementia risk",
         "foods for brain health after 60",
-        "does diet prevent dementia"
+        "mind diet study nejm"
       ],
       "durum": "bekliyor"
     },
     {
-      "slug": "walnuts-heart",
-      "soru": "What do walnuts really do to your heart?",
-      "aci": "Meta-analyses of walnut trials on LDL cholesterol, the two-year Walnuts and Healthy Aging trial in adults aged 63 to 79, plant omega-3 (ALA), what the evidence does and doesn't say about the brain, and calories per handful.",
+      "slug": "prunes-bone-density",
+      "soru": "What do prunes really do to bone loss and digestion after 60?",
+      "aci": "The 12-month Penn State randomized controlled trial in postmenopausal women comparing 50 grams (about 5 to 6 prunes) and 100 grams a day with control on hip bone mineral density and inflammatory markers, how polyphenols and vitamin K affect osteoclasts, clinical trials of prunes versus psyllium for chronic constipation, and blood sugar and sorbitol cautions.",
       "anahtar": [
-        "walnuts cholesterol",
-        "walnuts heart health",
-        "walnuts benefits",
-        "walnuts brain"
+        "prunes bone density",
+        "5 prunes a day bones",
+        "prunes osteoporosis study",
+        "prunes constipation older adults"
       ],
       "durum": "bekliyor"
     },
     {
-      "slug": "leafy-greens-warfarin",
-      "soru": "Do you have to avoid leafy greens on warfarin?",
-      "aci": "Vitamin K and how warfarin works, why guidelines advise a steady intake rather than avoiding greens, what the studies on vitamin K intake and INR stability show, and why newer blood thinners are different. Always with the advice to talk to your doctor or anticoagulation clinic.",
+      "slug": "multivitamins-evidence",
+      "soru": "Do daily multivitamins actually do anything after 60?",
+      "aci": "Large US randomized trials in older adults: Physicians' Health Study II (heart disease, cancer, cataracts) and the COSMOS cognitive sub-studies in adults over 60 showing modest memory benefits over 2 to 3 years, the US Preventive Services Task Force review, and which targeted nutrients matter most after 60 (B12, vitamin D) versus mega-dose pills.",
       "anahtar": [
-        "warfarin and leafy greens",
-        "vitamin k and warfarin",
-        "foods to avoid on warfarin",
-        "spinach and blood thinners"
+        "do multivitamins work after 60",
+        "cosmos multivitamin memory study",
+        "are multivitamins worth it seniors",
+        "daily multivitamin evidence"
       ],
       "durum": "bekliyor"
     },
     {
-      "slug": "how-much-protein",
-      "soru": "How much protein do you actually need after 60?",
-      "aci": "The RDA of 0.8 grams per kilogram and where it comes from, why many experts suggest more for adults over 60 to protect muscle (sarcopenia), the trials on protein, strength training and muscle in older adults, spreading protein across meals, and when to be careful (kidney disease).",
+      "slug": "oily-fish-heart",
+      "soru": "What do sardines and salmon do to your heart vs fish-oil pills?",
+      "aci": "Omega-3 EPA and DHA, the American Heart Association's two servings a week, why over-the-counter fish-oil supplement trials (VITAL, STRENGTH, ASCEND) mostly showed little benefit for healthy older adults while eating whole fish consistently links to lower heart risk, prescription high-dose EPA (REDUCE-IT), and why small fish like sardines and canned salmon are low in mercury.",
       "anahtar": [
-        "how much protein after 60",
-        "protein for older adults",
-        "protein and muscle loss",
-        "how much protein per day"
+        "sardines heart health",
+        "fish oil pills vs eating fish",
+        "omega 3 after 60",
+        "canned sardines benefits"
       ],
       "durum": "bekliyor"
     },
     {
-      "slug": "b12-after-60",
-      "soru": "Why is vitamin B12 deficiency so common after 60?",
-      "aci": "Lower stomach acid with age, common medicines (metformin, acid reducers) that lower B12, how often deficiency is found in older adults, the signs that are easy to miss (tiredness, numbness, memory), food sources, and when a blood test makes sense.",
+      "slug": "hydration-after-60",
+      "soru": "Why does thirst fade after 60, and how much water do you really need?",
+      "aci": "Clinical evidence that the brain's thirst signal and the kidney's ability to concentrate urine weaken after 60, why older adults can become mildly dehydrated without feeling thirsty, US National Academies fluid guidelines (including water from food, coffee and tea), when fluid restriction applies (heart failure, kidney disease), and timing drinks earlier in the day to reduce waking up at night.",
       "anahtar": [
-        "b12 deficiency older adults",
-        "metformin and b12",
-        "vitamin b12 after 60",
-        "signs of low b12"
+        "hydration after 60",
+        "why older adults feel less thirsty",
+        "how much water after 60",
+        "stop waking up at night to pee"
       ],
       "durum": "bekliyor"
     },
     {
       "slug": "cinnamon-blood-sugar",
       "soru": "What does cinnamon really do to your blood sugar?",
-      "aci": "Mixed results from meta-analyses of cinnamon in type 2 diabetes and prediabetes, why the trials disagree, cassia vs Ceylon cinnamon and the coumarin liver warning, and why it is not a replacement for medication.",
+      "aci": "Mixed results from meta-analyses of cinnamon in type 2 diabetes and prediabetes (fasting glucose in mg/dL and A1C), why trials disagree, the critical difference between Cassia cinnamon (sold in most US grocery stores, high in liver-toxic coumarin) and Ceylon cinnamon, and why it is never a substitute for diabetes medication.",
       "anahtar": [
         "cinnamon blood sugar",
-        "cinnamon diabetes",
         "ceylon vs cassia cinnamon",
-        "cinnamon benefits"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "breakfast-most-important-meal",
-      "soru": "Is breakfast really the most important meal of the day?",
-      "aci": "Where the saying came from, observational studies vs randomized trials, the 2019 BMJ meta-analysis, the Bath Breakfast Project, children and school performance, and why the best pattern depends on the person.",
-      "anahtar": [
-        "is breakfast important",
-        "skipping breakfast",
-        "breakfast most important meal myth"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "oily-fish-heart",
-      "soru": "What do oily fish like sardines really do to your heart?",
-      "aci": "Omega-3 EPA and DHA, the American Heart Association's two servings a week, why fish-oil pill trials such as VITAL, REDUCE-IT and STRENGTH gave mixed results, whole fish vs supplements, and mercury in small vs large fish.",
-      "anahtar": [
-        "sardines heart health",
-        "omega 3 fish heart",
-        "fish oil vs eating fish",
-        "sardines benefits"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "eight-glasses-of-water",
-      "soru": "Do you really need eight glasses of water a day?",
-      "aci": "The origin of the eight glasses idea, official adequate intakes (EFSA, US National Academies), water from food and other drinks, the 2022 study measuring water turnover in thousands of people, and when people need more.",
-      "anahtar": [
-        "8 glasses of water a day myth",
-        "how much water should I drink",
-        "daily water intake"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "dark-chocolate-heart",
-      "soru": "Is dark chocolate actually good for your heart?",
-      "aci": "Cocoa flavanols vs chocolate bars, blood pressure trials, the COSMOS cocoa extract trial, how much flavanol is in real chocolate and how processing removes it, sugar and calories, and an honest verdict.",
-      "anahtar": [
-        "is dark chocolate healthy",
-        "dark chocolate heart health",
-        "cocoa flavanols"
+        "cinnamon diabetes study",
+        "cinnamon in coffee after 60"
       ],
       "durum": "bekliyor"
     },
     {
       "slug": "cooking-and-vegetable-nutrients",
-      "soru": "Does cooking destroy the nutrients in vegetables?",
-      "aci": "Water-soluble vitamins lost in boiling water, steaming and microwaving compared, nutrients that become more available with cooking (lycopene in tomatoes, beta-carotene in carrots), and simple ways to keep more of them.",
+      "soru": "Does boiling or microwaving destroy the nutrients in vegetables?",
+      "aci": "Water-soluble vitamins (vitamin C, folate, B vitamins) leached into boiling water versus steaming, roasting and microwaving, which vegetables actually become more nutritious and easier to absorb when cooked with a little olive oil (lycopene in tomatoes, beta-carotene in carrots, lutein in spinach for aging eyes), and simple kitchen habits.",
       "anahtar": [
         "does cooking destroy nutrients",
         "steaming vs boiling vegetables",
+        "does microwaving vegetables destroy nutrients",
         "raw vs cooked vegetables"
       ],
       "durum": "bekliyor"
     },
     {
-      "slug": "spicy-food-metabolism",
-      "soru": "Does spicy food really boost your metabolism?",
-      "aci": "Capsaicin and energy expenditure: what controlled studies and meta-analyses measured, how small the effect is in calories, appetite effects, and why it is not a weight-loss tool.",
+      "slug": "dark-chocolate-heart",
+      "soru": "Is dark chocolate actually good for your heart after 60?",
+      "aci": "Cocoa flavanols versus commercial chocolate bars, blood pressure trials, the large US COSMOS trial of cocoa extract in adults aged 60+ (27% lower cardiovascular death, though total cardiovascular events missed significance), why Dutch-processed/alkalized cocoa loses most flavanols, heavy metals (lead and cadmium) in some dark bars, and how to read a US label.",
       "anahtar": [
-        "spicy food metabolism",
-        "capsaicin calories",
-        "chili pepper metabolism"
+        "is dark chocolate good for your heart",
+        "dark chocolate blood pressure",
+        "cocoa flavanols cosmos study",
+        "dark chocolate after 60"
       ],
       "durum": "bekliyor"
     },
     {
-      "slug": "honey-vs-sugar",
-      "soru": "Is honey healthier than sugar?",
-      "aci": "What honey is made of compared with table sugar, glycemic index, the tiny amounts of antioxidants and what doses studies used, honey for coughs in children (and never for babies under one), and the free sugars guideline.",
+      "slug": "cooling-rice-resistant-starch",
+      "soru": "Does cooling rice or potatoes really lower the blood sugar spike?",
+      "aci": "Starch retrogradation and type 3 resistant starch: clinical crossover trials comparing freshly cooked white rice, potatoes and pasta with cooled-and-reheated versions on post-meal blood glucose (mg/dL), how modest the real-world difference is, safe refrigeration rules (Bacillus cereus), and portion size.",
       "anahtar": [
-        "is honey healthier than sugar",
-        "honey vs sugar blood sugar",
-        "honey glycemic index"
+        "cooled rice resistant starch",
+        "reheated rice blood sugar",
+        "cold potatoes blood sugar",
+        "resistant starch diabetes"
       ],
       "durum": "bekliyor"
     },
     {
       "slug": "sourdough-blood-sugar",
-      "soru": "Is sourdough bread better for your blood sugar?",
-      "aci": "Fermentation, organic acids and the glycemic response; what the small crossover studies show compared with white and whole grain bread, why the flour matters more than the method, and how to read labels for real sourdough.",
+      "soru": "Is sourdough bread really better for your blood sugar?",
+      "aci": "How slow lactic-acid fermentation lowers the glycemic response compared with standard yeast bread, crossover trials measuring post-meal glucose and insulin in adults, why whole-grain flour still matters, and how to spot genuine slow-fermented sourdough versus commercial bread with added vinegar or 'sour' flavoring on US grocery shelves.",
       "anahtar": [
         "sourdough blood sugar",
-        "is sourdough healthier",
-        "sourdough glycemic index"
+        "is sourdough better for diabetics",
+        "sourdough glycemic index",
+        "real sourdough grocery store"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "breakfast-most-important-meal",
+      "soru": "Does skipping breakfast hurt your blood sugar or muscles after 60?",
+      "aci": "Where the 'most important meal' slogan came from, randomized trials on weight and metabolism, why skipping breakfast before a high-carb lunch exaggerates the afternoon blood sugar spike in people with prediabetes or type 2 diabetes (the second-meal phenomenon), morning protein for preserving muscle after 60, and timing morning medications.",
+      "anahtar": [
+        "skipping breakfast after 60",
+        "breakfast and blood sugar",
+        "protein at breakfast seniors",
+        "is breakfast the most important meal"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "honey-vs-sugar",
+      "soru": "Is raw honey really better for your blood sugar than table sugar?",
+      "aci": "What honey is made of (fructose and glucose) compared with sucrose, clinical trials and the 2022 Toronto meta-analysis on raw, single-floral honey and fasting glucose/cholesterol, why a tablespoon of honey still has 64 calories and 17 grams of sugar, commercial pasteurized honey vs raw honey, and AHA added-sugar limits.",
+      "anahtar": [
+        "is honey better than sugar for blood sugar",
+        "raw honey vs sugar diabetes",
+        "honey glycemic index",
+        "raw honey cholesterol study"
       ],
       "durum": "bekliyor"
     }
