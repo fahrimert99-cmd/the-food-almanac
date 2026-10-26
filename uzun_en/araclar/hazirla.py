@@ -269,6 +269,31 @@ def kaydet(slug, yalniz=None):
     O.log(f"kaydedildi: {n} sahne -> {os.path.relpath(hedef, O.REPO)}")
 
 
+def kapak_kesik(kaynak, hedef):
+    """Kapak görselinin düz açık zeminini saydam yapar (koyu zeminli kapak için): kenarlardan taşma doldurma. Görseldeki
+    açık renkli nesneler (kase, tabak) siyah çizgiyle çevrili olduğundan korunur; nesnenin altındaki küçük açık gölge
+    kalabilir (gölge gibi durur). Çıktı: RGBA PNG, konuya kırpılmış değil (konum hesabı kapak.jpg'deki kutuyla aynı kalır)."""
+    from PIL import Image, ImageChops, ImageDraw, ImageFilter
+    src = Image.open(kaynak).convert("RGB")
+    W, H = src.size
+    m = src.copy()
+    MOR = (255, 0, 255)
+    tohum = ([(x, 1) for x in range(0, W, 40)] + [(x, H - 2) for x in range(0, W, 40)]
+             + [(1, y) for y in range(0, H, 40)] + [(W - 2, y) for y in range(0, H, 40)])
+    for xy in tohum:
+        p = m.getpixel(xy)
+        if p != MOR and min(p) >= 225:
+            ImageDraw.floodfill(m, xy, MOR, thresh=28)
+    r, g, b = m.split()
+    zemin = ImageChops.multiply(ImageChops.multiply(r.point(lambda v: 255 if v == 255 else 0),
+                                                    b.point(lambda v: 255 if v == 255 else 0)),
+                                g.point(lambda v: 255 if v == 0 else 0))
+    alfa = ImageChops.invert(zemin).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
+    out = src.convert("RGBA")
+    out.putalpha(alfa)
+    out.save(hedef)
+
+
 def konu_kutusu(yol, esik=35, pay=0.03):
     """Kapak görselinde konunun sınır kutusu [x0, y0, x1, y1] (0–1) ve zemin rengi (#rrggbb): (kutu, zemin).
     Kapak konuyu sağ panele büyütür ve arka planı zemin rengine boyar (görsel dikişsiz karışır).
@@ -312,12 +337,14 @@ def main():
             "kapak": {"satirlar": k.get("satirlar") or [], "serit": k.get("serit"), "vurgu": k.get("vurgu"),
                       "vurgu_alt": k.get("vurgu_alt"),
                       "gorsel": "tam/kapak" if os.path.exists(os.path.join(gdir, "kapak.jpg")) else None,
+                      "kesik": "tam/kapak_kesik" if os.path.exists(os.path.join(gdir, "kapak.jpg")) else None,
                       "kutu": kutu, "zemin": zemin}}
     src = os.path.join(O.REMOTION, "src")
     O.json_yaz(os.path.join(src, "tam", "tam.gen.json"), veri)
     m = O.marka()
     O.json_yaz(os.path.join(src, "marka.gen.json"),
-               {"ad": m.get("ad", ""), "filigran": m.get("ad", "").upper(), "slogan": m.get("slogan", "")})
+               {"ad": m.get("ad", ""), "filigran": m.get("ad", "").upper(), "slogan": m.get("slogan", ""),
+                "kapak_stil": m.get("kapak_stil", "beyaz")})
     tasarli = sahneleri_kur(slug, proje)
 
     pub = os.path.join(O.REMOTION, "public")
@@ -332,6 +359,8 @@ def main():
             if re.fullmatch(r"(\d{2}|kapak)\.jpg", ad):
                 shutil.copyfile(os.path.join(gdir, ad), os.path.join(pub, "img", "tam", ad))
                 izgara(os.path.join(gdir, ad), os.path.join(izg, ad))
+                if ad == "kapak.jpg":
+                    kapak_kesik(os.path.join(gdir, ad), os.path.join(pub, "img", "tam", "kapak_kesik.png"))
     for yol in font_yollari():
         shutil.copyfile(yol, os.path.join(pub, "fonts", os.path.basename(yol)))
 

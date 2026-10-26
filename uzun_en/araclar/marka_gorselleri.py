@@ -16,7 +16,8 @@ HEDEF = os.path.join(O.REPO, "assets", "marka_en")
 def main():
     m = O.marka()
     O.json_yaz(os.path.join(O.REMOTION, "src", "marka.gen.json"),
-               {"ad": m["ad"], "filigran": m["ad"].upper(), "slogan": m.get("slogan", "")})
+               {"ad": m["ad"], "filigran": m["ad"].upper(), "slogan": m.get("slogan", ""),
+                "kapak_stil": m.get("kapak_stil", "beyaz")})
     pub = os.path.join(O.REMOTION, "public", "img", "marka")
     os.makedirs(pub, exist_ok=True)
     for y in glob.glob(os.path.join(HEDEF, "kaynak", "*.jpg")):

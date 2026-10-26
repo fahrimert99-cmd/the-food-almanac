@@ -87,18 +87,21 @@ The prompt tells you three things:
 
 **Thumbnail (`kapak`)**
 
-The thumbnail decides whether anyone clicks. It is a white card: huge text on the left, one big vivid image bleeding
-off the right edge, a number badge top right. Our first video got only 2.4% clicks with long text and a small object.
+The thumbnail decides whether anyone clicks. It is a dark navy card (since 26 October 2026; white cards got only
+1.4–2.7% clicks because they vanish on YouTube's white pages): huge white text with a black outline on the left, one big
+vivid image of the food on the right, and a red number badge top right.
 
 - The whole thumbnail is a 3–4 word hook. Count every word in `satirlar`, `serit` and `vurgu_alt` together: at most
   4 words. Long thumbnail text is unreadable on a phone and lost clicks.
 - `satirlar`: 2–3 UPPERCASE lines, each at most 12 characters, together 2–4 words: the food plus the hook.
   - Every line is enlarged separately to the full width of the text block, so short lines become giant words.
-  - The last line is drawn in gold. A question mark makes a good hook.
+  - The last line is drawn in yellow. A question mark makes a good hook.
   - Examples: `["GARLIC", "LOWERS BP?"]`, `["WALK", "AFTER MEALS"]`, `["EGGS", "VS HEART?"]`.
 - `serit`: leave it out. Use it only when `satirlar` has 2 words and one more word is truly needed.
-- `vurgu` (optional): one striking but real number from your sources, at most 6 characters (for example `–37%`).
-- `vurgu_alt` (optional): at most 1 word under that number (for example `"points"`), counted in the 4 words.
+- `vurgu` (strongly recommended): the result in one real number from your sources, at most 6 characters (for example
+  `–37%`, `–10`, `–3.5`). It should hint at the answer, not repeat an input such as a dose ("3 g" says nothing).
+- `vurgu_alt`: the unit or measure of that number in at most 1 word (for example `"LDL"`, `"mmHg"`, `"A1C"`), so the
+  number makes sense on its own. Counted in the 4 words.
 - `gorsel`: the image model's description. The style (bright, saturated, pure white background) is added automatically.
   - Make the hero food or drink very large, close-up and appetizing.
   - Group the objects tightly, overlapping (for example sneakers behind the plate), never side by side in a wide row:
