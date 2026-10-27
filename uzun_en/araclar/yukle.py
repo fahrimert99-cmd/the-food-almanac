@@ -96,10 +96,11 @@ def bastan_sifirla(slug, yol, slot):
     O.log(f"• {slug}: baştan üretime alındı (aşama varlik, slot {slot})")
 
 
-def kisalari_sil(yt, slug):
+def kisalari_sil(yt, slug, slotu_koru=False):
     """bastan için: projenin henüz yayınlanmamış (private) Shorts'larını YouTube'dan siler ve kayıtlarını kaldırır;
     uzun video yeniden yüklenince Shorts hattı aynı seçimle (kisa*.json korunur) yeni sesle yeniden üretir.
-    Herkese açık ya da yayın saati geçmiş Shorts'a dokunulmaz."""
+    slotu_koru (kisa_yenile): kayıt yerine yalnızca {"slot", "onceki_id"} bırakılır; yeniden yüklenen Shorts aynı güne
+    planlanır. Herkese açık ya da yayın saati geçmiş Shorts'a dokunulmaz."""
     simdi = dt.datetime.now(dt.timezone.utc)
     for kyol in sorted(glob.glob(os.path.join(O.proje_dir(slug), "kisa*_yayin.json"))):
         k = O.json_oku(kyol, {}) or {}
@@ -115,8 +116,28 @@ def kisalari_sil(yt, slug):
             continue
         if it:
             yt.videos().delete(id=k["video_id"]).execute()
-        os.remove(kyol)
+        if slotu_koru:
+            O.json_yaz(kyol, {"slot": k["slot"], "onceki_id": k["video_id"]})
+        else:
+            os.remove(kyol)
         O.log(f"• {slug}: Shorts {k['video_id']} silindi (yeniden üretilecek)")
+
+
+def kisa_yenile_istegi(yt):
+    """calistir.json'daki "kisa_yenile": ["slug"] isteği: uzun videoya dokunmadan projenin yayınlanmamış Shorts'larını
+    siler (slotları korunur); Shorts hattı (kisa_islem.json ya da günlük tarama) onları aynı seçimle, projenin şimdiki
+    anlatıcı sesiyle yeniden üretip aynı günlere yükler. İstek bir kez kullanılır ve silinir."""
+    cyol = os.path.join(O.KOK, "calistir.json")
+    c = O.json_oku(cyol, {}) or {}
+    istek = c.get("kisa_yenile") or []
+    for slug in [istek] if isinstance(istek, str) else istek:
+        try:
+            kisalari_sil(yt, slug, slotu_koru=True)
+        except Exception as e:
+            return O.log(f"! {slug}: Shorts yenilenemedi ({str(e)[:160]}) — istek korunur, sonraki çalıştırmada tekrar")
+    if istek:
+        c.pop("kisa_yenile", None)
+        O.json_yaz(cyol, c)
 
 
 def yenile_istegi(yt, adaylar):
@@ -250,9 +271,12 @@ def tamamla():
                 or baslik_farkli(slug, y):
             adaylar.append((slug, yol, y, bekliyor))
     kisa_bek = kisa_yorum_bekleyenler(simdi)
-    if not adaylar and not kisa_bek:
+    kisa_istek = (O.json_oku(os.path.join(O.KOK, "calistir.json"), {}) or {}).get("kisa_yenile")
+    if not adaylar and not kisa_bek and not kisa_istek:
         return O.log("denetlenecek video yok")
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
+    if kisa_istek:
+        kisa_yenile_istegi(yt)
     silinen, sifirlanan = yenile_istegi(yt, adaylar)
     adaylar = [a for a in adaylar if a[0] not in sifirlanan]
     try:
@@ -371,6 +395,9 @@ def kisa_slot(slug, simdi, no=1):
         return dt.datetime.fromisoformat(t.replace("Z", "+00:00"))
 
     alt = simdi + dt.timedelta(hours=3)
+    eski = (O.json_oku(os.path.join(pdir, f"{kisa_ad(no)}_yayin.json"), {}) or {}).get("slot")
+    if eski and tarih(eski) >= alt:                   # kisa_yenile: silinen Shorts'un günü korunur
+        return tarih(eski)
     for n in range(1, no):                            # aynı videonun önceki Shorts'undan sonra
         t = (O.json_oku(os.path.join(pdir, f"{kisa_ad(n)}_yayin.json"), {}) or {}).get("slot")
         if t:
@@ -441,6 +468,8 @@ def kisa_yukle(slug, kuru=False, no=1):
     vid = ayni_baslikli(yt, baslik)
     digerleri = {y["video_id"]} | {(O.json_oku(k, {}) or {}).get("video_id")
                                     for k in glob.glob(os.path.join(pdir, "kisa*_yayin.json"))}
+    if vid and vid == (O.json_oku(kyol, {}) or {}).get("onceki_id"):
+        vid = None                                    # kisa_yenile ile silinen eski Shorts listede bir süre kalabilir
     if vid and vid not in digerleri:
         O.log(f"kanalda aynı başlıklı video var, yeniden yüklenmiyor: {vid}")
     else:
