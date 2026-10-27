@@ -138,17 +138,22 @@ jobs:
           python3 uzun_en/araclar/hazirla.py --proje "$SLUG" --sessiz     # Remotion paketi uzun videonun verisini de ister
           python3 uzun_en/araclar/kisa.py --proje "$SLUG" --no "$KNO" --liste
       - name: Ajanlar (kredi KULLANILMAZ)
-        if: env.SLUG != '' && hashFiles(format('uzun_en/projeler/{0}/{1}.json', env.SLUG, env.AD)) == ''
+        if: env.SLUG != ''
         env:
           OAUTH: ${{ secrets.CLAUDE_YEDEK2_TOKEN || secrets.CLAUDE_ANA_TOKEN || secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GKEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
+          # Seçim varsa ve hâlâ geçerliyse ajan gerekmez. Ses yeniden üretilince (ör. Piper -> Kokoro) cümle süreleri
+          # değişir ve eski seçim süre sınırını aşabilir: o zaman düzeltme turu çalışır (26 Ekim, B12 Shorts 54 sn).
+          if [ -f "uzun_en/projeler/$SLUG/$AD.json" ] && python3 uzun_en/araclar/kisa.py --proje "$SLUG" --no "$KNO" --kontrol >/dev/null; then
+            echo "seçim mevcut ve geçerli"; exit 0
+          fi
           C=false; G=false
           [ -n "$OAUTH" ] && C=true && npm install -g @anthropic-ai/claude-code >/dev/null 2>&1
           [ -n "$GKEY" ] && G=true && npm install -g @google/gemini-cli >/dev/null 2>&1
           { echo "CLAUDE_OK=$C"; echo "GEMINI_OK=$G"; echo "SECIM=true"; } >> "$GITHUB_ENV"
       - name: "Seçim: Claude cümleleri seçer"
-        if: env.SECIM == 'true' && env.CLAUDE_OK == 'true'
+        if: env.SECIM == 'true' && env.CLAUDE_OK == 'true' && hashFiles(format('uzun_en/projeler/{0}/{1}.json', env.SLUG, env.AD)) == ''
         continue-on-error: true
         timeout-minutes: 30
         env:
