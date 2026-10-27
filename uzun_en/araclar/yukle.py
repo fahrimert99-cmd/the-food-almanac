@@ -196,12 +196,43 @@ def yorum_gonder(yt, video_id, metin):
     return r["id"]
 
 
+def kisa_yorum_bekleyenler(simdi):
+    """Yayına çıkmış ama kanalın ilk yorumu yazılmamış Shorts kayıtları: [(slug, kayıt yolu, kayıt)]."""
+    out = []
+    for slug in O.durum()["videolar"]:
+        for kyol in sorted(glob.glob(os.path.join(O.proje_dir(slug), "kisa*_yayin.json"))):
+            k = O.json_oku(kyol, {}) or {}
+            if k.get("video_id") and k.get("slot") and not k.get("yorum_tamam") \
+                    and dt.datetime.fromisoformat(k["slot"].replace("Z", "+00:00")) <= simdi:
+                out.append((slug, kyol, k))
+    return out
+
+
+def kisa_yorumlari(yt, bekleyen, azami=6):
+    """Shorts'a kanalın ilk yorumu: uzun videonun bağlantısı ve bir soru (yorum başına 50 birim; çalıştırma başına
+    en çok `azami`, eski Shorts birikimi kotayı tüketmesin)."""
+    for slug, kyol, k in bekleyen[:azami]:
+        uzun = k.get("uzun_id") or (O.json_oku(os.path.join(O.proje_dir(slug), "yayin.json"), {}) or {}).get("video_id")
+        metin = (f"The full video, with every study and its limits: https://youtu.be/{uzun}\n\n" if uzun else "") + \
+            "What food question should we look into next?"
+        try:
+            k["yorum_id"] = yorum_gonder(yt, k["video_id"], metin)
+            k["yorum_tamam"] = True
+            O.json_yaz(kyol, k)
+            O.log(f"✓ {slug}: Shorts kanal yorumu yazıldı ({k['video_id']})")
+        except Exception as e:
+            O.log(f"! {slug}: Shorts yorumu yazılamadı ({str(e)[:120]})")
+            if "quota" in str(e).lower():
+                return
+
+
 def tamamla():
     """Yüklenmiş videoları denetler (plan işi her çalıştırmada, karardan ÖNCE çağırır):
     - yayın saati gelmemiş bir video kanalda yoksa (ör. Studio'dan yanlışlıkla silindiyse) proje 'render'
       aşamasına döner: aynı çalıştırmada yeniden render edilip yüklenir. Yayınlanmış videolara dokunulmaz.
     - kapağı (işleme sonrası) ya da oynatma listesi eksik kalmış videoları tamamlar;
-    - yayına çıkmış videolara kanalın ilk yorumunu (proje.json 'yorum') bir kez yazar."""
+    - yayına çıkmış videolara kanalın ilk yorumunu (proje.json 'yorum') bir kez yazar;
+    - yayına çıkmış Shorts'a uzun videonun bağlantısıyla kanalın ilk yorumunu bir kez yazar."""
     import datetime as dt_, subprocess, tempfile
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
@@ -218,7 +249,8 @@ def tamamla():
         if bekliyor or not (y.get("kapak_tamam") and y.get("liste_tamam") and y.get("yorum_tamam")) \
                 or baslik_farkli(slug, y):
             adaylar.append((slug, yol, y, bekliyor))
-    if not adaylar:
+    kisa_bek = kisa_yorum_bekleyenler(simdi)
+    if not adaylar and not kisa_bek:
         return O.log("denetlenecek video yok")
     yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
     silinen, sifirlanan = yenile_istegi(yt, adaylar)
@@ -268,6 +300,7 @@ def tamamla():
                 return O.log("YouTube kotası dolu — sonraki çalıştırmada tekrar denenecek")
         O.json_yaz(yol, y)
     kisa_baglanti_guncelle(yt)
+    kisa_yorumlari(yt, kisa_bek)
     liste_temizle(yt, m)
 
 
