@@ -8,7 +8,6 @@
     {"sahne": 29, "cumleler": [2], "baslik": {"satirlar": ["SLOWER", "EMPTYING"]}, "etiket": null},
     {"sahne": 31, "cumleler": [1], "gorsel": 32, "baslik": {"satirlar": ["2. FIBER", "BARRIER"]}, "etiket": null},
     {"sahne": 33, "cumleler": [1], "baslik": {"satirlar": ["3. GUT", "HORMONES"]}, "etiket": null},
-    {"sahne": 34, "cumleler": [0], "baslik": {"satirlar": ["GLP-1"], "not": "slows gut · boosts insulin"}, "etiket": null},
     {"sahne": 36, "cumleler": [2, 3], "baslik": {"satirlar": ["A PRIMED", "GUT"]}, "etiket": null}
   ]
 }
