@@ -1,0 +1,656 @@
+{
+  "slug": "olive-oil-heart",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Olive Oil After 60: What It Does to the Heart",
+  "yorum": "Do you cook with olive oil or save it for salads and bread? Has your doctor ever mentioned olive oil when talking about your heart?",
+  "aciklama_giris": "In PREDIMED, a randomized trial of 7,447 Spanish adults aged 55 to 80, a Mediterranean diet rich in extra virgin olive oil was linked to a 31 percent lower risk of heart attack, stroke or heart death than a low-fat comparison group. The trial was withdrawn and republished in 2018, and large US studies add useful but observational evidence.\n\nIn this video we look at what PREDIMED and the Nurses' Health Study and Health Professionals Follow-up Study actually found, how much olive oil people used, what the FDA says, what lab tests show about cooking with extra virgin oil, where the evidence runs out, and four practical ways to use it.",
+  "kaynaklar": [
+    "Estruch R, Ros E, Salas-Salvadó J, et al.; PREDIMED Study Investigators. Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. N Engl J Med. 2018;378(25):e34. DOI 10.1056/NEJMoa1800389. PMID 29897866.",
+    "Guasch-Ferré M, Hu FB, Martínez-González MA, et al. Olive oil intake and risk of cardiovascular disease and mortality in the PREDIMED Study. BMC Medicine. 2014;12:78. DOI 10.1186/1741-7015-12-78. PMID 24886626.",
+    "Guasch-Ferré M, Liu G, Li Y, et al. Olive Oil Consumption and Cardiovascular Risk in U.S. Adults. Journal of the American College of Cardiology. 2020;75(15):1729-1739. DOI 10.1016/j.jacc.2020.02.036. PMID 32147453.",
+    "Guasch-Ferré M, Li Y, Willett WC, et al. Consumption of Olive Oil and Risk of Total and Cause-Specific Mortality Among U.S. Adults. Journal of the American College of Cardiology. 2022;79(2):101-112. DOI 10.1016/j.jacc.2021.10.041. PMID 35027106.",
+    "Covas MI, Nyyssönen K, Poulsen HE, et al.; EUROLIVE Study Group. The effect of polyphenols in olive oil on heart disease risk factors: a randomized trial. Annals of Internal Medicine. 2006;145(5):333-341. DOI 10.7326/0003-4819-145-5-200609050-00006. PMID 16954359.",
+    "U.S. Food and Drug Administration. FDA Completes Review of Qualified Health Claim Petition for Oleic Acid and the Risk of Coronary Heart Disease. Constituent Update, November 19, 2018.",
+    "Gómez-Alonso S, Fregapane G, Salvador MD, Gordon MH. Changes in phenolic composition and antioxidant activity of virgin olive oil during frying. Journal of Agricultural and Food Chemistry. 2003;51(3):667-672. DOI 10.1021/jf025932w. PMID 12537439.",
+    "Brenes M, García A, Dobarganes MC, Velasco J, Romero C. Influence of thermal treatments simulating cooking processes on the polyphenol content in virgin olive oil. Journal of Agricultural and Food Chemistry. 2002;50(21):5962-5967. DOI 10.1021/jf020506w. PMID 12358466.",
+    "Allouche Y, Jiménez A, Gaforio JJ, Uceda M, Beltrán G. How heating affects extra virgin olive oil quality indexes and chemical composition. Journal of Agricultural and Food Chemistry. 2007;55(23):9646-9654. DOI 10.1021/jf070628u. PMID 17935291.",
+    "UC Davis Olive Center. Most imported olive oils don't match extra virgin claims, study finds. UC Davis news release, July 2010."
+  ],
+  "kapak": {
+    "satirlar": [
+      "OLIVE OIL",
+      "HEART?"
+    ],
+    "vurgu": "–31%",
+    "vurgu_alt": "EVENTS",
+    "gorsel": "a large glass cruet of golden extra virgin olive oil in the foreground overlapping a small ceramic bowl of green olives, a red heart symbol standing right behind them, close up and appetizing"
+  },
+  "kahraman": "olive oil",
+  "etiketler": [
+    "olive oil heart health",
+    "extra virgin olive oil benefits",
+    "cooking with olive oil",
+    "olive oil after 60",
+    "predimed trial",
+    "mediterranean diet",
+    "heart disease prevention",
+    "healthy fats",
+    "nutrition science",
+    "olive oil polyphenols"
+  ],
+  "seslendirme_duzelt": {
+    "PREDIMED": "pred ih med",
+    "EUROLIVE": "yoo ro live",
+    "HDL": "H D L",
+    "LDL": "L D L",
+    "FDA": "F D A",
+    "Covas": "Ko vass",
+    "oleic": "oh lay ick"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "What extra virgin olive oil is",
+      "metin": "In a trial of 7,447 Spanish adults aged 55 to 80, a Mediterranean diet rich in olive oil was linked to a 31 percent lower risk of heart attack, stroke and heart death.",
+      "gorsel": "a glass cruet of golden olive oil on a wooden kitchen table beside a small bowl of green olives, a branch of olives hanging in the corner, soft window light",
+      "etiket": "Estruch et al. · N Engl J Med · 2018",
+      "baslik": {
+        "satirlar": [
+          "OLIVE OIL",
+          "AND HEART"
+        ],
+        "vurgu": "–31%",
+        "not": "major heart events in the PREDIMED trial"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But that study was once withdrawn, and the details matter.",
+      "gorsel": "an open antique journal with blank pages on a desk, a small dish of olive oil and an olive branch beside it, a round magnifying glass resting on the page"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know how much people used, and whether cooking with it is safe.",
+      "gorsel": "a heavy frying pan on a stove with olive oil shimmering in it, a wooden spoon, a measuring spoon filled with olive oil beside the pan",
+      "baslik": {
+        "satirlar": [
+          "HOW MUCH?",
+          "COOKING OK?"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what extra virgin olive oil actually is, and how it differs from the other bottles on the shelf.",
+      "gorsel": "a supermarket shelf in engraving style with several glass and tin containers of olive oil in different sizes, one dark green bottle of extra virgin olive oil in front"
+    },
+    {
+      "id": 5,
+      "metin": "Olive oil is mostly monounsaturated fat, mainly oleic acid. The FDA counts oils with at least 70 percent oleic acid as high oleic, and olive oil is on its list.",
+      "gorsel": "a ripe olive cut in half beside a drop of golden olive oil falling from a spoon, simple hexagon ring molecule outlines drifting upward",
+      "baslik": {
+        "satirlar": [
+          "OLEIC ACID"
+        ],
+        "vurgu": "70%+",
+        "not": "oleic acid: the FDA's high oleic threshold"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Virgin olive oils also carry natural plant compounds called phenolics. Virgin oils generally keep more of these compounds than refined olive oil, which loses many during processing.",
+      "gorsel": "two small glass bowls of olive oil side by side, one deep green and golden and one pale yellow, a branch of olives lying between them"
+    },
+    {
+      "id": 7,
+      "metin": "The Spanish trial we just heard about gave its volunteers extra virgin olive oil. The big American studies, as we'll see, did not separate the types at all.",
+      "gorsel": "a dark glass bottle of extra virgin olive oil standing beside a clear bottle of lighter olive oil, an olive branch across the front"
+    },
+    {
+      "id": 8,
+      "metin": "One caution about what you buy. In 2010, researchers at the University of California, Davis tested olive oil labeled extra virgin from 19 brands in California stores. Of the imported oils, 69 percent failed international extra virgin standards.",
+      "gorsel": "a row of olive oil bottles on a grocery shelf, a hand reaching for one bottle of olive oil, shelf edge drawn in fine engraved lines",
+      "etiket": "UC Davis Olive Center · 2010",
+      "baslik": {
+        "satirlar": [
+          "STORE SHELF",
+          "TEST"
+        ],
+        "vurgu": "69%",
+        "not": "of imported oils failed in a 2010 test"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Only 10 percent of the California oils failed. The study was partly funded by California producers, and it is old, so treat it as a reminder that labels can vary, not as a ranking of brands.",
+      "gorsel": "a tall bottle of olive oil next to a small California poppy and an olive tree branch, weighing scales with an olive oil bottle on one side"
+    },
+    {
+      "id": 10,
+      "bolum": "The PREDIMED trial",
+      "tip": "kart",
+      "metin": "So what did the Spanish trial actually do? It's called PREDIMED, and it is the best evidence we have.",
+      "kart": {
+        "ust": "THE TRIAL",
+        "baslik": "PREDIMED, in Spain",
+        "alt": "7,447 adults · ages 55 to 80"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "PREDIMED enrolled 7,447 adults aged 55 to 80, and 57 percent were women. All were at high risk of heart disease, but none had yet had a heart attack or stroke.",
+      "gorsel": "a quiet clinic waiting room with several empty chairs and a small table holding a bowl of olive oil and a stethoscope, a tall window"
+    },
+    {
+      "id": 12,
+      "metin": "They were randomly assigned to one of three groups. A Mediterranean diet with extra virgin olive oil, a Mediterranean diet with mixed nuts, or a comparison group told to eat less fat.",
+      "gorsel": "three wooden trays in a row, the first holding a cruet of olive oil and vegetables, the second a bowl of mixed nuts and vegetables, the third a plain plate of bread and lean fish",
+      "baslik": {
+        "satirlar": [
+          "THREE",
+          "GROUPS"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "The olive oil group received free extra virgin oil, and everyone attended regular education sessions. The researchers then followed people for a median of 4.8 years, counting heart attacks, strokes and deaths from heart disease.",
+      "gorsel": "a kitchen cupboard with a row of full bottles of olive oil on the shelf, an antique wall calendar with blank pages beside it",
+      "baslik": {
+        "satirlar": [
+          "4.8 YEARS"
+        ],
+        "not": "median follow-up"
+      }
+    },
+    {
+      "id": 14,
+      "tip": "grafik",
+      "metin": "In the olive oil group, 3.8 percent had one of those events. In the nuts group it was 3.4 percent, and in the comparison group 4.4 percent.",
+      "grafik": {
+        "baslik": "Heart attack, stroke or heart death",
+        "alt": "Share of each group with an event, median 4.8 years",
+        "cubuklar": [
+          {
+            "etiket": "Olive oil",
+            "deger": 3.8,
+            "metin": "3.8%"
+          },
+          {
+            "etiket": "Nuts",
+            "deger": 3.4,
+            "metin": "3.4%"
+          },
+          {
+            "etiket": "Comparison",
+            "deger": 4.4,
+            "metin": "4.4%"
+          }
+        ],
+        "kaynak": "Estruch et al., N Engl J Med 2018 · 7,447 adults aged 55 to 80 in Spain"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "After statistical adjustment, the olive oil group had a 31 percent lower risk than the comparison group. The range of uncertainty ran from 9 percent lower to 47 percent lower. For the nuts group it was 28 percent.",
+      "gorsel": "a balance scale with a small cruet of olive oil on the lighter, higher pan and a plain plate of bread on the lower pan, olive branch in the corner",
+      "etiket": "Estruch et al. · N Engl J Med · 2018",
+      "baslik": {
+        "satirlar": [
+          "31%",
+          "LOWER RISK"
+        ],
+        "not": "olive oil group vs comparison group"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "In plain numbers, that is 3.8 percent against 4.4 percent over about five years. A real difference, but a modest one in absolute terms. There's one more catch, and it's about the trial itself.",
+      "gorsel": "a small row of tiny figures drawn as simple wooden pegs on a tray, four pegs highlighted among one hundred, a drop of olive oil beside the tray"
+    },
+    {
+      "id": 17,
+      "tip": "kart",
+      "metin": "Now the catch. This trial was published in 2013, then withdrawn, and then published again in 2018.",
+      "kart": {
+        "ust": "THE CATCH",
+        "baslik": "Retracted, then republished",
+        "alt": "N Engl J Med · 2013 and 2018"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "The journal retracted the first paper after the team found protocol deviations. Some household members had been enrolled without randomization, and one site had not used the randomization tables consistently.",
+      "gorsel": "an old paper file tied with string lying open on a desk, a red wax stamp on the cover, a small cruet of olive oil beside it",
+      "baslik": {
+        "satirlar": [
+          "WITHDRAWN",
+          "IN 2018"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "The researchers reanalyzed everything. The corrected paper still showed fewer events with olive oil, and the results were similar after excluding 1,588 people whose group assignment may have departed from the plan.",
+      "gorsel": "a scientist's desk with a freshly corrected paper beside a bowl of olive oil and a pen, a pair of round eyeglasses resting on the paper",
+      "etiket": "Estruch et al. · N Engl J Med · 2018",
+      "baslik": {
+        "satirlar": [
+          "1,588",
+          "EXCLUDED"
+        ],
+        "not": "result stayed similar"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "That's reassuring, but it isn't proof about the oil alone. The olive oil came as part of a whole Mediterranean diet, and the comparison group was told to eat less fat, not to keep eating as before.",
+      "gorsel": "a Mediterranean table with a cruet of olive oil, tomatoes, fish, beans and bread, a single fork lying beside the plate"
+    },
+    {
+      "id": 21,
+      "bolum": "How much oil is enough?",
+      "tip": "kart",
+      "metin": "So how much olive oil are we talking about? The answer differs a lot between Spain and the United States.",
+      "kart": {
+        "ust": "THE AMOUNTS",
+        "baslik": "How much did people use?",
+        "alt": "Spain and the United States"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "In a separate analysis of 7,216 PREDIMED volunteers, whose average age was 67, the top third for extra virgin oil averaged about 35 grams a day. That is roughly two and a half tablespoons.",
+      "gorsel": "a tablespoon heaped with golden olive oil beside two more tablespoons filled with olive oil, a bowl of salad greens in the background",
+      "etiket": "Guasch-Ferré et al. · BMC Medicine · 2014",
+      "baslik": {
+        "satirlar": [
+          "35 GRAMS",
+          "A DAY"
+        ],
+        "not": "top third of extra virgin oil users in Spain"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "The bottom third averaged only about 9 grams, a bit under one tablespoon. The top third had a 39 percent lower risk of cardiovascular disease, but this was observational, so people who eat more oil may differ in other ways.",
+      "gorsel": "one single tablespoon of olive oil resting on a small plate beside a slice of bread, a cruet of olive oil blurred in the background",
+      "etiket": "Guasch-Ferré et al. · BMC Medicine · 2014"
+    },
+    {
+      "id": 24,
+      "metin": "Now to the United States. Researchers led by Marta Guasch-Ferré followed 61,181 women from the Nurses' Health Study and 31,797 men from the Health Professionals Follow-up Study, all free of heart disease at the start, for up to 24 years.",
+      "gorsel": "a long wooden archive cabinet with many small drawers, one drawer pulled open to show folded index cards, a cruet of olive oil on top of the cabinet"
+    },
+    {
+      "id": 25,
+      "metin": "People who used more than half a tablespoon of olive oil a day, about 7 grams, had a 14 percent lower risk of cardiovascular disease and an 18 percent lower risk of coronary heart disease than people who rarely used it.",
+      "gorsel": "half a tablespoon of olive oil in a measuring spoon on a kitchen counter, a red heart symbol standing behind the spoon, olive branch beside it",
+      "etiket": "Guasch-Ferré et al. · J Am Coll Cardiol · 2020",
+      "baslik": {
+        "satirlar": [
+          "HALF A",
+          "TABLESPOON"
+        ],
+        "vurgu": "–18%",
+        "not": "coronary heart disease, US cohorts"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "There was no clear link with stroke. And swapping just 5 grams a day of margarine, butter, mayonnaise or dairy fat for olive oil went with a 5 to 7 percent lower risk of heart disease.",
+      "gorsel": "a stick of butter and a jar of mayonnaise on the left, a cruet of olive oil on the right, a curved arrow drawn between them on a kitchen table",
+      "baslik": {
+        "satirlar": [
+          "THE SWAP"
+        ],
+        "not": "olive oil in place of butter, margarine or mayo"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "The same team later followed about 92,000 people for 28 years, through 36,856 deaths. Those using more than half a tablespoon a day had a 19 percent lower risk of dying from cardiovascular disease.",
+      "gorsel": "a long winding road through olive groves that stretches to the horizon, a small cruet of olive oil at the front of the picture",
+      "etiket": "Guasch-Ferré et al. · J Am Coll Cardiol · 2022"
+    },
+    {
+      "id": 28,
+      "tip": "grafik",
+      "metin": "Lower risks were also seen for total deaths, cancer deaths, respiratory deaths, and, most strongly, deaths from neurodegenerative diseases.",
+      "grafik": {
+        "baslik": "Lower risk of death",
+        "alt": "More than half a tablespoon a day vs rarely or never",
+        "cubuklar": [
+          {
+            "etiket": "Heart disease",
+            "deger": 19,
+            "metin": "−19%"
+          },
+          {
+            "etiket": "All causes",
+            "deger": 19,
+            "metin": "−19%"
+          },
+          {
+            "etiket": "Cancer",
+            "deger": 17,
+            "metin": "−17%"
+          },
+          {
+            "etiket": "Respiratory",
+            "deger": 18,
+            "metin": "−18%"
+          },
+          {
+            "etiket": "Neurodegenerative",
+            "deger": 29,
+            "metin": "−29%"
+          }
+        ],
+        "kaynak": "Guasch-Ferré et al., J Am Coll Cardiol 2022 · 60,582 women and 31,801 men, 28 years"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "These numbers show an association, not a cause. Heavier olive oil users also exercised more, smoked less, and ate more fruits and vegetables. Adjustments helped, but they cannot erase every difference.",
+      "gorsel": "a sunny garden path with a pair of walking shoes, a basket of fruit and vegetables, and a cruet of olive oil set on a low wall",
+      "baslik": {
+        "satirlar": [
+          "NOT PROOF"
+        ],
+        "not": "heavier users lived healthier in other ways"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "And one finding keeps the hype in check. In both American studies, replacing other vegetable oils with olive oil showed no significant difference. The gain shows up when olive oil replaces butter, margarine or mayonnaise.",
+      "gorsel": "two cruets on a counter, one of olive oil and one of plain vegetable oil, a pat of butter drawn to the side with a cross-hatched shadow"
+    },
+    {
+      "id": 31,
+      "bolum": "Why it may work",
+      "tip": "kart",
+      "metin": "So why might olive oil help the heart at all? There are two ideas, and the FDA weighed in on the first.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Why it may work",
+        "alt": "Fat swap · Plant phenolics"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "The first idea is the fat swap. In 2018, the FDA allowed a qualified health claim: supportive but not conclusive evidence suggests that about one and a half tablespoons, or 20 grams, a day of oils high in oleic acid, replacing saturated fat, may reduce heart disease risk.",
+      "gorsel": "a pat of butter on one small plate and a cruet of olive oil on another plate, a red heart symbol hovering between them, olive branch below",
+      "etiket": "FDA · Constituent Update · 2018",
+      "baslik": {
+        "satirlar": [
+          "1½ TBSP",
+          "A DAY"
+        ],
+        "not": "the amount in the FDA's qualified claim"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Notice the word qualified. It means the evidence is credible but not strong enough for the FDA's top standard. And the claim only applies if the oil replaces saturated fat and doesn't add calories to your day.",
+      "gorsel": "a heavy rubber stamp resting on a sheet of blank paper beside a cruet of olive oil, a small kitchen scale with a spoonful of olive oil",
+      "baslik": {
+        "satirlar": [
+          "QUALIFIED",
+          "CLAIM"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "The second idea is the phenolics. The EUROLIVE trial, led by María-Isabel Covas, gave 200 healthy men aged 20 to 60 a daily 25 milliliter dose of olive oil with low, medium or high phenolic content, for three weeks each.",
+      "gorsel": "three small glass vials of olive oil in graded shades from pale yellow to deep green, standing in a wooden rack on a laboratory bench",
+      "etiket": "Covas et al. · Ann Intern Med · 2006",
+      "baslik": {
+        "satirlar": [
+          "EUROLIVE",
+          "TRIAL"
+        ],
+        "not": "200 healthy men, three oils"
+      }
+    },
+    {
+      "id": 35,
+      "tip": "grafik",
+      "metin": "HDL cholesterol, the so-called good kind, rose a little more as the oil's phenolic content went up. By about 1 milligram per deciliter with the low-phenolic oil, and about 1.7 with the high-phenolic one.",
+      "grafik": {
+        "baslik": "Rise in HDL cholesterol",
+        "alt": "After 3 weeks of 25 mL a day, mg/dL (converted)",
+        "cubuklar": [
+          {
+            "etiket": "Low phenolics",
+            "deger": 1.0,
+            "metin": "+1.0"
+          },
+          {
+            "etiket": "Medium",
+            "deger": 1.2,
+            "metin": "+1.2"
+          },
+          {
+            "etiket": "High phenolics",
+            "deger": 1.7,
+            "metin": "+1.7"
+          }
+        ],
+        "kaynak": "Covas et al., Ann Intern Med 2006 · 200 healthy men, crossover trial"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "Oxidized LDL, a damaged form of LDL cholesterol, fell with the high-phenolic oil and did not fall with the low-phenolic one. It's a hint that phenolics do something beyond fat alone.",
+      "gorsel": "a tube-shaped vessel with small red discs and a few golden olive oil droplets flowing calmly along it, a green olive branch laid beside",
+      "baslik": {
+        "satirlar": [
+          "OXIDIZED",
+          "LDL"
+        ],
+        "not": "fell with high-phenolic olive oil"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "But the changes were small, they were blood test markers rather than heart attacks, and each oil was used for only three weeks. This suggests a mechanism, not a proven benefit.",
+      "gorsel": "a single sample tube in a rack beside a small dish of olive oil, a stopwatch on a laboratory bench with a tiny calendar page"
+    },
+    {
+      "id": 38,
+      "metin": "Here's the honest limit. The big American studies could not tell olive oil varieties apart. So we can't say from them whether extra virgin beats refined olive oil for the heart.",
+      "gorsel": "two olive oil bottles of different colors side by side on a shelf, a question mark made of a curved olive branch hovering above them"
+    },
+    {
+      "id": 39,
+      "bolum": "Cooking with olive oil",
+      "tip": "kart",
+      "metin": "Now the question many of you have asked. Is it safe to cook with extra virgin olive oil?",
+      "kart": {
+        "ust": "THE KITCHEN QUESTION",
+        "baslik": "Is cooking with it safe?",
+        "alt": "What lab tests show about heat"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Lab studies show that heat changes extra virgin olive oil, mostly by using up its phenolics. In a Spanish test, frying french fries for ten minutes at 180 degrees Celsius, or 356 degrees Fahrenheit, cut one group of phenolics to roughly half.",
+      "gorsel": "french fries in a frying pan of bubbling olive oil on a stove, wisps of steam rising, a cruet of olive oil beside the stove",
+      "etiket": "Gómez-Alonso et al. · J Agric Food Chem · 2003",
+      "baslik": {
+        "satirlar": [
+          "10 MIN",
+          "AT 356°F"
+        ],
+        "not": "cut some phenolics to about half"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "After six rounds of frying in the same oil, only about 10 percent of those phenolics remained, and compounds that signal oil breakdown rose sharply. Reusing frying oil again and again is not a good idea.",
+      "gorsel": "a deep fryer basket lifted from golden olive oil, a row of six small olive oil droplets growing darker from left to right on a white plate",
+      "etiket": "Gómez-Alonso et al. · J Agric Food Chem · 2003"
+    },
+    {
+      "id": 42,
+      "metin": "Gentler cooking did better. In another test, ten minutes in a microwave caused only minor phenolic losses. And in a third, oil heated at 180 degrees for 36 hours still kept its oleic acid and plant sterols, though its phenolics and vitamin E fell.",
+      "gorsel": "a covered ceramic dish of vegetables roasting with olive oil in an oven, a small cruet of olive oil on the oven door",
+      "etiket": "Brenes et al. · Allouche et al. · J Agric Food Chem",
+      "baslik": {
+        "satirlar": [
+          "GENTLE",
+          "HEAT"
+        ],
+        "not": "keeps more of the oil's phenolics"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "So the main fat in olive oil holds up, while some of its special compounds fade. These were lab chemistry tests, though. No study has compared cooked and raw olive oil for heart attacks.",
+      "gorsel": "a frying pan with olive oil on a stove beside a plain salad bowl dressed with olive oil, a thin dashed arrow joining them"
+    },
+    {
+      "id": 44,
+      "metin": "That fits the American studies, which counted olive oil in salad dressings, on bread, and in baking and frying all together. People in those studies used it in many ways, not only raw.",
+      "gorsel": "a kitchen table set with a salad drizzled with olive oil, a slice of bread dipped in olive oil, and a baked dish, all seen from above",
+      "etiket": "Guasch-Ferré et al. · J Am Coll Cardiol · 2022"
+    },
+    {
+      "id": 45,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Let's separate what's solid from what's still uncertain.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What we still don't know",
+        "alt": "Cause · type · amount"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Well supported: replacing butter, margarine and mayonnaise with olive oil is linked to lower risk in large studies. And one randomized trial of older Spanish adults found fewer heart events with a Mediterranean diet rich in olive oil.",
+      "gorsel": "a sturdy wooden table with a cruet of olive oil, a bowl of salad and a loaf of bread set squarely in the center, olive branch on the cloth",
+      "baslik": {
+        "satirlar": [
+          "WELL",
+          "SUPPORTED"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Uncertain: whether the oil alone does the work, whether extra virgin beats refined olive oil, and what the best daily amount is. The American studies were observational and could not separate olive oil types.",
+      "gorsel": "a foggy olive grove at dawn with a single cruet of olive oil set on a stone wall in the foreground, a faint question mark in the mist",
+      "baslik": {
+        "satirlar": [
+          "STILL",
+          "UNCERTAIN"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "And what the evidence does not say: that olive oil is a medicine, or that a spoonful can offset a poor diet. It is not a replacement for medicines your doctor prescribed for cholesterol or blood pressure.",
+      "gorsel": "a pill organizer with the days of the week next to a small cruet of olive oil on a kitchen counter, a stethoscope curled beside them"
+    },
+    {
+      "id": 49,
+      "metin": "Also remember that oil is dense in calories. The FDA claim says these oils should replace saturated fat, not add calories to your day. Pouring it on top of everything else is not what the research tested.",
+      "gorsel": "a plate of vegetables glistening with a thin drizzle of olive oil, a measuring spoon of olive oil resting on the rim of the plate"
+    },
+    {
+      "id": 50,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you use this well? Here are four practical ways, including how to turn those numbers into spoonfuls.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Four ways to use it",
+        "alt": "Spoons · swaps · heat · labels"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "One. Think in spoons. The American studies linked benefits to more than half a tablespoon a day, and the FDA cites one and a half. Pick an amount that fits your calories. Even a little, used well, is where the research starts.",
+      "gorsel": "a row of three measuring spoons of olive oil in graded sizes laid on a wooden board, an olive branch alongside",
+      "baslik": {
+        "satirlar": [
+          "THINK IN",
+          "SPOONS"
+        ],
+        "not": "½ to 1½ tablespoons a day"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "Two. Use it as a swap. Olive oil on your vegetables instead of butter, on your bread instead of margarine, and in dressings instead of mayonnaise. That is the swap the studies actually saw.",
+      "gorsel": "a plate of steamed green beans glistening with olive oil, a butter dish pushed aside, a cruet of olive oil in front"
+    },
+    {
+      "id": 53,
+      "metin": "Three. Cook gently. Sauté, roast and bake at moderate heat, and use fresh oil instead of the same oil again and again. Keep your best bottle for drizzling over soup, beans, fish and salad.",
+      "gorsel": "a bowl of white bean soup with a thin ring of olive oil on top, a cruet of olive oil and a wooden spoon beside the bowl",
+      "baslik": {
+        "satirlar": [
+          "COOK",
+          "GENTLY"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Four. Read the label. Look for extra virgin on the bottle, and remember that in the 2010 Davis test, what was on the label did not always match what was inside. Quality varies from bottle to bottle.",
+      "gorsel": "a hand holding a dark glass bottle of extra virgin olive oil up to the light in a store aisle, shelves of olive oil behind"
+    },
+    {
+      "id": 55,
+      "metin": "One safety note. If you take medicine for cholesterol or blood pressure, or you've been told to limit fat, ask your doctor or pharmacist before making big changes to how you eat.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a small cruet of olive oil on the corner",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Swap fats. Don't just add.",
+        "alt": "Olive oil in place of butter and margarine"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "In PREDIMED, older Spanish adults eating a Mediterranean diet rich in extra virgin olive oil had a 31 percent lower risk of heart attack, stroke or heart death. The trial was corrected and republished in 2018.",
+      "gorsel": "a glass cruet of golden olive oil on a wooden table beside a small bowl of green olives, an olive branch overhead"
+    },
+    {
+      "id": 58,
+      "metin": "In large American studies, even half a tablespoon a day was linked to lower risk, mostly when olive oil replaced butter, margarine or mayonnaise. Those studies show association, not proof.",
+      "gorsel": "a tablespoon of olive oil above a plate of roasted vegetables with a butter dish set aside, a red heart symbol behind the plate"
+    },
+    {
+      "id": 59,
+      "metin": "Cooking with olive oil looks reasonable, though heat uses up some of its phenolics. Use modest amounts, fresh oil and gentle heat, and let it replace saturated fat instead of adding extra calories.",
+      "gorsel": "a skillet of vegetables gently sautéing in olive oil on a stove, a cruet of olive oil and a wooden spoon beside the skillet"
+    },
+    {
+      "id": 60,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
