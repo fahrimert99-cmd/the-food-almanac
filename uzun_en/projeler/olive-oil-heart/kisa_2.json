@@ -1,0 +1,24 @@
+{
+  "baslik": ["EXTRA VIRGIN", "OR FAKE?"],
+  "baslik_yt": "Is Your Extra Virgin Olive Oil Really Extra Virgin?",
+  "aciklama": "A University of California, Davis test of extra virgin olive oils found many imported bottles failed the standard. Here is what it showed, its limits, and how to shop.",
+  "parcalar": [
+    {"sahne": 8, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 8, "cumleler": [1],
+     "baslik": {"satirlar": ["STORE", "SHELF TEST"], "vurgu": "19 BRANDS", "not": "tested in California stores"},
+     "etiket": "UC Davis Olive Center · 2010"},
+    {"sahne": 8, "cumleler": [2], "gorsel": 54,
+     "baslik": {"satirlar": ["FAILED", "THE TEST"], "vurgu": "69%", "not": "of imported oils failed"},
+     "etiket": "UC Davis Olive Center · 2010"},
+    {"sahne": 9, "cumleler": [0],
+     "baslik": {"satirlar": ["CALIFORNIA", "OILS"], "vurgu": "10%", "not": "of California oils failed"},
+     "etiket": "UC Davis Olive Center · 2010"},
+    {"sahne": 9, "cumleler": [1],
+     "baslik": {"satirlar": ["OLD AND", "PARTLY FUNDED"]},
+     "etiket": "UC Davis Olive Center · 2010"},
+    {"sahne": 54, "cumleler": [2],
+     "baslik": {"satirlar": ["READ THE", "LABEL"]},
+     "etiket": null},
+    {"sahne": 54, "cumleler": [3], "baslik": null, "etiket": null}
+  ]
+}
