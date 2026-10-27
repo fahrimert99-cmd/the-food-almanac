@@ -136,6 +136,12 @@ jobs:
           gh release download "uzun-en-$SLUG" -D "$P/cikti/dikey" --clobber -p "dikey_*.jpg" || true
           [ -f "$P/kapak_yt.jpg" ] || gh release download "uzun-en-$SLUG" -D "$P/cikti" --clobber -p kapak_yt.jpg || true
           python3 uzun_en/araclar/hazirla.py --proje "$SLUG" --sessiz     # Remotion paketi uzun videonun verisini de ister
+          # Seçim varsa, Shorts'un cümleleri projenin şimdiki anlatıcı sesiyle seslendirilir: ses imzası aynıysa hiçbir şey
+          # üretilmez; uzun video eski sesle (ör. ilk video Piper) yapıldıysa yalnızca bu cümleler kanal sesiyle yeniden
+          # üretilir. Sürüm arşivi (ses.tar) ve yayındaki uzun video değişmez.
+          if [ -f "$P/$AD.json" ]; then
+            python3 uzun_en/araclar/ses.py --proje "$SLUG" --sadece "$(python3 uzun_en/araclar/kisa.py --proje "$SLUG" --no "$KNO" --cumleler)"
+          fi
           python3 uzun_en/araclar/kisa.py --proje "$SLUG" --no "$KNO" --liste
       - name: Ajanlar (kredi KULLANILMAZ)
         if: env.SLUG != ''
