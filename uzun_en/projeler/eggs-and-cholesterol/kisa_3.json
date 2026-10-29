@@ -1,0 +1,18 @@
+{
+  "baslik": ["2 BIG STUDIES,", "2 ANSWERS?"],
+  "baslik_yt": "Why Egg Studies Disagree on Heart Risk",
+  "aciklama": "One large study links eggs to higher heart risk, another finds no link. Here is what may explain the gap, and what to do with it.",
+  "parcalar": [
+    {"sahne": 37, "cumleler": [0], "baslik": {"satirlar": ["EGGS:", "2 STUDIES"], "vurgu": "2 ANSWERS", "not": "same food, two results"}, "etiket": null},
+    {"sahne": 36, "cumleler": [0], "gorsel": 34,
+     "baslik": {"satirlar": ["LINKED TO", "HIGHER RISK"]}, "etiket": "Zhong et al. · JAMA · 2019"},
+    {"sahne": 36, "cumleler": [1],
+     "baslik": {"satirlar": ["SMALL IN", "ABSOLUTE TERMS"], "vurgu": "1 IN 100", "not": "extra case, half egg a day"}, "etiket": "Zhong et al. · JAMA · 2019"},
+    {"sahne": 38, "cumleler": [0, 1], "baslik": {"satirlar": ["LINK,", "NOT CAUSE"]}, "etiket": null},
+    {"sahne": 38, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 38, "cumleler": [3],
+     "baslik": {"satirlar": ["ADJUSTING", "CHANGED IT"], "vurgu": "+10 → -7%", "not": "risk estimate, Harvard data"}, "etiket": "Drouin-Chartier et al. · BMJ · 2020"},
+    {"sahne": 44, "cumleler": [1], "baslik": {"satirlar": ["OPEN,", "NOT SETTLED"]}, "etiket": null},
+    {"sahne": 59, "cumleler": [1], "baslik": {"satirlar": ["ASK YOUR", "DOCTOR"]}, "etiket": null}
+  ]
+}
