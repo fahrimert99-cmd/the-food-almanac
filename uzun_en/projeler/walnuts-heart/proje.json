@@ -1,0 +1,566 @@
+{
+  "slug": "walnuts-heart",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Walnuts and Cholesterol After 60: What Trials Show",
+  "yorum": "Do you eat walnuts regularly, and how do you usually enjoy them: on oatmeal, in salads or by the handful? Has your doctor ever talked with you about your cholesterol?",
+  "aciklama_giris": "In a two-year randomized trial of 628 adults aged 63 to 79, eating one to two ounces of walnuts a day lowered LDL cholesterol by about 4 milligrams per deciliter, with no weight gain. A pooled analysis of 26 controlled trials found a similar small drop. The brain results were less clear: the main memory score showed no difference.\n\nIn this video we look at what the Walnuts and Healthy Aging (WAHA) trial and the pooled analysis actually found, what walnuts contain, why swapping fats may matter, what the trial did and did not show for memory, what the FDA allows on labels, and how to measure a sensible portion in ounces and cups.",
+  "kaynaklar": [
+    "Guasch-Ferré M, Li J, Hu FB, Salas-Salvadó J, Tobias DK. Effects of walnut consumption on blood lipids and other cardiovascular disease risk factors: an updated meta-analysis and systematic review of controlled trials. American Journal of Clinical Nutrition. 2018;108(1):174-187. PMID 29931130.",
+    "Rajaram S, Cofán M, Sala-Vila A, et al. Effects of walnut consumption for 2 years on lipoprotein subclasses among healthy elders: findings from the WAHA randomized controlled trial. Circulation. 2021;144(13):1083-1085. doi:10.1161/CIRCULATIONAHA.121.054051. PMID 34455809.",
+    "Sala-Vila A, Valls-Pedret C, Rajaram S, et al. Effect of a 2-year diet intervention with walnuts on cognitive decline. The Walnuts And Healthy Aging (WAHA) study: a randomized controlled trial. American Journal of Clinical Nutrition. 2020;111(3):590-600. doi:10.1093/ajcn/nqz328. PMID 31912155.",
+    "Sacks FM, Lichtenstein AH, Wu JHY, et al. Dietary fats and cardiovascular disease: a Presidential Advisory from the American Heart Association. Circulation. 2017;136(3):e1-e23. PMID 28620111.",
+    "National Institutes of Health, Office of Dietary Supplements. Omega-3 Fatty Acids: Fact Sheet (alpha-linolenic acid adequate intake; conversion to EPA and DHA).",
+    "U.S. Food and Drug Administration. Qualified health claim for walnuts and coronary heart disease, March 2004 (\"Supportive but not conclusive research shows that eating 1.5 oz of walnuts per day...\").",
+    "U.S. Department of Agriculture, FoodData Central. Nuts, walnuts, English (calories, protein, fiber and alpha-linolenic acid per 100 grams)."
+  ],
+  "kapak": {
+    "satirlar": [
+      "WALNUTS",
+      "LOWER LDL?"
+    ],
+    "vurgu": "–5.5",
+    "vurgu_alt": "mg/dL",
+    "gorsel": "a large pile of whole walnuts and cracked walnut halves overflowing a small wooden bowl, close up and appetizing, a red heart symbol overlapping behind the bowl"
+  },
+  "kahraman": "walnuts",
+  "etiketler": [
+    "walnuts cholesterol",
+    "walnuts heart health after 60",
+    "walnuts benefits seniors",
+    "walnuts brain aging",
+    "LDL cholesterol",
+    "WAHA trial",
+    "omega-3 ALA",
+    "heart healthy foods",
+    "nutrition science",
+    "healthy aging"
+  ],
+  "seslendirme_duzelt": {
+    "LDL": "L D L",
+    "HDL": "H D L",
+    "ALA": "A L A",
+    "EPA": "E P A",
+    "DHA": "D H A",
+    "WAHA": "wah-hah",
+    "FDA": "F D A",
+    "apo B": "A P O B",
+    "Guasch-Ferré": "Gwash Ferray"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "What's inside a walnut",
+      "metin": "In a two-year trial of 628 adults aged 63 to 79, eating one to two ounces of walnuts a day lowered LDL cholesterol by about 4 milligrams per deciliter.",
+      "gorsel": "a wooden bowl heaped with walnuts, whole and cracked halves, on a kitchen table beside a small red heart symbol, morning light drawn as fine lines",
+      "etiket": "Rajaram et al. · Circulation · 2021",
+      "baslik": {
+        "satirlar": [
+          "2 YEARS",
+          "OF WALNUTS"
+        ],
+        "vurgu": "–4.3",
+        "not": "LDL cholesterol, mg/dL, adults aged 63 to 79"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "That's a small drop, and the brain results came with a catch.",
+      "gorsel": "a single walnut cracked open on a wooden table showing its two-lobed kernel, a pair of round eyeglasses resting beside it"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what walnuts can and can't do, and how much to eat.",
+      "gorsel": "a measuring cup filled with walnut halves on a kitchen counter, a few whole walnuts in their shells scattered around it",
+      "baslik": {
+        "satirlar": [
+          "HOW MUCH",
+          "TO EAT?"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what's actually inside a walnut.",
+      "gorsel": "a walnut tree branch with green husks and leaves, one husk split open to show the wrinkled walnut shell inside"
+    },
+    {
+      "id": 5,
+      "metin": "Walnuts are mostly fat. One ounce, roughly a quarter cup of halves, has about 180 calories, 4 grams of protein and 2 grams of fiber.",
+      "gorsel": "a small kitchen scale holding a handful of walnuts, a quarter cup measure of walnut halves standing beside it",
+      "baslik": {
+        "satirlar": [
+          "ONE OUNCE",
+          "≈ 180 CALORIES"
+        ],
+        "not": "about a quarter cup of walnut halves"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Most of that fat is polyunsaturated. Walnuts are also a plant source of ALA, alpha-linolenic acid, an omega-3 fat. One ounce has about 2.5 grams.",
+      "gorsel": "a cross-section of a walnut kernel drawn as a textbook engraving, small golden droplets rising from the walnut halves in a bowl",
+      "etiket": "USDA · FoodData Central"
+    },
+    {
+      "id": 7,
+      "metin": "Your body can't make ALA, so it has to come from food. The National Institutes of Health lists an adequate intake of 1.6 grams a day for men and 1.1 grams for women. An ounce of walnuts covers that.",
+      "gorsel": "a kitchen table with a bowl of walnuts, a small bottle of flaxseed oil and a bag of ground flaxseed, soft window light",
+      "baslik": {
+        "satirlar": [
+          "ALA",
+          "A PLANT OMEGA-3"
+        ],
+        "not": "NIH adequate intake: 1.6 g men, 1.1 g women"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "One caution. Your body converts only a small amount of ALA into the omega-3 fats found in fish, called EPA and DHA. So walnuts and fatty fish are not the same thing.",
+      "gorsel": "a bowl of walnuts on the left and a grilled salmon fillet on a plate on the right, a dashed curved arrow between them with a small question mark shape"
+    },
+    {
+      "id": 9,
+      "bolum": "The cholesterol evidence",
+      "tip": "kart",
+      "metin": "First, the big picture. What happens to cholesterol when people eat walnuts in controlled trials?",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Walnuts and LDL",
+        "alt": "26 trials pooled together"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "LDL cholesterol is the cholesterol carried in low-density lipoprotein particles. When too much of it circulates, it can build up in artery walls. That's why doctors track it, in milligrams per deciliter.",
+      "gorsel": "an open tube-shaped vessel with small red discs and round pale yellow particles drifting along, a few particles resting against the inner wall, a bowl of walnuts in the corner",
+      "baslik": {
+        "satirlar": [
+          "LDL",
+          "CHOLESTEROL"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Another measure is apo B, short for apolipoprotein B. Each LDL particle carries one apo B protein, so it works like a head count of those particles.",
+      "gorsel": "round pale yellow particles each with one small coral dot attached, drawn as an engraving, beside a handful of walnuts on a cloth",
+      "baslik": {
+        "satirlar": [
+          "APO B",
+          "A PARTICLE COUNT"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "metin": "In 2018, Marta Guasch-Ferré and colleagues pooled 26 controlled trials with 1,059 people in total, comparing diets that included walnuts to diets that did not.",
+      "gorsel": "a tall stack of research folders with blank covers beside a bowl of walnuts and an antique brass magnifying glass",
+      "etiket": "Guasch-Ferré et al. · Am J Clin Nutr · 2018"
+    },
+    {
+      "id": 13,
+      "tip": "grafik",
+      "metin": "On average, LDL cholesterol was 5.5 milligrams per deciliter lower on walnut diets. Total cholesterol was about 7 lower, triglycerides about 4.7 lower, and apo B about 3.7 lower.",
+      "grafik": {
+        "baslik": "How much lower with walnut diets (mg/dL)",
+        "alt": "Walnut-enriched diets vs comparison diets",
+        "cubuklar": [
+          {
+            "etiket": "Total chol.",
+            "deger": 6.99,
+            "metin": "−7.0"
+          },
+          {
+            "etiket": "LDL",
+            "deger": 5.51,
+            "metin": "−5.5"
+          },
+          {
+            "etiket": "Triglycerides",
+            "deger": 4.69,
+            "metin": "−4.7"
+          },
+          {
+            "etiket": "Apo B",
+            "deger": 3.74,
+            "metin": "−3.7"
+          }
+        ],
+        "kaynak": "Guasch-Ferré et al., Am J Clin Nutr 2018 · 26 controlled trials · 1,059 participants"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Body weight and blood pressure did not differ significantly between the walnut diets and the comparison diets. So in these trials, the cholesterol change did not come with a weight penalty.",
+      "gorsel": "a bathroom scale with a blank dial beside a small bowl of walnuts and a blood pressure cuff rolled up on a shelf"
+    },
+    {
+      "id": 15,
+      "metin": "Those are consistent changes. But look at the size. Five and a half milligrams per deciliter is about 3.7 percent. It's a nudge, not a transformation.",
+      "gorsel": "a small bowl of walnuts on one side of an old balance scale, a modest weight on the other side, the scale tilted slightly",
+      "baslik": {
+        "satirlar": [
+          "A NUDGE,",
+          "NOT A FIX"
+        ],
+        "vurgu": "–3.7%",
+        "not": "LDL cholesterol across 26 trials"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Those trials differed in size, length and walnut amounts, so 5.5 is an average across all of them, not a promise for any one person. And in the practical part, there's an easy way to measure a portion without a scale.",
+      "gorsel": "a quarter cup measure full of walnut halves sitting beside a larger half cup measure, on a wooden counter"
+    },
+    {
+      "id": 17,
+      "bolum": "The two-year WAHA trial",
+      "tip": "kart",
+      "metin": "To see how this plays out in older adults, researchers ran a two-year trial called WAHA, short for Walnuts and Healthy Aging.",
+      "kart": {
+        "ust": "THE TRIAL",
+        "baslik": "Walnuts and Healthy Aging",
+        "alt": "Two years · Barcelona and Loma Linda"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "It ran in Barcelona, Spain, and in Loma Linda, California. Healthy volunteers aged 63 to 79 were randomly assigned to add walnuts to their usual diet, or to avoid walnuts.",
+      "gorsel": "a quiet clinic waiting room with two chairs, a small table holding a bowl of walnuts and a clipboard, a tall window",
+      "etiket": "Rajaram et al. · Circulation · 2021"
+    },
+    {
+      "id": 19,
+      "metin": "The walnut group got about 15 percent of their daily calories from walnuts. That works out to 30 to 60 grams, or roughly one to two ounces, every day for two years.",
+      "gorsel": "two small piles of walnuts on a table, a smaller pile and a larger pile, each beside a folded cloth napkin",
+      "baslik": {
+        "satirlar": [
+          "1 TO 2",
+          "OUNCES A DAY"
+        ],
+        "not": "30 to 60 grams of walnuts, for two years"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "In all, 708 people joined, 636 finished, and 628 had full cholesterol measurements. The average age was 69, two thirds were women, and about one in three took a statin medicine. Because people were assigned by chance, the two groups started out similar.",
+      "gorsel": "a long wooden bench with rows of small numbered glass sample tubes in a rack, a bowl of walnuts at one end"
+    },
+    {
+      "id": 21,
+      "metin": "Their starting LDL cholesterol averaged 117 milligrams per deciliter. So, on average, these were not people with very high cholesterol.",
+      "gorsel": "a simple glass measuring beaker partly filled with pale yellow liquid beside a bowl of walnuts, a ruler lying across the table"
+    },
+    {
+      "id": 22,
+      "tip": "grafik",
+      "metin": "After two years, compared with the walnut-free group, total cholesterol was 4.4 percent lower, LDL cholesterol 3.6 percent lower, and small LDL particles 6.1 percent lower.",
+      "grafik": {
+        "baslik": "Walnut group vs walnut-free group after 2 years",
+        "alt": "Percent lower cholesterol and particles",
+        "cubuklar": [
+          {
+            "etiket": "Total chol.",
+            "deger": 4.4,
+            "metin": "−4.4%"
+          },
+          {
+            "etiket": "LDL",
+            "deger": 3.6,
+            "metin": "−3.6%"
+          },
+          {
+            "etiket": "Small LDL",
+            "deger": 6.1,
+            "metin": "−6.1%"
+          }
+        ],
+        "kaynak": "Rajaram et al., Circulation 2021 · 628 adults aged 63 to 79 · 2-year randomized trial"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "A related particle, intermediate-density cholesterol, was 16.8 percent lower, and the total number of LDL particles was 4.3 percent lower. HDL cholesterol and triglycerides did not change significantly.",
+      "gorsel": "a tall glass jar filled with round pale yellow particles on a shelf, a smaller jar with fewer particles beside it, a few walnuts in front",
+      "baslik": {
+        "satirlar": [
+          "FEWER",
+          "LDL PARTICLES"
+        ],
+        "vurgu": "–4.3%"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "In milligrams per deciliter, the LDL drop was 4.3, with a likely range of about 1.6 to 6.6. That's close to what the pooled analysis found, and it held up for two full years.",
+      "gorsel": "an antique wall calendar with blank pages, a bowl of walnuts on the table below it, a pencil resting beside the bowl"
+    },
+    {
+      "id": 25,
+      "metin": "The drop looked bigger in men, 7.9 percent, than in women, 2.6 percent. The authors call that a new finding that needs confirmation, so don't read too much into it.",
+      "gorsel": "two identical small bowls of walnuts side by side on a wooden table, a magnifying glass resting between them"
+    },
+    {
+      "id": 26,
+      "metin": "Weight matters too. The walnut group's weight stayed essentially flat, while the walnut-free group lost about half a kilogram, a little over a pound.",
+      "gorsel": "a set of old-fashioned kitchen scales with a bowl of walnuts on one tray, tape measure curled beside it",
+      "baslik": {
+        "satirlar": [
+          "NO WEIGHT",
+          "GAIN"
+        ],
+        "not": "walnut group +0.06 kg over two years"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "One more fact to weigh. The trial was funded by the California Walnut Commission. The authors say it had no role in design or analysis, but it's fair to know who paid.",
+      "gorsel": "a closed ledger book and a pen on a desk beside a bowl of walnuts, a sunlit window behind"
+    },
+    {
+      "id": 28,
+      "bolum": "Why walnuts may work",
+      "tip": "kart",
+      "metin": "So why might walnuts nudge cholesterol down? The best-supported answer has to do with what they replace on your plate.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Why it may work",
+        "alt": "Fats, swaps and open questions"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "A 2017 American Heart Association advisory concluded that replacing saturated fat with unsaturated fat lowers LDL cholesterol. Most of the fat in walnuts is polyunsaturated.",
+      "gorsel": "a stick of butter on one plate and a bowl of walnuts on another plate, a dashed curved arrow pointing from the butter to the walnuts",
+      "etiket": "Sacks et al. · Circulation · 2017",
+      "baslik": {
+        "satirlar": [
+          "THE SWAP",
+          "MATTERS"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "The same advisory found that replacing saturated fat with refined carbohydrates and sugars did not lower heart disease rates. So what you swap in matters, not just what you swap out.",
+      "gorsel": "a plate with a white pastry and a sugar bowl on the left and a bowl of walnuts on the right, a small balance scale between them"
+    },
+    {
+      "id": 31,
+      "metin": "Walnuts also contain ALA and fiber, and researchers are studying whether those help. That part is still a hypothesis, not a proven pathway.",
+      "gorsel": "a halved walnut with a magnified circular inset showing fibrous plant cells, small golden droplets drawn nearby as an engraving"
+    },
+    {
+      "id": 32,
+      "bolum": "Walnuts and the aging brain",
+      "tip": "kart",
+      "metin": "Now the question many people care about most. Do walnuts protect memory as we age? The same WAHA trial tried to find out.",
+      "kart": {
+        "ust": "THE BRAIN QUESTION",
+        "baslik": "Walnuts and memory",
+        "alt": "Same trial · cognitive tests"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Volunteers took a set of memory and thinking tests at the start and again after two years. The main measure was a combined cognitive score, in 657 people.",
+      "gorsel": "a quiet desk with a blank puzzle board, a pencil, an hourglass and a bowl of walnuts, soft light from a window",
+      "etiket": "Sala-Vila et al. · Am J Clin Nutr · 2020"
+    },
+    {
+      "id": 34,
+      "metin": "The result: no clear difference. The score changed by minus 0.072 in the walnut group and minus 0.086 in the walnut-free group. Statistically, that's a tie.",
+      "gorsel": "two identical small wooden bowls of walnuts balanced level on a simple balance scale",
+      "baslik": {
+        "satirlar": [
+          "MAIN RESULT:",
+          "NO DIFFERENCE"
+        ],
+        "not": "combined memory and thinking score after two years"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "The researchers then looked at each location separately, after the fact. In Barcelona, the walnut group declined less: minus 0.037 compared with minus 0.097. The statistical evidence was borderline.",
+      "gorsel": "a map-like engraving of the Mediterranean coast of Spain with a small sailing ship, a bowl of walnuts in the foreground"
+    },
+    {
+      "id": 36,
+      "metin": "The Barcelona volunteers smoked more, had less education and started with lower test scores. Some headlines said walnuts help people at higher risk of decline. But that came from a look-back analysis, not the main test.",
+      "gorsel": "a stack of newspapers with blank columns folded on a table, a bowl of walnuts and a pair of reading glasses on top"
+    },
+    {
+      "id": 37,
+      "metin": "The authors themselves called the results encouraging but not conclusive. In plain words: a hint worth testing again, not a proven benefit for the brain.",
+      "gorsel": "a bowl of walnuts beside an open empty notebook and a fountain pen, a candle burning in the background",
+      "baslik": {
+        "satirlar": [
+          "ENCOURAGING,",
+          "NOT CONCLUSIVE"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "So if you hear that walnuts prevent dementia, that goes well beyond this trial. It measured test scores over two years, not diagnoses of dementia.",
+      "gorsel": "a wooden bowl of walnuts on a table, a drawn walnut kernel beside it that resembles a brain shape, with a thin question mark curve above"
+    },
+    {
+      "id": 39,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What looks solid, and what doesn't?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What we know, what we don't",
+        "alt": "Evidence, limits and labels"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "What looks well supported: adding walnuts to a diet lowers LDL cholesterol a little, in pooled trials and in a two-year trial of older adults, without weight gain. Apo B also fell in the pooled trials.",
+      "gorsel": "a bowl of walnuts in the center of a tidy table with a red heart symbol on a small card beside it, a gentle golden light"
+    },
+    {
+      "id": 41,
+      "metin": "The FDA recognizes a weaker version of the idea. Since 2004, labels may say that supportive but not conclusive research shows that 1.5 ounces of walnuts a day, as part of a low saturated fat and low cholesterol diet, may reduce the risk of coronary heart disease.",
+      "gorsel": "a small bag of shelled walnuts standing on a store shelf, a magnifying glass resting in front of it, a scale beside the bag",
+      "baslik": {
+        "satirlar": [
+          "FDA LABEL:",
+          "SUPPORTIVE,",
+          "NOT CONCLUSIVE"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "Notice the conditions: a low saturated fat diet, and no increase in total calories. That points to using walnuts as a swap, not as a bonus on top of everything else.",
+      "gorsel": "a breakfast plate where a bowl of oatmeal topped with walnuts has replaced a plate of buttered pastries pushed to the edge of the table"
+    },
+    {
+      "id": 43,
+      "metin": "What we don't know is whether walnuts prevent heart attacks or strokes. The trials we covered measured cholesterol, not heart attacks. And a few milligrams per deciliter of LDL is a small change.",
+      "gorsel": "a quiet research desk with neat stacks of journals with blank covers, a bowl of walnuts and a cup of tea with rising steam",
+      "baslik": {
+        "satirlar": [
+          "OPEN",
+          "QUESTION"
+        ],
+        "not": "heart attacks and strokes weren't measured"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "In WAHA, about one in three volunteers took statins, and changes in statin use did not differ between groups. Walnuts were studied as an addition to usual care, never as a replacement for medicine.",
+      "gorsel": "a weekly pill organizer with seven small compartments beside a bowl of walnuts and a glass of water on a kitchen table"
+    },
+    {
+      "id": 45,
+      "bolum": "How to use walnuts",
+      "tip": "kart",
+      "metin": "So what does this mean in your kitchen? Here are five practical points, starting with the portion.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Walnuts, the practical way",
+        "alt": "Portions · swaps · safety"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "One. The portion. The trial used one to two ounces a day. A quarter cup of walnut halves is roughly one ounce, so a small handful up to about half a cup covers that range.",
+      "gorsel": "a quarter cup measure and a half cup measure each filled with walnut halves, set side by side on a wooden counter",
+      "baslik": {
+        "satirlar": [
+          "1/4 CUP",
+          "≈ 1 OUNCE"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "The label amount, one and a half ounces, falls between a third and a half cup, and about 280 calories. Even one ounce is a real snack, so start small.",
+      "gorsel": "a small ceramic dish holding a modest handful of walnuts on a table beside a folded napkin and a teaspoon"
+    },
+    {
+      "id": 48,
+      "metin": "Two. Make it a swap. Sprinkle walnuts on oatmeal or a salad instead of croutons, or choose them over chips or cookies, so your saturated fat and total calories don't climb.",
+      "gorsel": "a green salad topped with walnuts and sliced pears on a plate, a bowl of oatmeal topped with walnuts beside it",
+      "baslik": {
+        "satirlar": [
+          "SWAP,",
+          "DON'T ADD"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Three. Choose plain walnuts. Candied or heavily salted ones add sugar or sodium, which many people watching their blood pressure want to limit.",
+      "gorsel": "a bowl of plain shelled walnuts next to a smaller dish of walnuts coated in sugar, the plain bowl placed larger in front"
+    },
+    {
+      "id": 50,
+      "metin": "Four. Think long term. In the trial, the cholesterol changes were measured after two years of daily walnuts. This is a steady habit, not a quick fix.",
+      "gorsel": "a row of four small potted seedlings on a windowsill, a bowl of walnuts in front, soft morning light",
+      "baslik": {
+        "satirlar": [
+          "A HABIT,",
+          "NOT A QUICK FIX"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "Five. Don't count on walnuts for fish omega-3. If your doctor has suggested fish or fish oil for your heart, walnuts offer a different kind of omega-3.",
+      "gorsel": "a plate of baked fish with lemon on one side and a bowl of walnuts on the other, a wooden table between them"
+    },
+    {
+      "id": 52,
+      "metin": "One safety note. Tree nut allergy can be serious, so walnuts aren't for everyone. And if you take cholesterol medicine or blood thinners, or have a health condition, ask your doctor or pharmacist before changing how you eat. Chopped walnuts are an option if chewing is hard.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a small bowl of walnuts set apart on a tray",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A small nudge, not a cure",
+        "alt": "Walnuts · LDL · memory"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "In pooled trials and in the two-year WAHA trial of older adults, daily walnuts lowered LDL cholesterol by about 4 to 6 milligrams per deciliter, without weight gain. That is a modest change, but a real one.",
+      "gorsel": "the opening wooden bowl heaped with walnuts on the kitchen table, a small red heart symbol beside it"
+    },
+    {
+      "id": 55,
+      "metin": "The brain results were not conclusive. The main memory score showed no difference, and a possible benefit in one group came from an after-the-fact analysis.",
+      "gorsel": "a halved walnut beside an open notebook with blank pages and a pair of round eyeglasses"
+    },
+    {
+      "id": 56,
+      "metin": "Think of walnuts as a small, useful habit: about one to two ounces, roughly a quarter to half a cup, swapped in for less healthy snacks. It won't replace medicine, but it's an easy habit to build into breakfast or lunch.",
+      "gorsel": "a quarter cup measure of walnut halves on a wooden table beside a bowl of oatmeal, lit by warm morning light"
+    },
+    {
+      "id": 57,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
