@@ -69,8 +69,8 @@ jobs:
           import ortak as O
           istek = (os.environ.get("GIRDI") or "").strip()
           istek_no = (os.environ.get("GIRDI_NO") or "").strip()
+          k = O.json_oku("uzun_en/kisa_islem.json", {}) or {}
           if not istek and os.environ["OLAY"] == "push":
-              k = O.json_oku("uzun_en/kisa_islem.json", {}) or {}
               istek, istek_no = str(k.get("proje") or "").strip(), str(k.get("no") or "").strip()
           sayi = int(O.marka().get("kisa_sayisi", 2))
           adaylar = []                      # (uzun video zamanı, -no, slug, no): en yeni video önce, kendi içinde sırayla
@@ -85,6 +85,16 @@ jobs:
                       adaylar.append((y.get("slot") or y.get("yuklenme") or "", -no, slug, no))
                       break                 # sıradaki Shorts, öncekisi yüklenince
           bekleyen = [(s, n) for _, _, s, n in sorted(adaylar, reverse=True)]
+          # kisa_islem.json "ek": [{"proje", "no"}]: eski videolardan kisa_sayisi'nın üstünde ek Shorts (ör. boş Pazartesiler
+          # için 3. Shorts). Sıradan Shorts'lardan sonra, sırayla üretilir; slot kisa_N_yayin.json'da önceden verilebilir.
+          for r in k.get("ek") or []:
+              slug, no = str(r.get("proje") or ""), int(r.get("no") or 0)
+              pdir = O.proje_dir(slug)
+              ad = "kisa" if no == 1 else f"kisa_{no}"
+              if no > 0 and (O.json_oku(os.path.join(pdir, "yayin.json"), {}) or {}).get("video_id") \
+                      and not (O.json_oku(os.path.join(pdir, f"{ad}_yayin.json"), {}) or {}).get("video_id") \
+                      and (slug, no) not in bekleyen:
+                  bekleyen.append((slug, no))
           if istek:
               secim = next(((s, n) for s, n in bekleyen if s == istek and (not istek_no or str(n) == istek_no)), None)
           else:
