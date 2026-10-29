@@ -1,0 +1,15 @@
+{
+  "baslik": ["2-MIN WALK", "ENOUGH?"],
+  "baslik_yt": "Can a 2-Minute Walk Lower Blood Sugar?",
+  "aciklama": "In a 2012 trial, adults who took light two minute walks every twenty minutes had a smaller rise in blood sugar and insulin than those who sat. Here is what the study showed, its limits, and what to do if you cannot get outside.",
+  "parcalar": [
+    {"sahne": 20, "cumleler": [0], "gorsel": 21, "baslik": null, "etiket": null},
+    {"sahne": 20, "cumleler": [1], "baslik": {"satirlar": ["EVERY", "20 MINUTES"], "vurgu": "2 MIN", "not": "light walk, 19 adults"}, "etiket": "Dunstan et al. · Diabetes Care · 2012"},
+    {"sahne": 21, "cumleler": [0], "etiket": "Dunstan et al. · Diabetes Care · 2012"},
+    {"sahne": 21, "cumleler": [1], "gorsel": 45, "baslik": null, "etiket": null},
+    {"sahne": 39, "cumleler": [1], "baslik": {"satirlar": ["SMALL", "TRIALS"], "not": "10 to 40 people"}, "etiket": null},
+    {"sahne": 39, "cumleler": [2], "gorsel": 24, "baslik": {"satirlar": ["GLUCOSE,", "NOT HEARTS"]}, "etiket": null},
+    {"sahne": 46, "cumleler": [1, 2]},
+    {"sahne": 46, "cumleler": [3], "baslik": null}
+  ]
+}
