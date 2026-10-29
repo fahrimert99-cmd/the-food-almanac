@@ -1,0 +1,24 @@
+{
+  "baslik": ["WALNUTS &", "MEMORY?"],
+  "baslik_yt": "Do Walnuts Help Memory or Cholesterol After 60?",
+  "aciklama": "A two-year trial of adults aged 63 to 79 tested daily walnuts on memory and on LDL cholesterol. Here is what held up, what didn't, and how much to eat.",
+  "parcalar": [
+    {"sahne": 32, "cumleler": [1], "gorsel": 38, "baslik": null, "etiket": null},
+    {"sahne": 34, "cumleler": [0, 2],
+     "baslik": {"satirlar": ["MEMORY:", "NO DIFFERENCE"], "not": "after two years of walnuts"},
+     "etiket": "Sala-Vila et al. · Am J Clin Nutr · 2020"},
+    {"sahne": 13, "cumleler": [0], "gorsel": 12,
+     "baslik": {"satirlar": ["LDL, 26 TRIALS"], "vurgu": "-5.5", "not": "LDL, mg/dL (pooled trials)"},
+     "etiket": "Guasch-Ferré et al. · AJCN · 2018"},
+    {"sahne": 15, "cumleler": [2, 3],
+     "baslik": {"satirlar": ["A NUDGE,", "NOT A FIX"], "vurgu": "-3.7%", "not": "LDL across 26 trials"},
+     "etiket": null},
+    {"sahne": 26, "cumleler": [1],
+     "baslik": {"satirlar": ["NO WEIGHT", "GAIN"], "not": "walnuts: +0.06 kg in 2 years"},
+     "etiket": "Rajaram et al. · Circulation · 2021"},
+    {"sahne": 56, "cumleler": [0], "gorsel": 46,
+     "baslik": {"satirlar": ["1-2 OUNCES", "A DAY"], "not": "about 1/4 to 1/2 cup"},
+     "etiket": null},
+    {"sahne": 56, "cumleler": [1], "gorsel": 44, "baslik": null, "etiket": null}
+  ]
+}
