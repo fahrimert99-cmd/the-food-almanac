@@ -99,6 +99,8 @@ Fields:
   - It must make sense to someone who never saw Short 1.
   - It must not reuse any sentence marked `USED`.
   - Where possible, use images Short 1 did not use.
+- **Short 3** (an extra Short from an older video) follows the Short 2 rules: its own angle, hook and `baslik_yt`,
+  different from both earlier Shorts, and no sentence marked `USED`.
 
 ## Rules
 - **Length.** Narration (the sum of the sentence durations plus small gaps) must be 25–52 seconds. Aim for 38–45 s.

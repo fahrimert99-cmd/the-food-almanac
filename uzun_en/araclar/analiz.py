@@ -22,6 +22,7 @@ import datetime as dt
 import glob
 import io
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -54,7 +55,7 @@ def kisalar():
     for y in glob.glob(os.path.join(O.PROJELER, "*", "kisa*_yayin.json")):
         d = O.json_oku(y, {}) or {}
         if d.get("video_id"):
-            no = 2 if os.path.basename(y).startswith("kisa_2") else 1
+            no = int(re.search(r"kisa_?(\d*)_yayin", os.path.basename(y)).group(1) or 1)
             v.append({"slug": os.path.basename(os.path.dirname(y)), "no": no, "id": d["video_id"],
                       "baslik": d.get("baslik", ""), "slot": d.get("slot") or "", "uzun_id": d.get("uzun_id", "")})
     return sorted(v, key=lambda x: x["slot"])

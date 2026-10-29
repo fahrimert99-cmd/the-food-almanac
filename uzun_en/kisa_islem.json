@@ -1,5 +1,19 @@
 {
-  "proje": "food-order-blood-sugar",
-  "no": 1,
-  "tetik": 8
+  "proje": "garlic-blood-pressure",
+  "no": 3,
+  "tetik": 9,
+  "ek": [
+    {
+      "proje": "garlic-blood-pressure",
+      "no": 3
+    },
+    {
+      "proje": "eggs-and-cholesterol",
+      "no": 3
+    },
+    {
+      "proje": "walking-after-meals",
+      "no": 3
+    }
+  ]
 }
