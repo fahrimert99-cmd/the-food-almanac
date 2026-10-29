@@ -1,5 +1,5 @@
 {
-  "aktif": "how-much-protein",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -87,7 +87,7 @@
     },
     "how-much-protein": {
       "slot": "2026-11-27T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-29T07:32:32Z",
       "sahne_deneme": 0
     }
