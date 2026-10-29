@@ -1,5 +1,5 @@
 {
-  "aktif": "walnuts-heart",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -93,7 +93,7 @@
     },
     "walnuts-heart": {
       "slot": "2026-12-01T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-29T17:38:17Z",
       "sahne_deneme": 0
     }
