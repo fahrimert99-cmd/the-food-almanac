@@ -1,0 +1,14 @@
+{
+  "baslik": ["2 CAPSULES", "OR 4?"],
+  "baslik_yt": "Garlic Capsules: Why More Wasn't Better in a Trial",
+  "aciklama": "In a 2013 trial, two garlic capsules a day lowered high systolic pressure, but four did no better. Here is which garlic was tested, and the safety point to know.",
+  "parcalar": [
+    {"sahne": 22, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 21, "cumleler": [0], "baslik": {"satirlar": ["GARLIC", "DOSE TEST"], "vurgu": "79", "not": "people, high systolic"}, "etiket": "Ried et al. · Eur J Clin Nutr · 2013"},
+    {"sahne": 21, "cumleler": [1, 2], "baslik": {"satirlar": ["2 CAPSULES", "A DAY"], "vurgu": "-12 MMHG", "not": "systolic vs. placebo"}, "etiket": "Ried et al. · Eur J Clin Nutr · 2013"},
+    {"sahne": 22, "cumleler": [1]},
+    {"sahne": 29, "cumleler": [0], "baslik": {"satirlar": ["NOT A", "RAW CLOVE"]}},
+    {"sahne": 29, "cumleler": [1, 2], "baslik": null},
+    {"sahne": 42, "cumleler": [1]}
+  ]
+}
