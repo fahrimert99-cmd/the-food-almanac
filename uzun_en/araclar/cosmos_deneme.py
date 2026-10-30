@@ -32,6 +32,35 @@ def anahtar():
     return re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or "")
 
 
+FONKSIYON = []        # model sayfasında ya da NVCF listesinde bulunan fonksiyon kimlikleri (pexec ile denenir)
+UUID = re.compile(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")
+
+
+def nvcf_listele():
+    """Anahtarın görebildiği NVCF fonksiyonları (adı cosmos geçenler) — erişim tanısı için."""
+    hdr = {"Accept": "application/json", "Authorization": f"Bearer {anahtar()}"}
+    for u in ("https://api.nvcf.nvidia.com/v2/nvcf/functions?visibility=public",
+              "https://api.nvcf.nvidia.com/v2/nvcf/functions"):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u, headers=hdr), timeout=60) as r:
+                d = json.loads(r.read().decode())
+        except urllib.error.HTTPError as he:
+            print(f"nvcf liste {u}: HTTP {he.code} {he.read().decode('utf-8', 'replace')[:200]}")
+            continue
+        except Exception as e:
+            print(f"nvcf liste {u}: {str(e)[:150]}")
+            continue
+        fs = d.get("functions") or []
+        cos = [f for f in fs if "cosmos" in str(f.get("name", "")).lower()]
+        print(f"nvcf liste {u}: {len(fs)} fonksiyon, cosmos: {len(cos)}")
+        for f in cos[:20]:
+            print(f"   · {f.get('name')} {f.get('id')} {f.get('status')}")
+            if f.get("id") and f["id"] not in FONKSIYON and "nano" in str(f.get("name", "")).lower():
+                FONKSIYON.append(f["id"])
+        if fs:
+            return
+
+
 def belge_yokla():
     """API belgesinden şema ipuçları (alan adları) — yalnızca günlük için."""
     for u in BELGE:
@@ -46,7 +75,11 @@ def belge_yokla():
                     if re.search(r"input_reference|b64_video|num_frames|resolution|negative_prompt|guidance|"
                                  r"seed|fps|duration|steps|ai\.api\.nvidia\.com|invoke_url|aspect", s, re.I)}
         print(f"belge {u}: {len(metin)} karakter, ilgili {len(satirlar)} satır")
-        for s in sorted(satirlar)[:40]:
+        for m in re.finditer(r"(?i)(function[_ ]?id|nvcf[a-z_]*id)[^0-9a-f]{0,40}(" + UUID.pattern + ")", metin):
+            print(f"   fonksiyon kimliği: {m.group(2)} ({m.group(1)})")
+            if m.group(2) not in FONKSIYON:
+                FONKSIYON.append(m.group(2))
+        for s in sorted(satirlar)[:8]:
             print("   ·", s)
 
 
@@ -106,6 +139,7 @@ def main():
         sys.exit("NVIDIA_API_KEY yok")
     os.makedirs(a.cikti, exist_ok=True)
     belge_yokla()
+    nvcf_listele()
     from PIL import Image
     calisan = None                                          # (uç nokta, gövde kurucu) — ilk başarılı biçim
     for g in a.gorseller:
@@ -116,12 +150,17 @@ def main():
         im.save(buf, "JPEG", quality=90)
         b64 = base64.b64encode(buf.getvalue()).decode()
         istem = ISTEM.get(no, GENEL)
+        # Model sayfasındaki şema (30 Ekim): model_mode zorunlu; image2video için görsel input_reference'ta
         bicimler = [
-            ("input_reference data-uri", lambda: {"prompt": istem, "input_reference": f"data:image/jpeg;base64,{b64}"}),
-            ("image data-uri", lambda: {"prompt": istem, "image": f"data:image/jpeg;base64,{b64}"}),
-            ("input_reference ham", lambda: {"prompt": istem, "input_reference": b64}),
+            ("image2video 480_9_16", lambda: {"model_mode": "image2video", "prompt": istem,
+                                              "input_reference": f"data:image/jpeg;base64,{b64}",
+                                              "resolution": "480_9_16", "num_frames": 121, "fps": 24,
+                                              "num_inference_steps": 35, "seed": 42}),
+            ("image2video varsayılan", lambda: {"model_mode": "image2video", "prompt": istem,
+                                                "input_reference": f"data:image/jpeg;base64,{b64}"}),
         ]
-        denenecek = [calisan] if calisan else [(u, b) for u in UC for b in bicimler]
+        uclar = UC + [f"https://api.nvcf.nvidia.com/v2/nvcf/pexec/functions/{f}" for f in FONKSIYON]
+        denenecek = [calisan] if calisan else [(u, b) for u in uclar for b in bicimler]
         for u, (ad, kur) in denenecek:
             print(f"\n{os.path.basename(g)} -> {u} [{ad}]")
             try:
