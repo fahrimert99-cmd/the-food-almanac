@@ -44,6 +44,19 @@ class TestPlan(unittest.TestCase):
         self.assertTrue(sablon)
 
     @patch("ortak.marka", return_value=MARKA)
+    def test_gorsel_kotasi_bitince_bekler(self, _m):
+        simdi = dt.datetime(2026, 10, 30, 14, 0, tzinfo=dt.timezone.utc)
+        d = {"aktif": "test-video", "videolar": {
+            "test-video": {"slot": "2026-12-11T14:00:00Z", "asama": "varlik", "sahne_deneme": 0,
+                           "gorsel_bekle": "2026-10-30T17:00:00Z"}
+        }}
+        slug, _asama, _slot, _sablon, neden = plan.karar(d, simdi)
+        self.assertIsNone(slug)
+        self.assertIn("görsel kotası", neden)
+        slug, asama, *_ = plan.karar(d, simdi + dt.timedelta(hours=4))     # bekleme bitti: kaldığı yerden
+        self.assertEqual((slug, asama), ("test-video", "varlik"))
+
+    @patch("ortak.marka", return_value=MARKA)
     def test_kacan_slot_kaydirilir(self, _m):
         simdi = dt.datetime(2026, 10, 27, 15, 0, tzinfo=dt.timezone.utc)  # Salı 14:00 slotu kaçmış
         d = {"aktif": "test-video", "videolar": {
