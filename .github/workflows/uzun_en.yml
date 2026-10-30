@@ -357,14 +357,23 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID_2: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_2 }}
           CLOUDFLARE_API_TOKEN_2: ${{ secrets.CLOUDFLARE_API_TOKEN_2 }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GORSEL_DURUM: /tmp/gorsel_durum.json
         run: |
           python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
+          # Slota zaman varsa zayıf yedek (Pollinations) üretilmez: kalite kapısı onu zaten kabul etmez, bir saat sürüyordu
+          if python3 uzun_en/araclar/plan.py --gorsel-bekle "$SLUG" >/dev/null; then export UZUN_GORSEL_SIRA=nvidia,cloudflare,gemini; fi
           python3 uzun_en/araclar/gorsel.py --proje "$SLUG" || echo "::warning::bazı görseller üretilemedi (bir önceki sahnenin görseli kullanılır; sahne ajanı yeniden dener)"
           python3 uzun_en/araclar/ses.py --proje "$SLUG"
           python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG"
           # Kalite kapısı: görsellerin çoğu NVIDIA'dan gelmediyse (geçici NVIDIA arızası) ve slota zaman varsa aşama
           # ilerlemez; bir sonraki çalıştırma (1 saat sonra) yalnızca zayıf görselleri yeniden dener.
           if ! python3 uzun_en/araclar/gorsel.py --proje "$SLUG" --kalite && python3 uzun_en/araclar/plan.py --gorsel-bekle "$SLUG"; then
+            # NVIDIA hata veriyor ve Cloudflare günlük kotası bittiyse kota yenilenene kadar (en geç 3 saat) ertelenir;
+            # hazır görseller ve ses sürümde, sonraki çalıştırma kaldığı yerden devam eder.
+            if python3 -c "import json,sys;sys.exit(0 if json.load(open('/tmp/gorsel_durum.json')).get('kota_bitti') else 1)" 2>/dev/null; then
+              python3 uzun_en/araclar/plan.py --gorsel-ertele "$SLUG"
+              bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG görsel kotası bitti, kaldığı yerden devam edecek" uzun_en/durum.json
+            fi
             echo "::warning::görsellerin çoğu yedek kaynaktan geldi (NVIDIA arızası?) — sahne aşamasına geçilmedi, sonraki çalıştırmada yeniden denenecek"
             exit 0
           fi

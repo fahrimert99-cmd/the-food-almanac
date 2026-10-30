@@ -433,6 +433,18 @@ def aday(slug, proje, n, aciklama, tohum, kabul):
     O.log(f"aday: {os.path.relpath(ay, O.REPO)} ({kaynak}) — Read ile inceleyin; uygunsa --kabul")
 
 
+def kaynak_durumu():
+    """Kaliteli kaynakların bu çalıştırmadaki durumu GORSEL_DURUM dosyasına yazılır (iş akışı okur): NVIDIA hata
+    veriyor/kapalı ve Cloudflare günlük kotası bittiyse "kota_bitti" — proje kota yenilenene kadar ertelenir."""
+    yol = os.environ.get("GORSEL_DURUM")
+    if not yol:
+        return
+    nv = "nvidia" in _KAPALI or not re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or "")
+    cfk = "cloudflare" in _KAPALI or not _cf_var()
+    with open(yol, "w") as f:
+        json.dump({"kota_bitti": nv and cfk, "nvidia_kapali": nv, "cloudflare_kapali": cfk}, f)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
@@ -455,6 +467,7 @@ def main():
     if a.sahne is not None:
         return aday(slug, proje, a.sahne, a.aciklama, a.tohum, a.kabul)
     eksik = hepsi(slug, proje, {x.strip() for x in a.sadece.split(",") if x.strip()} or None)
+    kaynak_durumu()
     sys.exit(1 if eksik else 0)
 
 

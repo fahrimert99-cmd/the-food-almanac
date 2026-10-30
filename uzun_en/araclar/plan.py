@@ -26,6 +26,8 @@ EN_AZ_ONCE = 5            # saat: bundan yakın slota yeni video yetiştirilmez
 SABLON_ESIK = 14          # saat: slota bundan az kaldıysa sahne tasarımı atlanır (şablon)
 SAHNE_DENEME = 3          # sahne aşaması en çok bu kadar çalıştırma alır
 GORSEL_BEKLE = 30         # saat: görseller çoğunlukla yedek kaynaktan geldiyse slota bundan fazla varken beklenir
+KOTA_YOKLA = 3            # saat: kaliteli görsel kaynakları tükendiyse en geç bu kadar sonra yeniden yoklanır
+KOTA_SIFIR = (0, 5)       # UTC saat, dakika: Cloudflare günlük ücretsiz kotasının yenilenmesinden hemen sonra
 ASAMALAR = ["senaryo", "varlik", "sahne", "render", "yuklendi"]
 GRUP_SAYISI = int(os.environ.get("UZUN_SAHNE_GRUP", "8") or 8)
 SLUG_DESEN = re.compile(r"[a-z0-9][a-z0-9-]{1,79}")   # slug'ı yapay zekâ üretir; kabuk/yol/kod enjeksiyonuna karşı
@@ -140,6 +142,12 @@ def karar(d, t):
                 O.log(f"slot kaçtı -> {v['slot']}")
         asama = v.get("asama", "senaryo")
         kalan = (slot - t).total_seconds() / 3600
+        # Görsel kotası bittiyse (NVIDIA hata veriyor ve Cloudflare günlük kotası doldu) her saat boşuna denemek yerine
+        # kota yenilenene kadar beklenir; sonra varlik aşaması hazır görsel ve sesle kaldığı yerden devam eder.
+        if (asama == "varlik" and v.get("gorsel_bekle") and tarih(v["gorsel_bekle"]) > t and kalan > GORSEL_BEKLE
+                and (os.environ.get("UZUN_ZORLA") or "").strip() not in ASAMALAR):
+            return None, None, v["slot"], False, (f"aktif proje {aktif}: görsel kotası bitti, "
+                                                  f"{v['gorsel_bekle']} sonrası kaldığı yerden devam eder")
         diger = ileride(d, t) - 1                         # bu projenin dışında yayın bekleyenler
         if (kalan > URETIM_ONCE and diger >= onde_azami()
                 and (os.environ.get("UZUN_ZORLA") or "").strip() not in ASAMALAR):
@@ -183,6 +191,8 @@ def main():
     ap.add_argument("--sahne-deneme", metavar="SLUG", help="sahne aşaması deneme sayacını artır")
     ap.add_argument("--gorsel-bekle", metavar="SLUG",
                     help="görseller zayıfken beklenmeli mi? (çıkış 0: evet, slota GORSEL_BEKLE saatten fazla var)")
+    ap.add_argument("--gorsel-ertele", metavar="SLUG",
+                    help="görsel kotası bitti: proje kota yenilenene (en geç KOTA_YOKLA saat) kadar bekletilir")
     a = ap.parse_args()
     d = O.durum()
     if a.gorsel_bekle:
@@ -191,10 +201,20 @@ def main():
         bekle = kalan > GORSEL_BEKLE
         O.log(f"slota {kalan:.0f} saat; görsel yeniden denemesi için " + ("beklenir" if bekle else "zaman yok, devam"))
         sys.exit(0 if bekle else 1)
+    if a.gorsel_ertele:
+        v = d["videolar"].setdefault(a.gorsel_ertele, {})
+        t = simdi()
+        sifir = t.replace(hour=KOTA_SIFIR[0], minute=KOTA_SIFIR[1], second=0, microsecond=0)
+        if sifir <= t:
+            sifir += dt.timedelta(days=1)
+        v["gorsel_bekle"] = iso(min(sifir, t + dt.timedelta(hours=KOTA_YOKLA)))
+        O.durum_yaz(d)
+        return O.log(f"{a.gorsel_ertele}: görsel kotası bitti, {v['gorsel_bekle']} sonrası kaldığı yerden devam")
     if a.asama_yaz:
         slug, asama = a.asama_yaz
         v = d["videolar"].setdefault(slug, {})
         v["asama"] = asama
+        v.pop("gorsel_bekle", None)
         if asama == "yuklendi" and d.get("aktif") == slug:
             d["aktif"] = None
         if asama == "iptal":
