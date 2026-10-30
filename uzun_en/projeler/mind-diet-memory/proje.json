@@ -1,0 +1,371 @@
+{
+  "slug": "mind-diet-memory",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "MIND Diet and Memory After 60: What Studies Show",
+  "yorum": "Do you already eat leafy greens or berries most days? Has your doctor ever talked with you about diet and memory?",
+  "aciklama_giris": "In observational studies at Rush University, older adults who followed the MIND diet most closely had a lower rate of Alzheimer's disease and slower memory decline. But when a three-year randomized trial in 604 adults aged 65 and older tested the diet against a control diet, both groups improved and the difference was not statistically significant.\n\nIn this video we look at what the MIND diet is, what the Rush cohort studies found, what the New England Journal of Medicine trial showed, why both groups may have improved, and which simple food habits, such as leafy greens and berries, have the best support. We also cover a safety note for people taking blood thinners.",
+  "kaynaklar": [
+    "Morris MC, Tangney CC, Wang Y, Sacks FM, Bennett DA, Aggarwal NT. MIND diet associated with reduced incidence of Alzheimer's disease. Alzheimer's & Dementia. 2015;11(9):1007-1014. doi:10.1016/j.jalz.2014.11.009. PMID 25681666.",
+    "Morris MC, Tangney CC, Wang Y, Sacks FM, Barnes LL, Bennett DA, Aggarwal NT. MIND diet slows cognitive decline with aging. Alzheimer's & Dementia. 2015;11(9):1015-1022. doi:10.1016/j.jalz.2015.04.011. PMID 26086182.",
+    "Morris MC, Wang Y, Barnes LL, Bennett DA, Dawson-Hughes B, Booth SL. Nutrients and bioactives in green leafy vegetables and cognitive decline: prospective study. Neurology. 2018;90(3):e214-e222. doi:10.1212/WNL.0000000000004815. PMID 29263222.",
+    "Devore EE, Kang JH, Breteler MMB, Grodstein F. Dietary intakes of berries and flavonoids in relation to cognitive decline. Annals of Neurology. 2012;72(1):135-143. doi:10.1002/ana.23594. PMID 22535616.",
+    "Barnes LL, Dhana K, Liu X, et al. Trial of the MIND diet for prevention of cognitive decline in older persons. New England Journal of Medicine. 2023;389(7):602-611. doi:10.1056/NEJMoa2302368. PMID 37466280.",
+    "Baker LD, Espeland MA, Whitmer RA, et al. Structured vs self-guided multidomain lifestyle interventions for global cognitive function: the US POINTER randomized clinical trial. JAMA. 2025;334(8):681-691. doi:10.1001/jama.2025.12923. PMID 40720610.",
+    "Huang L, Tao Y, Chen H, et al. Mediterranean-Dietary Approaches to Stop Hypertension Intervention for Neurodegenerative Delay (MIND) diet and cognitive function and its decline: a prospective study and meta-analysis of cohort studies. American Journal of Clinical Nutrition. 2023;118(1):174-182. doi:10.1016/j.ajcnut.2023.04.025. PMID 37105521."
+  ],
+  "kapak": {
+    "satirlar": ["MIND", "DIET?"],
+    "vurgu": "–53%",
+    "vurgu_alt": "Alzheimer's",
+    "serit": "Observation vs. 2023 trial",
+    "gorsel": "a large white plate close up holding a grilled salmon fillet, a heap of dark leafy greens, a bowl of blueberries and a handful of walnuts, tightly grouped and overlapping, with a small bottle of olive oil behind"
+  },
+  "etiketler": ["mind diet", "memory after 60", "diet and dementia", "brain health foods", "alzheimer's prevention", "leafy greens", "blueberries", "cognitive decline", "mind diet study", "nutrition science"],
+  "seslendirme_duzelt": {"DASH": "dash"},
+  "sahneler": [
+    {
+      "id": 1,
+      "metin": "In a Rush University study of 923 older adults, people who followed the MIND diet most closely had about half the rate of Alzheimer's disease.",
+      "bolum": "The headline claim",
+      "gorsel": "a wooden kitchen table with a plate of grilled salmon, dark leafy greens, blueberries and walnuts, a small bottle of olive oil beside it, soft window light",
+      "baslik": {"satirlar": ["ABOUT HALF"], "vurgu": "–53%", "not": "Alzheimer's rate, top third vs bottom third"},
+      "etiket": "Morris et al. · Alzheimers Dement · 2015"
+    },
+    {
+      "id": 2,
+      "metin": "But a later randomized trial told a different story.",
+      "gorsel": "two identical plates of grilled salmon, dark leafy greens, blueberries and walnuts side by side on a wooden table, a pair of reading glasses between them"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know which food habits have the best evidence for aging brains.",
+      "gorsel": "a bowl of blueberries and a bunch of dark leafy greens beside an open notebook with blank pages and a pair of reading glasses"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what the MIND diet actually is.",
+      "bolum": "What the MIND diet is",
+      "gorsel": "a kitchen shelf holding a bottle of olive oil, a jar of walnuts, a bowl of blueberries and a bunch of kale"
+    },
+    {
+      "id": 5,
+      "metin": "MIND stands for Mediterranean-DASH Intervention for Neurodegenerative Delay. Martha Clare Morris and colleagues at Rush University in Chicago built it from two existing eating patterns, keeping foods linked to brain health.",
+      "gorsel": "a Mediterranean table with olives, fish and tomatoes on the left and a bowl of vegetables and whole grain bread on the right, joined by a curved dashed line",
+      "baslik": {"satirlar": ["MEDITERRANEAN", "+ DASH"], "not": "two eating patterns, one brain-focused score"}
+    },
+    {
+      "id": 6,
+      "metin": "It works like a scorecard with fifteen items. Ten count as brain-healthy foods, and five count as foods to limit. The top score is fifteen.",
+      "gorsel": "an antique brass scale with fresh vegetables on one pan and a few small cakes on the other, a notebook with blank pages beside it",
+      "baslik": {"satirlar": ["15 ITEMS"], "not": "ten foods to eat, five foods to limit"}
+    },
+    {
+      "id": 7,
+      "metin": "The brain-healthy list includes leafy greens, at least six servings a week, and other vegetables every day. Berries at least twice a week. Nuts at least five times a week. Plus beans, whole grains, fish, poultry, and olive oil as your main cooking oil.",
+      "gorsel": "a flat arrangement of kale, spinach, blueberries, strawberries, walnuts, black beans, a salmon fillet and a bottle of olive oil",
+      "baslik": {"satirlar": ["BRAIN-", "HEALTHY FOODS"]}
+    },
+    {
+      "id": 8,
+      "metin": "The limit list is red meat, butter and stick margarine, cheese, pastries and sweets, and fried or fast food. The original score also gave one point for a daily glass of wine. Nobody needs to start drinking to follow the pattern.",
+      "gorsel": "a small plate with a pat of butter, a pastry, a slice of cheese and a bowl of fried potatoes, set to the side of a table",
+      "baslik": {"satirlar": ["FOODS", "TO LIMIT"]}
+    },
+    {
+      "id": 9,
+      "metin": "Notice what's missing. There's no powder, no supplement, no exotic ingredient. Everything on the list sits on an ordinary American supermarket shelf.",
+      "gorsel": "a supermarket produce aisle with crates of leafy greens, berries and nuts in open bins"
+    },
+    {
+      "id": 10,
+      "metin": "But a scorecard is only a way to count. The real question is whether following it protects the brain. To find out, we need two very different kinds of evidence.",
+      "gorsel": "an antique magnifying glass resting on a plate of grilled salmon, dark leafy greens, blueberries and walnuts"
+    },
+    {
+      "id": 11,
+      "metin": "The first kind is observational. Researchers record what people eat, then see who develops memory problems years later.",
+      "bolum": "The Rush studies",
+      "tip": "kart",
+      "kart": {"ust": "OBSERVATION", "baslik": "Watching real life", "alt": "Rush Memory and Aging Project · Chicago"}
+    },
+    {
+      "id": 12,
+      "metin": "Many of these studies come from the Rush Memory and Aging Project in Chicago. Older adults who were free of dementia filled out food questionnaires, and then took memory tests year after year.",
+      "gorsel": "a quiet clinic desk with a stack of blank forms, a pencil and a cup of tea",
+      "baslik": {"satirlar": ["YEARS OF", "FOLLOW-UP"]}
+    },
+    {
+      "id": 13,
+      "metin": "In 2015, Morris and colleagues reported on 923 participants, ages 58 to 98. Over about four and a half years, 144 of them developed Alzheimer's disease.",
+      "gorsel": "an old wall calendar and an open notebook with blank pages beside a bowl of blueberries",
+      "etiket": "Morris et al. · Alzheimers Dement · 2015"
+    },
+    {
+      "id": 14,
+      "metin": "People in the top third of MIND scores had a 53 percent lower rate of Alzheimer's than people in the bottom third. The middle third had a 35 percent lower rate.",
+      "tip": "grafik",
+      "grafik": {
+        "baslik": "Lower rate of Alzheimer's disease",
+        "alt": "Compared with the lowest third of MIND diet scores",
+        "cubuklar": [
+          {"etiket": "Middle third", "deger": 35, "metin": "−35%"},
+          {"etiket": "Top third", "deger": 53, "metin": "−53%"}
+        ],
+        "kaynak": "Morris et al., Alzheimers Dement 2015 · n = 923, ages 58–98, about 4.5 years"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "That 53 percent comes with a wide margin of error. The statistical range runs from about 24 percent to 74 percent lower. That is common when a study has a modest number of cases.",
+      "gorsel": "a long ruler with a small brass marker sliding along it, a bowl of blueberries beside it",
+      "baslik": {"satirlar": ["WIDE", "RANGE"], "not": "from about 24% to 74% lower"}
+    },
+    {
+      "id": 16,
+      "metin": "The same team scored two older diets too, the Mediterranean and the DASH diets. For those, only the top-scoring group did better. For the MIND diet, even moderate followers did.",
+      "gorsel": "three bowls on a table: one with olives and tomatoes, one with mixed vegetables, one with kale and blueberries"
+    },
+    {
+      "id": 17,
+      "metin": "A second Rush paper that year looked at thinking skills themselves. In 960 older adults followed for about four point seven years, higher MIND scores went with slower decline in memory and thinking.",
+      "gorsel": "a stack of simple puzzle cubes and a pencil beside a bowl of walnuts",
+      "etiket": "Morris et al. · Alzheimers Dement · 2015"
+    },
+    {
+      "id": 18,
+      "metin": "The top group's pace of decline matched people seven and a half years younger than the bottom group. That's a statistical translation of the numbers. It doesn't mean anyone's brain actually got younger.",
+      "gorsel": "an antique pocket watch beside a bowl of blueberries and a sprig of kale",
+      "baslik": {"satirlar": ["7.5 YEARS"], "not": "a statistical translation, not a younger brain"}
+    },
+    {
+      "id": 19,
+      "metin": "Rush researchers then zoomed in on single foods. Leafy greens, such as spinach, kale and collards, had the steadiest signal. People eating about one and a third servings a day declined more slowly than people eating almost none.",
+      "gorsel": "a wicker basket of spinach, kale and collard leaves on a wooden table",
+      "etiket": "Morris et al. · Neurology · 2018",
+      "baslik": {"satirlar": ["LEAFY GREENS"], "vurgu": "1.3/day", "not": "servings in the top fifth of intake"}
+    },
+    {
+      "id": 20,
+      "metin": "That gap was described as equal to being eleven years younger. It came from 960 older adults followed for about four point seven years. Like the seven and a half years, it's a statistical translation, not a younger brain. We'll come back to what it means for your plate.",
+      "gorsel": "kale leaves arranged in a spiral around a small bowl of spinach"
+    },
+    {
+      "id": 21,
+      "metin": "Berries showed a similar signal. In the Nurses' Health Study, 16,010 women aged 70 and older were followed. Those who ate more blueberries and strawberries had slower decline, which the authors compared to up to two and a half years of aging.",
+      "gorsel": "a bowl of blueberries and a bowl of strawberries on a linen cloth",
+      "etiket": "Devore et al. · Ann Neurol · 2012",
+      "baslik": {"satirlar": ["BERRIES"], "vurgu": "2.5 yrs", "not": "the authors' age comparison, women 70 and older"}
+    },
+    {
+      "id": 22,
+      "metin": "These are striking numbers. But all of them are associations. People who eat more greens and berries also tend to exercise more, and often differ in other ways. The researchers adjusted for many of those, but no statistics can remove every difference.",
+      "gorsel": "two garden paths through a park, one with a bench and one with a bridge, bordered by shrubs"
+    },
+    {
+      "id": 23,
+      "metin": "There's also a quieter problem. Food questionnaires rely on memory. And people in the earliest stages of dementia may already be eating differently, years before a diagnosis. The Rush team said a dietary trial would be needed to confirm the findings.",
+      "gorsel": "a small notebook with blank pages, a pencil and a bowl of walnuts on a quiet desk",
+      "baslik": {"satirlar": ["A TRIAL IS", "NEEDED"]}
+    },
+    {
+      "id": 24,
+      "metin": "So a trial was done. Here is what happened.",
+      "bolum": "The randomized trial",
+      "tip": "kart",
+      "kart": {"ust": "THE TRIAL", "baslik": "Testing it for real", "alt": "Rush University · 2023"}
+    },
+    {
+      "id": 25,
+      "metin": "Why does a randomized trial matter? Because chance, not the volunteers, decides who gets which diet. That spreads out differences like exercise habits, so a difference in results is more likely to come from the diet itself.",
+      "gorsel": "a hand-drawn pair of antique dice on a wooden table beside two plates of fruit and vegetables",
+      "baslik": {"satirlar": ["CHANCE", "DECIDES"], "not": "who gets which diet"}
+    },
+    {
+      "id": 26,
+      "metin": "It was led by Lisa Barnes of Rush University, funded by the National Institute on Aging, and published in the New England Journal of Medicine in 2023. It enrolled 604 adults aged 65 or older who had no memory problems.",
+      "gorsel": "a bright research room with two tables, each with a tray of food, a clipboard and a pair of reading glasses",
+      "etiket": "Barnes et al. · N Engl J Med · 2023"
+    },
+    {
+      "id": 27,
+      "metin": "They all had a family history of dementia, a body mass index above 25, and a diet that could be healthier. Half were assigned to the MIND diet, and half to a control diet, for three years.",
+      "gorsel": "two lunch trays, one with a plate of grilled salmon, dark leafy greens, blueberries and walnuts and one with a plain sandwich and apple slices",
+      "baslik": {"satirlar": ["MIND VS", "CONTROL"], "not": "301 and 303 people, three years"}
+    },
+    {
+      "id": 28,
+      "metin": "Here's the key design detail. Both groups were asked to eat a little less, and both got coaching from dietitians. That makes it a tougher test than comparing against a usual diet.",
+      "gorsel": "a dietitian's desk with an open notebook with blank pages, a bowl of fruit and a pair of reading glasses",
+      "baslik": {"satirlar": ["BOTH GROUPS", "GOT COACHING"]}
+    },
+    {
+      "id": 29,
+      "metin": "Everyone took a battery of twelve memory and thinking tests, and some people also had brain scans. Ninety-three percent finished all three years.",
+      "gorsel": "an antique wooden board with stacked colored blocks and a pencil, a small tray of walnuts beside it",
+      "baslik": {"satirlar": ["93%"], "not": "finished all three years"}
+    },
+    {
+      "id": 30,
+      "metin": "Global thinking scores went up in both groups. The MIND group improved by about 0.2 standardized units, and the control group by about 0.17.",
+      "tip": "grafik",
+      "grafik": {
+        "baslik": "Change in global cognition over 3 years",
+        "alt": "Standardized units · both groups improved",
+        "cubuklar": [
+          {"etiket": "MIND diet", "deger": 0.205, "metin": "+0.205"},
+          {"etiket": "Control diet", "deger": 0.17, "metin": "+0.170"}
+        ],
+        "kaynak": "Barnes et al., N Engl J Med 2023 · n = 604, adults 65+, 3 years"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "The difference between them was 0.035, a gap small enough to be due to chance. Brain scans looked similar too, including the size of the hippocampus, a memory center.",
+      "gorsel": "a simple textbook engraving of the brain with the small curved hippocampus highlighted, beside a bowl of blueberries",
+      "baslik": {"satirlar": ["NO SIGNIFICANT", "DIFFERENCE"], "vurgu": "0.035", "not": "gap between the two groups"}
+    },
+    {
+      "id": 32,
+      "metin": "So in this trial, the MIND diet did not beat the control diet. The researchers said so plainly.",
+      "gorsel": "two equal brass weights balanced on an antique scale beside a plate of blueberries"
+    },
+    {
+      "id": 33,
+      "metin": "Now the honest part. Why did both groups improve, and what does this really mean?",
+      "bolum": "Why both groups improved",
+      "tip": "kart",
+      "kart": {"ust": "THE HONEST PART", "baslik": "Why both groups improved", "alt": "And what the trial can't tell us"}
+    },
+    {
+      "id": 34,
+      "metin": "Several explanations are possible, and the trial can't tell them apart. One is practice. People who take the same kinds of memory tests again tend to score better the next time.",
+      "gorsel": "a stack of simple puzzle cubes and a pencil on a desk, a clock on the wall",
+      "baslik": {"satirlar": ["PRACTICE"], "not": "repeating tests can lift scores"}
+    },
+    {
+      "id": 35,
+      "metin": "A second is weight. Both groups lost about five kilograms, around eleven pounds. Lisa Barnes said it could have been weight loss that benefited thinking in this trial.",
+      "gorsel": "a cloth measuring tape coiled beside a plate of grilled salmon and leafy greens",
+      "baslik": {"satirlar": ["ABOUT", "11 POUNDS"], "not": "average weight loss in both groups"}
+    },
+    {
+      "id": 36,
+      "metin": "A third is the support itself. Both groups got regular dietitian coaching, and the control group's eating improved too. That may have narrowed the gap between the two diets.",
+      "gorsel": "a dietitian's desk with two sets of plates, bowls of fruit and a pair of reading glasses"
+    },
+    {
+      "id": 37,
+      "metin": "There are other limits. Three years is short for a condition that unfolds over decades, and the volunteers started with healthy thinking. A real difference could take longer to appear, or may not exist.",
+      "gorsel": "a long winding road across hills with a tiny signpost at the start, soft morning mist",
+      "baslik": {"satirlar": ["3 YEARS"], "not": "short for a slow condition like dementia"}
+    },
+    {
+      "id": 38,
+      "metin": "This does not say the diet is useless. It says that, over three years, in these people, it could not be told apart from a healthy control diet with coaching. No difference found is not the same as proof of no effect.",
+      "gorsel": "an open empty wooden drawer beside a bowl of blueberries and a pair of reading glasses"
+    },
+    {
+      "id": 39,
+      "metin": "A bigger lifestyle trial points in a useful direction. In 2025, US POINTER enrolled 2,111 adults aged 60 to 79 who were at risk of cognitive decline.",
+      "gorsel": "a group of older adults walking together on a park path, seen from far away, with a bowl of fruit in the corner",
+      "etiket": "Baker et al. · JAMA · 2025"
+    },
+    {
+      "id": 40,
+      "metin": "Both programs covered exercise, a healthy diet, mental challenge, social time and heart health checks. The more structured program improved thinking scores slightly more over two years. The gap was small, and the program bundled everything, so we can't say how much was the food.",
+      "gorsel": "walking shoes, a deck of cards, a sphygmomanometer cuff and a bowl of berries arranged together on a table",
+      "baslik": {"satirlar": ["TWO YEARS"], "vurgu": "0.029", "not": "extra yearly gain for the structured program"}
+    },
+    {
+      "id": 41,
+      "metin": "A 2023 analysis pooled eight cohort studies and 26,103 people. Higher MIND scores went with better thinking scores. But the link to slower decline over time was tiny, and its range included no effect at all.",
+      "gorsel": "eight small stacks of blank papers lined up on a long table beside a bowl of walnuts",
+      "etiket": "Huang et al. · Am J Clin Nutr · 2023"
+    },
+    {
+      "id": 42,
+      "metin": "So what should you do with all this? Here are the food habits with the best support.",
+      "bolum": "What to do with it",
+      "tip": "kart",
+      "kart": {"ust": "HOW TO USE IT", "baslik": "Habits with the best evidence", "alt": "Possible, not proven"}
+    },
+    {
+      "id": 43,
+      "metin": "The fair summary is that the pattern is a reasonable bet. The brain benefit is possible, but not proven. And nothing in it is exotic or expensive.",
+      "gorsel": "a wooden table set for lunch with a plate of grilled salmon, dark leafy greens, blueberries and walnuts and a pitcher of water in the morning light"
+    },
+    {
+      "id": 44,
+      "metin": "Start with leafy greens, which had the steadiest signal. Aim for a serving a day. A side salad, spinach in your eggs, or kale stirred into soup all count.",
+      "gorsel": "a bowl of soup with kale leaves, beside a side salad of spinach and an omelet",
+      "baslik": {"satirlar": ["A SERVING", "OF GREENS A DAY"]}
+    },
+    {
+      "id": 45,
+      "metin": "Add berries a couple of times a week. The MIND target is two servings. Fresh or frozen, on oatmeal or yogurt, they are an easy place to start.",
+      "gorsel": "a bowl of oatmeal topped with blueberries and strawberries, a spoon beside it"
+    },
+    {
+      "id": 46,
+      "metin": "Nuts about five times a week, fish at least once a week, and olive oil as your main cooking oil are the other targets. These come from a scoring system, and the trial didn't test them one by one.",
+      "gorsel": "a small bowl of walnuts, a grilled salmon fillet and a bottle of olive oil arranged together"
+    },
+    {
+      "id": 47,
+      "metin": "The score also credits beans more than three times a week, and whole grains three times a day. These are familiar fiber foods. Like the rest of the list, they were not tested alone in the trial.",
+      "gorsel": "a bowl of black beans beside a loaf of whole grain bread and a bowl of oatmeal on a wooden table"
+    },
+    {
+      "id": 48,
+      "metin": "On the other side, the score favors less fried and fast food, pastries, butter and red meat. Think of that as a direction, not a ban. No single food makes or breaks your memory.",
+      "gorsel": "a plate of grilled fish and vegetables beside a small plate with a single pastry"
+    },
+    {
+      "id": 49,
+      "metin": "A realistic week might look like this. A spinach salad most days. Berries on oatmeal twice. Walnuts as a snack. Salmon or another fish once. And olive oil for cooking.",
+      "gorsel": "a wall calendar page drawn as seven blank squares, each with a small drawing of spinach, blueberries, walnuts or a fish",
+      "baslik": {"satirlar": ["A REALISTIC", "WEEK"]}
+    },
+    {
+      "id": 50,
+      "metin": "One safety note. If you take a blood thinner such as warfarin, leafy greens contain vitamin K, so ask your doctor or pharmacist before making big changes. Also check first if you have a nut allergy, diabetes, or a kidney condition with diet limits.",
+      "gorsel": "a pharmacist's counter with a small pill organizer, a stethoscope and a bunch of kale",
+      "baslik": {"satirlar": ["ASK YOUR", "PHARMACIST"]}
+    },
+    {
+      "id": 51,
+      "metin": "And remember that food is one piece. The 2025 trial also included exercise, social time, mental challenge and heart health checks. Together, they may matter more than any single plate.",
+      "gorsel": "walking shoes by a front door, a deck of cards, a bowl of berries and a small plant on a table",
+      "baslik": {"satirlar": ["THE WHOLE", "LIFESTYLE"]}
+    },
+    {
+      "id": 52,
+      "metin": "Let's recap.",
+      "bolum": "Recap",
+      "tip": "kart",
+      "kart": {"ust": "THE TAKEAWAY", "baslik": "Promising, not proven", "alt": "MIND diet and memory after 60"}
+    },
+    {
+      "id": 53,
+      "metin": "In Rush cohorts of older adults, closely following the MIND diet went with about half the Alzheimer's rate, and with slower decline. But those are associations, not proof.",
+      "gorsel": "a wooden table with a plate of grilled salmon, dark leafy greens, blueberries and walnuts and a small notebook with blank pages"
+    },
+    {
+      "id": 54,
+      "metin": "In a three-year randomized trial of 604 adults aged 65 and older, the MIND diet did not beat a control diet. Both groups improved.",
+      "gorsel": "two equal brass weights balanced on a scale between two plates of fruit and vegetables"
+    },
+    {
+      "id": 55,
+      "metin": "The best-supported habits are simple: a serving of leafy greens a day, berries a few times a week, and a pattern you can keep. It's a reasonable bet for your plate, not a guarantee for your memory.",
+      "gorsel": "a sunlit kitchen counter with a bowl of kale, a bowl of blueberries and a jar of walnuts"
+    },
+    {
+      "id": 56,
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "tip": "kart",
+      "kart": {"ust": "THE FOOD ALMANAC", "baslik": "Evidence over hype", "alt": "For education only · not medical advice"}
+    }
+  ]
+}
