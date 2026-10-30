@@ -1,0 +1,17 @@
+{
+  "baslik": ["SKIP GREENS", "ON WARFARIN?"],
+  "baslik_yt": "Warfarin and Greens: Skipping Them Backfires",
+  "aciklama": "People on warfarin are often told to avoid spinach and kale. Here is what a diet trial and an INR study found, and the steady-intake rule clinics use.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1],
+     "baslik": {"satirlar": ["LESS GREENS", "HIGHER INR"], "vurgu": "-80%", "not": "vitamin K, 12 adults"},
+     "etiket": "Franco et al. · Am J Med · 2004"},
+    {"sahne": 20, "cumleler": [0]},
+    {"sahne": 21, "cumleler": [0, 1], "baslik": null},
+    {"sahne": 22, "cumleler": [1], "baslik": null, "etiket": "Franco et al. · Am J Med · 2004"},
+    {"sahne": 24, "cumleler": [1]},
+    {"sahne": 26, "cumleler": [1]},
+    {"sahne": 29, "cumleler": [1, 2], "baslik": {"satirlar": ["STEADY,", "NOT ZERO"]}, "etiket": null}
+  ]
+}
