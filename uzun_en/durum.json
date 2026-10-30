@@ -111,10 +111,9 @@
     },
     "mind-diet-memory": {
       "slot": "2026-12-11T14:00:00Z",
-      "asama": "varlik",
+      "asama": "sahne",
       "baslangic": "2026-10-30T12:17:46Z",
-      "sahne_deneme": 0,
-      "gorsel_bekle": "2026-10-30T20:59:22Z"
+      "sahne_deneme": 0
     }
   }
 }
