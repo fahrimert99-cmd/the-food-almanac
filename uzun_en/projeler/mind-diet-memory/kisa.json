@@ -1,0 +1,20 @@
+{
+  "baslik": ["MIND DIET", "BRAIN BOOST?"],
+  "baslik_yt": "MIND Diet and Alzheimer's: Hype or Help?",
+  "aciklama": "Early Rush University studies linked the MIND diet to about half the Alzheimer's rate. A three-year randomized trial found no clear edge over a coached control diet. Here is what that means for your plate.",
+  "parcalar": [
+    {"sahne": 43, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 53, "cumleler": [0], "gorsel": 1,
+     "baslik": {"satirlar": ["ABOUT HALF"], "vurgu": "-53%", "not": "Alzheimer's: top vs bottom"},
+     "etiket": "Morris et al. · Alzheimers Dement · 2015"},
+    {"sahne": 53, "cumleler": [1], "gorsel": 22, "baslik": null, "etiket": null},
+    {"sahne": 54, "cumleler": [0], "gorsel": 27,
+     "baslik": {"satirlar": ["RANDOMIZED", "TRIAL"], "vurgu": "604", "not": "adults, three years"},
+     "etiket": "Barnes et al. · N Engl J Med · 2023"},
+    {"sahne": 54, "cumleler": [1], "gorsel": 32, "baslik": {"satirlar": ["NO CLEAR", "DIFFERENCE"]}, "etiket": null},
+    {"sahne": 37, "cumleler": [1]},
+    {"sahne": 38, "cumleler": [2], "baslik": null},
+    {"sahne": 44, "cumleler": [0, 1]},
+    {"sahne": 55, "cumleler": [1], "baslik": null}
+  ]
+}
