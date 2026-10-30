@@ -1,7 +1,7 @@
 {
-  "proje": "garlic-blood-pressure",
+  "proje": "food-order-blood-sugar",
   "no": 3,
-  "tetik": 9,
+  "tetik": 10,
   "ek": [
     {
       "proje": "garlic-blood-pressure",
@@ -13,6 +13,10 @@
     },
     {
       "proje": "walking-after-meals",
+      "no": 3
+    },
+    {
+      "proje": "food-order-blood-sugar",
       "no": 3
     }
   ]
