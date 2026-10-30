@@ -99,6 +99,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           bash uzun_en/araclar/kaydet.sh "uzun_en: plan (${{ steps.p.outputs.slug }} / ${{ steps.p.outputs.asama }})" uzun_en/durum.json uzun_en/konular.json uzun_en/projeler uzun_en/calistir.json
+      - name: Uyandırmayı kur (görsel kotası bekleniyor)
+        if: steps.p.outputs.uyandir != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ZAMAN: ${{ steps.p.outputs.uyandir }}
+        run: |
+          # saatlik zamanlayıcı saatlerce atlayabiliyor: hattı bekleme bitince uzun_en_uyandir.yml başlatır
+          gh workflow run uzun_en_uyandir.yml --repo "$GITHUB_REPOSITORY" --ref main -f zaman="$ZAMAN" \
+            || echo "::warning::uyandırma kurulamadı; saatlik zamanlayıcı yakalar"
 
   # ---------------------------------------------------------------------------------------------
   konu:
@@ -372,7 +381,11 @@ jobs:
             # hazır görseller ve ses sürümde, sonraki çalıştırma kaldığı yerden devam eder.
             if python3 -c "import json,sys;sys.exit(0 if json.load(open('/tmp/gorsel_durum.json')).get('kota_bitti') else 1)" 2>/dev/null; then
               python3 uzun_en/araclar/plan.py --gorsel-ertele "$SLUG"
+              Z=$(python3 -c "import json,os;print(json.load(open('uzun_en/durum.json'))['videolar'][os.environ['SLUG']]['gorsel_bekle'])")
               bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG görsel kotası bitti, kaldığı yerden devam edecek" uzun_en/durum.json
+              # saatlik zamanlayıcı saatlerce atlayabiliyor: hattı ertelenen zamanda uzun_en_uyandir.yml başlatır
+              gh workflow run uzun_en_uyandir.yml --repo "$GITHUB_REPOSITORY" --ref main -f zaman="$Z" \
+                || echo "::warning::uyandırma kurulamadı; saatlik zamanlayıcı yakalar"
             fi
             echo "::warning::görsellerin çoğu yedek kaynaktan geldi (NVIDIA arızası?) — sahne aşamasına geçilmedi, sonraki çalıştırmada yeniden denenecek"
             exit 0
