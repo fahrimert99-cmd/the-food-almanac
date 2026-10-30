@@ -31,7 +31,8 @@ jobs:
           pip install -q pillow
       - name: Cosmos
         env:
-          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          # Kullanıcının Cosmos için açtığı yeni anahtar (30 Ekim); yoksa görsel anahtarı
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_COSMOS_KEY || secrets.NVIDIA_API_KEY }}
         run: |
           python3 uzun_en/araclar/cosmos_deneme.py --cikti deneme/cikti \
             deneme/g/dikey_08.jpg deneme/g/dikey_12.jpg deneme/g/dikey_24.jpg
