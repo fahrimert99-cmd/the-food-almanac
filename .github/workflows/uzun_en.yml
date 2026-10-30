@@ -259,6 +259,25 @@ jobs:
           fi
           [ -f "$D" ] || { echo "::warning::doğruluk denetimi tamamlanamadı (kota?) — bir sonraki çalıştırmada tekrar"; exit 1; }
           cat "$D"
+      - name: "Doğrulama sonrası yapı düzeltmesi (Claude)"
+        if: env.CLAUDE_OK == 'true' && hashFiles(format('uzun_en/projeler/{0}/dogrulama.json', env.SLUG)) != ''
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          CLAUDE_ANA: ${{ secrets.CLAUDE_YEDEK2_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK2: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          # Editör onay verip proje.json'da düzeltme yaptıysa (ör. kapak satırı) yapı kuralı bozulmuş olabilir; o zaman
+          # yalnızca bu hatalar en küçük düzenlemeyle giderilir. Yoksa doğrulanmış senaryo kaydedilmeden atılıyor ve
+          # sonraki çalıştırma her şeyi baştan yazıyordu (30 Ekim, kalsiyum).
+          D="uzun_en/projeler/$SLUG/dogrulama.json"
+          SONUC=$(D="$D" python3 -c "import json,os;print(json.load(open(os.environ['D'])).get('sonuc',''))" 2>/dev/null || echo "")
+          [ "$SONUC" = "onay" ] || exit 0
+          python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" > /tmp/k3.txt && { echo "yapı geçerli"; exit 0; }
+          grep -E "HATA|UYARI" /tmp/k3.txt || true
+          bash uzun_en/araclar/claude_calistir.sh -p "The fact-checked script uzun_en/projeler/$SLUG/proje.json now fails automatic validation (rules: uzun_en/gorev/SENARYO.md). Fix ONLY these problems with minimal edits. Do not change any facts, numbers, quotes or sources: $(grep HATA /tmp/k3.txt)" \
+            ${CMODEL:+--model "$CMODEL"} --max-turns 30 --allowedTools "Read,Write,Edit,Glob,Grep"
       - name: "Ajan değişikliklerini sınırla (doğrulama ajanından sonra)"
         if: always()
         run: |
@@ -282,10 +301,11 @@ jobs:
           json.dump(d, open(p, "w"), ensure_ascii=False, indent=2)
           PY
             bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG doğruluk denetiminde reddedildi (konu değişecek)" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG"
-          elif [ "$SONUC" = "onay" ] && python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" >/dev/null; then
+          elif [ "$SONUC" = "onay" ] && python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" > /tmp/k4.txt; then
             python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" varlik
             bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG senaryosu yazıldı ve doğrulandı" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG"
           else
+            [ -f /tmp/k4.txt ] && grep -E "HATA" /tmp/k4.txt | sed 's/^/::warning title=Senaryo yapısı::/' || true
             echo "Senaryo aşaması tamamlanmadı; bir sonraki çalıştırma yeniden dener."
             exit 1
           fi
