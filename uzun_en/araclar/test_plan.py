@@ -53,8 +53,10 @@ class TestPlan(unittest.TestCase):
         slug, _asama, _slot, _sablon, neden = plan.karar(d, simdi)
         self.assertIsNone(slug)
         self.assertIn("görsel kotası", neden)
+        self.assertEqual(plan.uyandirma(d, simdi), "2026-10-30T17:00:00Z")   # uyandırma iş akışı o an başlatır
         slug, asama, *_ = plan.karar(d, simdi + dt.timedelta(hours=4))     # bekleme bitti: kaldığı yerden
         self.assertEqual((slug, asama), ("test-video", "varlik"))
+        self.assertEqual(plan.uyandirma(d, simdi + dt.timedelta(hours=4)), "")
 
     @patch("ortak.marka", return_value=MARKA)
     def test_kacan_slot_kaydirilir(self, _m):

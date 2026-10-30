@@ -184,6 +184,13 @@ def karar(d, t):
     return slug, "senaryo", iso(bos[0]), False, f"yeni proje: {slug}"
 
 
+def uyandirma(d, t):
+    """Aktif proje görsel kotası için bekliyorsa bekleme zamanı (uzun_en_uyandir.yml hattı o an başlatır); yoksa ""."""
+    v = d["videolar"].get(d.get("aktif") or "", {})
+    b = v.get("gorsel_bekle")
+    return b if v.get("asama") == "varlik" and b and tarih(b) > t else ""
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--goster", action="store_true")
@@ -252,7 +259,7 @@ def main():
     no = ASAMALAR.index(asama) if asama in ASAMALAR else 9
     onde = bool(slot) and tarih(slot) - t > dt.timedelta(hours=ACIL)
     cikti = {"is": str(is_var).lower(), "slug": slug or "", "asama": asama or "", "asama_no": str(no), "slot": slot or "",
-             "sablon": str(sablon).lower(), "onde": str(onde).lower()}
+             "sablon": str(sablon).lower(), "onde": str(onde).lower(), "uyandir": "" if slug else uyandirma(d, t)}
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             for k, v in cikti.items():
