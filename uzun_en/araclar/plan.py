@@ -48,7 +48,11 @@ def tarih(s):
     return dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
 
 
-def slotlar(bas, gun=42):
+def slotlar(bas, gun=None):
+    """Yayın günlerindeki slotlar; varsayılan ufuk 6 hafta, önde üretim sınırı büyükse ona yetecek kadar uzar
+    (haftada 2 slot: sınır 13 iken 6 hafta yetmiyor, "boş slot yok" deyip üretimi durduruyordu — 30 Ekim)."""
+    if gun is None:
+        gun = max(42, onde_azami() * 4)
     y = O.marka().get("yayin", {})
     gunler = y.get("gunler", [1, 4])
     sa, dk = (int(x) for x in y.get("saat_utc", "14:00").split(":"))
