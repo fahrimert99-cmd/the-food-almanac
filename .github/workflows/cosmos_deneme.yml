@@ -1,0 +1,49 @@
+name: Cosmos denemesi (NVIDIA görselden video)
+# Geçici deneme (kullanıcı isteği, 30 Ekim 2026): yumurta Shorts'unun 3 dikey görseli NVIDIA cosmos3-nano'ya gönderilir,
+# çıkan klipler "deneme-cosmos" ön sürümüne yüklenir. Yayındaki hatta dokunmaz; yalnızca çalışma dalına push'ta çalışır.
+on:
+  push:
+    branches: [claude/jolly-johnson-m92l9s]
+    paths: [uzun_en/araclar/cosmos_deneme.py, .github/workflows/cosmos_deneme.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  dene:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Görseller
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p deneme/g deneme/cikti
+          gh release download uzun-en-eggs-and-cholesterol -R "$GITHUB_REPOSITORY" -D deneme/g \
+            -p dikey_08.jpg -p dikey_12.jpg -p dikey_24.jpg
+          pip install -q pillow
+      - name: Cosmos
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          python3 uzun_en/araclar/cosmos_deneme.py --cikti deneme/cikti \
+            deneme/g/dikey_08.jpg deneme/g/dikey_12.jpg deneme/g/dikey_24.jpg
+      - name: Sonuç
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ls -la deneme/cikti || true
+          if ls deneme/cikti/*.mp4 >/dev/null 2>&1; then
+            gh release view deneme-cosmos -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 || \
+              gh release create deneme-cosmos -R "$GITHUB_REPOSITORY" --prerelease --target main \
+                --title "Cosmos denemesi" --notes "NVIDIA cosmos3-nano görselden video denemesi (geçici)."
+            gh release upload deneme-cosmos -R "$GITHUB_REPOSITORY" deneme/cikti/*.mp4 --clobber
+          fi
