@@ -1,5 +1,5 @@
 {
-  "aktif": "calcium-vitamin-d-fractures",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -99,7 +99,7 @@
     },
     "calcium-vitamin-d-fractures": {
       "slot": "2026-12-04T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-30T10:06:40Z",
       "sahne_deneme": 0
     }
