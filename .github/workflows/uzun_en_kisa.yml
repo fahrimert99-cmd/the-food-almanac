@@ -57,6 +57,14 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Boş günler (kural - her güne bir yayın)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Salı/Cuma dışında Shorts'u olmayan gün kalmasın: eski videolardan ek Shorts için slot ayrılır
+          # (kisa_N_yayin.json {"slot"}); aşağıdaki seçim bunları sıradan Shorts'lardan sonra üretir.
+          python3 uzun_en/araclar/kisa_bosluk.py
+          bash uzun_en/araclar/kaydet.sh "uzun_en: boş günlere ek Shorts ayrıldı" uzun_en/projeler
       - name: Proje seç
         env:
           GIRDI: ${{ github.event.inputs.proje }}
@@ -64,7 +72,7 @@ jobs:
           OLAY: ${{ github.event_name }}
         run: |
           python3 - <<'PY'
-          import os, sys
+          import glob, os, re, sys
           sys.path.insert(0, "uzun_en/araclar")
           import ortak as O
           istek = (os.environ.get("GIRDI") or "").strip()
@@ -85,6 +93,18 @@ jobs:
                       adaylar.append((y.get("slot") or y.get("yuklenme") or "", -no, slug, no))
                       break                 # sıradaki Shorts, öncekisi yüklenince
           bekleyen = [(s, n) for _, _, s, n in sorted(adaylar, reverse=True)]
+          # Boş gün için ayrılmış ek Shorts'lar (kisa_bosluk.py: slotu var, videosu yok; kisa_sayisi'nın üstünde)
+          ayrilan = []
+          for slug in O.durum()["videolar"]:
+              pdir = O.proje_dir(slug)
+              if not (O.json_oku(os.path.join(pdir, "yayin.json"), {}) or {}).get("video_id"):
+                  continue
+              for y in glob.glob(os.path.join(pdir, "kisa_*_yayin.json")):
+                  no = int(re.search(r"kisa_(\d+)_yayin", os.path.basename(y)).group(1))
+                  k = O.json_oku(y, {}) or {}
+                  if no > sayi and k.get("slot") and not k.get("video_id"):
+                      ayrilan.append((k["slot"], slug, no))
+          bekleyen += [(s, n) for _, s, n in sorted(ayrilan) if (s, n) not in bekleyen]
           # kisa_islem.json "ek": [{"proje", "no"}]: eski videolardan kisa_sayisi'nın üstünde ek Shorts (ör. boş Pazartesiler
           # için 3. Shorts). Sıradan Shorts'lardan sonra, sırayla üretilir; slot kisa_N_yayin.json'da önceden verilebilir.
           for r in k.get("ek") or []:
