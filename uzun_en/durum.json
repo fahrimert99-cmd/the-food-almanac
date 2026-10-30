@@ -1,5 +1,5 @@
 {
-  "aktif": "mind-diet-memory",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -111,7 +111,7 @@
     },
     "mind-diet-memory": {
       "slot": "2026-12-11T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-10-30T12:17:46Z",
       "sahne_deneme": 0
     }
