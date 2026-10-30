@@ -1,0 +1,558 @@
+{
+  "slug": "calcium-vitamin-d-fractures",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "After 60: Do Calcium and Vitamin D Prevent Fractures?",
+  "yorum": "Do you get most of your calcium from food, or do you take a supplement? Has your doctor ever talked with you about your bones?",
+  "aciklama_giris": "In VITAL, a trial of nearly 26,000 American adults over 50, five years of vitamin D did not lower the risk of broken bones. In the Women's Health Initiative, calcium plus vitamin D raised hip bone density a little, did not significantly lower fractures, and was linked with more kidney stones. Yet in an older trial of women in care homes, the two together did seem to help.\n\nIn this video we look at what those trials and the 2018 US Preventive Services Task Force statement found, why the answer differs for healthy people living at home and for frail people in care, how calcium from food such as yogurt, milk and canned salmon with bones compares with pills, what we know about kidney stones and heart risk, and when doctors do prescribe treatment for osteoporosis and osteopenia.",
+  "kaynaklar": [
+    "LeBoff MS, et al. Supplemental vitamin D and incident fractures in midlife and older adults (VITAL). N Engl J Med. 2022. PMID 35939577.",
+    "Jackson RD, et al. Calcium plus vitamin D supplementation and the risk of fractures (Women's Health Initiative). N Engl J Med. 2006;354:669-683. PMID 16481635.",
+    "US Preventive Services Task Force. Vitamin D, calcium, or combined supplementation for the primary prevention of fractures in community-dwelling adults: recommendation statement. JAMA. 2018;319(15):1592-1599. PMID 29677309.",
+    "Chapuy MC, et al. Vitamin D3 and calcium to prevent hip fractures in elderly women. N Engl J Med. 1992;327(23):1637-1642. PMID 1331788.",
+    "Yao P, et al. Vitamin D and calcium for the prevention of fracture: a systematic review and meta-analysis. JAMA Network Open. 2019. DOI 10.1001/jamanetworkopen.2019.17789.",
+    "Bolland MJ, Grey A, Avenell A, Gamble GD, Reid IR. Calcium supplements with or without vitamin D and risk of cardiovascular events: reanalysis of the Women's Health Initiative limited access dataset and meta-analysis. BMJ. 2011;342:d2040.",
+    "Bone Health and Osteoporosis Foundation. Calcium and vitamin D: patient guidance on recommended intakes, food sources and supplements.",
+    "Qaseem A, Forciea MA, McLean RM, Denberg TD; Clinical Guidelines Committee of the American College of Physicians. Treatment of low bone density or osteoporosis to prevent fractures in men and women: a clinical practice guideline update. Ann Intern Med. 2017;166(11):818-839. PMID 28492856."
+  ],
+  "kapak": {
+    "satirlar": [
+      "CALCIUM",
+      "PILLS?"
+    ],
+    "vurgu": "0.98",
+    "vurgu_alt": "fracture ratio: no drop",
+    "gorsel": "a large tall glass of milk in front, a small open tin of canned salmon with soft bones beside it and a brown bottle of white calcium tablets spilling out in front, tightly grouped and overlapping, plus a cheerful woman in her 60s smiling behind them"
+  },
+  "etiketler": [
+    "calcium supplements",
+    "vitamin d",
+    "fractures",
+    "osteoporosis",
+    "bone health",
+    "after 60",
+    "older adults",
+    "vitamin d and calcium",
+    "kidney stones",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "USPSTF": "U S P S T F",
+    "VITAL": "vye-tul",
+    "IU": "international units"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The big question",
+      "metin": "In a trial of nearly 26,000 American adults over 50, five years of vitamin D did not lower the risk of broken bones.",
+      "gorsel": "a brown glass bottle of vitamin D capsules tipped over and spilling golden capsules, beside a tall glass of milk on a wooden kitchen table",
+      "etiket": "LeBoff et al. · NEJM · 2022",
+      "baslik": {
+        "satirlar": [
+          "NO DROP IN",
+          "FRACTURES"
+        ],
+        "not": "vitamin D for about five years, adults over 50"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "Yet in an older trial, women in care homes did seem to benefit. Why the difference?",
+      "gorsel": "two armchairs side by side in a quiet care home room, one beside a sunny window with a tall glass of milk on a small table, the other in shadow"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know where food comes before pills, and when doctors do prescribe them.",
+      "gorsel": "a ceramic bowl of plain yogurt, a tin of salmon and a brown pill bottle arranged in a row on a kitchen counter, soft morning light"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what calcium and vitamin D actually do for your bones.",
+      "gorsel": "a long bone shown in open section with a fine honeycomb inner structure, a glass of milk and a bottle of white calcium tablets at its base"
+    },
+    {
+      "id": 5,
+      "bolum": "What bones need",
+      "tip": "kart",
+      "metin": "First, a quick look at the basics.",
+      "kart": {
+        "ust": "THE BASICS",
+        "baslik": "What your bones need",
+        "alt": "Calcium · Vitamin D · Food"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Bone is living tissue, and calcium is its main building mineral. Vitamin D helps your gut absorb calcium from what you eat.",
+      "gorsel": "a long bone in open section with tiny white mineral crystals in its honeycomb structure, beside a glass of milk and a wedge of cheese"
+    },
+    {
+      "id": 7,
+      "metin": "The Bone Health and Osteoporosis Foundation sets daily targets for adults over 50. For calcium, 1,200 milligrams for women, and for men over 70. For men 50 to 70, 1,000 milligrams.",
+      "gorsel": "a calm still life of a glass of milk, a cup of yogurt and a slice of cheddar cheese on a linen cloth",
+      "baslik": {
+        "satirlar": [
+          "1,200 MG",
+          "OF CALCIUM"
+        ],
+        "not": "daily target for women over 50"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "For vitamin D, the same foundation advises 800 to 1,000 international units a day. Notice that these targets count food and supplements together.",
+      "gorsel": "a morning window with sunlight falling on a kitchen table holding a glass of milk and a small bottle of vitamin D capsules"
+    },
+    {
+      "id": 9,
+      "metin": "That detail matters, because the real question isn't whether calcium and vitamin D matter. They do. It's whether adding pills on top of your normal diet prevents fractures.",
+      "gorsel": "a dinner plate with a glass of milk beside it, and a small pill bottle placed behind the plate, a fork resting on the plate edge"
+    },
+    {
+      "id": 10,
+      "bolum": "The big American trials",
+      "tip": "kart",
+      "metin": "Let's start with the biggest American trials.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Two giant trials",
+        "alt": "VITAL · Women's Health Initiative"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "The first is called VITAL. Meryl LeBoff and colleagues reported its fracture results in 2022. It enrolled 25,871 men aged 50 or older and women aged 55 or older.",
+      "gorsel": "a long wooden table with rows of small identical brown pill bottles, a notebook with blank pages and a pair of reading glasses",
+      "etiket": "LeBoff et al. · NEJM · 2022"
+    },
+    {
+      "id": 12,
+      "metin": "They weren't chosen for weak bones or low vitamin D. Half took 2,000 international units of vitamin D3 every day, half took a placebo, and they were followed for a little over five years.",
+      "gorsel": "two identical brown bottles side by side on a table, one with a sun drawn on its cap, a small calendar page beside them",
+      "baslik": {
+        "satirlar": [
+          "2,000 IU",
+          "A DAY"
+        ],
+        "vurgu": "5 YRS",
+        "not": "vitamin D3 or placebo, 25,871 adults"
+      }
+    },
+    {
+      "id": 13,
+      "tip": "grafik",
+      "metin": "The result: 769 people on vitamin D had a fracture, versus 782 on placebo. Total, non-spine and hip fractures were all about the same. No meaningful difference.",
+      "grafik": {
+        "baslik": "Fracture risk compared with placebo",
+        "alt": "Vitamin D3, 2,000 IU a day. A value of 100 means no difference.",
+        "cubuklar": [
+          {
+            "etiket": "All fractures",
+            "deger": 98,
+            "metin": "0.98"
+          },
+          {
+            "etiket": "Non-spine",
+            "deger": 97,
+            "metin": "0.97"
+          },
+          {
+            "etiket": "Hip",
+            "deger": 101,
+            "metin": "1.01"
+          }
+        ],
+        "kaynak": "LeBoff et al., NEJM 2022 · 25,871 adults 50 and older · median 5.3 years"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Age, sex, weight and starting vitamin D blood level didn't change the picture either. VITAL tested vitamin D alone, though. For calcium plus vitamin D, we turn to the Women's Health Initiative.",
+      "gorsel": "a row of small glass vials with pale golden liquid on a laboratory shelf, an old brass microscope beside them"
+    },
+    {
+      "id": 15,
+      "metin": "In it, 36,282 postmenopausal women aged 50 to 79 took 1,000 milligrams of calcium plus 400 international units of vitamin D daily, or a placebo, for an average of seven years. Rebecca Jackson and colleagues reported it in 2006.",
+      "gorsel": "a bottle of white calcium tablets with a few tablets resting on an open palm, a glass of water beside it",
+      "etiket": "Jackson et al. · NEJM · 2006",
+      "baslik": {
+        "satirlar": [
+          "36,282",
+          "WOMEN"
+        ],
+        "not": "1,000 mg calcium plus 400 IU vitamin D, seven years"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Hip bone density was about 1 percent higher on the supplements. But hip fractures weren't significantly lower, and total fractures were nearly identical.",
+      "gorsel": "a hip bone shown in open section beside a glass of milk and a bottle of calcium tablets, simple textbook style",
+      "baslik": {
+        "satirlar": [
+          "BONES A BIT",
+          "DENSER"
+        ],
+        "not": "but no clear drop in fractures"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "Among women who kept taking the pills, hip fractures looked about 29 percent lower. But that comparison leaves out women who stopped, so it's less reliable.",
+      "gorsel": "a woman's hand placing a white tablet beside a glass of water on a bedside table next to a small clock"
+    },
+    {
+      "id": 18,
+      "metin": "There was a cost, too. Kidney stones were about 17 percent more common on the supplements. That's roughly one extra woman with a stone for every 273 women over seven years.",
+      "gorsel": "a small rough pale stone resting beside a bottle of calcium tablets on a plain wooden table",
+      "baslik": {
+        "satirlar": [
+          "KIDNEY",
+          "STONES"
+        ],
+        "vurgu": "+17%",
+        "not": "more common on calcium plus vitamin D"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "These and other trials led the United States Preventive Services Task Force, an independent expert panel, to a recommendation in 2018.",
+      "gorsel": "a long meeting table with a row of empty chairs, stacks of papers and a pair of reading glasses in a quiet room"
+    },
+    {
+      "id": 20,
+      "metin": "For postmenopausal women living at home, it recommends against taking 400 international units of vitamin D or less, with 1,000 milligrams of calcium or less, just to prevent fractures. For higher doses, and for men, it says the evidence isn't enough to say.",
+      "gorsel": "a bottle of calcium tablets and a bottle of vitamin D capsules side by side on a kitchen table with a closed notebook",
+      "etiket": "USPSTF · JAMA · 2018"
+    },
+    {
+      "id": 21,
+      "metin": "It also recommends against vitamin D to prevent falls in adults 65 and older living at home. For fall prevention in people at higher risk, it recommends exercise.",
+      "gorsel": "a pair of comfortable walking shoes at the start of a tree-lined park path, a wooden bench beside the path"
+    },
+    {
+      "id": 22,
+      "metin": "One big catch. That advice covers community-dwelling adults. It doesn't apply to people with osteoporosis, a past fracture, high fall risk or vitamin D deficiency, or to people in nursing homes. We'll get to them next.",
+      "gorsel": "a wide open house door with a path leading to it, a second building with many small windows in the far distance, soft engraving style",
+      "baslik": {
+        "satirlar": [
+          "NOT FOR",
+          "EVERYONE"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "bolum": "Care homes and low levels",
+      "tip": "kart",
+      "metin": "So what happened in the trial where supplements did seem to help?",
+      "kart": {
+        "ust": "THE OTHER SIDE",
+        "baslik": "Care homes and low levels",
+        "alt": "Where supplements did help"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "In 1992, Marie Chapuy and colleagues published a trial of 3,270 women with an average age of 84. They lived in nursing homes and apartment houses for older people.",
+      "gorsel": "a bright sitting room of a care home with several armchairs, a tray with glasses of milk and a small side table",
+      "etiket": "Chapuy et al. · NEJM · 1992",
+      "baslik": {
+        "satirlar": [
+          "AVERAGE",
+          "AGE 84"
+        ],
+        "not": "3,270 women in care"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Half took 1,200 milligrams of calcium and 800 international units of vitamin D3 every day. Half took a placebo. After 18 months, among women who completed the study, hip fractures were 43 percent lower.",
+      "gorsel": "a tray with two small cups each holding tablets, next to a glass of water and a glass of milk"
+    },
+    {
+      "id": 26,
+      "tip": "grafik",
+      "metin": "Other fractures outside the spine were 32 percent lower. That's a large effect, in women who were very old and living in care.",
+      "grafik": {
+        "baslik": "How much lower fractures were with calcium plus vitamin D",
+        "alt": "Women who completed the 18-month study",
+        "cubuklar": [
+          {
+            "etiket": "Hip fractures",
+            "deger": 43,
+            "metin": "−43%"
+          },
+          {
+            "etiket": "Non-spine fractures",
+            "deger": 32,
+            "metin": "−32%"
+          }
+        ],
+        "kaynak": "Chapuy et al., NEJM 1992 · 3,270 women, average age 84 · 18 months"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "The researchers also measured the body's response. A hormone that rises when calcium and vitamin D are low fell 44 percent. And in a small subset, hip bone density rose 2.7 percent, while it fell 4.6 percent on placebo.",
+      "gorsel": "a hip bone in open section with a faint glow of fine white crystals inside, a glass of milk and a bottle of tablets beside it"
+    },
+    {
+      "id": 28,
+      "metin": "That fits a simple idea: supplements may help most when someone is short of these nutrients to begin with. It's an idea, not a proven rule. And these women, at an average age of 84, were older than the Women's Health Initiative women, who were 50 to 79.",
+      "gorsel": "a nearly empty glass beside a full glass of milk on a table, a small pill bottle between them"
+    },
+    {
+      "id": 29,
+      "metin": "In 2019, Yao and colleagues pooled the trials. Six trials of calcium plus vitamin D, with about 49,000 people, showed 6 percent fewer fractures of any kind and 16 percent fewer hip fractures.",
+      "gorsel": "a tall stack of research journals with blank covers beside a glass of milk and a bottle of calcium tablets",
+      "etiket": "Yao et al. · JAMA Netw Open · 2019",
+      "baslik": {
+        "satirlar": [
+          "POOLED",
+          "TRIALS"
+        ],
+        "vurgu": "–16%",
+        "not": "hip fractures, calcium plus vitamin D"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "But five of those six trials were rated at high risk of bias, and the authors asked for more large trials before recommending it. Vitamin D on its own, in 11 trials with about 34,000 people, did not lower fractures.",
+      "gorsel": "a balance scale with a small bottle on one side and a glass of milk on the other, nearly level, on a wooden desk"
+    },
+    {
+      "id": 31,
+      "metin": "So the honest summary is this. Calcium with vitamin D may modestly lower fractures in frail older people in care. For healthy people at home, the big trials found little or no benefit.",
+      "gorsel": "two chairs on a lawn in soft light, one beside a glass of milk and a hat, a quiet engraving of a calm afternoon",
+      "baslik": {
+        "satirlar": [
+          "HOME VS",
+          "CARE"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "bolum": "Food versus pills",
+      "tip": "kart",
+      "metin": "Now, back to a promise from the start. Where does food come before pills?",
+      "kart": {
+        "ust": "FOOD FIRST",
+        "baslik": "Food versus pills",
+        "alt": "Where calcium is best found"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Bone health groups say to get calcium from food first, and to use supplements only to fill a gap. One reason is practical: food is where most of your calcium can come from, in comfortable servings.",
+      "gorsel": "a kitchen table set with a glass of milk, a cup of yogurt, a wedge of cheddar and an open tin of canned salmon"
+    },
+    {
+      "id": 34,
+      "metin": "A six-ounce cup of plain low-fat yogurt has about 310 milligrams of calcium. Eight ounces of milk has about 300.",
+      "gorsel": "a cup of plain yogurt with a spoon resting in it, next to a tall glass of milk, fine engraving style",
+      "baslik": {
+        "satirlar": [
+          "YOGURT",
+          "310 MG"
+        ],
+        "not": "six ounces, plain low-fat"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Three ounces of canned salmon with its soft bones has about 180 milligrams. Canned sardines with bones have about 325.",
+      "gorsel": "an open tin of canned salmon with soft bones showing, a fork and a slice of rye bread beside it",
+      "baslik": {
+        "satirlar": [
+          "CANNED",
+          "SALMON"
+        ],
+        "not": "eat the soft bones for the calcium"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "Fortified foods count too. Eight ounces of fortified soy, almond or oat milk, or fortified orange juice, has about 300 milligrams. Eight ounces of frozen collard greens has about 360.",
+      "gorsel": "a carton of plant milk, a glass of orange juice and a bowl of cooked collard greens on a wooden table"
+    },
+    {
+      "id": 37,
+      "metin": "These are estimates, and labels vary, so check the one on your package. Still, a cup of yogurt, a glass of milk and a serving of canned salmon already add up to nearly 800 milligrams.",
+      "gorsel": "a cup of yogurt, a glass of milk and an open tin of salmon in a neat row, with a pencil and a small notebook beside them"
+    },
+    {
+      "id": 38,
+      "metin": "Pills work differently. Calcium is absorbed best in amounts of 500 to 600 milligrams or less at a time. So spreading it across the day, with meals, makes more sense than one big dose.",
+      "gorsel": "a weekly pill organizer with seven small compartments on a breakfast table next to a bowl of oatmeal and a glass of milk"
+    },
+    {
+      "id": 39,
+      "metin": "The foundation suggests starting with 200 to 300 milligrams, checking the elemental calcium on the label, and taking calcium carbonate with food. Calcium citrate can be taken with or without food.",
+      "gorsel": "a hand holding a small round bottle of calcium tablets and reading its side, a kitchen counter in the background"
+    },
+    {
+      "id": 40,
+      "metin": "Back to kidney stones. In the trials, the extra stones came with supplement pills. If you've ever had a kidney stone, ask your doctor before adding calcium pills.",
+      "gorsel": "a doctor's desk with a stethoscope, a closed folder and a bottle of calcium tablets set to one side",
+      "baslik": {
+        "satirlar": [
+          "ASK FIRST",
+          "IF STONES"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "What about the heart? In 2011, Mark Bolland and colleagues re-examined the Women's Health Initiative data and pooled other trials. They found calcium supplements linked with about 24 percent more heart attacks.",
+      "gorsel": "a red heart symbol beside a bottle of calcium tablets on a plain table, simple textbook style",
+      "etiket": "Bolland et al. · BMJ · 2011",
+      "baslik": {
+        "satirlar": [
+          "HEART",
+          "ATTACKS?"
+        ],
+        "not": "a link seen in pooled trials, not proof"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "That was a re-analysis of existing trials, not a new experiment, so it shows a link, not proof. Bone health groups note that extra calcium adds no benefit, and may cause constipation, kidney stones, or possibly heart calcification.",
+      "gorsel": "a magnifying glass held over a bottle of calcium tablets resting on a stack of open journals"
+    },
+    {
+      "id": 43,
+      "metin": "We don't have trials that compare food calcium with pills directly for fractures. But the guidelines favor food first, and the pills carry the risks we just covered.",
+      "gorsel": "a plate of yogurt with fruit and a slice of cheese on the left, a bottle of tablets on the right, a gap of bare table between them"
+    },
+    {
+      "id": 44,
+      "bolum": "When doctors prescribe",
+      "tip": "kart",
+      "metin": "The last piece: when do doctors prescribe treatment?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "When doctors do prescribe",
+        "alt": "Osteoporosis and osteopenia"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Osteoporosis means bones that have become weak enough to break easily. It's diagnosed with a bone density scan. Osteopenia is a milder drop in bone density.",
+      "gorsel": "a hip bone in open section with a fine honeycomb inner structure, one side thinner and more open than the other"
+    },
+    {
+      "id": 46,
+      "metin": "For women with known osteoporosis, the American College of Physicians strongly recommends offering a prescription medicine, such as alendronate, risedronate, zoledronic acid or denosumab, to reduce hip and spine fractures.",
+      "gorsel": "a pharmacist's counter with an amber prescription bottle, a small paper bag and a pair of reading glasses",
+      "etiket": "Qaseem et al. · Ann Intern Med · 2017",
+      "baslik": {
+        "satirlar": [
+          "PRESCRIBED",
+          "TREATMENT"
+        ],
+        "not": "for women with known osteoporosis"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "The guideline suggests treating for five years. For osteopenia in women 65 and older at high risk of fracture, the guideline says to decide together with your doctor, weighing benefits, harms and cost.",
+      "gorsel": "two chairs facing each other across a small desk, an open appointment book and a cup of tea on it"
+    },
+    {
+      "id": 48,
+      "metin": "That's also where the task force advice stops. It doesn't apply to people with osteoporosis, past fractures, high fall risk or low vitamin D. Whether supplements make sense for them is a decision with a doctor.",
+      "gorsel": "a doctor's open appointment book on a desk beside a glass of milk and a bottle of calcium tablets"
+    },
+    {
+      "id": 49,
+      "metin": "One safety note. Never stop an osteoporosis medicine, or start high-dose pills, on your own. Ask your doctor or pharmacist about interactions, especially if you take several medicines.",
+      "gorsel": "a kitchen counter with a row of amber medicine bottles, a pill organizer and a notepad beside a glass of water",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So what should you do? Here are five practical steps.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Food first, pills for gaps",
+        "alt": "Five practical steps"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "One. Add up your food. Dairy, fortified milks and juices, canned fish with bones, and greens. Compare it with the target: 1,200 milligrams for women over 50, and for men over 70.",
+      "gorsel": "a kitchen table with a glass of milk, a cup of yogurt, a tin of salmon and a bowl of greens beside an open notebook and pencil"
+    },
+    {
+      "id": 52,
+      "metin": "Two. If you fall short, fill only the gap. Keep each dose to 500 or 600 milligrams or less, take it with a meal, and don't go beyond your target.",
+      "gorsel": "a small bottle of calcium tablets and a plate of breakfast with a bowl of yogurt, a spoon and a napkin"
+    },
+    {
+      "id": 53,
+      "metin": "Three. Ask your doctor whether you have osteoporosis, a past fracture, high fall risk or low vitamin D. Those are the people the task force advice doesn't cover.",
+      "gorsel": "a friendly doctor's office with a desk, two chairs and a window with soft light, a stethoscope on the desk"
+    },
+    {
+      "id": 54,
+      "metin": "Four. Don't count on vitamin D pills for your bones or for falls. VITAL used 2,000 units and saw no fracture benefit, and the task force advises against vitamin D for preventing falls in adults 65 and older living at home.",
+      "gorsel": "a brown bottle of vitamin D capsules with a large red crossed circle drawn on a cloth beside it"
+    },
+    {
+      "id": 55,
+      "metin": "Five. For falls, move more. Walking, balance and strength exercise is what the task force recommends for people at higher risk of falling.",
+      "gorsel": "a pair of walking shoes and a pair of light hand weights on a park path with a bench, soft morning light",
+      "baslik": {
+        "satirlar": [
+          "MOVE",
+          "MORE"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Food first. Pills for gaps.",
+        "alt": "Ask your doctor about your bones"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "In large trials of healthy adults living at home, vitamin D alone did not lower fractures, and in the Women's Health Initiative calcium plus vitamin D did not significantly lower them either. Kidney stones were more common there.",
+      "gorsel": "a glass of milk and a brown bottle of tablets on a bright windowsill, a calm engraving of a quiet morning"
+    },
+    {
+      "id": 58,
+      "metin": "In one trial of frail older women in care, calcium and vitamin D together did seem to help. Foods like yogurt, milk and canned salmon with bones can supply much of what you need.",
+      "gorsel": "a cup of yogurt, a glass of milk and an open tin of salmon on a table beside an armchair"
+    },
+    {
+      "id": 59,
+      "metin": "And when osteoporosis or osteopenia is a concern, the next step is a conversation with your doctor about your bones, not a bigger pill.",
+      "gorsel": "a doctor's desk with a bone model, an appointment book and two cups of tea, quiet afternoon light"
+    },
+    {
+      "id": 60,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
