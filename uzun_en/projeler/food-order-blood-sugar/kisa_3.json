@@ -1,0 +1,15 @@
+{
+  "baslik": ["JUICE ON AN", "EMPTY STOMACH?"],
+  "baslik_yt": "Juice, Bread Baskets and Breakfast: Food Order Tips",
+  "aciklama": "Liquid sugar hits your blood fast, but a few small habits can soften the rise after a meal. Here are practical ways to use food order, plus one safety note if you take diabetes medicine.",
+  "parcalar": [
+    {"sahne": 29, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 30, "cumleler": [1], "baslik": {"satirlar": ["JUICE LOSES", "ITS FIBER"]}, "etiket": null},
+    {"sahne": 49, "cumleler": [1, 3], "baslik": {"satirlar": ["LIQUID SUGAR", "GOES FAST"]}, "etiket": null},
+    {"sahne": 48, "cumleler": [0], "baslik": {"satirlar": ["EGGS OR YOGURT", "BEFORE TOAST"]}, "etiket": null},
+    {"sahne": 47, "cumleler": [2, 3], "baslik": {"satirlar": ["THE GAP", "IN STUDIES"], "vurgu": "10-15 MIN", "not": "no stopwatch needed"}, "etiket": null},
+    {"sahne": 50, "cumleler": [1], "baslik": {"satirlar": ["RESTAURANT", "TRICK"]}, "etiket": null},
+    {"sahne": 52, "cumleler": [1], "baslik": {"satirlar": ["SAFETY", "FIRST"]}, "etiket": null},
+    {"sahne": 57, "cumleler": [2], "gorsel": 43, "baslik": {"satirlar": ["TRY IT AT", "YOUR NEXT MEAL"]}, "etiket": null}
+  ]
+}
