@@ -1,0 +1,21 @@
+{
+  "baslik": ["SPINACH SALAD", "ON WARFARIN?"],
+  "baslik_yt": "Spinach on Warfarin: Why Rhythm Beats Avoidance",
+  "aciklama": "On warfarin, the trouble is not greens but big swings in how much you eat. Here is what INR studies show, and how to keep your intake steady.",
+  "parcalar": [
+    {"sahne": 56, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 23, "cumleler": [0],
+     "baslik": {"satirlar": ["WARFARIN", "AND DIET"], "vurgu": "53", "not": "people followed for 4 weeks"},
+     "etiket": "Khan et al. · Br J Haematol · 2004"},
+    {"sahne": 24, "cumleler": [0],
+     "baslik": {"satirlar": ["MORE GREENS,", "LOWER INR"]},
+     "etiket": "Khan et al. · Br J Haematol · 2004"},
+    {"sahne": 25, "cumleler": [1],
+     "baslik": {"satirlar": ["SKIP, THEN", "BINGE"]}, "etiket": null},
+    {"sahne": 50, "cumleler": [2, 3],
+     "baslik": {"satirlar": ["PICK A", "PATTERN"]}, "etiket": null},
+    {"sahne": 52, "cumleler": [2],
+     "baslik": {"satirlar": ["TELL YOUR", "CLINIC"]}, "etiket": null},
+    {"sahne": 54, "cumleler": [2]}
+  ]
+}
