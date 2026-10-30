@@ -341,6 +341,11 @@ def uret(slug, no=1):
         g = dg or os.path.join(y["gorsel"], f"{gn:02d}.jpg")
         kutu, _ = H.konu_kutusu(g)
         shutil.copy(g, os.path.join(pub, f"{gn:02d}.jpg"))
+        # Deneme (KISA_KATMAN=1): konu ve arka plan ayrı katmanlara ayrılır, Kisa.tsx farklı hızda yakınlaştırır (2,5D)
+        katmanli = False
+        if os.environ.get("KISA_KATMAN") and not p.get("kaydir"):
+            import katman
+            katmanli = bool(katman.ayir(os.path.join(pub, f"{gn:02d}.jpg")))
         bas = t
         for k, ci in enumerate(p["cumleler"]):
             c = z["cumleler"][ci]
@@ -357,7 +362,7 @@ def uret(slug, no=1):
         yer = dikey_yer(kutu, g, kucult=dikey)       # yatay yedek görsel de çerçeve yüksekliğine oturduğundan oranlar aynı
         parcalar.append({"gorsel": f"kisa/{gn:02d}", "bas": round(bas, 3), "son": round(t, 3), "kutu": kutu,
                          "odak": 50 if dikey else p.get("odak", dikey_odak(g)), "etiket": p.get("etiket", sp.get("etiket")),
-                         "baslik": baslik, "dikey": dikey, "yer": yer,
+                         "baslik": baslik, "dikey": dikey, "yer": yer, "katman": katmanli,
                          "kaydir": bool(p.get("kaydir")) and not dikey})   # yatay karşılaştırma görselleri kaydırılır
         if pi + 1 < len(tanim["parcalar"]):            # aynı sahnenin cümleleri sürüyorsa cümle arası kadar
             t += ARA if tanim["parcalar"][pi + 1]["sahne"] == p["sahne"] else PARCA_ARA

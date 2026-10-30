@@ -17,7 +17,7 @@ type BaslikVeri = { satirlar: string[]; vurgu?: string; not?: string } | null;
 export type KisaVeri = {
   fps: number; toplam: number; baslik: string[]; kanal: string; kapanis: number; kanca_son?: number; kapak?: string | null;
   parcalar: { gorsel: string; bas: number; son: number; kutu: number[] | null; odak?: number; etiket?: string | null;
-    baslik?: BaslikVeri; kaydir?: boolean; yer?: { olcek: number; dy: number } | null }[];
+    baslik?: BaslikVeri; kaydir?: boolean; yer?: { olcek: number; dy: number } | null; katman?: boolean }[];
   altyazi: { t0: number; t1: number; kelimeler: Kelime[] }[];
 };
 
@@ -125,6 +125,28 @@ export const Kisa: React.FC<KisaVeri> = (v) => {
           : ara(t, [Math.max(0, bas), son], i % 2 === 0 ? [orta - 3, orta + 3] : [orta + 3, orta - 3]);
         const op = i === 0 ? 1 : ara(t, [bas, p.bas], [0, 1]);
         const kb = ara(t, [Math.max(0, bas), son], [1.0, p.yer ? 1.06 : 1.1]);
+        if (p.katman) {
+          // 2,5D: arka plan (konu silinmiş) yavaş, konu (saydam PNG) hızlı yakınlaşır ve ters yöne hafifçe kayar;
+          // kamera nesnenin etrafında dönüyormuş hissi. Katmanlar kisa.py/katman.py'den (rembg + inpaint).
+          const kok = `img/${p.gorsel}`;
+          const yon = i % 2 === 0 ? 1 : -1;
+          const ilerle = ara(t, [Math.max(0, bas), son], [0, 1]);
+          const ol = p.yer ? p.yer.olcek : 1;
+          const dy = p.yer ? p.yer.dy * 1920 : 0;
+          const arkaT = `translate(${-yon * 14 * ilerle}px, ${dy}px) scale(${ol * (1.02 + 0.03 * ilerle)})`;
+          const onT = `translate(${yon * 26 * ilerle}px, ${dy - 18 * ilerle}px) scale(${ol * (1.0 + 0.12 * ilerle)})`;
+          const tam = { position: "absolute" as const, inset: 0, width: "100%", height: "100%", objectFit: "cover" as const,
+            transformOrigin: "50% 60%" };
+          return (
+            <AbsoluteFill key={i} style={{ opacity: op }}>
+              {p.yer && <Img src={staticFile(`${kok}.jpg`)} style={{ ...tam, filter: "blur(36px) brightness(0.72)", transform: "scale(1.2)" }} />}
+              <Img src={staticFile(`${kok}_arka.jpg`)} style={{ ...tam, transform: arkaT,
+                ...(p.yer ? { WebkitMaskImage: KENAR, WebkitMaskComposite: "source-in", maskImage: KENAR, maskComposite: "intersect" } : {}) }} />
+              <Img src={staticFile(`${kok}_on.png`)} style={{ ...tam, transform: onT,
+                filter: "drop-shadow(0 18px 24px rgba(0,0,0,0.28))" }} />
+            </AbsoluteFill>
+          );
+        }
         if (p.yer) {
           // Konu altyazının ve YouTube arayüzünün altında kalmasın: görsel küçültülüp yukarı taşınır (kisa.py dikey_yer);
           // açılan kenarlar aynı görselin bulanık kopyasıyla dolar.
