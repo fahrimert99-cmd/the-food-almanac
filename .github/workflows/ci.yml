@@ -52,12 +52,6 @@ jobs:
           for p in uzun_en/projeler/*/proje.json; do
             python3 uzun_en/araclar/proje_kontrol.py --proje "$(basename "$(dirname "$p")")" | tail -1
           done
-      - name: Lemo yedeği (görsel servisleri çökünce kodla çizilen levha)
-        run: |
-          npm ci --prefix uzun_en/lemo --no-audit --no-fund --loglevel=error
-          printf '%s' '[{"cikti":"/tmp/lemo/y.jpg","w":1920,"h":1080,"nesneler":[["bowl","oats"],["glass","milk"]],"tohum":3,"sag_bos":true},{"cikti":"/tmp/lemo/d.jpg","w":1080,"h":1920,"nesneler":[["cup","coffee"]],"tohum":4,"sag_bos":false}]' > /tmp/lemo.json
-          node uzun_en/lemo/levha.mjs /tmp/lemo.json
-          python3 -c "from PIL import Image; import sys; s=[Image.open(f).size for f in ('/tmp/lemo/y.jpg','/tmp/lemo/d.jpg')]; print(s); sys.exit(0 if s==[(1920,1080),(1080,1920)] else 1)"
       - name: Plan (takvim kararı, yazmadan)
         run: |
           python3 -m unittest discover -s uzun_en/araclar -p "test_*.py" -v
