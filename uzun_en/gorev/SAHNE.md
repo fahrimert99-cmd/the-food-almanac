@@ -44,11 +44,6 @@ Look at `public/img/tam/NN.jpg` and its labelled grid `out/izgara/NN.jpg` with t
 3. If it is better, run `python3 uzun_en/araclar/gorsel.py --proje SLUG --sahne N --kabul`.
 4. Re-run `python3 uzun_en/araclar/hazirla.py --proje SLUG --sessiz` so `public/` and the grids update.
 
-**If `uzun_en/projeler/SLUG/images/uretim.json` lists the scene's `kaynak` as `lemo`**, the image is a code-drawn engraving
-still life (the image services were down when it was made). Try one regeneration as above; if NVIDIA and Cloudflare
-still fail, keep the plate and design on it like any image: callouts only on the objects it really shows, and the
-right third is empty paper when the scene has a title.
-
 When writing a new description:
 - Avoid the safety-filter words: blood, anatomy, cut-away, wound.
 - Avoid words that make the model draw text: label, chart, diagram, text, numbers.
