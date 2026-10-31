@@ -306,14 +306,31 @@ def zincir():
 
 # ------------------------------------------------------------------ Lemo yedeği: görseli kodla çizilen gravür levhası
 # Sahne tarifindeki nesneler (ilk geçtiği sırayla, en çok üç) levha.js'in figürlerine eşlenir; eşleşme yoksa levha
-# yapraklı bir dal çizer. Daha özel desen önce: "bowl of oats" kase/yulaf, "olive oil" şişe/yağ olur.
+# yapraklı bir dal çizer. Desenler sırayla denenir ve önce gelen (daha özel) desenin aldığı sözcükler sonrakilere sayılmaz:
+# "magnifying glass" bardak, "quarter cup measure" fincan olmaz. Kap desenleri içeriğini de alır ("walnut halves in a bowl",
+# "scale holding walnuts", "cup measure of walnut halves"): içerik kabın içinde çizilir, ayrı nesne olmaz. Çeşidi "*" olan
+# desenin çeşidi ilk grubundan, ICERIK sözlüğüyle gelir.
+_IC = r"(walnut halves|walnuts?|nuts|almonds|pecans|prunes?|plums|blueberries|berries|eggs?|oatmeal|oats|beans|lentils|yog(?:h)?urt|capsules|pills|tablets|rice|cereal)"
+ICERIK = {"walnut": "walnuts", "nut": "walnuts", "almond": "walnuts", "pecan": "walnuts", "prune": "prunes", "plum": "prunes",
+          "blueberr": "berries", "berr": "berries", "egg": "eggs", "oat": "oats", "bean": "beans", "lentil": "beans",
+          "yog": "yogurt", "capsule": "pills", "pill": "pills", "tablet": "pills", "rice": "rice", "cereal": "cereal"}
 LEMO_SOZLUK = [
+    (r"magnifying glass|magnifier|\bloupe\b", "magnifier", None),
+    (r"tape measure|measuring tape", "tape", None),
+    (r"(?:cup measure|measuring cup|measuring jug)(?:\s+(?:of|with|filled with|holding))?(?:\s+\w+){0,2}?\s+" + _IC, "measure", "*"),
+    (r"cup measure|measuring cups?|measuring jug", "measure", None),
+    (r"paper (?:pill )?bags?|paper towels?", None, None),            # yalnızca sözcükleri tüketir: "paper" defter olmasın
     (r"bathroom scale|weighing scale|scale with (?:a )?(?:blank )?dial", "dial", None),
+    (r"scales?\b[^.]{0,40}?\b(?:pan|tray)\s+(?:holding|with)(?:\s+\w+){0,2}?\s+" + _IC, "scale", "*"),
+    (r"scales?\s+(?:holding|with|carrying)(?:\s+\w+){0,4}?\s+" + _IC, "scale", "*"),
     (r"balance|scales?\b", "scale", None),
+    (r"(?:bowl|dish)\s+(?:of|with|filled with|full of|holding)(?:\s+\w+){0,2}?\s+" + _IC, "bowl", "*"),
+    (_IC + r"(?:\s+\w+){0,3}?\s+in\s+(?:a|the|one|two)(?:\s+\w+)?\s+(?:bowl|dish)", "bowl", "*"),
     (r"\boat(?:meal|s)?\b|porridge", "bowl", "oats"), (r"yog(?:h)?urt", "bowl", "yogurt"), (r"cereal", "bowl", "cereal"),
     (r"soup|stew", "bowl", "soup"), (r"beans?\b|lentils?|chickpeas?", "bowl", "beans"), (r"\brice\b", "bowl", "rice"),
-    (r"bowl of prunes|prunes in a bowl", "bowl", "prunes"), (r"bowl of walnuts|walnuts in a bowl", "bowl", "walnuts"),
-    (r"berr(?:y|ies)", "berries", None), (r"bowls?\b", "bowl", None), (r"plates?\b|trays?\b|\bdish\b|\bmeals?\b", "plate", None),
+    (r"berr(?:y|ies)", "berries", None), (r"bowls?\b", "bowl", None),
+    (r"(?:plate|platter)\s+(?:of|with)(?:\s+\w+){0,2}?\s+" + _IC, "plate", "*"),
+    (r"\bplates?\b|\bplatters?\b|meal trays?|\bdish\b|\bmeals?\b", "plate", None),
     (r"kefir", "glass", "kefir"), (r"\bmilk\b", "glass", "milk"), (r"juice", "glass", "juice"), (r"smoothie", "glass", "smoothie"),
     (r"glass(?:es)?\b", "glass", "water"), (r"coffee|espresso|decaf", "cup", "coffee"), (r"\btea\b", "cup", "tea"),
     (r"\bmugs?\b|\bcups?\b", "cup", "coffee"), (r"olive oil|cruet|\boil\b", "bottle", "oil"), (r"vinegar", "bottle", "vinegar"),
@@ -328,27 +345,35 @@ LEMO_SOZLUK = [
     (r"salmon|sardines?|\bfish\b|mackerel", "fish", None), (r"bread|toast|\bloaf\b|whole.?grains?", "bread", None),
     (r"\bbones?\b|skeleton", "bone", None), (r"turmeric", "root", "turmeric"), (r"ginger|\broots?\b", "root", "ginger"),
     (r"test tubes?|sample tubes?|laboratory|\blab\b|\btubes?\b", "tubes", None),
+    (r"(?:stack|stacks|pile|piles)\s+of(?:\s+\w+){0,2}?\s+(?:folders|files|papers|books|notebooks)", "notebook", "stack"),
     (r"notebooks?|\bbooks?\b|journal|\bfiles?\b|folders?|papers?\b|clipboard|calendar", "notebook", None), (r"spoons?\b", "spoon", None),
 ]
 
 
+def _icerik(sozcuk):
+    s = (sozcuk or "").lower()
+    return next((v for k, v in ICERIK.items() if s.startswith(k)), None)
+
+
 def lemo_nesneler(tarif, en_cok=3):
-    """Sahne tarifindeki çizilebilir nesneler: [[ad, çeşit], …], tarifte geçtiği sırayla, her addan bir tane. Sözlükte
-    önce gelen (daha özel) desenin aldığı sözcükler genel desenlere bir daha sayılmaz ("bathroom scale" terazi olmaz);
-    aynı nesnenin çeşidi en özel desenden gelir ("a glass of milk": su değil süt bardağı)."""
+    """Sahne tarifindeki çizilebilir nesneler: [[ad, çeşit], …], tarifte geçtiği sırayla, her addan bir tane. Önce gelen
+    desenin aldığı sözcükler sonrakilere sayılmaz; aynı nesnenin çeşidi en özel desenden gelir ("a glass of milk": süt)."""
     t, alinan, secilen = (tarif or "").lower(), [], {}
     for i, (desen, ad, cesit) in enumerate(LEMO_SOZLUK):
         for m in re.finditer(desen, t):
             if any(m.start() < b and a < m.end() for a, b in alinan):
                 continue
             alinan.append((m.start(), m.end()))
+            if ad is None:
+                continue
+            c = _icerik(m.group(1)) if cesit == "*" else cesit
             s = secilen.get(ad)
             if s is None:
-                secilen[ad] = [m.start(), cesit, i]
+                secilen[ad] = [m.start(), c, i]
             else:
                 s[0] = min(s[0], m.start())
-                if cesit and (s[1] is None or i < s[2]):
-                    s[1], s[2] = cesit, i
+                if c and (s[1] is None or i < s[2]):
+                    s[1], s[2] = c, i
     return [[ad, s[1]] for ad, s in sorted(secilen.items(), key=lambda e: e[1][0])][:en_cok]
 
 
