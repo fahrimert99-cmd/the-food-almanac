@@ -58,20 +58,42 @@ const union = (...fs) => (x, y) => Math.max(...fs.map(f => f(x, y)));
 // ------------------------------------------------------------------ nesneler
 // Her nesne geometri döndürür; çizim ve örtüşme (excl) dizgide yapılır. Parça: {polys, style, sp, tone, base, w}.
 // (cx, by): yatay orta ve taban çizgisi; s: nesnenin yüksekliği (px).
+// küçük nesne yığını (kabın içinde ya da terazi kefesinde): ceviz içi, kuru erik, böğürtlen, yumurta, kapsül
+const RENK_IC = { walnuts: '#c99248', prunes: '#4e3a52', berries: '#5a3a6e', eggs: '#efe2c4', pills: '#e2c25e' };
+function tane(x, y, r, v, R, k) {
+  if (v === 'eggs') { const P = []; for (let i = 0; i < 40; i++) { const a = i / 40 * Math.PI * 2, sy = Math.sin(a); P.push([x + Math.cos(a) * r * 0.78 * (1 - 0.1 * sy), y + sy * r]); } return { P, lines: [] }; }
+  if (v === 'pills') return { P: rot([...arc(x + r * 0.6, y, r * 0.4, r * 0.4, -Math.PI / 2, Math.PI / 2, 10), ...arc(x - r * 0.6, y, r * 0.4, r * 0.4, Math.PI / 2, Math.PI * 1.5, 10)], x, y, R() * Math.PI), lines: [] };
+  if (v === 'berries') return { P: ell(x, y, r * 0.75, r * 0.75, 28), lines: [] };
+  const P = []; for (let i = 0; i < 44; i++) { const a = i / 44 * Math.PI * 2; const b = v === 'walnuts' ? 1 + 0.12 * (noise1(i * 0.7, k + 3) - 0.5) + 0.06 * Math.sin(a * 6) : 1 + 0.06 * (noise1(i * 0.6, k) - 0.5); P.push([x + Math.cos(a) * r * 1.05 * b, y + Math.sin(a) * r * 0.82 * b]); }
+  const lines = v === 'walnuts' ? [[[x, y - r * 0.8], [x + r * 0.05, y], [x, y + r * 0.8]], arc(x - r * 0.45, y, r * 0.25, r * 0.5, -1.2, 1.2, 8), arc(x + r * 0.45, y, r * 0.25, r * 0.5, Math.PI - 1.2, Math.PI + 1.2, 8)] : [];
+  return { P, lines };
+}
+function kume(cx, cy, w, h, v, R, n = 7) {
+  const parts = [], lines = [], tint = [], foot = [], r = Math.min(w / 4.2, h / 1.7);
+  const yer = []; for (let k = 0; k < n; k++) { const row = k < 3 ? 0 : k < 6 ? 1 : 2, i = row === 0 ? k : row === 1 ? k - 3 : k - 6, cnt = row === 0 ? 3 : row === 1 ? 3 : 1; yer.push([cx + (i - (cnt - 1) / 2) * r * 1.65 + (R() - 0.5) * r * 0.3, cy + h * 0.15 - row * r * 0.75 + (R() - 0.5) * r * 0.15]); }
+  yer.sort((a, b) => a[1] - b[1]);                              // arkadakiler önce: öndekiler onları örter
+  yer.forEach(([x, y], k) => { const t = tane(x, y, r, v, R, k); parts.push({ polys: [t.P], style: 'contour', sp: 2.6, base: v === 'prunes' ? 0.4 : 0.12, w: 1.1, small: true }); lines.push(...t.lines); foot.push(t.P); tint.push({ polys: [t.P], color: RENK_IC[v] || '#c99248', alpha: 0.55 }); });
+  return { parts, lines, tint, foot };
+}
 const N = {};
 N.bowl = (cx, by, s, v, R) => {
   const W = s * 2.1, ry = s * 0.2, top = by - s * 0.8, depth = by - top;
   const front = arc(cx, top, W / 2, ry, 0, Math.PI), curve = arc(cx, top, W / 2, depth, 0, Math.PI).reverse();
   const body = [...front, ...curve.slice(1, -1)], rim = ell(cx, top, W / 2, ry);
-  const icerik = { oats: '#cfa766', yogurt: '#efe8d6', prunes: '#4e3a52', berries: '#6b3d5e', beans: '#9b6a48', cereal: '#d7a55a', soup: '#c98a4a', walnuts: '#c99248', rice: '#efe6d0' }[v];
-  const parts = [{ polys: [body], style: 'contour', sp: 4.6, base: 0.08 }];
-  const tint = [{ polys: [body], color: '#d9cfb9', alpha: 0.32 }];
+  const yigin = !!RENK_IC[v];
+  const icerik = { oats: '#cfa766', yogurt: '#efe8d6', beans: '#9b6a48', cereal: '#d7a55a', soup: '#c98a4a', rice: '#efe6d0' }[v];
+  const parts = [], tint = [{ polys: [body], color: '#d9cfb9', alpha: 0.32 }];
+  if (yigin) {
+    const k = kume(cx, top - ry * 0.55, W * 0.78, s * 0.42, v, R, 8);
+    parts.push({ polys: [rim], tone: () => 0.82, sp: 3.4, angle: 0.9 }, ...k.parts, { polys: [body], style: 'contour', sp: 4.6, base: 0.08 });
+    return { parts, lines: k.lines, tint: [...tint, ...k.tint], foot: [body, rim, ...k.foot], w: W, occl: true };
+  }
+  parts.push({ polys: [body], style: 'contour', sp: 4.6, base: 0.08 });
   if (icerik) {
     const mound = ell(cx, top - ry * 0.25, W / 2 * 0.86, ry * 0.86);
     parts.push({ polys: [rim], excl: [mound], tone: () => 0.85, sp: 3.6, angle: 0.9 });
     parts.push({ polys: [mound], style: 'stip', tone: B.sphereTone(cx, top - ry * 0.4, W / 2 * 0.86, ry, { base: 0.1 }), sp: 4.2 });
     tint.push({ polys: [mound], color: icerik, alpha: 0.6 });
-    if (v === 'prunes' || v === 'walnuts' || v === 'berries') for (let k = 0; k < 9; k++) { const a = R() * Math.PI * 2, r = R() * 0.7; parts.push({ polys: [ell(cx + Math.cos(a) * W / 2 * 0.62 * r, top - ry * 0.3 + Math.sin(a) * ry * 0.55 * r, s * 0.11, s * 0.075, 24, R())], style: 'contour', sp: 3, base: 0.3, w: 1.1, small: true }); }
   } else parts.push({ polys: [rim], tone: B.linTone(cx, top - ry, cx, top + ry, 0.85, 0.35), sp: 3.6, angle: 0.9 });
   return { parts, tint, foot: [body, rim], w: W };
 };
@@ -79,7 +101,9 @@ N.plate = (cx, by, s, v, R) => {
   const W = s * 2.6, ry = s * 0.36, cy = by - ry;
   const outer = ell(cx, cy, W / 2, ry), inner = ell(cx, cy - ry * 0.05, W / 2 * 0.7, ry * 0.68);
   const parts = [{ polys: [outer], excl: [inner], tone: B.linTone(cx - W / 2, cy, cx + W / 2, cy, 0.25, 0.6), sp: 4.2, angle: 0.2 }, { polys: [inner], tone: () => 0.12, sp: 6, angle: 0.25, w: 1.0 }];
-  return { parts, tint: [{ polys: [outer], color: '#e6dfcf', alpha: 0.3 }], foot: [outer], w: W, ust: [cx, cy, W / 2 * 0.62, ry * 0.55] };
+  const tint = [{ polys: [outer], color: '#e6dfcf', alpha: 0.3 }];
+  if (RENK_IC[v]) { const k = kume(cx, cy - ry * 0.35, W * 0.6, s * 0.5, v, R, 7); return { parts: [...parts, ...k.parts], lines: k.lines, tint: [...tint, ...k.tint], foot: [outer, ...k.foot], w: W, occl: true }; }
+  return { parts, tint, foot: [outer], w: W };
 };
 N.glass = (cx, by, s, v) => {
   const tw = s * 0.34, bw = s * 0.27, top = by - s;
@@ -145,20 +169,60 @@ N.egg = (cx, by, s, v, R) => {
   }
   return { parts: [parts[1], parts[0], parts[2]], tint, foot, w: s * 1.5, occl: true };
 };
-N.notebook = (cx, by, s) => {
-  const w = s * 1.25, d = s * 0.42, t = s * 0.08;
-  const topF = [[cx - w / 2 - d * 0.5, by - t - d], [cx + w / 2 - d * 0.5, by - t - d], [cx + w / 2 + d * 0.5, by - t], [cx - w / 2 + d * 0.5, by - t]];
-  const side = [[cx - w / 2 + d * 0.5, by - t], [cx + w / 2 + d * 0.5, by - t], [cx + w / 2 + d * 0.5, by], [cx - w / 2 + d * 0.5, by]];
-  const lines = []; for (let k = 1; k < 5; k++) lines.push([[cx - w / 2 + d * 0.5 + 6, by - t + k * t / 5], [cx + w / 2 + d * 0.5 - 4, by - t + k * t / 5]]);
-  return { parts: [{ polys: [topF], tone: B.linTone(cx - w, 0, cx + w, 0, 0.35, 0.65), sp: 4.2, angle: 0.15 }, { polys: [side], tone: () => 0.1, style: 'none', w: 1.2 }], lines, tint: [{ polys: [topF], color: '#7c5236', alpha: 0.45 }], foot: [topF, side], w: w + d };
+N.notebook = (cx, by, s, v, R) => {
+  const n = v === 'stack' ? 6 : 1, w = s * (n > 1 ? 1.05 : 1.25), d = s * (n > 1 ? 0.36 : 0.42), t = n > 1 ? s * 0.11 : s * 0.08;
+  const parts = [], lines = [], tint = [], foot = [];
+  for (let k = 0; k < n; k++) {                              // alttan üste: üstteki dosya en son çizilir, alttakileri örter
+    const y = by - k * t * 0.92, dx = (R() - 0.5) * s * 0.05;
+    const topF = [[cx + dx - w / 2 - d * 0.5, y - t - d], [cx + dx + w / 2 - d * 0.5, y - t - d], [cx + dx + w / 2 + d * 0.5, y - t], [cx + dx - w / 2 + d * 0.5, y - t]];
+    const side = [[cx + dx - w / 2 + d * 0.5, y - t], [cx + dx + w / 2 + d * 0.5, y - t], [cx + dx + w / 2 + d * 0.5, y], [cx + dx - w / 2 + d * 0.5, y]];
+    parts.push({ polys: [side], tone: () => 0.12, style: 'none', w: 1.1 }, { polys: [topF], tone: B.linTone(cx - w, 0, cx + w, 0, 0.3, 0.6), sp: 4.4, angle: 0.15, style: k === n - 1 ? 'hatch' : 'none', w: 1.2 });
+    for (let j = 1; j < 4; j++) lines.push([[cx + dx - w / 2 + d * 0.5 + 6, y - t + j * t / 4], [cx + dx + w / 2 + d * 0.5 - 4, y - t + j * t / 4]]);
+    foot.push(topF, side); tint.push({ polys: k === n - 1 ? [topF, side] : [side], color: k % 2 ? '#d8c8a2' : '#c2a575', alpha: 0.42 });
+  }
+  return { parts, lines, tint, foot, w: w + d, occl: true };
 };
-N.scale = (cx, by, s) => {
+N.scale = (cx, by, s, v, R) => {
   const base = [[cx - s * 0.28, by], [cx + s * 0.28, by], [cx + s * 0.18, by - s * 0.08], [cx - s * 0.18, by - s * 0.08]];
   const post = rrect(cx - s * 0.03, by - s * 0.95, cx + s * 0.03, by - s * 0.08, 2), beam = rrect(cx - s * 0.62, by - s * 0.95, cx + s * 0.62, by - s * 0.91, 2);
-  const panL = [...arc(cx - s * 0.58, by - s * 0.42, s * 0.24, s * 0.09, 0, Math.PI)], panR = [...arc(cx + s * 0.58, by - s * 0.42, s * 0.24, s * 0.09, 0, Math.PI)];
+  const tilt = RENK_IC[v] ? s * 0.05 : 0;                    // dolu kefe biraz aşağıda
+  const panL = [...arc(cx - s * 0.58, by - s * 0.42 + tilt, s * 0.25, s * 0.09, 0, Math.PI)], panR = [...arc(cx + s * 0.58, by - s * 0.42 - tilt, s * 0.25, s * 0.09, 0, Math.PI)];
   const lines = [];
-  for (const sx of [-1, 1]) { const x = cx + sx * s * 0.58; lines.push([[x, by - s * 0.91], [x - s * 0.24, by - s * 0.42]], [[x, by - s * 0.91], [x + s * 0.24, by - s * 0.42]]); }
-  return { parts: [{ polys: [base], sp: 3, base: 0.3 }, { polys: [post], sp: 2.4, base: 0.3, angle: Math.PI / 2 }, { polys: [beam], sp: 2.4, base: 0.3 }, { polys: [panL], style: 'contour', sp: 3, base: 0.2 }, { polys: [panR], style: 'contour', sp: 3, base: 0.2 }], lines, tint: [{ polys: [base, post, beam, panL, panR], color: '#b89a5c', alpha: 0.4 }], foot: [base, post, beam, panL, panR], w: s * 1.5 };
+  for (const sx of [-1, 1]) { const x = cx + sx * s * 0.58, py = by - s * 0.42 + (sx < 0 ? tilt : -tilt); lines.push([[x, by - s * 0.91], [x - s * 0.25, py]], [[x, by - s * 0.91], [x + s * 0.25, py]]); }
+  const parts = [{ polys: [base], sp: 3, base: 0.3 }, { polys: [post], sp: 2.4, base: 0.3, angle: Math.PI / 2 }, { polys: [beam], sp: 2.4, base: 0.3 }, { polys: [panR], style: 'contour', sp: 3, base: 0.2 }];
+  const tint = [{ polys: [base, post, beam, panL, panR], color: '#b89a5c', alpha: 0.4 }], foot = [base, post, beam, panL, panR];
+  if (RENK_IC[v]) { const k = kume(cx - s * 0.58, by - s * 0.5 + tilt, s * 0.44, s * 0.22, v, R, 6); parts.push(...k.parts); lines.push(...k.lines); tint.push(...k.tint); foot.push(...k.foot); }
+  parts.push({ polys: [panL], style: 'contour', sp: 3, base: 0.2 });
+  return { parts, lines, tint, foot, w: s * 1.5, occl: !!RENK_IC[v] };
+};
+N.measure = (cx, by, s, v, R) => {   // cam ölçü kabı: ağzı geniş, solda gaga, sağda kulp, yanında çizgiler
+  const tw = s * 0.42, bw = s * 0.34, top = by - s * 0.92;
+  const body = [[cx - tw - s * 0.06, top - s * 0.02], [cx - tw + s * 0.04, top + s * 0.04], [cx + tw, top], [cx + bw, by - s * 0.03], [cx + bw * 0.96, by], [cx - bw * 0.96, by], [cx - bw, by - s * 0.03], [cx - tw, top + s * 0.08]];
+  const hO = ell(cx + tw + s * 0.1, top + s * 0.36, s * 0.16, s * 0.24), hI = ell(cx + tw + s * 0.1, top + s * 0.36, s * 0.08, s * 0.15);
+  const lines = [[[cx - tw * 0.7, top + s * 0.1], [cx - bw * 0.7, by - s * 0.08]]];
+  for (let j = 1; j <= 4; j++) { const y = by - j * s * 0.18; lines.push([[cx - bw * 0.15, y], [cx + bw * (j % 2 ? 0.25 : 0.45), y]]); }
+  const parts = [{ polys: [hO], excl: [hI, body], tone: () => 0.25, sp: 3.2, angle: 0.6 }];
+  const tint = [{ polys: [body], color: '#c9d3d5', alpha: 0.25 }], foot = [body, hO];
+  if (RENK_IC[v]) { const k = kume(cx, by - s * 0.3, bw * 1.7, s * 0.5, v, R, 7); parts.push(...k.parts); lines.push(...k.lines); tint.push(...k.tint); }
+  else if (v) { const lq = [[cx - bw * 0.99, by - s * 0.45], [cx + bw * 0.99, by - s * 0.45], [cx + bw, by - s * 0.03], [cx - bw, by - s * 0.03]]; parts.push({ polys: [lq], tone: () => 0.3, sp: 4.4, angle: Math.PI / 2 }); }
+  parts.push({ polys: [body], style: 'none', w: 1.5 });
+  return { parts, lines, rims: [ell(cx + s * 0.02, top + s * 0.03, tw * 1.02, s * 0.045)], tint, foot, w: tw * 2 + s * 0.3, occl: true };
+};
+N.magnifier = (cx, by, s, v, R) => {   // masada yatan büyüteç: basık mercek halkası ve sapı
+  const lx = cx - s * 0.35, ly = by - s * 0.2, rx = s * 0.5, ryy = s * 0.2;
+  const ringO = ell(lx, ly, rx, ryy), ringI = ell(lx, ly, rx * 0.86, ryy * 0.82);
+  const handle = rot(rrect(lx + rx * 0.92, ly - s * 0.045, lx + rx + s * 0.75, ly + s * 0.045, s * 0.04), lx + rx, ly, 0.22);
+  const lines = [arc(lx - rx * 0.2, ly - ryy * 0.1, rx * 0.5, ryy * 0.45, Math.PI * 1.1, Math.PI * 1.55, 10)];
+  return { parts: [{ polys: [handle], excl: [ringO], tone: B.linTone(0, ly - s * 0.05, 0, ly + s * 0.08, 0.2, 0.75), sp: 2.6, angle: 0.22 }, { polys: [ringO], excl: [ringI], tone: () => 0.5, sp: 2.4, angle: 0.4 }, { polys: [ringI], tone: () => 0.08, sp: 6, angle: -0.5, w: 0.9 }],
+    lines, tint: [{ polys: [ringO, handle], color: '#b8995a', alpha: 0.45 }, { polys: [ringI], color: '#cfdadb', alpha: 0.25 }], foot: [ringO, handle], w: s * 1.75 };
+};
+N.tape = (cx, by, s, v, R) => {   // kıvrılmış mezura: sarmal halkalar ve dışarı uzanan şerit
+  const r = s * 0.42, cy = by - r * 0.42, coil = ell(cx, cy, r, r * 0.42), lines = [];
+  for (let k = 1; k < 5; k++) lines.push(ell(cx, cy, r * (1 - k * 0.17), r * 0.42 * (1 - k * 0.17), 48));
+  const strip = []; for (let i = 0; i <= 30; i++) { const u = i / 30; strip.push([cx + r * 0.9 + u * s * 0.9, by - s * 0.03 - Math.sin(u * Math.PI) * s * 0.12]); }
+  const band = [...strip.map(([x, y]) => [x, y - s * 0.045]), ...strip.slice().reverse().map(([x, y]) => [x, y + s * 0.045])];
+  for (let i = 2; i < 30; i += 2) { const [x, y] = strip[i]; lines.push([[x, y - s * 0.045], [x, y - (i % 6 === 0 ? s * 0.005 : s * 0.025)]]); }
+  return { parts: [{ polys: [band], tone: () => 0.15, sp: 5, w: 1.1, angle: 0.1 }, { polys: [coil], tone: B.sphereTone(cx, cy, r, r * 0.42, { base: 0.1 }), sp: 3.4, angle: 0.3 }], lines, tint: [{ polys: [coil, band], color: '#d9b84a', alpha: 0.55 }], foot: [coil, band], w: r * 2 + s * 0.9 };
 };
 N.dial = (cx, by, s) => {   // banyo tartısı
   const pl = rrect(cx - s * 0.75, by - s * 0.22, cx + s * 0.75, by, s * 0.08), di = ell(cx, by - s * 0.32, s * 0.24, s * 0.24);
@@ -293,18 +357,18 @@ export function draw(ctx, spec) {
   ctx.fillStyle = '#f3eee2'; ctx.fillRect(0, 0, W, H);
   ctx.globalCompositeOperation = 'multiply'; ctx.globalAlpha = 0.75; ctx.drawImage(paperTexture(W, H, 7 + (spec.tohum || 0) % 50), 0, 0, W, H); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
   // alan: başlıklı sahnede sol üçte iki; dikeyde ortada, alt üçte bir boş
-  const A = dikey ? { x0: 60, x1: W - 60, top: H * 0.27, by: H * 0.64 } : spec.sag_bos ? { x0: 100, x1: W * 0.65, top: H * 0.08, by: H * 0.85 } : { x0: W * 0.12, x1: W * 0.88, top: H * 0.08, by: H * 0.85 };
+  const A = dikey ? { x0: 50, x1: W - 50, top: H * 0.25, by: H * 0.65 } : spec.sag_bos ? { x0: 80, x1: W * 0.66, top: H * 0.06, by: H * 0.86 } : { x0: W * 0.08, x1: W * 0.92, top: H * 0.06, by: H * 0.86 };
   const list = (spec.nesneler && spec.nesneler.length ? spec.nesneler : [['sprig', null]]).filter(([n]) => N[n]).slice(0, dikey ? 2 : 3);
   if (!list.length) list.push(['sprig', null]);
   const n = list.length, hgt = A.by - A.top, mid = (A.x0 + A.x1) / 2, wid = A.x1 - A.x0;
   // yerleşim: ana nesne büyük ve arkada, diğerleri önde ve yanda
-  const slots = n === 1 ? [[mid, A.by - hgt * 0.03, hgt * 0.92]]
-    : n === 2 ? (dikey ? [[mid - wid * 0.06, A.by - hgt * 0.06, hgt * 0.9], [mid + wid * 0.3, A.by + hgt * 0.04, hgt * 0.42]] : [[mid - wid * 0.16, A.by - hgt * 0.08, hgt * 0.86], [mid + wid * 0.26, A.by, hgt * 0.56]])
-      : [[mid, A.by - hgt * 0.1, hgt * 0.8], [mid - wid * 0.31, A.by, hgt * 0.5], [mid + wid * 0.31, A.by + hgt * 0.02, hgt * 0.48]];
+  const slots = n === 1 ? [[mid, A.by - hgt * 0.03, hgt * 0.96]]
+    : n === 2 ? (dikey ? [[mid - wid * 0.06, A.by - hgt * 0.06, hgt * 0.9], [mid + wid * 0.3, A.by + hgt * 0.04, hgt * 0.42]] : [[mid - wid * 0.14, A.by - hgt * 0.06, hgt * 0.92], [mid + wid * 0.28, A.by + hgt * 0.02, hgt * 0.62]])
+      : [[mid - wid * 0.02, A.by - hgt * 0.1, hgt * 0.86], [mid - wid * 0.31, A.by, hgt * 0.56], [mid + wid * 0.31, A.by + hgt * 0.02, hgt * 0.54]];
   const objs = list.map(([ad, cesit], i) => {
     let [x, by, s] = slots[i];
     let o = N[ad](x, by, s, cesit, R);
-    const maxW = dikey ? wid * (i === 0 ? 0.82 : 0.4) : n === 1 ? wid * 0.88 : n === 2 ? wid * (i === 0 ? 0.6 : 0.4) : wid * (i === 0 ? 0.5 : 0.32);
+    const maxW = dikey ? wid * (i === 0 ? 0.86 : 0.42) : n === 1 ? wid * 0.9 : n === 2 ? wid * (i === 0 ? 0.66 : 0.42) : wid * (i === 0 ? 0.56 : 0.36);
     if (o.w > maxW) { s *= maxW / o.w; o = N[ad](x, by, s, cesit, R); }
     return { ...o, ad, x, by, s };
   });

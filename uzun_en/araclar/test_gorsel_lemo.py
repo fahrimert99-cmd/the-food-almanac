@@ -19,6 +19,22 @@ class LemoNesneler(unittest.TestCase):
         self.assertEqual(G.lemo_nesneler("a bathroom scale with a blank dial beside a small bowl of walnuts")[:2],
                          [["dial", None], ["bowl", "walnuts"]])
 
+    def test_kap_icerigi_ayri_nesne_olmaz(self):
+        # kıyas bulguları (walnuts-heart 5, 6, 12, 26): ölçü kabı fincan, büyüteç bardak olmuyor; cevizler kabın içinde
+        self.assertEqual(G.lemo_nesneler("a small kitchen scale holding a handful of walnuts, a quarter cup measure of walnut halves standing beside it"),
+                         [["scale", "walnuts"], ["measure", "walnuts"]])
+        self.assertEqual(G.lemo_nesneler("small golden droplets rising from the walnut halves in a bowl"), [["bowl", "walnuts"]])
+        self.assertEqual(G.lemo_nesneler("a tall stack of research folders with blank covers beside a bowl of walnuts and an antique brass magnifying glass"),
+                         [["notebook", "stack"], ["bowl", "walnuts"], ["magnifier", None]])
+        self.assertEqual(G.lemo_nesneler("a set of old-fashioned kitchen scales with a bowl of walnuts on one tray, tape measure curled beside it"),
+                         [["scale", "walnuts"], ["tape", None]])
+        self.assertEqual(G.lemo_nesneler("a pair of balance scales, one pan holding eggs and the other holding a small pile of pale round particles"),
+                         [["scale", "eggs"]])
+
+    def test_yalnizca_tuketen_desen(self):
+        self.assertEqual(G.lemo_nesneler("a bowl of prunes beside a paper pill bag and a small brass scale"), [["bowl", "prunes"], ["scale", None]])
+        self.assertEqual(G.lemo_nesneler("a frying pan with eggs on a stove"), [["egg", None]])
+
     def test_en_cok_uc_ve_eslesmezse_bos(self):
         self.assertEqual(len(G.lemo_nesneler("eggs, toast, an apple, a cup of tea and a jar of honey")), 3)
         self.assertEqual(G.lemo_nesneler("a consultation desk with a stethoscope, quiet afternoon light"), [])
