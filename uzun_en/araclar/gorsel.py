@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Sahne görselleri: NVIDIA FLUX gravür illüstrasyonları (yedek: Cloudflare FLUX, Gemini, Pollinations).
+"""Sahne görselleri: NVIDIA FLUX gravür illüstrasyonları (yedek: Cloudflare FLUX, Gemini, Lemo, Pollinations).
 
   python3 uzun_en/araclar/gorsel.py --proje SLUG                     # eksik görselleri (ve kapak arka planını) üret
   python3 uzun_en/araclar/gorsel.py --proje SLUG --sadece kapak      # yalnızca tarifi değişen kapak görselini üret
@@ -12,8 +12,12 @@
 Görseller projeler/SLUG/images/ altına yazılır (git'e girmez; GitHub sürümünde arşivlenir), uretim.json
 hangi tarifle ve hangi sağlayıcıyla üretildiklerini tutar. Kart/grafik sahnelerinde görsel yoktur: yazılar ve
 sayılar AI'a çizdirilmez, Remotion'da kodla çizilir.
+
+Lemo yedeği: görsel servisleri üretemezse (slota zaman varken proje gece beklenir; plan.py --gorsel-ertele) eksik sahne
+görselleri Pollinations'tan önce Lemo gravür motoruyla kodla çizilir (uzun_en/lemo/levha.mjs; tariften en çok üç nesne,
+metinsiz natürmort). Kota gerekmez; kalite kapısı onları yine yedek sayar, kaliteli kaynak dönünce yeniden üretilir.
 """
-import argparse, base64, concurrent.futures as cf, hashlib, json, os, re, shutil, sys, threading, time
+import argparse, base64, concurrent.futures as cf, hashlib, json, os, re, shutil, subprocess, sys, tempfile, threading, time
 import urllib.error, urllib.parse, urllib.request
 
 from PIL import Image, ImageStat
@@ -41,7 +45,9 @@ KAPAK_STIL = ("Bright, vivid hand-painted editorial illustration with bold satur
               "soft shading, appetizing and glossy, high contrast, isolated on a plain pure white background, crisp "
               "high detail, 16:9 landscape.")
 GEMINI_MODEL = os.environ.get("UZUN_GEMINI_IMAGE_MODEL", "").strip() or "gemini-2.5-flash-image"
-PUAN = {"elle": 100, "nvidia": 90, "cloudflare": 90, "gemini": 90, "pollinations": 30, "yedek": 0}
+PUAN = {"elle": 100, "nvidia": 90, "cloudflare": 90, "gemini": 90, "lemo": 50, "pollinations": 30, "yedek": 0}
+ZINCIR = "nvidia,cloudflare,gemini,lemo,pollinations"
+LEMO = os.path.join(O.KOK, "lemo")
 KALITE_ESIK = 0.2      # görsellerin bundan fazlası eksik ya da yedek kaynaklıysa (NVIDIA/Gemini değil) kalite düşük
 _KAPALI = set()
 _NVIDIA_HATA = [0]
@@ -218,7 +224,7 @@ def dikey_prompt(sahne):
     return f"{sahne['gorsel'].rstrip('.')}.{DIKEY_YER} {STIL} {YASAK}"
 
 
-def dikey(proje, idler, cikti):
+def dikey(proje, idler, cikti, img=None):
     """Shorts için seçili sahnelerin dikey görsellerini üretir: cikti/dikey_NN.jpg (1080x1920). Önce NVIDIA (iki tohum),
     olmazsa Cloudflare FLUX; ikisi de olmazsa kisa.py yatay görseli kırpar. Var olan dosyalar yeniden üretilmez.
     Üretilemeyenlerin listesini döndürür."""
@@ -250,6 +256,15 @@ def dikey(proje, idler, cikti):
             O.log(f"   ✗ dikey {n} üretilemedi")
         if os.path.exists(ham):
             os.remove(ham)
+    # yatay görseli Lemo levhası olan sahnede kırpma levhayı bozar: dikey levha da kodla çizilir
+    kay = Kayit(os.path.join(img, "uretim.json")) if img else None
+    lem = [n for n in eksik if kay and (kay.al(n) or {}).get("kaynak") == "lemo"]
+    if lem:
+        ok = lemo_ciz([lemo_is(n, sahneler[n], os.path.join(cikti, f"dikey_{n:02d}.jpg"), w=1080, h=1920) for n in lem])
+        for n in lem:
+            if os.path.join(cikti, f"dikey_{n:02d}.jpg") in ok:
+                eksik.remove(n)
+                O.log(f"   ✓ dikey {n} (lemo)")
     return eksik
 
 
@@ -260,10 +275,10 @@ def kapak_prompt(proje):
 def uret(prompt, hedef, min_puan=-1, tohum=0, sira=None):
     """Sağlayıcı zinciriyle görsel üretir, 1920x1080'e oturtur. Kaynak adı | None (hedef yalnızca başarıda yazılır)."""
     ham = hedef + ".ham"
-    sira = sira or [x.strip() for x in (os.environ.get("UZUN_GORSEL_SIRA") or "nvidia,cloudflare,gemini,pollinations").split(",")]
+    sira = zincir() if sira is None else sira
     kaynak, alt_kirp = None, 0.0
     for x in sira:
-        if PUAN.get(x, 0) <= min_puan:
+        if PUAN.get(x, 0) <= min_puan or x == "lemo":     # lemo tek tek değil, hepsi() içinde toplu çizilir
             continue
         kaynak = (_nvidia(prompt, ham, tohum) if x == "nvidia" else _cloudflare(prompt, ham, tohum) if x == "cloudflare"
                   else _gemini(prompt, ham) if x == "gemini"
@@ -283,6 +298,103 @@ def uret(prompt, hedef, min_puan=-1, tohum=0, sira=None):
         if os.path.exists(ham):
             os.remove(ham)
     return kaynak
+
+
+def zincir():
+    return [x.strip() for x in (os.environ.get("UZUN_GORSEL_SIRA") or ZINCIR).split(",") if x.strip()]
+
+
+# ------------------------------------------------------------------ Lemo yedeği: görseli kodla çizilen gravür levhası
+# Sahne tarifindeki nesneler (ilk geçtiği sırayla, en çok üç) levha.js'in figürlerine eşlenir; eşleşme yoksa levha
+# yapraklı bir dal çizer. Daha özel desen önce: "bowl of oats" kase/yulaf, "olive oil" şişe/yağ olur.
+LEMO_SOZLUK = [
+    (r"bathroom scale|weighing scale|scale with (?:a )?(?:blank )?dial", "dial", None),
+    (r"balance|scales?\b", "scale", None),
+    (r"\boat(?:meal|s)?\b|porridge", "bowl", "oats"), (r"yog(?:h)?urt", "bowl", "yogurt"), (r"cereal", "bowl", "cereal"),
+    (r"soup|stew", "bowl", "soup"), (r"beans?\b|lentils?|chickpeas?", "bowl", "beans"), (r"\brice\b", "bowl", "rice"),
+    (r"bowl of prunes|prunes in a bowl", "bowl", "prunes"), (r"bowl of walnuts|walnuts in a bowl", "bowl", "walnuts"),
+    (r"berr(?:y|ies)", "berries", None), (r"bowls?\b", "bowl", None), (r"plates?\b|trays?\b|\bdish\b|\bmeals?\b", "plate", None),
+    (r"kefir", "glass", "kefir"), (r"\bmilk\b", "glass", "milk"), (r"juice", "glass", "juice"), (r"smoothie", "glass", "smoothie"),
+    (r"glass(?:es)?\b", "glass", "water"), (r"coffee|espresso|decaf", "cup", "coffee"), (r"\btea\b", "cup", "tea"),
+    (r"\bmugs?\b|\bcups?\b", "cup", "coffee"), (r"olive oil|cruet|\boil\b", "bottle", "oil"), (r"vinegar", "bottle", "vinegar"),
+    (r"pill bottle|supplement bottle|bottles? of (?:capsules|pills|tablets)|bottles\b", "bottle", "pills"), (r"bottle", "bottle", None),
+    (r"\bjars?\b|honey", "jar", None), (r"capsules?", "pills", "capsule"),
+    (r"\bpills?\b|tablets?|supplements?|vitamins?|medication", "pills", "tablet"), (r"garlic|onions?", "garlic", None),
+    (r"\bkale\b", "leaves", "kale"), (r"spinach|leafy|greens\b|lettuce|leaves|\bleaf\b|herbs?\b", "leaves", None),
+    (r"broccoli", "broccoli", None), (r"grapefruit", "fruit", "grapefruit"), (r"oranges?\b", "fruit", "orange"),
+    (r"lemons?\b|limes?\b", "fruit", "lemon"), (r"apples?\b", "fruit", "apple"), (r"beet(?:root)?s?\b", "fruit", "beet"),
+    (r"prunes?\b|plums?\b", "fruit", "prune"), (r"tomato(?:es)?", "fruit", "tomato"), (r"peach(?:es)?", "fruit", "peach"),
+    (r"fruits?\b", "fruit", None), (r"\beggs?\b", "egg", None), (r"walnuts?|\bnuts?\b|almonds?|pecans?", "walnut", None),
+    (r"salmon|sardines?|\bfish\b|mackerel", "fish", None), (r"bread|toast|\bloaf\b|whole.?grains?", "bread", None),
+    (r"\bbones?\b|skeleton", "bone", None), (r"turmeric", "root", "turmeric"), (r"ginger|\broots?\b", "root", "ginger"),
+    (r"test tubes?|sample tubes?|laboratory|\blab\b|\btubes?\b", "tubes", None),
+    (r"notebooks?|\bbooks?\b|journal|\bfiles?\b|folders?|papers?\b|clipboard|calendar", "notebook", None), (r"spoons?\b", "spoon", None),
+]
+
+
+def lemo_nesneler(tarif, en_cok=3):
+    """Sahne tarifindeki çizilebilir nesneler: [[ad, çeşit], …], tarifte geçtiği sırayla, her addan bir tane. Sözlükte
+    önce gelen (daha özel) desenin aldığı sözcükler genel desenlere bir daha sayılmaz ("bathroom scale" terazi olmaz);
+    aynı nesnenin çeşidi en özel desenden gelir ("a glass of milk": su değil süt bardağı)."""
+    t, alinan, secilen = (tarif or "").lower(), [], {}
+    for i, (desen, ad, cesit) in enumerate(LEMO_SOZLUK):
+        for m in re.finditer(desen, t):
+            if any(m.start() < b and a < m.end() for a, b in alinan):
+                continue
+            alinan.append((m.start(), m.end()))
+            s = secilen.get(ad)
+            if s is None:
+                secilen[ad] = [m.start(), cesit, i]
+            else:
+                s[0] = min(s[0], m.start())
+                if cesit and (s[1] is None or i < s[2]):
+                    s[1], s[2] = cesit, i
+    return [[ad, s[1]] for ad, s in sorted(secilen.items(), key=lambda e: e[1][0])][:en_cok]
+
+
+def lemo_is(anahtar, sahne, cikti, w=W, h=H):
+    return {"cikti": cikti, "w": w, "h": h, "nesneler": lemo_nesneler(sahne.get("gorsel", "")),
+            "tohum": int(anahtar) if str(anahtar).isdigit() else 1, "sag_bos": bool(sahne.get("baslik")) and w > h}
+
+
+def _lemo_hazir():
+    if os.path.isdir(os.path.join(LEMO, "node_modules", "playwright-core")):
+        return True
+    if not shutil.which("npm"):
+        return False
+    r = subprocess.run(["npm", "ci", "--prefix", LEMO, "--no-audit", "--no-fund", "--loglevel=error"],
+                       capture_output=True, text=True, timeout=600)
+    if r.returncode:
+        O.log(f"      lemo: npm ci başarısız: {(r.stderr or r.stdout).strip()[-300:]}")
+    return r.returncode == 0
+
+
+def lemo_ciz(isler):
+    """Lemo levhalarını çizer; başarıyla yazılan çıktı yollarının kümesini döndürür."""
+    if not isler or "lemo" in _KAPALI:
+        return set()
+    if not shutil.which("node") or not _lemo_hazir():
+        _kapat("lemo", "node ya da playwright-core yok")
+        return set()
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
+        json.dump(isler, f)
+    try:
+        r = subprocess.run(["node", os.path.join(LEMO, "levha.mjs"), f.name], capture_output=True, text=True,
+                           timeout=60 + 30 * len(isler))
+    except subprocess.TimeoutExpired:
+        O.log("      lemo: zaman aşımı")
+        return set()
+    finally:
+        os.remove(f.name)
+    ok = set()
+    for satir in r.stdout.splitlines():
+        try:
+            ok.add(json.loads(satir)["cikti"])
+        except (ValueError, KeyError, TypeError):
+            pass
+    if r.returncode:
+        O.log(f"      lemo: {len(isler) - len(ok)} levha çizilemedi: {r.stderr.strip()[-300:]}")
+    return {p for p in ok if os.path.exists(p) and os.path.getsize(p) > 1500}
 
 
 def _cf_var():
@@ -355,10 +467,12 @@ def hepsi(slug, proje, sadece=None):
         isler.append((k, pr, hedef, puan(r.get("kaynak")) if ayni else -1))
     O.log(f"görseller: {len(hedefler)} hedef, {len(isler)} üretilecek")
     eksik = []
+    sira = zincir()
+    on, son = (sira[:sira.index("lemo")], sira[sira.index("lemo") + 1:]) if "lemo" in sira else (sira, [])
 
     def is_(x):
         k, pr, hedef, min_p = x
-        kaynak = uret(pr, hedef, min_puan=min_p)        # tohum yalnızca tek iş parçacıklı aday aracında
+        kaynak = uret(pr, hedef, min_puan=min_p, sira=on)   # tohum yalnızca tek iş parçacıklı aday aracında
         if kaynak:
             kay.yaz(k, {"hash": _hash(pr), "kaynak": kaynak})
             O.log(f"   ✓ {k} ({kaynak})")
@@ -393,6 +507,29 @@ def hepsi(slug, proje, sadece=None):
                 if k in eksik:
                     eksik.remove(k)
                 O.log(f"   ✓ {k} ({kaynak}, tur {tur})")
+    # Lemo yedeği: kaliteli kaynaklar üretemediyse eksik (ya da Pollinations'tan gelmiş) sahne görselleri kodla çizilir.
+    # Kapak hariç: tıklamayı belirler, yedek kaynakla bırakılmaz (kalite kapısı).
+    if "lemo" in sira:
+        sahneler = {s["id"]: s for s in proje["sahneler"]}
+        lem = [(k, pr, h) for k, pr, h in hedefler
+               if k != "kapak" and k in sahneler and _zayif(kay, k, h) and puan((kay.al(k) or {}).get("kaynak")) < PUAN["lemo"]]
+        if lem:
+            O.log(f"   {len(lem)} görsel Lemo gravür levhası olarak kodla çiziliyor (görsel servisleri üretemedi)")
+            ok = lemo_ciz([lemo_is(k, sahneler[k], h) for k, _, h in lem])
+            for k, pr, h in lem:
+                if h in ok:
+                    kay.yaz(k, {"hash": _hash(pr), "kaynak": "lemo"})
+                    if k in eksik:
+                        eksik.remove(k)
+                    O.log(f"   ✓ {k} (lemo)")
+    for k, pr, h in hedefler:                               # zincirin geri kalanı (Pollinations): hâlâ eksik olanlar
+        if son and not os.path.exists(h):
+            kaynak = uret(pr, h, sira=son)
+            if kaynak:
+                kay.yaz(k, {"hash": _hash(pr), "kaynak": kaynak})
+                if k in eksik:
+                    eksik.remove(k)
+                O.log(f"   ✓ {k} ({kaynak})")
     dusuk = [k for k, _, h in hedefler if os.path.exists(h) and _zayif(kay, k, h)]
     O.log(f"görseller bitti: eksik {eksik or 'yok'}, düşük kaliteli {dusuk or 'yok'}")
     return eksik
@@ -462,7 +599,7 @@ def main():
     if a.kalite:
         return kalite(slug, proje)
     if a.dikey:
-        eksik = dikey(proje, [int(x) for x in a.dikey.split(",") if x.strip()], a.cikti)
+        eksik = dikey(proje, [int(x) for x in a.dikey.split(",") if x.strip()], a.cikti, img=os.path.join(O.proje_dir(slug), "images"))
         sys.exit(1 if eksik else 0)
     if a.sahne is not None:
         return aday(slug, proje, a.sahne, a.aciklama, a.tohum, a.kabul)

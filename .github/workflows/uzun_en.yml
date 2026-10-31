@@ -11,7 +11,9 @@ name: Uzun Video EN (The Food Almanac, otonom)
 #   Claude -> önce CLAUDE_YEDEK2_TOKEN, sonra CLAUDE_ANA_TOKEN, sonra CLAUDE_CODE_OAUTH_TOKEN — uzun_en/araclar/claude_calistir.sh.
 #             Üçü de OAuth token (claude setup-token, abonelik kotası). API anahtarı (sk-ant-api...) verilse bile kullanılmaz.
 #   Gemini -> GEMINI_API_KEY ücretsiz katman (faturalandırma kapalı proje). Claude kotası biterse devralır.
-#   Görsel -> NVIDIA_API_KEY (ücretsiz); NVIDIA çökerse Cloudflare Workers AI FLUX (CLOUDFLARE_ACCOUNT_ID/API_TOKEN, kota bitince ikinci hesap CLOUDFLARE_ACCOUNT_ID_2/API_TOKEN_2; günlük ücretsiz kota). Ses -> Kokoro (yerel, açık kaynak; eski projeler Piper). Müzik -> kodla üretilir.
+#   Görsel -> NVIDIA_API_KEY (ücretsiz); NVIDIA çökerse Cloudflare Workers AI FLUX (CLOUDFLARE_ACCOUNT_ID/API_TOKEN, kota bitince ikinci hesap CLOUDFLARE_ACCOUNT_ID_2/API_TOKEN_2; günlük ücretsiz kota).
+#             Hepsi tükenirse slota zaman varken gece beklenir; yoksa eksik sahneler Lemo gravür motoruyla kodla çizilir (uzun_en/lemo, kota gerekmez).
+#   Ses -> Kokoro (yerel, açık kaynak; eski projeler Piper). Müzik -> kodla üretilir.
 # Ayarlar (Settings > Variables, isteğe bağlı): UZUN_CLAUDE_MODEL (ör. opus / sonnet; boş = CLI varsayılanı),
 #   UZUN_GEMINI_MODEL, UZUN_SAHNE_GRUP (paralel sahne ajanı sayısı, varsayılan 8).
 # Durdurmak: Actions > bu iş akışı > "..." > Disable workflow.
@@ -369,7 +371,7 @@ jobs:
           GORSEL_DURUM: /tmp/gorsel_durum.json
         run: |
           python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
-          # Slota zaman varsa zayıf yedek (Pollinations) üretilmez: kalite kapısı onu zaten kabul etmez, bir saat sürüyordu
+          # Slota zaman varsa yedekler (Lemo levhası, Pollinations) kullanılmaz: kalite kapısı onları kabul etmez, proje gece beklenir
           if python3 uzun_en/araclar/plan.py --gorsel-bekle "$SLUG" >/dev/null; then export UZUN_GORSEL_SIRA=nvidia,cloudflare,gemini; fi
           python3 uzun_en/araclar/gorsel.py --proje "$SLUG" || echo "::warning::bazı görseller üretilemedi (bir önceki sahnenin görseli kullanılır; sahne ajanı yeniden dener)"
           python3 uzun_en/araclar/ses.py --proje "$SLUG"
