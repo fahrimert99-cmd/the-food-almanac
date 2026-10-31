@@ -1,0 +1,10 @@
+{
+  "name": "uzun-en-lemo",
+  "private": true,
+  "type": "module",
+  "description": "Lemo yedeği: görsel servisleri üretemediğinde sahne görselini kodla çizen gravür levhası (levha.mjs)",
+  "license": "MIT",
+  "dependencies": {
+    "playwright-core": "1.56.1"
+  }
+}
