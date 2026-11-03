@@ -1,0 +1,20 @@
+{
+  "baslik": ["CINNAMON'S", "LIVER CATCH?"],
+  "baslik_yt": "Cinnamon's Hidden Catch: How Much Is Too Much?",
+  "aciklama": "Most cinnamon sold in North America is cassia, which contains coumarin. Here is the daily limit regulators set and how a teaspoon compares.",
+  "parcalar": [
+    {"sahne": 32, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 32, "cumleler": [1, 2], "baslik": {"satirlar": ["COUMARIN", "AND LIVER"], "not": "sensitive people, long term"}, "etiket": null},
+    {"sahne": 34, "cumleler": [0], "gorsel": 33,
+     "baslik": {"satirlar": ["CASSIA VS", "CEYLON"], "vurgu": "10–18X", "not": "more coumarin in cassia"},
+     "etiket": "AGES · Austrian food safety agency"},
+    {"sahne": 35, "cumleler": [0],
+     "baslik": {"satirlar": ["DAILY LIMIT"], "vurgu": "0.1 MG/KG", "not": "coumarin per kg body weight"},
+     "etiket": "European regulators"},
+    {"sahne": 35, "cumleler": [1]},
+    {"sahne": 55, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["1 TEASPOON", "DAILY?"], "vurgu": "5–8 MG", "not": "coumarin, cassia (our math)"},
+     "etiket": null},
+    {"sahne": 53, "cumleler": [1, 2], "baslik": {"satirlar": ["LOOK FOR", "CEYLON"]}, "etiket": null}
+  ]
+}
