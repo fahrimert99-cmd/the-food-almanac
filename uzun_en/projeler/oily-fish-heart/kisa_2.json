@@ -1,0 +1,17 @@
+{
+  "baslik": ["FISH FOR A", "HEALTHY HEART?"],
+  "baslik_yt": "How Much Fish Your Heart Needs Each Week",
+  "aciklama": "Eating fish is linked with lower heart risk in 40 pooled studies. Here is how much to eat, which fish to pick and what to swap it for.",
+  "parcalar": [
+    {"sahne": 47, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 35, "cumleler": [0],
+     "baslik": {"satirlar": ["FISH AND", "HEART DEATHS"], "vurgu": "40", "not": "studies pooled"},
+     "etiket": "Zhang et al. · Nutrients · 2020"},
+    {"sahne": 36, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 38, "cumleler": [0]},
+    {"sahne": 43, "cumleler": [1]},
+    {"sahne": 48, "cumleler": [1, 2]},
+    {"sahne": 55, "cumleler": [0]},
+    {"sahne": 55, "cumleler": [1], "gorsel": 47, "baslik": null}
+  ]
+}
