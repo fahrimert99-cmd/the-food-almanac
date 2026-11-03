@@ -1,0 +1,23 @@
+{
+  "baslik": ["THIRST FADES", "AFTER 60?"],
+  "baslik_yt": "After 60, Your Thirst Signal Gets Quieter",
+  "aciklama": "A 1984 study found healthy older men felt less thirsty after a full day without water. Here is what that means, and a simple routine that does not rely on thirst.",
+  "parcalar": [
+    {"sahne": 56, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 56, "cumleler": [1], "gorsel": 13,
+     "baslik": {"satirlar": ["LESS THIRST,", "LESS DRINKING"], "vurgu": "24 HOURS", "not": "without water"},
+     "etiket": "Phillips et al. · N Engl J Med · 1984"},
+    {"sahne": 57, "cumleler": [0],
+     "baslik": {"satirlar": ["THIRST ALONE", "ISN'T A GUIDE"]},
+     "etiket": "Hooper et al. · Cochrane · 2015"},
+    {"sahne": 16, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["SMALL", "STUDIES"]},
+     "etiket": null},
+    {"sahne": 49, "cumleler": [3, 4],
+     "baslik": {"satirlar": ["DRINK AT", "EVERY MEAL"]},
+     "etiket": null},
+    {"sahne": 58, "cumleler": [1], "gorsel": 54,
+     "baslik": {"satirlar": ["YOUR CARE", "TEAM'S LIMIT"]},
+     "etiket": null}
+  ]
+}
