@@ -1,5 +1,5 @@
 {
-  "aktif": "oily-fish-heart",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -129,7 +129,7 @@
     },
     "oily-fish-heart": {
       "slot": "2026-12-22T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-03T14:13:21Z",
       "sahne_deneme": 0
     }
