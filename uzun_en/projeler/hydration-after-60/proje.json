@@ -1,0 +1,569 @@
+{
+  "slug": "hydration-after-60",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Why Thirst Fades After 60: How Much Water Is Enough",
+  "yorum": "Do you ever go through a whole afternoon without thinking about a drink? And if evening drinks wake you at night, what routine has worked for you?",
+  "aciklama_giris": "After 24 hours without water, healthy men in their late sixties and early seventies felt less thirsty and drank less than young men, even though their blood was more concentrated. That small 1984 study, a 1976 study of kidney function across ages and a 2015 Cochrane review help explain why thirst can be a weak guide after 60.\n\nIn this video we look at what those studies found, what the US National Academies say about total water including food, coffee and tea, why a fluid limit for heart failure or kidney disease is a separate question for your care team, and how drinking earlier in the day may mean fewer trips to the bathroom at night.",
+  "kaynaklar": [
+    "Phillips PA, Rolls BJ, Ledingham JG, Forsling ML, Morton JJ, Crowe MJ, Wollner L. Reduced thirst after water deprivation in healthy elderly men. New England Journal of Medicine. 1984;311(12):753-759. doi:10.1056/NEJM198409203111202. PMID 6472364.",
+    "Kenney WL, Chiu P. Influence of age on thirst and fluid intake. Medicine & Science in Sports & Exercise. 2001;33(9):1524-1532. doi:10.1097/00005768-200109000-00016.",
+    "Hooper L, et al. Clinical symptoms, signs and tests for identification of impending and current water-loss dehydration in older people. Cochrane Database of Systematic Reviews. 2015;(4):CD009647. doi:10.1002/14651858.CD009647.pub2. PMID 25924806.",
+    "Rowe JW, Shock NW, DeFronzo RA. The influence of age on the renal response to water deprivation in man. Nephron. 1976;17(4):270-278. doi:10.1159/000180731. PMID 951013.",
+    "National Academies of Sciences, Engineering, and Medicine (Institute of Medicine). Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate. National Academies Press. 2005.",
+    "Herrmann JJ, Brunner-La Rocca HP, Baltussen LE, et al. Liberal fluid intake versus fluid restriction in chronic heart failure: the FRESH-UP randomized clinical trial. Nature Medicine. 2025.",
+    "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Journal of the American College of Cardiology. 2022;79(17):e263-e421.",
+    "Clark WF, Sontrop JM, Huang SH, et al. Effect of coaching to increase water intake on kidney function decline in adults with chronic kidney disease: the CKD WIT randomized clinical trial. JAMA. 2018;319(18):1870-1879. doi:10.1001/jama.2018.4930. PMID 29801012.",
+    "Oelke M, De Wachter S, Drake MJ, Giannantoni A, Kirby M, Orme S, Rees J, van Kerrebroeck P, Everaert K. A practical approach to the management of nocturia. International Journal of Clinical Practice. 2017;71(11):e13027. doi:10.1111/ijcp.13027. PMID 28984060."
+  ],
+  "kapak": {
+    "satirlar": [
+      "THIRST",
+      "AFTER 60?"
+    ],
+    "vurgu": "20%",
+    "vurgu_alt": "FOOD",
+    "gorsel": "a very large close-up tall glass of clear water filled to the brim, a glass pitcher of water overlapping behind it and a steaming cup of tea in front, bright and appetizing, a cheerful gray-haired woman in her 60s smiling and holding a second glass at the back"
+  },
+  "etiketler": [
+    "hydration after 60",
+    "thirst and aging",
+    "how much water per day",
+    "older adults dehydration",
+    "nocturia",
+    "stop waking up at night to pee",
+    "does coffee count as water",
+    "heart failure fluid limit",
+    "kidney health",
+    "healthy aging"
+  ],
+  "seslendirme_duzelt": {
+    "eGFR": "e G F R",
+    "CKD WIT": "C K D wit",
+    "FRESH-UP": "fresh up",
+    "NHANES": "nay nes"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Why thirst fades",
+      "metin": "After 24 hours without water, seven healthy men aged 67 to 75 felt less thirsty than seven young men, though their blood was more concentrated.",
+      "gorsel": "a tall glass of water on a wooden kitchen table beside a glass pitcher, morning light from a window, a chair pulled slightly back from the table",
+      "etiket": "Phillips et al. · N Engl J Med · 1984",
+      "baslik": {
+        "satirlar": [
+          "24 HOURS",
+          "NO WATER"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But the fix isn't just drinking more. For some people, that's the wrong advice.",
+      "gorsel": "a half-empty glass of water on a windowsill next to an antique pocket watch, soft light, a quiet kitchen behind"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know how much to drink, what counts, and when to drink it.",
+      "gorsel": "a tall glass of water, a cup of tea and a bowl of soup arranged together on a table, a closed notebook beside them",
+      "baslik": {
+        "satirlar": [
+          "HOW MUCH?",
+          "WHEN?"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with how your body normally decides it's time to drink.",
+      "gorsel": "an old brass water tap over a stone sink with a tall glass of water beneath it, droplets falling, fine engraved shading"
+    },
+    {
+      "id": 5,
+      "bolum": "How thirst normally works",
+      "tip": "kart",
+      "metin": "First, how your body is supposed to keep its water in balance.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Thirst and the kidneys",
+        "alt": "Two ways your body protects its water"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Your body keeps the saltiness of your blood within a narrow range. When you lose water, through sweat, breath and urine, that saltiness creeps up.",
+      "gorsel": "a tube-shaped vessel with small red discs and tiny salt crystals drifting among them, a tall glass of water beside it, textbook engraving",
+      "baslik": {
+        "satirlar": [
+          "LESS WATER",
+          "MORE SALTY"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Sensors in the brain notice that change and do two things. They release a hormone called vasopressin, which tells the kidneys to hold on to water. And they make you feel thirsty.",
+      "gorsel": "textbook engraving of a human brain in side view with a small gland at its base releasing tiny droplets, a glass of water beside it",
+      "baslik": {
+        "satirlar": [
+          "VASOPRESSIN"
+        ],
+        "not": "the hormone that tells kidneys to save water"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "The kidneys respond by making less urine, and more concentrated urine. Thirst is the second part. It's the signal that makes you actually replace what was lost.",
+      "gorsel": "a pair of kidneys drawn as a textbook engraving, a thin tube leading down to a small glass of pale yellow urine beside a tall glass of water"
+    },
+    {
+      "id": 9,
+      "metin": "So there are two safeguards: kidneys that conserve water, and a thirst signal that makes you drink. After 60, research suggests both can weaken.",
+      "gorsel": "two sturdy brass keys lying beside a tall glass of water on a wooden table, one key slightly worn, soft shadow",
+      "baslik": {
+        "satirlar": [
+          "TWO",
+          "SAFEGUARDS"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "bolum": "What the studies show",
+      "tip": "kart",
+      "metin": "Let's start with the thirst signal, and the experiment from the very first scene.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Thirst, tested",
+        "alt": "Phillips 1984 · Kenney and Chiu 2001"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "In 1984, a study in the New England Journal of Medicine compared seven healthy, active men aged 67 to 75 with seven healthy men aged 20 to 31.",
+      "gorsel": "two empty wooden chairs side by side at a plain table in a quiet research room, a tall glass of water on the table between them, tall window behind",
+      "etiket": "Phillips et al. · N Engl J Med · 1984"
+    },
+    {
+      "id": 12,
+      "metin": "Everyone went 24 hours without a drink. Afterward, the older men showed higher sodium, more concentrated blood, and higher levels of vasopressin, the water-saving hormone, than the young men. Their bodies were clearly signaling a shortage.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes, an antique brass microscope and a tall glass of water, soft light",
+      "baslik": {
+        "satirlar": [
+          "BODY SAYS",
+          "I NEED WATER"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "And yet the older men reported feeling less thirsty, and when they were allowed to drink, they drank less. Their blood and urine did not return to pre-deprivation levels.",
+      "gorsel": "a tall glass of water still nearly full on a table, beside a pitcher and a folded napkin, an empty chair pushed back",
+      "baslik": {
+        "satirlar": [
+          "LESS THIRST",
+          "LESS DRINKING"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "metin": "The authors concluded that healthy older men had a real deficit in thirst and in water intake, while the water-saving hormone was still working.",
+      "gorsel": "a brass balance scale holding a small glass of water on one side and a tiny empty cup on the other, soft shadow on a wooden table"
+    },
+    {
+      "id": 15,
+      "metin": "A 2001 review by Kenney and Chiu pulled this research together. Older adults usually drink enough day to day. But after going without fluids, or exercising in the heat, they feel less thirst, drink less, and restore their fluid balance more slowly.",
+      "gorsel": "a park path in summer with a bench in the shade, a tall glass of water resting on the bench beside a folded sun hat",
+      "etiket": "Kenney & Chiu · Med Sci Sports Exerc · 2001",
+      "baslik": {
+        "satirlar": [
+          "SLOWER",
+          "TO RECOVER"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "metin": "One caution. These experiments were small, and the best known were in healthy men. It's an average difference between groups, not a rule for every person.",
+      "gorsel": "a small stack of research journals with plain covers, a pair of round eyeglasses and a tall glass of water on a desk"
+    },
+    {
+      "id": 17,
+      "metin": "In 2015, a Cochrane review led by Lee Hooper analyzed data from 24 studies, looking for simple signs of dehydration in older people. Feeling thirsty, on its own, was not a reliable way to tell.",
+      "gorsel": "an old physician's table with a stethoscope, a closed notebook and a tall glass of water, a magnifying glass resting on the notebook",
+      "etiket": "Hooper et al. · Cochrane · 2015",
+      "baslik": {
+        "satirlar": [
+          "THIRST ALONE",
+          "ISN'T A GUIDE"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "metin": "So thirst isn't a dependable alarm after 60. That's why the practical part of this video gives you a routine that doesn't rely on it.",
+      "gorsel": "a brass alarm bell sitting silent beside a tall glass of water on a bedside table, a small reading lamp glowing"
+    },
+    {
+      "id": 19,
+      "bolum": "The kidney side",
+      "tip": "kart",
+      "metin": "Now the second safeguard. What happens to the kidneys' ability to hold on to water?",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Kidneys that conserve less",
+        "alt": "Rowe · Shock · DeFronzo 1976"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "In 1976, Rowe and colleagues tested 98 healthy, community-dwelling volunteers aged 20 to 79, none with known kidney disease.",
+      "gorsel": "a row of small glass specimen jars on a laboratory shelf, each holding pale yellow liquid in slightly different shades, an antique timer beside them",
+      "etiket": "Rowe et al. · Nephron · 1976"
+    },
+    {
+      "id": 21,
+      "metin": "After 12 hours without fluids, urine osmolality, a measure of how concentrated the urine is, fell significantly with age. The older the volunteer, the less concentrated the urine.",
+      "gorsel": "a graduated row of glass test tubes holding pale yellow liquid, the shades growing lighter from left to right, a tall glass of water at the end",
+      "baslik": {
+        "satirlar": [
+          "OLDER",
+          "WEAKER URINE",
+          "CONCENTRATION"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "That decline did not simply track the age-related drop in kidney filtering. The kidneys also became less able to hold on to dissolved salts, which may make it harder to concentrate urine.",
+      "gorsel": "a pair of kidneys in textbook engraving style with one cross-section showing fine channels, a few small salt crystals beside it"
+    },
+    {
+      "id": 23,
+      "metin": "Put the two findings together. A kidney that conserves a little less water, and a thirst signal that nudges you a little less. Mild dehydration becomes easier to slide into, especially in hot weather or on active days.",
+      "gorsel": "a garden table in hot summer sun with a tall glass of water, a straw hat and a watering can nearby, shimmering heat drawn as fine wavy lines",
+      "baslik": {
+        "satirlar": [
+          "A QUIET",
+          "SLIDE"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "metin": "Again, this was a lab test in healthy volunteers. It doesn't mean everyone over 60 is dehydrated. Older adults who drink regularly usually stay in balance.",
+      "gorsel": "a kitchen counter with a tall glass of water, a kettle and a teacup on a saucer, calm morning light"
+    },
+    {
+      "id": 25,
+      "bolum": "How much water you need",
+      "tip": "kart",
+      "metin": "So how much water is enough? In the United States, the main reference comes from the National Academies.",
+      "kart": {
+        "ust": "THE GUIDELINE",
+        "baslik": "How much is enough?",
+        "alt": "US National Academies · 2005"
+      }
+    },
+    {
+      "id": 26,
+      "tip": "grafik",
+      "metin": "The panel set an adequate intake of total water: about 2.7 liters a day, or 91 ounces, for adult women, and about 3.7 liters, or 125 ounces, for adult men.",
+      "grafik": {
+        "baslik": "Total water per day, from drinks and food",
+        "alt": "Adequate intake for adults, in liters",
+        "cubuklar": [
+          {
+            "etiket": "Women",
+            "deger": 2.7,
+            "metin": "2.7 L"
+          },
+          {
+            "etiket": "Men",
+            "deger": 3.7,
+            "metin": "3.7 L"
+          }
+        ],
+        "kaynak": "National Academies, Dietary Reference Intakes for Water, 2005 · healthy adults, adequate intake"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Notice the word total. About 20 percent of that normally comes from food. Fruits, vegetables and other foods all carry water.",
+      "gorsel": "a wooden table with a bowl of sliced oranges, a bunch of grapes, cucumber slices and a tall glass of water, fine engraved shading",
+      "baslik": {
+        "satirlar": [
+          "20%",
+          "FROM FOOD"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "metin": "That leaves about 80 percent from drinks. By simple arithmetic, that's roughly 9 cups of drinks a day for women and 12 cups for men, if you eat a typical amount of food.",
+      "gorsel": "a row of nine small glass cups of water on a wooden shelf in front of a tall pitcher, evenly spaced, light from the side"
+    },
+    {
+      "id": 29,
+      "metin": "These are averages for healthy, mostly sedentary people in mild climates, not strict targets. People who are very active, or who live in hot climates, may need more.",
+      "gorsel": "a tall glass of water beside a pair of walking shoes and a folded towel on a stone step in bright sun"
+    },
+    {
+      "id": 30,
+      "metin": "What about coffee and tea? The panel said caffeinated drinks can contribute as much as non-caffeinated ones. Water, milk, juice, coffee and tea all count toward the total.",
+      "gorsel": "a steaming cup of coffee, a teapot with a teacup and a tall glass of water on a wooden tray, fine curls of steam drawn as engraved lines",
+      "baslik": {
+        "satirlar": [
+          "COFFEE",
+          "AND TEA COUNT"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "The panel also noted that, for most healthy people, letting thirst be the guide, and drinking at meals, is enough. That's the catch for older adults. The studies we just covered suggest that guide may run quiet.",
+      "gorsel": "a dinner table set for one with a plate, a folded napkin and a tall glass of water, an empty chair across the table"
+    },
+    {
+      "id": 32,
+      "bolum": "When to drink less",
+      "tip": "kart",
+      "metin": "Now the honest part. Everything so far assumes no condition that changes how your body handles fluid.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "When more water isn't better",
+        "alt": "Heart failure · kidney disease"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "If your doctor has given you a fluid limit, for heart failure, kidney disease or any other reason, that instruction comes first. This video can't know your situation.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a small measuring jug of water, a window with soft light",
+      "baslik": {
+        "satirlar": [
+          "YOUR DOCTOR'S",
+          "LIMIT COMES",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Heart failure is a good example of how unsettled this is. Many patients are told to cap fluids. In the FRESH-UP trial, researchers randomly assigned 504 people with chronic heart failure, average age 69, to a limit of 1,500 milliliters a day, about 6 cups, or to no limit.",
+      "gorsel": "a glass measuring jug filled with water up to a marked line beside a plain drinking glass on a kitchen counter, soft light",
+      "etiket": "Herrmann et al. · Nature Medicine · 2025"
+    },
+    {
+      "id": 35,
+      "tip": "grafik",
+      "metin": "Patients with no limit reported drinking a median of about 1,764 milliliters a day, versus 1,488 in the restricted group. So the groups differed by only about a cup.",
+      "grafik": {
+        "baslik": "Median fluid intake, milliliters per day",
+        "alt": "No fluid limit vs. 1,500 milliliter limit, reported intake",
+        "cubuklar": [
+          {
+            "etiket": "No limit",
+            "deger": 1764,
+            "metin": "1,764"
+          },
+          {
+            "etiket": "Limited",
+            "deger": 1488,
+            "metin": "1,488"
+          }
+        ],
+        "kaynak": "Herrmann et al., Nature Medicine 2025 · 504 adults with chronic heart failure, 3 months"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "After three months, quality of life scores were 74.0 with no limit and 72.2 with the limit, a difference that was not statistically clear. People with the limit reported more thirst distress. There was no difference in deaths or hospitalizations.",
+      "gorsel": "a quiet clinic waiting room with two chairs, a small side table and a glass of water, a tall window with light",
+      "baslik": {
+        "satirlar": [
+          "MORE THIRST",
+          "NO CLEAR GAIN"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "metin": "These were stable outpatients. People with unstable heart failure, a recent hospital stay or low sodium were left out. And a 2022 American guideline describes the evidence for fluid restriction as low quality.",
+      "gorsel": "a closed medical textbook with a plain cover, a pair of reading glasses and a stethoscope on a wooden desk"
+    },
+    {
+      "id": 38,
+      "metin": "That doesn't mean you should change your own limit. It means it's a good conversation to have with your cardiology team, not a decision to make alone.",
+      "gorsel": "two armchairs facing each other in a calm office, a small table between them with a teapot and two cups"
+    },
+    {
+      "id": 39,
+      "metin": "Kidney disease raises a similar question. In the CKD WIT trial in Ontario, Canada, 631 adults with stage 3 chronic kidney disease were coached to drink more water, or to keep their usual intake, for one year.",
+      "gorsel": "a pair of kidneys drawn as a textbook engraving beside a tall glass of water and a small notebook with blank pages",
+      "etiket": "Clark et al. · JAMA · 2018"
+    },
+    {
+      "id": 40,
+      "metin": "Drinking more did not slow the decline in kidney function. The average drop in the filtering score, called eGFR, was 2.2 points with more water and 1.9 with usual intake. So this trial found no sign that extra water protects the kidneys.",
+      "gorsel": "two tall glasses of water of different heights side by side on a wooden table, a pitcher between them, soft light",
+      "baslik": {
+        "satirlar": [
+          "MORE WATER",
+          "NO KIDNEY GAIN"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "It also doesn't tell us how much is right for any one person with kidney disease. That target should come from your care team.",
+      "gorsel": "a doctor's desk with a stethoscope and a small glass measuring jug beside a closed notebook, afternoon light"
+    },
+    {
+      "id": 42,
+      "metin": "So here's the honest summary. Under-drinking is a plausible risk after 60, and worth guarding against. But nobody has shown that everyone should push past the guideline, and extra water hasn't been shown to protect the kidneys.",
+      "gorsel": "a tall glass of water sitting exactly half full on a white windowsill, a single small plant leaf nearby, calm morning light"
+    },
+    {
+      "id": 43,
+      "bolum": "Fewer trips at night",
+      "tip": "kart",
+      "metin": "Now to the problem that stops many people from drinking more: waking up at night.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Drink earlier, sleep longer",
+        "alt": "Timing your drinks"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "Waking to urinate becomes common with age. In one clinical review, about 28 to 62 percent of people aged 70 to 80 woke at least twice a night to urinate.",
+      "gorsel": "a quiet bedroom at night with a crescent moon in the window, a bedside lamp turned low and a tall glass of water on the nightstand",
+      "etiket": "Oelke et al. · Int J Clin Pract · 2017",
+      "baslik": {
+        "satirlar": [
+          "AGES 70–80",
+          "WAKING AT NIGHT"
+        ],
+        "vurgu": "28–62%",
+        "not": "wake two or more times a night"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Evening drinking is one contributor, especially caffeine and alcohol. The review lists cutting back on evening fluids as the first step before any medicine.",
+      "gorsel": "an evening scene with a glass of red wine and a cup of coffee on a small table beside a lamp, a crescent moon in the window",
+      "baslik": {
+        "satirlar": [
+          "EVENING",
+          "DRINKS"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "It suggests avoiding fluids for at least two hours before bed, emptying your bladder before sleep, and trying these changes for up to three months before adding medicine. That's expert guidance, not the result of large trials.",
+      "gorsel": "an antique clock on a bedside table reading late evening, a tall glass of water set apart on a shelf across the room",
+      "baslik": {
+        "satirlar": [
+          "2 HOURS",
+          "BEFORE BED"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "If you take a water pill, called a diuretic, the review says it's usually best taken in the mid to late afternoon, not just before bed. But ask your doctor or pharmacist before moving any dose.",
+      "gorsel": "a weekly pill organizer beside a tall glass of water and a small clock on a kitchen counter in afternoon light"
+    },
+    {
+      "id": 48,
+      "metin": "Nighttime trips have other causes too, such as sleep apnea and fluid that pools in the legs during the day. If you wake often, mention it to your doctor.",
+      "gorsel": "a bed with a rumpled blanket and two pillows in dim light, a small lamp and a tall glass of water on the nightstand"
+    },
+    {
+      "id": 49,
+      "metin": "So here's a simple routine that doesn't rely on thirst. One. Link drinks to habits. A glass with each meal, and a cup between meals. The panel noted that drinking at meals is a reliable way to take in enough.",
+      "gorsel": "a breakfast table with a bowl of oatmeal, a glass of water and a cup of tea arranged together, bright morning window",
+      "baslik": {
+        "satirlar": [
+          "DRINK AT",
+          "EVERY MEAL"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "metin": "Two. Front-load your day. Try to have most of your drinks by late afternoon, so you aren't catching up in the evening.",
+      "gorsel": "a sunny morning kitchen window with a tall glass of water and a pitcher, the sun low and bright, a rooster-shaped weathervane outside"
+    },
+    {
+      "id": 51,
+      "metin": "Three. Count everything. Coffee, tea, milk, and the water in fruits, vegetables and other foods all add up. Just keep the caffeine earlier in the day, since the review singles out caffeine and alcohol before bed.",
+      "gorsel": "a morning tray with a cup of coffee, a glass of milk, a bowl of strawberries and a tall glass of water on a wooden table"
+    },
+    {
+      "id": 52,
+      "metin": "Four. Don't lean on a single sign. In the Cochrane review, thirst and urine color were each unreliable alone, so treat them as clues, not proof.",
+      "gorsel": "a tall glass of water held up to a window so light passes through it, a magnifying glass resting on the sill beside it"
+    },
+    {
+      "id": 53,
+      "metin": "Five. Drink a little more in hot weather or on active days, since heat and exercise raise your fluid needs.",
+      "gorsel": "a garden bench in summer sun with a tall glass of water, a straw hat, gardening gloves and a small trowel",
+      "baslik": {
+        "satirlar": [
+          "HEAT AND",
+          "ACTIVITY"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "And if you have heart failure or kidney disease, or take a diuretic, use the target your care team gave you, not the general guideline.",
+      "gorsel": "a consultation desk with a stethoscope, a small glass measuring jug of water and a closed notebook, soft window light",
+      "baslik": {
+        "satirlar": [
+          "YOUR CARE",
+          "TEAM'S TARGET"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Thirst fades. Habits help.",
+        "alt": "Drink earlier · Count it all · Know your limit"
+      }
+    },
+    {
+      "id": 56,
+      "metin": "After 60, thirst can fade. In a 1984 study, healthy older men felt less thirsty and drank less after 24 hours without water, even though their blood was more concentrated.",
+      "gorsel": "a tall glass of water on a wooden kitchen table beside a glass pitcher, morning light, a chair pulled slightly back"
+    },
+    {
+      "id": 57,
+      "metin": "The kidneys also conserve water a little less well with age, and thirst alone isn't a reliable way to spot dehydration. That's why steady habits beat waiting to feel dry.",
+      "gorsel": "a pair of kidneys drawn as a textbook engraving beside a tall glass of water and a small brass pocket watch"
+    },
+    {
+      "id": 58,
+      "metin": "The National Academies' adequate intake is about 2.7 liters of total water a day for women and 3.7 for men, with about 20 percent from food, and coffee and tea count. Drink earlier in the day, and follow your care team's limit if you have one.",
+      "gorsel": "a morning table with a tall glass of water, a cup of tea, a bowl of fruit and a pitcher, bright window light"
+    },
+    {
+      "id": 59,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
