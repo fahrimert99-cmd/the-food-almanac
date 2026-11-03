@@ -1,0 +1,18 @@
+{
+  "baslik": ["BODY ADAPTS", "TO CAFFEINE?"],
+  "baslik_yt": "Does Your Body Adapt to Caffeine? An 11-Day Test",
+  "aciklama": "A trial gave 59 healthy young men different daily caffeine doses for eleven days and checked for signs of dehydration. Here is what it found, and what it can't tell us.",
+  "parcalar": [
+    {"sahne": 27, "cumleler": [1], "gorsel": 28, "baslik": null, "etiket": null},
+    {"sahne": 28, "cumleler": [2],
+     "baslik": {"satirlar": ["ADAPTATION", "TEST"], "vurgu": "11 DAYS", "not": "59 healthy young men"},
+     "etiket": "Armstrong et al. · IJSNEM · 2005"},
+    {"sahne": 29, "cumleler": [1], "baslik": {"satirlar": ["0, 3 OR 6 MG", "PER KG A DAY"]}, "etiket": null},
+    {"sahne": 30, "cumleler": [1], "baslik": {"satirlar": ["NO SIGN OF", "DEHYDRATION"]},
+     "etiket": "Armstrong et al. · IJSNEM · 2005"},
+    {"sahne": 31, "cumleler": [0], "baslik": null,
+     "etiket": "Armstrong et al. · IJSNEM · 2005"},
+    {"sahne": 49, "cumleler": [1, 2], "baslik": {"satirlar": ["BREAK, THEN", "BIG COFFEE?"]}, "etiket": null},
+    {"sahne": 49, "cumleler": [3], "gorsel": 32, "baslik": {"satirlar": ["IT FADES"]}, "etiket": null}
+  ]
+}
