@@ -1,5 +1,5 @@
 {
-  "aktif": "multivitamins-evidence",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -123,7 +123,7 @@
     },
     "multivitamins-evidence": {
       "slot": "2026-12-18T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-03T04:28:58Z",
       "sahne_deneme": 0
     }
