@@ -1,0 +1,564 @@
+{
+  "slug": "cooking-and-vegetable-nutrients",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Vegetables: What Cooking Does to Nutrients",
+  "yorum": "How do you usually cook your vegetables: boiled, steamed, microwaved or roasted? Has anything in this video surprised you?",
+  "aciklama_giris": "Does boiling or microwaving destroy the nutrients in vegetables? In a laboratory study of 13 frozen vegetables, boiling cut folate by an average of 68 percent and vitamin C by 51 percent, while steaming, microwaving and pressure cooking were named as better at preserving quality. But heat can also make some nutrients easier to absorb, such as lycopene in tomatoes and beta-carotene in carrots, especially with a little fat.\n\nIn this video we look at what water-soluble vitamins do in boiling water, what the research found on tomatoes, carrots and spinach, why a popular claim about cooked spinach and eye health is not supported, where the evidence runs out, and five simple kitchen habits. Includes a safety note for people who take warfarin.",
+  "kaynaklar": [
+    "Bureau S, Mouhoubi S, Touloumet L, Garcia C, Moreau F, Bédouet V, Renard CMGC. Are folates, carotenoids and vitamin C affected by cooking? Four domestic procedures are compared on a large diversity of frozen vegetables. LWT - Food Science and Technology. 2015;64(2):735-741. DOI: 10.1016/j.lwt.2015.06.016.",
+    "Palermo M, Pellegrini N, Fogliano V. The effect of cooking on the phytochemical content of vegetables. Journal of the Science of Food and Agriculture. 2014;94(6):1057-1070. PMID 24227349. DOI: 10.1002/jsfa.6478.",
+    "NIH Office of Dietary Supplements. Vitamin C Fact Sheet for Consumers. https://ods.od.nih.gov/factsheets/VitaminC-Consumer/",
+    "Miglio C, Chiavaro E, Visconti A, Fogliano V, Pellegrini N. Effects of different cooking methods on nutritional and physicochemical characteristics of selected vegetables. Journal of Agricultural and Food Chemistry. 2008;56(1):139-147. PMID 18069785. DOI: 10.1021/jf072304b.",
+    "Dewanto V, Wu X, Adom KK, Liu RH. Thermal processing enhances the nutritional value of tomatoes by increasing total antioxidant activity. Journal of Agricultural and Food Chemistry. 2002;50(10):3010-3014. PMID 11982434. DOI: 10.1021/jf0115589.",
+    "Gärtner C, Stahl W, Sies H. Lycopene is more bioavailable from tomato paste than from fresh tomatoes. American Journal of Clinical Nutrition. 1997;66(1):116-122. PMID 9209178. DOI: 10.1093/ajcn/66.1.116.",
+    "Hedrén E, Diaz V, Svanberg U. Estimation of carotenoid accessibility from carrots determined by an in vitro digestion method. European Journal of Clinical Nutrition. 2002;56(5):425-430. PMID 12001013. DOI: 10.1038/sj.ejcn.1601329.",
+    "Brown MJ, Ferruzzi MG, Nguyen ML, Cooper DA, Eldridge AL, Schwartz SJ, White WS. Carotenoid bioavailability is higher from salads ingested with full-fat than with fat-reduced salad dressings as measured with electrochemical detection. American Journal of Clinical Nutrition. 2004;80(2):396-403. DOI: 10.1093/ajcn/80.2.396.",
+    "Vallverdú-Queralt A, Regueiro J, de Alvarenga JF, Torrado X, Lamuela-Raventos RM. Carotenoid profile of tomato sauces: effect of cooking time and content of extra virgin olive oil. International Journal of Molecular Sciences. 2015;16(5):9588-9599. PMID 25927580. DOI: 10.3390/ijms16059588.",
+    "Castenmiller JJ, West CE, Linssen JP, van het Hof KH, Voragen AG. The food matrix of spinach is a limiting factor in determining the bioavailability of beta-carotene and to a lesser extent of lutein in humans. Journal of Nutrition. 1999;129(2):349-355. PMID 10024612. DOI: 10.1093/jn/129.2.349.",
+    "Age-Related Eye Disease Study 2 Research Group. Lutein + zeaxanthin and omega-3 fatty acids for age-related macular degeneration: the AREDS2 randomized clinical trial. JAMA. 2013;309(19):2005-2015. PMID 23644932. DOI: 10.1001/jama.2013.4997.",
+    "NIH Office of Dietary Supplements. Vitamin K Health Professional Fact Sheet. https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/"
+  ],
+  "kapak": {
+    "satirlar": [
+      "BOIL OR",
+      "STEAM?"
+    ],
+    "vurgu": "–68%",
+    "vurgu_alt": "FOLATE",
+    "gorsel": "a large bamboo steamer basket close up, overflowing with bright orange carrot sticks, green broccoli florets and ripe red tomatoes, steam rising, a small glass bottle of golden olive oil tucked in front, tightly grouped"
+  },
+  "etiketler": [
+    "cooking vegetables",
+    "steaming vs boiling",
+    "microwaving vegetables",
+    "does cooking destroy nutrients",
+    "raw vs cooked vegetables",
+    "vitamin C",
+    "lycopene",
+    "beta-carotene",
+    "nutrition science",
+    "healthy eating"
+  ],
+  "seslendirme_duzelt": {
+    "lycopene": "LIE-koh-peen",
+    "lutein": "LOO-teen",
+    "zeaxanthin": "zee-uh-ZAN-thin",
+    "carotenoids": "kuh-ROT-en-oids",
+    "AREDS2": "A R E D S 2",
+    "NIH": "N I H",
+    "Gärtner": "Gartner",
+    "Hedrén": "Hedren",
+    "Castenmiller": "Cast-en-miller",
+    "Dewanto": "Deh-WAN-toh",
+    "Miglio": "MEEL-yo",
+    "Bureau": "Byoo-roh",
+    "Palermo": "Pa-LAIR-mo"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Does cooking cost nutrients?",
+      "metin": "Boil your vegetables and much of the vitamin C and folate can be lost. In a study of 13 frozen vegetables, boiling cut folate by 68 percent on average.",
+      "gorsel": "a large steel cooking pot on a stove at a rolling boil, broccoli florets and carrot slices tumbling in the water, steam rising, a colander waiting in the sink beside it",
+      "etiket": "Bureau et al. · LWT · 2015",
+      "baslik": {
+        "satirlar": [
+          "BOILED",
+          "VEGETABLES"
+        ],
+        "vurgu": "–68%",
+        "not": "folate lost on average"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But cooking boosts some nutrients too. It depends on the vegetable.",
+      "gorsel": "a whole raw carrot beside roasted carrots and a roasted tomato half on a baking tray, a drizzle of golden oil shining on them",
+      "baslik": {
+        "satirlar": [
+          "IT DEPENDS"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know which to boil, steam, microwave or roast.",
+      "gorsel": "four cooking tools in a row on a wooden counter: a steel pot, a bamboo steamer, a glass dish with a lid and a roasting pan, each holding fresh vegetables"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what heat actually does to a vegetable.",
+      "gorsel": "a wooden kitchen table with a cutting board, a bundle of carrots, a head of broccoli, ripe tomatoes and a bunch of spinach, a small bottle of olive oil beside them"
+    },
+    {
+      "id": 5,
+      "metin": "Vitamins come in two families. Vitamin C, folate and the B vitamins dissolve in water. Carotenoids, the orange, red and green pigments in vegetables, dissolve in fat.",
+      "gorsel": "two glass jars side by side, one filled with clear water and green leaves, the other filled with golden olive oil and orange carrot sticks",
+      "baslik": {
+        "satirlar": [
+          "WATER-SOLUBLE",
+          "FAT-SOLUBLE"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Heat can break some of these compounds down, and boiling water can wash the water-soluble ones out of the vegetable. That's the first effect of cooking: loss.",
+      "gorsel": "a pot of boiling water with a pale, soft broccoli floret, tiny golden spheres drifting from it into the water, steam curling upward"
+    },
+    {
+      "id": 7,
+      "metin": "But heat does a second thing. It softens tough plant cell walls, which can free up compounds that were locked inside. A 2014 review of more than 100 studies, led by Palermo, described both effects.",
+      "gorsel": "a whole raw carrot and a soft cooked carrot side by side, a round magnified inset showing plant cells with thick walls opening up, fine engraved lines",
+      "etiket": "Palermo et al. · J Sci Food Agric · 2014"
+    },
+    {
+      "id": 8,
+      "metin": "So the honest answer to whether cooking destroys nutrients is that it depends on the nutrient, the vegetable and the method. Let's look at the methods first.",
+      "gorsel": "a quiet kitchen counter with a steel pot, a bamboo steamer basket and a glass dish, a bowl of colorful raw vegetables in the middle",
+      "baslik": {
+        "satirlar": [
+          "NUTRIENT",
+          "VEGETABLE",
+          "METHOD"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "bolum": "Boiling, steaming, microwaving",
+      "tip": "kart",
+      "metin": "In 2015, a team led by Bureau compared the most common home methods head to head.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Four ways to cook",
+        "alt": "13 frozen vegetables · 2015"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "They cooked 13 frozen vegetables four ways: boiling, steaming, pressure steaming and microwaving. Then they measured vitamin C, folate and carotenoids in each one.",
+      "gorsel": "four identical small glass dishes of green and orange vegetables in a row, behind each one a different cooking tool: a pot, a steamer, a pressure cooker and a microwave oven",
+      "etiket": "Bureau et al. · LWT · 2015"
+    },
+    {
+      "id": 11,
+      "tip": "grafik",
+      "metin": "Boiling cost the most. On average, boiled vegetables lost 51 percent of their vitamin C and 68 percent of their folate, but only 15 percent of their lutein and 9 percent of their beta-carotene.",
+      "grafik": {
+        "baslik": "Average loss after boiling",
+        "alt": "13 frozen vegetables, fresh-weight basis",
+        "cubuklar": [
+          {
+            "etiket": "Folate",
+            "deger": 68,
+            "metin": "−68%"
+          },
+          {
+            "etiket": "Vitamin C",
+            "deger": 51,
+            "metin": "−51%"
+          },
+          {
+            "etiket": "Lutein",
+            "deger": 15,
+            "metin": "−15%"
+          },
+          {
+            "etiket": "Beta-carotene",
+            "deger": 9,
+            "metin": "−9%"
+          }
+        ],
+        "kaynak": "Bureau et al., LWT 2015 · 13 frozen vegetables, laboratory analysis"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Measured by dry weight, boiling still lost 44 percent of the vitamin C and 65 percent of the folate. Carotenoids looked better, because boiling made some of them easier to extract.",
+      "gorsel": "a handful of dried green peas and a bowl of boiled peas on a scale with a brass pan, a magnified inset of pea tissue",
+      "etiket": "Bureau et al. · LWT · 2015"
+    },
+    {
+      "id": 13,
+      "metin": "Notice the pattern. The water-soluble vitamins took the big hit. The fat-soluble pigments lost much less.",
+      "gorsel": "a tall glass jar of cloudy cooking water beside a pale pot of boiled green beans, a colander and a ladle",
+      "baslik": {
+        "satirlar": [
+          "LOST TO",
+          "THE WATER"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "metin": "The authors concluded that steaming, microwaving or pressure cooking could be the best ways to preserve nutritional quality, while boiling was generally the least suitable.",
+      "gorsel": "a bamboo steamer basket holding broccoli, green beans and carrots, steam rising, set over a small pot on the stove"
+    },
+    {
+      "id": 15,
+      "metin": "The results also varied a lot from one vegetable to the next, which is why there's no single best method for everything.",
+      "gorsel": "a row of different vegetables on a wooden board: broccoli, green beans, carrots, peas, spinach and cauliflower, each in its own small dish"
+    },
+    {
+      "id": 16,
+      "metin": "The reason is simple. In a pot of boiling water, vitamins can leach out into the water. Steaming keeps the vegetable out of the water, so there's far less to wash away.",
+      "gorsel": "a cross-section of a steamer pot showing water at the bottom and a basket of broccoli above it, steam rising through the basket, fine engraved lines"
+    },
+    {
+      "id": 17,
+      "metin": "The review by Palermo and colleagues reached a similar view. Steaming best preserved phenols and glucosinolates, plant compounds found in vegetables like broccoli, because the vegetable never touches the cooking water.",
+      "gorsel": "a head of broccoli resting in a steamer basket above a shallow pot of water, a lid leaning against the pot",
+      "etiket": "Palermo et al. · J Sci Food Agric · 2014"
+    },
+    {
+      "id": 18,
+      "metin": "The National Institutes of Health says much the same. Its vitamin C fact sheet notes that cooking can reduce vitamin C, and that steaming or microwaving may lessen the losses.",
+      "gorsel": "a glass dish of green peas and broccoli with a splash of water inside an open microwave oven, simple engraving style",
+      "etiket": "NIH Office of Dietary Supplements",
+      "baslik": {
+        "satirlar": [
+          "STEAM OR",
+          "MICROWAVE"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "That includes the microwave. It sounds suspicious to many people, but the researchers named it as one of the best ways to preserve nutritional quality.",
+      "gorsel": "a covered glass bowl of bright green broccoli florets beside a small jug of water, a microwave oven in the background"
+    },
+    {
+      "id": 20,
+      "metin": "Boiling isn't bad for everything, though. In a 2008 study of carrots, zucchini and broccoli, Miglio and colleagues found that boiling and steaming kept carotenoids better than frying, and carrots held on to their vitamin C well in water.",
+      "gorsel": "carrot sticks, zucchini slices and broccoli florets in three small bowls, beside a steaming pot, a boiling pot and a sizzling frying pan",
+      "etiket": "Miglio et al. · J Agric Food Chem · 2008"
+    },
+    {
+      "id": 21,
+      "metin": "Antioxidant activity even rose in all the cooked vegetables in that study, which the authors linked to softer tissue that releases its compounds more easily.",
+      "gorsel": "a bowl of soft cooked carrot coins and zucchini slices beside raw ones on a wooden board, a magnified inset of loosened plant cells"
+    },
+    {
+      "id": 22,
+      "bolum": "When cooking helps",
+      "tip": "kart",
+      "metin": "Now the surprise. For some nutrients, cooking helps. And later, we'll test a popular claim about spinach and your eyes.",
+      "kart": {
+        "ust": "THE SURPRISE",
+        "baslik": "When heat helps",
+        "alt": "Tomatoes · Carrots · Olive oil"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Start with tomatoes. Their red pigment, lycopene, sits locked inside the cell walls. In 2002, Dewanto and colleagues heated tomatoes at 88 degrees Celsius, about 190 degrees Fahrenheit, and measured what changed.",
+      "gorsel": "a copper saucepan with ripe red tomatoes simmering gently, a wooden spoon resting across it, a few whole tomatoes beside the pan",
+      "etiket": "Dewanto et al. · J Agric Food Chem · 2002"
+    },
+    {
+      "id": 24,
+      "metin": "After 15 minutes of heating, extractable lycopene was about 2.7 times higher than in raw tomatoes. Vitamin C, on the other hand, fell by about 29 percent after 30 minutes.",
+      "gorsel": "two small glass bowls, one of pale raw tomato chunks and one of deep red cooked tomato sauce, an antique brass balance scale between them",
+      "baslik": {
+        "satirlar": [
+          "LYCOPENE UP",
+          "VITAMIN C DOWN"
+        ],
+        "vurgu": "2.7×",
+        "not": "extractable lycopene after 15 minutes of heat"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Total antioxidant activity also rose with heating in that study, while total phenolics and flavonoids stayed about the same. But this was a laboratory measurement, not a test in people.",
+      "gorsel": "a laboratory bench with small glass beakers of red tomato extract, an antique brass microscope and a notebook with blank pages"
+    },
+    {
+      "id": 26,
+      "metin": "People were tested too. In 1997, Gärtner, Stahl and Sies gave volunteers the same 23 milligrams of lycopene, either from fresh tomatoes or from tomato paste, each with 15 grams of corn oil, about a tablespoon.",
+      "gorsel": "two plates on a table, sliced fresh tomatoes on one and a small bowl of thick red tomato paste on the other, a spoon of golden oil between them",
+      "etiket": "Gärtner et al. · Am J Clin Nutr · 1997"
+    },
+    {
+      "id": 27,
+      "tip": "grafik",
+      "metin": "After the paste, lycopene in the blood peaked about 2.5 times higher, and the total over the following hours was about 3.8 times higher than after fresh tomatoes.",
+      "grafik": {
+        "baslik": "Lycopene after paste vs. fresh tomato",
+        "alt": "Same lycopene dose, same oil · times higher after paste",
+        "cubuklar": [
+          {
+            "etiket": "Peak level",
+            "deger": 2.5,
+            "metin": "2.5×"
+          },
+          {
+            "etiket": "Total over hours",
+            "deger": 3.8,
+            "metin": "3.8×"
+          }
+        ],
+        "kaynak": "Gärtner et al., Am J Clin Nutr 1997 · volunteers, single test meal"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "One caveat. Tomato paste is a processed product, so this compares paste with fresh tomato, not simply cooked with raw. Still, it points the same way as the laboratory results.",
+      "gorsel": "a jar of tomato paste with a spoon beside a whole fresh tomato on a wooden table, a small bottle of olive oil behind them"
+    },
+    {
+      "id": 29,
+      "metin": "Why would heat help? Cooking softens the tomato, which likely frees the lycopene from its cell walls. And the oil matters, because lycopene dissolves in fat, not water.",
+      "gorsel": "a ripe tomato cut open with its cell structure drawn in fine lines, a golden drop of oil falling beside it onto a plate",
+      "baslik": {
+        "satirlar": [
+          "HEAT + FAT"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "Carrots tell a similar story, at least in the lab. In 2002, Hedrén and colleagues put carrots through a simulated digestion. From raw carrot pieces, only 3 percent of the beta-carotene was released.",
+      "gorsel": "a bunch of whole orange carrots with green tops beside a wooden board of chopped carrot pieces and a bowl of mashed carrot",
+      "etiket": "Hedrén et al. · Eur J Clin Nutr · 2002"
+    },
+    {
+      "id": 31,
+      "tip": "grafik",
+      "metin": "Mashed raw carrot released 21 percent. Cooked mash released 27 percent. And cooked mash with a little cooking oil released 39 percent.",
+      "grafik": {
+        "baslik": "Beta-carotene released from carrot",
+        "alt": "Share of beta-carotene released in a simulated digestion",
+        "cubuklar": [
+          {
+            "etiket": "Raw pieces",
+            "deger": 3,
+            "metin": "3%"
+          },
+          {
+            "etiket": "Raw mash",
+            "deger": 21,
+            "metin": "21%"
+          },
+          {
+            "etiket": "Cooked mash",
+            "deger": 27,
+            "metin": "27%"
+          },
+          {
+            "etiket": "Cooked mash + oil",
+            "deger": 39,
+            "metin": "39%"
+          }
+        ],
+        "kaynak": "Hedrén et al., Eur J Clin Nutr 2002 · laboratory digestion model, not people"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "So chopping, mashing, cooking and a little oil all helped. Keep in mind this was a digestion model in a lab, not people, so it shows a direction, not exact gains.",
+      "gorsel": "a bowl of orange carrot soup with a swirl of golden oil, a wooden spoon, and whole carrots arranged around the bowl"
+    },
+    {
+      "id": 33,
+      "metin": "A 2004 trial shows why fat matters. Brown and colleagues had seven adults eat the same salad with fat-free, reduced-fat or full-fat dressing, then tracked carotenoids in their blood for 12 hours.",
+      "gorsel": "a salad bowl of lettuce, tomato and shredded carrot with a small jug of golden dressing being poured over it",
+      "etiket": "Brown et al. · Am J Clin Nutr · 2004"
+    },
+    {
+      "id": 34,
+      "metin": "With fat-free dressing, almost no carotenoids were absorbed. Absorption rose with some fat, and was higher still with full-fat dressing.",
+      "gorsel": "three small jugs of dressing in a row, filled to three different heights, beside three identical salad bowls",
+      "baslik": {
+        "satirlar": [
+          "A LITTLE FAT",
+          "HELPS"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "That trial used canola oil. For olive oil, a 2015 study of tomato sauces found that longer simmering and added extra virgin olive oil both increased the carotenoid levels measured in the sauce.",
+      "gorsel": "a glass bottle of olive oil beside a pot of simmering tomato sauce with a wooden spoon, a ripe tomato and a carrot on the counter",
+      "etiket": "Vallverdú-Queralt et al. · Int J Mol Sci · 2015"
+    },
+    {
+      "id": 36,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. Let's check that spinach claim, and what these studies can't tell us.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Spinach, eyes and limits",
+        "alt": "What the evidence does and doesn't show"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "Spinach is a source of lutein, a yellow pigment linked with eye health, so many people over 60 ask whether cooking it helps them absorb more.",
+      "gorsel": "a bowl of fresh spinach leaves next to an antique brass magnifying glass and a pair of round reading glasses"
+    },
+    {
+      "id": 38,
+      "metin": "The answer is: not clearly. In a 1999 study, Castenmiller and colleagues had volunteers eat spinach for three weeks, as whole leaves, minced or liquefied. Lutein levels in their blood did not differ between the forms.",
+      "gorsel": "three small bowls of spinach prepared three ways: whole leaves, finely minced, and a smooth liquefied green puree",
+      "etiket": "Castenmiller et al. · J Nutr · 1999"
+    },
+    {
+      "id": 39,
+      "metin": "Lutein from spinach reached about half the level of a lutein supplement, in every form. Beta-carotene from spinach was different: only about 5 to 10 percent, and it rose when the leaf was broken down more.",
+      "gorsel": "a spinach leaf beside a small jar of golden supplement capsules, a brass balance scale holding them level",
+      "etiket": "Castenmiller et al. · J Nutr · 1999",
+      "baslik": {
+        "satirlar": [
+          "LUTEIN"
+        ],
+        "vurgu": "≈ 50%",
+        "not": "of a supplement's level, in every spinach form"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "So the idea that cooking unlocks the lutein in spinach isn't supported by this study, which compared leaf forms rather than raw with cooked. Breaking the leaf down didn't raise lutein, which is reassuring if you like your spinach raw.",
+      "gorsel": "a plate with a raw spinach salad on one side and a small portion of wilted cooked spinach on the other, a fork resting between them"
+    },
+    {
+      "id": 41,
+      "metin": "And what about the eyes themselves? The big AREDS2 trial gave 4,203 adults aged 50 to 85, at risk of advanced macular degeneration, lutein and zeaxanthin supplements or a placebo, on top of standard vitamins.",
+      "gorsel": "a round antique eye-chart-free magnifying lens over a small bowl of spinach and a few golden supplement capsules on a wooden table",
+      "etiket": "AREDS2 Research Group · JAMA · 2013"
+    },
+    {
+      "id": 42,
+      "metin": "After a median of five years, about 29 percent of the lutein group and 31 percent of the placebo group had progressed to advanced disease. That difference was not statistically significant.",
+      "gorsel": "two identical small jars on a shelf, one filled with golden capsules and one with white capsules, an old brass clock between them",
+      "baslik": {
+        "satirlar": [
+          "5 YEARS",
+          "NO CLEAR GAIN"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "metin": "That was a supplement trial, not a trial of spinach. So the research can't promise that eating more spinach, cooked or raw, protects your eyes. It's still a nourishing food.",
+      "gorsel": "a bowl of steamed spinach with a small wedge of lemon on a wooden table, soft morning light drawn as fine radiating lines"
+    },
+    {
+      "id": 44,
+      "metin": "There are other limits. Many of these results come from lab measurements or small studies, and most weren't designed around older adults. And absorbing more of a pigment doesn't prove a health benefit.",
+      "gorsel": "a quiet research desk with a small stack of journals with blank covers, a magnifying glass, a teacup with rising steam and a single tomato"
+    },
+    {
+      "id": 45,
+      "metin": "Time and heat matter too. Vitamin C was lower after 30 minutes of heating tomatoes, and the review noted that results depend on the conditions. Gentle and short is a sensible rule.",
+      "gorsel": "an antique pocket watch beside a small pot with a lid and a few vegetables, steam rising gently"
+    },
+    {
+      "id": 46,
+      "metin": "And raw vegetables aren't a bad choice. The NIH points out that many of the best vitamin C sources are usually eaten raw. A mix of raw and cooked fits the evidence well.",
+      "gorsel": "a bowl of fresh raw vegetable sticks, carrot, celery and cucumber, beside a small bowl of cooked vegetables on a wooden table"
+    },
+    {
+      "id": 47,
+      "metin": "One safety note. Leafy greens are high in vitamin K, which can affect the blood thinner warfarin. The NIH advises steady vitamin K intake, so talk to your doctor or pharmacist before changing how much spinach or kale you eat.",
+      "gorsel": "a pharmacy counter with a stethoscope, a closed notebook, a weekly pill organizer and a bowl of kale leaves",
+      "etiket": "NIH Office of Dietary Supplements",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you put this into practice? Here are five simple habits.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five kitchen habits",
+        "alt": "Steam · Simmer · Drizzle · Chop · Mix"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "One. Steam or microwave your vegetables with a splash of water, just until tender. Skip the long boil.",
+      "gorsel": "a covered glass dish of bright green broccoli with a splash of water, beside a bamboo steamer basket on the counter"
+    },
+    {
+      "id": 50,
+      "metin": "Two. If you do boil, use a small amount of water and keep it. Pour the liquid into soup, rice or a sauce, so the vitamins that washed out still reach your plate.",
+      "gorsel": "a pot of vegetable soup being ladled into a white bowl, carrot slices and green beans floating in the broth, steam rising"
+    },
+    {
+      "id": 51,
+      "metin": "Three. Cook tomatoes and carrots with a little olive oil. Think tomato sauce, roasted carrots or a vegetable soup. The heat and the fat may both help your body take up lycopene and beta-carotene.",
+      "gorsel": "a baking tray of roasted carrots and halved tomatoes glistening with golden olive oil, a glass bottle of olive oil beside the tray"
+    },
+    {
+      "id": 52,
+      "metin": "Four. Chop, grate or purée when it suits the dish. In the lab, mashed carrot released far more beta-carotene than raw pieces.",
+      "gorsel": "a box grater with grated orange carrot on a wooden board, a knife and a small bowl of carrot purée beside it"
+    },
+    {
+      "id": 53,
+      "metin": "Five. Don't give up raw. A mix of raw and cooked vegetables through the week is a sensible approach, and the best method is the one that gets you eating more vegetables.",
+      "gorsel": "a kitchen table with a raw salad bowl, a dish of steamed green beans and a bowl of roasted carrots, all in soft light"
+    },
+    {
+      "id": 54,
+      "metin": "And one bonus. Fat-soluble pigments need some fat from your meal, so a salad with a little dressing, nuts or olive oil works better than a plain one.",
+      "gorsel": "a salad bowl with tomato, carrot and leafy greens topped with a few walnuts, a small bottle of olive oil beside it"
+    },
+    {
+      "id": 55,
+      "metin": "A dinner plate can use all of these ideas at once: steamed green beans, roasted carrots with olive oil, and a simmered tomato sauce over your favorite protein.",
+      "gorsel": "a white dinner plate with steamed green beans, roasted carrots, a grilled chicken breast and a spoonful of tomato sauce, a fork beside it"
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Cook smart, not less",
+        "alt": "Steam · Simmer · Drizzle"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Boiling can wash out vitamin C and folate. In a study of 13 frozen vegetables, boiled ones lost 51 percent and 68 percent on average. Steaming, microwaving and pressure cooking were named as better.",
+      "gorsel": "a bamboo steamer basket of vegetables next to a pot of boiled vegetables with cloudy water, a colander between them"
+    },
+    {
+      "id": 58,
+      "metin": "But heat can also help. In lab studies and one human study, processing made lycopene in tomatoes and beta-carotene in carrots easier to take up, especially with a little oil.",
+      "gorsel": "a plate of roasted tomato halves and carrots with a drizzle of golden olive oil, a small bottle behind the plate"
+    },
+    {
+      "id": 59,
+      "metin": "For spinach and your eyes, the evidence is thinner. Breaking the leaf down didn't change lutein absorption, and the big supplement trial showed no significant benefit.",
+      "gorsel": "a bowl of spinach leaves beside a pair of round reading glasses on a wooden table"
+    },
+    {
+      "id": 60,
+      "metin": "So steam or microwave gently, keep the cooking liquid, cook tomatoes and carrots with a little olive oil, and keep eating vegetables any way you enjoy them.",
+      "gorsel": "a warm kitchen table with a steamed vegetable dish, a pot of tomato sauce and a bowl of roasted carrots, soft light from a window"
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
