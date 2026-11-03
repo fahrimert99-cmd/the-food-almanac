@@ -1,0 +1,17 @@
+{
+  "baslik": ["SLOWS YOUR", "STOMACH?"],
+  "baslik_yt": "How Vinegar May Slow Your Stomach and Sugar Spike",
+  "aciklama": "One leading idea for how apple cider vinegar might soften a blood sugar spike is that it slows the stomach. Here is what a small ultrasound study found, and the catch for people with a slow stomach.",
+  "parcalar": [
+    {"sahne": 25, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 25, "cumleler": [1], "baslik": {"satirlar": ["GASTRIC", "EMPTYING"]}, "etiket": null},
+    {"sahne": 26, "cumleler": [0]},
+    {"sahne": 27, "cumleler": [0],
+     "baslik": {"satirlar": ["SLOW", "STOMACH"], "vurgu": "10 PEOPLE", "not": "type 1 diabetes, pilot study"},
+     "etiket": "Hlebowicz · BMC Gastroenterol · 2007"},
+    {"sahne": 28, "cumleler": [0],
+     "etiket": "Hlebowicz · BMC Gastroenterol · 2007"},
+    {"sahne": 29, "cumleler": [1]},
+    {"sahne": 45, "cumleler": [1]}
+  ]
+}
