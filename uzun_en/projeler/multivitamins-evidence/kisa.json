@@ -1,0 +1,15 @@
+{
+  "baslik": ["DAILY VITAMIN", "HELPS HEART?"],
+  "baslik_yt": "Daily Multivitamin After 60: Heart and Memory",
+  "aciklama": "Two big trials, two different answers: a multivitamin did nothing for the heart, and gave older adults only a small memory gain. Here is what the numbers show.",
+  "parcalar": [
+    {"sahne": 12, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 12, "cumleler": [1], "baslik": {"satirlar": ["HEART", "EVENTS"], "vurgu": "867/856", "not": "vitamin vs placebo"}, "etiket": "Sesso et al. · JAMA · 2012"},
+    {"sahne": 12, "cumleler": [2], "baslik": null, "etiket": "Sesso et al. · JAMA · 2012"},
+    {"sahne": 21, "cumleler": [0], "baslik": null},
+    {"sahne": 21, "cumleler": [1], "baslik": {"satirlar": ["SMALL", "MEMORY GAIN"], "vurgu": "+0.07 SD", "not": "thinking skills"}},
+    {"sahne": 28, "cumleler": [0], "gorsel": 17, "baslik": null, "etiket": "Grodstein et al. · Ann Intern Med · 2013"},
+    {"sahne": 28, "cumleler": [2], "gorsel": 30, "baslik": {"satirlar": ["TOO EARLY", "TO RECOMMEND"]}, "etiket": null},
+    {"sahne": 55, "cumleler": [1, 2], "baslik": {"satirlar": ["SMALL EXTRA,", "NOT A SHIELD"]}, "etiket": null}
+  ]
+}
