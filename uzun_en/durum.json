@@ -1,5 +1,5 @@
 {
-  "aktif": "dark-chocolate-heart",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -153,7 +153,7 @@
     },
     "dark-chocolate-heart": {
       "slot": "2027-01-05T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-04T07:39:43Z",
       "sahne_deneme": 0
     }
