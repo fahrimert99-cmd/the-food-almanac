@@ -1,0 +1,576 @@
+{
+  "slug": "cooling-rice-resistant-starch",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Cooled Rice and Blood Sugar: What Studies Show",
+  "yorum": "Do you ever cook a big batch of rice or potatoes and eat the leftovers later? Have you noticed any difference in how you feel after a cold or reheated meal?",
+  "aciklama_giris": "Can cooling cooked rice, potatoes or pasta soften the blood sugar spike? In small crossover trials in healthy adults, rice that was cooled in the refrigerator and then reheated produced a modestly smaller glucose response than freshly cooked rice, about 18 percent in one trial of 15 people. The effect was smaller for pasta and unclear for potatoes.\n\nIn this video we look at what happens to starch when it cools, what the trials actually measured, why parboiled rice made a bigger difference in one study, what has not been tested in older adults or in people with diabetes, and how to cool and reheat rice safely so that Bacillus cereus does not become a problem.",
+  "kaynaklar": [
+    "Sonia S, Witjaksono F, Ridwan R. Effect of cooling of cooked white rice on resistant starch content and glycemic response. Asia Pacific Journal of Clinical Nutrition. 2015;24(4):620-625. DOI 10.6133/apjcn.2015.24.4.13. PMID 26693746.",
+    "Dhar A, Kumar D, Sharma A, Dewan D. Effect of hot and cooled carbohydrate diet on glycemic response in healthy individuals: a cross over study. International Journal of Research in Medical Sciences. 2021.",
+    "Lu LW, Venn B, Lu J, Monro J, Rush E. Effect of cold storage and reheating of parboiled rice on postprandial glycaemic response, satiety, palatability and chewed particle size distribution. Nutrients. 2017;9(5):475.",
+    "Hodges C, Archer F, Chowdhury M, Evans BL, Ghelani DJ, Mortoglou M, Guppy FM. Method of food preparation influences blood glucose response to a high-carbohydrate meal: a randomised cross-over trial. Foods. 2019;9(1):23. PMID 31881647.",
+    "Patterson MA, Nolte Fong J, Maiya M, Kung S, Sarkissian A, Nashef N, Wang W. Chilled potatoes decrease postprandial glucose, insulin, and glucose-dependent insulinotropic peptide compared to boiled potatoes in females with elevated fasting glucose and insulin. Nutrients. 2019;11(9):2066. DOI 10.3390/nu11092066.",
+    "Pugh JE, Cai M, Altieri N, Frost G. A comparison of the effects of resistant starch types on glycemic response in individuals with type 2 diabetes or prediabetes: a systematic review and meta-analysis. Frontiers in Nutrition. 2023;10:1118229. DOI 10.3389/fnut.2023.1118229.",
+    "Centers for Disease Control and Prevention. Bacillus cereus food poisoning associated with fried rice at two child day care centers, Virginia, 1993. MMWR Epidemiologic Notes and Reports.",
+    "Marler B. Publisher's Platform: Bacillus cereus and leftover rice, perhaps best to avoid. Food Safety News. February 16, 2025."
+  ],
+  "kapak": {
+    "satirlar": [
+      "COOLED RICE",
+      "SPIKE?"
+    ],
+    "vurgu": "–18%",
+    "vurgu_alt": "glucose",
+    "serit": "One trial · 15 healthy adults",
+    "gorsel": "a very large close-up bowl of white rice with a few grains spilling over the rim, a glucose meter with a blank screen tucked in front of the bowl, overlapping, bright and appetizing"
+  },
+  "kahraman": "rice",
+  "etiketler": [
+    "cooled rice",
+    "resistant starch",
+    "reheated rice blood sugar",
+    "cold potatoes blood sugar",
+    "retrogradation",
+    "type 2 diabetes",
+    "blood sugar spike",
+    "bacillus cereus",
+    "leftover rice safety",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "Bacillus cereus": "buh SILL us SEER ee us",
+    "CDC": "C D C",
+    "A1C": "A 1 C",
+    "sulfonylureas": "sul foh NILL yoo ree ahs",
+    "parboiled": "PAR boiled"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The claim and the catch",
+      "metin": "In a trial of 15 healthy adults, rice that was cooled for a day and then reheated caused about an 18 percent smaller blood sugar response than fresh rice.",
+      "gorsel": "a bowl of freshly steamed white rice beside a second bowl of cooled rice, a glucose meter with a blank screen between the two rice bowls, on a wooden table",
+      "etiket": "Sonia et al. · Asia Pac J Clin Nutr · 2015",
+      "baslik": {
+        "satirlar": [
+          "COOLED RICE"
+        ],
+        "vurgu": "–18%",
+        "not": "smaller glucose response, 15 healthy adults"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But the effect was modest, and cooling rice the wrong way can make you sick.",
+      "gorsel": "a pot of cooked rice with its lid off on a kitchen counter, a round kitchen clock with a blank face beside it, steam fading"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know how much cooling really helps, and how to do it safely.",
+      "gorsel": "a covered bowl of rice on the shelf of an open refrigerator, a kitchen thermometer beside it",
+      "baslik": {
+        "satirlar": [
+          "HOW MUCH?",
+          "HOW SAFE?"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "bolum": "What cooling does to starch",
+      "metin": "This is The Food Almanac. Let's start with what actually happens to starch when you cook it, and when you let it cool.",
+      "gorsel": "a pot of simmering white rice with rising steam and a wooden spoon, a magnified circular inset showing plump swollen rice grains"
+    },
+    {
+      "id": 5,
+      "metin": "Rice, potatoes, pasta and bread are mostly starch. Starch is made of long chains of glucose linked together. Your digestive enzymes snip those chains apart, and the glucose passes into your blood.",
+      "gorsel": "a bowl of white rice, a baked potato, a few pieces of pasta and a slice of bread, long chains of small hexagon rings breaking into single rings above the rice",
+      "baslik": {
+        "satirlar": [
+          "STARCH",
+          "→ GLUCOSE"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "When starch is cooked in water, the grains swell and loosen. That makes it very easy for enzymes to reach, which is why hot, freshly cooked rice can raise blood sugar quickly.",
+      "gorsel": "a close view of plump, steaming white rice grains in a ceramic bowl, a magnified circular inset of swollen starch granules with loose chains"
+    },
+    {
+      "id": 7,
+      "metin": "Then, as the food cools, some of those loosened chains line up and pack together again into tight crystals. Scientists call this retrogradation.",
+      "gorsel": "a bowl of cooled white rice on a cool stone slab, a magnified circular inset of neat, tightly packed ordered chains of hexagon rings",
+      "baslik": {
+        "satirlar": [
+          "RETRO-",
+          "GRADATION"
+        ],
+        "not": "cooked starch re-packing as it cools"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "Those tight crystals are harder for your enzymes to break down. The result is called type 3 resistant starch. It passes through the small intestine mostly undigested, a bit like fiber.",
+      "gorsel": "a small intestine wall with finger-like villi, golden glucose spheres being absorbed on the left and tight crystal clusters of rice starch passing by untouched on the right",
+      "baslik": {
+        "satirlar": [
+          "RESISTANT",
+          "STARCH"
+        ],
+        "not": "starch your enzymes struggle to digest"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "So the idea is simple. Cook rice or potatoes, chill them in the refrigerator, and some of the starch becomes harder to digest. The questions are how much, and whether it changes what your blood sugar does.",
+      "gorsel": "a rice cooker with a bowl of steaming rice on the left, a chilled bowl of rice on a refrigerator shelf on the right, a dashed curved line linking the two"
+    },
+    {
+      "id": 10,
+      "bolum": "The rice experiments",
+      "tip": "kart",
+      "metin": "Let's look at the rice trials first, starting with a team in Indonesia.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Fresh rice versus cooled rice",
+        "alt": "Universitas Indonesia · 2015"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "First, the researchers measured resistant starch in three kinds of white rice. Freshly cooked. Cooled for ten hours at room temperature. And cooled for twenty-four hours in a refrigerator, then reheated.",
+      "gorsel": "three identical white bowls of rice in a row, the first steaming, the second sitting beside a kitchen window, the third beside a small refrigerator door",
+      "etiket": "Sonia et al. · Asia Pac J Clin Nutr · 2015"
+    },
+    {
+      "id": 12,
+      "tip": "grafik",
+      "metin": "Fresh rice had 0.64 grams of resistant starch per 100 grams. Rice cooled at room temperature had 1.3 grams. And rice chilled for a day and reheated had 1.65 grams, about two and a half times as much as fresh.",
+      "grafik": {
+        "baslik": "Resistant starch in cooked white rice",
+        "alt": "Grams of resistant starch per 100 grams of rice",
+        "cubuklar": [
+          {
+            "etiket": "Fresh",
+            "deger": 0.64,
+            "metin": "0.64 g"
+          },
+          {
+            "etiket": "Cooled 10 h, room temp",
+            "deger": 1.3,
+            "metin": "1.30 g"
+          },
+          {
+            "etiket": "Chilled 24 h, reheated",
+            "deger": 1.65,
+            "metin": "1.65 g"
+          }
+        ],
+        "kaynak": "Sonia et al., Asia Pac J Clin Nutr 2015 · laboratory measurement of white rice"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "That is a real increase, but notice the scale. We are talking about a gram or two in every 100 grams of rice. Most of the carbohydrate in the bowl is still ordinary, digestible starch.",
+      "gorsel": "a kitchen scale holding a small mound of cooled white rice, a large bowl of rice behind it, a few single grains set apart on the table"
+    },
+    {
+      "id": 14,
+      "metin": "Then came the human test. Fifteen healthy adults ate fresh rice on one day, and the cooled, reheated rice on another day. Everyone tried both, which is called a crossover design.",
+      "gorsel": "two place settings at a plain research table, one with a steaming bowl of white rice and one with a bowl of reheated rice, an empty chair at each",
+      "baslik": {
+        "satirlar": [
+          "CROSSOVER",
+          "TRIAL"
+        ],
+        "not": "everyone eats both versions"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Compared with fresh rice, the cooled and reheated rice produced about an 18 percent smaller overall rise in blood sugar. The difference was statistically significant, but only just.",
+      "gorsel": "a glucose meter with a blank screen beside a bowl of white rice, a gentle hand-drawn hill-shaped curve beside it, one taller hill and one lower hill",
+      "etiket": "Sonia et al. · Asia Pac J Clin Nutr · 2015",
+      "baslik": {
+        "satirlar": [
+          "ABOUT 18%",
+          "SMALLER RISE"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "metin": "That is a hint, not proof. It was fifteen healthy people, one kind of rice, and a result that barely crossed the usual line for significance.",
+      "gorsel": "a small bowl of rice and a very short stack of papers with blank pages on a laboratory bench, a magnifying glass resting beside them"
+    },
+    {
+      "id": 17,
+      "metin": "A second small crossover trial, with 20 healthy adults, compared hot white rice with rice that had been cooled in a refrigerator for twelve hours.",
+      "gorsel": "a steaming bowl of white rice on the left and a chilled bowl of rice with a faint frost-like sheen on the right, an antique pocket watch between them"
+    },
+    {
+      "id": 18,
+      "metin": "Over two hours, average blood glucose was about 122 milligrams per deciliter after the cooled rice, and 128 after the hot rice. A difference of about six.",
+      "gorsel": "a glucose sensor patch on an upper arm beside a bowl of cooled white rice, a spoon resting in the rice",
+      "etiket": "Dhar et al. · Int J Res Med Sci · 2021",
+      "baslik": {
+        "satirlar": [
+          "128 → 122"
+        ],
+        "vurgu": "–6",
+        "not": "mg/dL on average over two hours"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "Six points on a glucose meter is not nothing, but it is small. And in a moment, a third rice trial adds a twist about which rice you buy.",
+      "gorsel": "a bag of uncooked long-grain rice beside a scoop of raw rice grains, a glucose meter with a blank screen in front"
+    },
+    {
+      "id": 20,
+      "bolum": "The twist in the rice aisle",
+      "tip": "kart",
+      "metin": "Here is that twist. It comes from a trial in New Zealand.",
+      "kart": {
+        "ust": "THE TWIST",
+        "baslik": "Which rice you start with",
+        "alt": "Dunedin, New Zealand · 2017"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "Researchers in Dunedin tested 28 healthy adults on three servings of rice. Regular white rice. Parboiled rice, which is partly cooked before it is milled. And parboiled rice that was stored in a refrigerator overnight and reheated.",
+      "gorsel": "three bowls of rice on a tray: one of plain white rice, one of slightly golden parboiled rice, and one of reheated golden rice, a sack of unmilled rice grains behind them",
+      "etiket": "Lu et al. · Nutrients · 2017"
+    },
+    {
+      "id": 22,
+      "tip": "grafik",
+      "metin": "Compared with regular white rice, the glucose response was about a third lower after fresh parboiled rice, and about 42 percent lower after parboiled rice that had been chilled overnight and reheated.",
+      "grafik": {
+        "baslik": "Blood glucose response to 140 g of rice",
+        "alt": "Incremental area under the curve, mmol/L·min (lower is better)",
+        "cubuklar": [
+          {
+            "etiket": "Regular white",
+            "deger": 144.7,
+            "metin": "144.7"
+          },
+          {
+            "etiket": "Fresh parboiled",
+            "deger": 94.9,
+            "metin": "94.9"
+          },
+          {
+            "etiket": "Parboiled, cooled, reheated",
+            "deger": 83.5,
+            "metin": "83.5"
+          }
+        ],
+        "kaynak": "Lu et al., Nutrients 2017 · 28 healthy adults, crossover"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "But here is the twist. The gap between fresh parboiled rice and cooled parboiled rice was not statistically significant. In this trial, most of the benefit came from the parboiling, not from the cooling.",
+      "gorsel": "a bowl of golden parboiled rice in front, a small refrigerator in the background with its door closed, a spoon resting on the rim of the rice",
+      "baslik": {
+        "satirlar": [
+          "PARBOILING",
+          "DID MOST"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "metin": "That does not make cooling useless. It shows how many things shape what a bowl of rice does to your blood sugar, and cooling is only one of them.",
+      "gorsel": "several different bowls of rice arranged in a loose group on a wooden table, white, golden and brown, each with its own wooden spoon"
+    },
+    {
+      "id": 25,
+      "bolum": "Pasta and potatoes",
+      "metin": "What about other foods? In 2019, researchers at the University of Brighton in England had 45 volunteers, aged 20 to 24, eat pasta with tomato sauce three ways: hot, cold from the refrigerator, and chilled then reheated in a microwave.",
+      "gorsel": "three plates of fusilli pasta with tomato sauce in a row, one steaming, one cold, one under a microwave dish cover, a small bowl of rice at the edge",
+      "etiket": "Hodges et al. · Foods · 2019"
+    },
+    {
+      "id": 26,
+      "metin": "The chilled and reheated pasta produced about a 4 percent smaller blood sugar response than hot pasta. Pasta eaten cold was not significantly different from hot.",
+      "gorsel": "a plate of reheated fusilli with tomato sauce beside a glucose meter with a blank screen and a small bowl of rice",
+      "baslik": {
+        "satirlar": [
+          "REHEATED",
+          "PASTA"
+        ],
+        "vurgu": "–4%",
+        "not": "smaller glucose response"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "At the two-hour mark, average glucose was about 104 milligrams per deciliter after reheated pasta, and about 109 after hot pasta. Again, a real but small gap, in young adults.",
+      "gorsel": "a round antique clock with a blank face beside a plate of pasta and a bowl of rice, a glucose sensor patch resting on the table"
+    },
+    {
+      "id": 28,
+      "metin": "Potatoes were tested in 30 women with overweight or obesity, average age about 30. They ate 250 grams of potatoes, about nine ounces. Some were boiled and eaten hot. Others were baked, kept in the refrigerator for five days, and eaten cold.",
+      "gorsel": "a bowl of boiled russet potato chunks steaming on the left and a plate of chilled baked potato halves on the right, a bowl of rice behind them",
+      "etiket": "Patterson et al. · Nutrients · 2019"
+    },
+    {
+      "id": 29,
+      "metin": "The total glucose response over two hours did not differ. Glucose was a little lower early on, about 9 percent lower at thirty minutes. But the insulin response was about 18 percent lower overall.",
+      "gorsel": "chilled baked potato halves on a white plate, a glucose meter with a blank screen, a small bowl of rice in the corner",
+      "baslik": {
+        "satirlar": [
+          "COLD POTATOES"
+        ],
+        "not": "glucose total unchanged, insulin about 18% lower"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "So chilled potatoes did something, but it was not a clear drop in blood sugar. Those women ate the potatoes cold rather than reheated, and the potatoes were never tested for their resistant starch.",
+      "gorsel": "a pile of whole russet potatoes next to a bowl of rice, a single potato cut in half showing pale flesh"
+    },
+    {
+      "id": 31,
+      "metin": "What about people with diabetes? A 2023 review gathered 36 randomized trials, with 982 people who had type 2 diabetes or prediabetes, and looked at resistant starch overall.",
+      "gorsel": "a tall stack of research journals with blank covers beside a bowl of rice and a glucose meter with a blank screen",
+      "etiket": "Pugh et al. · Front Nutr · 2023"
+    },
+    {
+      "id": 32,
+      "metin": "Types 1 and 2 of resistant starch lowered blood sugar after meals. For type 3, the kind made by cooling, the review found no significant effect on after-meal glucose, and the authors said more research is needed.",
+      "gorsel": "three small piles of different starchy grains on a table, rice in the foreground, with a glucose meter with a blank screen behind them",
+      "baslik": {
+        "satirlar": [
+          "TYPE 3",
+          "NOT PROVEN"
+        ],
+        "not": "no significant after-meal effect in the review"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "In my searches, I did not find a trial of cooled rice in people with type 2 diabetes, and none in adults over 60. That is a gap worth knowing about.",
+      "gorsel": "an empty armchair beside a small table with a bowl of rice and a cup of tea, soft window light"
+    },
+    {
+      "id": 34,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "So how big is the effect, really? Let's be honest about it.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "How big is the effect?",
+        "alt": "Small trials · healthy adults"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Line up the numbers. About 18 percent in one rice trial. About six milligrams per deciliter in another. About 4 percent in pasta. And no clear drop in glucose for potatoes.",
+      "gorsel": "four small plates in a row: rice, rice cooled in a dish, pasta and a potato, of clearly different sizes, simple and quiet",
+      "baslik": {
+        "satirlar": [
+          "SMALL",
+          "EFFECTS"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "Most of these were small trials in young or middle-aged adults, mostly healthy, each eating a single test meal. The pasta and potato trials were in people aged 45 or younger.",
+      "gorsel": "a single bowl of rice on a laboratory bench next to a notebook with blank pages and a pair of round eyeglasses"
+    },
+    {
+      "id": 37,
+      "metin": "It also matters what the studies did not test. We do not know whether the effect holds in adults over 60, in people with diabetes, or in people who take medicines such as metformin. Evidence in prediabetes is thin.",
+      "gorsel": "a weekly pill organizer and a glass of water beside a bowl of rice on a kitchen table",
+      "baslik": {
+        "satirlar": [
+          "NOT YET",
+          "TESTED"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "And we found no long-term trials showing that eating cooled rice for months improves A1C, the three-month average of blood sugar. A one-meal difference in a lab is not the same thing.",
+      "gorsel": "a wall calendar with blank pages and a bowl of rice on a table beneath it, a glucose meter with a blank screen"
+    },
+    {
+      "id": 39,
+      "metin": "So no, cooling does not turn white rice into a diabetes-friendly food. It is still mostly digestible starch, and a big bowl is still a big bowl.",
+      "gorsel": "a very large bowl heaped with white rice on a kitchen table, a small spoon beside it",
+      "baslik": {
+        "satirlar": [
+          "STILL",
+          "MOSTLY STARCH"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "metin": "But it is not a reason to avoid rice, potatoes or pasta either. If you like leftovers, cooling them is a harmless bonus, as long as you do it safely. And that safety part really matters.",
+      "gorsel": "a covered glass container of rice in a refrigerator beside a jar of vegetables, calm and tidy"
+    },
+    {
+      "id": 41,
+      "bolum": "Keeping rice safe",
+      "tip": "kart",
+      "metin": "Rice has a food safety quirk that surprises many people.",
+      "kart": {
+        "ust": "FOOD SAFETY",
+        "baslik": "The rice bacterium",
+        "alt": "Bacillus cereus"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "A bacterium called Bacillus cereus lives in soil and in many foods. It forms tough spores that can survive cooking.",
+      "gorsel": "a magnified circular inset of a rod-shaped bacterium with a small oval spore inside, a bowl of freshly cooked rice beside it",
+      "baslik": {
+        "satirlar": [
+          "SURVIVES",
+          "COOKING"
+        ],
+        "not": "Bacillus cereus spores"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "If cooked rice sits at room temperature, those spores can wake up and multiply, and some of the bacteria make a toxin. The toxin behind the vomiting illness is heat stable, so a quick reheat may not make that rice safe.",
+      "gorsel": "a bowl of cooked rice left on a kitchen counter with a clock beside it, tiny rod-shaped bacteria drawn multiplying in a magnified inset"
+    },
+    {
+      "id": 44,
+      "metin": "The CDC investigated one outbreak at two child day care centers in Virginia in 1993. Of 67 people who ate a catered lunch, 14 became ill. The cause was chicken fried rice that had been cooked the night before and cooled on the counter.",
+      "gorsel": "a plate of fried rice with small pieces of chicken on a lunch table, a covered pot of rice on the counter behind it",
+      "etiket": "CDC · MMWR · Virginia, 1993"
+    },
+    {
+      "id": 45,
+      "metin": "This kind of illness starts fast, usually within one to six hours, with nausea, cramps, vomiting or diarrhea. It is usually mild and passes on its own, but there is no reason to take the chance.",
+      "gorsel": "a quiet bedside table with a glass of water and an empty bowl, morning light through a window"
+    },
+    {
+      "id": 46,
+      "metin": "The lesson from that report was simple. Do not cool rice slowly at room temperature, and keep cooked food either cold or hot.",
+      "gorsel": "a kitchen thermometer standing in a pot of steaming rice on the left, and a bowl of rice in a refrigerator on the right",
+      "baslik": {
+        "satirlar": [
+          "COLD OR HOT,",
+          "NOT WARM"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So if you would like to try cooling your rice, here is how to do it safely.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Cool it fast, keep it cold",
+        "alt": "Safe cooling and reheating"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "One. Do not let cooked rice sit out. Food safety guidance generally says to get leftovers into the refrigerator within about two hours of cooking, and sooner is better.",
+      "gorsel": "a hand-sized pot of cooked rice being carried toward a refrigerator, an antique pocket watch on the counter beside it"
+    },
+    {
+      "id": 49,
+      "metin": "Two. Cool it quickly. Spread the rice in a thin layer on a baking sheet, or divide it into small portions, then refrigerate it in covered containers.",
+      "gorsel": "a baking sheet with a thin layer of white rice cooling, next to two small covered glass containers ready for the refrigerator"
+    },
+    {
+      "id": 50,
+      "metin": "Three. Keep your refrigerator at or below 40 degrees Fahrenheit, and eat the rice within three to four days. If you are not sure how long it has been there, throw it out.",
+      "gorsel": "a refrigerator thermometer on a shelf beside a covered container of rice, the door slightly open",
+      "baslik": {
+        "satirlar": [
+          "3 TO 4 DAYS"
+        ],
+        "not": "refrigerated at or below 40 °F"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "Four. Reheat only the portion you plan to eat, and heat it until it is steaming hot, to at least 165 degrees Fahrenheit. Do not reheat the same rice again and again.",
+      "gorsel": "a bowl of steaming rice in a microwave, a kitchen thermometer standing in the rice",
+      "baslik": {
+        "satirlar": [
+          "165 °F"
+        ],
+        "not": "steaming hot, once"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "Five. Mind the portion. Cooling nudges the starch a little, but a smaller bowl means less starch in the first place. Rice alongside vegetables and a protein makes a more balanced meal.",
+      "gorsel": "a dinner plate with a small mound of rice, roasted vegetables and a piece of baked fish, a fork resting on the edge"
+    },
+    {
+      "id": 53,
+      "metin": "Six. If you shop for rice, remember the New Zealand trial. In that trial, parboiling accounted for more of the drop than cooling did. You can check the package for the word parboiled.",
+      "gorsel": "a supermarket shelf with bags of white rice, brown rice and golden parboiled rice, a shopping basket below"
+    },
+    {
+      "id": 54,
+      "metin": "A safety note. If you have diabetes or take medicines that lower blood sugar, such as insulin or sulfonylureas, do not change your meals or doses because of cooled rice. The effect is small, and your care team knows your numbers.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, an insulin pen and a bowl of rice",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "And if you wear a glucose monitor, you could test it yourself. Fresh rice one day, cooled and reheated rice another, same portion. Your own numbers matter more than an average from fifteen people.",
+      "gorsel": "a smartphone lying face down beside a small bowl of rice and a round glucose sensor patch on a table"
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A small help, not a fix",
+        "alt": "Cool it fast · reheat it hot"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Cooling cooked rice raises its resistant starch. In small trials in healthy adults, cooled and reheated rice produced a modestly smaller blood sugar response, about 18 percent in one trial.",
+      "gorsel": "a bowl of white rice on a wooden table, with a magnified circular inset of tightly packed starch chains"
+    },
+    {
+      "id": 58,
+      "metin": "The effect was smaller for pasta, unclear for potatoes, and untested in older adults or in people with diabetes. In one trial, choosing parboiled rice made a bigger difference than cooling.",
+      "gorsel": "a bowl of rice, a plate of pasta and a baked potato in a calm still-life arrangement, a glucose meter with a blank screen beside them"
+    },
+    {
+      "id": 59,
+      "metin": "Cooling is a harmless bonus, not a treatment. Cool the rice quickly, refrigerate it within about two hours, eat it within three to four days, and reheat it until it is steaming hot.",
+      "gorsel": "a covered container of rice in a refrigerator beside a thermometer, a spoon and a folded cloth napkin on the shelf"
+    },
+    {
+      "id": 60,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
