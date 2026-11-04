@@ -1,0 +1,17 @@
+{
+  "baslik": ["ONE GLASS:", "HOW LONG?"],
+  "baslik_yt": "How Long Does One Glass of Beet Juice Work?",
+  "aciklama": "Researchers tracked blood pressure hour by hour after beet juice. Here is when the effect peaks, when it fades, and why daily use matters.",
+  "parcalar": [
+    {"sahne": 28, "cumleler": [0], "gorsel": 3, "baslik": null, "etiket": null},
+    {"sahne": 29, "cumleler": [0],
+     "baslik": {"satirlar": ["LOWEST AT", "2.5 HOURS"], "vurgu": "2.5 HRS", "not": "systolic low point"},
+     "etiket": "Webb et al. · Hypertension · 2008"},
+    {"sahne": 30, "cumleler": [0],
+     "baslik": {"satirlar": ["24 HOURS", "LATER"], "vurgu": "-4 PTS", "not": "no longer clear"},
+     "etiket": "Webb et al. · Hypertension · 2008"},
+    {"sahne": 31, "cumleler": [0], "etiket": "Kapil et al. · Hypertension · 2015"},
+    {"sahne": 31, "cumleler": [1], "baslik": {"satirlar": ["MAINTAIN,", "NOT BANK"]}, "etiket": null},
+    {"sahne": 49, "cumleler": [1, 2], "baslik": {"satirlar": ["WEEKS,", "NOT DAYS"]}, "etiket": null}
+  ]
+}
