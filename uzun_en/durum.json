@@ -1,5 +1,5 @@
 {
-  "aktif": "cooking-and-vegetable-nutrients",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -147,7 +147,7 @@
     },
     "cooking-and-vegetable-nutrients": {
       "slot": "2027-01-01T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-03T18:58:02Z",
       "sahne_deneme": 0
     }
