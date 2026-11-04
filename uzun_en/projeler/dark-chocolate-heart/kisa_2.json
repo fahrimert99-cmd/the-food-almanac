@@ -1,0 +1,23 @@
+{
+  "baslik": ["COCOA LOSES", "90% OF IT?"],
+  "baslik_yt": "Processed Cocoa: Where Did the Flavanols Go?",
+  "aciklama": "Food scientists tested commercial cocoa powders and found heavy processing leaves about 90 percent fewer flavanols. Here is the phrase to look for on a label.",
+  "parcalar": [
+    {"sahne": 6, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 32, "cumleler": [1], "gorsel": 32,
+     "baslik": {"satirlar": ["NATURAL", "COCOA"], "vurgu": "35", "not": "mg flavanols per gram"},
+     "etiket": "Miller et al. · J Agric Food Chem · 2008"},
+    {"sahne": 33, "cumleler": [2], "gorsel": 34,
+     "baslik": {"satirlar": ["HEAVILY", "PROCESSED"], "vurgu": "4", "not": "mg flavanols per gram"},
+     "etiket": "Miller et al. · J Agric Food Chem · 2008"},
+    {"sahne": 34, "cumleler": [0],
+     "baslik": {"satirlar": ["ABOUT 90%", "FEWER"], "vurgu": "-90%", "not": "flavanols, heavy processing"},
+     "etiket": "Miller et al. · J Agric Food Chem · 2008"},
+    {"sahne": 31, "cumleler": [0],
+     "baslik": {"satirlar": ["DUTCH-", "PROCESSED"]}, "etiket": null},
+    {"sahne": 35, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 48, "cumleler": [2],
+     "baslik": {"satirlar": ["PROCESSED", "WITH ALKALI"], "not": "the phrase to look for"}, "etiket": null},
+    {"sahne": 48, "cumleler": [3], "gorsel": 29, "baslik": null, "etiket": null}
+  ]
+}
