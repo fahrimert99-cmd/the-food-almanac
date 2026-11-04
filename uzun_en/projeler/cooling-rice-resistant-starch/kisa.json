@@ -1,0 +1,17 @@
+{
+  "baslik": ["COOLED RICE:", "SAFE?"],
+  "baslik_yt": "Cooled Rice and Blood Sugar: Small Gain, Real Risk",
+  "aciklama": "Cooling and reheating rice cut the blood sugar rise by about 18 percent in one small trial. Here is the catch, and how to cool rice safely.",
+  "parcalar": [
+    {"sahne": 41, "cumleler": [0], "gorsel": 1, "baslik": null, "etiket": null},
+    {"sahne": 15, "cumleler": [0],
+     "baslik": {"satirlar": ["COOLED RICE"], "vurgu": "-18%", "not": "smaller glucose response"},
+     "etiket": "Sonia · Asia Pac J Clin Nutr · 2015"},
+    {"sahne": 15, "cumleler": [1], "baslik": null},
+    {"sahne": 16, "cumleler": [0], "baslik": {"satirlar": ["A HINT,", "NOT PROOF"]}, "etiket": null},
+    {"sahne": 42, "cumleler": [0, 1]},
+    {"sahne": 43, "cumleler": [0]},
+    {"sahne": 46, "cumleler": [1]},
+    {"sahne": 59, "cumleler": [1], "baslik": {"satirlar": ["COOL FAST,", "REHEAT HOT"]}}
+  ]
+}
