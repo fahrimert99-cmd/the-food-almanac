@@ -1,0 +1,20 @@
+{
+  "baslik": ["DARK CHOCOLATE", "= HEART PILL?"],
+  "baslik_yt": "Dark Chocolate and Your Heart: What the Trial Found",
+  "aciklama": "A trial of 21,442 older adults tested cocoa extract for heart health, but capsules are not chocolate bars. Here is what the evidence does and does not show.",
+  "parcalar": [
+    {"sahne": 57, "cumleler": [0], "gorsel": 1, "baslik": null, "etiket": null},
+    {"sahne": 54, "cumleler": [1], "gorsel": 1,
+     "baslik": {"satirlar": ["CV DEATHS"], "vurgu": "-27%", "not": "a secondary finding"},
+     "etiket": "Sesso et al. · Am J Clin Nutr · 2022"},
+    {"sahne": 54, "cumleler": [0],
+     "baslik": {"satirlar": ["TOTAL EVENTS:", "NO CLEAR DROP"]},
+     "etiket": "Sesso et al. · Am J Clin Nutr · 2022"},
+    {"sahne": 21, "cumleler": [1, 2]},
+    {"sahne": 56, "cumleler": [0], "gorsel": 34,
+     "baslik": {"satirlar": ["PROCESSING"], "vurgu": "-90%", "not": "flavanols, heavy processing"},
+     "etiket": "Miller et al. · J Agric Food Chem · 2008"},
+    {"sahne": 39, "cumleler": [0]},
+    {"sahne": 47, "cumleler": [2]}
+  ]
+}
