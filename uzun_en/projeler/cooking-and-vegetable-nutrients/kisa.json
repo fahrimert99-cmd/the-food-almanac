@@ -1,0 +1,21 @@
+{
+  "baslik": ["BOIL VEGGIES?", "-68% FOLATE"],
+  "baslik_yt": "Does Boiling Vegetables Destroy Vitamins?",
+  "aciklama": "In a study of 13 frozen vegetables, boiling cut folate by 68 percent on average. Here is what steaming, microwaving and a little heat and oil do instead.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1],
+     "baslik": {"satirlar": ["BOILED", "VEGETABLES"], "vurgu": "-68%", "not": "folate lost on average"},
+     "etiket": "Bureau et al. · LWT · 2015"},
+    {"sahne": 16, "cumleler": [1, 2], "gorsel": 13,
+     "baslik": {"satirlar": ["LOST TO", "THE WATER"]}, "etiket": null},
+    {"sahne": 57, "cumleler": [2], "gorsel": 14, "baslik": null, "etiket": null},
+    {"sahne": 22, "cumleler": [1], "gorsel": 2, "baslik": null, "etiket": null},
+    {"sahne": 24, "cumleler": [0],
+     "baslik": {"satirlar": ["LYCOPENE UP"], "vurgu": "2.7×", "not": "lycopene after 15 min heat"},
+     "etiket": "Dewanto et al. · J Agric Food Chem"},
+    {"sahne": 25, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 49, "cumleler": [1, 2], "baslik": null, "etiket": null},
+    {"sahne": 51, "cumleler": [1], "baslik": null, "etiket": null}
+  ]
+}
