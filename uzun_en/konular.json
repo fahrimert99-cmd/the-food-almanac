@@ -353,6 +353,141 @@
         "raw honey cholesterol study"
       ],
       "durum": "bekliyor"
+    },
+    {
+      "slug": "late-eating-blood-sugar",
+      "soru": "Is eating late at night really worse for your blood sugar?",
+      "aci": "Late dinners and glucose: controlled trials comparing the same meal early vs late, the melatonin and insulin timing link, time-restricted eating trials in older adults, and what a practical cut-off looks like.",
+      "anahtar": [
+        "eating late at night blood sugar",
+        "late dinner glucose",
+        "what time to stop eating at night"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "beans-blood-sugar",
+      "soru": "Do beans and lentils really help control blood sugar?",
+      "aci": "Legumes and glucose: the Jenkins 2012 trial on A1C and blood pressure, meta-analyses of pulses on fasting glucose, the 'second meal effect', and easy ways to add a cup a day without the gas.",
+      "anahtar": [
+        "beans blood sugar",
+        "lentils diabetes",
+        "legumes A1C"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "artificial-sweeteners-blood-sugar",
+      "soru": "Do artificial sweeteners raise your blood sugar?",
+      "aci": "Diet drinks and sweeteners: trials on sucralose, aspartame and stevia and glucose, the 2023 WHO guidance, the erythritol and blood clotting study, and what the evidence does and does not show for people with diabetes.",
+      "anahtar": [
+        "do artificial sweeteners raise blood sugar",
+        "diet soda blood sugar",
+        "erythritol heart risk",
+        "stevia diabetes"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "coconut-oil-cholesterol",
+      "soru": "Is coconut oil good or bad for your cholesterol?",
+      "aci": "Coconut oil and LDL: the 2020 meta-analysis of 16 trials comparing coconut oil with other oils, saturated fat and the AHA advisory, why the 'MCT' claim does not transfer, and what to cook with instead.",
+      "anahtar": [
+        "coconut oil cholesterol",
+        "is coconut oil healthy",
+        "coconut oil LDL"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "ultra-processed-foods",
+      "soru": "Are ultra-processed foods really that bad for you?",
+      "aci": "Ultra-processed foods: what the NOVA label means, the NIH 2019 inpatient trial (about 500 extra calories a day), large cohort links with heart disease and diabetes, why some processed foods are fine, and how to read a package.",
+      "anahtar": [
+        "ultra processed foods",
+        "what are ultra processed foods",
+        "ultra processed food health risks"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "bananas-potassium-blood-pressure",
+      "soru": "Can bananas and potassium really lower blood pressure?",
+      "aci": "Potassium and blood pressure: meta-analyses of potassium intake, the DASH pattern, the sodium-to-potassium balance, how much a banana actually gives you, and the important caution for kidney disease and some blood pressure pills.",
+      "anahtar": [
+        "potassium blood pressure",
+        "bananas blood pressure",
+        "foods high in potassium for blood pressure"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "red-wine-heart",
+      "soru": "Is a glass of red wine really good for your heart?",
+      "aci": "Red wine and the heart: where the 'French paradox' came from, why the old J-curve studies are now doubted (the 'sick quitter' problem), the 2023 JAMA meta-analysis, resveratrol doses, and what heart guidelines now say about alcohol after 60.",
+      "anahtar": [
+        "is red wine good for your heart",
+        "red wine heart health",
+        "moderate drinking heart"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "pickle-juice-leg-cramps",
+      "soru": "Does pickle juice really stop nighttime leg cramps?",
+      "aci": "Night leg cramps after 60: the small 2010 trial on pickle juice and cramp duration, the reflex (not electrolyte) explanation, why magnesium did not beat placebo in reviews, stretching evidence, and medicines that can cause cramps.",
+      "anahtar": [
+        "pickle juice leg cramps",
+        "night leg cramps remedy",
+        "magnesium leg cramps"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "hidden-sodium",
+      "soru": "Where does most of the salt you eat really come from?",
+      "aci": "Hidden sodium: the CDC finding that most sodium comes from packaged and restaurant food, not the salt shaker, the top sources (bread, deli meat, soup, pizza), how to read 'low sodium' labels, and trials of cutting salt on blood pressure in older adults.",
+      "anahtar": [
+        "hidden sodium in foods",
+        "where does salt in diet come from",
+        "high sodium foods list"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "foods-for-macular-degeneration",
+      "soru": "Can leafy greens and eggs protect your eyes from macular degeneration?",
+      "aci": "Lutein, zeaxanthin and the macula: the AREDS and AREDS2 trials (who the supplement helps and who it does not), dietary lutein from greens and eggs, why beta-carotene was dropped for smokers, and what an eye-friendly plate looks like.",
+      "anahtar": [
+        "foods for macular degeneration",
+        "lutein eyes",
+        "AREDS2 vitamins",
+        "eggs eye health"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "kidney-stones-oxalate-calcium",
+      "soru": "Should you cut out spinach and dairy if you get kidney stones?",
+      "aci": "Kidney stones and diet: why low-calcium diets backfired in trials, pairing calcium with oxalate-rich foods, fluid and citrus advice from urology guidelines, salt and animal protein, and why the answer depends on the stone type.",
+      "anahtar": [
+        "kidney stones diet",
+        "oxalate foods kidney stones",
+        "calcium kidney stones",
+        "spinach kidney stones"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "green-tea-cholesterol",
+      "soru": "Does green tea really lower cholesterol?",
+      "aci": "Green tea and LDL: meta-analyses of catechin trials (a modest drop), how many cups that takes, green tea extract and the liver safety warnings, the caffeine question, and green tea with blood thinners.",
+      "anahtar": [
+        "green tea cholesterol",
+        "green tea LDL",
+        "green tea benefits heart"
+      ],
+      "durum": "bekliyor"
     }
   ]
 }
