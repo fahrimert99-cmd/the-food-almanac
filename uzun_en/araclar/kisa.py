@@ -14,7 +14,8 @@ Girdi: projeler/SLUG/kisa.json (görev: gorev/KISA.md) ->
 Klasörler (varsayılan): ses/ (cümle WAV'ları + zaman.json), images/ (NN.jpg), cikti/dikey/ (dikey_NN.jpg),
   cikti/kisa_cta/ (kapanış sesleri), kapak_yt.jpg (projede ya da cikti/).
 Çıktı: cikti/kisa/kisa_props.json (Remotion --props), cikti/kisa/kisa_ses.wav (anlatım + müzik), public/img/kisa/*.jpg.
-Uzun videonun cümleleri olduğu gibi kullanılır; yalnızca kapanış çağrısı aynı sesle seslendirilir.
+Uzun videonun cümleleri olduğu gibi kullanılır. Kapanış: son cümlenin üstünde sessiz "FULL VIDEO" şeridi; eski sesli
+  kapanış ekranı yalnızca kisa.json "cta" ile (o zaman kapanış aynı sesle seslendirilir).
 """
 import argparse, hashlib, json, os, shutil, sys
 
@@ -24,15 +25,21 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ortak as O  # noqa: E402
 
 FPS = 30
-BAS = 0.6        # ilk sesten önce (kanca başlığı görünsün)
+BAS = 0.15       # ilk sesten önce: kanca başlığı ilk karede zaten ekranda; akışta ilk saniye boş geçmesin
 ARA = 0.30       # cümleler arası
 PARCA_ARA = 0.45 # parçalar arası
 CTA_ARA = 0.6    # içerikten kapanış çağrısına geçiş
-SON = 0.8        # son sesten sonra
+SON = 0.5        # son sesten sonra (kısa tutulur: Shorts başa sarınca kanca hemen gelsin)
 
-# Kapanış çağrısı (kisa.json "cta" ile değiştirilebilir). {ad}: kanal adı.
+# Sesli kapanış çağrısı artık VARSAYILAN DEĞİL. Kanal verisi (analiz/2026-11-04.json, en çok izlenen 6 Shorts):
+# ~12 sn'lik "watch the full video + subscribe" ekranı başladığında kalan izleyicinin ~%60-70'i ayrılıyor; bu bölüm
+# ortalama izlenme yüzdesini ~7-8 puan düşürüyor ve videonun başa sarmasını (döngü izlenmesini) engelliyordu.
+# Yerine son parçanın son saniyelerinde sessiz bir "FULL VIDEO ON THE CHANNEL" şeridi çıkar (süre eklemez);
+# uzun videonun bağlantısı açıklamada ve kanalın ilk yorumunda zaten var. Eski sesli kapanış için kisa.json'a
+# "cta": [...] (metin listesi) yazılır. {ad}: kanal adı.
 CTA = ["Want the full story, with every study? Watch the full video on our channel.",
        "And subscribe to {ad} for more food science, explained calmly and honestly."]
+SERIT = 3.0        # sessiz kapanış şeridi: anlatımın son kaç saniyesinde görünür
 CTA_TAHMIN = 10.0  # seslendirilmemiş kapanış çağrısının tahmini süresi (sn), denetim için
 
 # Kurallar (gorev/KISA.md ile aynı)
@@ -172,6 +179,11 @@ def cta_metinleri(tanim):
     return [(c if isinstance(c, str) else c["metin"]).replace("{ad}", ad) for c in (tanim.get("cta") or CTA)]
 
 
+def sesli_kapanis(tanim):
+    """Sesli kapanış ekranı yalnızca kisa.json'da "cta" açıkça verilmişse (varsayılan: sessiz şerit, süre eklemez)."""
+    return bool(tanim.get("cta"))
+
+
 def liste(slug, no=1):
     """Ajanın cümle seçeceği liste: her sahnenin görsel tarifi, ekrandaki başlığı ve süreli cümleleri. Başka bir
     Shorts'ta kullanılmış cümleler işaretlenir."""
@@ -281,7 +293,7 @@ def kontrol(slug, no=1):
         t += sure + (0 if i == len(pl) else (ARA if pl[i].get("sahne") == p["sahne"] else PARCA_ARA))
     if not ICERIK[0] <= t <= ICERIK[1]:
         hata.append(f"anlatım {t:.1f} sn; {ICERIK[0]:.0f}-{ICERIK[1]:.0f} sn olmalı (hedef 38-45 sn)")
-    toplam = BAS + t + CTA_ARA + CTA_TAHMIN + SON
+    toplam = BAS + t + (CTA_ARA + CTA_TAHMIN if sesli_kapanis(tanim) else 0) + SON
     if toplam > TOPLAM_AZAMI:
         hata.append(f"kapanışla birlikte ~{toplam:.0f} sn; en çok {TOPLAM_AZAMI:.0f} sn")
     O.log(f"kısa denetim: {len(pl)} parça, anlatım {t:.1f} sn, kapanışla ~{toplam:.0f} sn")
@@ -361,9 +373,13 @@ def uret(slug, no=1):
                          "kaydir": bool(p.get("kaydir")) and not dikey})   # yatay karşılaştırma görselleri kaydırılır
         if pi + 1 < len(tanim["parcalar"]):            # aynı sahnenin cümleleri sürüyorsa cümle arası kadar
             t += ARA if tanim["parcalar"][pi + 1]["sahne"] == p["sahne"] else PARCA_ARA
-    cta_bas = t + CTA_ARA
-    t = cta_bas
-    for yol, metin in cta_sesleri(slug, tanim, y["cta"]):
+    serit = round(max(kanca_son or 0, t - SERIT), 3)  # sessiz kapanış şeridinin başladığı an
+    if not sesli_kapanis(tanim):
+        cta_bas = t + SON                            # kapanış ekranı yok: video son cümleden hemen sonra biter
+    else:
+        cta_bas = t + CTA_ARA
+        t = cta_bas
+    for yol, metin in (cta_sesleri(slug, tanim, y["cta"]) if sesli_kapanis(tanim) else []):
         x, sr0 = O.wav_oku(yol)
         if sr0 != sr:                                  # anlatımla aynı motor; yine de örnekleme farkını düzelt
             x = np.interp(np.arange(0, len(x), sr0 / sr), np.arange(len(x)), x).astype(np.float32)
@@ -373,7 +389,7 @@ def uret(slug, no=1):
         t += sure + ARA
     if y["kapak"]:
         shutil.copy(y["kapak"], os.path.join(pub, "kapak.jpg"))
-    toplam = t + SON
+    toplam = t + SON if sesli_kapanis(tanim) else cta_bas
 
     anlatim = np.zeros(int(toplam * sr) + sr)
     for t0, x in sesler:
@@ -387,7 +403,8 @@ def uret(slug, no=1):
     H.karisim(aw, mw, os.path.join(y["cikti"], "kisa_ses.wav"))
 
     props = {"fps": FPS, "toplam": round(toplam, 3), "baslik": tanim["baslik"], "kanal": O.marka()["ad"],
-             "parcalar": parcalar, "altyazi": altyazi, "kapanis": round(cta_bas, 3), "kanca_son": round(kanca_son, 3),
+             "parcalar": parcalar, "altyazi": altyazi, "kapanis": round(cta_bas, 3),
+             "serit": None if sesli_kapanis(tanim) else serit, "kanca_son": round(kanca_son, 3),
              "kapak": "kisa/kapak" if os.path.exists(os.path.join(pub, "kapak.jpg")) else None}
     O.json_yaz(os.path.join(y["cikti"], "kisa_props.json"), props)
     eksik = [p["gorsel"] for p in parcalar if not p["dikey"]]

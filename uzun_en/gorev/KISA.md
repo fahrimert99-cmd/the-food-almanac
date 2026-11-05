@@ -11,7 +11,9 @@ new narration: you pick sentences that are already recorded, in the order viewer
 - the hook title,
 - word-by-word captions,
 - music,
-- a closing call to action ("watch the full video", "subscribe").
+- a silent "FULL VIDEO ON THE CHANNEL" strip over the last seconds of your last part (no extra narration, no extra
+  time). The Short ends right after your last sentence and loops back to the hook, so the last sentence must be a
+  real ending.
 
 The Short's job is to make a scrolling viewer stop, learn one surprising, sourced fact, and want the full video.
 
@@ -64,6 +66,8 @@ Fields:
   - 15–70 characters, no `#`.
   - Specific and curious, and true to what the Short says. For example "1 Egg a Day: What 32 Years of Data Show".
   - Do not reuse the long video's title word for word.
+- **`cta`**: do not write this field. It brings back the old voiced 12-second closing screen, which channel data showed
+  most remaining viewers left during.
 - **`aciklama`**: 1–2 plain sentences for the description, 40–300 characters, no links or `#`. The tool adds:
   - the full-video link,
   - the sources,
@@ -103,13 +107,15 @@ Fields:
   different from both earlier Shorts, and no sentence marked `USED`.
 
 ## Rules
-- **Length.** Narration (the sum of the sentence durations plus small gaps) must be 25–52 seconds. Aim for 38–45 s.
-  The closing call to action adds about 12 s; the whole Short must stay under 60 s.
+- **Length.** Narration (the sum of the sentence durations plus small gaps) must be 25–52 seconds. Aim for 35–45 s.
+  There is no closing screen any more: the Short is the narration plus about half a second.
 - **One image must not stay too long.** A part with more than one sentence may last at most 9 s. Single sentences of
   about 8 s are fine, but give them a strong image or a number badge.
 - **Open with the hook: the first 2 seconds decide everything.** Channel data (25 October 2026): only 18–30% of
   people who saw our Shorts in the feed kept watching; the rest swiped away in the first seconds. Those who stayed
-  watched about 40% of the Short.
+  watched about 40% of the Short. Data from 4 November 2026 (the six most-watched Shorts): about half of viewers were
+  gone by 20% of the Short (around 10 s), and of those still watching when the old closing screen began, about
+  two thirds left during it. The closing screen has been removed; the opening is now what matters most.
   - The first part is one short sentence, ideally under 4 s (never over 5 s). It must hit immediately: the most
     surprising number, a direct claim, or the viewer's own situation ("One egg a day, every day, for 32 years.").
     Avoid slow scene-setting openers ("If you eat oatmeal to look after your heart, here is what the research shows").
@@ -125,7 +131,7 @@ Fields:
   - Never pick sentences so that a finding sounds stronger, more certain or more causal than the long video says.
   - Keep cautions about medication or conditions if the topic needs them.
 - **End on the takeaway.** The last part should be the practical answer (what to do, how much), not a cliffhanger.
-  The call to action follows automatically.
+  The "full video" strip appears over it automatically, and then the Short loops to the hook.
 - **No duplicates.** Do not use the same sentence twice.
 - Keep the narration order mostly as in the video. Small reorders are fine only when the result still reads naturally.
 
