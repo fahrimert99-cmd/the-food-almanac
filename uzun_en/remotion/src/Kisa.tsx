@@ -4,7 +4,8 @@
 // - üstte önce kanca başlığı, ilk cümleden sonra her parçanın kinetik başlığı (satırlar sırayla kayarak gelir);
 // - kaynak etiketi (ör. "Drouin-Chartier et al. · BMJ · 2020") ve sayı rozeti (sayaçla açılır: 215,000 / +6%);
 // - kelime kelime vurgulanan büyük altyazı, sayılar hep altın renkte;
-// - sonda "tam videoyu izle + abone ol" kapanışı (uzun videonun kapağı, "subscribe" anında nabız atan düğme).
+// - sonda sessiz "FULL VIDEO ON THE CHANNEL" şeridi (son cümlenin üstünde; süre eklemez, Shorts başa sarar).
+//   Eski tam ekran "tam videoyu izle + abone ol" kapanışı yalnızca kisa.json'da "cta" verilirse çizilir (serit = null).
 // YouTube'un alt arayüzü ~1480 px altını örttüğü için yazılar üst 1450 px içinde. Veri: kisa.py -> kisa_props.json.
 import React from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
@@ -16,6 +17,7 @@ type Kelime = { w: string; t: number };
 type BaslikVeri = { satirlar: string[]; vurgu?: string; not?: string } | null;
 export type KisaVeri = {
   fps: number; toplam: number; baslik: string[]; kanal: string; kapanis: number; kanca_son?: number; kapak?: string | null;
+  serit?: number | null;
   parcalar: { gorsel: string; bas: number; son: number; kutu: number[] | null; odak?: number; etiket?: string | null;
     baslik?: BaslikVeri; kaydir?: boolean; yer?: { olcek: number; dy: number } | null }[];
   altyazi: { t0: number; t1: number; kelimeler: Kelime[] }[];
@@ -83,6 +85,23 @@ const SayiRozeti: React.FC<{ vurgu: string; not?: string; t: number; bas: number
   );
 };
 
+// Sessiz kapanış şeridi: son cümlenin son saniyelerinde altyazının hemen üstünde kayarak gelir.
+const KapanisSeridi: React.FC<{ t: number; bas: number; ust: number }> = ({ t, bas, ust }) => {
+  const a = eout(ilerle(t, bas, 0.45));
+  if (a <= 0) return null;
+  return (
+    <div style={{ position: "absolute", top: ust, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: a,
+      transform: `translateY(${(1 - a) * 24}px)` }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 18, background: "#FF0033", borderRadius: 999,
+        padding: "14px 36px 14px 26px", color: "#FFFFFF", fontFamily: INTER, fontWeight: 800, fontSize: 40, letterSpacing: 1,
+        boxShadow: "0 10px 28px rgba(255,0,51,0.45)" }}>
+        <span style={{ width: 0, height: 0, borderTop: "14px solid transparent", borderBottom: "14px solid transparent",
+          borderLeft: "22px solid #FFFFFF" }} />FULL VIDEO ON THE CHANNEL
+      </div>
+    </div>
+  );
+};
+
 const Altyazi: React.FC<{ v: KisaVeri; t: number; ust: number }> = ({ v, t, ust }) => {
   const satir = v.altyazi.find((a) => t >= a.t0 && t < a.t1);
   if (!satir) return null;
@@ -104,7 +123,7 @@ const Altyazi: React.FC<{ v: KisaVeri; t: number; ust: number }> = ({ v, t, ust 
 export const Kisa: React.FC<KisaVeri> = (v) => {
   const t = useCurrentFrame() / v.fps;
   const kapanis = ara(t, [v.kapanis + 0.1, v.kapanis + 0.5], [0, 1]);
-  const icerik = ara(t, [v.kapanis - 0.2, v.kapanis + 0.15], [1, 0]);
+  const icerik = v.serit != null ? 1 : ara(t, [v.kapanis - 0.2, v.kapanis + 0.15], [1, 0]);
   const abone = v.altyazi.flatMap((a) => a.kelimeler).find((k) => k.t >= v.kapanis && /^subscribe/i.test(k.w));
   const nabiz = abone && t >= abone.t ? 1 + 0.1 * Math.max(0, Math.sin((t - abone.t) * Math.PI * 2.2)) : 1;
   const kancaSon = v.kanca_son ?? 4;
@@ -156,10 +175,11 @@ export const Kisa: React.FC<KisaVeri> = (v) => {
           {aktif?.baslik?.vurgu && t >= kancaSon && (
             <SayiRozeti vurgu={aktif.baslik.vurgu} not={aktif.baslik.not} t={t} bas={baslikBas + 0.4} ust={aktif.etiket ? 580 : 500} />
           )}
+          {v.serit != null && t >= v.serit && <KapanisSeridi t={t} bas={v.serit} ust={1110} />}
           {t < v.kapanis && <Altyazi v={v} t={t} ust={1230} />}
         </AbsoluteFill>
       )}
-      {kapanis > 0 && (
+      {kapanis > 0 && v.serit == null && (
         <AbsoluteFill style={{ opacity: kapanis }}>
           <AbsoluteFill style={{ backgroundColor: RENK.lacivert }} />
           <KinetikSatirlar satirlar={["WATCH THE", "FULL VIDEO"]} t={t} bas={v.kapanis + 0.1} ust={130} azami={160} />
