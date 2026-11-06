@@ -1,0 +1,17 @@
+{
+  "baslik": ["BREAKFAST:", "TRUTH OR MYTH?"],
+  "baslik_yt": "Is Breakfast Really the Most Important Meal?",
+  "aciklama": "The famous slogan began as marketing, not a trial. Here is what randomized trials say about weight, and why skipping breakfast can matter more with type 2 diabetes.",
+  "parcalar": [
+    {"sahne": 5, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 59, "cumleler": [0], "gorsel": 1,
+     "baslik": {"satirlar": ["NO BREAKFAST,", "BIGGER SPIKE"], "vurgu": "+37%", "not": "lunch blood sugar, type 2"},
+     "etiket": "Jakubowicz et al. · Diabetes Care · 2015"},
+    {"sahne": 59, "cumleler": [1], "gorsel": 23, "baslik": null, "etiket": null},
+    {"sahne": 24, "cumleler": [1]},
+    {"sahne": 58, "cumleler": [1], "baslik": null, "etiket": "Sievert et al. · BMJ · 2019"},
+    {"sahne": 14, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 38, "cumleler": [2]},
+    {"sahne": 50, "cumleler": [1]}
+  ]
+}
