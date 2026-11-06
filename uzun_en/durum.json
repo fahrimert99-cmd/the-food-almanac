@@ -1,5 +1,5 @@
 {
-  "aktif": "breakfast-most-important-meal",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -171,7 +171,7 @@
     },
     "breakfast-most-important-meal": {
       "slot": "2027-01-15T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-06T04:39:19Z",
       "sahne_deneme": 0
     }
