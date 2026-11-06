@@ -1,0 +1,18 @@
+{
+  "baslik": ["MORNING PILLS:", "WITH FOOD?"],
+  "baslik_yt": "Morning Pills: Take Them With Food or Without?",
+  "aciklama": "Some medicines are taken with breakfast and others on an empty stomach, and the difference matters if you skip it. Here is what the labels say, and why to ask your pharmacist.",
+  "parcalar": [
+    {"sahne": 46, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 47, "cumleler": [0],
+     "baslik": {"satirlar": ["EMPTY STOMACH"], "vurgu": "30-60 MIN", "not": "before breakfast, with water"},
+     "etiket": "Levothyroxine label · DailyMed"},
+    {"sahne": 47, "cumleler": [1], "baslik": null, "etiket": "Levothyroxine label · DailyMed"},
+    {"sahne": 48, "cumleler": [0],
+     "baslik": {"satirlar": ["KEEP APART"], "vurgu": "4 HOURS", "not": "from iron, calcium, antacids"},
+     "etiket": "Levothyroxine label · DailyMed"},
+    {"sahne": 56, "cumleler": [2], "baslik": {"satirlar": ["INSULIN?", "CHECK FIRST"]}, "etiket": null},
+    {"sahne": 55, "cumleler": [1], "baslik": {"satirlar": ["ASK YOUR", "PHARMACIST"]}, "etiket": null},
+    {"sahne": 55, "cumleler": [2], "baslik": null, "etiket": null}
+  ]
+}
