@@ -1,0 +1,22 @@
+{
+  "baslik": ["+500 CALORIES", "A DAY?"],
+  "baslik_yt": "Ultra-Processed Food: 500 Extra Calories a Day?",
+  "aciklama": "In a hospital trial, volunteers ate about 500 more calories a day on an ultra-processed menu. Here is what large studies add, and why the label is too broad.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1],
+     "baslik": {"satirlar": ["ULTRA-", "PROCESSED"], "vurgu": "+500", "not": "calories a day"},
+     "etiket": "Hall et al. · Cell Metab · 2019"},
+    {"sahne": 20, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["20 ADULTS,", "2 WEEKS"]},
+     "etiket": "Hall et al. · Cell Metab · 2019"},
+    {"sahne": 31, "cumleler": [0],
+     "baslik": {"satirlar": ["9.9 MILLION", "PEOPLE"]},
+     "etiket": "Lane et al. · BMJ · 2024"},
+    {"sahne": 34, "cumleler": [0, 1], "etiket": null},
+    {"sahne": 57, "cumleler": [1],
+     "baslik": {"satirlar": ["WORSE VS.", "BETTER"]},
+     "etiket": "Chen et al. · Diabetes Care · 2023"},
+    {"sahne": 57, "cumleler": [2], "baslik": null, "etiket": null}
+  ]
+}
