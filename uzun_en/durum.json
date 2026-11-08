@@ -1,5 +1,5 @@
 {
-  "aktif": "beans-blood-sugar",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -189,7 +189,7 @@
     },
     "beans-blood-sugar": {
       "slot": "2027-01-26T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-08T11:28:37Z",
       "sahne_deneme": 0
     }
