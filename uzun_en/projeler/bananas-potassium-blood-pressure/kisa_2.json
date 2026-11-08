@@ -1,0 +1,17 @@
+{
+  "baslik": ["SALT SWAP", "CUT STROKES?"],
+  "baslik_yt": "Potassium Salt Substitute and Stroke Risk: 20,995 People",
+  "aciklama": "The biggest test of potassium and blood pressure did not use bananas. It gave villagers in rural China a potassium salt substitute. Here is what happened, and who should ask a doctor first.",
+  "parcalar": [
+    {"sahne": 28, "cumleler": [0, 1], "gorsel": 47, "baslik": null, "etiket": null},
+    {"sahne": 29, "cumleler": [0],
+     "baslik": {"satirlar": ["600", "VILLAGES"], "vurgu": "20,995", "not": "people, randomly assigned"},
+     "etiket": "Neal et al. · N Engl J Med · 2021"},
+    {"sahne": 29, "cumleler": [1, 2], "baslik": null},
+    {"sahne": 31, "cumleler": [0], "gorsel": 58,
+     "baslik": {"satirlar": ["STROKES", "DOWN"], "vurgu": "-14%", "not": "vs regular salt, ~5 years"},
+     "etiket": "Neal et al. · N Engl J Med · 2021"},
+    {"sahne": 32, "cumleler": [1, 2], "baslik": {"satirlar": ["NOT JUST", "POTASSIUM"]}, "etiket": null},
+    {"sahne": 48, "cumleler": [1]}
+  ]
+}
