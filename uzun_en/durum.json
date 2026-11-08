@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "washing-raw-chicken",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -179,6 +179,12 @@
       "slot": "2027-01-19T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-11-08T07:21:44Z",
+      "sahne_deneme": 0
+    },
+    "washing-raw-chicken": {
+      "slot": "2027-01-22T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-11-08T08:40:04Z",
       "sahne_deneme": 0
     }
   }
