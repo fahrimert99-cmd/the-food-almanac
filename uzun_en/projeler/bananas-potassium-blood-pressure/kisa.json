@@ -1,0 +1,19 @@
+{
+  "baslik": ["BANANAS VS", "HIGH BP?"],
+  "baslik_yt": "Bananas and High Blood Pressure: What Trials Show",
+  "aciklama": "A 22-trial BMJ review found more potassium lowered the top blood pressure number by about five points in adults with high blood pressure. Here is what that does and does not mean for a banana a day.",
+  "parcalar": [
+    {"sahne": 22, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0]},
+    {"sahne": 20, "cumleler": [1, 2]},
+    {"sahne": 22, "cumleler": [1, 2], "gorsel": 36,
+     "baslik": {"satirlar": ["PILLS,", "NOT BANANAS"]}, "etiket": null},
+    {"sahne": 59, "cumleler": [0],
+     "baslik": {"satirlar": ["ONE BANANA"], "vurgu": "422 MG", "not": "potassium, medium banana"},
+     "etiket": "USDA FoodData Central"},
+    {"sahne": 59, "cumleler": [1], "gorsel": 43,
+     "baslik": {"satirlar": ["ASK YOUR", "DOCTOR FIRST"]}, "etiket": null},
+    {"sahne": 60, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["FOOD FIRST,", "LESS SODIUM"]}, "etiket": null}
+  ]
+}
