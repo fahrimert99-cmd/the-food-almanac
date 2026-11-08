@@ -1,0 +1,18 @@
+{
+  "baslik": ["SUGAR-FREE", "HEART RISK?"],
+  "baslik_yt": "Erythritol: The Sugar-Free Sweetener Under Study",
+  "aciklama": "Erythritol is a sugar alcohol in many low-carb products. Here is what a 2023 study of 1,157 people found, and what it cannot prove.",
+  "parcalar": [
+    {"sahne": 41, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 42, "cumleler": [0],
+     "baslik": {"satirlar": ["ERYTHRITOL", "IN THE BLOOD"], "vurgu": "1,157", "not": "people tested"},
+     "etiket": "Witkowski et al. · Nat Med · 2023"},
+    {"sahne": 42, "cumleler": [1], "gorsel": 43,
+     "baslik": {"satirlar": ["3 YEARS,", "HEART EVENTS"]},
+     "etiket": "Witkowski et al. · Nat Med · 2023"},
+    {"sahne": 44, "cumleler": [0]},
+    {"sahne": 48, "cumleler": [2], "etiket": null},
+    {"sahne": 49, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 49, "cumleler": [1], "baslik": null, "etiket": null}
+  ]
+}
