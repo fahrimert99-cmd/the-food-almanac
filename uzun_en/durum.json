@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "artificial-sweeteners-blood-sugar",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -191,6 +191,12 @@
       "slot": "2027-01-26T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-11-08T11:28:37Z",
+      "sahne_deneme": 0
+    },
+    "artificial-sweeteners-blood-sugar": {
+      "slot": "2027-01-29T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-11-08T12:24:36Z",
       "sahne_deneme": 0
     }
   }
