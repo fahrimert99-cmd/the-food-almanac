@@ -1,0 +1,17 @@
+{
+  "baslik": ["COCONUT OIL:", "+10 LDL?"],
+  "baslik_yt": "Coconut Oil and LDL: What 16 Trials Found",
+  "aciklama": "A 2020 review of sixteen trials found coconut oil raised LDL cholesterol about ten mg/dL versus other vegetable oils. Here is what that does and does not mean for your cooking.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1],
+     "baslik": {"satirlar": ["16 TRIALS"], "vurgu": "+10", "not": "mg/dL LDL vs other oils"},
+     "etiket": "Neelakantan et al. · Circulation · 2020"},
+    {"sahne": 2, "cumleler": [0], "baslik": {"satirlar": ["WHICH RESULT", "MATTERS?"]}, "etiket": null},
+    {"sahne": 27, "cumleler": [1], "etiket": "Eyres et al. · Nutr Rev · 2016"},
+    {"sahne": 36, "cumleler": [0], "etiket": null},
+    {"sahne": 46, "cumleler": [2], "etiket": null},
+    {"sahne": 56, "cumleler": [0], "baslik": {"satirlar": ["OLIVE OR", "CANOLA"]}, "etiket": null},
+    {"sahne": 56, "cumleler": [1], "gorsel": 42, "baslik": {"satirlar": ["ASK YOUR", "DOCTOR"]}, "etiket": null}
+  ]
+}
