@@ -1,5 +1,5 @@
 {
-  "aktif": "coconut-oil-cholesterol",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -201,7 +201,7 @@
     },
     "coconut-oil-cholesterol": {
       "slot": "2027-02-02T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-08T13:11:03Z",
       "sahne_deneme": 0
     }
