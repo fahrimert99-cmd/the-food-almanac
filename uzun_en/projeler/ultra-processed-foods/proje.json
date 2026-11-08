@@ -1,0 +1,604 @@
+{
+  "slug": "ultra-processed-foods",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Ultra-Processed Foods: What Studies Show",
+  "yorum": "Which packaged foods do you reach for most often: drinks, snacks, cereal or ready meals? Have you ever changed one of them after reading the package?",
+  "aciklama_giris": "In a 2019 hospital trial at the National Institutes of Health, 20 adults who ate an ultra-processed diet took in about 500 more calories a day than on an unprocessed diet, even though the menus were matched on sugar, fat, fiber and sodium. Large cohort studies also link these foods with heart disease and type 2 diabetes, but they show association, not proof, and the category is very mixed.\n\nIn this video we look at what the NOVA label means, what the NIH and UK trials found, what the big cohorts can and cannot tell us, why some packaged foods looked better than others, and five practical ways to read a package at the store.",
+  "kaynaklar": [
+    "Hall KD, Ayuketah A, Brychta R, et al. Ultra-processed diets cause excess calorie intake and weight gain: an inpatient randomized controlled trial of ad libitum food intake. Cell Metabolism. 2019;30(1):67-77. DOI 10.1016/j.cmet.2019.05.008. PMID 31105044.",
+    "Dicken SJ, Jassil FC, Brown A, et al. Ultraprocessed or minimally processed diets following healthy dietary guidelines on weight and cardiometabolic health: a randomized, crossover trial. Nature Medicine. 2025;31(10):3297-3308. DOI 10.1038/s41591-025-03842-0. PMID 40760353.",
+    "Srour B, Fezeu LK, Kesse-Guyot E, et al. Ultra-processed food intake and risk of cardiovascular disease: prospective cohort study (NutriNet-Santé). BMJ. 2019;365:l1451. DOI 10.1136/bmj.l1451. PMID 31142457.",
+    "Chen Z, Khandpur N, Desjardins C, et al. Ultra-processed food consumption and risk of type 2 diabetes: three large prospective U.S. cohort studies. Diabetes Care. 2023;46(7):1335-1344. DOI 10.2337/dc22-1993. PMID 36854188.",
+    "Lane MM, Gamage E, Du S, et al. Ultra-processed food exposure and adverse health outcomes: umbrella review of epidemiological meta-analyses. BMJ. 2024;384:e077310. DOI 10.1136/bmj-2023-077310. PMID 38418082.",
+    "U.S. Food and Drug Administration. How to understand and use the Nutrition Facts label. fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label",
+    "U.S. Department of Health and Human Services and U.S. Department of Agriculture. Dietary Guidelines for Americans, 2025-2030. Released January 2026."
+  ],
+  "kapak": {
+    "satirlar": [
+      "ULTRA-",
+      "PROCESSED?"
+    ],
+    "vurgu": "+500",
+    "vurgu_alt": "CALORIES",
+    "gorsel": "a huge close-up of a glossy bag of cheese puffs, a plastic-wrapped cream cake and a soda bottle grouped tightly and overlapping, with a single shiny red apple in front, bright and appetizing"
+  },
+  "etiketler": [
+    "ultra processed foods",
+    "what are ultra processed foods",
+    "ultra processed food health risks",
+    "NOVA classification",
+    "processed food",
+    "nutrition science",
+    "heart disease",
+    "type 2 diabetes",
+    "reading food labels",
+    "healthy eating after 60"
+  ],
+  "seslendirme_duzelt": {
+    "NOVA": "NO-vuh",
+    "NIH": "N I H",
+    "BMJ": "B M J",
+    "FDA": "F D A",
+    "PYY": "P Y Y",
+    "BMI": "B M I"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The hospital experiment",
+      "metin": "In a hospital trial, 20 adults ate as much as they liked. On the ultra-processed menu, they ate about 500 more calories a day.",
+      "gorsel": "a hospital dining table set with a covered meal tray, a glass of water and a tidy stack of packaged snack bars beside a red apple, soft window light drawn in fine lines",
+      "etiket": "Hall et al. · Cell Metab · 2019",
+      "baslik": {
+        "satirlar": [
+          "+500",
+          "CALORIES A DAY"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But the label lumps soda and whole grain bread together, and the research treats them very differently.",
+      "gorsel": "a soda bottle and a loaf of sliced dark whole grain bread standing side by side on a kitchen counter, a plastic-wrapped snack cake and a red apple in front"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know which ones matter, and how to spot them in the store.",
+      "gorsel": "a metal supermarket shopping basket holding a red apple, a plastic-wrapped snack cake, a jar of beans and a carton of plain yogurt, seen from slightly above"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what ultra-processed actually means.",
+      "gorsel": "an antique science-book style still life: a magnifying glass resting over a plastic-wrapped snack cake beside a red apple on a wooden table"
+    },
+    {
+      "id": 5,
+      "bolum": "What ultra-processed means",
+      "tip": "kart",
+      "metin": "First, a quick definition, because the word gets used very loosely.",
+      "kart": {
+        "ust": "THE BASICS",
+        "baslik": "What ultra-processed means",
+        "alt": "The NOVA food groups"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Most of the research uses a system called NOVA, developed by researchers in Brazil. It sorts foods by how much industrial processing they go through, not by calories or nutrients.",
+      "gorsel": "a row of four wooden crates on a shelf, the first with fresh vegetables and eggs, the second with a bottle of oil and a butter dish, the third with canned beans and cheese, the fourth with packaged snacks and a soda bottle",
+      "baslik": {
+        "satirlar": [
+          "THE NOVA",
+          "SYSTEM"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Group one is unprocessed or minimally processed food, such as fruit, vegetables, eggs and plain milk. Group two is kitchen ingredients like oil, butter and sugar.",
+      "gorsel": "a market table with apples, carrots, a bunch of spinach, a carton of eggs and a glass bottle of milk, a small butter dish and a cruet of oil at the side"
+    },
+    {
+      "id": 8,
+      "metin": "Group three is processed food: simple foods with salt, sugar or oil added, like canned beans, cheese and fresh bread. Group four is the ultra-processed group.",
+      "gorsel": "a rustic table with an open can of white beans, a wedge of cheese and a crusty loaf of bread, a small salt cellar beside them"
+    },
+    {
+      "id": 9,
+      "metin": "The NIH researchers describe it as formulations made mostly from cheap industrial sources of energy and nutrients, plus additives. Think soft drinks, packaged snacks and ready-to-heat meals.",
+      "gorsel": "a supermarket shelf with soda bottles, bags of chips, plastic-wrapped cakes and boxed frozen dinners, arranged in tidy rows",
+      "etiket": "Hall et al. · Cell Metab · 2019",
+      "baslik": {
+        "satirlar": [
+          "GROUP FOUR"
+        ],
+        "not": "industrial ingredients plus additives"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "Here's the catch. NOVA looks at how a food is made, not what's in it. So a sugary soda and a packaged whole grain bread can land in the same group. We'll come back to that.",
+      "gorsel": "a balance scale with a soda bottle on one pan and a sliced dark whole grain loaf on the other pan, a red apple on the table",
+      "baslik": {
+        "satirlar": [
+          "HOW, NOT",
+          "WHAT'S INSIDE"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "bolum": "The NIH trial",
+      "tip": "kart",
+      "metin": "In 2019, a team led by Kevin Hall at the National Institutes of Health tested the idea with a controlled trial.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Inside the NIH trial",
+        "alt": "Hall et al. · Cell Metabolism · 2019"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Observational studies can't separate the food from the person eating it. So the researchers moved volunteers into the NIH Clinical Center and controlled every meal.",
+      "gorsel": "a quiet hospital research room with a made bed, a small table with a covered meal tray, a bedside window and a chair"
+    },
+    {
+      "id": 13,
+      "metin": "They enrolled 20 adults, 10 men and 10 women, with an average age of about 31 and a weight a little above the healthy range. All of them stayed for four weeks.",
+      "gorsel": "ten pairs of simple slippers lined up neatly beside two rows of hospital beds, a calendar page with its four weeks drawn as four blank rows",
+      "baslik": {
+        "satirlar": [
+          "20 ADULTS",
+          "4 WEEKS"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "metin": "For two weeks they ate an ultra-processed diet. For two weeks they ate an unprocessed diet. The order was random, and then they switched.",
+      "gorsel": "two meal trays side by side, the first holding packaged snacks, a boxed dinner and a soda bottle, the second holding fresh fish, rice, salad and an apple, a curved arrow between them"
+    },
+    {
+      "id": 15,
+      "metin": "The menus were designed to match on calories, sugar, fat, fiber and sodium as offered. And the volunteers could eat as much or as little as they wanted.",
+      "gorsel": "a buffet table with large serving dishes and a cafeteria tray, a scoop resting in an empty bowl, a person's hand reaching for a second portion"
+    },
+    {
+      "id": 16,
+      "metin": "On the ultra-processed diet, people ate about 508 more calories every day. The extra came from carbohydrate and fat, not protein.",
+      "gorsel": "two identical dinner plates, one lightly filled and one heaped high with packaged snack foods and fries, a gentle golden glow around the fuller plate",
+      "etiket": "Hall et al. · Cell Metab · 2019",
+      "baslik": {
+        "satirlar": [
+          "+508",
+          "CALORIES A DAY"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "metin": "In two weeks, they gained about two pounds, or 0.9 kilograms, on the ultra-processed diet, and lost about the same on the unprocessed one. Body fat rose by about 0.4 kilograms and fell by 0.3.",
+      "gorsel": "an old-fashioned bathroom scale on a wooden floor with a pair of folded towels beside it, a red apple and a plastic-wrapped snack cake sitting on either side",
+      "baslik": {
+        "satirlar": [
+          "±0.9 KG"
+        ],
+        "not": "gained on one diet, lost on the other"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Why? The study wasn't built to say. But people ate faster on the ultra-processed menu, by about 17 calories every minute, and those foods were softer and easier to chew.",
+      "gorsel": "a kitchen timer next to a soft white bread roll and a bowl of crunchy raw carrots and apple slices, a fork resting between them",
+      "baslik": {
+        "satirlar": [
+          "FASTER",
+          "EATING"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "The hormone PYY, which helps signal fullness, was also higher after the unprocessed diet. That's a clue, not proof of the cause.",
+      "gorsel": "a simple engraving of a small intestine curled beside a stomach, tiny coral hormone particles drifting toward a small brain drawn in outline"
+    },
+    {
+      "id": 20,
+      "metin": "Be fair about the limits. It was 20 mostly younger adults, for just two weeks on each diet, in a hospital with meals provided. It shows the effect is real there. It can't tell us what happens over years.",
+      "gorsel": "a single hospital room window with rain on the glass, a notebook with a pencil on the sill, a small calendar showing two weeks"
+    },
+    {
+      "id": 21,
+      "metin": "A longer trial came in 2025, in England. Samuel Dicken and colleagues had 55 adults with overweight or obesity eat two diets for eight weeks each. Both followed the UK's official healthy-eating guide.",
+      "gorsel": "a plate divided into sections of vegetables, grains, protein and fruit beside a second plate with the same sections made from packaged foods, a red apple between them",
+      "etiket": "Dicken et al. · Nat Med · 2025",
+      "baslik": {
+        "satirlar": [
+          "8 WEEKS",
+          "EACH DIET"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "tip": "grafik",
+      "metin": "Both groups lost weight. About 2 percent of body weight on the minimally processed diet, and about 1 percent on the ultra-processed one.",
+      "grafik": {
+        "baslik": "Weight change after 8 weeks",
+        "alt": "Percent of body weight lost on each diet",
+        "cubuklar": [
+          {
+            "etiket": "Minimally processed",
+            "deger": 2.06,
+            "metin": "−2.1%"
+          },
+          {
+            "etiket": "Ultra-processed",
+            "deger": 1.05,
+            "metin": "−1.1%"
+          }
+        ],
+        "kaynak": "Dicken et al., Nature Medicine 2025 · 55 adults with overweight or obesity, randomized crossover, England"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "So an ultra-processed menu built around healthy-eating guidance wasn't a disaster. But the less processed menu did a bit better, by about one percentage point of body weight.",
+      "gorsel": "a tape measure loosely coiled beside a bathroom scale, a bowl of fresh fruit on one side and a plastic-wrapped snack cake on the other"
+    },
+    {
+      "id": 24,
+      "bolum": "Heart disease and diabetes",
+      "tip": "kart",
+      "metin": "Trials like these are short. For long-term health, researchers follow large groups of people for years.",
+      "kart": {
+        "ust": "THE BIG STUDIES",
+        "baslik": "Heart disease and diabetes",
+        "alt": "Large long-term cohorts"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "In France, Bernard Srour and colleagues followed 105,159 adults for a median of five years. The average age was about 43, and about four in five participants were women.",
+      "gorsel": "a long desk in a research office stacked with folders and food diary notebooks, a tall window and a globe, a red apple on the desk",
+      "etiket": "Srour et al. · BMJ · 2019",
+      "baslik": {
+        "satirlar": [
+          "105,159",
+          "ADULTS"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "tip": "grafik",
+      "metin": "For every extra 10 points of ultra-processed food in the diet, the risk was about 12 percent higher for cardiovascular disease, 13 percent for coronary heart disease and 11 percent for cerebrovascular disease, which includes stroke.",
+      "grafik": {
+        "baslik": "Higher risk per extra 10 points",
+        "alt": "Share of diet from ultra-processed food, by weight",
+        "cubuklar": [
+          {
+            "etiket": "Any CVD",
+            "deger": 12,
+            "metin": "+12%"
+          },
+          {
+            "etiket": "Coronary",
+            "deger": 13,
+            "metin": "+13%"
+          },
+          {
+            "etiket": "Cerebrovascular",
+            "deger": 11,
+            "metin": "+11%"
+          }
+        ],
+        "kaynak": "Srour et al., BMJ 2019 · 105,159 adults, France · median follow-up 5.2 years"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "In absolute terms, the highest quarter had about 277 heart and circulation cases per 100,000 people a year, against 242 in the lowest. That's roughly three or four extra cases per 10,000 people.",
+      "gorsel": "a simple wooden abacus beside a red heart symbol, two rows of beads with the upper row slightly fuller than the lower",
+      "baslik": {
+        "satirlar": [
+          "3–4 EXTRA",
+          "PER 10,000"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "metin": "Using data from three long-running American studies of nurses and other health professionals, Zhangling Chen and colleagues looked at type 2 diabetes. They followed 198,636 people for up to about 30 years or more.",
+      "gorsel": "a long row of old filing cabinets in a library with a rolling ladder, a stack of notebooks and a glucose meter with a blank screen on a desk",
+      "etiket": "Chen et al. · Diabetes Care · 2023",
+      "baslik": {
+        "satirlar": [
+          "198,636",
+          "PEOPLE"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "metin": "People who ate the most ultra-processed food had a risk of type 2 diabetes that was between 28 and 46 percent higher than those who ate the least, depending on how the researchers calculated it.",
+      "gorsel": "two stacks of plastic-wrapped snack cakes, one tall and one short, beside a glucose meter with a blank screen",
+      "baslik": {
+        "satirlar": [
+          "28–46%",
+          "HIGHER RISK"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "Body weight explained a large share of that link. After adjusting for starting weight, the gap shrank, though it did not disappear.",
+      "gorsel": "a measuring tape coiled beside a bathroom scale and a plastic-wrapped snack cake, a soft shadow falling across the floor"
+    },
+    {
+      "id": 31,
+      "metin": "In 2024, Melissa Lane and colleagues pooled 45 meta-analyses covering about 9.9 million people. Higher ultra-processed intake was linked with 32 health outcomes in The BMJ.",
+      "gorsel": "a tall stack of bound journals on an antique library table with a brass lamp, a magnifying glass resting on the top volume",
+      "etiket": "Lane et al. · BMJ · 2024",
+      "baslik": {
+        "satirlar": [
+          "9.9 MILLION",
+          "PEOPLE"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "metin": "The evidence was graded convincing for heart disease deaths, type 2 diabetes, anxiety and common mental disorders. That sounds alarming. But there's a catch hiding in every one of these studies.",
+      "gorsel": "a plastic-wrapped snack cake under a glass dome on a pedestal in a museum hall, a spotlight drawn as fine radiating lines"
+    },
+    {
+      "id": 33,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "So now, the honest part.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Link is not proof",
+        "alt": "What these studies can't show"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "These big studies are observational. They show that two things go together, not that one causes the other. People who eat more ultra-processed food often differ in income, activity, smoking and more.",
+      "gorsel": "two separate footpaths crossing a hillside meadow, one leading to a grocery store building and one leading to a walking park, a signpost without writing",
+      "baslik": {
+        "satirlar": [
+          "LINK,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Researchers adjust for those differences, but they can't erase them. Food questionnaires are imperfect, and the French volunteers were younger, better educated and healthier than the general population.",
+      "gorsel": "a questionnaire clipboard with a pencil and a stack of paper forms beside a cup of tea, a window with morning light",
+      "baslik": {
+        "satirlar": [
+          "IMPERFECT",
+          "MEASURING"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "Also, the studies in this video weren't built around older adults. The French participants averaged about 43, and the NIH volunteers about 31. So treat the numbers as a direction, not a prediction for any one person.",
+      "gorsel": "a pair of reading glasses resting on an open notebook beside a cup of tea and a red apple, soft afternoon light through curtains"
+    },
+    {
+      "id": 37,
+      "metin": "And here is what many headlines skip. The ultra-processed group is huge and uneven. In the American diabetes analysis, some subgroups were linked with higher risk: sweetened and artificially sweetened drinks, refined breads, sauces and ready-to-eat mixed dishes.",
+      "gorsel": "a shopping cart with soda bottles, a loaf of white bread, a jar of sauce and a boxed frozen dinner, seen from the side",
+      "etiket": "Chen et al. · Diabetes Care · 2023",
+      "baslik": {
+        "satirlar": [
+          "HIGHER RISK",
+          "SUBGROUPS"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "Others were linked with lower risk: dark and whole grain breads, packaged breakfast cereals, and yogurt and dairy desserts, mostly yogurt. The authors cautioned that this may partly reflect other healthy habits.",
+      "gorsel": "a sliced loaf of dark whole grain bread, a bowl of cereal with a spoon and a small tub of plain yogurt on a kitchen table, a red apple behind them",
+      "etiket": "Chen et al. · Diabetes Care · 2023",
+      "baslik": {
+        "satirlar": [
+          "LOWER RISK",
+          "SUBGROUPS"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "That's why some scientists say one big label is too blunt. The honest answer to \"are they that bad?\" is: it depends which ones, and how much of your day they fill.",
+      "gorsel": "a wide scale of graduated shelves in a pantry, with sweet drinks on the lowest shelf, whole grain bread and yogurt on a middle shelf, apples and beans at the top"
+    },
+    {
+      "id": 40,
+      "metin": "The 2025 to 2030 Dietary Guidelines for Americans, released in January 2026, advise cutting back on highly processed foods, though they don't offer a formal definition of the term.",
+      "gorsel": "a government office desk with a large bound report, a pair of reading glasses and a flag in the corner, a bowl of fruit beside the report"
+    },
+    {
+      "id": 41,
+      "metin": "What's not supported is the idea that every packaged food is dangerous. Nothing here shows a single serving does harm, and the differences per person were modest.",
+      "gorsel": "a calm pantry shelf with canned beans, a jar of tomatoes, a loaf of bread and a carton of oatmeal, neatly arranged in a row",
+      "baslik": {
+        "satirlar": [
+          "NOT EVERY",
+          "PACKAGE"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "bolum": "Why they might matter",
+      "tip": "kart",
+      "metin": "So why might these foods matter? Scientists have clues, but no final answer.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Why they might matter",
+        "alt": "Eating speed · Fullness · Open questions"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "One clue is eating speed. Soft, quick-to-eat foods may let you take in calories faster than your fullness signals can catch up.",
+      "gorsel": "a soft white bread roll and a bowl of creamy soup beside a plate of crunchy raw vegetables, a kitchen timer between them",
+      "baslik": {
+        "satirlar": [
+          "SPEED",
+          "AND FULLNESS"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "metin": "Another is the fullness hormone PYY, which was higher after the unprocessed diet. But the NIH team could not say what actually caused the extra eating.",
+      "gorsel": "a simple engraving of the stomach and small intestine with coral hormone particles drifting toward a small brain drawn in outline"
+    },
+    {
+      "id": 45,
+      "metin": "In the American diabetes analysis, measured nutrients like fiber, added sugar and sodium explained less than a third of the link. So processing itself, additives, or things nobody has measured yet remain open questions.",
+      "gorsel": "a laboratory bench with a rack of empty glass test tubes, a mortar and pestle, an open notebook with a question mark sketched on a blank page",
+      "baslik": {
+        "satirlar": [
+          "UNDER A",
+          "THIRD"
+        ],
+        "not": "of the diabetes link was explained by measured nutrients"
+      }
+    },
+    {
+      "id": 46,
+      "bolum": "How to read a package",
+      "tip": "kart",
+      "metin": "Now, the practical part. Five ways to size up a package.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "How to read a package",
+        "alt": "Five practical steps"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "One. Start with drinks. Sweetened and artificially sweetened drinks were among the groups linked with higher risk in both big studies. Water, plain coffee or tea, and milk are easy swaps.",
+      "gorsel": "a glass of water, a cup of black tea and a glass of milk lined up on a kitchen counter, a soda bottle pushed to the back",
+      "baslik": {
+        "satirlar": [
+          "ONE:",
+          "DRINKS FIRST"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "Two. Flip the package over. A very long ingredient list with things you wouldn't keep in your kitchen, like flavorings, emulsifiers or syrups, usually points to an ultra-processed food.",
+      "gorsel": "a hand holding a boxed frozen dinner turned to its back, a pair of reading glasses and a red apple on the table beside it",
+      "baslik": {
+        "satirlar": [
+          "TWO:",
+          "FLIP IT OVER"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Three. Check the Nutrition Facts panel. The FDA says 5 percent of the Daily Value or less is low, and 20 percent or more is high. Aim lower for added sugars, sodium and saturated fat, and higher for fiber.",
+      "gorsel": "a cereal box and a can of soup standing on a table, a magnifying glass held over the side of the box, a red apple beside them",
+      "etiket": "FDA · Nutrition Facts label",
+      "baslik": {
+        "satirlar": [
+          "THREE:",
+          "5% LOW · 20% HIGH"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "metin": "Four. Watch added sugars and sodium. Added sugars include syrups, honey and concentrated juices. The Daily Value for sodium is 2,300 milligrams, and the FDA's own sample lasagna has 850 milligrams, or 37 percent of it.",
+      "gorsel": "a boxed lasagna dinner beside a salt shaker and a spoon of sugar on a white plate, a glass of water behind them",
+      "baslik": {
+        "satirlar": [
+          "FOUR:",
+          "SUGAR · SODIUM"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "Five. Aim for a swap, not perfection. Whole grain bread and plain yogurt were linked with lower diabetes risk in that American study. Canned beans and frozen vegetables stay convenient and simple.",
+      "gorsel": "a kitchen counter with a loaf of whole grain bread, a tub of plain yogurt, a can of beans and a bag of frozen green vegetables, a red apple at the front",
+      "baslik": {
+        "satirlar": [
+          "FIVE:",
+          "ONE SWAP"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "Convenience foods can also be genuinely useful. If chewing, cooking or shopping is hard, or your appetite is low, packaged foods can help you eat enough. A registered dietitian can help you choose well.",
+      "gorsel": "an older kitchen with a small table, a microwave-safe bowl of soup, a spoon and a folded napkin, warm light from a window",
+      "baslik": {
+        "satirlar": [
+          "CONVENIENCE",
+          "HAS A PLACE"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "metin": "One safety note. If you have diabetes, kidney disease or high blood pressure, take regular medicines, or follow a special diet, talk with your doctor, pharmacist or dietitian before making big changes to how you eat.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, a pill organizer and a cup of tea",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Not all processed is equal",
+        "alt": "Read the package, make one swap"
+      }
+    },
+    {
+      "id": 55,
+      "metin": "In a 2019 NIH trial of 20 adults, an ultra-processed diet led to about 500 more calories a day and a small gain in weight and body fat. A 2025 trial in England found a smaller but similar gap in weight loss.",
+      "gorsel": "the opening hospital dining table with a covered tray, a glass of water and a red apple beside a stack of packaged snack bars"
+    },
+    {
+      "id": 56,
+      "metin": "Large studies link higher intake with more heart disease and type 2 diabetes. But they show association, not proof, and the differences per person were modest.",
+      "gorsel": "a plastic-wrapped snack cake and a red apple on a small balance scale, a red heart symbol drawn above it"
+    },
+    {
+      "id": 57,
+      "metin": "The ultra-processed label is broad. Sweet drinks and packaged mixed meals looked worse, while whole grain bread and yogurt looked better in one study. Reading the package helps you tell them apart.",
+      "gorsel": "a shopping basket with a red apple, a loaf of whole grain bread, a tub of plain yogurt and a boxed dinner, a hand holding up reading glasses beside it"
+    },
+    {
+      "id": 58,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
