@@ -581,7 +581,7 @@ jobs:
               f.write(f"DEVAM={str(devam).lower()}\nSABLON_SAYI={n}\n")
           PY
           bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG sahne deneme sayacı" uzun_en/durum.json
-      - name: YouTube kotası (doluysa render boşuna yapılmaz)
+      - name: YouTube kotası (doluysa render yine yapılır, video GitHub sürümünde bekler)
         if: env.DEVAM == 'true'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -590,7 +590,7 @@ jobs:
         run: |
           pip install -q -r requirements.txt
           set +e; python3 uzun_en/araclar/yukle.py --kota-kontrol; K=$?; set -e
-          if [ "$K" = "3" ]; then echo "DEVAM=false" >> "$GITHUB_ENV"; elif [ "$K" != "0" ]; then exit "$K"; fi
+          if [ "$K" = "3" ]; then echo "YT_KOTA=dolu" >> "$GITHUB_ENV"; elif [ "$K" != "0" ]; then exit "$K"; fi
       - uses: actions/setup-node@v5
         if: env.DEVAM == 'true'
         with:
@@ -647,26 +647,42 @@ jobs:
           ffmpeg -v error -y -i "$C/video.mp4" -vf scale=1280:720 -c:v libx264 -preset veryfast -crf 26 -c:a aac -b:a 128k \
             -movflags +faststart "$C/onizleme_720p.mp4"
           python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG" --tur video
-      - name: YouTube'a zamanlanmış yükleme
+      - name: YouTube'a zamanlanmış yükleme (kota doluysa GitHub sürümünde bekler)
         if: env.DEVAM == 'true'
         env:
+          GH_TOKEN: ${{ github.token }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python3 uzun_en/araclar/yukle.py --proje "$SLUG" --slot "$SLOT"
+        run: |
+          K=3
+          if [ "${YT_KOTA:-}" != "dolu" ]; then
+            set +e; python3 uzun_en/araclar/yukle.py --proje "$SLUG" --slot "$SLOT"; K=$?; set -e
+          fi
+          if [ "$K" = "3" ]; then
+            # Kota dolu: tam video ve yükleme bilgileri sürüme; plan işi (yukle.py --tamamla) kota açılınca yükler.
+            C=uzun_en/projeler/"$SLUG"/cikti
+            gh release upload "uzun-en-$SLUG" "$C/video.mp4" "$C/meta.json" "$C/kalite.json" "$C/kapak_yt.jpg" --clobber
+            echo "YT_KOTA=dolu" >> "$GITHUB_ENV"
+            echo "::notice title=YouTube kotası dolu::$SLUG GitHub sürümüne arşivlendi; kota açılınca YouTube'a yüklenecek"
+          elif [ "$K" != "0" ]; then
+            exit "$K"
+          fi
       - name: Kaydet
         if: env.DEVAM == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" yuklendi
+          if [ "${YT_KOTA:-}" = "dolu" ]; then A=yukleme_bekliyor; else A=yuklendi; fi
+          python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" "$A"
           python3 -c "import os,sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle(os.environ['SLUG'],'yayinda')"
           cp uzun_en/projeler/"$SLUG"/cikti/aciklama.txt uzun_en/projeler/"$SLUG"/aciklama.txt
           # ilk kurulum tohumu artık sürümde: depodan kaldır
           if [ -d uzun_en/projeler/"$SLUG"/tohum ]; then git rm -rq uzun_en/projeler/"$SLUG"/tohum; fi
-          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG YouTube'a yüklendi (yayın $SLOT)" uzun_en
+          if [ "$A" = "yuklendi" ]; then M="YouTube'a yüklendi (yayın $SLOT)"; else M="GitHub'a arşivlendi, YouTube kotası bekleniyor (yayın $SLOT)"; fi
+          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG $M" uzun_en
       - name: Shorts'u başlat (uzun_en_kisa.yml)
-        if: env.DEVAM == 'true'
+        if: env.DEVAM == 'true' && env.YT_KOTA != 'dolu'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
