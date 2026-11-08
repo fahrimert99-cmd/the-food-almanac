@@ -151,6 +151,8 @@ jobs:
           pip install -q -r requirements.txt numpy piper-tts
           if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
             pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile "preshed<3.0.14"  # preshed 3.0.14 spaCy modelini bozuyor (OverflowError, 25 Eki 2026)
+            # Kokoro (misaki) spaCy modelini çalışırken GitHub'dan indirir; GitHub 504 verirse (8 Kasım 2026) hat durmasın diye önceden, yeniden deneyerek ve Hugging Face yedeğiyle
+            for i in 1 2 3 4 5; do pip install -q "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" && break; pip install -q "https://huggingface.co/spacy/en_core_web_sm/resolve/main/en_core_web_sm-any-py3-none-any.whl" && break; echo "spaCy modeli indirilemedi (GitHub ve Hugging Face), $((i * 20)) sn sonra tekrar"; sleep $((i * 20)); done
           fi
           cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - uses: actions/cache@v4
