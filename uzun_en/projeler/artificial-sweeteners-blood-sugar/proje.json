@@ -1,0 +1,541 @@
+{
+  "slug": "artificial-sweeteners-blood-sugar",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Do Artificial Sweeteners Raise Blood Sugar?",
+  "yorum": "Do you drink diet soda or use sweetener packets in your coffee? If you check your blood sugar at home, have you ever noticed a difference after a diet drink?",
+  "aciklama_giris": "Do diet drinks and sweetener packets raise your blood sugar? Pooled analyses of dozens of short randomized trials found no rise, yet a 2022 trial in 120 healthy adults found that two weeks of saccharin or sucralose slightly worsened blood sugar responses, while aspartame and stevia did not. The evidence is mixed, and it depends on the sweetener, the person and how long it is used.\n\nIn this video we look at those trials, a small stevia study in type 2 diabetes, the 2023 World Health Organization guideline and the American Diabetes Association advice, and the erythritol and blood clotting studies. We end with five practical points, including a safety note for people with diabetes or heart disease.",
+  "kaynaklar": [
+    "Suez J, Cohen Y, Valdés-Mas R, et al. Personalized microbiome-driven effects of non-nutritive sweeteners on human glucose tolerance. Cell. 2022;185(18):3307-3328. doi:10.1016/j.cell.2022.07.016. PMID 35987213.",
+    "Nichol AD, Holle MJ, An R. Glycemic impact of non-nutritive sweeteners: a systematic review and meta-analysis of randomized controlled trials. European Journal of Clinical Nutrition. 2018;72(6):796-804. doi:10.1038/s41430-018-0170-6. PMID 29760482.",
+    "Greyling A, Appleton KM, Raben A, Mela DJ. Acute glycemic and insulinemic effects of low-energy sweeteners: a systematic review and meta-analysis of randomized controlled trials. American Journal of Clinical Nutrition. 2020;112(4):1002-1014. doi:10.1093/ajcn/nqaa167. PMID 32672338.",
+    "Ajami M, Seyfi M, Abdollah Pouri Hosseini F, et al. Effects of stevia on glycemic and lipid profile of type 2 diabetic patients: a randomized controlled trial. Avicenna Journal of Phytomedicine. 2020;10(2):118-127. PMC7103435.",
+    "World Health Organization. Use of non-sugar sweeteners: WHO guideline. Geneva: WHO; 2023. NCBI Bookshelf NBK592245.",
+    "American Diabetes Association. Standards of Care in Diabetes-2025 (press release, December 2024). diabetes.org/newsroom/press-releases/american-diabetes-association-releases-standards-care-diabetes-2025",
+    "Witkowski M, Nemet I, Alamri H, et al. The artificial sweetener erythritol and cardiovascular event risk. Nature Medicine. 2023;29(3):710-718. doi:10.1038/s41591-023-02223-9. PMID 36849732.",
+    "Witkowski M, Wilcox J, Province V, et al. Ingestion of the non-nutritive sweetener erythritol, but not glucose, enhances platelet reactivity and thrombosis potential in healthy volunteers. Arteriosclerosis, Thrombosis, and Vascular Biology. 2024;44(9):2136-2141. doi:10.1161/ATVBAHA.124.321019. PMID 39114916."
+  ],
+  "kapak": {
+    "satirlar": [
+      "DIET SODA",
+      "AND SUGAR?"
+    ],
+    "gorsel": "a tall glass of dark cola with ice cubes and a straw large in the foreground, a few plain white sweetener packets and a glucose meter with a blank screen tightly grouped and overlapping behind the glass"
+  },
+  "etiketler": [
+    "artificial sweeteners",
+    "diet soda",
+    "blood sugar",
+    "sucralose",
+    "aspartame",
+    "stevia",
+    "erythritol",
+    "type 2 diabetes",
+    "prediabetes",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "A1C": "A 1 C",
+    "WHO": "W H O"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The short answer",
+      "metin": "In a 2022 trial of 120 healthy adults, two of four common sweeteners slightly worsened blood sugar responses in just two weeks.",
+      "gorsel": "a tall glass of dark cola with ice and a straw on a kitchen table, beside it a small glucose meter with a blank screen and two plain sweetener packets",
+      "etiket": "Suez et al. · Cell · 2022",
+      "baslik": {
+        "satirlar": [
+          "2 WEEKS",
+          "120 ADULTS"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "metin": "Yet larger reviews found no rise at all. So who is right?",
+      "gorsel": "two identical tall glasses of dark cola with ice side by side on a wooden counter, a brass balance scale tilting slightly between them"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what the evidence shows, and which sweetener deserves a closer look at the ingredient list.",
+      "gorsel": "an open pantry shelf with a tall glass of dark cola, a bowl of sweetener packets and a magnifying glass resting beside a glucose meter"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what these sweeteners actually are.",
+      "gorsel": "an antique laboratory bench with a tall glass of dark cola, a few sweetener packets, an open notebook with blank pages and a brass microscope"
+    },
+    {
+      "id": 5,
+      "bolum": "What sweeteners are",
+      "tip": "kart",
+      "metin": "First, a quick map of the territory.",
+      "kart": {
+        "ust": "THE BASICS",
+        "baslik": "Sweet without sugar",
+        "alt": "Aspartame · Sucralose · Saccharin · Stevia"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Artificial sweeteners, also called non-sugar sweeteners, taste sweet but add little or no sugar. Common ones are aspartame, sucralose, saccharin, and stevia, which comes from a plant.",
+      "gorsel": "four small white ceramic dishes each holding a different sweetener powder in a row, a stevia plant sprig with green leaves laid beside the last dish",
+      "baslik": {
+        "satirlar": [
+          "SWEET",
+          "WITHOUT SUGAR"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "You find them in diet sodas, sugar-free gum, flavored waters, some yogurts, and the packets beside the coffee pot. Your tongue says sugar. But they don't contain the glucose your blood carries.",
+      "gorsel": "a kitchen counter with a tall glass of dark cola with ice, a pack of chewing gum, a small yogurt cup, a coffee pot and a bowl of sweetener packets"
+    },
+    {
+      "id": 8,
+      "metin": "So the simple expectation is that they should not raise blood sugar, because there is no sugar to absorb. The question researchers ask is whether the body really behaves that simply.",
+      "gorsel": "a tall glass of dark cola with ice, a small round glucose sensor patch on a forearm resting on the table beside it, soft morning window light",
+      "baslik": {
+        "satirlar": [
+          "NO SUGAR,",
+          "NO SPIKE?"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Blood sugar is the amount of glucose in your blood. After a meal it rises and settles. A test called A1C shows your average over about three months, which is why doctors watch it in diabetes.",
+      "gorsel": "a laboratory rack of small capped sample tubes with red liquid beside a glucose meter with a blank screen and an antique brass microscope"
+    },
+    {
+      "id": 10,
+      "metin": "One idea is that sweeteners might change the community of bacteria in your gut, and that this could affect how you handle glucose. That is a hypothesis, not a fact, and we'll test it against the data.",
+      "gorsel": "a textbook engraving of the small intestine with finger-like villi and clusters of small round and rod-shaped bacteria, a glass of dark cola with ice beside it",
+      "baslik": {
+        "satirlar": [
+          "THE GUT",
+          "IDEA"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "metin": "And later, there is one sweetener family that the World Health Organization left out of its main advice. It has its own separate heart-related story.",
+      "gorsel": "a sealed envelope with a wax seal resting on a tall glass of dark cola with ice on a wooden desk, an antique key beside it"
+    },
+    {
+      "id": 12,
+      "bolum": "What the trials show",
+      "tip": "kart",
+      "metin": "Let's begin with the biggest picture: reviews that pool many trials together.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Many trials, one answer?",
+        "alt": "Two meta-analyses · 2018 and 2020"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "In 2018, researchers led by Alexander Nichol combined 29 randomized trials with 741 participants. The sweeteners included aspartame, saccharin, stevioside, and sucralose.",
+      "gorsel": "a tall stack of bound research journals with blank covers on a desk, a tall glass of dark cola with ice and a brass magnifying glass in front",
+      "etiket": "Nichol et al. · Eur J Clin Nutr · 2018",
+      "baslik": {
+        "satirlar": [
+          "29 TRIALS",
+          "741 PEOPLE"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Their conclusion was plain. These sweeteners were not found to raise blood glucose. Levels actually drifted down gradually over the observation period compared with baseline.",
+      "gorsel": "a glucose meter with a blank screen beside a tall glass of dark cola with ice, a gentle hand-drawn line sloping slightly downward across the paper",
+      "etiket": "Nichol et al. · Eur J Clin Nutr · 2018"
+    },
+    {
+      "id": 15,
+      "metin": "The result did not differ by type of sweetener. But it varied somewhat with age, body weight, and diabetes status, so the answer was not identical for everyone.",
+      "gorsel": "four different sweetener packets fanned out on a table next to a tall glass of dark cola with ice and a pair of round reading glasses"
+    },
+    {
+      "id": 16,
+      "metin": "A second review, in 2020, looked at the first few hours after a dose. Greyling and colleagues pooled 26 randomized trials that measured blood sugar and insulin after people had a sweetener.",
+      "gorsel": "an antique pocket watch open beside a tall glass of dark cola with ice, a small capped sample tube and a glucose meter with a blank screen",
+      "etiket": "Greyling et al. · Am J Clin Nutr · 2020",
+      "baslik": {
+        "satirlar": [
+          "THE FIRST",
+          "FEW HOURS"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "metin": "Overall, there was no significant difference from the control conditions. In people with type 2 diabetes, the after-meal rise was slightly smaller, by about 0.3 millimoles per liter, or roughly 5 milligrams per deciliter.",
+      "gorsel": "a glucose meter with a blank screen on a table beside a plate of a simple meal and a tall glass of dark cola with ice, a calm rolling hill line drawn behind",
+      "etiket": "Greyling et al. · Am J Clin Nutr · 2020",
+      "baslik": {
+        "satirlar": [
+          "NO RISE",
+          "IN THE HOURS AFTER"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "metin": "So for the first few hours after a sweetener, the pooled evidence points to no meaningful rise in blood sugar.",
+      "gorsel": "a tall glass of dark cola with ice sitting calmly on a table in afternoon light, a glucose meter with a blank screen and a folded napkin beside it"
+    },
+    {
+      "id": 19,
+      "metin": "But short trials answer a short question. They can't tell us what happens after weeks of daily use. That is where the next study comes in, and it points to a simple way to check your own response later.",
+      "gorsel": "a wall calendar page with several days crossed out in pencil, a tall glass of dark cola with ice and a glucose meter on the desk below"
+    },
+    {
+      "id": 20,
+      "bolum": "The 2022 gut trial",
+      "tip": "kart",
+      "metin": "Now, the study that made the headlines.",
+      "kart": {
+        "ust": "THE TWIST",
+        "baslik": "Sweeteners and the gut",
+        "alt": "Suez, Elinav and colleagues · Cell · 2022"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "Researchers screened more than 1,300 people to find 120 healthy adults who strictly avoided artificial sweeteners in daily life. Everyone started from a clean slate.",
+      "gorsel": "a long line of empty wooden chairs in a quiet hall, one chair in the front with a tall glass of dark cola with ice on its seat",
+      "etiket": "Suez et al. · Cell · 2022",
+      "baslik": {
+        "satirlar": [
+          "1,300 SCREENED",
+          "120 CHOSEN"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "The volunteers were randomly assigned to groups. Four groups took packets of saccharin, sucralose, aspartame, or stevia for two weeks, at doses below the acceptable daily intake. Two control groups did not take a sweetener.",
+      "gorsel": "six small white dishes in two rows on a table, four holding different sweetener powders and two left empty, a tall glass of dark cola with ice behind them"
+    },
+    {
+      "id": 23,
+      "metin": "Blood sugar was tracked with glucose monitors during glucose tolerance tests, where you drink a standard sugar solution and the body's response is measured.",
+      "gorsel": "a small round glucose sensor patch on an upper arm beside a glass of clear sugar water and a brass timer on a laboratory bench"
+    },
+    {
+      "id": 24,
+      "metin": "The result: in the saccharin and sucralose groups, blood sugar responses were slightly but significantly higher than in the control groups. Aspartame and stevia did not show that.",
+      "gorsel": "two sweetener packets raised on a small wooden pedestal beside a tall glass of dark cola with ice, two other packets lying on the table below, a glucose meter with a blank screen",
+      "etiket": "Suez et al. · Cell · 2022",
+      "baslik": {
+        "satirlar": [
+          "SACCHARIN",
+          "SUCRALOSE"
+        ],
+        "not": "slightly higher blood sugar responses than controls"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "The sweeteners also changed the microbes in the participants' guts and mouths. And the response was personal. Some people reacted strongly, while others showed little change.",
+      "gorsel": "a textbook engraving of a magnified field of rod-shaped and round bacteria in several groups, a glass of dark cola with ice at the edge of the page"
+    },
+    {
+      "id": 26,
+      "metin": "To test cause, the team transferred gut microbes from strong and weak responders into germ-free mice. Mice that received microbes from strong responders developed glucose changes much like their human donors.",
+      "gorsel": "a small laboratory mouse sitting beside a glass jar of pale microbes and a tall glass of dark cola with ice, a brass microscope in the background",
+      "baslik": {
+        "satirlar": [
+          "MICE GOT",
+          "THE SAME SHIFT"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "metin": "That is animal evidence, so it is a clue, not proof for people. The trial lasted two weeks, enrolled healthy adults, and nobody knows whether the small changes matter for health over the years.",
+      "gorsel": "a quiet desk with an hourglass nearly empty at the top, an open notebook with blank pages and a tall glass of dark cola with ice"
+    },
+    {
+      "id": 28,
+      "metin": "Some of the authors also have ties to DayTwo, a personalized nutrition company, which are listed in the paper's competing interests. That doesn't invalidate the work, but it is part of the full picture.",
+      "gorsel": "a plain wooden desk with a signed paper folded in half, an antique pen and ink bottle, a tall glass of dark cola with ice at the corner"
+    },
+    {
+      "id": 29,
+      "metin": "How can a pooled review say no rise, and a careful trial say a small rise? One review looked only at the first hours after a dose. The gut trial looked at two weeks of daily use. Different questions can give different answers.",
+      "gorsel": "two paths in a quiet garden, one short and straight, one long and winding, a tall glass of dark cola with ice on a bench where they meet",
+      "baslik": {
+        "satirlar": [
+          "DIFFERENT",
+          "QUESTIONS"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "What about stevia, which comes from a plant? In the Suez trial, it did not change glucose responses.",
+      "gorsel": "a stevia plant in a clay pot with green leaves, a small white dish of fine stevia powder and a glucose meter with a blank screen beside it"
+    },
+    {
+      "id": 31,
+      "metin": "In a small randomized trial in Iran, about three dozen adults with type 2 diabetes drank tea sweetened with either stevia or sucralose for eight weeks. A1C, insulin, and cholesterol did not differ between the groups.",
+      "gorsel": "two porcelain teacups on saucers side by side with steam rising, a small bowl of stevia leaves and a bowl of white powder between them",
+      "etiket": "RCT · Avicenna J Phytomed · 2020",
+      "baslik": {
+        "satirlar": [
+          "8 WEEKS OF",
+          "SWEET TEA"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Other small stevia trials have reported mixed results. So stevia looks mostly neutral for blood sugar, but the studies are small and short.",
+      "gorsel": "a few thin paperback research reports lying in a loose pile beside a stevia sprig and a glass of dark cola with ice"
+    },
+    {
+      "id": 33,
+      "bolum": "What health bodies say",
+      "tip": "kart",
+      "metin": "Now, what do the major health organizations say?",
+      "kart": {
+        "ust": "THE GUIDELINES",
+        "baslik": "WHO and the ADA",
+        "alt": "2023 and 2025"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "In May 2023, the World Health Organization issued a guideline on non-sugar sweeteners. It advised against using them to control body weight or to reduce the risk of chronic diseases such as diabetes and heart disease.",
+      "gorsel": "a formal oak conference table with a tall glass of dark cola with ice at its center, a few closed folders and a globe on a stand",
+      "etiket": "WHO · Guideline · 2023",
+      "baslik": {
+        "satirlar": [
+          "WHO, 2023"
+        ],
+        "not": "a conditional recommendation"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "It is a conditional recommendation. WHO's review found no long-term benefit for body fat in adults or children. Observational studies suggested a possible higher risk of type 2 diabetes, heart disease, and death with long-term use.",
+      "gorsel": "a bathroom scale with a blank dial and a tape measure coiled beside a tall glass of dark cola with ice on a wooden floor"
+    },
+    {
+      "id": 36,
+      "metin": "But observational means association. WHO itself noted these links may be confounded by baseline characteristics and complex patterns of use. In plain words, people already worried about weight or blood sugar may be the ones choosing diet drinks.",
+      "gorsel": "a crowd of small wooden figures lined up in a row, a few holding tall glasses of dark cola with ice, a magnifying glass over the row",
+      "baslik": {
+        "satirlar": [
+          "ASSOCIATION,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "metin": "Importantly, WHO's advice does not apply to people who already have diabetes. And it left out sugar alcohols such as erythritol. Keep that detail in mind.",
+      "gorsel": "a closed wooden gate in a stone wall, a small sign post without writing, and a tall glass of dark cola with ice resting on the gate post"
+    },
+    {
+      "id": 38,
+      "metin": "The American Diabetes Association takes a middle path. Its 2025 Standards of Care put the emphasis on water over both sugary and artificially sweetened drinks.",
+      "gorsel": "a clear glass pitcher of water with a lemon slice and two glasses on a table, a tall glass of dark cola with ice set slightly behind",
+      "etiket": "ADA · Standards of Care · 2025",
+      "baslik": {
+        "satirlar": [
+          "WATER",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "For people who would otherwise have sugar-sweetened products, it says sweeteners can be used in moderation and for the short term, to cut calories and carbohydrates.",
+      "gorsel": "a tall glass of dark cola with ice beside a pile of sugar cubes on a small plate, a brass balance scale with the sugar side lower"
+    },
+    {
+      "id": 40,
+      "bolum": "The erythritol question",
+      "tip": "kart",
+      "metin": "Now for the sweetener family WHO left out.",
+      "kart": {
+        "ust": "THE LOOSE END",
+        "baslik": "Erythritol and clotting",
+        "alt": "Witkowski, Hazen and colleagues · 2023 and 2024"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "Erythritol is a sugar alcohol. It is used in some sugar-free and low-carb products, and it appears on their ingredient lists.",
+      "gorsel": "a small glass bowl of white crystalline erythritol with a spoon beside a sugar-free chocolate bar wrapped in plain paper and a tall glass of dark cola with ice"
+    },
+    {
+      "id": 42,
+      "metin": "In 2023, a team including Marcin Witkowski and Stanley Hazen measured erythritol in the blood of 1,157 people having heart risk checks. Those with higher levels had more heart attacks, strokes, and deaths over the next three years.",
+      "gorsel": "a heart-shaped red symbol on a clinic desk beside a stethoscope, a small tube of erythritol crystals and a tall glass of dark cola with ice",
+      "etiket": "Witkowski et al. · Nat Med · 2023",
+      "baslik": {
+        "satirlar": [
+          "1,157 PATIENTS",
+          "3 YEARS"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "metin": "It held up in two more groups, 2,149 patients in the United States and 833 in Europe, all already being evaluated for heart problems.",
+      "gorsel": "two long rows of simple hospital chairs, one row in front of a window with a small ocean view and one in front of an old stone cathedral window, a tall glass of dark cola with ice between"
+    },
+    {
+      "id": 44,
+      "metin": "This is an association. People who are metabolically unwell may choose sugar-free products or clear erythritol differently, so these numbers alone cannot show that the sweetener caused any events.",
+      "gorsel": "a brass balance scale with a small bowl of erythritol crystals on one side and a small red heart symbol on the other, held level by a fine chain",
+      "baslik": {
+        "satirlar": [
+          "LINK,",
+          "NOT CAUSE"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "In the lab, erythritol at levels seen in the body made platelets, the small cells that start a clot, more reactive. And in animal models, it sped up clot formation.",
+      "gorsel": "a tube-shaped vessel with small red discs and clusters of tiny pale platelets sticking together at one spot, a bowl of erythritol crystals nearby",
+      "baslik": {
+        "satirlar": [
+          "PLATELETS",
+          "MORE REACTIVE"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Then came a small human pilot. After one drink with 30 grams of erythritol, about an ounce, levels in the body stayed above the point that increased platelet reactivity for more than two days.",
+      "gorsel": "a tall glass of water with white erythritol dissolving in it, an antique pocket watch with a blank face and a small notebook beside it"
+    },
+    {
+      "id": 47,
+      "metin": "A 2024 follow-up gave about 20 healthy adults either 30 grams of erythritol or 30 grams of glucose in water. Platelets became more reactive after erythritol, but not after glucose.",
+      "gorsel": "two tall glasses of water on a laboratory bench, one with white crystals dissolving and one with golden syrup, two small capped sample tubes in a rack",
+      "etiket": "Witkowski et al. · ATVB · 2024"
+    },
+    {
+      "id": 48,
+      "metin": "The limits are real. These were short tests of lab markers in small groups. No trial has shown that eating erythritol causes heart attacks or strokes, and the authors called for longer studies.",
+      "gorsel": "a quiet research desk with a closed folder, a magnifying glass and an hourglass, a small bowl of erythritol crystals and an open notebook with blank pages",
+      "baslik": {
+        "satirlar": [
+          "NEEDS",
+          "LONGER STUDIES"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "A reasonable reading: if you have heart disease, a clotting condition, or take blood thinners, it is worth asking your doctor or pharmacist about erythritol. For everyone else, it is an open question, not a proven danger.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, a small bowl of erythritol crystals and a tall glass of dark cola with ice"
+    },
+    {
+      "id": 50,
+      "bolum": "What to do with this",
+      "tip": "kart",
+      "metin": "So what should you actually do? Here are five practical points.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five practical points",
+        "alt": "Water · Swaps · Your meter · Labels"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "One. Make water your default. The American Diabetes Association puts the emphasis on water over both sugary and artificially sweetened drinks.",
+      "gorsel": "a clear glass pitcher of water with a lemon slice, two filled glasses and a tall glass of dark cola with ice pushed to the back of the table"
+    },
+    {
+      "id": 52,
+      "metin": "Two. If you are swapping a regular soda for a diet one, the swap removes the sugar you would have drunk. The ADA says that can help cut calories and carbohydrates, in moderation and for the short term.",
+      "gorsel": "a tall glass of dark cola with ice on the left and a pile of sugar cubes on the right, a curved dashed arrow between them, a small plate and spoon",
+      "baslik": {
+        "satirlar": [
+          "A SWAP,",
+          "IN MODERATION"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "metin": "Three. Test yourself. Responses in the Suez trial were personal. If you use a glucose meter or sensor, check before a diet drink and again a couple of hours later, and show the readings to your care team.",
+      "gorsel": "a glucose meter with a blank screen and a small round sensor patch lying beside a tall glass of dark cola with ice and an open notebook with blank lines",
+      "baslik": {
+        "satirlar": [
+          "TEST",
+          "YOURSELF"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Four. If you have heart disease or a clotting condition, read the ingredient list for erythritol, especially in sugar-free and low-carb products. Ask your doctor or pharmacist whether it matters for you.",
+      "gorsel": "a hand-held magnifying glass over a sugar-free chocolate bar in plain paper wrapping and a small bowl of erythritol crystals on a table"
+    },
+    {
+      "id": 55,
+      "metin": "Five. Think of sweeteners as a swap, not a health food. WHO found no long-term body fat benefit, so they are not a weight loss plan on their own.",
+      "gorsel": "a tape measure coiled beside a tall glass of dark cola with ice and a bowl of fresh fruit on a wooden table"
+    },
+    {
+      "id": 56,
+      "metin": "One safety note. If you take insulin or other diabetes medicines, don't change your treatment because of a drink. And a diet drink won't treat a low blood sugar, because it has no sugar in it. Ask your diabetes team what to keep on hand.",
+      "gorsel": "a consultation desk with an insulin pen, a glucose meter with a blank screen, a closed notebook and a stethoscope",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Mostly no, but it varies",
+        "alt": "Reviews · One trial · WHO · Erythritol"
+      }
+    },
+    {
+      "id": 58,
+      "metin": "In reviews pooling 29 and 26 randomized trials, sweeteners did not raise blood sugar. One two-week trial in 120 healthy adults found a small rise with saccharin and sucralose, but not with aspartame or stevia.",
+      "gorsel": "a tall glass of dark cola with ice on a kitchen table, a glucose meter with a blank screen and four small dishes of sweeteners in a row"
+    },
+    {
+      "id": 59,
+      "metin": "WHO advises against relying on sweeteners for weight control, though that does not cover people with diabetes. The American Diabetes Association says water first, and sweeteners only in moderation as a short-term swap for sugar.",
+      "gorsel": "a clear glass pitcher of water and a filled glass in front, a tall glass of dark cola with ice behind it, a wooden table in morning light"
+    },
+    {
+      "id": 60,
+      "metin": "Erythritol is the open question: linked with heart events and clotting markers, but not proven harmful. If you have heart or clotting concerns, ask your doctor.",
+      "gorsel": "a small bowl of erythritol crystals beside a red heart symbol and a tall glass of dark cola with ice on a clinic desk"
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
