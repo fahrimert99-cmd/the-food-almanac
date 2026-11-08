@@ -1,0 +1,673 @@
+{
+  "slug": "bananas-potassium-blood-pressure",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Do Bananas Lower Blood Pressure?",
+  "yorum": "Do you eat a banana most mornings, or do you get your potassium from other foods? Has your doctor ever talked with you about potassium and your blood pressure medicine?",
+  "aciklama_giris": "Bananas have a reputation as the blood pressure fruit. In a 2013 review of 22 trials, more potassium lowered the top blood pressure number by about 5 points in adults who already had high blood pressure, but not clearly in adults with normal pressure. A large trial of a potassium salt substitute also lowered strokes. But none of this tested bananas themselves, and potassium can be risky for people with kidney disease or certain medicines.\n\nIn this video we look at how much potassium a banana really gives you, how potassium and sodium work together, what the meta-analyses and the DASH diet found, where the evidence runs out, who should be careful and why, and five practical ways to get more potassium from food safely.",
+  "kaynaklar": [
+    "Aburto NJ, Hanson S, Gutierrez H, Hooper L, Elliott P, Cappuccio FP. Effect of increased potassium intake on cardiovascular risk factors and disease: systematic review and meta-analyses. BMJ. 2013;346:f1378. doi:10.1136/bmj.f1378",
+    "Filippini T, Naska A, Kasdagli MI, et al. Potassium intake and blood pressure: a dose-response meta-analysis of randomized controlled trials. J Am Heart Assoc. 2020;9(12):e015719. doi:10.1161/JAHA.119.015719. PMID 32500831",
+    "Neal B, Wu Y, Feng X, et al. Effect of salt substitution on cardiovascular events and death. N Engl J Med. 2021;385(12):1067-1077. doi:10.1056/NEJMoa2105675. PMID 34459569",
+    "Ma Y, He FJ, Sun Q, et al. 24-hour urinary sodium and potassium excretion and cardiovascular risk. N Engl J Med. 2022;386(3):252-263. doi:10.1056/NEJMoa2109794",
+    "Sacks FM, Svetkey LP, Vollmer WM, et al. Effects on blood pressure of reduced dietary sodium and the Dietary Approaches to Stop Hypertension (DASH) diet. N Engl J Med. 2001;344(1):3-10. PMID 11136953",
+    "U.S. Department of Agriculture. FoodData Central: Bananas, raw (FDC ID 173944). https://fdc.nal.usda.gov/",
+    "National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Sodium and Potassium. Washington, DC: National Academies Press; 2019.",
+    "Harvard T.H. Chan School of Public Health. The Nutrition Source: Potassium. https://nutritionsource.hsph.harvard.edu/potassium/",
+    "National Kidney Foundation. Potassium and your CKD diet. https://www.kidney.org/atoz/content/potassium",
+    "American Heart Association. Hyperkalemia (high potassium) and Types of blood pressure medications. https://www.heart.org"
+  ],
+  "kapak": {
+    "satirlar": [
+      "BANANAS",
+      "LOWER BP?"
+    ],
+    "vurgu": "–5.3",
+    "vurgu_alt": "mmHg",
+    "serit": "POTASSIUM TRIALS, HIGH BP",
+    "gorsel": "a large bunch of ripe yellow bananas in the foreground, close up and appetizing, overlapping a sphygmomanometer cuff with a blank round gauge behind them"
+  },
+  "kahraman": "bananas",
+  "etiketler": [
+    "bananas",
+    "potassium",
+    "blood pressure",
+    "high blood pressure",
+    "hypertension",
+    "foods high in potassium",
+    "DASH diet",
+    "sodium and potassium",
+    "salt substitute",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "BMJ": "B M J",
+    "DASH": "dash",
+    "NSAIDs": "N S A I Ds",
+    "ACE": "A C E",
+    "hyperkalemia": "hyper kay lee mia"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The banana question",
+      "metin": "In a review of 22 trials, more potassium lowered the top blood pressure number by about five points in adults with high blood pressure.",
+      "gorsel": "a bunch of ripe yellow bananas on a wooden kitchen table beside a sphygmomanometer cuff with a blank round gauge, morning light from a window",
+      "etiket": "Aburto et al. · BMJ · 2013",
+      "baslik": {
+        "satirlar": [
+          "22 TRIALS"
+        ],
+        "vurgu": "–5.3",
+        "not": "mmHg, top number, in high blood pressure"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But a banana is a small part of the story, and for some people potassium is risky.",
+      "gorsel": "a single peeled banana on a white plate with a closed medicine bottle and a glass of water beside it, quiet kitchen counter",
+      "baslik": {
+        "satirlar": [
+          "THE CATCH"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what a banana gives you, and who should ask a doctor first.",
+      "gorsel": "a bunch of bananas in a fruit bowl next to a stethoscope and a notepad with blank pages on a table"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with the numbers.",
+      "gorsel": "an open antique almanac book with blank pages on a desk, a ripe banana resting on the page and a brass magnifying glass beside it"
+    },
+    {
+      "id": 5,
+      "metin": "A medium banana weighs about 118 grams, and the United States Department of Agriculture lists about 358 milligrams of potassium per 100 grams. That works out to roughly 422 milligrams in one banana.",
+      "gorsel": "a kitchen scale with one ripe banana on its pan, two more bananas beside it, clean wooden counter",
+      "etiket": "USDA FoodData Central · Bananas, raw",
+      "baslik": {
+        "satirlar": [
+          "ONE BANANA"
+        ],
+        "vurgu": "422",
+        "not": "milligrams of potassium, medium banana"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "The National Academies set the adequate intake at 3,400 milligrams a day for men, and 2,600 for women. So one banana covers about one eighth of a man's target, and about one sixth of a woman's.",
+      "gorsel": "a tall glass jar filled to the brim with sliced bananas, a single banana standing in front of it showing a small fraction of the whole",
+      "etiket": "National Academies · 2019",
+      "baslik": {
+        "satirlar": [
+          "DAILY TARGET"
+        ],
+        "not": "3,400 mg men · 2,600 mg women"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Most Americans fall short. According to the National Institutes of Health, adult men averaged about 3,000 milligrams a day in a national survey, and women about 2,300.",
+      "gorsel": "a supermarket produce shelf with neat piles of bananas, oranges and potatoes, a shopping basket in the foreground"
+    },
+    {
+      "id": 8,
+      "metin": "To reach 3,400 milligrams from bananas alone, a man would need about eight of them. Nobody should try that. Potassium comes from many foods, and we'll look at the best ones in the practical part.",
+      "gorsel": "eight ripe bananas arranged in a tidy row on a long wooden table, a single dinner plate with a banana at the end",
+      "baslik": {
+        "satirlar": [
+          "ABOUT",
+          "8 BANANAS"
+        ],
+        "not": "for a man's daily target"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Potassium is a mineral every cell uses, including the nerves and muscles that keep your heart beating. It also works as a partner to sodium, and the balance between the two seems to matter for blood pressure.",
+      "gorsel": "a ripe banana beside a textbook engraving of a human heart, two small sets of scales weighing tiny white crystals against golden spheres",
+      "baslik": {
+        "satirlar": [
+          "POTASSIUM",
+          "+ SODIUM"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "bolum": "How potassium may work",
+      "tip": "kart",
+      "metin": "So how could a mineral change blood pressure? Let's look at the idea first, then the evidence.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Potassium and sodium",
+        "alt": "A balance, like a seesaw"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "One explanation involves your kidneys. Potassium may help them release more sodium in the urine. Less sodium held in the body can mean less fluid in the blood vessels, and a lower pressure.",
+      "gorsel": "a pair of kidneys drawn as a textbook engraving, a tube-shaped vessel with small red discs beside them, a ripe banana in the corner connected by dashed lines",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "KIDNEYS"
+        ],
+        "not": "one possible route"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Think of sodium and potassium as two ends of a seesaw. A lot of sodium tilts it one way. Plenty of potassium helps level it back out.",
+      "gorsel": "an old wooden seesaw with a salt shaker on one end sinking low and a bunch of bananas on the other end lifted up, simple garden setting"
+    },
+    {
+      "id": 13,
+      "metin": "Scientists call this the sodium to potassium ratio. The authors of one major review suggest aiming for a ratio near one to one. In typical Western diets, sodium is often two to three times higher than potassium, counting molecule for molecule.",
+      "gorsel": "a balance scale with a small heap of white salt crystals on one pan, three times as much as on the other pan which holds one banana",
+      "etiket": "Aburto et al. · BMJ · 2013",
+      "baslik": {
+        "satirlar": [
+          "SODIUM :",
+          "POTASSIUM"
+        ],
+        "vurgu": "1 : 1",
+        "not": "ratio the reviewers suggest aiming for"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "The DASH eating pattern is high in potassium and low in sodium. In the DASH-Sodium trial, 412 adults ate either a typical American diet or the DASH diet, each at three sodium levels, for thirty days apiece.",
+      "gorsel": "a dinner tray with bananas, an orange, a bowl of beans, a small bowl of yogurt and a baked potato, arranged neatly like a healthy meal",
+      "etiket": "Sacks et al. · N Engl J Med · 2001",
+      "baslik": {
+        "satirlar": [
+          "DASH",
+          "DIET"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "The best combination, DASH with low sodium, gave a systolic pressure 7.1 points lower than a typical diet with high sodium in people without high blood pressure, and 11.5 points lower in people with it.",
+      "gorsel": "a sphygmomanometer cuff with a blank gauge resting on a table beside a bowl of bananas and oranges",
+      "etiket": "Sacks et al. · N Engl J Med · 2001",
+      "baslik": {
+        "satirlar": [
+          "DASH + LOW",
+          "SODIUM"
+        ],
+        "vurgu": "–11.5",
+        "not": "mmHg systolic, in people with high blood pressure"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "But that is a whole eating pattern, with more fruits and vegetables and less sodium. It cannot tell us what potassium alone does. For that, we need trials that changed mostly potassium.",
+      "gorsel": "a fruit and vegetable market table with bananas, apples, carrots and leafy greens, a brass magnifying glass hovering over a single banana"
+    },
+    {
+      "id": 17,
+      "bolum": "What the trials show",
+      "tip": "kart",
+      "metin": "So what happens when researchers test potassium on its own? A team including Nancy Aburto and Francesco Cappuccio pooled the trials.",
+      "kart": {
+        "ust": "THE META-ANALYSIS",
+        "baslik": "22 trials, pooled",
+        "alt": "Aburto et al. · BMJ · 2013"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Their 2013 review in the BMJ combined 22 randomized trials with 1,606 adults, and 11 cohort studies that followed about 127,000 adults.",
+      "gorsel": "a tall stack of research journals with blank covers on a library desk, a ripe banana resting on top and an antique brass microscope beside it",
+      "etiket": "Aburto et al. · BMJ · 2013"
+    },
+    {
+      "id": 19,
+      "tip": "grafik",
+      "metin": "In the 16 studies of adults with high blood pressure, higher potassium intake lowered the top number by about 5.3 points and the bottom number by about 3.1. In adults with normal blood pressure, the changes were close to zero.",
+      "grafik": {
+        "baslik": "Blood pressure change with more potassium (mm Hg)",
+        "alt": "High blood pressure: significant. Normal blood pressure: not statistically significant.",
+        "cubuklar": [
+          {
+            "etiket": "Top · high BP",
+            "deger": 5.32,
+            "metin": "−5.3"
+          },
+          {
+            "etiket": "Bottom · high BP",
+            "deger": 3.1,
+            "metin": "−3.1"
+          },
+          {
+            "etiket": "Top · normal BP",
+            "deger": 0.09,
+            "metin": "−0.1"
+          },
+          {
+            "etiket": "Bottom · normal BP",
+            "deger": 0.56,
+            "metin": "−0.6"
+          }
+        ],
+        "kaynak": "Aburto et al., BMJ 2013 · 22 randomized trials, 1,606 adults"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "That second half is easy to miss. The drop showed up in people who already had high blood pressure. In the three trials of people with normal pressure, there was no clear change.",
+      "gorsel": "two sphygmomanometer cuffs side by side, one wrapped around an upper arm, the other lying beside a bowl of bananas, both with blank gauges",
+      "baslik": {
+        "satirlar": [
+          "HIGH BP:",
+          "A DROP"
+        ],
+        "not": "normal BP: no clear change"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "The largest drops came at achieved intakes of 90 to 120 millimoles a day, which is about 3,500 to 4,700 milligrams. But the reviewers found no clear dose-response pattern.",
+      "gorsel": "a long wooden table with a large bunch of bananas, a bowl of white beans, a baked potato and a glass of orange juice, all arranged together",
+      "baslik": {
+        "satirlar": [
+          "3,500 –",
+          "4,700 MG"
+        ],
+        "not": "potassium a day at the largest drops"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Most of those trials used potassium chloride pills, not bananas. So the results show what potassium can do. They do not show what a banana a day does.",
+      "gorsel": "a small open pill bottle with white tablets spilling beside a single ripe banana on a plain table, a question mark shaped curl of banana peel"
+    },
+    {
+      "id": 23,
+      "metin": "The effect looked larger with a high sodium intake. Above four grams of sodium a day, the top number fell almost seven points; at two to four grams, about two. That gap was not statistically significant, but we'll use it in the practical part.",
+      "gorsel": "a salt shaker tipped over with a small pile of salt next to a bunch of bananas, a sphygmomanometer cuff behind them",
+      "etiket": "Aburto et al. · BMJ · 2013",
+      "baslik": {
+        "satirlar": [
+          "HIGH SODIUM"
+        ],
+        "vurgu": "–6.9",
+        "not": "mmHg top number, sodium above 4 g a day"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "The same review also looked at strokes. In cohort studies, higher potassium intake was linked with about 24 percent lower stroke risk. That is an association, and the authors rated the evidence low in quality.",
+      "gorsel": "a textbook engraving of a human brain beside a bunch of bananas, a thin tube-shaped vessel with small red discs flowing calmly between them",
+      "etiket": "Aburto et al. · BMJ · 2013",
+      "baslik": {
+        "satirlar": [
+          "STROKE"
+        ],
+        "vurgu": "–24%",
+        "not": "linked, cohort studies, low quality"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "A 2020 analysis of 32 trials, led by Tommaso Filippini, found a U-shaped curve. A moderate rise in potassium lowered pressure, but at very high supplement doses the benefit faded, and pressure rose in people taking blood pressure medicine.",
+      "gorsel": "a smooth U-shaped valley of rolling hills in an engraved landscape, a small bunch of bananas resting at the bottom of the valley",
+      "etiket": "Filippini et al. · J Am Heart Assoc · 2020",
+      "baslik": {
+        "satirlar": [
+          "A U-SHAPED",
+          "CURVE"
+        ],
+        "not": "more is not always better"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Another approach: a 2022 analysis pooled six studies of 10,709 adults, average age about 51, who gave 24-hour urine samples. The people in the top quarter for potassium excretion had 31 percent lower risk of cardiovascular events.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes with pale golden liquid, a ripe banana and an antique brass microscope beside them",
+      "etiket": "Ma et al. · N Engl J Med · 2022",
+      "baslik": {
+        "satirlar": [
+          "10,709",
+          "ADULTS"
+        ],
+        "vurgu": "–31%",
+        "not": "heart and vascular events, top vs bottom quarter"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Those with the highest sodium to potassium ratio had a 62 percent higher risk. These are observational data, so they show a link, not proof that potassium itself was the cause.",
+      "gorsel": "a salt shaker and a ripe banana facing each other on a table like two chess pieces, a faint dashed line between them",
+      "etiket": "Ma et al. · N Engl J Med · 2022"
+    },
+    {
+      "id": 28,
+      "bolum": "The salt substitute trial",
+      "tip": "kart",
+      "metin": "The biggest test of this idea did not use bananas. It used salt.",
+      "kart": {
+        "ust": "THE BIGGEST TRIAL",
+        "baslik": "Salt, with potassium",
+        "alt": "Neal et al. · N Engl J Med · 2021"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "In the Salt Substitute and Stroke Study, led by Bruce Neal, 600 villages in rural China were randomly assigned. Half used regular salt. The rest used a substitute with 25 percent potassium chloride.",
+      "gorsel": "two small ceramic salt cellars on a rustic village kitchen table, one plain, one with a banana leaf-green ribbon, a bunch of bananas beside them",
+      "etiket": "Neal et al. · N Engl J Med · 2021",
+      "baslik": {
+        "satirlar": [
+          "600",
+          "VILLAGES"
+        ],
+        "not": "randomly assigned"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "In all, 20,995 people took part. Each had a history of stroke, or was 60 or older with high blood pressure. They were followed for nearly five years.",
+      "gorsel": "an older couple's hands holding a ceramic bowl of rice at a rustic table, a bunch of bananas and a small salt cellar beside the bowl",
+      "etiket": "Neal et al. · N Engl J Med · 2021",
+      "baslik": {
+        "satirlar": [
+          "20,995",
+          "PEOPLE"
+        ],
+        "not": "stroke history, or age 60+ with high BP"
+      }
+    },
+    {
+      "id": 31,
+      "tip": "grafik",
+      "metin": "Compared with regular salt, the substitute cut strokes by 14 percent, major cardiovascular events by 13 percent, and deaths from any cause by 12 percent.",
+      "grafik": {
+        "baslik": "How much lower with the potassium salt substitute",
+        "alt": "Rate reduction vs regular salt, about 4.7 years",
+        "cubuklar": [
+          {
+            "etiket": "Stroke",
+            "deger": 14,
+            "metin": "−14%"
+          },
+          {
+            "etiket": "Major CV events",
+            "deger": 13,
+            "metin": "−13%"
+          },
+          {
+            "etiket": "Death, any cause",
+            "deger": 12,
+            "metin": "−12%"
+          }
+        ],
+        "kaynak": "Neal et al., N Engl J Med 2021 · 20,995 people, rural China"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "That is a large result, from a randomized trial. But the substitute also cut sodium, so we cannot say how much was due to potassium alone. Both changes may have helped.",
+      "gorsel": "a salt cellar with a small pile of white crystals on a table beside a bunch of bananas, a thin dashed line connecting them like a link"
+    },
+    {
+      "id": 33,
+      "metin": "It was also done in rural Chinese villages, so the results may not carry over directly to American kitchens. Its authors list this as a limit on how widely it applies.",
+      "gorsel": "a quiet village landscape with small tiled-roof houses and rice terraces, a bunch of bananas in the foreground on a wooden crate"
+    },
+    {
+      "id": 34,
+      "metin": "On safety, people with kidney disease, or taking potassium-sparing diuretics or potassium supplements, were left out. Among the participants, serious events from too much potassium were about equal, with no significant difference: 3.35 versus 3.30 per 1,000 person-years.",
+      "gorsel": "a hospital style consultation table with a stethoscope, a clipboard with blank pages and a ripe banana, soft window light",
+      "etiket": "Neal et al. · N Engl J Med · 2021",
+      "baslik": {
+        "satirlar": [
+          "3.35 vs 3.30"
+        ],
+        "not": "serious high-potassium events per 1,000 person-years"
+      }
+    },
+    {
+      "id": 35,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "So, can bananas lower blood pressure? Here is the honest answer.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What bananas can't promise",
+        "alt": "And what the evidence supports"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "The trials we just saw tested potassium pills, salt substitutes and whole diets. None of them tested bananas by themselves. So a banana is a reasonable source of potassium, not a proven treatment.",
+      "gorsel": "a single ripe banana on a white plate under a glass dome like a museum specimen, an empty chair at the table"
+    },
+    {
+      "id": 37,
+      "metin": "What the evidence supports is a pattern. More potassium-rich foods, with less sodium, may help lower blood pressure, especially if yours is already high.",
+      "gorsel": "a balanced plate with bananas, a small bowl of beans, a baked potato and yogurt on a wooden table, a salt shaker pushed to the far edge",
+      "baslik": {
+        "satirlar": [
+          "MORE",
+          "POTASSIUM,",
+          "LESS SODIUM"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "The size of the effect is modest. About five points on the top number for people with high blood pressure is a real change, but it does not replace prescribed treatment.",
+      "gorsel": "a sphygmomanometer cuff with a blank gauge and a bunch of bananas beside a bottle of tablets on a bedside table",
+      "baslik": {
+        "satirlar": [
+          "A MODEST",
+          "EFFECT"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "One myth is that bananas are the best potassium food. They are a good source, but beans, lentils, potatoes, yogurt and many other foods also appear on the National Kidney Foundation's list of high potassium foods.",
+      "gorsel": "a row of foods on a table: bananas, a bowl of lentils, a baked potato, a tub of yogurt and a glass of milk, bananas at the front",
+      "etiket": "National Kidney Foundation",
+      "baslik": {
+        "satirlar": [
+          "NOT THE",
+          "ONLY SOURCE"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Evidence in older adults is thinner than we would like. The reviews covered adults of all ages, and the urine study averaged about 51. The salt substitute trial is closest to many viewers, with people 60 and older.",
+      "gorsel": "an older man and woman seen from behind sitting at a breakfast table by a window, a bowl of bananas on the table"
+    },
+    {
+      "id": 41,
+      "metin": "Nothing here proves that eating more bananas prevents strokes or heart attacks. The stroke findings come from cohort studies and a salt trial, so they are encouraging, not final.",
+      "gorsel": "a quiet research desk with a stack of journals with blank covers, a teacup with rising steam and a ripe banana, an oil lamp beside them",
+      "baslik": {
+        "satirlar": [
+          "ENCOURAGING,",
+          "NOT FINAL"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "bolum": "Who should be careful",
+      "tip": "kart",
+      "metin": "Now the part that matters most for safety. Who should be careful with potassium?",
+      "kart": {
+        "ust": "SAFETY FIRST",
+        "baslik": "Kidneys and medicines",
+        "alt": "Ask before adding potassium"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "Healthy kidneys remove extra potassium. In chronic kidney disease, they may not. Potassium can then build up in the blood, which is called hyperkalemia.",
+      "gorsel": "a pair of kidneys drawn as a textbook engraving with a tube-shaped vessel with many small golden spheres crowding it, a banana in the corner",
+      "etiket": "MedlinePlus · National Kidney Foundation",
+      "baslik": {
+        "satirlar": [
+          "KIDNEY",
+          "DISEASE"
+        ],
+        "not": "potassium can build up"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "The American Heart Association says severe hyperkalemia can cause dangerous heart rhythms. The National Kidney Foundation notes that people with kidney disease may need to limit high potassium foods, and it lists bananas among them.",
+      "gorsel": "half a banana on a small plate beside a textbook engraving of a human heart with a gentle wavy line drawn across the page",
+      "etiket": "American Heart Association · National Kidney Foundation"
+    },
+    {
+      "id": 45,
+      "metin": "Some medicines raise potassium too. The American Heart Association lists ACE inhibitors and angiotensin receptor blockers, two common blood pressure medicines, as linked to high potassium. Harvard's Nutrition Source adds that anti-inflammatory pain relievers called NSAIDs can also raise it.",
+      "gorsel": "a pill organizer box with several compartments on a kitchen table, a pharmacy bottle and a ripe banana beside it",
+      "baslik": {
+        "satirlar": [
+          "SOME",
+          "MEDICINES"
+        ],
+        "not": "ACE inhibitors · ARBs · NSAIDs"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Some water pills cause potassium loss instead. So the right amount differs from person to person, which is why your care team follows it.",
+      "gorsel": "a doctor's desk with a small glass of water, a pill bottle and a bunch of bananas, a notepad with blank pages"
+    },
+    {
+      "id": 47,
+      "metin": "Salt substitutes and lite salt are high in potassium chloride. Harvard's Nutrition Source advises checking with a doctor before using them, especially if you take medicines that raise potassium.",
+      "gorsel": "a plain salt shaker with a small pile of white crystals on a kitchen counter, a ripe banana and a wooden spoon beside it",
+      "baslik": {
+        "satirlar": [
+          "SALT",
+          "SUBSTITUTES"
+        ],
+        "not": "ask before using them"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "So please don't start, stop or change any medicine, supplement or salt substitute because of this video. If you have kidney disease or take blood pressure pills, ask your doctor or pharmacist what potassium level is right for you.",
+      "gorsel": "a friendly pharmacy counter with a pharmacist's coat on a hanger, a paper prescription bag and a bunch of bananas on the counter",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you use all this? Here are five practical ways.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Food first, less sodium",
+        "alt": "Five practical ways"
+      }
+    },
+    {
+      "id": 50,
+      "metin": "One. Get potassium from food first. The World Health Organization guideline based on that BMJ review advises adults without kidney problems to increase potassium from food.",
+      "gorsel": "a market basket filled with bananas, oranges, potatoes and beans on a wooden table, soft morning light"
+    },
+    {
+      "id": 51,
+      "metin": "Two. Think about the whole day, not one banana. Banana with oatmeal at breakfast, bean soup at lunch, a baked potato and yogurt later. The National Kidney Foundation lists beans, lentils, potatoes, tomatoes, yogurt, milk and oranges as potassium-rich.",
+      "gorsel": "three small plates in a row on a table: oatmeal topped with sliced bananas, a bowl of bean soup, a baked potato with a spoon of yogurt",
+      "baslik": {
+        "satirlar": [
+          "THE WHOLE",
+          "DAY"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "Three. Pair potassium with less sodium. Remember, DASH with lower sodium gave the biggest drops, and the effect of potassium looked larger when sodium was high. So check Nutrition Facts labels on soups, breads and deli meats.",
+      "gorsel": "a hand holding a canned soup tin with a blank label beside a loaf of bread and a bunch of bananas on a kitchen counter",
+      "baslik": {
+        "satirlar": [
+          "CHECK THE",
+          "LABEL"
+        ],
+        "not": "sodium in soups, breads, deli meats"
+      }
+    },
+    {
+      "id": 53,
+      "metin": "Four. Be careful with salt substitutes. If you want to try a potassium salt substitute, ask your doctor or pharmacist first, especially if you have kidney disease or take an ACE inhibitor or an angiotensin receptor blocker.",
+      "gorsel": "a small salt cellar with a lid on a kitchen shelf, a bunch of bananas below it and a prescription pill bottle beside it"
+    },
+    {
+      "id": 54,
+      "metin": "Five. Keep track. If you check your blood pressure at home, write down the readings and bring them to your appointments, so you and your doctor can see what is actually changing.",
+      "gorsel": "a home blood pressure monitor cuff resting on a table beside an open notebook with blank pages, a pencil and a bunch of bananas",
+      "baslik": {
+        "satirlar": [
+          "WRITE IT",
+          "DOWN"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "Paired with the medicines your doctor prescribes, these are gentle habits, and a banana can be part of them. Just not the whole plan.",
+      "gorsel": "a breakfast table in morning light with oatmeal topped with sliced bananas, a glass of milk and a cup of tea"
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Food first. Less sodium.",
+        "alt": "And ask before adding potassium"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "In trials, more potassium lowered the top blood pressure number by about five points in adults who already had high blood pressure, but not clearly in adults with normal pressure.",
+      "gorsel": "a sphygmomanometer cuff with a blank gauge beside a bunch of bananas on a wooden table"
+    },
+    {
+      "id": 58,
+      "metin": "A salt substitute with potassium cut strokes by 14 percent in one large trial in rural China, of people with a stroke history or age 60 and older with high blood pressure.",
+      "gorsel": "a ceramic salt cellar and a bunch of bananas on a rustic table, a village window in soft light behind them"
+    },
+    {
+      "id": 59,
+      "metin": "A banana gives about 422 milligrams, which is useful but not magic. People with kidney disease, and people taking certain blood pressure medicines, should ask their doctor before adding potassium.",
+      "gorsel": "a single ripe banana on a white plate beside a stethoscope and a small pill organizer box"
+    },
+    {
+      "id": 60,
+      "metin": "Food first, less sodium, and a conversation with your care team. That is the plan the evidence supports.",
+      "gorsel": "a bunch of bananas, a bowl of beans and a baked potato on a wooden table, a salt shaker at the far edge, soft morning light"
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
