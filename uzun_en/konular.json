@@ -488,6 +488,139 @@
         "green tea benefits heart"
       ],
       "durum": "bekliyor"
+    },
+    {
+      "slug": "cranberry-uti",
+      "soru": "Does cranberry juice really prevent urinary tract infections?",
+      "aci": "Cranberry and UTIs: the 2023 Cochrane review of 50 trials (fewer repeat infections in women with recurrent UTIs, children and after procedures, but little help for older adults in care homes), juice vs capsules, the sugar in cocktail juice, and the warfarin caution.",
+      "anahtar": [
+        "cranberry juice uti",
+        "does cranberry prevent uti",
+        "cranberry pills uti"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "food-expiration-dates",
+      "soru": "What do 'best by' and 'use by' dates on food really mean?",
+      "aci": "Date labels: why most US dates are about quality, not safety (only infant formula is federally required), what 'sell by', 'best if used by' and 'use by' mean, which foods really need the date respected (deli meats, soft cheeses, for Listeria risk after 60), and how much good food gets thrown out.",
+      "anahtar": [
+        "best by date meaning",
+        "use by vs best by",
+        "is food safe after expiration date"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "soy-breast-cancer",
+      "soru": "Is soy safe, or does it raise breast cancer risk?",
+      "aci": "Soy and breast cancer: where the fear came from (rodent studies on isoflavones), large Asian and US cohort studies linking moderate soy food intake to similar or lower risk and better survival, AICR and ACS guidance, whole soy foods vs isoflavone pills, and soy for hot flashes.",
+      "anahtar": [
+        "is soy safe",
+        "soy breast cancer",
+        "soy and estrogen",
+        "tofu breast cancer survivors"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "detox-cleanses",
+      "soru": "Do detox juice cleanses really remove toxins?",
+      "aci": "Detox cleanses: what 'toxins' marketers mean, how the liver and kidneys actually clear waste, the 2015 systematic review finding no good evidence for commercial detox diets, the real risks for older adults (blood sugar swings, potassium and oxalate overload from juice, kidney injury cases), and what helps the liver instead.",
+      "anahtar": [
+        "do detox cleanses work",
+        "juice cleanse benefits",
+        "liver detox myth"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "vitamin-c-colds",
+      "soru": "Does vitamin C or orange juice help prevent or shorten a cold?",
+      "aci": "Vitamin C and colds: the Cochrane review of 29 trials (no fewer colds for most people, slightly shorter colds with regular intake, nothing from starting after symptoms begin), the exception for people under heavy physical stress, food vs supplements, and the kidney stone caution with high doses.",
+      "anahtar": [
+        "vitamin c for colds",
+        "does orange juice help a cold",
+        "vitamin c immune system"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "organic-vs-conventional",
+      "soru": "Is organic food really healthier than conventional?",
+      "aci": "Organic vs conventional: the 2012 Stanford review and later meta-analyses on nutrient differences (small), pesticide residues compared with safety limits, the French NutriNet-Santé cohort and its limits, cost per serving, and the 'Dirty Dozen' list's evidence, so viewers can spend where it matters.",
+      "anahtar": [
+        "is organic food healthier",
+        "organic vs conventional produce",
+        "pesticides on produce"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "ginger-nausea",
+      "soru": "Does ginger really settle an upset stomach?",
+      "aci": "Ginger and nausea: trials and meta-analyses for nausea after surgery, from chemotherapy and motion sickness, typical doses (about 1 gram a day), ginger tea vs capsules vs ginger ale (which usually has little real ginger), and the caution with blood thinners.",
+      "anahtar": [
+        "ginger for nausea",
+        "does ginger help upset stomach",
+        "ginger tea benefits"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "gluten-free-healthier",
+      "soru": "Is a gluten-free diet healthier if you don't have celiac disease?",
+      "aci": "Gluten-free for everyone?: who truly needs it (celiac disease, wheat allergy, non-celiac gluten sensitivity), the Harvard cohort linking low gluten intake to no heart benefit and less whole grain, what gluten-free processed foods often add, and when to get tested before cutting gluten.",
+      "anahtar": [
+        "is gluten free healthier",
+        "gluten free diet without celiac",
+        "should i go gluten free"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "chamomile-sleep",
+      "soru": "Can chamomile tea really help you sleep?",
+      "aci": "Chamomile and sleep: the small trials in older adults and postpartum women (better sleep quality, little change in insomnia severity), the 2019 meta-analysis, apigenin and how it may work, a warm-drink routine effect, and cautions with blood thinners and ragweed allergy.",
+      "anahtar": [
+        "chamomile tea for sleep",
+        "does chamomile help insomnia",
+        "bedtime tea sleep"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "tea-with-meals-iron",
+      "soru": "Does drinking tea or coffee with meals block iron?",
+      "aci": "Tea, coffee and iron: absorption studies showing tannins and polyphenols can cut non-heme iron absorption by more than half, why it matters most for people with low iron or anemia after 60, timing tips (an hour apart), vitamin C as a counterweight, and why most people with normal iron need not worry.",
+      "anahtar": [
+        "tea iron absorption",
+        "coffee with meals iron",
+        "drinking tea with food anemia"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "tomatoes-prostate",
+      "soru": "Do tomatoes and lycopene protect against prostate cancer?",
+      "aci": "Tomatoes and the prostate: the Health Professionals Follow-up Study, meta-analyses of tomato and lycopene intake, why cooked tomato products with a little fat deliver more lycopene, the FDA's 2005 qualified-claim review, and why lycopene pills have not proven the same benefit.",
+      "anahtar": [
+        "tomatoes prostate cancer",
+        "lycopene prostate",
+        "cooked tomatoes lycopene"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "leftovers-safety",
+      "soru": "How long are leftovers really safe to eat?",
+      "aci": "Leftovers: the USDA two-hour rule and 3–4 day fridge guideline, why smell is not a safety test (Listeria and Bacillus cereus don't announce themselves), cooling big pots quickly, reheating to 165°F, freezing to pause the clock, and why food poisoning is riskier after 60.",
+      "anahtar": [
+        "how long are leftovers good for",
+        "leftovers safe to eat",
+        "reheating leftovers safely"
+      ],
+      "durum": "bekliyor"
     }
   ]
 }
