@@ -89,7 +89,10 @@ jobs:
                   continue
               for no in range(1, sayi + 1):
                   ad = "kisa" if no == 1 else f"kisa_{no}"
-                  if not (O.json_oku(os.path.join(pdir, f"{ad}_yayin.json"), {}) or {}).get("video_id"):
+                  ky = O.json_oku(os.path.join(pdir, f"{ad}_yayin.json"), {}) or {}
+                  if ky.get("bekliyor"):            # render edildi, GitHub sürümünde YouTube kotasını bekliyor
+                      continue
+                  if not ky.get("video_id"):
                       adaylar.append((y.get("slot") or y.get("yuklenme") or "", -no, slug, no))
                       break                 # sıradaki Shorts, öncekisi yüklenince
           bekleyen = [(s, n) for _, _, s, n in sorted(adaylar, reverse=True)]
@@ -102,7 +105,7 @@ jobs:
               for y in glob.glob(os.path.join(pdir, "kisa_*_yayin.json")):
                   no = int(re.search(r"kisa_(\d+)_yayin", os.path.basename(y)).group(1))
                   k = O.json_oku(y, {}) or {}
-                  if no > sayi and k.get("slot") and not k.get("video_id"):
+                  if no > sayi and k.get("slot") and not k.get("video_id") and not k.get("bekliyor"):
                       ayrilan.append((k["slot"], slug, no))
           bekleyen += [(s, n) for _, s, n in sorted(ayrilan) if (s, n) not in bekleyen]
           # kisa_islem.json "ek": [{"proje", "no"}]: eski videolardan kisa_sayisi'nın üstünde ek Shorts (ör. boş Pazartesiler
@@ -112,7 +115,8 @@ jobs:
               pdir = O.proje_dir(slug)
               ad = "kisa" if no == 1 else f"kisa_{no}"
               if no > 0 and (O.json_oku(os.path.join(pdir, "yayin.json"), {}) or {}).get("video_id") \
-                      and not (O.json_oku(os.path.join(pdir, f"{ad}_yayin.json"), {}) or {}).get("video_id") \
+                      and not {k_ for k_, v_ in (O.json_oku(os.path.join(pdir, f"{ad}_yayin.json"), {}) or {}).items()
+                               if v_ and k_ in ("video_id", "bekliyor")} \
                       and (slug, no) not in bekleyen:
                   bekleyen.append((slug, no))
           if istek:
@@ -124,7 +128,7 @@ jobs:
           with open(os.environ["GITHUB_ENV"], "a") as f:
               f.write(f"SLUG={slug}\nKNO={no}\nAD={'kisa' if no == 1 else f'kisa_{no}'}\n")
           PY
-      - name: YouTube kotası (doluysa render boşuna yapılmaz)
+      - name: YouTube kotası (doluysa render yine yapılır, Shorts GitHub sürümünde bekler)
         if: env.SLUG != ''
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -133,7 +137,7 @@ jobs:
         run: |
           pip install -q -r requirements.txt numpy
           set +e; python3 uzun_en/araclar/yukle.py --kota-kontrol; K=$?; set -e
-          if [ "$K" = "3" ]; then echo "SLUG=" >> "$GITHUB_ENV"; elif [ "$K" != "0" ]; then exit "$K"; fi
+          if [ "$K" = "3" ]; then echo "YT_KOTA=dolu" >> "$GITHUB_ENV"; elif [ "$K" != "0" ]; then exit "$K"; fi
       - uses: actions/setup-node@v5
         if: env.SLUG != ''
         with:
@@ -307,20 +311,42 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release upload "uzun-en-$SLUG" uzun_en/projeler/"$SLUG"/cikti/"$AD"/"$AD".mp4 --clobber
-      - name: YouTube'a zamanlanmış yükleme
+      - name: YouTube'a zamanlanmış yükleme (kota doluysa GitHub sürümünde bekler)
         if: env.SLUG != ''
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python3 uzun_en/araclar/yukle.py --proje "$SLUG" --kisa --no "$KNO"
+        run: |
+          K=3
+          if [ "${YT_KOTA:-}" != "dolu" ]; then
+            set +e; python3 uzun_en/araclar/yukle.py --proje "$SLUG" --kisa --no "$KNO"; K=$?; set -e
+          fi
+          if [ "$K" = "3" ]; then
+            # Shorts zaten sürümde (Arşiv adımı); kayda "bekliyor" yazılır, plan işi kota açılınca yükler.
+            python3 - <<'PY'
+          import json, os
+          y = f"uzun_en/projeler/{os.environ['SLUG']}/{os.environ['AD']}_yayin.json"
+          k = json.load(open(y)) if os.path.exists(y) else {}
+          k["bekliyor"] = True
+          json.dump(k, open(y, "w"), ensure_ascii=False, indent=2)
+          PY
+            echo "YT_KOTA=dolu" >> "$GITHUB_ENV"
+            echo "::notice title=YouTube kotası dolu::$SLUG Shorts $KNO GitHub sürümünde; kota açılınca YouTube'a yüklenecek"
+          elif [ "$K" != "0" ]; then
+            exit "$K"
+          fi
       - name: Kaydet
         if: env.SLUG != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 -c "import json,os;k=json.load(open(f'uzun_en/projeler/{os.environ[\"SLUG\"]}/{os.environ[\"AD\"]}_yayin.json'));print(f'::notice title=Shorts {os.environ[\"KNO\"]}::', k['url'], 'yayın', k['slot'])"
-          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG Shorts $KNO YouTube'a yüklendi" uzun_en/projeler/"$SLUG"/"$AD"_yayin.json
+          if [ "${YT_KOTA:-}" = "dolu" ]; then
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG Shorts $KNO GitHub'a arşivlendi, YouTube kotası bekleniyor" uzun_en/projeler/"$SLUG"/"$AD"_yayin.json
+          else
+            python3 -c "import json,os;k=json.load(open(f'uzun_en/projeler/{os.environ[\"SLUG\"]}/{os.environ[\"AD\"]}_yayin.json'));print(f'::notice title=Shorts {os.environ[\"KNO\"]}::', k['url'], 'yayın', k['slot'])"
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG Shorts $KNO YouTube'a yüklendi" uzun_en/projeler/"$SLUG"/"$AD"_yayin.json
+          fi
       - name: Sıradaki Shorts (aynı videonunki, yoksa Shorts'u eksik bir sonraki video)
         if: env.SLUG != ''
         env:

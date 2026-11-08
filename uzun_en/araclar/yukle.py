@@ -5,6 +5,7 @@
   python3 uzun_en/araclar/yukle.py --proje SLUG --slot 2026-10-13T14:00:00Z
   python3 uzun_en/araclar/yukle.py --proje SLUG --slot ... --kuru     # yüklemeden ne gönderileceğini yazdır
   python3 uzun_en/araclar/yukle.py --kota-kontrol                       # YouTube günlük kotası dolu mu? (dolu: çıkış 3)
+  Yükleme sırasında kota dolarsa da çıkış 3: iş akışı videoyu GitHub sürümünde bırakır; --tamamla kota açılınca yükler.
   python3 uzun_en/araclar/yukle.py --tamamla                            # yüklenenleri denetle: silinmişse yeniden yükle,
                                                                         # eksik kapak / oynatma listesini tamamla
   python3 uzun_en/araclar/yukle.py --proje SLUG --kisa [--no 2] [--kuru]  # Shorts'u (cikti/kisa/kisa.mp4) zamanlanmış yükle
@@ -43,6 +44,8 @@ def video_yukle(yt, body, yol):
             if durum:
                 O.log(f"   %{int(durum.progress() * 100)}")
         except Exception as e:                       # geçici ağ hatası: kaldığı yerden devam
+            if kota_hatasi(e):                       # kota/yükleme sınırı: beklemek işe yaramaz
+                raise
             hata += 1
             if hata > 6:
                 raise
@@ -52,6 +55,89 @@ def video_yukle(yt, body, yol):
     return yanit["id"]
 
 
+KOTA_KODU = 3   # iş akışları bu çıkış koduyla "YouTube kotası dolu" anlar
+
+
+def kota_hatasi(e):
+    """YouTube'un günlük API kotası (quotaExceeded) ya da kanalın günlük yükleme sınırı (uploadLimitExceeded)."""
+    m = str(e).lower()
+    return "quota" in m or "uploadlimitexceeded" in m or "exceeded the number of videos" in m
+
+
+def kota_var():
+    """1 birimlik okuma: kota dolu değilse True."""
+    from googleapiclient.discovery import build
+    import youtube_api as YY
+    try:
+        build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False).channels().list(part="id", mine=True).execute()
+        return True
+    except Exception as e:
+        if kota_hatasi(e):
+            return False
+        raise
+
+
+def bekleyenleri_yukle():
+    """YouTube kotası doluyken üretilip yalnızca GitHub sürümüne arşivlenen videolar (durum: yukleme_bekliyor) ve Shorts'lar
+    (kisa*_yayin.json: {"bekliyor": true}). Kota açıksa sürümden indirip yayın sırasıyla yükler; kota yine dolarsa durur,
+    kalanlar bir sonraki saatlik çalıştırmaya kalır. Uzun video yüklenince Shorts hattı başlatılır."""
+    import subprocess
+    import plan as P
+    d = O.durum()
+    uzun = sorted((v.get("slot") or "", s) for s, v in d["videolar"].items() if v.get("asama") == P.BEKLIYOR)
+    kisa = []
+    for kyol in sorted(glob.glob(os.path.join(O.PROJELER, "*", "kisa*_yayin.json"))):
+        k = O.json_oku(kyol, {}) or {}
+        if k.get("bekliyor") and not k.get("video_id"):
+            ad = os.path.basename(kyol)[:-len("_yayin.json")]
+            kisa.append((os.path.basename(os.path.dirname(kyol)), 1 if ad == "kisa" else int(ad.split("_")[1])))
+    if not uzun and not kisa:
+        return
+    O.log(f"YouTube'a yüklenmeyi bekleyen: {len(uzun)} video, {len(kisa)} Shorts")
+    if not kota_var():
+        return O.log("YouTube kotası hâlâ dolu — bekleyenler GitHub sürümünde duruyor, sonraki çalıştırmada denenecek")
+    for slot, slug in uzun:
+        cikti = os.path.join(O.proje_dir(slug), "cikti")
+        os.makedirs(cikti, exist_ok=True)
+        r = subprocess.run(["gh", "release", "download", O.etiket(slug), "-D", cikti, "--clobber", "-p", "video.mp4",
+                            "-p", "meta.json", "-p", "kalite.json", "-p", "kapak_yt.jpg"])
+        if r.returncode or not os.path.exists(os.path.join(cikti, "video.mp4")):
+            O.log(f"! {slug}: arşivden indirilemedi, atlandı")
+            continue
+        try:
+            uzun_yukle(slug, slot)
+        except (Exception, SystemExit) as e:          # SystemExit: kalite/dosya eksikliği (o video atlanır)
+            if kota_hatasi(e):
+                return O.log(f"! {slug}: YouTube kotası doldu — kalanlar sonraki çalıştırmada")
+            O.log(f"! {slug}: yüklenemedi ({str(e)[:160]})")
+            continue
+        d = O.durum()
+        d["videolar"][slug]["asama"] = "yuklendi"
+        O.durum_yaz(d)
+        O.log(f"• {slug}: arşivden YouTube'a yüklendi (yayın {slot})")
+        os.remove(os.path.join(cikti, "video.mp4"))
+        subprocess.run(["gh", "workflow", "run", "uzun_en_kisa.yml", "--ref", "main", "-f", f"proje={slug}"], check=False)
+    for slug, no in kisa:
+        pdir = O.proje_dir(slug)
+        if not (O.json_oku(os.path.join(pdir, "yayin.json"), {}) or {}).get("video_id"):
+            continue
+        ad = kisa_ad(no)
+        hedef = os.path.join(pdir, "cikti", ad)
+        os.makedirs(hedef, exist_ok=True)
+        subprocess.run(["gh", "release", "download", O.etiket(slug), "-D", hedef, "--clobber", "-p", f"{ad}.mp4"])
+        if not os.path.exists(os.path.join(hedef, f"{ad}.mp4")):
+            O.log(f"! {slug}: Shorts {no} arşivden indirilemedi, atlandı")
+            continue
+        try:
+            kisa_yukle(slug, no=no)
+        except (Exception, SystemExit) as e:          # SystemExit: kalite/dosya eksikliği (o video atlanır)
+            if kota_hatasi(e):
+                return O.log(f"! {slug}: YouTube kotası doldu (Shorts {no}) — kalanlar sonraki çalıştırmada")
+            O.log(f"! {slug}: Shorts {no} yüklenemedi ({str(e)[:160]})")
+            continue
+        O.log(f"• {slug}: Shorts {no} arşivden YouTube'a yüklendi")
+
+
 def kota_kontrol():
     """1 birimlik bir okuma: kota dolduysa render boşuna yapılmasın (kota her gün 07:00 UTC'de sıfırlanır)."""
     from googleapiclient.discovery import build
@@ -59,9 +145,9 @@ def kota_kontrol():
     try:
         build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False).channels().list(part="id", mine=True).execute()
     except Exception as e:
-        if "quota" in str(e).lower():
+        if kota_hatasi(e):
             O.log("YouTube günlük kotası dolu — kota sıfırlanınca (07:00 UTC) yeniden denenecek")
-            sys.exit(3)
+            sys.exit(KOTA_KODU)
         raise
     O.log("YouTube kotası: uygun")
 
@@ -258,6 +344,10 @@ def tamamla():
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
     import youtube_api as YY
+    try:
+        bekleyenleri_yukle()
+    except (Exception, SystemExit) as e:
+        O.log(f"! bekleyen yüklemeler: {str(e)[:200]}")
     m = O.marka()
     simdi = dt_.datetime.now(dt_.timezone.utc)
     adaylar = []
@@ -516,11 +606,21 @@ def main():
         return kota_kontrol()
     if a.tamamla:
         return tamamla()
-    if a.kisa:
-        return kisa_yukle(O.aktif_slug(a.proje), a.kuru, a.no)
-    if not a.slot:
-        ap.error("--slot gerekli")
-    slug = O.aktif_slug(a.proje)
+    try:
+        if a.kisa:
+            return kisa_yukle(O.aktif_slug(a.proje), a.kuru, a.no)
+        if not a.slot:
+            ap.error("--slot gerekli")
+        uzun_yukle(O.aktif_slug(a.proje), a.slot, a.kuru)
+    except Exception as e:
+        if kota_hatasi(e):                            # iş akışı videoyu sürümde bırakır, kota açılınca yüklenir
+            O.log(f"YouTube kotası dolu: {str(e)[:200]}")
+            sys.exit(KOTA_KODU)
+        raise
+
+
+def uzun_yukle(slug, slot_str, kuru=False):
+    """cikti/video.mp4'ü zamanlanmış yükler (meta.json, kalite.json, kapak_yt.jpg aynı klasörde)."""
     pdir = O.proje_dir(slug)
     cikti = os.path.join(pdir, "cikti")
     yayin_yol = os.path.join(pdir, "yayin.json")
@@ -531,20 +631,20 @@ def main():
         raise SystemExit("kalite kontrolü geçmedi ya da yapılmadı — yüklenmiyor")
     meta = O.json_oku(os.path.join(cikti, "meta.json"))
     m = O.marka()
-    slot = dt.datetime.fromisoformat(a.slot.replace("Z", "+00:00"))
+    slot = dt.datetime.fromisoformat(slot_str.replace("Z", "+00:00"))
     simdi = dt.datetime.now(dt.timezone.utc)
     zamanli = slot - simdi > dt.timedelta(minutes=90)
     status = {"selfDeclaredMadeForKids": False, "containsSyntheticMedia": bool(m.get("sentetik_beyan", True)),
               "embeddable": True, "license": "youtube", "publicStatsViewable": True}
     if zamanli:
-        status.update(privacyStatus="private", publishAt=a.slot)
+        status.update(privacyStatus="private", publishAt=slot_str)
     else:
         status.update(privacyStatus="public")
     body = {"snippet": {"title": meta["baslik"], "description": meta["aciklama"], "tags": meta["etiketler"],
                         "categoryId": meta["kategori"], "defaultLanguage": meta["dil"], "defaultAudioLanguage": meta["dil"]},
             "status": status}
-    O.log(f"yükleme: '{meta['baslik']}' -> " + (f"zamanlanmış {a.slot}" if zamanli else "hemen herkese açık"))
-    if a.kuru:
+    O.log(f"yükleme: '{meta['baslik']}' -> " + (f"zamanlanmış {slot_str}" if zamanli else "hemen herkese açık"))
+    if kuru:
         print(meta["aciklama"])
         return O.log(f"(kuru çalışma) etiketler: {meta['etiketler']}\nstatus: {status}")
 
@@ -556,7 +656,7 @@ def main():
         O.log(f"kanalda aynı başlıklı video var, yeniden yüklenmiyor: {vid}")
     else:
         vid = video_yukle(yt, body, os.path.join(cikti, "video.mp4"))
-    yayin = {"video_id": vid, "url": f"https://youtu.be/{vid}", "slot": a.slot if zamanli else None,
+    yayin = {"video_id": vid, "url": f"https://youtu.be/{vid}", "slot": slot_str if zamanli else None,
              "baslik": meta["baslik"], "yuklenme": simdi.strftime("%Y-%m-%dT%H:%M:%SZ")}
     O.json_yaz(yayin_yol, yayin)
     kapak = os.path.join(cikti, "kapak_yt.jpg")

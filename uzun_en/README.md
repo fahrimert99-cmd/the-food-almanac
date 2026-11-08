@@ -22,6 +22,11 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 ### Kesintiler ve gecikmeler
 
 - **Kota bitmesi ya da hata.** Kesilen aşama bir sonraki çalıştırmada kaldığı yerden devam eder.
+- **YouTube kotası dolarsa üretim durmaz.** Video (ve Shorts) yine render edilir ve GitHub sürümüne
+  (`uzun-en-<slug>`) arşivlenir. Uzun video `durum.json`'da `yukleme_bekliyor`, Shorts `kisa*_yayin.json`'da
+  `"bekliyor": true` olarak işaretlenir ve hat sıradaki videoya geçer. Saatlik plan işi (`yukle.py --tamamla`)
+  kota açılınca (07:00 UTC) bekleyenleri sürümden indirip yayın sırasıyla YouTube'a yükler. Uzun video yüklenince
+  Shorts'ları başlatılır. Günlük kota yaklaşık 6 yüklemeye, yani 2 video setine yeter.
 - **Slot yaklaşınca.**
   - Slota 14 saatten az kaldığında, ya da sahne tasarımı 3 kez kesildiğinde, kalan sahneler otomatik şablonla
     (`Genel`) çizilir. Video yine zamanında çıkar.
@@ -64,8 +69,9 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   sıradaki videodur.
 - **Hemen çalıştırmak:** `uzun_en/calistir.json` içindeki `tetik` sayısını artırın, ya da Actions → Run workflow.
 - **Önde üretim:** Hat boşta kaldığında sıradaki slotların videolarını önceden üretir ve YouTube'a zamanlanmış yükler.
-  - **Şu an 6** (`marka.json` → `onde_uretim_azami`, 25 Ekim 2026): yayın bekleyen 6 video olana kadar (yaklaşık
-    3 hafta) üretim kota oldukça sürer; kota bitince bekler. 0 yapılırsa her video slotuna 72 saat kala üretilir. Görsel kotası (iki ücretsiz Cloudflare hesabı) günde yaklaşık
+  - **Şu an 100** (`marka.json` → `onde_uretim_azami`, 8 Kasım 2026, kanal sahibinin isteğiyle "üretim durmasın"):
+    yayın bekleyen 100 video olana kadar (yaklaşık bir yıl) üretim kota oldukça sürer; Claude ya da görsel kotası
+    bitince bekler, YouTube kotası bitince video GitHub'da bekler (yukarıya bakın). 0 yapılırsa her video slotuna 72 saat kala üretilir. Görsel kotası (iki ücretsiz Cloudflare hesabı) günde yaklaşık
     2 uzun video taşır; yüksek sınır kotayı tüketip sonraki videoları bekletebilir.
   - Sınıra ulaşıldıysa yarıda kalmış video da bekletilir; slotuna 72 saat kala kaldığı aşamadan devam eder.
   - Slota 72 saatten fazla varken iş yalnızca Claude kotasıyla yürür; kota bitince yedek modele geçilmez, sonraki

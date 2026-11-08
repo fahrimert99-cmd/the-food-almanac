@@ -6,7 +6,8 @@
   python3 uzun_en/araclar/plan.py --goster     # yalnızca durumu yazdır
 
 Yayın: marka.json -> yayin.gunler / yayin.saat_utc (varsayılan Salı ve Cuma 14:00 UTC).
-Üretim, slottan en çok URETIM_ONCE saat önce başlar (tek seferlik erken başlatma: calistir.json -> "uretim_once_saat"). Aşamalar: senaryo -> varlik -> sahne -> render -> yuklendi.
+Üretim, slottan en çok URETIM_ONCE saat önce başlar (tek seferlik erken başlatma: calistir.json -> "uretim_once_saat"). Aşamalar: senaryo -> varlik -> sahne -> render -> yuklendi
+(YouTube kotası doluysa render sonrası yukleme_bekliyor: video GitHub sürümünde bekler, kota açılınca yüklenir).
 Önde üretim: yayınlanmayı bekleyen (slotu gelecekte) video sayısı marka.json "onde_uretim_azami"dan
 (varsayılan 4; 0 = önde üretim kapalı) azsa, sıradaki boş slotun videosu erkenden üretilip zamanlanmış yüklenir. Slota ACIL saatten fazla
 varken ("onde" çıktısı) iş yalnızca Claude kotasıyla yürür: kota bitince yedek modele geçilmez, sonraki çalıştırma bekler.
@@ -29,6 +30,10 @@ GORSEL_BEKLE = 30         # saat: görseller çoğunlukla yedek kaynaktan geldiy
 KOTA_YOKLA = 3            # saat: kaliteli görsel kaynakları tükendiyse en geç bu kadar sonra yeniden yoklanır
 KOTA_SIFIR = (0, 5)       # UTC saat, dakika: Cloudflare günlük ücretsiz kotasının yenilenmesinden hemen sonra
 ASAMALAR = ["senaryo", "varlik", "sahne", "render", "yuklendi"]
+# YouTube kotası doluyken render edilen video: GitHub sürümünde arşivli, kota açılınca yukle.py --tamamla yükler.
+# Üretim açısından bitmiş sayılır (hat sıradaki videoya geçer).
+BEKLIYOR = "yukleme_bekliyor"
+BITTI = ("yuklendi", BEKLIYOR)
 GRUP_SAYISI = int(os.environ.get("UZUN_SAHNE_GRUP", "8") or 8)
 SLUG_DESEN = re.compile(r"[a-z0-9][a-z0-9-]{1,79}")   # slug'ı yapay zekâ üretir; kabuk/yol/kod enjeksiyonuna karşı
 
@@ -131,7 +136,7 @@ def sahne_gruplari(slug, n=GRUP_SAYISI):
 def karar(d, t):
     """(slug, asama, slot, sablon, neden) — yapılacak iş yoksa slug None."""
     aktif = d.get("aktif")
-    if aktif and d["videolar"].get(aktif, {}).get("asama") != "yuklendi":
+    if aktif and d["videolar"].get(aktif, {}).get("asama") not in BITTI:
         v = d["videolar"][aktif]
         slot = tarih(v["slot"]) if v.get("slot") else t
         if slot - t < dt.timedelta(hours=1):              # slot yok ya da kaçtı: bir sonraki boş slota kaydır
@@ -170,7 +175,7 @@ def karar(d, t):
         O.log(f"önde üretim: yayın bekleyen {n} video (en çok {onde_azami()}), sıradaki slot {iso(bos[0])}")
     # kuyrukta senaryosu hazır (ör. elle eklenmiş) bir proje var mı?
     for slug, v in d["videolar"].items():
-        if v.get("asama") != "yuklendi" and not v.get("slot") and slug_gecerli(slug):
+        if v.get("asama") not in BITTI and not v.get("slot") and slug_gecerli(slug):
             v["slot"] = iso(bos[0])
             d["aktif"] = slug
             return slug, v.get("asama", "senaryo"), v["slot"], False, "kuyruktaki proje başlatıldı"
@@ -222,7 +227,7 @@ def main():
         v = d["videolar"].setdefault(slug, {})
         v["asama"] = asama
         v.pop("gorsel_bekle", None)
-        if asama == "yuklendi" and d.get("aktif") == slug:
+        if asama in BITTI and d.get("aktif") == slug:
             d["aktif"] = None
         if asama == "iptal":
             d["aktif"] = None
@@ -255,7 +260,7 @@ def main():
     O.log(f"karar: {neden} -> {slug or '-'} / {asama or '-'} (slot {slot or '-'}){' [şablon]' if sablon else ''}")
     if slug and slug != "__konu__":
         O.durum_yaz(d)
-    is_var = bool(slug) and asama not in (None, "yuklendi")
+    is_var = bool(slug) and asama not in (None, *BITTI)
     no = ASAMALAR.index(asama) if asama in ASAMALAR else 9
     onde = bool(slot) and tarih(slot) - t > dt.timedelta(hours=ACIL)
     cikti = {"is": str(is_var).lower(), "slug": slug or "", "asama": asama or "", "asama_no": str(no), "slot": slot or "",
