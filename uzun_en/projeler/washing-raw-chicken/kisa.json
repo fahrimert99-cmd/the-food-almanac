@@ -1,0 +1,15 @@
+{
+  "baslik": ["WASH CHICKEN?", "THINK AGAIN"],
+  "baslik_yt": "Washing Raw Chicken: What Kitchen Studies Found",
+  "aciklama": "In a study of 300 home cooks, skipping the rinse did not keep the lettuce clean, and sinks got contaminated either way. Here is what actually makes chicken safe.",
+  "parcalar": [
+    {"sahne": 23, "cumleler": [1], "baslik": null, "etiket": "Shumaker et al. · J Food Prot · 2022"},
+    {"sahne": 1, "cumleler": [0]},
+    {"sahne": 29, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 23, "cumleler": [2], "etiket": "Shumaker et al. · J Food Prot · 2022"},
+    {"sahne": 24, "cumleler": [0], "etiket": null},
+    {"sahne": 48, "cumleler": [1], "etiket": null},
+    {"sahne": 63, "cumleler": [1], "baslik": {"satirlar": ["5 SIMPLE", "HABITS"]}, "etiket": null},
+    {"sahne": 64, "cumleler": [1], "baslik": {"satirlar": ["JUST A", "DINNER"]}, "etiket": null}
+  ]
+}
