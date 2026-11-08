@@ -1,0 +1,15 @@
+{
+  "baslik": ["WATER SENDS", "GERMS FLYING?"],
+  "baslik_yt": "Rinsing Chicken: What Slow-Motion Cameras Saw",
+  "aciklama": "Engineers filmed raw chicken being rinsed under a faucet with high-speed cameras and set out plates to catch the splash. Here is what they found, and what actually makes chicken safe.",
+  "parcalar": [
+    {"sahne": 16, "cumleler": [2], "gorsel": 11, "baslik": null, "etiket": null},
+    {"sahne": 15, "cumleler": [0], "baslik": {"satirlar": ["SLOW-MOTION", "SPLASH TEST"], "vurgu": "16 TRIALS", "not": "rinses filmed in slow motion"}, "etiket": "Carmody et al. · Phys Fluids · 2022"},
+    {"sahne": 15, "cumleler": [1], "baslik": null, "etiket": "Carmody et al. · Phys Fluids · 2022"},
+    {"sahne": 16, "cumleler": [0], "baslik": null, "etiket": "Carmody et al. · Phys Fluids · 2022"},
+    {"sahne": 17, "cumleler": [0], "baslik": {"satirlar": ["THE CATCH"]}, "etiket": "Carmody et al. · Phys Fluids · 2022"},
+    {"sahne": 17, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 34, "cumleler": [1], "baslik": {"satirlar": ["HEAT", "DOES THE JOB"]}, "etiket": null},
+    {"sahne": 62, "cumleler": [0, 1], "baslik": {"satirlar": ["COOK TO"], "vurgu": "165°F", "not": "check with a thermometer"}, "etiket": "USDA FSIS · 2019"}
+  ]
+}
