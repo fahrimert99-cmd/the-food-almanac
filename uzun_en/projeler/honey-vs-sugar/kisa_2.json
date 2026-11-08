@@ -1,0 +1,15 @@
+{
+  "baslik": ["HONEY: HOW", "MUCH SUGAR?"],
+  "baslik_yt": "How Much Sugar Is Really in Your Honey Spoon?",
+  "aciklama": "A lower glycemic index does not tell you how much sugar is in the spoon. Here is what a tablespoon of honey holds, how it counts toward daily limits, and how to measure it.",
+  "parcalar": [
+    {"sahne": 10, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 10, "cumleler": [2], "baslik": {"satirlar": ["1 TABLESPOON"], "vurgu": "64", "not": "calories · 17 g sugar"}, "etiket": null},
+    {"sahne": 40, "cumleler": [1], "etiket": null},
+    {"sahne": 42, "cumleler": [0], "etiket": null},
+    {"sahne": 42, "cumleler": [1], "gorsel": 41, "baslik": {"satirlar": ["AHA DAILY", "LIMIT"], "vurgu": "25–36 g", "not": "added sugar"}, "etiket": "Johnson et al. · Circulation · 2009"},
+    {"sahne": 47, "cumleler": [2]},
+    {"sahne": 47, "cumleler": [3], "gorsel": 10, "baslik": {"satirlar": ["A POUR =", "3× MORE"]}, "etiket": null},
+    {"sahne": 45, "cumleler": [1, 2], "baslik": {"satirlar": ["REPLACE,", "DON'T ADD"]}, "etiket": null}
+  ]
+}
