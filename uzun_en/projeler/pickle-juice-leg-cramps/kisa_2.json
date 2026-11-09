@@ -1,0 +1,16 @@
+{
+  "baslik": ["MAGNESIUM FOR", "CRAMPS? NOPE"],
+  "baslik_yt": "Magnesium vs Stretching for Night Leg Cramps",
+  "aciklama": "A Cochrane review pooled 11 trials of magnesium for leg cramps. Here is what it found, and what stretching before bed may do instead.",
+  "parcalar": [
+    {"sahne": 61, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 35, "cumleler": [1], "baslik": {"satirlar": ["11 TRIALS"], "vurgu": "735", "not": "people in the review"}, "etiket": "Garrison et al. · Cochrane · 2020"},
+    {"sahne": 38, "cumleler": [0], "baslik": {"satirlar": ["UNLIKELY TO", "HELP OLDER"]}, "etiket": "Garrison et al. · Cochrane · 2020"},
+    {"sahne": 40, "cumleler": [1], "gorsel": 41, "baslik": null, "etiket": null},
+    {"sahne": 41, "cumleler": [1, 2], "baslik": {"satirlar": ["80 ADULTS", "OVER 55"], "vurgu": "6 WEEKS", "not": "of nightly stretching"}, "etiket": "Hallegraeff et al. · J Physiother · 2012"},
+    {"sahne": 42, "cumleler": [0], "baslik": {"satirlar": ["FEWER,", "MILDER CRAMPS"]}, "etiket": "Hallegraeff et al. · J Physiother · 2012"},
+    {"sahne": 44, "cumleler": [0], "etiket": "Hawke et al. · Cochrane · 2021"},
+    {"sahne": 45, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 55, "cumleler": [1], "baslik": {"satirlar": ["WHEN IT", "STRIKES"]}, "etiket": null}
+  ]
+}
