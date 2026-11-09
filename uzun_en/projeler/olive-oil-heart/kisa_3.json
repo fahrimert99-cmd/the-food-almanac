@@ -1,0 +1,17 @@
+{
+  "baslik": ["HEART STUDY", "WITHDRAWN?"],
+  "baslik_yt": "The Olive Oil Heart Study That Was Retracted",
+  "aciklama": "A famous trial linked olive oil to fewer heart attacks, then the journal pulled it. Here is what went wrong, and what the corrected analysis still showed.",
+  "parcalar": [
+    {"sahne": 2, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 17, "cumleler": [1], "gorsel": 18,
+     "baslik": {"satirlar": ["PREDIMED"], "vurgu": "2013-2018", "not": "published, pulled, redone"},
+     "etiket": "Estruch et al. · N Engl J Med · 2018"},
+    {"sahne": 18, "cumleler": [0]},
+    {"sahne": 18, "cumleler": [1], "gorsel": 11,
+     "baslik": {"satirlar": ["NOT FULLY", "RANDOM"]}},
+    {"sahne": 19, "cumleler": [1]},
+    {"sahne": 20, "cumleler": [0], "baslik": {"satirlar": ["NOT PROOF", "OF THE OIL"]}},
+    {"sahne": 48, "cumleler": [0], "baslik": {"satirlar": ["NOT A", "MEDICINE"]}, "etiket": null}
+  ]
+}
