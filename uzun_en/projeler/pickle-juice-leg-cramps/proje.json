@@ -1,0 +1,656 @@
+{
+  "slug": "pickle-juice-leg-cramps",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does Pickle Juice Stop Night Leg Cramps?",
+  "yorum": "Do night leg cramps ever wake you up? What has helped you the most, and has your doctor ever asked about your medicines?",
+  "aciklama_giris": "In a 2010 lab study, a small amount of pickle juice ended electrically triggered foot cramps about 49 seconds sooner than water. But the volunteers were healthy young men, and we found no trial of pickle juice for night cramps in older adults. Here is what that study did and did not show.\n\nWe also look at why the effect may be a nerve reflex rather than an electrolyte refill, what a Cochrane review found about magnesium, the low-certainty evidence for stretching before bed, medicines linked to leg cramps, why quinine should be avoided, and five practical steps. This video is for education only.",
+  "kaynaklar": [
+    "Miller KC, Mack GW, Knight KL, Hopkins JT, Draper DO, Fields PJ, Hunter I. Reflex inhibition of electrically induced muscle cramps in hypohydrated humans. Medicine & Science in Sports & Exercise. 2010;42(5):953-961. DOI 10.1249/MSS.0b013e3181c0647e. PMID 19997012.",
+    "Garrison SR, Korownyk CS, Kolber MR, Allan GM, Musini VM, Sekhon RK, Dugré N. Magnesium for skeletal muscle cramps. Cochrane Database of Systematic Reviews. 2020;9:CD009402. DOI 10.1002/14651858.CD009402.pub3. PMID 32956536.",
+    "Hallegraeff JM, van der Schans CP, de Ruiter R, de Greef MH. Stretching before sleep reduces the frequency and severity of nocturnal leg cramps in older adults: a randomised trial. Journal of Physiotherapy. 2012;58(1):17-22. DOI 10.1016/S1836-9553(12)70068-1. PMID 22341378.",
+    "Hawke F, Sadler SG, Katzberg HD, Pourkazemi F, Chuter V, Burns J. Non-drug therapies for the secondary prevention of lower limb muscle cramps. Cochrane Database of Systematic Reviews. 2021;5:CD008496. PMID 33998664.",
+    "Allen RE, Kirby KA. Nocturnal leg cramps. American Family Physician. 2012;86(4):350-355. PMID 22963024.",
+    "U.S. Food and Drug Administration. Drug Safety Communication: Qualaquin (quinine sulfate) and risk of serious hematologic reactions; not for nighttime leg cramps. 2010."
+  ],
+  "kapak": {
+    "satirlar": [
+      "PICKLE",
+      "JUICE",
+      "CRAMPS?"
+    ],
+    "vurgu": "–49",
+    "vurgu_alt": "SEC",
+    "gorsel": "a tall glass of cloudy green pickle juice in front, an open jar of whole dill pickles overlapping behind it, a small crescent moon above, very large close-up and appetizing"
+  },
+  "kahraman": "pickle juice",
+  "etiketler": [
+    "pickle juice",
+    "leg cramps",
+    "night leg cramps",
+    "nocturnal leg cramps",
+    "magnesium for cramps",
+    "muscle cramps remedy",
+    "stretching before bed",
+    "quinine warning",
+    "nutrition science",
+    "healthy aging"
+  ],
+  "seslendirme_duzelt": {
+    "Cochrane": "Kock ran",
+    "Hallegraeff": "HAH leh graff",
+    "raloxifene": "ral OX ih feen",
+    "teriparatide": "terry PAR uh tide",
+    "naproxen": "nuh PROX en",
+    "idiopathic": "id ee oh PATH ik",
+    "quinine": "KWY nine",
+    "hamstrings": "ham strings"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Pickle juice and night cramps",
+      "metin": "In a 2010 lab study, pickle juice ended electrically triggered foot cramps about 49 seconds sooner than water.",
+      "gorsel": "a small glass of pickle juice beside an open jar of dill pickles on a kitchen table, a stopwatch resting next to the glass",
+      "etiket": "Miller et al. · Med Sci Sports Exerc · 2010",
+      "baslik": {
+        "satirlar": [
+          "49 SECONDS",
+          "SHORTER"
+        ],
+        "vurgu": "–49 s",
+        "not": "cramp length vs. water in a lab study"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But those cramps were made in a lab, in young men. Does it work for the night cramps that wake you up?",
+      "gorsel": "a bedroom at night with a rumpled bed, a bedside table holding a small glass of pickle juice, a crescent moon visible in the window",
+      "baslik": {
+        "satirlar": [
+          "LAB CRAMPS",
+          "VS NIGHT CRAMPS"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what helps, what doesn't, and which common remedies to skip.",
+      "gorsel": "a wooden table with a glass of pickle juice, a bottle of magnesium capsules and a folded towel, arranged like a still life engraving"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what a night cramp actually is.",
+      "gorsel": "an old science book lying open beside a jar of pickle juice and a brass lamp, soft light drawn as fine lines"
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "First, a quick look at what a night cramp is, and who gets them.",
+      "kart": {
+        "ust": "THE BASICS",
+        "baslik": "The night leg cramp",
+        "alt": "Sudden, painful and very common"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "A night cramp is a sudden, painful tightening of a muscle, most often in the calf or foot, that strikes while you're resting or asleep.",
+      "gorsel": "textbook engraving of a lower leg showing the calf muscle bulging tight, a small glass of pickle juice on the floor beside a bed",
+      "baslik": {
+        "satirlar": [
+          "THE CALF",
+          "KNOT"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "They're very common. An American Family Physician review reports that 50 to 60 percent of adults have had them, and they become more frequent with age.",
+      "gorsel": "a row of different slippers lined up beside a bed, an older couple's reading glasses on the nightstand next to a glass of pickle juice",
+      "etiket": "Allen & Kirby · Am Fam Physician · 2012",
+      "baslik": {
+        "satirlar": [
+          "50 TO 60%",
+          "OF ADULTS"
+        ],
+        "not": "have had night leg cramps"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "For many people, no clear cause is ever found. Doctors call these cramps idiopathic, which simply means the cause is unknown.",
+      "gorsel": "a large brass question mark shape made of curved wire resting on a bed pillow, a small glass of pickle juice on the nightstand"
+    },
+    {
+      "id": 9,
+      "metin": "Some cramps do travel with other conditions, such as poor circulation in the legs, vein problems, or nerve damage called neuropathy. So frequent, severe cramps deserve a conversation with your doctor.",
+      "gorsel": "a doctor's desk with a stethoscope, a closed notebook and a tube-shaped vessel model with small red discs, a small glass of pickle juice on the corner, quiet clinic",
+      "baslik": {
+        "satirlar": [
+          "WHEN TO",
+          "ASK A DOCTOR"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "metin": "Because the cause is so unclear, home remedies have piled up: pickle juice, magnesium pills, even a bar of soap under the sheets. Today we test the best known ones.",
+      "gorsel": "a kitchen counter with a glass of pickle juice, a small bottle of magnesium capsules and a plain bar of soap, grouped closely together"
+    },
+    {
+      "id": 11,
+      "metin": "And one old remedy, once widely used, turned out to be risky. We'll get to it in the chapter on medicines.",
+      "gorsel": "an old pharmacy cabinet with small glass bottles with blank labels, a single bottle set apart on the counter beside a glass of pickle juice"
+    },
+    {
+      "id": 12,
+      "bolum": "The pickle juice experiment",
+      "tip": "kart",
+      "metin": "In 2010, a research team led by Kevin Miller put pickle juice to a direct test.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Pickle juice vs. water",
+        "alt": "Miller et al. · 2010"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "The volunteers were healthy young men. First, they were made mildly dehydrated, losing about 3 percent of their body weight.",
+      "gorsel": "a quiet exercise laboratory with a treadmill, a bathroom scale and a towel, a small glass of pickle juice on a side table",
+      "baslik": {
+        "satirlar": [
+          "HEALTHY",
+          "YOUNG MEN"
+        ],
+        "vurgu": "3%",
+        "not": "body weight lost to mild dehydration"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Then the researchers triggered a cramp in a foot muscle with a small electrical current, and timed how long it lasted.",
+      "gorsel": "a bare foot resting on a laboratory stool with a small electrode pad at the ankle and a thin wire, an antique stopwatch beside a glass of pickle juice",
+      "etiket": "Miller et al. · Med Sci Sports Exerc · 2010"
+    },
+    {
+      "id": 15,
+      "metin": "On two days, a week apart, each man then drank either plain water or pickle juice, about 1 milliliter per kilogram of body weight. That's roughly two and a half ounces, or five tablespoons.",
+      "gorsel": "two small identical glasses side by side on a lab table, one filled with clear water and one with cloudy green pickle juice, a measuring spoon in front",
+      "baslik": {
+        "satirlar": [
+          "WATER OR",
+          "PICKLE JUICE"
+        ],
+        "vurgu": "2.5 OZ",
+        "not": "about five tablespoons"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Thirty minutes later, a second cramp was triggered, and the men drank right as it began, while the researchers timed it again.",
+      "gorsel": "an antique stopwatch held open beside an empty small glass that held pickle juice, a notebook with blank lines"
+    },
+    {
+      "id": 17,
+      "tip": "grafik",
+      "metin": "Before drinking, cramps lasted about 152 seconds. After water, about 134 seconds. After pickle juice, about 85 seconds. That's roughly 49 seconds shorter than with water.",
+      "grafik": {
+        "baslik": "How long the induced cramp lasted",
+        "alt": "Seconds, healthy young men, mildly dehydrated",
+        "cubuklar": [
+          {
+            "etiket": "Before drink",
+            "deger": 152,
+            "metin": "152 s"
+          },
+          {
+            "etiket": "After water",
+            "deger": 134,
+            "metin": "134 s"
+          },
+          {
+            "etiket": "After pickle juice",
+            "deger": 85,
+            "metin": "85 s"
+          }
+        ],
+        "kaynak": "Miller et al., Med Sci Sports Exerc 2010 · healthy young men, mildly dehydrated, electrically induced foot cramps"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "That works out to about 37 percent shorter than after water. In this experiment, pickle juice did something plain water did not.",
+      "gorsel": "a tall glass of pickle juice on a wooden table beside a shorter glass of plain water, two candle-like timers of different heights behind them",
+      "baslik": {
+        "satirlar": [
+          "37% SHORTER"
+        ],
+        "not": "than after plain water"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "Here's the puzzle. Five minutes after drinking, blood tests showed little change from either drink. So the juice had not yet had time to refill the body's water or salt.",
+      "gorsel": "a row of small capped sample tubes in a rack with a glass of pickle juice beside them, an antique clock without numbers on the wall",
+      "baslik": {
+        "satirlar": [
+          "NOT A",
+          "REFILL"
+        ],
+        "not": "little change in blood tests after 5 minutes"
+      }
+    },
+    {
+      "id": 20,
+      "bolum": "Why it might work",
+      "tip": "kart",
+      "metin": "So if it isn't a refill, what is going on? The authors had an idea.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "A reflex, not a refill",
+        "alt": "Mouth · Throat · Nerves"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "They proposed a nerve reflex. Strong sensations in the mouth and throat may send signals that quiet the overactive nerves driving the cramping muscle.",
+      "gorsel": "textbook engraving of a head in profile showing the mouth and throat with fine branching nerve lines running down toward a leg, a glass of pickle juice at the lips",
+      "baslik": {
+        "satirlar": [
+          "A NERVE",
+          "REFLEX?"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "In plain terms, the cramp may ease because your nervous system gets a sudden message, long before the juice reaches your gut. That's a hypothesis, not a proven mechanism.",
+      "gorsel": "a simple engraved diagram of a spine and a leg joined by fine nerve lines, a small glass of pickle juice drawn near the top"
+    },
+    {
+      "id": 23,
+      "metin": "It also makes sense of the speed. If a cramp were only a shortage of salt or water, a few tablespoons could hardly fix it in minutes.",
+      "gorsel": "a tiny tablespoon of pickle juice held over a large empty water barrel, the barrel drawn in vintage engraving style"
+    },
+    {
+      "id": 24,
+      "metin": "We also don't know which part of pickle juice matters. The study compared it only with water, so it can't tell us whether the salt, the vinegar, or the taste does the work.",
+      "gorsel": "pickle juice poured into a glass, with a small salt dish, a vinegar bottle and sliced dill pickles arranged in a loose circle around it",
+      "baslik": {
+        "satirlar": [
+          "SALT? VINEGAR?",
+          "TASTE?"
+        ],
+        "not": "the study could not say which part matters"
+      }
+    },
+    {
+      "id": 25,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now for the honest part. What can this study really tell us about your night cramps?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What the study can't tell us",
+        "alt": "Young men · lab cramps · short term"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Less than the headlines suggest. The volunteers were healthy young men, not adults over 60. The lead researcher has said his studies have all been in healthy young men.",
+      "gorsel": "a university laboratory bench with a stool and a glass of pickle juice, a single pair of young man's running shoes beneath the stool",
+      "baslik": {
+        "satirlar": [
+          "NOT",
+          "OLDER ADULTS"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "metin": "The cramps were also artificial. They were set off by electricity in a foot muscle in a lab, not the kind of calf cramp that jolts you out of sleep.",
+      "gorsel": "a small electrode pad and a thin wire coiled on a laboratory table next to a glass of pickle juice, a rumpled bed drawn faintly in the background"
+    },
+    {
+      "id": 28,
+      "metin": "And the study measured how long a cramp lasted once it started. It did not test whether pickle juice prevents cramps, or makes them less frequent.",
+      "gorsel": "a calendar page with blank squares beside a glass of pickle juice and a pencil, no writing on the page",
+      "baslik": {
+        "satirlar": [
+          "STOPS? OR",
+          "PREVENTS?"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "metin": "We also did not find any trial of pickle juice for night cramps in older adults. For that exact question, the honest answer is that it hasn't been properly tested.",
+      "gorsel": "an empty library shelf with one gap between rows of books, a small glass of pickle juice on the shelf edge",
+      "baslik": {
+        "satirlar": [
+          "NO TRIAL",
+          "YET"
+        ],
+        "not": "pickle juice for night cramps in older adults"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "So treat this as an interesting clue, not proof that a swig of brine will rescue your calf at three in the morning.",
+      "gorsel": "a magnifying glass resting over a glass of pickle juice and an open jar of dill pickles, a bedside clock without numbers behind them"
+    },
+    {
+      "id": 31,
+      "metin": "There's a practical catch, too. Pickle juice is salty, and many older adults are told to limit salt. Check the sodium on the Nutrition Facts label of your jar.",
+      "gorsel": "a jar of dill pickles held at an angle on a kitchen counter, its label side turned away, a salt shaker and a glass of pickle juice beside it",
+      "baslik": {
+        "satirlar": [
+          "READ THE",
+          "LABEL"
+        ],
+        "not": "sodium per serving"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "If you have high blood pressure, heart failure or kidney disease, or take a water pill, ask your doctor before making pickle juice a habit. The researcher himself advised checking with a physician first.",
+      "gorsel": "a consultation desk with a stethoscope and a blood pressure cuff, a small glass of pickle juice placed on the corner",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "bolum": "Magnesium and stretching",
+      "tip": "kart",
+      "metin": "Now, the supplement most people try first: magnesium.",
+      "kart": {
+        "ust": "THE SUPPLEMENT",
+        "baslik": "What about magnesium?",
+        "alt": "A Cochrane review · 2020"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Magnesium is a mineral your muscles and nerves use every day, so it seems logical that more of it would calm a cramp.",
+      "gorsel": "a small glass bottle of magnesium capsules spilled onto a wooden table beside a glass of pickle juice"
+    },
+    {
+      "id": 35,
+      "metin": "In 2020, Cochrane, an international group that reviews medical evidence, updated its review. Garrison and colleagues pooled 11 randomized trials with 735 people.",
+      "gorsel": "a tall stack of research folders tied with string beside a bottle of magnesium capsules and a glass of pickle juice",
+      "etiket": "Garrison et al. · Cochrane · 2020",
+      "baslik": {
+        "satirlar": [
+          "11 TRIALS"
+        ],
+        "vurgu": "735",
+        "not": "people in the Cochrane review"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "Five of those trials, with 271 people, studied cramps with no known cause, the everyday kind. Magnesium did not significantly beat a placebo, a pill with nothing active in it.",
+      "gorsel": "two identical white pills on a small dish next to a bottle of magnesium capsules, a glass of pickle juice at the side",
+      "baslik": {
+        "satirlar": [
+          "MAGNESIUM",
+          "VS PLACEBO"
+        ],
+        "not": "no clear difference for everyday cramps"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "On average, the difference was less than a quarter of a cramp per week, and the range of possible results included no benefit at all.",
+      "gorsel": "an antique balance scale with two nearly level pans, one holding a magnesium capsule, one holding a pickle slice"
+    },
+    {
+      "id": 38,
+      "metin": "The authors concluded that magnesium is unlikely to give older adults meaningful protection from cramps. Mild side effects, mostly diarrhea, tended to be more common. Results for pregnancy cramps were conflicting.",
+      "gorsel": "a bottle of magnesium capsules with a closed lid on a pharmacy counter, a glass of pickle juice and a glass of water beside it",
+      "baslik": {
+        "satirlar": [
+          "UNLIKELY TO",
+          "HELP OLDER ADULTS"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "If you already take magnesium, there's no need to panic. Just know that the best trials don't show a benefit for most older adults, and your pharmacist can help you decide if it's worth the cost.",
+      "gorsel": "a friendly pharmacy counter with a mortar and pestle, a bottle of capsules and a small glass of pickle juice"
+    },
+    {
+      "id": 40,
+      "tip": "kart",
+      "metin": "So what does have some evidence? Something much simpler: stretching.",
+      "kart": {
+        "ust": "WHAT HAS EVIDENCE",
+        "baslik": "Stretching before bed",
+        "alt": "Hallegraeff et al. · 2012"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "In 2012, Dutch physiotherapy researchers led by Hallegraeff ran a trial in 80 adults over 55 who had night cramps. One group stretched their calves and hamstrings every night before sleep for six weeks. The other group did not.",
+      "gorsel": "a yoga mat on a bedroom floor beside a bed, a pair of slippers and a small glass of pickle juice on the nightstand",
+      "etiket": "Hallegraeff et al. · J Physiother · 2012",
+      "baslik": {
+        "satirlar": [
+          "80 ADULTS",
+          "OVER 55"
+        ],
+        "vurgu": "6 WEEKS",
+        "not": "of nightly calf and hamstring stretching"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "The trial's authors reported fewer and milder cramps in the stretching group than in the group that did nothing. The result appeared in the Journal of Physiotherapy.",
+      "gorsel": "a seated older person's legs stretching a towel looped around one foot, a glass of pickle juice on a low table beside the chair"
+    },
+    {
+      "id": 43,
+      "metin": "Cochrane later reviewed three stretching trials in 201 people aged 50 and over. Daily calf and hamstring stretching for six weeks may reduce how severe night cramps are in people 55 and older, but the effect on how often they happen is uncertain.",
+      "gorsel": "three folders in a row on a desk, a small calf muscle engraving on the front of each, a glass of pickle juice at the end of the row",
+      "etiket": "Hawke et al. · Cochrane · 2021",
+      "baslik": {
+        "satirlar": [
+          "MAY EASE",
+          "SEVERITY"
+        ],
+        "not": "frequency is uncertain"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "That evidence is rated low certainty, because it rests on one small trial. Calf stretching alone, tested against sham stretching for 12 weeks in people 60 and older, made little or no difference to frequency.",
+      "gorsel": "a wall calf stretch drawn as a person's calf and a brick wall seen from the side, a small glass of pickle juice on the floor",
+      "baslik": {
+        "satirlar": [
+          "LOW",
+          "CERTAINTY"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "So stretching is no proven cure. But the American Family Physician review calls it harmless and patient-controlled, and it's the one approach here with a trial in older adults pointing in a helpful direction.",
+      "gorsel": "a cozy bedroom with a folded blanket, slippers and a small glass of pickle juice on the nightstand, soft lamp light drawn in fine lines"
+    },
+    {
+      "id": 46,
+      "bolum": "Medicines and cramps",
+      "tip": "kart",
+      "metin": "Now, the medicine cabinet. Sometimes the cause of cramps is sitting in it.",
+      "kart": {
+        "ust": "THE MEDICINE CABINET",
+        "baslik": "Medicines linked to cramps",
+        "alt": "And one remedy to avoid"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "The American Family Physician review lists the drugs most strongly linked to leg cramps. Raloxifene and teriparatide, both used for osteoporosis. Conjugated estrogens. The pain reliever naproxen. And intravenous iron sucrose.",
+      "gorsel": "a wooden medicine cabinet open to show five small brown bottles with blank labels, a glass of pickle juice on the shelf below",
+      "etiket": "Allen & Kirby · Am Fam Physician · 2012",
+      "baslik": {
+        "satirlar": [
+          "FIVE",
+          "MEDICINES"
+        ],
+        "not": "most strongly linked to leg cramps"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "In trials, cramps were reported by about 6 to 12 percent of people taking raloxifene, 3.5 to 14 percent on conjugated estrogens, and about 3 percent on naproxen. So most people on these medicines never get them.",
+      "gorsel": "a weekly pill organizer with seven small compartments, a glass of pickle juice beside it on a kitchen table"
+    },
+    {
+      "id": 49,
+      "metin": "Water pills, called diuretics, are often blamed. But the same review says that's a common belief that evidence-based reviews have not confirmed.",
+      "gorsel": "a small bowl of water pills beside a glass of pickle juice and a glass of water, a question mark made from curved wire above them"
+    },
+    {
+      "id": 50,
+      "metin": "If your cramps began after starting a new medicine, tell your doctor or pharmacist. Please don't stop any prescription on your own; they can check whether a change makes sense.",
+      "gorsel": "a pharmacist's counter with a paper bag, an open ledger with blank lines and a small glass of pickle juice",
+      "baslik": {
+        "satirlar": [
+          "ASK BEFORE",
+          "YOU STOP"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "Now the risky remedy I mentioned. Quinine was once widely used for night cramps. In 2010, the Food and Drug Administration warned that it should not be used for leg cramps.",
+      "gorsel": "an old brown glass medicine bottle with a cork stopper standing alone on a wooden shelf, a glass of pickle juice far to the side",
+      "etiket": "FDA · Drug Safety Communication · 2010",
+      "baslik": {
+        "satirlar": [
+          "SKIP",
+          "QUININE"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "The reason: serious and sometimes life-threatening blood problems, including dangerous bleeding from very low platelet counts. The American Family Physician review says quinine is no longer recommended for cramps.",
+      "gorsel": "a tube-shaped vessel with small red discs and a few tiny pale discs, a bottle with a cork stopper beside it, a glass of pickle juice at the edge"
+    },
+    {
+      "id": 53,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you actually use all this? Here are five practical steps.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five practical steps",
+        "alt": "Stretch · Soothe · Sip · Skip · Speak up"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "One. Before bed, gently stretch your calves and the backs of your thighs, the same muscles used in the Dutch trial. Stop if anything hurts, and ask your doctor first if you have balance or joint problems.",
+      "gorsel": "a person's calves and bare feet on a bedroom rug stretching toward a chair, a glass of pickle juice on the nightstand",
+      "baslik": {
+        "satirlar": [
+          "1. STRETCH",
+          "BEFORE BED"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "Two. When a cramp strikes, straighten the leg, pull your toes toward your shin, and gently massage the muscle. Proof is limited, but these steps are harmless.",
+      "gorsel": "hands gently massaging a calf muscle, a bed in the background with a glass of pickle juice on the nightstand",
+      "baslik": {
+        "satirlar": [
+          "2. STRETCH",
+          "AND MASSAGE"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "metin": "Three. If you want to try pickle juice, treat it as a small experiment, not a treatment. Use a small amount, like the two and a half ounces in the study, and count the sodium.",
+      "gorsel": "a small shot-sized glass of pickle juice beside the jar of dill pickles, a measuring spoon, kitchen table close up",
+      "baslik": {
+        "satirlar": [
+          "3. A SMALL",
+          "EXPERIMENT"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Four. Don't use quinine for leg cramps. And before buying any cramp supplement, ask your pharmacist whether the evidence supports it and whether it fits with your medicines.",
+      "gorsel": "a pharmacy shelf with rows of small bottles with blank labels, a hand pointing to one bottle, a glass of pickle juice on the counter",
+      "baslik": {
+        "satirlar": [
+          "4. SKIP",
+          "QUININE"
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "metin": "Five. Tell your doctor if cramps are frequent, severe, or come with numbness, swelling or weakness, since cramps can accompany circulation, vein and nerve problems. Bring your list of medicines and supplements.",
+      "gorsel": "a doctor's desk with a notebook, a stethoscope and a handwritten-looking list drawn as blank lines, a glass of pickle juice on the corner",
+      "baslik": {
+        "satirlar": [
+          "5. SPEAK",
+          "UP"
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A clue, not a cure",
+        "alt": "Pickle juice · Magnesium · Stretching"
+      }
+    },
+    {
+      "id": 60,
+      "metin": "In a lab study, pickle juice shortened electrically triggered cramps by about 49 seconds compared with water. But the volunteers were young men, and nobody has tested it for night cramps in older adults.",
+      "gorsel": "a tall glass of pickle juice beside an open jar of dill pickles and a stopwatch on a kitchen table"
+    },
+    {
+      "id": 61,
+      "metin": "Magnesium did not clearly beat a placebo in a Cochrane review. Stretching before bed has low-certainty evidence for milder cramps in people 55 and older.",
+      "gorsel": "a bottle of magnesium capsules on one side and a rolled yoga mat with a pair of slippers on the other, a glass of pickle juice between them"
+    },
+    {
+      "id": 62,
+      "metin": "Check your medicines with your doctor or pharmacist, avoid quinine, and go easy on the salt. A cramp that keeps coming back deserves a medical check.",
+      "gorsel": "a pharmacist and doctor's desk with a small brown bottle, a salt shaker and a glass of pickle juice, calm and orderly"
+    },
+    {
+      "id": 63,
+      "metin": "Pickle juice is an interesting clue, not a proven cure. Be patient, stretch gently, and ask your doctor about the rest.",
+      "gorsel": "a bedroom at dawn with a made bed, a window letting in soft light and a small glass of pickle juice on the nightstand"
+    },
+    {
+      "id": 64,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
