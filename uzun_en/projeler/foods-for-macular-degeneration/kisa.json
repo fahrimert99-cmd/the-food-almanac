@@ -1,0 +1,16 @@
+{
+  "baslik": ["SPINACH FOR", "YOUR EYES?"],
+  "baslik_yt": "Spinach and Eye Health: Hint or Proof?",
+  "aciklama": "Two big US studies link diets rich in lutein and zeaxanthin to lower advanced macular degeneration risk. Here is what that does and doesn't prove, and who may need the eye vitamins.",
+  "parcalar": [
+    {"sahne": 3, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 14, "cumleler": [0], "gorsel": 1,
+     "baslik": {"satirlar": ["HIGHEST VS", "LOWEST FIFTH"], "vurgu": "-41%", "not": "advanced AMD risk"},
+     "etiket": "Wu et al. · JAMA Ophthalmol · 2015"},
+    {"sahne": 16, "cumleler": [0, 1]},
+    {"sahne": 16, "cumleler": [2, 3], "baslik": {"satirlar": ["A HINT,", "NOT PROOF"]}},
+    {"sahne": 34, "cumleler": [0], "baslik": {"satirlar": ["WHO NEEDS", "THE PILLS?"]}, "etiket": "National Eye Institute"},
+    {"sahne": 50, "cumleler": [0, 1], "baslik": {"satirlar": ["DILATED", "EYE EXAM"]}, "etiket": null},
+    {"sahne": 50, "cumleler": [2]}
+  ]
+}
