@@ -1,12 +1,6 @@
-# Grup 2 raporu — sahneler 9–16
+# Rapor — grup 2 (sahne 22, 23, 24)
 
-- **S09** (doktor masası): sağda "OTHER CONDITIONS" + 3 maddelik liste (dolaşım / ven / nöropati), damar modeli ve stetoskop için nesne etiketleri; "WHEN TO ASK A DOCTOR" başlığı + FREQUENT / SEVERE hapları. Kusur: masa köşesindeki imza benzeri çizik ahşap tonunda yamayla örtüldü.
-- **S10** (ev çareleri): HOME REMEDIES başlığı, sırayla PICKLE JUICE / MAGNESIUM PILLS / BAR OF SOAP etiketleri, son cümlede "TODAY WE TEST THE BEST KNOWN" başlığı. Kusur yok.
-- **S11** (eski çare): dolaptaki tek şişede OLD REMEDY → RISKY etiketi, ardından "THE CHAPTER ON MEDICINES" başlığı. Kusur yok.
-- **S12** (bölüm kartı, PART 1): BolumKarti + 13/14/15 görsellerinden 4:3 kırpımlar; altyazı altında KEVIN MILLER ve A DIRECT TEST hapları.
-- **S13** (koşu bandı): HEALTHY YOUNG MEN başlığı, MILDLY DEHYDRATED hapı, 3% rozeti, tartıda BODY WEIGHT etiketi.
-- **S14** (elektrik/ayak): kaynak etiketi, FOOT MUSCLE, ELECTRICAL CURRENT (kablo) ve TIMED (kronometre) etiketleri.
-- **S15** (iki bardak): "TWO DAYS · A WEEK APART" hapı, WATER OR PICKLE JUICE başlığı, bardak etiketleri, kaşıkta 1 ML PER KG, 2.5 OZ rozeti.
-- **S16** (kronometre): 30 MINUTES LATER başlığı, DRANK AS IT BEGAN etiketi, TIMED AGAIN etiketi. Kronometre kadranındaki sahte harfler kâğıt renkli elips + kendi çizdiğim çentik ve dönen ibreyle örtüldü ("timed" kelimesinde ibre döner).
-
-Yeniden üretilen görsel yok. Çözülmemiş sorun yok; kütüphane hatası bulunmadı. S16'daki defterde küçük çizik izleri var, okunabilir yazı değil (bırakıldı).
+- **S22**: Omurga–bacak sinir çizimi + bardak. Vuruşlar: NERVOUS SYSTEM etiketi, PICKLE JUICE etiketi + bardaktan omurgaya parçacıklar ("sudden message"), "BEFORE IT REACHES YOUR GUT" notu, HYPOTHESIS rozeti. Görselde kusur yok; yenilenmedi.
+- **S23**: Kaşık + boş varil. Vuruşlar: "THE SPEED" başlığı, A FEW TABLESPOONS ve SALT OR WATER? etiketleri, IN MINUTES rozeti. Kusur yok; yenilenmedi.
+- **S24**: Bardak, tuz, sirke, turşu. Vuruşlar: PICKLE JUICE etiketi, "COMPARED ONLY WITH WATER" notu, SALT?/VINEGAR?/TASTE? kelimelerle sırayla gelir (meta.baslik), SALT/VINEGAR etiketleri, meta notu. Kusur yok; yenilenmedi.
+- Çözülmemiş sorun yok. tsc üç dosyada temiz, kütüphane hatası görülmedi.
