@@ -1,0 +1,18 @@
+{
+  "baslik": ["PROTEIN BUILT", "MUSCLE AT 78?"],
+  "baslik_yt": "Frail at 78: Did Protein Build Muscle? Trial Results",
+  "aciklama": "A 24-week double-blind trial gave frail older adults protein or a placebo while they trained. Here is who gained muscle, and what happened with protein alone.",
+  "parcalar": [
+    {"sahne": 26, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 24, "cumleler": [0],
+     "baslik": {"satirlar": ["FRAIL,", "AVERAGE AGE 78"], "vurgu": "+1.3 KG", "not": "lean mass, protein group"},
+     "etiket": "Tieland · J Am Med Dir Assoc · 2012"},
+    {"sahne": 24, "cumleler": [1], "gorsel": 53, "baslik": null, "etiket": null},
+    {"sahne": 25, "cumleler": [0, 1]},
+    {"sahne": 27, "cumleler": [0, 1], "baslik": {"satirlar": ["ONLY PROTEIN", "BUILT MUSCLE"]}},
+    {"sahne": 28, "cumleler": [0]},
+    {"sahne": 28, "cumleler": [1, 2], "gorsel": 6},
+    {"sahne": 57, "cumleler": [0], "gorsel": 31, "baslik": {"satirlar": ["PROTEIN +", "LIFTING"]}, "etiket": null},
+    {"sahne": 53, "cumleler": [3], "gorsel": 58, "baslik": null, "etiket": null}
+  ]
+}
