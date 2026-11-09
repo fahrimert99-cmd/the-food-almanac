@@ -1,0 +1,659 @@
+{
+  "slug": "foods-for-macular-degeneration",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Can Spinach Protect Against Macular Degeneration?",
+  "yorum": "Do you eat leafy greens or eggs with your eyes in mind? Has an eye doctor ever talked with you about eye vitamins?",
+  "aciklama_giris": "In two large US studies of about 100,000 adults over 50, people with the highest lutein and zeaxanthin intake had about 40 percent lower risk of advanced macular degeneration. That is an association, not proof, and the famous AREDS2 eye vitamins help only a specific group. This video walks through what the studies actually found.\n\nWe cover the macula, the Harvard cohort studies, the AREDS and AREDS2 trials from the National Eye Institute, why beta-carotene was dropped from the formula, who the pills are for and who they are not for, how much lutein spinach, kale and eggs provide, and what an eye-friendly plate looks like.",
+  "kaynaklar": [
+    "Wu J, Cho E, Willett WC, Sastry SM, Schaumberg DA. Intakes of lutein, zeaxanthin, and other carotenoids and age-related macular degeneration during 2 decades of prospective follow-up. JAMA Ophthalmology. 2015;133(12):1415-1424. doi:10.1001/jamaophthalmol.2015.3590. PMID 26447482.",
+    "Age-Related Eye Disease Study Research Group. A randomized, placebo-controlled, clinical trial of high-dose supplementation with vitamins C and E, beta carotene, and zinc for age-related macular degeneration and vision loss: AREDS report no. 8. Archives of Ophthalmology. 2001;119(10):1417-1436. doi:10.1001/archopht.119.10.1417. PMID 11594942.",
+    "Age-Related Eye Disease Study 2 Research Group. Lutein + zeaxanthin and omega-3 fatty acids for age-related macular degeneration: the AREDS2 randomized clinical trial. JAMA. 2013;309(19):2005-2015. doi:10.1001/jama.2013.4997. PMID 23644932.",
+    "Chew EY, et al.; AREDS2 Research Group. Secondary analyses of the effects of lutein/zeaxanthin on age-related macular degeneration progression: AREDS2 report No. 3. JAMA Ophthalmology. 2014;132(2):142-149. doi:10.1001/jamaophthalmol.2013.7376. PMID 24310343.",
+    "Chew EY, Clemons TE, Agrón E, et al.; AREDS2 Research Group. Long-term outcomes of adding lutein/zeaxanthin and omega-3 fatty acids to the AREDS supplements on age-related macular degeneration progression: AREDS2 report 28. JAMA Ophthalmology. 2022;140(7):692-698. doi:10.1001/jamaophthalmol.2022.1640. PMID 35653117.",
+    "Evans JR, Lawrenson JG. Antioxidant vitamin and mineral supplements for slowing the progression of age-related macular degeneration. Cochrane Database of Systematic Reviews. 2023;9:CD000254. doi:10.1002/14651858.CD000254.pub5. PMID 37702300.",
+    "Goodrow EF, Wilson TA, Houde SC, Vishwanathan R, Scollin PA, Handelman G, Nicolosi RJ. Consumption of one egg per day increases serum lutein and zeaxanthin concentrations in older adults without altering serum lipid and lipoprotein cholesterol concentrations. Journal of Nutrition. 2006;136(10):2519-2524. doi:10.1093/jn/136.10.2519. PMID 16988120.",
+    "Chung HY, Rasmussen HM, Johnson EJ. Lutein bioavailability is higher from lutein-enriched eggs than from supplements and spinach in men. Journal of Nutrition. 2004;134(8):1887-1893. PMID 15284371. See also USDA Agricultural Research Service news summary, August 18, 2004. https://www.ars.usda.gov/IS/pr/2004/040818.htm",
+    "U.S. Department of Agriculture. Nutrient Database for Standard Reference, Release 20: lutein and zeaxanthin content of selected foods.",
+    "National Eye Institute (NIH). Age-related macular degeneration. https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration",
+    "BrightFocus Foundation. Vitamins for age-related macular degeneration: do you have the correct formula? https://www.brightfocus.org/resource/vitamins-for-age-related-macular-degeneration-do-you-have-the-correct-formula/"
+  ],
+  "kapak": {
+    "satirlar": [
+      "SPINACH",
+      "FOR EYES?"
+    ],
+    "vurgu": "–40%",
+    "vurgu_alt": "AMD",
+    "gorsel": "a huge heap of fresh spinach leaves in the foreground with two brown eggs and one halved boiled egg overlapping in front of it, very large, close up and appetizing"
+  },
+  "kahraman": "spinach",
+  "etiketler": [
+    "macular degeneration",
+    "foods for macular degeneration",
+    "lutein",
+    "zeaxanthin",
+    "AREDS2",
+    "eye health after 60",
+    "spinach",
+    "eggs and eyes",
+    "eye vitamins",
+    "age related macular degeneration diet"
+  ],
+  "seslendirme_duzelt": {
+    "AREDS2": "A R E D S 2",
+    "AREDS": "A R E D S",
+    "AMD": "A M D",
+    "USDA": "U S D A",
+    "zeaxanthin": "zee uh zan thin",
+    "lutein": "loo teen",
+    "drusen": "droo zen"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Greens, eggs and your eyes",
+      "metin": "If you eat greens for your eyes: in two US studies of about 100,000 adults over 50, the highest lutein and zeaxanthin intake went with about 40 percent lower risk of advanced macular degeneration.",
+      "gorsel": "a large bowl of fresh spinach leaves beside a halved boiled egg, a round magnifying glass resting on the spinach, soft morning window light",
+      "etiket": "Wu et al. · JAMA Ophthalmol · 2015",
+      "baslik": {
+        "satirlar": [
+          "HIGHEST LUTEIN"
+        ],
+        "vurgu": "–40%",
+        "not": "advanced macular degeneration risk"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But that's an association, and the famous eye pills help only some people.",
+      "gorsel": "a wooden table with a bowl of spinach on one side and a small brown glass bottle of capsules on the other, a pair of round reading glasses between them",
+      "baslik": {
+        "satirlar": [
+          "ASSOCIATION,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know who needs pills and what belongs on your plate.",
+      "gorsel": "a dinner plate with cooked spinach, a soft-boiled egg in a cup and a slice of toast on a kitchen table, morning light drawn as fine radiating lines"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with the small part of your eye that does the reading.",
+      "gorsel": "an open vintage textbook plate of a human eye in cross-section beside a bowl of spinach, a lens and the optic nerve drawn in fine lines"
+    },
+    {
+      "id": 5,
+      "bolum": "The macula",
+      "tip": "kart",
+      "metin": "About 11 million people in the United States have age-related macular degeneration, according to the National Eye Institute. So what is it?",
+      "kart": {
+        "ust": "INSIDE YOUR EYE",
+        "baslik": "The macula",
+        "alt": "Your center of vision"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "At the back of your eye is a thin layer called the retina. Its center, the macula, is packed with the cells that let you read, recognize faces and see fine detail.",
+      "gorsel": "a textbook engraving of the back of an eye with the retina and a small round central spot, a bowl of spinach in the corner",
+      "baslik": {
+        "satirlar": [
+          "THE MACULA"
+        ],
+        "not": "the center of your retina"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "In age-related macular degeneration, that center slowly wears down. Side vision usually stays, but the middle of what you're looking at can blur or fade.",
+      "gorsel": "a close view of an open book on a reading stand with a soft blurred smudge in the middle of the page and the edges sharp, a bowl of spinach beside it"
+    },
+    {
+      "id": 8,
+      "metin": "Eye doctors often spot early signs during a dilated eye exam: small yellow deposits under the retina called drusen. How many there are, and how large, helps decide your stage.",
+      "gorsel": "an antique brass ophthalmoscope and a small bottle of eye drops on a desk, a bowl of spinach on the side",
+      "baslik": {
+        "satirlar": [
+          "DRUSEN"
+        ],
+        "not": "found during a dilated eye exam"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Two nutrients, lutein and zeaxanthin, collect in the macula, in what's called macular pigment. Researchers think they may help protect it. That idea is why spinach and eggs get so much attention.",
+      "gorsel": "a magnified circular inset of a small golden-yellow spot at the center of a retina, with spinach leaves and an egg yolk drawn around the inset"
+    },
+    {
+      "id": 10,
+      "metin": "These nutrients come from food. Leafy greens like spinach and kale are rich in them, and egg yolk is another major source in the American diet.",
+      "gorsel": "a wooden board with spinach, curly kale and a halved boiled egg with a bright yolk",
+      "baslik": {
+        "satirlar": [
+          "LUTEIN +",
+          "ZEAXANTHIN"
+        ],
+        "not": "found in greens and egg yolk"
+      }
+    },
+    {
+      "id": 11,
+      "bolum": "What big food studies found",
+      "tip": "kart",
+      "metin": "First, the large food studies. Can what you eat change the odds of advanced disease?",
+      "kart": {
+        "ust": "THE FOOD STUDIES",
+        "baslik": "Eating more lutein",
+        "alt": "Nurses' Health Study · Health Professionals"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "A research team including Walter Willett of Harvard followed two groups of US health professionals for about 25 years: the Nurses' Health Study and the Health Professionals Follow-up Study.",
+      "gorsel": "a long wooden table stacked with tall neat piles of paper questionnaires, a pen, a cup of tea and a bowl of spinach",
+      "etiket": "Wu et al. · JAMA Ophthalmol · 2015"
+    },
+    {
+      "id": 13,
+      "metin": "Together, that was 63,443 women and 38,603 men, all over 50 and free of macular degeneration at the start. Every few years they filled out detailed questionnaires about what they ate.",
+      "gorsel": "a sunny kitchen table with a hand-written food diary notebook, a pencil, a bowl of spinach and two eggs in an egg cup",
+      "baslik": {
+        "satirlar": [
+          "OVER 100,000",
+          "ADULTS"
+        ],
+        "not": "followed for about 25 years"
+      }
+    },
+    {
+      "id": 14,
+      "tip": "grafik",
+      "metin": "Comparing the highest fifth of lutein and zeaxanthin intake with the lowest, advanced macular degeneration was about 41 percent less likely. For all carotenoids combined, about 35 percent less likely.",
+      "grafik": {
+        "baslik": "Lower risk of advanced macular degeneration",
+        "alt": "Highest vs lowest fifth of intake",
+        "cubuklar": [
+          {
+            "etiket": "Lutein + zeaxanthin",
+            "deger": 41,
+            "metin": "−41%"
+          },
+          {
+            "etiket": "All carotenoids",
+            "deger": 35,
+            "metin": "−35%"
+          }
+        ],
+        "kaynak": "Wu et al., JAMA Ophthalmology 2015 · 102,046 adults over 50, 1,118 advanced cases"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Notably, the link was with advanced disease, the kind that threatens sight. The researchers found no link with the earlier, intermediate stage.",
+      "gorsel": "two bowls side by side on a table, one with fresh spinach and one with kale, a small magnifying glass leaning on the spinach bowl"
+    },
+    {
+      "id": 16,
+      "metin": "Now the catch. This was an observational study. People who eat more greens may also differ in smoking, exercise and other habits. It's a strong hint, not proof.",
+      "gorsel": "a balanced brass scale holding a bowl of spinach on one side and a pair of walking shoes on the other, a kitchen window behind",
+      "baslik": {
+        "satirlar": [
+          "A HINT,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "metin": "To test it properly, you need a randomized trial. Those exist, and the results are more surprising than you'd expect. We'll get there in a moment.",
+      "gorsel": "a closed laboratory notebook and a brown glass bottle of capsules on a desk, a bowl of spinach in the background"
+    },
+    {
+      "id": 18,
+      "bolum": "The AREDS trials",
+      "tip": "kart",
+      "metin": "The National Eye Institute ran the biggest of them, called the Age-Related Eye Disease Study, or AREDS.",
+      "kart": {
+        "ust": "THE BIG TRIALS",
+        "baslik": "AREDS",
+        "alt": "National Eye Institute · 2001"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "It enrolled 3,640 people aged 55 to 80. They got vitamins C and E plus beta-carotene, zinc with copper, both combinations, or a placebo, and were followed for an average of 6.3 years.",
+      "gorsel": "four small brown glass pill bottles lined up on a wooden table, a bowl of spinach beside them and a calendar page with blank squares",
+      "etiket": "AREDS Research Group · Arch Ophthalmol · 2001",
+      "baslik": {
+        "satirlar": [
+          "3,640",
+          "PEOPLE"
+        ],
+        "not": "aged 55 to 80, followed 6.3 years"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "Across all participants, the full combination lowered the odds of advanced macular degeneration by about 28 percent. In people at higher risk, the benefit was clearest.",
+      "gorsel": "a pair of round reading glasses resting on an open book, a small bowl of spinach and a bottle of capsules next to them",
+      "etiket": "AREDS Research Group · Arch Ophthalmol · 2001",
+      "baslik": {
+        "satirlar": [
+          "FULL FORMULA"
+        ],
+        "vurgu": "–28%",
+        "not": "odds of advanced disease"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "A later Cochrane review put it in plain numbers. Among people with intermediate disease, roughly 8 fewer in every 100 progressed to advanced disease.",
+      "gorsel": "a tidy row of ten small spinach leaves laid out on a white linen cloth, two of them slightly set apart, a magnifying glass above",
+      "etiket": "Evans & Lawrenson · Cochrane · 2023",
+      "baslik": {
+        "satirlar": [
+          "8 FEWER",
+          "IN EVERY 100"
+        ],
+        "not": "intermediate disease, fewer progressed"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "For people with only early signs, the gain was tiny: about 4 fewer in every 1,000. The supplement helps most when the disease is already further along.",
+      "gorsel": "a single spinach leaf on a white cloth beside a tall stack of leaves, soft light, a small bottle of capsules in the background"
+    },
+    {
+      "id": 23,
+      "metin": "And these were high-dose pills, not food. The researchers' advice: everyone over 55 should have a dilated eye exam, and a supplement was for people at higher risk.",
+      "gorsel": "a doctor's desk with an antique brass ophthalmoscope, a closed notebook and a bowl of spinach on the corner",
+      "baslik": {
+        "satirlar": [
+          "DILATED",
+          "EYE EXAM"
+        ],
+        "not": "recommended for everyone over 55"
+      }
+    },
+    {
+      "id": 24,
+      "bolum": "The beta-carotene problem",
+      "tip": "kart",
+      "metin": "There was a catch in that first formula: beta-carotene.",
+      "kart": {
+        "ust": "THE CATCH",
+        "baslik": "Beta-carotene",
+        "alt": "Why the formula changed"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Researchers worried that beta-carotene raised the risk of lung cancer in people who smoke or used to. So the same team ran a second trial, AREDS2.",
+      "gorsel": "a bunch of fresh carrots next to a bowl of spinach on a wooden table, a small brown bottle of capsules between them",
+      "baslik": {
+        "satirlar": [
+          "AREDS2"
+        ],
+        "not": "the second trial"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "It enrolled 4,203 adults aged 50 to 85 at risk of advanced disease. On top of the standard formula, they got lutein at 10 milligrams plus zeaxanthin at 2 milligrams, omega-3 fish oil, both, or a placebo.",
+      "gorsel": "a row of brown glass bottles on a wooden shelf beside a small bowl of cooked spinach and a glass jar of golden oil capsules",
+      "etiket": "AREDS2 Research Group · JAMA · 2013",
+      "baslik": {
+        "satirlar": [
+          "4,203",
+          "ADULTS"
+        ],
+        "not": "aged 50 to 85, median 5 years"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "The headline result was a letdown. Over about 5 years, adding lutein and zeaxanthin, or omega-3s, did not significantly slow progression compared with placebo.",
+      "gorsel": "a flat even landscape of a field of spinach plants under a gray sky with a single straight path, calm and minimal",
+      "etiket": "AREDS2 Research Group · JAMA · 2013"
+    },
+    {
+      "id": 28,
+      "metin": "But in a secondary, exploratory analysis, swapping beta-carotene for lutein and zeaxanthin looked better. Late disease was about 18 percent less likely, and the wet form about 22 percent less likely.",
+      "gorsel": "two small pill bottles side by side, one with a carrot drawn in front of it and one with spinach leaves drawn in front of it, a pair of round glasses beside them",
+      "etiket": "Chew et al. · JAMA Ophthalmol · 2014",
+      "baslik": {
+        "satirlar": [
+          "LUTEIN",
+          "VS BETA-CAROTENE"
+        ],
+        "vurgu": "–18%",
+        "not": "late disease, exploratory analysis"
+      }
+    },
+    {
+      "id": 29,
+      "tip": "grafik",
+      "metin": "Then came the safety question. After 10 years of follow-up of 3,882 participants, the odds of lung cancer were about 82 percent higher in the beta-carotene group. For lutein and zeaxanthin, the 15 percent difference was not statistically significant.",
+      "grafik": {
+        "baslik": "Higher odds of lung cancer at 10 years",
+        "alt": "Compared with groups that did not take each supplement",
+        "cubuklar": [
+          {
+            "etiket": "Beta-carotene",
+            "deger": 82,
+            "metin": "+82%"
+          },
+          {
+            "etiket": "Lutein + zeaxanthin",
+            "deger": 15,
+            "metin": "+15% (n.s.)"
+          }
+        ],
+        "kaynak": "Chew et al., JAMA Ophthalmology 2022 · AREDS2, 3,882 adults, 10-year follow-up"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "The extra lung cancers in the trial occurred mostly in former smokers. That's why the AREDS2 formula leaves beta-carotene out and uses lutein and zeaxanthin instead.",
+      "gorsel": "a brown glass bottle of capsules with a green spinach leaf draped over it on a clean white table, a pair of glasses nearby",
+      "etiket": "AREDS2 Research Group · JAMA · 2013"
+    },
+    {
+      "id": 31,
+      "metin": "That follow-up also settled the fish-oil question. Even after 10 years, omega-3 capsules showed no effect on late macular degeneration. Fish on the plate is a different question that this trial didn't test.",
+      "gorsel": "a small bowl of golden fish-oil capsules beside a plate of cooked spinach, an empty fish dish with a single bone on a side plate",
+      "etiket": "Chew et al. · JAMA Ophthalmol · 2022",
+      "baslik": {
+        "satirlar": [
+          "FISH-OIL",
+          "CAPSULES"
+        ],
+        "vurgu": "NO EFFECT",
+        "not": "on late macular degeneration"
+      }
+    },
+    {
+      "id": 32,
+      "bolum": "Who the pills are for",
+      "tip": "kart",
+      "metin": "Now the honest part. Who actually needs the AREDS2 eye vitamins?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Who needs the pills",
+        "alt": "And who doesn't"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "The formula is 500 milligrams of vitamin C, 400 international units of vitamin E, 80 milligrams of zinc, 2 milligrams of copper, 10 milligrams of lutein and 2 milligrams of zeaxanthin, usually taken as two softgels a day.",
+      "gorsel": "a brown glass bottle with two soft capsules spilled on a white saucer, a bowl of spinach and a glass of water beside them",
+      "baslik": {
+        "satirlar": [
+          "THE AREDS2",
+          "FORMULA"
+        ],
+        "not": "usually two softgels a day"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "The National Eye Institute says supplements may help people with intermediate disease, or with advanced disease in one eye, to protect the other. An eye doctor decides that after a dilated exam.",
+      "gorsel": "an eye doctor's desk with a pair of round eyeglasses, an antique brass ophthalmoscope and a bowl of spinach on the side"
+    },
+    {
+      "id": 35,
+      "metin": "If your eyes are healthy, or you have only a few small drusen, your five-year risk is low and the formula isn't recommended. The Cochrane review only included people who already had the disease, so it can't say whether pills prevent it.",
+      "gorsel": "an open hand-held mirror reflecting a bowl of spinach and two eggs on a table, a pair of reading glasses beside it",
+      "etiket": "Evans & Lawrenson · Cochrane · 2023",
+      "baslik": {
+        "satirlar": [
+          "NOT FOR",
+          "HEALTHY EYES"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "And lutein on its own? In six placebo-controlled trials, the Cochrane reviewers found little or no clear difference, and rated the certainty low. Zinc alone did show a benefit.",
+      "gorsel": "a single brown pill bottle next to a pile of spinach leaves on a white table with a magnifying glass, calm and minimal",
+      "baslik": {
+        "satirlar": [
+          "LUTEIN ALONE"
+        ],
+        "not": "unclear benefit, low-certainty evidence"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "A few safety notes. High-dose zinc can upset the stomach, and in the original trial it was linked with urinary problems in men. Always ask your doctor or pharmacist before starting a supplement, especially if you take other prescriptions.",
+      "gorsel": "a pharmacy counter with a stethoscope, a closed notebook, an amber pill bottle and a small bowl of spinach",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "bolum": "Greens and eggs on your plate",
+      "tip": "kart",
+      "metin": "So where does that leave your plate? Let's see what spinach, kale and eggs actually deliver.",
+      "kart": {
+        "ust": "FROM THE KITCHEN",
+        "baslik": "Greens and eggs",
+        "alt": "How much lutein do you get?"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "According to USDA food tables, a cup of cooked spinach has about 20 milligrams of lutein and zeaxanthin together. A cup of cooked kale has about 24.",
+      "gorsel": "a white measuring cup filled with cooked spinach next to another filled with cooked kale on a wooden counter",
+      "etiket": "USDA Nutrient Database · Release 20",
+      "baslik": {
+        "satirlar": [
+          "1 CUP",
+          "COOKED SPINACH"
+        ],
+        "vurgu": "20 MG",
+        "not": "lutein and zeaxanthin together"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "That's more than the 12 milligrams of lutein and zeaxanthin in the daily pill dose. But it doesn't mean greens replace the formula. The trials tested the pills, not the greens.",
+      "gorsel": "a balanced brass scale with a bowl of cooked spinach on one side and a single brown capsule bottle on the other"
+    },
+    {
+      "id": 41,
+      "metin": "Eggs contain far less, less than a third of a milligram each. But the body may absorb lutein from egg yolk unusually well.",
+      "gorsel": "two brown eggs in an egg cup, one cracked open with a bright yolk, a bowl of spinach behind",
+      "baslik": {
+        "satirlar": [
+          "EGG YOLK"
+        ],
+        "not": "less lutein, but well absorbed"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "In a small Tufts University study of 10 men, blood lutein rose about three times as much after lutein-enriched eggs as after the same amount from cooked spinach or from supplements. Researchers suspect fats in the yolk help.",
+      "gorsel": "a plate of scrambled eggs next to a plate of cooked spinach and a small glass of water on a kitchen table, a clipboard with blank paper",
+      "etiket": "Tufts / USDA ARS · J Nutr · 2004",
+      "baslik": {
+        "satirlar": [
+          "EGGS VS",
+          "SPINACH"
+        ],
+        "not": "10 men, enriched eggs, blood levels"
+      }
+    },
+    {
+      "id": 43,
+      "tip": "grafik",
+      "metin": "A randomized crossover trial of 33 adults over 60 found that one egg a day for five weeks raised blood lutein by 26 percent and zeaxanthin by 38 percent. Cholesterol levels didn't change significantly.",
+      "grafik": {
+        "baslik": "Rise in blood levels after 1 egg a day",
+        "alt": "After 5 weeks of eating 1 egg a day",
+        "cubuklar": [
+          {
+            "etiket": "Blood lutein",
+            "deger": 26,
+            "metin": "+26%"
+          },
+          {
+            "etiket": "Blood zeaxanthin",
+            "deger": 38,
+            "metin": "+38%"
+          }
+        ],
+        "kaynak": "Goodrow et al., J Nutr 2006 · 33 adults over 60, randomized crossover"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "To be clear, higher blood lutein isn't the same as healthier eyes. No trial has shown that eating eggs or spinach prevents macular degeneration. Blood levels are a stepping stone, not the finish line.",
+      "gorsel": "a flight of three shallow stone steps leading toward a bowl of spinach and an egg on top, soft morning light",
+      "baslik": {
+        "satirlar": [
+          "A STEPPING",
+          "STONE"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "bolum": "An eye-friendly plate",
+      "tip": "kart",
+      "metin": "So here's what an eye-friendly plate can look like, in four steps.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "An eye-friendly plate",
+        "alt": "Four easy habits"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "One. Make leafy greens a regular habit. Spinach, kale, collard greens, whichever you like, as often as you can. Frozen counts too.",
+      "gorsel": "a skillet of wilted spinach on a stove beside a bag of frozen spinach and a bunch of collard greens",
+      "baslik": {
+        "satirlar": [
+          "LEAFY GREENS"
+        ],
+        "not": "fresh or frozen"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Two. Add a little fat. Lutein dissolves in fat, so sauté your greens in olive oil, add a salad dressing, or serve an egg alongside. Researchers suspect fat helps your body absorb it.",
+      "gorsel": "a small bottle of olive oil pouring a thin stream onto sautéed spinach in a pan, a fried egg resting on the side"
+    },
+    {
+      "id": 48,
+      "metin": "Three. Eggs can be part of it. The trial used one egg a day. If your doctor has told you to limit eggs because of cholesterol or diabetes, follow that advice.",
+      "gorsel": "a breakfast plate with one soft-boiled egg in a cup, a heap of sautéed spinach and a slice of whole grain toast",
+      "baslik": {
+        "satirlar": [
+          "ONE EGG",
+          "A DAY"
+        ],
+        "not": "unless your doctor says otherwise"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Four. Think about the whole picture. The National Eye Institute lists leafy greens and fish, not smoking, regular activity, and healthy blood pressure and cholesterol as habits that may lower risk or slow vision loss.",
+      "gorsel": "a kitchen table with a plate of spinach and grilled fish, a pair of walking shoes and a home blood pressure cuff in the background",
+      "baslik": {
+        "satirlar": [
+          "THE WHOLE",
+          "PICTURE"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "metin": "And the most protective step isn't on your plate at all. It's a dilated eye exam. If you're over 55, ask your eye doctor how often you should have one.",
+      "gorsel": "a tall window in a quiet eye clinic with a chair and a small table holding a bowl of spinach and a pair of glasses"
+    },
+    {
+      "id": 51,
+      "bolum": "What we don't know yet",
+      "tip": "kart",
+      "metin": "Before we wrap up, a few honest limits on everything you've just heard.",
+      "kart": {
+        "ust": "OPEN QUESTIONS",
+        "baslik": "What we don't know yet",
+        "alt": "Honest limits of the evidence"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "The Harvard food studies followed health professionals, and they can show links, not cause. The AREDS trials tested pills in people at risk. A long randomized trial of simply adding spinach or eggs to meals hasn't turned up in the studies we reviewed.",
+      "gorsel": "a quiet research desk with a few neatly stacked journals with blank covers, a teacup with rising steam and a bowl of spinach"
+    },
+    {
+      "id": 53,
+      "metin": "What the pills do show is real, though modest. The Cochrane review found about 38 percent lower odds of the wet form of the disease, and about 23 percent lower odds of losing three or more lines on an eye chart.",
+      "gorsel": "an old eye chart blank of any letters hanging on a wall beside a small table with a bowl of spinach and a bottle of capsules",
+      "etiket": "Evans & Lawrenson · Cochrane · 2023"
+    },
+    {
+      "id": 54,
+      "metin": "Remember too that in AREDS2, everyone already took the standard formula. So that trial asked only whether adding more lutein helps. It didn't clearly, and lowering the zinc dose made no clear difference either."
+      ,
+      "gorsel": "a plate with a standard portion of cooked spinach and one extra small spoonful of spinach set to the side, a fork resting nearby"
+    },
+    {
+      "id": 55,
+      "metin": "The Harvard data also tied other carotenoids, including those in carrots and orange fruit, to 25 to 35 percent lower risk of advanced disease. So variety on the plate is a sensible bet.",
+      "gorsel": "a colorful arrangement of spinach, carrots, orange slices and a halved boiled egg on a wooden table",
+      "etiket": "Wu et al. · JAMA Ophthalmol · 2015"
+    },
+    {
+      "id": 56,
+      "metin": "And if your vision changes, don't wait for a food fix. Blurred or dim spots in the center of your sight are a reason to book an eye exam, not to start a new diet.",
+      "gorsel": "a telephone on a desk next to an appointment calendar with blank squares and a small bowl of spinach"
+    },
+    {
+      "id": 57,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Food helps. Pills are specific.",
+        "alt": "Greens, eggs and your macula"
+      }
+    },
+    {
+      "id": 58,
+      "metin": "Large studies link diets rich in lutein and zeaxanthin with about 40 percent lower risk of advanced macular degeneration. That's an association, not proof.",
+      "gorsel": "a bowl of spinach and a halved boiled egg on a table with a magnifying glass resting on the leaves"
+    },
+    {
+      "id": 59,
+      "metin": "The AREDS2 eye vitamins are for people who already have intermediate disease, or advanced disease in one eye. They are not for healthy eyes, and beta-carotene was dropped for lung cancer risk.",
+      "gorsel": "a brown glass bottle of capsules next to a bowl of spinach on a clean white table, a pair of round glasses beside them"
+    },
+    {
+      "id": 60,
+      "metin": "Spinach, kale and eggs are good, low-risk ways to eat more lutein and zeaxanthin, especially with a little fat. And a regular dilated eye exam matters more than any food.",
+      "gorsel": "a dinner plate with sautéed spinach, a soft-boiled egg and a slice of toast, an eye clinic window in the background"
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
