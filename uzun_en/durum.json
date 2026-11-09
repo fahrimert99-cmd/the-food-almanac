@@ -225,10 +225,9 @@
     },
     "pickle-juice-leg-cramps": {
       "slot": "2027-02-16T14:00:00Z",
-      "asama": "varlik",
+      "asama": "sahne",
       "baslangic": "2026-11-09T00:33:45Z",
-      "sahne_deneme": 0,
-      "gorsel_bekle": "2026-11-09T11:00:56Z"
+      "sahne_deneme": 0
     }
   }
 }
