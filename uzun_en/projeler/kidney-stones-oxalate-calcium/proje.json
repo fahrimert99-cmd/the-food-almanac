@@ -1,0 +1,660 @@
+{
+  "slug": "kidney-stones-oxalate-calcium",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Calcium and Kidney Stones: What Studies Show",
+  "yorum": "Have you ever been told to avoid dairy or spinach after a kidney stone? Did anyone explain why, and did it change what you eat?",
+  "aciklama_giris": "Many people are told to cut dairy and spinach after a kidney stone. In a five-year trial of 120 men with recurrent calcium oxalate stones, a low-calcium diet did worse than a normal-calcium diet that also limited salt and animal protein: 23 of 60 men formed new stones, against 12 of 60. Large studies of tens of thousands of adults also linked calcium from food with fewer stones, and calcium pills with more.\n\nIn this video we look at those studies, why calcium and oxalate can bind in the gut, what the research says about spinach, water, salt, animal protein and soft drinks, and why the right diet depends on the type of stone. We also cover who should check with a doctor first, and six practical steps.",
+  "kaynaklar": [
+    "Borghi L, Schianchi T, Meschi T, Guerra A, Allegri F, Maggiore U, Novarini A. Comparison of two diets for the prevention of recurrent stones in idiopathic hypercalciuria. N Engl J Med. 2002;346(2):77-84. doi:10.1056/NEJMoa010369. PMID 11784873.",
+    "Curhan GC, Willett WC, Rimm EB, Stampfer MJ. A prospective study of dietary calcium and other nutrients and the risk of symptomatic kidney stones. N Engl J Med. 1993;328(12):833-838. doi:10.1056/NEJM199303253281203.",
+    "Curhan GC, Willett WC, Speizer FE, Spiegelman D, Stampfer MJ. Comparison of dietary calcium with supplemental calcium and other nutrients as factors affecting the risk for kidney stones in women. Ann Intern Med. 1997;126(7):497-504. doi:10.7326/0003-4819-126-7-199704010-00001.",
+    "Liebman M, Chai W. Effect of dietary calcium on urinary oxalate excretion after oxalate loads. Am J Clin Nutr. 1997;65(5):1453-1459. doi:10.1093/ajcn/65.5.1453. PMID 9129476.",
+    "Taylor EN, Curhan GC. Oxalate intake and the risk for nephrolithiasis. J Am Soc Nephrol. 2007;18(7):2198-2204. doi:10.1681/ASN.2007020219. PMID 17538185.",
+    "Borghi L, Meschi T, Amato F, Briganti A, Novarini A, Giannini A. Urinary volume, water and recurrences in idiopathic calcium nephrolithiasis: a 5-year randomized prospective study. J Urol. 1996;155(3):839-843.",
+    "Desai AC, Maalouf NM, Harper JD, et al. Prevention of urinary stones with hydration: a randomised clinical trial of an adherence intervention. Lancet. 2026;407(10534):1171-1181. doi:10.1016/S0140-6736(25)02637-6. PMID 41864748.",
+    "Qaseem A, Dallas P, Forciea MA, Starkey M, Denberg TD. Dietary and pharmacologic management to prevent recurrent nephrolithiasis in adults: a clinical practice guideline from the American College of Physicians. Ann Intern Med. 2014;161(9):659-667. doi:10.7326/M13-2908. PMID 25364887.",
+    "Pearle MS, Matlaga BR, Antonelli JA, et al. Medical Management of Kidney Stones: AUA Guideline (2026) Part I: Evaluation of Patients With Kidney Stones and Dietary Management of Patients With Calcium Stones. J Urol. 2026;216(5):613-622. doi:10.1097/JU.0000000000005227."
+  ],
+  "kapak": {
+    "satirlar": [
+      "CALCIUM",
+      "AND STONES?"
+    ],
+    "vurgu": "–34%",
+    "vurgu_alt": "RISK",
+    "gorsel": "a tall glass of milk, a large bowl of fresh spinach leaves and a wedge of cheese grouped tightly and overlapping, very large, close-up and appetizing, a cheerful person in their 60s smiling behind them"
+  },
+  "etiketler": [
+    "kidney stones diet",
+    "oxalate foods",
+    "calcium and kidney stones",
+    "spinach kidney stones",
+    "calcium oxalate stones",
+    "dairy and kidney stones",
+    "kidney stone prevention",
+    "low oxalate diet",
+    "nutrition science",
+    "healthy eating after 60"
+  ],
+  "seslendirme_duzelt": {
+    "Curhan": "Kur han",
+    "struvite": "stroo vite",
+    "cystine": "sis teen"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The calcium surprise",
+      "metin": "Had a kidney stone? You may have been told to skip dairy. In a five-year trial of 120 men, a low-calcium diet brought stones back in 23 men. A normal-calcium diet, in 12.",
+      "gorsel": "a tall glass of milk and a wooden bowl of fresh spinach leaves side by side on a kitchen table, a small rough kidney stone crystal resting beside them",
+      "etiket": "Borghi et al. · N Engl J Med · 2002",
+      "baslik": {
+        "satirlar": [
+          "23 VS 12"
+        ],
+        "not": "stone relapses in 5 years, low calcium vs normal calcium"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But that winning diet changed more than calcium.",
+      "gorsel": "a kitchen table with a glass of milk, a bowl of spinach, a small salt dish and a plate of grilled chicken set in a row, soft morning light"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what to pair, what to limit, and what depends on your stone.",
+      "gorsel": "an open antique notebook with blank pages beside a glass of milk, a bowl of spinach and a tall glass of water on a wooden table"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what a kidney stone actually is.",
+      "gorsel": "a magnifying glass held over a small rough crystalline stone on a lab dish, a glass of milk and a bowl of spinach blurred behind it"
+    },
+    {
+      "id": 5,
+      "metin": "Most kidney stones are made of calcium oxalate, a hard crystal that forms when calcium meets a plant compound called oxalate in your urine.",
+      "gorsel": "a textbook engraving of a kidney with a small cluster of angular crystals in its collecting space, a glass of milk and spinach leaves sketched beside it with dashed lines",
+      "baslik": {
+        "satirlar": [
+          "CALCIUM",
+          "+ OXALATE"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Oxalate is found in many plants. In large American studies, spinach supplied more than 40 percent of the oxalate people ate, more than any other food.",
+      "gorsel": "a large pile of fresh spinach leaves in a wicker basket, with small bowls of almonds, a sliced beet and a potato arranged lightly behind it",
+      "etiket": "Taylor & Curhan · J Am Soc Nephrol · 2007",
+      "baslik": {
+        "satirlar": [
+          "SPINACH"
+        ],
+        "vurgu": "40%+",
+        "not": "of the oxalate in the diets studied"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "So the logic seems simple. Calcium plus oxalate makes stones, so eat less of both. For years, many patients were told exactly that.",
+      "gorsel": "a glass of milk and a bowl of spinach each crossed out by a large simple X made of two wooden spoons, empty paper around them"
+    },
+    {
+      "id": 8,
+      "metin": "There's a catch. Calcium and oxalate also meet in your gut, long before your kidneys. What happens there turns out to matter a great deal.",
+      "gorsel": "a textbook engraving of the stomach and small intestine with tiny glowing dots drifting through, a curved dashed arrow pointing toward a small kidney in the corner",
+      "baslik": {
+        "satirlar": [
+          "THE GUT",
+          "CATCH"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "bolum": "The five-year trial",
+      "tip": "kart",
+      "metin": "In 2002, a research team reported a five-year trial in the New England Journal of Medicine that tested the low-calcium advice directly.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Low calcium vs normal calcium",
+        "alt": "N Engl J Med · 2002 · 120 men"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "They enrolled 120 men who kept forming calcium oxalate stones and had too much calcium in their urine. Each man was randomly assigned to one of two diets.",
+      "gorsel": "two identical empty dinner plates on a long clinic table with a closed folder between them, a tall window letting in light"
+    },
+    {
+      "id": 11,
+      "metin": "One group got the traditional advice, a low-calcium diet of about 400 milligrams a day.",
+      "gorsel": "a small plate with a few vegetables and a slice of bread, a single small glass with only a little milk in it, a lot of empty table around them",
+      "baslik": {
+        "satirlar": [
+          "LOW CALCIUM"
+        ],
+        "vurgu": "400 mg",
+        "not": "per day, the traditional advice"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "The other group ate a normal amount of calcium, about 1,200 milligrams a day. But they were also told to eat less animal protein and less salt.",
+      "gorsel": "a generous plate with a wedge of cheese, a bowl of yogurt, a glass of milk and cooked greens, a small salt dish pushed to the edge of the table",
+      "baslik": {
+        "satirlar": [
+          "NORMAL CALCIUM",
+          "LESS SALT"
+        ],
+        "vurgu": "1,200 mg"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "That detail matters. The trial compared two whole diets, so it can't say which change did the work. Hold that thought, because we'll return to salt and protein.",
+      "gorsel": "a three-way fork in a garden path, each path ending at a small signpost with no writing, one with a glass of milk, one with a salt dish, one with a chicken drumstick"
+    },
+    {
+      "id": 14,
+      "bolum": "What the trial found",
+      "tip": "grafik",
+      "metin": "After five years, 12 of the 60 men on the normal-calcium diet had formed a new stone. On the low-calcium diet, it was 23 of 60. That's about half the risk.",
+      "grafik": {
+        "baslik": "Men with a new stone after 5 years",
+        "alt": "Share of each group of 60 men",
+        "cubuklar": [
+          {
+            "etiket": "Normal calcium",
+            "deger": 20,
+            "metin": "12 of 60"
+          },
+          {
+            "etiket": "Low calcium",
+            "deger": 38.3,
+            "metin": "23 of 60"
+          }
+        ],
+        "kaynak": "Borghi et al., N Engl J Med 2002 · 120 men with recurrent calcium oxalate stones · 5 years"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Urinary oxalate told a similar story. It rose in the low-calcium group and fell in the normal-calcium group. Cutting calcium did not cut oxalate.",
+      "gorsel": "two tall laboratory glass cylinders with small angular crystals, one nearly full and one nearly empty, a glass of milk and a bowl of spinach in front",
+      "baslik": {
+        "satirlar": [
+          "OXALATE",
+          "ROSE"
+        ],
+        "not": "in urine on the low-calcium diet"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "One trial of 120 men isn't the whole story, though. So next, much larger studies that followed people for years.",
+      "gorsel": "a long wooden library shelf holding many thick bound volumes with blank spines, a brass reading lamp and a glass of milk at one end"
+    },
+    {
+      "id": 17,
+      "bolum": "What big studies found",
+      "tip": "kart",
+      "metin": "In 1993, Curhan and colleagues followed 45,619 men aged 40 to 75 who had never had a kidney stone.",
+      "kart": {
+        "ust": "THE BIG COHORTS",
+        "baslik": "Tens of thousands of adults",
+        "alt": "Curhan et al. · 1993 and 1997"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "The men filled out detailed food questionnaires. Over four years, 505 of them developed a stone.",
+      "gorsel": "a stack of blank questionnaire sheets on a desk with a pencil and an antique reading lamp, a glass of milk beside the stack",
+      "etiket": "Curhan et al. · N Engl J Med · 1993"
+    },
+    {
+      "id": 19,
+      "metin": "Men eating the most calcium had about a third lower risk than men eating the least, after adjusting for other factors, including fluid and animal protein.",
+      "gorsel": "a tall full glass of milk beside a small wedge of cheese and a bowl of yogurt, a gentle downward-sloping hill drawn behind them",
+      "etiket": "Curhan et al. · N Engl J Med · 1993",
+      "baslik": {
+        "satirlar": [
+          "MORE CALCIUM,",
+          "FEWER STONES"
+        ],
+        "vurgu": "–34%",
+        "not": "stone risk, highest vs lowest fifth of calcium intake"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "In 1997 the same team studied 91,731 women for 12 years, and 864 developed stones. Again, more calcium from food meant lower risk, about 35 percent lower.",
+      "gorsel": "a bowl of yogurt with a spoon, a glass of milk and a slice of cheese on a table, a wall calendar with blank pages hanging behind",
+      "etiket": "Curhan et al. · Ann Intern Med · 1997"
+    },
+    {
+      "id": 21,
+      "tip": "grafik",
+      "metin": "Here are several findings from the women's study, comparing the highest fifth of intake with the lowest fifth.",
+      "grafik": {
+        "baslik": "Change in stone risk in women",
+        "alt": "Highest vs lowest fifth of intake (pills: users vs non-users)",
+        "cubuklar": [
+          {
+            "etiket": "Calcium, food",
+            "deger": 35,
+            "metin": "−35%"
+          },
+          {
+            "etiket": "Fluids",
+            "deger": 39,
+            "metin": "−39%"
+          },
+          {
+            "etiket": "Sodium",
+            "deger": 30,
+            "metin": "+30%"
+          },
+          {
+            "etiket": "Calcium pills",
+            "deger": 20,
+            "metin": "+20%"
+          }
+        ],
+        "kaynak": "Curhan et al., Ann Intern Med 1997 · 91,731 women, 12 years · observational"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Look at the calcium pills. Women who took supplements had about 20 percent higher risk. Why would calcium from food protect while calcium pills do the opposite?",
+      "gorsel": "a small glass bottle of round tablets with its lid off, spilling a few tablets onto the table beside a glass of milk",
+      "baslik": {
+        "satirlar": [
+          "FOOD VS",
+          "PILLS"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "About two thirds of supplement users took them without a meal, or with meals probably low in oxalate. The researchers suggested that timing could explain the difference.",
+      "gorsel": "an antique pocket watch beside an empty plate on one side and a full plate with spinach and cheese on the other, a single tablet near the empty plate",
+      "baslik": {
+        "satirlar": [
+          "TIMING",
+          "MAY MATTER"
+        ],
+        "vurgu": "67%",
+        "not": "of pill users took calcium without a meal or with low-oxalate meals"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "These were observational studies, so they show a link, not proof. But the trial and the big cohorts point the same way. Next, the reason why.",
+      "gorsel": "two separate paths of stepping stones crossing a calm stream that both lead to the same small wooden bridge, a glass of milk on the near bank"
+    },
+    {
+      "id": 25,
+      "bolum": "Calcium, oxalate and spinach",
+      "tip": "kart",
+      "metin": "So how can eating calcium lower stone risk? It starts at your very next meal.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Where calcium meets oxalate",
+        "alt": "In the gut, before the kidneys"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "When a meal contains both calcium and oxalate, the two can bind together in your gut. Bound up, they leave in the stool instead of being absorbed.",
+      "gorsel": "inside the small intestine, small round white calcium beads linking with small angular oxalate crystals into clumps that drift onward along the tube, textbook cross-section with villi",
+      "baslik": {
+        "satirlar": [
+          "BINDING",
+          "IN THE GUT"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Less oxalate absorbed means less oxalate for your kidneys to send into urine. And less oxalate in urine may mean fewer of the crystals that grow into stones.",
+      "gorsel": "a textbook engraving of a kidney with only a few small crystals, next to a glass of milk and a spinach leaf, a calm dashed arrow from the gut sketch to the kidney"
+    },
+    {
+      "id": 28,
+      "metin": "A 1997 lab study tested this. Liebman and Chai gave participants a measured dose of oxalate with a labeled tracer, alone or with 300 milligrams of calcium.",
+      "gorsel": "a laboratory bench with small capped glass vials in a rack, a brass scale and a small dish of spinach leaves beside a glass of milk",
+      "etiket": "Liebman & Chai · Am J Clin Nutr · 1997"
+    },
+    {
+      "id": 29,
+      "tip": "grafik",
+      "metin": "Without calcium, about 18 percent of the oxalate was absorbed. With calcium carbonate, about 8 percent. With calcium citrate malate, about 7 percent.",
+      "grafik": {
+        "baslik": "Share of oxalate absorbed",
+        "alt": "Same oxalate dose, with or without 300 mg calcium",
+        "cubuklar": [
+          {
+            "etiket": "No calcium",
+            "deger": 18.3,
+            "metin": "18%"
+          },
+          {
+            "etiket": "Calcium carbonate",
+            "deger": 8.1,
+            "metin": "8%"
+          },
+          {
+            "etiket": "Calcium citrate malate",
+            "deger": 7.2,
+            "metin": "7%"
+          }
+        ],
+        "kaynak": "Liebman & Chai, Am J Clin Nutr 1997 · oxalate-load tests with labeled oxalate"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "In a second set of tests, 200 milligrams of calcium or more worked best against about 200 milligrams of oxalate. These were small, short tests, but the direction was clear.",
+      "gorsel": "a row of three small glass cups holding increasing heaps of white calcium powder beside a small pile of spinach leaves on a lab tray"
+    },
+    {
+      "id": 31,
+      "metin": "This may also explain the supplement puzzle. A calcium pill on an empty stomach has no oxalate to bind. The same calcium inside a meal does.",
+      "gorsel": "on the left an empty plate with a single tablet, on the right a plate of spinach salad with cheese and a glass of milk, a thin dashed line between them",
+      "baslik": {
+        "satirlar": [
+          "PILL ALONE,",
+          "OR WITH A MEAL"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Now, spinach. In 2007, Taylor and Curhan analyzed oxalate intake in nearly 46,000 men and about 195,000 women, and counted 4,605 stones.",
+      "gorsel": "a bunch of fresh spinach with its roots on a wooden cutting board, a ceramic bowl of washed leaves beside it",
+      "etiket": "Taylor & Curhan · J Am Soc Nephrol · 2007"
+    },
+    {
+      "id": 33,
+      "metin": "People eating the most oxalate had about 20 percent higher risk, in men and in older women. In younger women, there was no link at all.",
+      "gorsel": "a bowl of cooked spinach next to a bowl of sliced almonds and a sliced baked potato, three small calm hills drawn behind them",
+      "baslik": {
+        "satirlar": [
+          "MOST OXALATE"
+        ],
+        "vurgu": "+22%",
+        "not": "stone risk in men, highest vs lowest fifth"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Eating spinach eight or more times a month, roughly twice a week, was linked with about 30 percent higher risk in men and older women, compared with less than once.",
+      "gorsel": "a dinner plate with a generous heap of steamed spinach and a fork, an antique wall calendar with blank pages behind it",
+      "baslik": {
+        "satirlar": [
+          "8+ SPINACH",
+          "MEALS A MONTH"
+        ],
+        "vurgu": "+30%"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Does that mean banning spinach? The authors didn't think so. They concluded that dietary oxalate is not a major risk factor. In men, the link looked stronger at lower calcium intakes, though that pattern wasn't statistically firm.",
+      "gorsel": "a small open scale balancing a bundle of spinach on one side against a glass of milk on the other, level and calm"
+    },
+    {
+      "id": 36,
+      "metin": "So the practical idea is pairing, not banning. Put spinach in the same meal as a calcium food, and let them bind. I'll give you examples in the practical part.",
+      "gorsel": "a wooden bowl of fresh spinach salad topped with crumbled cheese beside a small bowl of yogurt, a glass of milk and a fork",
+      "baslik": {
+        "satirlar": [
+          "PAIR,",
+          "DON'T BAN"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "bolum": "Water, salt and protein",
+      "tip": "kart",
+      "metin": "Calcium is one lever. The guidelines add several more, and the first is simply water.",
+      "kart": {
+        "ust": "THE OTHER LEVERS",
+        "baslik": "Water, salt and protein",
+        "alt": "What the guidelines add"
+      }
+    },
+    {
+      "id": 38,
+      "metin": "In a 1996 trial, 199 people with a first calcium stone were randomly assigned to drink more water or to usual care. Over five years, stones returned in 12 of 99 with high water intake, and 27 of 100 with usual care.",
+      "gorsel": "a tall glass pitcher of clear water with a glass beside it on a sunny kitchen table, a small stone crystal on a saucer",
+      "etiket": "Borghi et al. · J Urol · 1996",
+      "baslik": {
+        "satirlar": [
+          "MORE WATER"
+        ],
+        "not": "stones returned in 12 of 99 vs 27 of 100"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "The American Urological Association's 2026 guideline encourages adults with calcium stones to aim for 2.5 liters of urine a day, about 85 ounces, mostly from water. You will likely need to drink more than that, since some fluid is lost in other ways.",
+      "gorsel": "a row of three tall glasses of water of different heights on a windowsill, a small measuring jug beside them",
+      "etiket": "AUA Guideline · J Urol · 2026",
+      "baslik": {
+        "satirlar": [
+          "URINE GOAL"
+        ],
+        "vurgu": "2.5 L",
+        "not": "about 85 ounces of urine a day"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "A fair caution: in the 2026 PUSH trial, 1,658 people with stones got coaching and a smart water bottle. Urine volume rose modestly, but stone events were similar, 19 percent versus 20 percent.",
+      "gorsel": "a modern reusable water bottle standing beside a glass of water and a small notebook with blank pages on a table",
+      "etiket": "Desai et al. · Lancet · 2026"
+    },
+    {
+      "id": 41,
+      "metin": "Water is still the standard advice, and for most people it's low risk. But if you have heart failure, kidney failure, or take water pills, ask your doctor how much fluid is right for you.",
+      "gorsel": "a doctor's desk with a stethoscope, a glass of water, a closed folder and a small medicine bottle",
+      "baslik": {
+        "satirlar": [
+          "ASK FIRST"
+        ],
+        "not": "if you have heart or kidney failure or take water pills"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "Next, salt. In the women's study, the highest sodium intake was linked with about 30 percent higher risk. The 2026 guideline advises people with higher urinary calcium and high salt intake to cut back.",
+      "gorsel": "a ceramic salt cellar tipped over with a small heap of white crystals spilling beside a bowl of canned soup and a spoon",
+      "baslik": {
+        "satirlar": [
+          "SALT"
+        ],
+        "vurgu": "+30%",
+        "not": "stone risk in women, highest vs lowest sodium"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "Then animal protein. In the men's study, the highest intake was linked with about 33 percent higher risk, though that result was borderline. Evidence that cutting animal protein prevents stones is limited, so ask your doctor.",
+      "gorsel": "a plate with a roast chicken leg, a slice of ham and a small grilled fish fillet, a fork and knife resting beside it"
+    },
+    {
+      "id": 44,
+      "metin": "Sugar matters too. Women with the highest sucrose intake had 52 percent higher risk, and the guideline says doctors may recommend limiting soft drinks.",
+      "gorsel": "a tall glass of cola with ice and a straw beside a bowl of sugar cubes and a glass of plain water",
+      "baslik": {
+        "satirlar": [
+          "SUGARY",
+          "DRINKS"
+        ],
+        "vurgu": "+52%"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "What about lemon? In small studies, lemonade made with real lemon juice raised urine citrate and urine volume. But those studies were tiny, so treat it as a maybe, not a treatment.",
+      "gorsel": "a glass pitcher of lemonade with sliced lemons floating in it and a halved lemon on a wooden board beside a tall glass"
+    },
+    {
+      "id": 46,
+      "bolum": "It depends on your stone",
+      "tip": "kart",
+      "metin": "Everything so far is about calcium stones, the most common kind. Other stones follow different rules.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "It depends on the stone",
+        "alt": "And where the evidence runs out"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Uric acid stones call for a more plant-centered eating pattern, for example, while cystine and struvite stones call for higher fluid intake plus other treatment.",
+      "gorsel": "three small stones of different shapes, smooth, spiky and branched, laid on a velvet cloth beside a bowl of vegetables and a glass of water",
+      "baslik": {
+        "satirlar": [
+          "DIFFERENT",
+          "STONES"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "That's why the 2026 guideline says dietary advice should be directed by your current diet and your test results, not by one rule for everyone.",
+      "gorsel": "a clinician's hands holding a clipboard with blank sheets next to a rack of small capped sample tubes and a plate of everyday food"
+    },
+    {
+      "id": 49,
+      "metin": "Now the limits. The strongest trial enrolled only men, and an accompanying editorial noted it's unknown whether the results hold for women.",
+      "gorsel": "a single empty armchair in a quiet study beside a table with one folder, a window with soft light",
+      "baslik": {
+        "satirlar": [
+          "MEN ONLY"
+        ],
+        "not": "in the 2002 trial"
+      }
+    },
+    {
+      "id": 50,
+      "metin": "The big cohorts relied on food questionnaires and enrolled adults between ages 34 and 75. They did not focus on people over 65, so the effects may differ.",
+      "gorsel": "a pile of paper questionnaires with a pencil and a pair of round reading glasses on a wooden desk, a cup of tea beside them"
+    },
+    {
+      "id": 51,
+      "metin": "Calcium pills need extra care. If you take a thiazide water pill, the guideline says to limit sodium and keep calcium intake normal. Ask your doctor or pharmacist before starting, changing, or stopping any medicine.",
+      "gorsel": "a pharmacy counter with a small amber pill bottle, a pill organizer with compartments and a glass of water",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "And if you have advanced kidney disease, or another condition with its own food limits, follow the plan from your kidney team first. This video can't replace it.",
+      "gorsel": "a quiet consultation room with two chairs, a wall chart with no writing, a stethoscope and a glass of water on the desk"
+    },
+    {
+      "id": 53,
+      "bolum": "How to use this",
+      "tip": "kart",
+      "metin": "So how do you use all this? Here are six practical steps.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Pair, sip, season",
+        "alt": "Six practical steps"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "One. Don't cut calcium foods on your own. Calcium from food, like dairy, was linked with fewer stones, and the low-calcium diet did worse in the trial.",
+      "gorsel": "a breakfast table with a glass of milk, a bowl of yogurt with berries and a wedge of cheese on a plate, morning light"
+    },
+    {
+      "id": 55,
+      "metin": "Two. Put calcium and oxalate on the same plate. A spinach salad with cheese, or spinach with yogurt, makes sense, because the two can bind in your gut.",
+      "gorsel": "a plate of spinach salad with crumbled cheese and a small bowl of yogurt dip, a glass of milk beside the plate",
+      "baslik": {
+        "satirlar": [
+          "SPINACH +",
+          "CHEESE"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "metin": "Three. If you take a calcium supplement, ask your doctor or pharmacist whether you need it. Researchers suspect that taking it with a meal may matter.",
+      "gorsel": "a small pill bottle and a pill organizer set beside a plate of dinner and a glass of water on a kitchen table"
+    },
+    {
+      "id": 57,
+      "metin": "Four. Spread your water through the day, mostly plain water, and ask your doctor what daily target fits your health.",
+      "gorsel": "a glass pitcher of water with a glass at a sunny window, an antique clock on the wall behind it",
+      "baslik": {
+        "satirlar": [
+          "SIP ALL DAY"
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "metin": "Five. Go easy on salt and sugary soft drinks. Check labels on soups, deli meats and frozen meals, where sodium often hides.",
+      "gorsel": "a grocery shelf with canned soup, a package of sliced deli meat and a frozen dinner box, a magnifying glass held over one label"
+    },
+    {
+      "id": 59,
+      "metin": "Six. Ask your doctor what kind of stone you had, and whether a urine test would help. That one answer shapes your diet more than any rule from the internet.",
+      "gorsel": "a small kidney stone on a lab dish beside a closed folder and a pair of reading glasses on a doctor's desk",
+      "baslik": {
+        "satirlar": [
+          "KNOW YOUR",
+          "STONE TYPE"
+        ]
+      }
+    },
+    {
+      "id": 60,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Pair it, don't cut it",
+        "alt": "Calcium · Oxalate · Water · Salt"
+      }
+    },
+    {
+      "id": 61,
+      "metin": "In a five-year trial, a low-calcium diet brought back stones in 23 of 60 men, against 12 of 60 on normal calcium with less salt and animal protein.",
+      "gorsel": "a glass of milk and a bowl of spinach on a kitchen table, a small rough kidney stone beside them, warm light"
+    },
+    {
+      "id": 62,
+      "metin": "Big studies linked calcium from food with fewer stones, and calcium pills with more. Calcium and oxalate bind in the gut, so spinach pairs well with dairy.",
+      "gorsel": "a plate of spinach salad with cheese, a glass of milk and a bowl of yogurt, with small dashed lines to a sketch of the gut"
+    },
+    {
+      "id": 63,
+      "metin": "Water, less salt, and fewer sugary drinks help too. But the right diet depends on your stone, so ask your doctor before changing anything.",
+      "gorsel": "a tall glass of water, a small salt dish and a doctor's stethoscope on a wooden table beside a glass of milk and a bowl of spinach"
+    },
+    {
+      "id": 64,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
