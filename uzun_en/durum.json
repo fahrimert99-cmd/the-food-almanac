@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "foods-for-macular-degeneration",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -233,6 +233,12 @@
       "slot": "2027-02-19T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-11-09T12:19:37Z",
+      "sahne_deneme": 0
+    },
+    "foods-for-macular-degeneration": {
+      "slot": "2027-02-23T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-11-09T13:24:27Z",
       "sahne_deneme": 0
     }
   }
