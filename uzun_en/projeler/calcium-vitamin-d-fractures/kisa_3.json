@@ -1,0 +1,17 @@
+{
+  "baslik": ["CALCIUM PILLS", "& YOUR HEART?"],
+  "baslik_yt": "Calcium Pills and Heart Attacks: What the Data Show",
+  "aciklama": "A 2011 BMJ analysis linked calcium supplements to about 24 percent more heart attacks. Here is what that link does and does not prove, and why guidelines say food first.",
+  "parcalar": [
+    {"sahne": 41, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 41, "cumleler": [1], "gorsel": 29, "baslik": null, "etiket": "Bolland et al. · BMJ · 2011"},
+    {"sahne": 41, "cumleler": [2],
+     "baslik": {"satirlar": ["HEART", "ATTACKS?"], "vurgu": "+24%", "not": "linked, not proven"},
+     "etiket": "Bolland et al. · BMJ · 2011"},
+    {"sahne": 42, "cumleler": [0], "baslik": null},
+    {"sahne": 42, "cumleler": [1], "gorsel": 38, "baslik": null},
+    {"sahne": 43, "cumleler": [0], "baslik": {"satirlar": ["FOOD VS", "PILLS"]}},
+    {"sahne": 43, "cumleler": [1], "gorsel": 33, "baslik": null},
+    {"sahne": 58, "cumleler": [1], "baslik": {"satirlar": ["FOOD", "FIRST"]}}
+  ]
+}
