@@ -10,3 +10,13 @@
 - **S08**: Soru işaretli yastık; görsel sağa kaydırıldı (sinirla=false), solda "NO CLEAR CAUSE" → "DOCTORS CALL IT IDIOPATHIC / THE CAUSE IS UNKNOWN"; son olarak soru işareti etiketi.
 
 Görsel yeniden üretilmedi. Kütüphane hatası bulunmadı. Çözülmemiş sorun yok.
+
+# Rapor — Grup 1 (sahne 17–21)
+
+- **S17**: Görselsiz çubuk grafik (152 / 134 / 85 s); her çubuk sayısı söylenince yükselir, sonra "−49 s" farkı ok ve kesikli çizgiyle gösterilir (K(3,"49")). Kaynak dipnotu meta'dan.
+- **S18**: Uzun turşu suyu ve kısa su bardağı; sağda "37% SHORTER" + not, "PLAIN WATER" ve "PICKLE JUICE" etiketleri, son olarak "JUICE DID SOMETHING WATER DID NOT". Kusur yok.
+- **S19**: Tüp rafı + saat + bardak; "THE PUZZLE" → "LITTLE CHANGE" (saat etiketi "5 MINUTES", "BLOOD TESTS", "PICKLE JUICE"), sonra "NOT A / REFILL" + not. Kusur yok.
+- **S20**: BolumKarti (18, 19, 21'den 4:3 kırpımlar) + altında "THE AUTHORS' IDEA" hapı ("idea" kelimesiyle). Kusur yok.
+- **S21**: Profilden baş + sinir çizgileri; "A NERVE / REFLEX?", "MOUTH", "THROAT", "NERVES" etiketleri ve ağızdan sinirlere akan parçacıklar, "QUIETS OVERACTIVE NERVES" notu. Parçacıklar önizleme karelerinde belirgin değil (küçük/soluk), sorun çıkarmıyor.
+
+Görsel yeniden üretilmedi. Kütüphane hatası bulunmadı. Çözülmemiş sorun yok.
