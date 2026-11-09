@@ -1,5 +1,5 @@
 {
-  "aktif": "pickle-juice-leg-cramps",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -225,7 +225,7 @@
     },
     "pickle-juice-leg-cramps": {
       "slot": "2027-02-16T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-09T00:33:45Z",
       "sahne_deneme": 0
     }
