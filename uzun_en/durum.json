@@ -227,7 +227,8 @@
       "slot": "2027-02-16T14:00:00Z",
       "asama": "varlik",
       "baslangic": "2026-11-09T00:33:45Z",
-      "sahne_deneme": 0
+      "sahne_deneme": 0,
+      "gorsel_bekle": "2026-11-09T04:12:46Z"
     }
   }
 }
