@@ -1,0 +1,24 @@
+{
+  "baslik": ["10 FOODS =", "44% SODIUM"],
+  "baslik_yt": "Where Most of Your Salt Really Comes From",
+  "aciklama": "A three-city study and CDC survey data show that most dietary sodium is already in packaged and restaurant food, not the salt shaker. Here are the top sources and a ten-second label check.",
+  "parcalar": [
+    {"sahne": 20, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 14, "cumleler": [1], "gorsel": 2,
+     "baslik": {"satirlar": ["ALREADY IN", "THE FOOD"], "vurgu": "71%", "not": "added outside the home"},
+     "etiket": "Harnack et al. · Circulation · 2017"},
+    {"sahne": 14, "cumleler": [3], "gorsel": 1,
+     "baslik": {"satirlar": ["THE SHAKER"], "vurgu": "5%", "not": "of sodium these adults ate"},
+     "etiket": "Harnack et al. · Circulation · 2017"},
+    {"sahne": 21, "cumleler": [0, 1, 2], "gorsel": 22,
+     "baslik": {"satirlar": ["TOP 5:", "BREAD FIRST"], "vurgu": "6.2%", "not": "from yeast breads"},
+     "etiket": "Quader et al. · MMWR · 2017"},
+    {"sahne": 21, "cumleler": [3, 4, 5], "gorsel": 62, "baslik": null,
+     "etiket": "Quader et al. · MMWR · 2017"},
+    {"sahne": 27, "cumleler": [0], "baslik": {"satirlar": ["SELF-REPORTED", "DATA"]},
+     "etiket": "Quader et al. · MMWR · 2017"},
+    {"sahne": 54, "cumleler": [2], "etiket": null},
+    {"sahne": 64, "cumleler": [0],
+     "baslik": {"satirlar": ["LABEL FIRST"]}, "etiket": null}
+  ]
+}
