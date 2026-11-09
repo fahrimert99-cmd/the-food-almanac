@@ -1,0 +1,14 @@
+{
+  "baslik": ["WHY WALNUTS", "LOWER LDL?"],
+  "baslik_yt": "How Walnuts May Nudge LDL Cholesterol Down",
+  "aciklama": "A 2017 American Heart Association advisory says what you swap in for saturated fat matters. Here is how that applies to walnuts, and why a two-year trial calls it a steady habit, not a quick fix.",
+  "parcalar": [
+    {"sahne": 28, "cumleler": [0], "gorsel": 5, "baslik": null, "etiket": null},
+    {"sahne": 28, "cumleler": [1], "gorsel": 29, "baslik": {"satirlar": ["THE SWAP", "MATTERS"]}, "etiket": null},
+    {"sahne": 29, "cumleler": [0], "etiket": "Sacks et al. · Circulation · 2017"},
+    {"sahne": 29, "cumleler": [1], "gorsel": 6, "baslik": {"satirlar": ["MOSTLY", "UNSATURATED"]}, "etiket": null},
+    {"sahne": 30, "cumleler": [0], "etiket": "Sacks et al. · Circulation · 2017"},
+    {"sahne": 30, "cumleler": [1], "gorsel": 42, "baslik": {"satirlar": ["WHAT YOU SWAP", "IN MATTERS"]}, "etiket": null},
+    {"sahne": 50, "cumleler": [2, 3], "baslik": {"satirlar": ["A STEADY", "HABIT"], "vurgu": "2 YEARS", "not": "of daily walnuts in trial"}, "etiket": "Rajaram et al. · Circulation · 2021"}
+  ]
+}
