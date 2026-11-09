@@ -170,6 +170,16 @@ def _sahneler(slug, ses):
     return {z["id"]: z for z in zaman["sahneler"]}
 
 
+def _yedek_gorsel(klasor, hedef):
+    """images/ içinde hedef numaraya en yakın mevcut sahne görseli: (yol, numara)."""
+    import re
+    var = sorted(int(m.group(1)) for f in os.listdir(klasor) if (m := re.fullmatch(r"(\d+)\.jpg", f)))
+    if not var:
+        raise SystemExit(f"{klasor} içinde hiç sahne görseli yok")
+    n = min(var, key=lambda x: (abs(x - hedef), x))
+    return os.path.join(klasor, f"{n:02d}.jpg"), n
+
+
 def _gorsel_no(p):
     return p.get("gorsel", p["sahne"])           # görsel başka bir sahneden alınabilir (uzun bölümü bölmek için)
 
@@ -351,6 +361,11 @@ def uret(slug, no=1):
                    if os.path.exists(d)), None)
         dikey = bool(dg)                              # NVIDIA ile üretilmiş dikey görsel varsa kırpma gerekmez
         g = dg or os.path.join(y["gorsel"], f"{gn:02d}.jpg")
+        if not os.path.exists(g):
+            # Görseli olmayan sahne (grafik/şema) seçilmiş ve dikey görsel de üretilememiş (görsel kotası): Shorts düşmesin,
+            # en yakın numaralı mevcut sahne görseli kullanılsın.
+            g, gn = _yedek_gorsel(y["gorsel"], p["sahne"] if gn != p["sahne"] else gn)
+            O.log(f"! parça {pi + 1}: görsel yok, yerine sahne {gn} görseli kullanıldı")
         kutu, _ = H.konu_kutusu(g)
         shutil.copy(g, os.path.join(pub, f"{gn:02d}.jpg"))
         bas = t
