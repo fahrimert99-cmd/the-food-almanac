@@ -1,5 +1,5 @@
 {
-  "aktif": "hidden-sodium",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -231,7 +231,7 @@
     },
     "hidden-sodium": {
       "slot": "2027-02-19T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-09T12:19:37Z",
       "sahne_deneme": 0
     }
