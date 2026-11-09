@@ -1,0 +1,652 @@
+{
+  "slug": "hidden-sodium",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Hidden Sodium: Where Most Salt Comes From",
+  "yorum": "Before today, how much of your salt did you think came from the shaker? Have you ever compared the sodium on two brands of bread or soup, and did anything surprise you?",
+  "aciklama_giris": "In a study of 450 American adults, about 71 percent of the sodium they ate was added to food outside the home, by food makers and restaurants, and only about 5 percent came from the salt shaker. National CDC data point the same way: bread, pizza, sandwiches, deli meat and soup are among the biggest sources, and most of it comes from store-bought and restaurant food.\n\nIn this video we look at what those studies measured, how to read the sodium numbers and 'low sodium' claims on a Nutrition Facts label, and what two trials in older adults found when people ate less sodium: a 2023 crossover trial in adults aged 50 to 75, and the TONE trial in adults aged 60 to 80. We also cover the limits of the evidence and five practical ways to cut back. If you take blood pressure medicine or have kidney or heart disease, ask your doctor about your own sodium number.",
+  "kaynaklar": [
+    "U.S. Food and Drug Administration. Sodium in Your Diet: Using the Nutrition Facts Label to Reduce Your Intake (Daily Value for sodium, 2,300 mg; percent Daily Value guide).",
+    "American Heart Association. How much sodium should I eat per day? (ideal limit of 1,500 mg a day for most adults).",
+    "Harnack LJ, Cogswell ME, et al. Sources of Sodium in US Adults From 3 Geographic Regions. Circulation. 2017;135(19):1775-1783. doi:10.1161/CIRCULATIONAHA.116.024446. PMID 28483828.",
+    "Quader ZS, et al. Sodium Intake Among Persons Aged 2 Years and Older - United States, 2013-2014. MMWR Morbidity and Mortality Weekly Report. 2017;66(12):324-328.",
+    "U.S. Food and Drug Administration. Nutrient content claims for sodium content of foods, 21 CFR 101.61 (sodium free, very low sodium, low sodium, reduced sodium, light in sodium).",
+    "Gupta DK, Lewis CE, Varady KA, et al. Effect of Dietary Sodium on Blood Pressure: A Crossover Trial. JAMA. 2023;330(23):2258-2266. doi:10.1001/jama.2023.23651.",
+    "Whelton PK, Appel LJ, Espeland MA, et al. Sodium reduction and weight loss in the treatment of hypertension in older persons: a randomized controlled trial of nonpharmacologic interventions in the elderly (TONE). JAMA. 1998;279(11):839-846."
+  ],
+  "kapak": {
+    "satirlar": [
+      "HIDDEN",
+      "SALT?"
+    ],
+    "vurgu": "71%",
+    "vurgu_alt": "OUTSIDE",
+    "gorsel": "a huge sandwich stacked with sliced deli meat and cheese on two slices of bread in front, a bowl of steaming soup and a slice of pizza tightly overlapping behind it, a small glass salt shaker at the side, an upper-arm sphygmomanometer cuff draped over the edge"
+  },
+  "etiketler": [
+    "hidden sodium",
+    "sodium in food",
+    "where does salt come from",
+    "high sodium foods",
+    "low sodium label",
+    "blood pressure",
+    "salt and blood pressure",
+    "processed food sodium",
+    "nutrition facts label",
+    "healthy eating after 60"
+  ],
+  "seslendirme_duzelt": {
+    "CDC": "C D C",
+    "FDA": "F D A",
+    "TONE": "tone"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Not the salt shaker",
+      "metin": "In a study of 450 American adults, only about five percent of their sodium came from the salt shaker.",
+      "gorsel": "a glass salt shaker on a wooden kitchen table beside a loaf of sliced bread and a small bowl of soup, soft morning light from a window",
+      "etiket": "Harnack et al. · Circulation · 2017",
+      "baslik": {
+        "satirlar": [
+          "THE SHAKER"
+        ],
+        "vurgu": "5%",
+        "not": "of the sodium these adults ate"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "About seventy-one percent was added to the food before it ever reached them. And the biggest sources aren't the ones you'd guess.",
+      "gorsel": "an open cardboard box overflowing with packaged foods: a loaf of bread, a boxed pizza, tin cans of soup and sliced deli meat wrapped in paper, on a market counter",
+      "baslik": {
+        "satirlar": [
+          "ALREADY IN",
+          "THE FOOD"
+        ],
+        "vurgu": "71%"
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know the top sources, how to read a label, and what cutting back did for blood pressure.",
+      "gorsel": "a shopping basket holding a loaf of bread, a can of soup and a wrapped sandwich, an upper-arm sphygmomanometer cuff resting beside the basket"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what sodium is, and why it matters.",
+      "gorsel": "an antique brass magnifying glass held over a salt shaker and a slice of bread on a wooden bread board"
+    },
+    {
+      "id": 5,
+      "metin": "Salt and sodium aren't quite the same thing. Table salt is made of sodium and chloride. It's the sodium that food labels count, and the sodium that affects blood pressure.",
+      "gorsel": "a small heap of coarse salt crystals on a dark slate dish, a glass salt shaker beside it, a magnified circular inset showing cube-shaped crystals",
+      "baslik": {
+        "satirlar": [
+          "SALT",
+          "VS SODIUM"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Your body needs a little sodium to keep fluids balanced and nerves and muscles working. The trouble is that most Americans eat far more than they need.",
+      "gorsel": "a simple kitchen scale with a small pile of salt in one pan, a loaf of bread and a bowl of soup on a table behind it"
+    },
+    {
+      "id": 7,
+      "metin": "The average American eats about 3,400 milligrams of sodium a day. The usual limit is under 2,300 milligrams, which is about one level teaspoon of table salt.",
+      "gorsel": "a level teaspoon of salt beside a glass salt shaker on a wooden table, a sandwich and a bowl of soup in the background",
+      "etiket": "Quader et al. · MMWR · 2017",
+      "baslik": {
+        "satirlar": [
+          "LIMIT:",
+          "2,300 MG"
+        ],
+        "not": "about one teaspoon of salt a day"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "The American Heart Association says 1,500 milligrams a day is the ideal for most adults. Your own doctor may set a different number for you.",
+      "gorsel": "a red heart symbol beside a small salt shaker on a table, a stethoscope curled next to them"
+    },
+    {
+      "id": 9,
+      "metin": "Why does it matter? Extra sodium makes the body hold on to more water, which can raise the pressure inside your blood vessels. High blood pressure is a leading risk factor for heart disease and stroke.",
+      "gorsel": "a tube-shaped vessel with small red discs flowing inside, a round pressure gauge beside it, a salt shaker in the corner",
+      "baslik": {
+        "satirlar": [
+          "SODIUM AND",
+          "PRESSURE"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "bolum": "The three-city study",
+      "tip": "kart",
+      "metin": "So where does all that sodium come from? Researchers decided to measure it, rather than guess.",
+      "kart": {
+        "ust": "THE STUDY",
+        "baslik": "Measuring every grain",
+        "alt": "Harnack et al. · Circulation · 2017"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "They recruited 450 adults in three places: Birmingham, Alabama; Palo Alto, California; and the Minneapolis and St. Paul area. There were equal numbers of women and men, from four racial and ethnic groups.",
+      "gorsel": "a quiet clinic desk with a notebook, a pencil and three small wooden houses standing in a row, a salt shaker beside them"
+    },
+    {
+      "id": 12,
+      "metin": "Each person described what they ate in four separate 24-hour recalls. They also saved a duplicate sample of any salt they added at the table or while cooking at home, so the researchers could measure it directly.",
+      "gorsel": "a small glass jar of salt next to a salt shaker, a wooden spoon and a cooking pot on a stove, an open notebook with blank pages",
+      "baslik": {
+        "satirlar": [
+          "EVERY SOURCE",
+          "COUNTED"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "On average, these adults ate about 3,500 milligrams of sodium a day. That's well above the recommended limit.",
+      "gorsel": "a tall stack of sliced bread, a bowl of soup and a slice of pizza on a table, a salt shaker standing small in front of them",
+      "baslik": {
+        "satirlar": [
+          "3,500 MG"
+        ],
+        "not": "average daily sodium in this study"
+      }
+    },
+    {
+      "id": 14,
+      "bolum": "Where it really comes from",
+      "tip": "grafik",
+      "metin": "Here's where it came from. About 71 percent was added to food outside the home, by food makers and restaurants. About 14 percent was naturally in the food. Home cooking added about 6 percent, and the table shaker about 5 percent.",
+      "grafik": {
+        "baslik": "Where the sodium came from",
+        "alt": "Share of total daily sodium intake",
+        "cubuklar": [
+          {
+            "etiket": "Added outside home",
+            "deger": 70.9,
+            "metin": "71%"
+          },
+          {
+            "etiket": "Naturally in food",
+            "deger": 14.2,
+            "metin": "14%"
+          },
+          {
+            "etiket": "Home cooking",
+            "deger": 5.6,
+            "metin": "6%"
+          },
+          {
+            "etiket": "Table shaker",
+            "deger": 4.9,
+            "metin": "5%"
+          }
+        ],
+        "kaynak": "Harnack et al., Circulation 2017 · 450 adults in three US regions"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Tap water and supplements each added less than half of one percent. So the biggest lever isn't in your hand when you cook. It's in what you buy and order.",
+      "gorsel": "a hand-drawn market scene: a baker's shelf of bread loaves, a deli counter with sliced meats and a rack of canned soups, a salt shaker small on a nearby table",
+      "baslik": {
+        "satirlar": [
+          "WHAT YOU BUY",
+          "AND ORDER"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "metin": "That doesn't make the shaker innocent. It just means the shaker is a small part of a much bigger picture.",
+      "gorsel": "a small glass salt shaker in the foreground, a large crowded dinner table of bread, pizza and soup blurred behind it"
+    },
+    {
+      "id": 17,
+      "metin": "This was a convenience sample in three cities, with more college graduates than the country as a whole. So exact percentages may differ elsewhere. But national data tell a very similar story. And in the practical part, I'll show you a ten-second trick for spotting the saltier choice.",
+      "gorsel": "a map-like engraving of the United States with three small pins, a magnifying glass resting on it, a salt shaker beside the map"
+    },
+    {
+      "id": 18,
+      "bolum": "The usual suspects",
+      "tip": "kart",
+      "metin": "To see which foods matter most, we turn to the Centers for Disease Control and Prevention.",
+      "kart": {
+        "ust": "THE CDC DATA",
+        "baslik": "The top ten sources",
+        "alt": "National survey · 8,067 people · 2013 to 2014"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "In a 2017 report, CDC scientists used a national nutrition survey of more than 8,000 people to track what Americans eat. Average sodium intake was 3,409 milligrams a day, not even counting table salt.",
+      "gorsel": "a long crowded dining table seen from above with many different dishes, bread, pizza, sandwiches, soup and cheese, a salt shaker at the end",
+      "etiket": "Quader et al. · MMWR · 2017"
+    },
+    {
+      "id": 20,
+      "metin": "Just ten kinds of food supplied 44 percent of all the sodium. And twenty-five kinds of food supplied 70 percent.",
+      "gorsel": "ten different foods arranged in a tight group on a table: bread, pizza, a sandwich, sliced deli meat, soup, a taco, chips, chicken, cheese and an omelet",
+      "baslik": {
+        "satirlar": [
+          "10 FOODS"
+        ],
+        "vurgu": "44%",
+        "not": "of all the sodium Americans eat"
+      }
+    },
+    {
+      "id": 21,
+      "tip": "grafik",
+      "metin": "Here are the top five. Yeast breads, 6.2 percent. Pizza, 5.9. Sandwiches, 5.7. Cold cuts and cured meats, 5.4. And soups, 3.8 percent.",
+      "grafik": {
+        "baslik": "Top five food sources of sodium",
+        "alt": "Share of all sodium eaten, ages 2 and up",
+        "cubuklar": [
+          {
+            "etiket": "Yeast breads",
+            "deger": 6.2,
+            "metin": "6.2%"
+          },
+          {
+            "etiket": "Pizza",
+            "deger": 5.9,
+            "metin": "5.9%"
+          },
+          {
+            "etiket": "Sandwiches",
+            "deger": 5.7,
+            "metin": "5.7%"
+          },
+          {
+            "etiket": "Cold cuts, cured meats",
+            "deger": 5.4,
+            "metin": "5.4%"
+          },
+          {
+            "etiket": "Soups",
+            "deger": 3.8,
+            "metin": "3.8%"
+          }
+        ],
+        "kaynak": "Quader et al., MMWR 2017 · NHANES 2013 to 2014 · 8,067 people aged 2 and up"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Notice what's number one. Bread. One slice may not taste salty, but bread is eaten so often that it adds up faster than almost anything else.",
+      "gorsel": "a rustic loaf of bread with several slices cut and fanned out on a bread board, a salt shaker small beside it",
+      "baslik": {
+        "satirlar": [
+          "NUMBER ONE:",
+          "BREAD"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "The rest of the top ten includes burritos and tacos, savory snacks, pieces of chicken, cheese, and eggs and omelets. Many are everyday foods, not just obvious ones like chips.",
+      "gorsel": "a taco and a burrito, a small bowl of chips, a roast chicken leg, a wedge of cheese and an omelet on a plate, arranged tightly together"
+    },
+    {
+      "id": 24,
+      "metin": "Remember, a ranking reflects both how much sodium a food has and how often Americans eat it. That's why a humble sandwich can outrank a bag of chips.",
+      "gorsel": "a balance scale with a sandwich on one pan and a bag of chips on the other, tipped toward the sandwich, a salt shaker at its base"
+    },
+    {
+      "id": 25,
+      "metin": "The survey also asked where the food came from. About 61 percent came from stores. About 17 percent came from fast food and pizza places, and about 11 percent from restaurants with waitstaff.",
+      "gorsel": "a supermarket aisle with shelves of bread, canned soup and packaged deli meat on the left, a small restaurant table with a menu stand on the right",
+      "baslik": {
+        "satirlar": [
+          "MOSTLY",
+          "STORE-BOUGHT"
+        ],
+        "vurgu": "61%"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Per calorie, restaurant food was saltier. Sit-down restaurant meals averaged about 2,120 milligrams of sodium per 1,000 calories, compared with about 1,560 for store-bought food.",
+      "gorsel": "a restaurant dinner plate with a steak, a roll and a side of potatoes beside a smaller home-cooked plate of the same foods, a salt shaker between them"
+    },
+    {
+      "id": 27,
+      "metin": "One caveat: these meals were self-reported, and the survey left out table salt, which is estimated at five to six percent. Even so, the message is clear. Packaged and restaurant food are where most sodium comes from.",
+      "gorsel": "a notebook with blank lines and a pencil beside a bowl of soup and a slice of pizza on a table"
+    },
+    {
+      "id": 28,
+      "bolum": "Reading the label",
+      "tip": "kart",
+      "metin": "So how do you spot the salty choices at the store? Let's decode the label.",
+      "kart": {
+        "ust": "AT THE STORE",
+        "baslik": "What 'low sodium' means",
+        "alt": "FDA rules for the label"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "Sodium is listed on every Nutrition Facts label, in milligrams, per serving. The quickest check is the percent daily value next to it.",
+      "gorsel": "a canned soup tin with a plain blank wrapper held in a hand next to a bowl of soup, a magnifying glass resting on the table",
+      "baslik": {
+        "satirlar": [
+          "SODIUM",
+          "PER SERVING"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "The FDA's rule of thumb is simple. Five percent daily value or less per serving is low. Twenty percent or more is high.",
+      "gorsel": "a small bowl of soup beside a loaf of bread, a green flag on one side and a red flag on the other, a salt shaker in the middle",
+      "etiket": "FDA · Sodium in Your Diet",
+      "baslik": {
+        "satirlar": [
+          "5% = LOW",
+          "20% = HIGH"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "The daily value for sodium is 2,300 milligrams. So a food at twenty percent has about 460 milligrams in a single serving.",
+      "gorsel": "a bowl of soup next to a tiny pile of salt and a teaspoon on a wooden table"
+    },
+    {
+      "id": 32,
+      "metin": "Then there are the claims on the front. Low sodium has a legal meaning: 140 milligrams or less per serving. Very low sodium means 35 milligrams or less. Sodium free means less than 5 milligrams.",
+      "gorsel": "three small bowls of soup in a row, one full, one half full and one nearly empty, a salt shaker beside them",
+      "etiket": "FDA · 21 CFR 101.61",
+      "baslik": {
+        "satirlar": [
+          "LOW SODIUM:",
+          "140 MG"
+        ],
+        "not": "or less per serving"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Reduced sodium means at least 25 percent less than the regular version. Light in sodium means at least half as much. Those are comparisons, not promises that the food is low.",
+      "gorsel": "two identical cans of soup side by side with plain blank wrappers, a tall one on the left and a slightly shorter one on the right, a ruler between them"
+    },
+    {
+      "id": 34,
+      "metin": "A reduced sodium soup that started out very high can still be a high sodium soup. Check the milligrams, not just the claim on the front.",
+      "gorsel": "a tall stack of soup cans with plain blank wrappers on a market shelf, one can lifted down and held up in a hand",
+      "baslik": {
+        "satirlar": [
+          "CHECK THE",
+          "MILLIGRAMS"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "No salt added means no salt was added during processing. The food can still contain sodium on its own. And watch the serving size. If you eat two servings from the can, double the numbers.",
+      "gorsel": "an open can of soup, a ladle and two small bowls of soup on a kitchen counter"
+    },
+    {
+      "id": 36,
+      "bolum": "What cutting back does",
+      "tip": "kart",
+      "metin": "Does eating less sodium actually help? Two trials in older adults give us a good look.",
+      "kart": {
+        "ust": "THE TRIALS",
+        "baslik": "Does cutting salt help?",
+        "alt": "Adults aged 50 to 80"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "In a 2023 trial published in JAMA, Gupta and colleagues studied 213 adults aged 50 to 75. The median age was 61, and almost half had high blood pressure.",
+      "gorsel": "a doctor's desk with a sphygmomanometer cuff, a stethoscope and a clipboard with blank pages, a salt shaker at the edge",
+      "etiket": "Gupta et al. · JAMA · 2023"
+    },
+    {
+      "id": 38,
+      "metin": "After a week of their usual diet, everyone ate a high-sodium diet for a week and a low-sodium diet for a week, in random order. A 24-hour blood pressure monitor was worn at the end of each.",
+      "gorsel": "two bowls on a table, one overflowing with salt and the other with a small pinch, a wall calendar showing seven crossed days above each",
+      "baslik": {
+        "satirlar": [
+          "ONE WEEK",
+          "EACH WAY"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "The low-sodium diet was designed to contain only about 500 milligrams a day, which is far lower than most people eat.",
+      "gorsel": "a plate of fresh vegetables, plain rice and grilled fish with a salt shaker pushed to the far side of the table"
+    },
+    {
+      "id": 40,
+      "tip": "grafik",
+      "metin": "On the low-sodium week, the top blood pressure number was about 8 millimeters of mercury lower than on the high-sodium week in the first test period, and 7 lower in the second. In the group that ate low sodium first, the drop compared with their usual diet was about 5.",
+      "grafik": {
+        "baslik": "Drop in systolic blood pressure",
+        "alt": "24-hour ambulatory, low-sodium diet, in mmHg",
+        "cubuklar": [
+          {
+            "etiket": "vs high sodium, period 1",
+            "deger": 8,
+            "metin": "−8"
+          },
+          {
+            "etiket": "vs high sodium, period 2",
+            "deger": 7,
+            "metin": "−7"
+          },
+          {
+            "etiket": "vs usual diet (low-first group)",
+            "deger": 5,
+            "metin": "−5"
+          }
+        ],
+        "kaynak": "Gupta et al., JAMA 2023 · 213 adults aged 50 to 75 · 1 week per diet"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "About three in four people had a lower pressure on the low-sodium diet. And the drop was about the same, near 8 millimeters of mercury, in people who took blood pressure medicine and in those who didn't.",
+      "gorsel": "an upper-arm sphygmomanometer cuff on a table beside a pill organizer box and a glass of water, a loaf of bread and a salt shaker in the background",
+      "baslik": {
+        "satirlar": [
+          "3 IN 4",
+          "IMPROVED"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "But each diet lasted only a week, and 500 milligrams is very hard to keep up. So the trial shows that sodium moves blood pressure quickly, not that this exact diet is practical for life.",
+      "gorsel": "a wall calendar with a single week circled, a bowl of plain rice and vegetables on the table below it"
+    },
+    {
+      "id": 43,
+      "metin": "An older trial asked a different question. In the TONE trial, published in 1998, 975 adults aged 60 to 80 had high blood pressure that was controlled with medicine.",
+      "gorsel": "four armchairs around a small table with a teapot, a pill organizer box and a salt shaker, a window with soft light",
+      "etiket": "Whelton et al. · JAMA · 1998"
+    },
+    {
+      "id": 44,
+      "metin": "After three months of coaching, and under close supervision from the study team, their medicine was withdrawn. Some groups were coached to cut sodium. Others got usual care.",
+      "gorsel": "a clinic room with a coach's table, a plate of fresh vegetables and grilled fish, a sphygmomanometer cuff and a notebook with blank pages"
+    },
+    {
+      "id": 45,
+      "metin": "The goal was 1,800 milligrams of sodium or less. Only about 36 percent of the sodium group reached it by nine months, compared with 11 percent of the others. Even so, over the next 30 months, they did better.",
+      "gorsel": "a long road on a gentle hill with a small milestone stone at each bend, a salt shaker standing at the start",
+      "baslik": {
+        "satirlar": [
+          "ONLY 36%",
+          "HIT THE GOAL"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Compared with usual care, the sodium group was about a third less likely to reach a combined endpoint: pressure creeping back up, medicine restarted, or a heart or circulation event.",
+      "gorsel": "an upper-arm sphygmomanometer cuff and a round pressure gauge with a calm needle, a plate of fresh vegetables and fish beside them",
+      "etiket": "Whelton et al. · JAMA · 1998",
+      "baslik": {
+        "satirlar": [
+          "ABOUT A THIRD",
+          "FEWER PROBLEMS"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Please note, those medicines were stopped by the research team, with close monitoring. Never stop or lower a blood pressure medicine on your own because you cut back on salt.",
+      "gorsel": "a pill organizer box with a closed lid on a table, a doctor's notebook and a stethoscope beside it",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What don't we know yet?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What we don't know",
+        "alt": "Limits of the evidence"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "These trials measured blood pressure and whether it stayed controlled. They were not built to prove fewer heart attacks or strokes. In TONE, heart and circulation events did not differ significantly between groups.",
+      "gorsel": "a quiet research desk with a stack of journals with blank covers, a magnifying glass and a cup of tea with rising steam"
+    },
+    {
+      "id": 50,
+      "metin": "People also differ. In the 2023 trial, about three in four improved on the low-sodium diet, which also means about one in four did not.",
+      "gorsel": "four identical bowls of soup in a row, three with steam rising and one without, a salt shaker in the foreground",
+      "baslik": {
+        "satirlar": [
+          "PEOPLE",
+          "DIFFER"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "And these numbers describe eating patterns, not single meals. One salty restaurant dinner won't undo anything. It's the pattern that counts.",
+      "gorsel": "a restaurant table set for dinner with a bread basket and a bowl of soup, a calendar with many days drawn behind it"
+    },
+    {
+      "id": 52,
+      "metin": "Some people, such as those with heart failure or kidney disease, get their own sodium targets from their care team. If you have one, follow that number instead of the general ones.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a glass of water, a salt shaker pushed to the edge"
+    },
+    {
+      "id": 53,
+      "bolum": "How to cut back",
+      "tip": "kart",
+      "metin": "So what can you do? Here are five practical moves, starting at the store.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five simple moves",
+        "alt": "Start at the store, not the shaker"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "One. Compare brands. Pick up two kinds of the same food, like bread, canned soup or deli turkey, and compare the sodium per serving. That's the ten-second trick I promised, and it costs nothing.",
+      "gorsel": "two loaves of bread with plain blank wrappers side by side on a shelf, a hand reaching for one, a magnifying glass between them",
+      "baslik": {
+        "satirlar": [
+          "COMPARE",
+          "TWO BRANDS"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "Two. Watch the big four: bread, deli meat, soup and pizza. Choose lower sodium versions, or eat smaller portions, since these are among the top sources.",
+      "gorsel": "four foods in a tight group on a table: a loaf of bread, sliced deli meat, a bowl of soup and a slice of pizza, a salt shaker small beside them"
+    },
+    {
+      "id": 56,
+      "metin": "Three. Cook from scratch more often. When you start with fresh ingredients, you control what goes in. Remember, the home shaker is only about five percent, so using less is a bonus, not the main event.",
+      "gorsel": "a kitchen counter with fresh vegetables, a wooden cutting board, a pot on the stove and a salt shaker standing small to one side"
+    },
+    {
+      "id": 57,
+      "metin": "Four. At restaurants, ask for sauces and dressings on the side, and consider taking half your meal home. In the national data, restaurant food was the saltiest per calorie.",
+      "gorsel": "a restaurant table with a plate of grilled fish and vegetables, a small cup of sauce on the side and a takeout box open beside it"
+    },
+    {
+      "id": 58,
+      "metin": "Five. Build flavor in other ways. Try lemon, garlic, herbs and pepper before reaching for salt.",
+      "gorsel": "a lemon cut in half, a whole garlic bulb, a bundle of fresh herbs and a pepper mill on a wooden board"
+    },
+    {
+      "id": 59,
+      "metin": "A word on salt substitutes. Many are made with potassium. If you have kidney disease or take certain blood pressure medicines, ask your doctor or pharmacist before using one.",
+      "gorsel": "a small shaker of salt substitute next to a pharmacist's counter with a pill bottle and a paper bag",
+      "baslik": {
+        "satirlar": [
+          "ASK FIRST"
+        ],
+        "not": "about salt substitutes"
+      }
+    },
+    {
+      "id": 60,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Start with the label",
+        "alt": "Not with the shaker"
+      }
+    },
+    {
+      "id": 61,
+      "metin": "Most of the sodium Americans eat is already in packaged and restaurant food. In a three-city study, about 71 percent was added outside the home, and only about 5 percent came from the table.",
+      "gorsel": "a cardboard box of packaged foods beside a small glass salt shaker on a wooden table"
+    },
+    {
+      "id": 62,
+      "metin": "Bread, pizza, sandwiches, deli meat and soup top the CDC list. On a label, five percent daily value or less is low, and twenty percent or more is high.",
+      "gorsel": "a loaf of bread, a slice of pizza, a sandwich, sliced deli meat and a bowl of soup arranged tightly on a table, a magnifying glass above them"
+    },
+    {
+      "id": 63,
+      "metin": "In adults aged 50 to 75, a week of low sodium lowered the top blood pressure number by about 7 to 8 millimeters of mercury, compared with a high-sodium week. The evidence is strong for blood pressure, and shorter on long-term outcomes.",
+      "gorsel": "an upper-arm sphygmomanometer cuff and a round gauge with a calm needle beside a plate of fresh vegetables and fish"
+    },
+    {
+      "id": 64,
+      "metin": "Start with the label, not the shaker, and ask your doctor what sodium number is right for you.",
+      "gorsel": "a hand holding a packaged loaf of bread with a plain blank wrapper up to the light, a small salt shaker on the shelf below"
+    },
+    {
+      "id": 65,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
