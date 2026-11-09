@@ -1,5 +1,5 @@
 {
-  "aktif": "red-wine-heart",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -219,7 +219,7 @@
     },
     "red-wine-heart": {
       "slot": "2027-02-12T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-08T23:25:48Z",
       "sahne_deneme": 0
     }
