@@ -1,0 +1,635 @@
+{
+  "slug": "food-expiration-dates",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Best By vs. Use By: What Date Labels Mean",
+  "yorum": "Do you follow the date on your food, or do you go by how it looks and smells? Has a date label ever made you throw out something that turned out to be fine?",
+  "aciklama_giris": "Apart from infant formula, no federal regulation requires a date on food in the United States. The USDA recommends the phrase 'best if used by' and describes it as a quality date, yet in a 2025 national survey of 2,069 adults, 43 percent said they always or usually throw food out near its date. ReFED estimates that this confusion wastes about three billion pounds of food a year.\n\nIn this video we look at what 'best if used by', 'sell by', 'use by' and 'freeze by' mean, what surveys show about how often they are misread, and where a date is not the whole story: Listeria, a germ that can grow in the refrigerator and that matters more for adults 65 and older. We finish with five practical habits and the honest limits of the evidence.",
+  "kaynaklar": [
+    "USDA Food Safety and Inspection Service. Food Product Dating: updated fact sheet and response to comments. Federal Register 84 FR 14083. 9 April 2019. https://www.govinfo.gov/content/pkg/FR-2019-04-09/html/2019-06988.htm",
+    "Newsome R, Balestrini CG, Baum MD, Corby J, Fisher W, Goodburn K, Labuza TP, Prince G, Thesmar HS, Yiannas F. Applications and perceptions of date labeling of food. Comprehensive Reviews in Food Science and Food Safety. 2014;13(4):745-769. DOI 10.1111/1541-4337.12086.",
+    "Neff RA, Spiker M, Rice C, Schklair A, Greenberg S, Leib EB. Misunderstood food date labels and reported food discards: a survey of U.S. consumer attitudes and behaviors. Waste Management. 2019;86:123-132. DOI 10.1016/j.wasman.2019.01.023. PMID 30770169.",
+    "ReFED. Confusion over food date labels has grown, according to new national survey (2025 national survey of 2,069 US adults fielded by The Harris Poll for the Johns Hopkins Bloomberg School of Public Health). https://refed.org/articles/confusion-over-food-date-labels-has-grown-according-to-new-national-survey",
+    "Silk BJ, et al. Invasive listeriosis in the Foodborne Diseases Active Surveillance Network (FoodNet), 2004-2009: further targeted prevention needed for higher-risk groups. Clinical Infectious Diseases. 2012;54(Suppl 5):S396-S404. DOI 10.1093/cid/cis268. PMID 22572660.",
+    "Centers for Disease Control and Prevention. Listeria: risk factors; About Listeria; Listeria prevention. https://www.cdc.gov/listeria/",
+    "Centers for Disease Control and Prevention. Listeria outbreak linked to meats sliced at delis, 2024 (final notice, updated 31 January 2025). https://www.cdc.gov/listeria/outbreaks/delimeats-7-24/index.html",
+    "U.S. Food and Drug Administration. Listeria (Listeriosis). https://www.fda.gov/food/foodborne-pathogens/listeria-listeriosis"
+  ],
+  "kapak": {
+    "satirlar": [
+      "EXPIRED",
+      "OR FINE?"
+    ],
+    "vurgu": "43%",
+    "vurgu_alt": "TOSS",
+    "gorsel": "a large close-up milk carton with a yogurt cup and a packet of sliced deli ham overlapping in front of it, a small blank rectangular date sticker on each package, a round wall clock with a blank face behind them"
+  },
+  "etiketler": [
+    "best by date",
+    "use by vs best by",
+    "expiration dates",
+    "food date labels",
+    "is food safe after expiration date",
+    "food waste",
+    "listeria",
+    "deli meat safety",
+    "food safety for seniors",
+    "food labels explained"
+  ],
+  "seslendirme_duzelt": {
+    "USDA": "U S D A",
+    "FDA": "F D A",
+    "CDC": "C D C",
+    "FSIS": "F S I S",
+    "ReFED": "ree fed",
+    "Listeria": "lis stear ee uh",
+    "listeriosis": "lis stear ee oh sis",
+    "monocytogenes": "mono sigh TOJ uh neez"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Who requires a date",
+      "metin": "No federal rule requires a date on your milk, yogurt, or deli ham. Only infant formula has one. In a 2025 survey of 2,069 adults, 43 percent said they always or usually toss food near its date.",
+      "gorsel": "a refrigerator shelf close up with a milk carton, a yogurt cup and a packet of sliced deli ham, a small blank date sticker on each package",
+      "baslik": {
+        "satirlar": [
+          "NO FEDERAL",
+          "DATE RULE"
+        ],
+        "vurgu": "43%",
+        "not": "of adults always or usually toss food near its date"
+      },
+      "etiket": "ReFED / Harris Poll · 2025 · 2,069 adults"
+    },
+    {
+      "id": 2,
+      "metin": "But a few foods are different, especially after 65.",
+      "gorsel": "a packet of sliced deli ham and a wedge of soft cheese on a wooden board, a round brass kitchen thermometer beside them",
+      "baslik": {
+        "satirlar": [
+          "A FEW FOODS",
+          "ARE DIFFERENT"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know which dates matter.",
+      "gorsel": "an open refrigerator with a milk carton, a yogurt cup and a packet of sliced deli ham on the shelves, soft light falling from inside"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with who decides what those dates say.",
+      "gorsel": "a supermarket dairy aisle with rows of milk cartons and yogurt cups, a small blank date sticker on each, a shopping basket in the foreground"
+    },
+    {
+      "id": 5,
+      "bolum": "Decoding the phrases",
+      "tip": "kart",
+      "metin": "Walk down any grocery aisle and you'll see a handful of phrases: best if used by, sell by, use by, and freeze by.",
+      "kart": {
+        "ust": "THE LABELS",
+        "baslik": "Four phrases on one shelf",
+        "alt": "Best if used by · Sell by · Use by · Freeze by"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Here is the key fact. Except for infant formula, no federal regulation requires a date on food. Manufacturers add dates voluntarily, mostly to describe quality.",
+      "gorsel": "a baby bottle and a tin of infant formula with a scoop beside a milk carton and a yogurt cup, the formula tin placed in front and larger",
+      "etiket": "USDA FSIS · Federal Register · 2019",
+      "baslik": {
+        "satirlar": [
+          "ONE EXCEPTION:",
+          "INFANT FORMULA"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Best if used by is the phrase the USDA now recommends. In a 2019 notice, the agency said research shows people understand it as a sign of quality rather than safety. About 70 percent of adults surveyed got that right.",
+      "gorsel": "a yogurt cup with a small blank date sticker on its lid, a spoon resting beside it and a round wall clock with a blank face behind",
+      "etiket": "USDA FSIS · Federal Register · 2019",
+      "baslik": {
+        "satirlar": [
+          "BEST IF",
+          "USED BY"
+        ],
+        "vurgu": "QUALITY",
+        "not": "the USDA's recommended phrase"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "So it means what it sounds like. The food should be at its best until then. The agency says food that is otherwise wholesome and safe should not be thrown out only because it is past the printed date.",
+      "gorsel": "a loaf of sliced bread in a paper bag on a kitchen counter, a small blank date sticker on the bag, morning light through a window"
+    },
+    {
+      "id": 9,
+      "metin": "Sell by is on the same list. The USDA describes it as one of the phrases makers use on a voluntary basis to describe quality dates, not a safety deadline.",
+      "gorsel": "a grocery shelf with several cartons of eggs and a few jars of preserves, each with a small blank date sticker, a price tag holder left empty"
+    },
+    {
+      "id": 10,
+      "metin": "Freeze by is a newer addition to the USDA's list. Some meat and poultry carry use or freeze by labels, which one trade group says give shoppers a clear alternative to throwing the food away.",
+      "gorsel": "a raw chicken fillet packed on a tray beside a freezer bag, a frosted freezer drawer open behind them",
+      "baslik": {
+        "satirlar": [
+          "FREEZE BY"
+        ],
+        "not": "an alternative to the trash, says a trade group"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Use by is the tricky one. Federal regulators have not defined it. They recommend it, but do not require it, on certain refrigerated ready-to-eat foods. We'll come back to why that matters.",
+      "gorsel": "a packet of sliced deli turkey in a refrigerator drawer, a small blank date sticker on the packet, cold mist drawn as fine lines",
+      "etiket": "USDA FSIS · Federal Register · 2019",
+      "baslik": {
+        "satirlar": [
+          "USE BY"
+        ],
+        "not": "not defined by federal regulators"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Surveys show how easily this goes wrong. In a 2016 national survey of 1,029 adults by Neff and colleagues, best if used by was mostly read as quality, while use by and expires on were mostly read as safety.",
+      "gorsel": "a kitchen table with a milk carton, a yogurt cup and a pair of round eyeglasses resting on a folded napkin",
+      "etiket": "Neff et al. · Waste Management · 2019"
+    },
+    {
+      "id": 13,
+      "metin": "In that same survey, 84 percent said they discard food near its package date at least occasionally.",
+      "gorsel": "a hand dropping a yogurt cup into a kitchen bin, a second yogurt cup still sitting on the counter beside a milk carton",
+      "etiket": "Neff et al. · Waste Management · 2019 · n=1,029",
+      "baslik": {
+        "satirlar": [
+          "84% TOSS"
+        ],
+        "not": "food near its date at least occasionally"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "A 2014 expert review in Comprehensive Reviews in Food Science and Food Safety found the same problem from the industry side. Inconsistent terms mean both businesses and shoppers misread dates, which leads to avoidable waste.",
+      "gorsel": "a warehouse shelf with stacked cartons of milk and crates of yogurt cups, a pallet jack standing nearby",
+      "etiket": "Newsome et al. · Compr Rev Food Sci Food Saf · 2014"
+    },
+    {
+      "id": 15,
+      "metin": "More than one in three adults wrongly believed that the federal government regulates date labels. Another 26 percent weren't sure.",
+      "gorsel": "a tall marble government-style building with columns seen from a distance, a single milk carton in the foreground on a table",
+      "etiket": "Neff et al. · Waste Management · 2019 · n=1,029",
+      "baslik": {
+        "satirlar": [
+          "1 IN 3",
+          "GOT IT WRONG"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "bolum": "How much food is tossed",
+      "tip": "kart",
+      "metin": "So how much good food gets thrown out because of these dates? Let's look at what the surveys found.",
+      "kart": {
+        "ust": "THE COST",
+        "baslik": "Confusion has a price",
+        "alt": "Two national surveys · 2016 and 2025"
+      }
+    },
+    {
+      "id": 17,
+      "tip": "grafik",
+      "metin": "In a national survey of 2,069 adults in January 2025, the share who always or usually discard food near its date rose from 37 percent in 2016 to 43 percent. Those who think the government regulates labels rose from 36 to 44 percent.",
+      "grafik": {
+        "baslik": "Date-label habits and beliefs, 2016 and 2025",
+        "alt": "Share who toss food near its date, and share who think the government regulates labels",
+        "cubuklar": [
+          {
+            "etiket": "Toss · 2016",
+            "deger": 37,
+            "metin": "37%"
+          },
+          {
+            "etiket": "Toss · 2025",
+            "deger": 43,
+            "metin": "43%"
+          },
+          {
+            "etiket": "Regulated? · 2016",
+            "deger": 36,
+            "metin": "36%"
+          },
+          {
+            "etiket": "Regulated? · 2025",
+            "deger": 44,
+            "metin": "44%"
+          }
+        ],
+        "kaynak": "ReFED / Harris Poll 2025 vs. 2016 survey · 2,069 and 1,029 US adults, online"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "The researchers also asked about eight different labels. On average, 87 percent of people said they knew what the labels meant, but only 53 percent answered correctly.",
+      "gorsel": "a row of three kitchen jars and a milk carton on a counter, each with a small blank date sticker, a question mark shape made of steam rising above them",
+      "etiket": "ReFED / Harris Poll · 2025",
+      "baslik": {
+        "satirlar": [
+          "87% SURE",
+          "53% RIGHT"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "Across the labels, about 39 percent on average were confident and wrong. The survey was run by The Harris Poll for the Johns Hopkins Bloomberg School of Public Health.",
+      "gorsel": "a kitchen table with a telephone with a round dial, a notebook with blank lines and a pencil, a milk carton at the edge"
+    },
+    {
+      "id": 20,
+      "metin": "ReFED, a group that tracks food waste, estimates that date-label confusion alone leads Americans to discard about three billion pounds of food a year, worth about seven billion dollars. That's an estimate, and its method isn't shown in the summary we read.",
+      "gorsel": "a large kitchen trash bin overflowing with bread loaves, a milk carton and yogurt cups, the lid propped open",
+      "etiket": "ReFED · 2025",
+      "baslik": {
+        "satirlar": [
+          "3 BILLION",
+          "POUNDS A YEAR"
+        ],
+        "not": "ReFED's estimate of food tossed over date confusion"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "In the 2016 survey, adults aged 18 to 34 discarded food based on dates significantly more often than others, and so did people who misunderstood the labels.",
+      "gorsel": "a refrigerator door shelf with a milk carton and a few yogurt cups, a small blank date sticker on each, seen from a low angle",
+      "etiket": "Neff et al. · Waste Management · 2019"
+    },
+    {
+      "id": 22,
+      "metin": "The money matters, but so does the habit. A date meant to describe quality is quietly being used as a safety rule. In the practical part, there's one number worth keeping near your refrigerator.",
+      "gorsel": "a refrigerator door with a magnet holding a blank card, a milk carton on the shelf inside, soft morning light"
+    },
+    {
+      "id": 23,
+      "bolum": "When dates matter more",
+      "tip": "kart",
+      "metin": "Now the exceptions. First, infant formula. It is the one food where federal regulations require a date on the label.",
+      "kart": {
+        "ust": "THE EXCEPTIONS",
+        "baslik": "When dates matter more",
+        "alt": "Infant formula · Listeria"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "That makes formula the one place where a date is a rule rather than a courtesy. If you are caring for a baby, follow it.",
+      "gorsel": "a tin of infant formula with a scoop and a baby bottle on a kitchen counter, a small blank date sticker on the tin",
+      "baslik": {
+        "satirlar": [
+          "FORMULA:",
+          "FOLLOW IT"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Next, a germ called Listeria monocytogenes. It's one reason some ready-to-eat foods deserve extra care, especially for adults over 65.",
+      "gorsel": "a magnified circular inset of small rod-shaped bacteria drawn as a textbook engraving, beside a packet of sliced deli ham",
+      "baslik": {
+        "satirlar": [
+          "LISTERIA"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "metin": "The CDC says people at higher risk include pregnant women, newborns, adults 65 and older, and people with weakened immune systems. Other people can get infected but usually don't become seriously ill.",
+      "gorsel": "an older couple's kitchen table with two teacups, a bowl of fruit and a folded newspaper, seen from behind, warm window light"
+    },
+    {
+      "id": 27,
+      "metin": "The CDC estimates that about 1,250 people in the United States get listeriosis each year, and 172 die. It's rare, but it's serious.",
+      "gorsel": "a hospital corridor with a single empty wheelchair near a window, calm and quiet, drawn as a vintage engraving",
+      "etiket": "CDC · About Listeria",
+      "baslik": {
+        "satirlar": [
+          "RARE,",
+          "BUT SERIOUS"
+        ],
+        "vurgu": "1,250",
+        "not": "US cases a year, per the CDC"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "In a surveillance study by Silk and colleagues, covering 2004 to 2009, 762 people had invasive listeriosis, and 18 percent died. For adults 65 and older, the rate of cases not tied to pregnancy was four to five times the overall rate.",
+      "gorsel": "an antique stack of bound folders with blank covers beside a brass magnifying glass on a desk, a packet of sliced deli ham at the corner",
+      "etiket": "Silk et al. · Clin Infect Dis · 2012",
+      "baslik": {
+        "satirlar": [
+          "AGE 65+"
+        ],
+        "vurgu": "4–5×",
+        "not": "the overall case rate, in adults 65 and older"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "Overall, listeriosis is uncommon. In that study, there were between 0.25 and 0.32 cases per 100,000 people a year. The risk is concentrated in a few groups.",
+      "gorsel": "a quiet village of small houses on a hillside at dusk, a few lit windows, drawn as a vintage engraving",
+      "etiket": "Silk et al. · Clin Infect Dis · 2012"
+    },
+    {
+      "id": 30,
+      "metin": "The CDC adds that older adults who get the infection almost always need hospital care, and about one in six die.",
+      "gorsel": "a doctor's desk with a stethoscope, a closed folder and a glass of water, a window with a curtain, calm and still",
+      "etiket": "CDC · Listeria risk factors"
+    },
+    {
+      "id": 31,
+      "metin": "Why is Listeria different? According to the FDA, unlike most bacteria it can grow at refrigerator temperatures, and freezing does not eliminate it.",
+      "gorsel": "an open refrigerator with a packet of sliced deli ham on a shelf, tiny rod-shaped bacteria drawn in a magnified circular inset, frost crystals at the edges",
+      "etiket": "FDA · Listeria (Listeriosis)",
+      "baslik": {
+        "satirlar": [
+          "GROWS IN",
+          "THE FRIDGE"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "metin": "That's the catch with a date. It is printed at the factory, but the USDA says safety after production largely depends on storage and distribution conditions. Your refrigerator is part of the story.",
+      "gorsel": "a delivery truck, a supermarket shelf and a home refrigerator drawn in a row along a dashed path, a packet of sliced deli ham at the start",
+      "etiket": "USDA FSIS · Federal Register · 2019",
+      "baslik": {
+        "satirlar": [
+          "FACTORY",
+          "→ YOUR FRIDGE"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "metin": "An expert group wrote in a 2014 review that a use by date cannot be relied on to guarantee food safety, because temperature can't be perfectly controlled all along the supply chain.",
+      "gorsel": "a refrigerated supermarket case with a packet of sliced deli ham, a brass thermometer hanging on the glass door",
+      "etiket": "Newsome et al. · Compr Rev Food Sci Food Saf · 2014"
+    },
+    {
+      "id": 34,
+      "metin": "So which foods does the CDC single out? For higher-risk people, it advises avoiding unheated deli meat, cold cuts, hot dogs, and dry sausages. If you do eat them, heat them to 165 degrees Fahrenheit, or until steaming hot.",
+      "gorsel": "a plate of sliced deli ham and turkey beside a steaming pan on a stove, a meat thermometer standing in a slice, steam drawn as fine lines",
+      "etiket": "CDC · Listeria prevention",
+      "baslik": {
+        "satirlar": [
+          "HEAT DELI",
+          "MEAT"
+        ],
+        "vurgu": "165°F",
+        "not": "or until steaming hot"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "In 2024, a CDC investigation counted 61 illnesses, 60 hospitalizations, and 10 deaths in 19 states, linked to meats sliced at delis.",
+      "gorsel": "a deli counter with a meat slicer and rolls of sliced ham and turkey on paper, a glass display case in front",
+      "etiket": "CDC · Deli meat outbreak · 2024",
+      "baslik": {
+        "satirlar": [
+          "2024 OUTBREAK"
+        ],
+        "vurgu": "10",
+        "not": "deaths in 19 states, linked to deli-sliced meats"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "The CDC also tells higher-risk people to skip premade deli salads, like coleslaw or tuna salad. Homemade versions are the safer choice.",
+      "gorsel": "a plastic deli tub of coleslaw and a tub of tuna salad on a counter beside a mixing bowl with fresh cabbage and a can opener"
+    },
+    {
+      "id": 37,
+      "metin": "Cheese needs nuance. Soft cheese isn't automatically risky. The CDC says to avoid any cheese made with raw milk unless it's heated, and to avoid unheated queso fresco style cheeses, even when pasteurized.",
+      "gorsel": "a wedge of soft white cheese and a round crumbly fresh cheese on a wooden board, a small milk jug beside them",
+      "etiket": "CDC · Listeria prevention"
+    },
+    {
+      "id": 38,
+      "metin": "Safer choices, the CDC says, include hard cheeses like cheddar, Parmesan, and Swiss, plus cottage cheese, cream cheese, string cheese, feta, and mozzarella, when made with pasteurized milk.",
+      "gorsel": "a wooden board with a block of cheddar, a wedge of Parmesan, Swiss cheese with holes, a tub of cottage cheese and a ball of fresh mozzarella",
+      "baslik": {
+        "satirlar": [
+          "PASTEURIZED",
+          "CHEESES"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "So for these foods, the date is not your main protection. Food choices, heating, and a cold refrigerator are. The FDA advises 40 degrees Fahrenheit or below for the refrigerator, and zero for the freezer.",
+      "gorsel": "a round brass thermometer standing inside a refrigerator beside a milk carton and a packet of sliced deli ham, a frosted freezer door at the top",
+      "etiket": "FDA · Listeria (Listeriosis)",
+      "baslik": {
+        "satirlar": [
+          "FRIDGE"
+        ],
+        "vurgu": "≤ 40°F",
+        "not": "FDA advice for the refrigerator"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Which brings us back to use by. Federal regulators recommend it on certain refrigerated ready-to-eat foods, and Listeria grows in the refrigerator. So for higher-risk people, treating that date as a firm limit is a cautious choice. That's our reading, not a federal rule.",
+      "gorsel": "a packet of sliced deli turkey with a small blank date sticker on a refrigerator shelf, a brass thermometer hanging beside it",
+      "baslik": {
+        "satirlar": [
+          "USE BY,",
+          "REVISITED"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now the honest part. What do we know, and what don't we?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What's solid, what's not",
+        "alt": "And a few myths to retire"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "What's well supported: apart from infant formula, federal regulations don't require a date on food, and the USDA says otherwise wholesome and safe food shouldn't be discarded just because the date has passed.",
+      "gorsel": "a loaf of bread, a carton of eggs and a jar of jam arranged on a wooden kitchen table, a small blank date sticker on each, a calm morning window",
+      "baslik": {
+        "satirlar": [
+          "WELL",
+          "SUPPORTED"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "metin": "What's less certain: how much of that three billion pounds is truly avoidable. And surveys record what people say they do, not what they actually do.",
+      "gorsel": "a kitchen scale holding a small pile of vegetables and a milk carton on the other pan, a blank notebook beside it",
+      "baslik": {
+        "satirlar": [
+          "LESS",
+          "CERTAIN"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "metin": "One caution about the trend. The 2016 and 2025 surveys used slightly different wording on some questions, so the comparison is approximate.",
+      "gorsel": "two notebooks with blank pages lying side by side on a kitchen table, a pencil resting between them"
+    },
+    {
+      "id": 45,
+      "metin": "We also don't know whether a deli meat is riskier one day past its date than one day before. We found no study that answers that, so we won't guess.",
+      "gorsel": "two identical packets of sliced deli ham on a refrigerator shelf, each with a small blank date sticker, a question mark shape made of steam above them"
+    },
+    {
+      "id": 46,
+      "metin": "A myth to retire: that use by is a legal safety deadline. In the United States, federal regulators haven't defined it, and apart from infant formula, no date is required.",
+      "gorsel": "a packet of sliced deli turkey with a small blank date sticker beside a wooden gavel and a blank legal scroll, drawn as a vintage engraving",
+      "baslik": {
+        "satirlar": [
+          "MYTH:",
+          "A LEGAL DEADLINE"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Another myth: that the government checks date labels. In the 2025 survey, 44 percent believed that. In fact, only infant formula date labels are federally regulated.",
+      "gorsel": "a milk carton and a yogurt cup on a counter, a magnifying glass resting beside them, a small blank date sticker on each",
+      "etiket": "ReFED / Harris Poll · 2025"
+    },
+    {
+      "id": 48,
+      "metin": "And one more limit. The Listeria figures describe groups of people, not you. If you have a weakened immune system, take medicine that lowers immunity, or are pregnant, ask your doctor which foods to avoid.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a pill organizer with several compartments, a glass of water beside them",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "DOCTOR"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So what do you do at the refrigerator door? Here are five practical habits.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five habits for the fridge",
+        "alt": "Dates · Temperature · Foods · Formula"
+      }
+    },
+    {
+      "id": 50,
+      "metin": "One. Treat best by, best if used by, and sell by as quality hints. For ordinary foods, the USDA's own position is that food that's otherwise wholesome and safe shouldn't be thrown out only for the date.",
+      "gorsel": "a hand holding a jar of peanut butter up to window light above a kitchen counter, a small blank date sticker on the lid",
+      "baslik": {
+        "satirlar": [
+          "ONE:",
+          "QUALITY HINTS"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "Two. Keep your refrigerator at 40 degrees Fahrenheit or below, and your freezer at zero. A small thermometer inside the refrigerator lets you check.",
+      "gorsel": "a round brass thermometer hanging on a refrigerator shelf beside a milk carton and a yogurt cup, cold air drawn as soft lines",
+      "baslik": {
+        "satirlar": [
+          "TWO:",
+          "40°F OR BELOW"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "Three. Use the freezer as a pause button. A use or freeze by label points to freezing as an option other than the trash. Just remember that freezing doesn't eliminate Listeria, so it won't fix a food that was already risky.",
+      "gorsel": "a chicken fillet packed in a freezer bag and a loaf of bread in a freezer drawer, frost on the walls, a small blank date sticker on each bag",
+      "etiket": "FDA · Listeria (Listeriosis)",
+      "baslik": {
+        "satirlar": [
+          "THREE:",
+          "FREEZE IT"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "metin": "Four. If you're 65 or older, pregnant, or have a weakened immune system, skip unheated deli meat, or heat it until steaming hot. Choose pasteurized hard cheeses, and pasteurized cottage cheese, cream cheese, feta, or mozzarella.",
+      "gorsel": "a warm sandwich of hot sliced turkey on toasted bread with steam rising, a wedge of cheddar and a tub of cottage cheese beside it",
+      "baslik": {
+        "satirlar": [
+          "FOUR:",
+          "HEAT THE DELI"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Five. For infant formula, the date is a federal rule, so follow it. Everything else is judgment: what the food is, how it was stored, and how long it's been kept.",
+      "gorsel": "a tin of infant formula with a scoop on a kitchen counter next to a baby bottle, a small blank date sticker on the tin",
+      "baslik": {
+        "satirlar": [
+          "FIVE:",
+          "FORMULA = RULE"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "A simple way to remember it: quality dates describe flavor. Safety comes from handling, temperature, and, for higher-risk people, from the foods they choose.",
+      "gorsel": "a refrigerator shelf neatly arranged with a milk carton, a yogurt cup and a covered bowl, a brass thermometer hanging at the side"
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Dates describe quality",
+        "alt": "Safety comes from storage and food choices"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Apart from infant formula, no federal regulation requires a date on food. The USDA recommends best if used by, and describes it as a quality date.",
+      "gorsel": "a milk carton and a yogurt cup on a counter with small blank date stickers, a tin of infant formula standing slightly apart in front"
+    },
+    {
+      "id": 58,
+      "metin": "Confusion is costly. In a 2025 survey, 43 percent of adults always or usually threw food out near its date, and ReFED estimates that label confusion wastes about three billion pounds a year.",
+      "gorsel": "a kitchen trash bin with a milk carton and a loaf of bread visible inside, the lid open, soft light from a window"
+    },
+    {
+      "id": 59,
+      "metin": "The exception is Listeria. Adults 65 and older are at higher risk, and Listeria can grow in the refrigerator. So keep it at 40 degrees or below, heat deli meat, and choose pasteurized cheeses.",
+      "gorsel": "an open refrigerator with a brass thermometer inside, a packet of sliced deli ham and a wedge of cheddar on a shelf"
+    },
+    {
+      "id": 60,
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "tip": "kart",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
