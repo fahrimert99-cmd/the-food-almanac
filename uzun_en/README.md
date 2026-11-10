@@ -108,6 +108,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   | Değişken | Ne işe yarar |
   |---|---|
   | `UZUN_CLAUDE_MODEL` | `opus` ya da `sonnet`. Sonnet kotayı daha az tüketir. |
+  | `UZUN_SENARYO_MODEL` | Senaryo ve doğruluk denetimi ajanlarının modeli (varsayılan `claude-fable-5-2`). Sonuç vermezse adım `UZUN_CLAUDE_MODEL` ile yeniden denenir. |
   | `UZUN_SAHNE_GRUP` | Paralel sahne ajanı sayısı (varsayılan 8). |
 
 ## Bekleyen kararlar
