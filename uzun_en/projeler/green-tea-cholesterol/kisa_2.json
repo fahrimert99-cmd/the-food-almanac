@@ -1,0 +1,13 @@
+{
+  "baslik": ["TEA CAPSULES:", "LIVER RISK?"],
+  "baslik_yt": "Green Tea Capsules vs the Cup: The Liver Warning",
+  "aciklama": "In a year-long trial of 1,075 women, green tea extract capsules raised a liver enzyme far more often than placebo. Here is what regulators say about the cup versus the capsule.",
+  "parcalar": [
+    {"sahne": 51, "cumleler": [1], "gorsel": 59, "baslik": null, "etiket": null},
+    {"sahne": 35, "cumleler": [0]},
+    {"sahne": 36, "cumleler": [0]},
+    {"sahne": 36, "cumleler": [1], "gorsel": 35, "baslik": null, "etiket": "Yu et al. · Cancer Prev Res · 2017"},
+    {"sahne": 40, "cumleler": [2], "baslik": {"satirlar": ["THE CUP:", "SAFE RECORD"], "not": "liver injury is uncommon"}, "etiket": "NCCIH · NIH · 2025"},
+    {"sahne": 60, "cumleler": [0], "gorsel": 49, "baslik": {"satirlar": ["ASK YOUR", "PHARMACIST"]}, "etiket": null}
+  ]
+}
