@@ -1,0 +1,16 @@
+{
+  "baslik": ["CRANBERRY:", "JUICE OR PILL?"],
+  "baslik_yt": "Cranberry Juice vs Capsules: Which One Works?",
+  "aciklama": "Cranberry for UTIs comes as juice, capsules, tablets or powder. Here is what Cochrane found about the forms, the sugar in the juice, and one question to ask about medicines.",
+  "parcalar": [
+    {"sahne": 28, "cumleler": [1], "gorsel": 29, "baslik": null, "etiket": null},
+    {"sahne": 29, "cumleler": [0], "baslik": null},
+    {"sahne": 29, "cumleler": [1], "baslik": {"satirlar": ["TRIALS BY", "FORM"], "vurgu": "19 VS 29", "not": "juice vs tablets, capsules"}},
+    {"sahne": 29, "cumleler": [2]},
+    {"sahne": 34, "cumleler": [0, 2], "baslik": {"satirlar": ["SUGAR", "PER GLASS"], "vurgu": "25 G", "not": "8 oz cocktail, 23 g added"}, "etiket": "Nutrition Facts · juice cocktail"},
+    {"sahne": 35, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 50, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 50, "cumleler": [2], "gorsel": 37, "baslik": {"satirlar": ["NO PROVEN", "DOSE"]}, "etiket": null},
+    {"sahne": 46, "cumleler": [1], "baslik": {"satirlar": ["ON MEDICINES?", "ASK FIRST"]}, "etiket": null}
+  ]
+}
