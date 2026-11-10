@@ -110,6 +110,17 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   | `UZUN_CLAUDE_MODEL` | `opus` ya da `sonnet`. Sonnet kotayı daha az tüketir. |
   | `UZUN_SAHNE_GRUP` | Paralel sahne ajanı sayısı (varsayılan 8). |
 
+## Haftalık canlı maraton
+
+`.github/workflows/uzun_en_canli.yml` her cumartesi 17:47 UTC'de yayınlanmış bölümleri arka arkaya canlı yayın olarak
+akıtır (`araclar/canli.py`): açılış kartı, her bölümden önce "Up next" kartı, kapanış kartı, sağ üstte
+"LIVE MARATHON i/N" rozeti. Yalnızca YouTube'da herkese açık bölümler kullanılır; son maratondan beri yayınlananlar
+önce, sonra izlenmeye göre; toplam en çok 150 dk. Kayıtlar `canli/kayit.json`'a yazılır.
+
+- Hemen denemek: `canli/tetik.json` içindeki sayıyı artırın. `"mod": "deneme"` özel (private), 2 bölümden 45 sn;
+  `"mod": "tam"` herkese açık maraton.
+- Kanalda canlı yayın bir kez YouTube Studio'dan etkinleştirilmiş olmalı (onay 24 saate kadar sürebilir).
+
 ## Bekleyen kararlar
 
 - **Anlatıcı sesi (19 Ekim 2026):** Kanal sahibinin kendi ses klonu (Chatterbox Turbo, `klon` motoru) hazır ve
