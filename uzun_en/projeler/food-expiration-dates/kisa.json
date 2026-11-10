@@ -1,0 +1,22 @@
+{
+  "baslik": ["NO DATE RULE", "ON YOUR MILK?"],
+  "baslik_yt": "Is Your Milk's Date Label Even a Rule?",
+  "aciklama": "In the US, no federal rule requires a date on most foods, yet 43 percent of adults toss food near its date. Here is what the labels really mean, and the one big exception.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 6, "cumleler": [1], "gorsel": 6,
+     "baslik": {"satirlar": ["ONLY ONE", "EXCEPTION"], "vurgu": "1 FOOD", "not": "infant formula"},
+     "etiket": "USDA FSIS · Federal Register · 2019"},
+    {"sahne": 1, "cumleler": [2],
+     "baslik": {"satirlar": ["TOSSED", "NEAR THE DATE"], "vurgu": "43%", "not": "of adults always or usually"},
+     "etiket": "ReFED/Harris Poll · 2025 · 2,069 adults"},
+    {"sahne": 7, "cumleler": [0]},
+    {"sahne": 8, "cumleler": [2], "baslik": null, "etiket": "USDA FSIS · Federal Register · 2019"},
+    {"sahne": 59, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["THE EXCEPTION:", "LISTERIA"]},
+     "etiket": "CDC · FDA"},
+    {"sahne": 59, "cumleler": [2], "gorsel": 39,
+     "baslik": {"satirlar": ["FRIDGE"], "vurgu": "≤ 40°F", "not": "FDA fridge advice"},
+     "etiket": "FDA · Listeria (Listeriosis)"}
+  ]
+}
