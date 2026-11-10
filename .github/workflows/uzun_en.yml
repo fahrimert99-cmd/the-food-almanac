@@ -46,9 +46,6 @@ defaults:
 env:
   PYTHONDONTWRITEBYTECODE: "1"
   CMODEL: ${{ vars.UZUN_CLAUDE_MODEL }}
-  # Senaryo ve doğruluk denetimi ajanlarının modeli (en çok kalite isteyen iki aşama). Depo değişkeniyle değiştirilir;
-  # model bu hesapta çalışmazsa aynı adım CMODEL ile yeniden denenir. Sahne/Shorts ajanları CMODEL'de kalır (kota).
-  SMODEL: ${{ vars.UZUN_SENARYO_MODEL || 'claude-fable-5-2' }}
   GMODEL: ${{ vars.UZUN_GEMINI_MODEL }}
   UZUN_SAHNE_GRUP: ${{ vars.UZUN_SAHNE_GRUP || '8' }}
 
@@ -177,6 +174,13 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: "22"
+      - name: Tek seferlik senaryo modeli (uzun_en/senaryo_tek.json varsa)
+        run: |
+          # Dosya varsa bu videonun senaryosu ve doğruluk denetimi oradaki modelle yapılır; senaryo onaylanıp
+          # kaydedilince dosya silinir, sonraki videolar yine CMODEL ile yazılır. Model sonuç vermezse CMODEL denenir.
+          M=$(python3 -c "import json;print(json.load(open('uzun_en/senaryo_tek.json')).get('model',''))" 2>/dev/null || true)
+          echo "SMODEL=${M:-$CMODEL}" >> "$GITHUB_ENV"
+          echo "tek seferlik model: ${M:-yok}"
       - name: Ajanlar ve anahtarlar (kredi KULLANILMAZ)
         env:
           OAUTH: ${{ secrets.CLAUDE_YEDEK2_TOKEN || secrets.CLAUDE_ANA_TOKEN || secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -327,7 +331,8 @@ jobs:
             bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG doğruluk denetiminde reddedildi (konu değişecek)" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG"
           elif [ "$SONUC" = "onay" ] && python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" > /tmp/k4.txt; then
             python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" varlik
-            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG senaryosu yazıldı ve doğrulandı" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG"
+            rm -f uzun_en/senaryo_tek.json   # tek seferlik model ayarı kullanıldı
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG senaryosu yazıldı ve doğrulandı" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG" uzun_en/senaryo_tek.json
           else
             [ -f /tmp/k4.txt ] && grep -E "HATA" /tmp/k4.txt | sed 's/^/::warning title=Senaryo yapısı::/' || true
             echo "Senaryo aşaması tamamlanmadı; bir sonraki çalıştırma yeniden dener."
