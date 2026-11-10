@@ -1,0 +1,23 @@
+{
+  "baslik": ["SPINACH:", "BAN IT?"],
+  "baslik_yt": "Spinach and Kidney Stones: Ban It or Pair It?",
+  "aciklama": "Spinach is the biggest source of oxalate in American diets, and oxalate is part of most kidney stones. Here is what large studies found, and why what you eat it with may matter.",
+  "parcalar": [
+    {"sahne": 35, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 6, "cumleler": [1],
+     "baslik": {"satirlar": ["SPINACH"], "vurgu": "40%+", "not": "of the oxalate in the diets"},
+     "etiket": "Taylor & Curhan · JASN · 2007"},
+    {"sahne": 33, "cumleler": [0],
+     "baslik": {"satirlar": ["MOST OXALATE"], "vurgu": "+20%", "not": "stone risk, top vs bottom"},
+     "etiket": "Taylor & Curhan · JASN · 2007"},
+    {"sahne": 33, "cumleler": [1], "baslik": null,
+     "etiket": "Taylor & Curhan · JASN · 2007"},
+    {"sahne": 35, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["NOT A MAJOR", "RISK FACTOR"]},
+     "etiket": "Taylor & Curhan · JASN · 2007"},
+    {"sahne": 31, "cumleler": [1, 2], "etiket": null},
+    {"sahne": 55, "cumleler": [1, 2], "etiket": null},
+    {"sahne": 63, "cumleler": [1],
+     "baslik": {"satirlar": ["ASK YOUR", "DOCTOR"]}, "etiket": null}
+  ]
+}
