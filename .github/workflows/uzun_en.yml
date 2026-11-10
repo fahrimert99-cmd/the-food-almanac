@@ -46,6 +46,9 @@ defaults:
 env:
   PYTHONDONTWRITEBYTECODE: "1"
   CMODEL: ${{ vars.UZUN_CLAUDE_MODEL }}
+  # Senaryo ve doğruluk denetimi ajanlarının modeli (en çok kalite isteyen iki aşama). Depo değişkeniyle değiştirilir;
+  # model bu hesapta çalışmazsa aynı adım CMODEL ile yeniden denenir. Sahne/Shorts ajanları CMODEL'de kalır (kota).
+  SMODEL: ${{ vars.UZUN_SENARYO_MODEL || 'claude-fable-5-2' }}
   GMODEL: ${{ vars.UZUN_GEMINI_MODEL }}
   UZUN_SAHNE_GRUP: ${{ vars.UZUN_SAHNE_GRUP || '8' }}
 
@@ -200,8 +203,14 @@ jobs:
           CLAUDE_YEDEK: ${{ secrets.CLAUDE_ANA_TOKEN }}
           CLAUDE_YEDEK2: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
-          bash uzun_en/araclar/claude_calistir.sh -p "Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic (from uzun_en/konular.json): $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json." \
-            ${CMODEL:+--model "$CMODEL"} --max-turns 150 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+          P="Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic (from uzun_en/konular.json): $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json."
+          A=(--max-turns 150 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch")
+          echo "senaryo modeli: ${SMODEL:-varsayılan}"
+          bash uzun_en/araclar/claude_calistir.sh -p "$P" ${SMODEL:+--model "$SMODEL"} "${A[@]}" && exit 0
+          [ -f "uzun_en/projeler/$SLUG/proje.json" ] && exit 1
+          [ "$SMODEL" != "$CMODEL" ] || exit 1
+          echo "::warning::senaryo modeli ($SMODEL) sonuç vermedi; genel modelle yeniden deneniyor"
+          bash uzun_en/araclar/claude_calistir.sh -p "$P" ${CMODEL:+--model "$CMODEL"} "${A[@]}"
       - name: Yapı denetimi (1)
         id: k1
         run: |
@@ -259,7 +268,13 @@ jobs:
           D="uzun_en/projeler/$SLUG/dogrulama.json"
           rm -f "$D"
           if [ "$CLAUDE_OK" = true ]; then
-            bash uzun_en/araclar/claude_calistir.sh -p "$P" ${CMODEL:+--model "$CMODEL"} --max-turns 120 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" || true
+            A=(--max-turns 120 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch")
+            echo "doğrulama modeli: ${SMODEL:-varsayılan}"
+            bash uzun_en/araclar/claude_calistir.sh -p "$P" ${SMODEL:+--model "$SMODEL"} "${A[@]}" || true
+            if [ ! -f "$D" ] && [ "$SMODEL" != "$CMODEL" ]; then
+              echo "::warning::doğrulama modeli ($SMODEL) sonuç vermedi; genel modelle yeniden deneniyor"
+              bash uzun_en/araclar/claude_calistir.sh -p "$P" ${CMODEL:+--model "$CMODEL"} "${A[@]}" || true
+            fi
           fi
           if [ ! -f "$D" ] && [ "$GEMINI_OK" = true ] && [ "$ONDE" != true ]; then
             mkdir -p .gemini && echo '{"tools":{"exclude":["run_shell_command"]}}' > .gemini/settings.json
