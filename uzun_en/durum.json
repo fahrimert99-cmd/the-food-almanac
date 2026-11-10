@@ -1,5 +1,5 @@
 {
-  "aktif": "kidney-stones-oxalate-calcium",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -243,7 +243,7 @@
     },
     "kidney-stones-oxalate-calcium": {
       "slot": "2027-02-26T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-09T14:18:58Z",
       "sahne_deneme": 0
     }
