@@ -1,0 +1,672 @@
+{
+  "slug": "green-tea-cholesterol",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does Green Tea Lower Cholesterol? What Studies Show",
+  "yorum": "Do you drink green tea, and if so, how many cups on a typical day? Has anyone ever asked you about it when reviewing your medicines?",
+  "aciklama_giris": "Green tea has a real but modest effect on cholesterol. In a pooled analysis of 31 randomized trials, LDL cholesterol fell by about 4.5 milligrams per deciliter. Most of those trials used concentrated green tea extract in capsules, and for brewed tea alone the drop was smaller and less certain.\n\nIn this video we look at what is in a cup of green tea, what two meta-analyses and a year-long trial in 1,075 postmenopausal women found, how the effect might work, why no trial has shown fewer heart attacks, the liver enzyme warnings attached to high-dose extract, how much caffeine a cup contains, and what to know if you take warfarin, nadolol or atorvastatin.",
+  "kaynaklar": [
+    "Xu R, Yang K, Li S, Dai M, Chen G. Effect of green tea consumption on blood lipids: a systematic review and meta-analysis of randomized controlled trials. Nutrition Journal. 2020;19(1):48. doi:10.1186/s12937-020-00557-5. PMID 32434539.",
+    "EFSA Panel on Food Additives and Nutrient Sources added to Food (ANS), Younes M, Aggett P, Aguilar F, et al. Scientific opinion on the safety of green tea catechins. EFSA Journal. 2018;16(4):e05239. doi:10.2903/j.efsa.2018.5239. PMID 32625874.",
+    "MedlinePlus, US National Library of Medicine (NIH). LDL: The \"Bad\" Cholesterol. Updated 22 March 2024.",
+    "Zheng XX, Xu YL, Li SH, Liu XX, Hui R, Huang XH. Green tea intake lowers fasting serum total and LDL cholesterol in adults: a meta-analysis of 14 randomized controlled trials. American Journal of Clinical Nutrition. 2011;94(2):601-610. doi:10.3945/ajcn.110.010926. PMID 21715508.",
+    "Samavat H, Newman AR, Wang R, Yuan JM, Wu AH, Kurzer MS. Effects of green tea catechin extract on serum lipids in postmenopausal women: a randomized, placebo-controlled clinical trial. American Journal of Clinical Nutrition. 2016;104(6):1671-1682. doi:10.3945/ajcn.116.137075. PMID 27806972.",
+    "Hartley L, Flowers N, Holmes J, Clarke A, Stranges S, Hooper L, Rees K. Green and black tea for the primary prevention of cardiovascular disease. Cochrane Database of Systematic Reviews. 2013;(6):CD009934. doi:10.1002/14651858.CD009934.pub2. PMID 23780706.",
+    "Kuriyama S, Shimazu T, Ohmori K, et al. Green tea consumption and mortality due to cardiovascular disease, cancer, and all causes in Japan: the Ohsaki study. JAMA. 2006;296(10):1255-1265. doi:10.1001/jama.296.10.1255. PMID 16968850.",
+    "National Center for Complementary and Integrative Health (NIH). Green Tea: Usefulness and Safety. Updated February 2025.",
+    "Dostal AM, Samavat H, Bedell S, et al. The safety of green tea extract supplementation in postmenopausal women at risk for breast cancer: results of the Minnesota Green Tea Trial. Food and Chemical Toxicology. 2015;83:26-35. doi:10.1016/j.fct.2015.05.019. PMID 26051348.",
+    "Yu Z, Samavat H, Dostal AM, et al. Effect of green tea supplements on liver enzyme elevation: results from a randomized intervention study in the United States. Cancer Prevention Research. 2017;10(10):571-579. doi:10.1158/1940-6207.CAPR-17-0160. PMID 28765194.",
+    "US Food and Drug Administration. Spilling the Beans: How Much Caffeine Is Too Much? Content current as of 28 August 2024.",
+    "Taylor JR, Wilt VM. Probable antagonism of warfarin by green tea. Annals of Pharmacotherapy. 1999;33(4):426-428. doi:10.1345/aph.18238. PMID 10332534.",
+    "Booth SL, Madabushi HT, Davidson KW, Sadowski JA. Tea and coffee brews are not dietary sources of vitamin K-1 (phylloquinone). Journal of the American Dietetic Association. 1995;95(1):82-83. doi:10.1016/S0002-8223(95)00018-6. PMID 7798585.",
+    "Misaka S, Yatabe J, Müller F, et al. Green tea ingestion greatly reduces plasma concentrations of nadolol in healthy subjects. Clinical Pharmacology & Therapeutics. 2014;95(4):432-438. doi:10.1038/clpt.2013.241. PMID 24419562."
+  ],
+  "kapak": {
+    "satirlar": [
+      "GREEN TEA",
+      "LDL?"
+    ],
+    "vurgu": "–4.5",
+    "vurgu_alt": "mg/dL",
+    "gorsel": "a very large close-up glass cup of bright green tea on a white saucer with gentle steam rising, a small round ceramic teapot overlapping close behind it, and a bright red heart symbol overlapping behind the cup"
+  },
+  "kahraman": "green tea",
+  "etiketler": [
+    "green tea cholesterol",
+    "green tea ldl",
+    "green tea benefits heart",
+    "green tea extract liver",
+    "egcg",
+    "lower ldl naturally",
+    "green tea and warfarin",
+    "green tea caffeine",
+    "cholesterol after 60",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "LDL": "L D L",
+    "HDL": "H D L",
+    "EGCG": "E G C G",
+    "ALT": "A L T",
+    "INR": "I N R",
+    "FDA": "F D A"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Green tea and LDL in brief",
+      "metin": "If you drink green tea for your cholesterol, the effect is real, but small. Across 31 trials, LDL fell by about four and a half milligrams per deciliter.",
+      "gorsel": "a glass cup of green tea on a saucer on a wooden kitchen table, steam rising in fine curling lines, a small ceramic teapot behind it, morning light drawn as fine radiating lines",
+      "etiket": "Xu et al. · Nutr J · 2020",
+      "baslik": {
+        "satirlar": [
+          "31 TRIALS"
+        ],
+        "vurgu": "–4.5",
+        "not": "mg/dL LDL cholesterol"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But most trials used concentrated capsules, not the cup, and capsules carry a liver warning.",
+      "gorsel": "a cup of green tea on the left and a small open glass jar of oval capsules on the right, a few capsules spilled on the table between them",
+      "baslik": {
+        "satirlar": [
+          "CUP OR",
+          "CAPSULE?"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know how many cups it takes, and which medicines clash.",
+      "gorsel": "three cups of green tea in a row on a table beside a weekly pill organizer with its lids closed and a pair of round eyeglasses"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what's actually in the cup.",
+      "gorsel": "a large magnifying glass held over a cup of green tea, a small heap of dried rolled tea leaves on the cloth beside it"
+    },
+    {
+      "id": 5,
+      "bolum": "What is in a cup of green tea",
+      "metin": "Green tea and black tea come from the same plant. Green tea leaves are not fermented, so they keep more of a family of plant compounds called catechins.",
+      "gorsel": "a branch of the tea plant with glossy pointed leaves and a small white flower, beside it a cup of green tea and a second cup holding dark black tea",
+      "baslik": {
+        "satirlar": [
+          "CATECHINS"
+        ],
+        "not": "the main plant compounds in green tea"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "The best studied catechin goes by the initials EGCG. When researchers talk about a dose of green tea, they usually mean milligrams of catechins, or of EGCG alone.",
+      "gorsel": "a cup of green tea with a magnified circular inset beside it showing simple linked hexagon ring molecule outlines, connected to the cup by a thin dashed line",
+      "baslik": {
+        "satirlar": [
+          "EGCG"
+        ],
+        "not": "the best studied green tea catechin"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "How much is in a cup? Department of Agriculture data put average brewed green tea at about 70 milligrams of EGCG per 100 grams. That works out to roughly 165 milligrams in an 8-ounce cup.",
+      "gorsel": "a glass measuring cup filled with green tea standing on an antique brass kitchen scale, a teaspoon of dried tea leaves beside it",
+      "etiket": "USDA data in EFSA · EFSA Journal · 2018",
+      "baslik": {
+        "satirlar": [
+          "ONE 8-OUNCE CUP"
+        ],
+        "vurgu": "≈165 mg",
+        "not": "EGCG in an average brew"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "But that average hides a huge range. Depending on the leaves and how they were brewed, measured values ran from about 2 milligrams to about 200 for the same amount of tea. Remember that. It matters when we count cups.",
+      "gorsel": "two glass cups of green tea side by side, one very pale and almost clear, the other a deep rich green, an antique sand timer standing between them",
+      "baslik": {
+        "satirlar": [
+          "WEAK BREW,",
+          "STRONG BREW"
+        ],
+        "not": "about 2 to 200 mg EGCG per 100 grams"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "The target here is LDL, often called the bad cholesterol, because a high level leads to a buildup of cholesterol in your arteries. For healthy adults, under 100 milligrams per deciliter is considered optimal, and 160 or above is high.",
+      "gorsel": "a tube-shaped vessel with small red discs and pale yellow round particles gathering along its inner wall, a small cup of green tea sketched in the corner",
+      "etiket": "MedlinePlus · NIH · 2024",
+      "baslik": {
+        "satirlar": [
+          "LDL"
+        ],
+        "vurgu": "<100",
+        "not": "mg/dL is considered optimal for healthy adults"
+      }
+    },
+    {
+      "id": 10,
+      "bolum": "What the trials found",
+      "tip": "kart",
+      "metin": "So what happens to LDL when people actually take green tea in a trial? Researchers have run dozens.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "31 trials, pooled",
+        "alt": "Nutrition Journal · 2020"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "In 2020, researchers pooled 31 randomized controlled trials with more than 3,000 adults. Some drank green tea. Most took green tea extract in capsules. The trials ran from three weeks to twelve months.",
+      "gorsel": "a long research table with a row of cups of green tea at one end and a row of small capsule jars at the other, a stack of journals with blank covers in the middle",
+      "etiket": "Xu et al. · Nutr J · 2020"
+    },
+    {
+      "id": 12,
+      "metin": "Total cholesterol fell by about 4.7 milligrams per deciliter, and LDL by about 4.5. HDL, the so-called good cholesterol, did not change, and the small drop in triglycerides was not statistically clear.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes and an antique brass microscope, a cup of green tea standing at the edge of the bench",
+      "etiket": "Xu et al. · Nutr J · 2020",
+      "baslik": {
+        "satirlar": [
+          "LDL"
+        ],
+        "vurgu": "–4.5",
+        "not": "mg/dL · HDL unchanged"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "An earlier analysis from 2011, with 14 trials and about 1,100 adults, pointed the same way. LDL fell by about 2.2 milligrams per deciliter.",
+      "gorsel": "an open notebook with blank pages and a fountain pen on a desk, a cup of green tea and an oil lamp beside it",
+      "etiket": "Zheng et al. · Am J Clin Nutr · 2011",
+      "baslik": {
+        "satirlar": [
+          "14 TRIALS"
+        ],
+        "vurgu": "–2.2",
+        "not": "mg/dL LDL cholesterol"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "To put that in perspective, for someone with an LDL of 130, a drop of four and a half points is about three and a half percent. Real, and measurable, but small.",
+      "gorsel": "an antique balance scale with a single cup of green tea on one pan barely tipping it, the other pan holding a small brass weight",
+      "baslik": {
+        "satirlar": [
+          "REAL,",
+          "BUT SMALL"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "And here is the catch from the opening. In the 2020 analysis, only about a quarter of the comparisons used green tea as a drink. On their own, they showed a smaller drop of about 2.6 points, and that result was not statistically clear.",
+      "gorsel": "a single cup of green tea standing alone on a wide empty table, a teapot far behind it, lots of empty paper around",
+      "etiket": "Xu et al. · Nutr J · 2020",
+      "baslik": {
+        "satirlar": [
+          "AS A DRINK"
+        ],
+        "vurgu": "–2.6",
+        "not": "mg/dL LDL · not statistically clear"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "The capsule trials showed about 5.3 points. So the honest summary is this. The evidence is firmer for concentrated extract than for the drink itself.",
+      "gorsel": "a small glass jar of oval capsules in the foreground with a mortar and pestle holding dried tea leaves, a cup of green tea set further back",
+      "baslik": {
+        "satirlar": [
+          "AS CAPSULES"
+        ],
+        "vurgu": "–5.3",
+        "not": "mg/dL LDL cholesterol"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "Quality matters too. The authors rated only 9 of the 31 trials as having a low risk of bias, and the typical trial lasted about eleven weeks.",
+      "gorsel": "a small stack of only a few research papers with blank pages next to a much taller stack, an antique desk calendar with blank leaves beside them"
+    },
+    {
+      "id": 18,
+      "metin": "One of the largest and longest trials is the Minnesota Green Tea Trial, and it studied older adults.",
+      "gorsel": "a quiet clinical research room with an empty chair at a table, a cup of green tea and a small capsule jar on the table, a tall window showing snowy pine trees"
+    },
+    {
+      "id": 19,
+      "metin": "Researchers randomly assigned 1,075 healthy postmenopausal women to take green tea extract capsules or a placebo every day for twelve months. The daily dose held 843 milligrams of EGCG.",
+      "gorsel": "two identical small glass jars of capsules side by side on a table, a folded cloth between them, four tiny trees in the corner showing spring, summer, autumn and winter",
+      "etiket": "Samavat et al. · Am J Clin Nutr · 2016",
+      "baslik": {
+        "satirlar": [
+          "1,075 WOMEN",
+          "12 MONTHS"
+        ],
+        "not": "green tea extract or placebo, every day"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "That is a large dose. Using the average figures from earlier, it is the EGCG of about five cups of brewed green tea, packed into capsules.",
+      "gorsel": "five cups of green tea arranged in a tight curve, with two oval capsules lying in front of them on the table",
+      "baslik": {
+        "satirlar": [
+          "ABOUT 5 CUPS",
+          "IN A CAPSULE"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "tip": "grafik",
+      "metin": "After a year, LDL cholesterol had fallen by 4.1 percent in the green tea group, while it rose by 0.9 percent in the placebo group. Total cholesterol fell by 2.1 percent.",
+      "grafik": {
+        "baslik": "Change in LDL cholesterol over 12 months",
+        "alt": "Green tea extract capsules vs. placebo",
+        "cubuklar": [
+          {
+            "etiket": "Green tea extract",
+            "deger": 4.1,
+            "metin": "−4.1%"
+          },
+          {
+            "etiket": "Placebo",
+            "deger": 0.9,
+            "metin": "+0.9%"
+          }
+        ],
+        "kaynak": "Samavat et al., Am J Clin Nutr 2016 · 1,075 postmenopausal women · 843 mg EGCG a day"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "There were two surprises. Total cholesterol fell clearly only in women who started at 200 milligrams per deciliter or above. And triglycerides went up by 3.6 percent with the extract, while they fell with placebo.",
+      "gorsel": "two glass laboratory cylinders on a bench, one filled high with pale yellow liquid and one filled low, a small capsule jar standing between them",
+      "etiket": "Samavat et al. · Am J Clin Nutr · 2016",
+      "baslik": {
+        "satirlar": [
+          "TRIGLYCERIDES"
+        ],
+        "vurgu": "+3.6%",
+        "not": "with the extract"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Also note who was studied: only women, all past menopause. This trial cannot tell us directly how men respond.",
+      "gorsel": "a woman with gray hair seen from behind sitting at a kitchen table by a window, a cup of green tea in front of her"
+    },
+    {
+      "id": 24,
+      "metin": "And the same trial produced the most important safety finding in this whole story. We will come to it in a moment.",
+      "gorsel": "a small glass jar of capsules under a glass bell jar on a desk, a cup of green tea beside it"
+    },
+    {
+      "id": 25,
+      "bolum": "How it might work",
+      "tip": "kart",
+      "metin": "Why would a cup of tea change cholesterol at all? Here the science is less settled.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "How it might work",
+        "alt": "The gut · The liver"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "The authors of the 2020 analysis list a few possibilities. One is in the gut. Catechins might interfere with the tiny droplets, called micelles, that carry fats across the intestinal wall, so less is absorbed.",
+      "gorsel": "the inside of the small intestine drawn as a textbook cross-section with finger-like villi, small pale yellow fat droplets drifting above them, a cup of green tea sketched in the corner",
+      "etiket": "Xu et al. · Nutr J · 2020",
+      "baslik": {
+        "satirlar": [
+          "IN THE GUT"
+        ],
+        "not": "catechins might reduce fat absorption"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Another is in the liver. In experiments on human liver cells in a dish, green tea compounds appeared to act on the pathway that controls LDL receptors, the docking sites that pull LDL out of circulation.",
+      "gorsel": "a liver lobe in textbook engraving style with small pale yellow round particles arriving at its surface, a round glass laboratory dish and a cup of green tea beside it",
+      "baslik": {
+        "satirlar": [
+          "IN THE LIVER"
+        ],
+        "not": "LDL receptors · from cell experiments"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "But notice the words. Cells in a dish, and rats on high-fat diets. These are clues, not proof of what happens in people. What we can say is that in human trials, the LDL number moves a little.",
+      "gorsel": "a laboratory bench with round glass dishes, a glass pipette and an antique brass microscope, a small pile of dried tea leaves on a watch glass",
+      "baslik": {
+        "satirlar": [
+          "CLUES,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. Does a slightly lower LDL from green tea mean fewer heart attacks?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Does it protect the heart?",
+        "alt": "What the trials did not measure"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "No trial has shown that. When Cochrane reviewers looked in 2013, they found 11 trials of green or black tea with 821 participants, and not one of them reported heart attacks or strokes as an outcome.",
+      "gorsel": "a red heart symbol drawn on a card propped against a teapot, a cup of green tea in front, an empty ledger with blank pages beside it",
+      "etiket": "Hartley et al. · Cochrane · 2013",
+      "baslik": {
+        "satirlar": [
+          "11 TRIALS",
+          "NO HEART DATA"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "There are encouraging population studies. In Japan, the Ohsaki study followed more than 40,000 adults aged 40 to 79. Over seven years, women who drank five or more cups a day had about a 31 percent lower risk of dying from cardiovascular disease than women who drank less than one.",
+      "gorsel": "a Japanese cast iron teapot and five small handleless cups of green tea on a wooden tray, terraced tea fields on a hillside in the background",
+      "etiket": "Kuriyama et al. · JAMA · 2006",
+      "baslik": {
+        "satirlar": [
+          "OHSAKI STUDY"
+        ],
+        "vurgu": "40,530",
+        "not": "adults in Japan · an association only"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "But that is an association, not cause and effect. People who drink a lot of green tea may differ in many other ways. And the National Institutes of Health notes that this link shows up in Asian populations, but not in Western ones.",
+      "gorsel": "two kitchen tables side by side, one set with a teapot, a cup of green tea, grilled fish and a bowl of rice, the other set with a cup of green tea beside a sandwich",
+      "baslik": {
+        "satirlar": [
+          "LINKED,",
+          "NOT PROVEN"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "metin": "So here is where green tea honestly sits. It is not a cholesterol treatment, and it does not replace a statin or any medicine your doctor has prescribed. At best, it is a pleasant drink with a small bonus.",
+      "gorsel": "a cup of green tea on a saucer next to an amber pharmacy bottle with a plain blank front and a stethoscope on a wooden desk"
+    },
+    {
+      "id": 34,
+      "bolum": "Extracts and the liver",
+      "tip": "kart",
+      "metin": "Which brings us to the capsules, and to the safety finding we promised.",
+      "kart": {
+        "ust": "THE SAFETY QUESTION",
+        "baslik": "Extracts and the liver",
+        "alt": "Capsules are not the same as the cup"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "In the Minnesota trial, 6.7 percent of the women taking green tea extract developed raised levels of a liver enzyme called ALT. In the placebo group, it was 0.7 percent.",
+      "gorsel": "a liver lobe in textbook engraving style with a small glass jar of oval capsules beside it, a rack of capped sample tubes in the background",
+      "etiket": "Dostal et al. · Food Chem Toxicol · 2015",
+      "baslik": {
+        "satirlar": [
+          "RAISED",
+          "LIVER ENZYME"
+        ],
+        "vurgu": "6.7%",
+        "not": "with extract · 0.7% with placebo"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "A closer analysis found moderate or more severe liver test abnormalities in 26 women on the extract, about one in twenty. Their numbers returned to normal when they stopped the capsules, and rose again when the capsules were restarted.",
+      "gorsel": "a closed capsule jar with its lid firmly on, beside a calm liver lobe in textbook engraving style, an antique sand timer between them",
+      "etiket": "Yu et al. · Cancer Prev Res · 2017",
+      "baslik": {
+        "satirlar": [
+          "STOPPED:",
+          "BACK TO NORMAL"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "metin": "Most of these changes were mild and passed. But it is a clear signal, and European regulators reached a similar conclusion in 2018.",
+      "gorsel": "an antique government office desk with a rubber stamp, an inkwell, a quill pen and a small capsule jar with a plain blank front"
+    },
+    {
+      "id": 38,
+      "metin": "The European Food Safety Authority found that supplements providing 800 milligrams of EGCG a day or more were linked with raised liver enzymes. It could not identify a dose of extract it was confident was safe.",
+      "gorsel": "a tall heap of oval capsules spilling from an overturned glass jar on a table, a small liver lobe sketched in the corner in textbook engraving style",
+      "etiket": "EFSA · EFSA Journal · 2018",
+      "baslik": {
+        "satirlar": [
+          "EXTRACT"
+        ],
+        "vurgu": "800 mg",
+        "not": "EGCG a day or more: raised liver enzymes"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "Brewed green tea was a different story. The same review considered it generally safe, with no sign of raised liver enzymes at five or more cups a day, though that evidence was limited. Rare liver reactions to the drink have been reported, but they appear to be individual and unpredictable.",
+      "gorsel": "a ceramic teapot pouring green tea into a cup, four more filled cups arranged closely around it on a wooden tray",
+      "etiket": "EFSA · EFSA Journal · 2018",
+      "baslik": {
+        "satirlar": [
+          "THE BREWED CUP"
+        ],
+        "not": "considered generally safe"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "In the United States, the National Institutes of Health says much the same. No safety concerns have been reported for green tea as a beverage in adults. Liver injury is uncommon, and has mainly involved extracts in tablets or capsules.",
+      "gorsel": "a cup of green tea in the foreground on a saucer, and pushed to the far edge of the table a small jar of capsules and a few loose tablets",
+      "etiket": "NCCIH · NIH · 2025"
+    },
+    {
+      "id": 41,
+      "metin": "If you do take a green tea supplement, two points from the regulators. Studies suggest taking it on an empty stomach raises the amount of EGCG reaching the bloodstream, so take it with food. And tell your doctor, especially if you have any liver condition.",
+      "gorsel": "a breakfast plate with scrambled eggs and brown toast, two oval capsules on a small dish beside the plate and a cup of green tea behind it",
+      "baslik": {
+        "satirlar": [
+          "WITH FOOD,",
+          "NOT FASTING"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "bolum": "Caffeine and your medicines",
+      "tip": "kart",
+      "metin": "Two more things matter for many people over sixty. Caffeine, and the medicines you already take.",
+      "kart": {
+        "ust": "WORTH KNOWING",
+        "baslik": "Caffeine and your medicines",
+        "alt": "Warfarin · Nadolol · Atorvastatin"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "First, caffeine. According to the Food and Drug Administration, a 12-ounce serving of green tea has about 37 milligrams of caffeine. The same amount of brewed coffee has roughly 113 to 247.",
+      "gorsel": "a tall glass mug of green tea next to an equally tall mug of dark coffee, a few roasted coffee beans and a few dried tea leaves scattered in front",
+      "etiket": "FDA · 2024",
+      "baslik": {
+        "satirlar": [
+          "CAFFEINE",
+          "PER 12 OUNCES"
+        ],
+        "vurgu": "37 mg",
+        "not": "green tea · coffee 113 to 247 mg"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "The FDA cites 400 milligrams a day as an amount not generally associated with negative effects for most adults. But sensitivity varies widely, and some medicines and health conditions make people more sensitive. Decaf green tea still contains a little.",
+      "gorsel": "a bedside table at night with an antique alarm clock with a blank face, a crescent moon in the window and an empty tea cup on a saucer"
+    },
+    {
+      "id": 45,
+      "metin": "Second, blood thinners. In a 1999 case report, a 44-year-old man taking warfarin began drinking half a gallon to a gallon of green tea a day. His clotting test, the INR, dropped from 3.79 to 1.37, and rose again after he stopped.",
+      "gorsel": "a very large glass gallon jug filled with green tea towering over a single small cup, an amber pharmacy bottle with a plain blank front beside them",
+      "etiket": "Taylor & Wilt · Ann Pharmacother · 1999",
+      "baslik": {
+        "satirlar": [
+          "UP TO A GALLON",
+          "A DAY"
+        ],
+        "not": "one case report · INR fell from 3.79 to 1.37"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "That is one person, and a very large amount. Laboratory testing has found that brewed tea is not a meaningful source of vitamin K, the nutrient that works against warfarin. So an ordinary cup or two is a different situation.",
+      "gorsel": "a single cup of green tea on a saucer with a used tea strainer holding wet leaves resting on a small dish beside it",
+      "etiket": "Booth et al. · J Am Diet Assoc · 1995"
+    },
+    {
+      "id": 47,
+      "metin": "Still, the sensible rule with warfarin is consistency. Keep your green tea habit steady, and tell your anticoagulation clinic before a big change. Newer blood thinners work differently, so ask your pharmacist about yours.",
+      "gorsel": "a pharmacy counter with a brass mortar and pestle, rows of apothecary jars with plain blank fronts on shelves, and a cup of green tea on the counter",
+      "baslik": {
+        "satirlar": [
+          "KEEP IT",
+          "STEADY"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "Third, a blood pressure medicine called nadolol. In a study of ten healthy volunteers, drinking about three cups of green tea a day for two weeks cut the amount of nadolol in the bloodstream by 85 percent.",
+      "gorsel": "three cups of green tea in a row beside a sphygmomanometer cuff with its round gauge showing a blank dial, a few small round tablets on a dish",
+      "etiket": "Misaka et al. · Clin Pharmacol Ther · 2014",
+      "baslik": {
+        "satirlar": [
+          "NADOLOL"
+        ],
+        "vurgu": "–85%",
+        "not": "drug level, in 10 healthy volunteers"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "The National Institutes of Health also notes that green tea extract can lower blood levels of atorvastatin, a common cholesterol medicine. So if you take daily prescriptions, ask your doctor or pharmacist before adding green tea supplements.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, a weekly pill organizer with closed lids and a small jar of capsules",
+      "etiket": "NCCIH · NIH · 2025",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you put this to use? Here are four practical points.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "The cup, not the capsule",
+        "alt": "Four practical points"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "One. Choose the cup, not the capsule. The drink has the long safety record. The concentrated extract is where the liver warnings are.",
+      "gorsel": "a hand lifting a cup of green tea from its saucer, a capsule jar with its lid closed left behind at the back of the table"
+    },
+    {
+      "id": 52,
+      "metin": "Two. How many cups? The typical trial dose was about 630 milligrams of catechins a day. By the average Department of Agriculture figures, that is about two 8-ounce cups of average-strength green tea, and more if your tea is weak.",
+      "gorsel": "two full cups of green tea side by side on a wooden tray with a ceramic teapot behind them and a small dish of dried tea leaves in front",
+      "baslik": {
+        "satirlar": [
+          "ABOUT 2 CUPS"
+        ],
+        "not": "of average-strength tea matches the typical trial dose"
+      }
+    },
+    {
+      "id": 53,
+      "metin": "But remember that huge range. A weak brew may give far less than a strong one. And the trials of green tea as a drink showed a smaller, less certain effect. So expect a nudge, not a transformation.",
+      "gorsel": "a tea bag on a string being lifted out of a cup of pale green tea, an antique pocket watch with a blank face lying beside the saucer",
+      "baslik": {
+        "satirlar": [
+          "A NUDGE"
+        ],
+        "not": "not a transformation"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Three. Watch what goes into the cup. Some bottled green teas are sweetened, so check the Nutrition Facts label for added sugars, or brew your own.",
+      "gorsel": "a glass bottle of green tea with a plain blank front standing next to a bowl of sugar cubes, and a freshly brewed cup beside a teapot"
+    },
+    {
+      "id": 55,
+      "metin": "Four. Mind the clock. If caffeine disturbs your sleep, keep your green tea to the morning and early afternoon, or choose decaf.",
+      "gorsel": "a cup of green tea on a sunny kitchen windowsill in the morning, the sun low over rooftops drawn with fine radiating lines",
+      "baslik": {
+        "satirlar": [
+          "MORNING",
+          "IS BEST"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "metin": "And keep the big picture in view. For lowering LDL, the proven tools are a heart-healthy eating pattern, physical activity, and, when your doctor recommends them, medicines such as statins. Green tea can sit alongside those. It cannot stand in for them.",
+      "gorsel": "a cup of green tea on a table beside a bowl of oatmeal with berries, a plate of salmon and vegetables, and a pair of walking shoes on the floor below",
+      "etiket": "MedlinePlus · NIH · 2024"
+    },
+    {
+      "id": 57,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A small, real effect",
+        "alt": "Choose the cup, not the capsule"
+      }
+    },
+    {
+      "id": 58,
+      "metin": "Across 31 trials, green tea lowered LDL cholesterol by about four and a half milligrams per deciliter. Most of that evidence comes from concentrated extract. For green tea as a drink, the drop was smaller and less certain.",
+      "gorsel": "the opening glass cup of green tea on its saucer on the wooden kitchen table, the ceramic teapot behind it, steam rising in fine lines"
+    },
+    {
+      "id": 59,
+      "metin": "High-dose extract raised a liver enzyme in about one in fifteen women in a year-long trial, while the brewed drink is considered generally safe.",
+      "gorsel": "a cup of green tea in the foreground and a closed jar of capsules in the background, a small liver lobe in textbook engraving style sketched between them"
+    },
+    {
+      "id": 60,
+      "metin": "If you take warfarin, nadolol or atorvastatin, or any daily prescription, check with your doctor or pharmacist. And for most people, a couple of cups a day is a pleasant habit with a possible small bonus for LDL.",
+      "gorsel": "two cups of green tea on a small table between two armchairs by a window, a teapot on a trivet, afternoon light drawn as fine lines"
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
