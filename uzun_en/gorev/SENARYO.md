@@ -122,7 +122,11 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
 
 1. **Cold open** (scenes 1–3, at most 60 words together, about 25 seconds). Most viewers decide here whether to stay.
    Channel data (25 October 2026): more than half of viewers left within the first 5% of the video, and on two videos
-   the average viewer stayed only 36 seconds. Every sentence in the cold open must earn the next one.
+   the average viewer stayed only 36 seconds. Data from 9 November 2026 (videos whose cold opens were 80–100 words
+   and began "If you …, here is what the research shows"): a quarter of viewers left in the first 20 seconds and half
+   were gone after the first minute; those who stayed mostly watched to the end. Every sentence in the cold open must
+   earn the next one. The validator now rejects a cold open over about 60 words, filler such as "here is what the
+   research shows" or "let's take a look", and any `kart` in scenes 1–3.
    - Scene 1 has a `bolum` (the first chapter title).
    - The very first sentence goes straight in: it speaks to the viewer's own situation ("If you eat eggs most
      mornings, …") or states the surprising finding. Never open with scene-setting ("Picture…", "Imagine…").
