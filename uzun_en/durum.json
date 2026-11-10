@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "green-tea-cholesterol",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -245,6 +245,12 @@
       "slot": "2027-02-26T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-11-09T14:18:58Z",
+      "sahne_deneme": 0
+    },
+    "green-tea-cholesterol": {
+      "slot": "2027-03-02T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-11-10T14:31:44Z",
       "sahne_deneme": 0
     }
   }
