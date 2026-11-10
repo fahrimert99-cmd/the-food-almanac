@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "cranberry-uti",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -251,6 +251,12 @@
       "slot": "2027-03-02T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-11-10T14:31:44Z",
+      "sahne_deneme": 0
+    },
+    "cranberry-uti": {
+      "slot": "2027-03-05T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-11-10T21:58:55Z",
       "sahne_deneme": 0
     }
   }
