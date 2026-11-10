@@ -1,0 +1,74 @@
+name: Canlı Maraton (The Food Almanac)
+# Haftada bir (cumartesi) yayınlanmış uzun videoları arka arkaya canlı yayın olarak akıtır: açılış kartı, her bölümden
+# önce 'Up next' kartı, kapanış kartı. Yalnızca herkese açık bölümler kullanılır; toplam en çok 150 dk.
+# Hemen çalıştırmak için uzun_en/canli/tetik.json içindeki sayıyı artırın ("mod": "deneme" = özel, kısa deneme yayını).
+on:
+  schedule:
+    - cron: "47 17 * * 6"
+  push:
+    branches: [main]
+    paths: [uzun_en/canli/tetik.json]
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: "tam (herkese açık maraton) ya da deneme (özel, kısa)"
+        default: deneme
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uzun-en-canli
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  canli:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıklar
+        run: |
+          bash uzun_en/araclar/apt_kur.sh ffmpeg
+          pip install -q -r requirements.txt numpy
+      - name: Mod
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            M=$(python3 -c "import json;print(json.load(open('uzun_en/canli/tetik.json')).get('mod','deneme'))")
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            M="${{ inputs.mod }}"
+          else
+            M=tam
+          fi
+          [ "$M" = tam ] || M=deneme
+          echo "MOD=$M" >> "$GITHUB_ENV"; echo "mod: $M"
+      - name: Hazırla (bölüm seçimi, kartlar, kodlama)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 uzun_en/araclar/canli.py hazirla --mod "$MOD"
+      - name: Canlı yayın
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 uzun_en/araclar/canli.py yayinla
+      - name: Kaydet
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash uzun_en/araclar/kaydet.sh "uzun_en: canlı maraton kaydı ($MOD)" uzun_en/canli/kayit.json
