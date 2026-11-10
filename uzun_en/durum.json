@@ -1,5 +1,5 @@
 {
-  "aktif": "food-expiration-dates",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -261,7 +261,7 @@
     },
     "food-expiration-dates": {
       "slot": "2027-03-09T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-10T22:53:44Z",
       "sahne_deneme": 0
     }
