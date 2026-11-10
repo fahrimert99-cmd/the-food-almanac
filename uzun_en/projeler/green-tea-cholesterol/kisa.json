@@ -1,0 +1,18 @@
+{
+  "baslik": ["GREEN TEA", "LDL: HOW MUCH?"],
+  "baslik_yt": "Does Green Tea Lower LDL? Real, but Small",
+  "aciklama": "A 2020 analysis of 31 trials found green tea lowered LDL by about 4.5 mg/dL. Here is what that means, and why the cup and the capsule are not the same.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1],
+     "baslik": {"satirlar": ["31 TRIALS"], "vurgu": "-4.5", "not": "mg/dL LDL cholesterol"},
+     "etiket": "Xu et al. · Nutr J · 2020"},
+    {"sahne": 2, "cumleler": [0], "baslik": {"satirlar": ["CUP OR", "CAPSULE?"]}, "etiket": null},
+    {"sahne": 15, "cumleler": [1],
+     "baslik": {"satirlar": ["AS A DRINK"], "vurgu": "-2.6", "not": "mg/dL · not significant"},
+     "etiket": "Xu et al. · Nutr J · 2020"},
+    {"sahne": 15, "cumleler": [2], "baslik": null, "etiket": "Xu et al. · Nutr J · 2020"},
+    {"sahne": 33, "cumleler": [1], "baslik": {"satirlar": ["NOT A", "TREATMENT"]}, "etiket": null},
+    {"sahne": 60, "cumleler": [1], "baslik": null, "etiket": null}
+  ]
+}
