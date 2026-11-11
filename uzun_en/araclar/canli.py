@@ -87,6 +87,9 @@ def sec(mod):
     son = max((k["tarih"] for k in kayit if k.get("mod") == "tam" and k.get("durum") == "tamam"), default="")
     yeni = sorted([a for a in acik if a["slot"] > son], key=lambda a: a["slot"], reverse=True)
     eski = sorted([a for a in acik if a["slot"] <= son], key=lambda a: -a["izlenme"])
+    if eski:                                             # her gün farklı bölümle başlasın (günlük yayın)
+        g = dt.date.today().toordinal() % len(eski)
+        eski = eski[g:] + eski[:g]
     sira = yeni + eski
     return sira[:2] if mod == "deneme" else sira
 
@@ -148,7 +151,7 @@ def kart_kapanis(yol):
     c.text((80, 200), "THANKS FOR WATCHING", font=_font("Anton-Regular.ttf", 110), fill=KREM)
     c.text((80, 350), "New episodes every Tuesday & Friday. Subscribe so you don't miss them.",
            font=_font("Inter-Medium.otf", 32), fill=KREM)
-    c.text((80, 410), "Next marathon: next Saturday", font=_font("Inter-Bold.otf", 32), fill=SARI)
+    c.text((80, 410), "Live again tomorrow, same time", font=_font("Inter-Bold.otf", 32), fill=SARI)
     c.text((80, H - 80), "Education only, not medical advice. Talk to your doctor before changing your diet.",
            font=_font("Inter-Medium.otf", 22), fill=KREM)
     im.save(yol)
@@ -281,7 +284,7 @@ def baslik_aciklama(plan):
     m = O.marka()
     aciklama = (f"A live replay marathon of {n} episodes of The Food Almanac: popular food claims, checked against "
                 "the research.\n\nIn this stream:\n" + "\n".join(satir) +
-                "\n\nNew episodes every Tuesday and Friday. Subscribe so you don't miss them.\n\n"
+                "\n\nLive marathon every day. New episodes every Tuesday and Friday. Subscribe so you don't miss them.\n\n"
                 "This stream replays previously published episodes. Sources for each claim are listed in the "
                 "description of each full video above.\n\n" + m.get("aciklama_sonu", ""))
     return baslik[:100], aciklama[:4900]
