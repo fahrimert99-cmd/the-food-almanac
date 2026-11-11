@@ -2,6 +2,7 @@
   "baslik": ["GRAPEFRUIT", "+ YOUR PILL?"],
   "baslik_yt": "Grapefruit and Your Daily Pill: The Gut Gatekeeper",
   "aciklama": "In a 1991 study, grapefruit juice nearly tripled the level of a blood pressure drug. Here is the gut enzyme behind it, and the one question to ask your pharmacist.",
+  "cta": ["Full video on our channel."],
   "parcalar": [
     {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
     {"sahne": 1, "cumleler": [1],
