@@ -374,11 +374,36 @@ def akit(plan, hedef):
     return k >= len(parca)
 
 
+def kapat(bid):
+    """Yayını bitir. Saatlerce boşta kalan bağlantı kopabildiği için her denemede yeni istemci kurulur."""
+    for deneme in range(1, 6):
+        try:
+            yt = _yt()
+            st = yt.liveBroadcasts().list(part="status", id=bid).execute()["items"][0]["status"]["lifeCycleStatus"]
+            if st in ("complete", "revoked"):
+                return True
+            yt.liveBroadcasts().transition(broadcastStatus="complete", id=bid, part="status").execute()
+            O.log(f"yayın kapatıldı: {bid}")
+            return True
+        except Exception as e:
+            O.log(f"  (kapatma {deneme}/5: {str(e)[:120]})")
+            time.sleep(10 * deneme)
+    return False
+
+
+def acik_kalanlari_kapat():
+    """Önceki maratonlardan canlıda kalmış yayın varsa kapat (kapatma isteği ağ hatasıyla düşmüş olabilir)."""
+    for k in O.json_oku(KAYIT, [])[-5:]:
+        if k.get("mod") == "tam" and k.get("video_id"):
+            kapat(k["video_id"])
+
+
 def yayinla():
     plan = O.json_oku(os.path.join(TMP, "plan.json"), {})
     if not plan or plan.get("atla"):
         O.log("plan yok ya da atlandı; yayın açılmadı")
         return 0
+    acik_kalanlari_kapat()
     yt = _yt()
     try:
         bid, sid, hedef = _anahtar_bas(yt, plan)
@@ -402,10 +427,7 @@ def yayinla():
     tamam = akit(plan, hedef)
     dur.set()
     time.sleep(15)
-    try:
-        yt.liveBroadcasts().transition(broadcastStatus="complete", id=bid, part="status").execute()
-    except Exception as e:
-        O.log(f"  (kapatma: {str(e)[:120]})")
+    kapat(bid)
     giris["durum"] = "tamam" if tamam else "yarida"
     O.json_yaz(KAYIT, kayit)
     O.log(f"yayın bitti: {giris['durum']} — {url}")
