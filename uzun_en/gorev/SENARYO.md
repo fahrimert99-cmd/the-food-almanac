@@ -77,6 +77,13 @@ The prompt tells you three things:
 **Title (`baslik`)**
 - An honest, curiosity-driven statement or question, in Title Case.
 - Short and punchy: one concrete food, drink or habit, plus the one thing it does in the body. Put the food first.
+- Best form so far: an everyday amount plus the viewer's own risk, as a yes/no question ("Is 1 Egg a Day Bad for Your
+  Heart?"). Channel data (11 November 2026): after the egg video was retitled this way, with the thumbnail
+  `["1 EGG A DAY", "HEART RISK?"]`, it reached 4.6% clicks, the channel's best; titles without an amount or a personal
+  stake got 2.2–4.0%. Use it when the topic has a natural everyday amount (1 egg, 3 cups, a handful); the thumbnail's
+  `satirlar` then repeat the amount and the risk.
+- Whatever the title asks, the first 15 seconds must start answering it. The egg video's viewers left after about
+  56 seconds on average because the cold open did not touch the thumbnail's question.
   - Forms: a short honest question ("Does Garlic Really Lower Blood Pressure?") or "[Food]: What It Does to [measure]".
   - Examples: "Does Garlic Really Lower Blood Pressure?", "Walking After Meals: What It Does to Blood Sugar",
     "Eggs and Cholesterol: What Studies Show".
