@@ -116,7 +116,9 @@ Fields:
   watched about 40% of the Short. Data from 4 November 2026 (the six most-watched Shorts): about half of viewers were
   gone by 20% of the Short (around 10 s), and of those still watching when the old closing screen began, about
   two thirds left during it. The closing screen has been removed; the opening is now what matters most.
-  - The first part is one short sentence, ideally under 4 s (never over 5 s). It must hit immediately: the most
+  - The first part is one short sentence, ideally under 4 s. The validator rejects a first part with more than one
+    sentence, over 6 s, or starting with "So", "And", "But" or "That" (those Shorts stayed at 40–73 views).
+    It must hit immediately: the most
     surprising number, a direct claim, or the viewer's own situation ("One egg a day, every day, for 32 years.").
     Avoid slow scene-setting openers ("If you eat oatmeal to look after your heart, here is what the research shows").
   - The hook title (`baslik`) must work on its own, with the sound off: a short question or sharp claim, ideally

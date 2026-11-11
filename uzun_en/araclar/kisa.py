@@ -239,6 +239,31 @@ def _satir_hatalari(ad, satirlar, hata):
             hata.append(f"{ad}: '{x}' BÜYÜK HARF olmalı")
 
 
+# Kanca kuralları (gorev/KISA.md "Open with the hook"). Kanal verisi (analiz/2026-11-11.json): "So/And/But" ile
+# önceki cümleye dayanarak açılan Shorts 40-73 izlenmede kaldı; en çok izlenenler (970-1.070) tek, kendi başına
+# anlaşılan bir cümleyle açılıyor (en uzunu 5,7 sn). Sayı rozeti öneridir, zorunlu değil: en yüksek izlenme
+# oranlı Shorts (%53) rozetsiz açılıyor.
+KANCA_AZAMI = 6.0                     # ilk parça: tek cümle, en çok bu kadar saniye
+BAGLAC = ("so ", "and ", "but ", "that ")  # önceki cümleye dayanan açılış
+
+
+def _kanca_hatalari(pl, zs):
+    hata = []
+    p = pl[0]
+    z = zs.get(p.get("sahne"))
+    ci = p.get("cumleler") if isinstance(p.get("cumleler"), list) else []
+    if z and ci and all(isinstance(k, int) and 0 <= k < len(z["cumleler"]) for k in ci):
+        if len(ci) != 1:
+            hata.append("parça 1 (kanca): tek cümle olmalı")
+        else:
+            c = z["cumleler"][ci[0]]
+            if c["sure"] > KANCA_AZAMI:
+                hata.append(f"parça 1 (kanca): {c['sure']:.1f} sn; en çok {KANCA_AZAMI:.0f} sn, daha kısa ve çarpıcı bir cümle seçin")
+            if str(c.get("metin", "")).strip().lower().startswith(BAGLAC):
+                hata.append("parça 1 (kanca): 'So/And/But/That' ile başlayan, öncesine dayanan cümle olamaz")
+    return hata
+
+
 def kontrol(slug, no=1):
     """kisa.json'u (no > 1: kisa_N.json) denetler; hata listesi döndürür (boşsa geçerli)."""
     proje, y, tanim = O.proje(slug), _yollar(slug, no), _tanim(slug, no)
@@ -301,6 +326,7 @@ def kontrol(slug, no=1):
         if p.get("etiket") and len(p["etiket"]) > 40:
             hata.append(f"{pa}: etiket en çok 40 karakter")
         t += sure + (0 if i == len(pl) else (ARA if pl[i].get("sahne") == p["sahne"] else PARCA_ARA))
+    hata += _kanca_hatalari(pl, zs)
     if not ICERIK[0] <= t <= ICERIK[1]:
         hata.append(f"anlatım {t:.1f} sn; {ICERIK[0]:.0f}-{ICERIK[1]:.0f} sn olmalı (hedef 38-45 sn)")
     toplam = BAS + t + (CTA_ARA + CTA_TAHMIN if sesli_kapanis(tanim) else 0) + SON
