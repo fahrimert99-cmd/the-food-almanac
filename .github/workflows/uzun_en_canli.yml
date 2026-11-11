@@ -53,6 +53,13 @@ jobs:
           fi
           [ "$M" = tam ] || M=deneme
           echo "MOD=$M" >> "$GITHUB_ENV"; echo "mod: $M"
+      - name: Deneme yayınlarını sil (tam modda)
+        if: env.MOD == 'tam'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 uzun_en/araclar/canli.py deneme_sil || true
       - name: Hazırla (bölüm seçimi, kartlar, kodlama)
         env:
           GH_TOKEN: ${{ github.token }}
