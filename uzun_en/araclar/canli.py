@@ -65,6 +65,11 @@ def adaylar():
     return out
 
 
+def pazar():
+    """Pazar yayını: son 7 günde yayınlanan bölümler en başa alınır (haftanın özeti)."""
+    return dt.datetime.now(dt.timezone.utc).weekday() == 6
+
+
 def sec(mod):
     al = adaylar()
     if not al:
@@ -85,6 +90,9 @@ def sec(mod):
         acik.append(a)
     kayit = O.json_oku(KAYIT, [])
     son = max((k["tarih"] for k in kayit if k.get("mod") == "tam" and k.get("durum") == "tamam"), default="")
+    if mod == "tam" and pazar():
+        hafta = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=7)).isoformat()
+        son = min(son, hafta) if son else hafta
     yeni = sorted([a for a in acik if a["slot"] > son], key=lambda a: a["slot"], reverse=True)
     eski = sorted([a for a in acik if a["slot"] <= son], key=lambda a: -a["izlenme"])
     if eski:                                             # her gün farklı bölümle başlasın (günlük yayın)
@@ -114,9 +122,9 @@ def _zemin():
     return im, c
 
 
-def kart_acilis(bolumler, yol):
+def kart_acilis(bolumler, yol, haftalik=False):
     im, c = _zemin()
-    c.text((80, 60), "THE FOOD ALMANAC", font=_font("Inter-ExtraBold.otf", 30), fill=SARI)
+    c.text((80, 60), "THE FOOD ALMANAC  ·  THIS WEEK'S EPISODES FIRST" if haftalik else "THE FOOD ALMANAC", font=_font("Inter-ExtraBold.otf", 30), fill=SARI)
     c.text((80, 105), "FOOD MYTHS MARATHON", font=_font("Anton-Regular.ttf", 96), fill=KREM)
     c.text((80, 225), f"{len(bolumler)} popular food claims, checked against the research",
            font=_font("Inter-Medium.otf", 30), fill=KREM)
@@ -249,7 +257,7 @@ def hazirla(mod):
         kodla_kart(png, wav, sn, mp4)
         return mp4
 
-    parca.append(kart("acilis", lambda p: kart_acilis(secilen, p), kisa or ACILIS_SN, 0))
+    parca.append(kart("acilis", lambda p: kart_acilis(secilen, p, mod == "tam" and pazar()), kisa or ACILIS_SN, 0))
     for i, b in enumerate(secilen, 1):
         parca.append(kart(f"siradaki_{i}", lambda p, b=b, i=i: kart_siradaki(b, i, n, b["kapak"], p),
                           kisa or KART_SN, i))
@@ -264,7 +272,7 @@ def hazirla(mod):
     kucuk_resim(secilen, [b["kapak"] for b in secilen], os.path.join(TMP, "kucuk_resim.jpg"))
     sureler = [_sure(p) for p in parca]
     O.json_yaz(os.path.join(TMP, "plan.json"), {
-        "mod": mod, "parcalar": parca, "sureler": sureler,
+        "mod": mod, "haftalik": mod == "tam" and pazar(), "parcalar": parca, "sureler": sureler,
         "bolumler": [{k: b[k] for k in ("slug", "id", "baslik", "sure")} for b in secilen]})
     O.log(f"hazır: {len(parca)} parça, {sum(sureler) / 60:.1f} dk")
 
@@ -274,6 +282,8 @@ def baslik_aciklama(plan):
     bl = plan["bolumler"]
     n = len(bl)
     baslik = f"{n} Food Myths Checked Against the Research | Food Almanac Live Marathon"
+    if plan.get("haftalik"):
+        baslik = f"This Week's Episodes + {n} Food Myths Checked | Food Almanac Sunday Marathon"
     if plan["mod"] == "deneme":
         baslik = "[TEST] " + baslik
     satir, t = [], ACILIS_SN
