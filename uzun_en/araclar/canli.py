@@ -399,13 +399,36 @@ def yayinla():
     return 0 if tamam else 1
 
 
+def deneme_sil():
+    """Kayıttaki deneme (özel) yayınlarını YouTube'dan siler; yalnızca mod 'deneme' olanlar, başka hiçbir video."""
+    kayit = O.json_oku(KAYIT, [])
+    hedef = [k for k in kayit if k.get("mod") == "deneme" and k.get("video_id") and k.get("durum") != "silindi"]
+    if not hedef:
+        return 0
+    yt = _yt()
+    for k in hedef:
+        try:
+            yt.liveBroadcasts().delete(id=k["video_id"]).execute()
+        except Exception as e:
+            if "notFound" not in str(e) and "404" not in str(e):
+                O.log(f"  ! deneme yayını silinemedi {k['video_id']}: {str(e)[:120]}")
+                continue
+        k["durum"] = "silindi"
+        O.log(f"deneme yayını silindi: {k['video_id']}")
+    O.json_yaz(KAYIT, kayit)
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     alt = ap.add_subparsers(dest="komut", required=True)
     h = alt.add_parser("hazirla")
     h.add_argument("--mod", choices=["tam", "deneme"], default="tam")
     alt.add_parser("yayinla")
+    alt.add_parser("deneme_sil")
     a = ap.parse_args()
+    if a.komut == "deneme_sil":
+        return deneme_sil()
     if a.komut == "hazirla":
         hazirla(a.mod)
         return 0
