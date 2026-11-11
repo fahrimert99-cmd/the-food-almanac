@@ -1,0 +1,19 @@
+{
+  "baslik": ["STEEL-CUT OR", "INSTANT OATS?"],
+  "baslik_yt": "Steel-Cut vs Instant Oats: What Studies Found",
+  "aciklama": "Which oats are best for your cholesterol? Here is what the research says about steel-cut, rolled and instant oats, and the one topping to watch.",
+  "parcalar": [
+    {"sahne": 32, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 34, "cumleler": [0], "gorsel": 30,
+     "baslik": {"satirlar": ["SAME FIBER"], "vurgu": "1.6 G", "not": "beta-glucan per serving"},
+     "etiket": "Rebello et al. · Nutr J · 2014"},
+    {"sahne": 34, "cumleler": [1], "baslik": null},
+    {"sahne": 35, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 35, "cumleler": [1], "baslik": {"satirlar": ["NO DIRECT", "COMPARISON"]}, "etiket": null},
+    {"sahne": 35, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 36, "cumleler": [0, 1], "gorsel": 53, "baslik": {"satirlar": ["PICK OATS YOU", "WILL EAT"]}, "etiket": null},
+    {"sahne": 36, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 41, "cumleler": [1], "baslik": {"satirlar": ["WATCH THE", "SUGAR"]}, "etiket": null},
+    {"sahne": 42, "cumleler": [0], "baslik": null, "etiket": null}
+  ]
+}

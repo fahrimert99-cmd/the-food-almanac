@@ -1,0 +1,36 @@
+name: Uzun Video EN — uyandırma
+# Görsel kotası bitince (NVIDIA hata veriyor, Cloudflare günlük kotası doldu) uzun video hattı kota yenilenene kadar
+# ertelenir (plan.py --gorsel-ertele: en geç 3 saat, ya da 00:05 UTC = 03:05 TR). GitHub'ın saatlik zamanlayıcısı
+# yoğunlukta saatlerce atlayabildiği için bu iş akışı ertelenen zamana kadar bekler ve hattı tam vaktinde başlatır;
+# hat hazır görsel ve sesle kaldığı yerden devam eder. Hat (uzun_en.yml) ertelerken ve beklerken bunu kendisi başlatır.
+# Herkese açık depo: Actions dakikası ücretsiz, kredi harcanmaz.
+on:
+  workflow_dispatch:
+    inputs:
+      zaman:
+        description: "Uzun video hattının başlatılacağı zaman (ISO 8601, UTC; ör. 2026-10-31T00:05:00Z)"
+        required: true
+
+permissions:
+  actions: write
+
+concurrency:
+  group: uzun-en-uyandir
+  cancel-in-progress: true     # yeni bir erteleme eskisinin yerini alır
+
+jobs:
+  uyandir:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Zamanı bekle
+        env:
+          ZAMAN: ${{ inputs.zaman }}
+        run: |
+          s=$(( $(date -ud "$ZAMAN" +%s) - $(date -u +%s) + 60 ))
+          if [ "$s" -gt 21000 ]; then s=21000; fi    # iş süresi sınırı (6 saat) içinde kal; hat gerekirse yeniden kurar
+          if [ "$s" -gt 0 ]; then echo "$ZAMAN için $s sn bekleniyor"; sleep "$s"; fi
+      - name: Uzun video hattını başlat
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run uzun_en.yml --repo "$GITHUB_REPOSITORY" --ref main

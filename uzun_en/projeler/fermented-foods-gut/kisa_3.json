@@ -1,0 +1,20 @@
+{
+  "baslik": ["KEFIR OR", "YOGURT?"],
+  "baslik_yt": "Kefir vs Yogurt: Which Is Better for Your Gut?",
+  "aciklama": "Kefir has more gut-microbiome trials than plain yogurt, but the results are mixed. Here is what the reviews and a kefir-versus-milk trial found.",
+  "parcalar": [
+    {"sahne": 36, "cumleler": [0, 1], "baslik": null, "etiket": null},
+    {"sahne": 28, "cumleler": [0], "gorsel": 30,
+     "baslik": {"satirlar": ["KEFIR", "STUDIES"], "vurgu": "8 STUDIES", "not": "modest, mixed shifts"},
+     "etiket": "Hamsho et al. · MicrobiologyOpen · 2026"},
+    {"sahne": 30, "cumleler": [0], "baslik": null},
+    {"sahne": 29, "cumleler": [0], "baslik": {"satirlar": ["INCONSISTENT", "RESULTS"]}, "etiket": null},
+    {"sahne": 34, "cumleler": [0], "gorsel": 32,
+     "baslik": {"satirlar": ["KEFIR VS", "MILK"], "vurgu": "12 WEEKS", "not": "randomized trial"},
+     "etiket": "Bellikci-Koyu et al. · Nutrients · 2019"},
+    {"sahne": 34, "cumleler": [1], "baslik": {"satirlar": ["WHY CONTROLS", "MATTER"]}, "etiket": null},
+    {"sahne": 35, "cumleler": [1], "baslik": {"satirlar": ["PLAIN YOGURT", "TRIALS?"]}, "etiket": null},
+    {"sahne": 35, "cumleler": [2], "baslik": null, "etiket": "Wastyk et al. · Cell · 2021"},
+    {"sahne": 50, "cumleler": [2, 3], "baslik": {"satirlar": ["GO PLAIN,", "ADD YOUR OWN"]}, "etiket": null}
+  ]
+}

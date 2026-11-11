@@ -6,7 +6,7 @@ beslenme ve gıda bilimi anlatımlarıdır.
 
 ## Akış
 
-Bütün akış `.github/workflows/uzun_en.yml` içindedir ve 3 saatte bir kendiliğinden çalışır.
+Bütün akış `.github/workflows/uzun_en.yml` içindedir ve saatte bir (gece dahil) kendiliğinden çalışır.
 
 ```
 plan.py ─► (konu havuzu boşsa) KONU ajanı
@@ -22,6 +22,11 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 ### Kesintiler ve gecikmeler
 
 - **Kota bitmesi ya da hata.** Kesilen aşama bir sonraki çalıştırmada kaldığı yerden devam eder.
+- **YouTube kotası dolarsa üretim durmaz.** Video (ve Shorts) yine render edilir ve GitHub sürümüne
+  (`uzun-en-<slug>`) arşivlenir. Uzun video `durum.json`'da `yukleme_bekliyor`, Shorts `kisa*_yayin.json`'da
+  `"bekliyor": true` olarak işaretlenir ve hat sıradaki videoya geçer. Saatlik plan işi (`yukle.py --tamamla`)
+  kota açılınca (07:00 UTC) bekleyenleri sürümden indirip yayın sırasıyla YouTube'a yükler. Uzun video yüklenince
+  Shorts'ları başlatılır. Günlük kota yaklaşık 6 yüklemeye, yani 2 video setine yeter.
 - **Slot yaklaşınca.**
   - Slota 14 saatten az kaldığında, ya da sahne tasarımı 3 kez kesildiğinde, kalan sahneler otomatik şablonla
     (`Genel`) çizilir. Video yine zamanında çıkar.
@@ -33,9 +38,9 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 
 | İş | Ne kullanılır |
 |---|---|
-| Claude | Önce `CLAUDE_ANA_TOKEN`, kota/yetki hatasında `CLAUDE_CODE_OAUTH_TOKEN` (yedek); `araclar/claude_calistir.sh`. İkisi de abonelik kotası; `sk-ant-api...` API anahtarları kredi harcamamak için atlanır. |
+| Claude | Sırayla `CLAUDE_YEDEK2_TOKEN`, `CLAUDE_ANA_TOKEN`, `CLAUDE_CODE_OAUTH_TOKEN`; kota/yetki hatasında sıradakine geçilir (`araclar/claude_calistir.sh`). Üçü de abonelik kotası; `sk-ant-api...` API anahtarları kredi harcamamak için atlanır. |
 | Gemini | `GEMINI_API_KEY` ücretsiz katman (faturalandırma kapalı). Claude kotası bitince devralır. |
-| Görsel | NVIDIA ücretsiz API; çökerse Cloudflare Workers AI FLUX (günlük ücretsiz kota) |
+| Görsel | NVIDIA ücretsiz API; çökerse Cloudflare Workers AI FLUX (günlük ücretsiz kota; ilk hesabın kotası bitince ikinci ücretsiz hesap `CLOUDFLARE_ACCOUNT_ID_2`/`CLOUDFLARE_API_TOKEN_2`) |
 | Ses | Kokoro "Michael" (yerel, açık kaynak; ilk iki video Piper ile) |
 | Müzik | Kodla üretilir |
 | YouTube | Ücretsiz Data API kotası |
@@ -63,18 +68,77 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 - **Konu eklemek ya da sırayı değiştirmek:** `uzun_en/konular.json` dosyasında `bekliyor` durumundaki ilk konu
   sıradaki videodur.
 - **Hemen çalıştırmak:** `uzun_en/calistir.json` içindeki `tetik` sayısını artırın, ya da Actions → Run workflow.
-- **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**.
+- **Önde üretim:** Hat boşta kaldığında sıradaki slotların videolarını önceden üretir ve YouTube'a zamanlanmış yükler.
+  - **Şu an 100** (`marka.json` → `onde_uretim_azami`, 8 Kasım 2026, kanal sahibinin isteğiyle "üretim durmasın"):
+    yayın bekleyen 100 video olana kadar (yaklaşık bir yıl) üretim kota oldukça sürer; Claude ya da görsel kotası
+    bitince bekler, YouTube kotası bitince video GitHub'da bekler (yukarıya bakın). 0 yapılırsa her video slotuna 72 saat kala üretilir. Görsel kotası (iki ücretsiz Cloudflare hesabı) günde yaklaşık
+    2 uzun video taşır; yüksek sınır kotayı tüketip sonraki videoları bekletebilir.
+  - Sınıra ulaşıldıysa yarıda kalmış video da bekletilir; slotuna 72 saat kala kaldığı aşamadan devam eder.
+  - Slota 72 saatten fazla varken iş yalnızca Claude kotasıyla yürür; kota bitince yedek modele geçilmez, sonraki
+    çalıştırma (saatte bir) kaldığı yerden devam eder.
+  - Slot yaklaşınca (72 saat) normal kurallar geçerlidir: gerekirse Gemini ve şablon sahneler devreye girer.
+  - Hat boş beklemez: uzun video yüklenince plan hemen yeniden çalışır. Her Shorts başarıyla bitince de sıradaki
+    Shorts başlar: önce aynı videonunki, sonra Shorts'u eksik bir sonraki video. İş kalmayınca zincir kendiliğinden
+    durur.
+- **Üretimi durdurmak (yayın sürer):** `uzun_en/marka.json` → `"uretim_durdur": true`. Yeni uzun video ve Shorts
+  üretilmez, boş günlere ek Shorts ayrılmaz; zamanlanmış videoların yayını, yorumlar, Reels/TikTok/X paylaşımı ve
+  kota bekleyen yüklemeler sürer. Yarıda kalan video kaldığı aşamada bekler. Yeniden başlatmak: `false` yapın.
+  (11 Kasım 2026'dan beri `true`, kanal sahibinin isteğiyle.)
+- **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**. (her şeyi, yayın denetimini de durdurur)
 - **Durum:** `uzun_en/durum.json` her videonun aşamasını, slotunu ve YouTube kimliğini tutar
   (`projeler/<slug>/yayin.json`).
 - **Analiz:** Kanal Analizi iş akışı her pazartesi YouTube Analytics verisini `analiz/<tarih>.json` dosyasına
   yazar: ülke, trafik kaynağı, abone durumu, izleyici tutma. Gelir verisi alınmaz. Hemen çalıştırmak için
   `analiz/tetik.json` içindeki sayıyı artırın.
+- **Instagram Reels:** YouTube'da yayınlanan Shorts'lar günde en çok bir tane Reels olarak paylaşılır.
+  - **Kuyruk:** `reels.yml` her gün 06:23, 10:23 ve 12:23 UTC'de çalışır (`araclar/reels.py`); GitHub zamanlayıcısı gecikebildiği için üç deneme var, günde yine en çok bir Reels eklenir.
+    - Yayınlanmış ve henüz paylaşılmamış en eski Shorts'u seçer.
+    - Videoyu Instagram koşullarına göre yeniden kodlar.
+    - Videoyu `reels-medya` dalına ve `reels.xml` beslemesine koyar.
+    - Kaydı `uzun_en/reels.json` dosyasına yazar.
+  - **Yayın:** Make senaryosu "Food Almanac – Instagram + Facebook Reels" beslemeyi her gün 14:00 UTC'de okur.
+    Yeni öğeyi sırayla şuralara gönderir:
+    - Instagram @foodalmanactv (Create a reel post),
+    - Facebook Sayfası FoodAlmanactv (Publish a Reel),
+    - Pinterest (video pin; kapak karesi `SLUG-N.jpg`, bağlantı uzun video).
+  - **Hemen kuyruğa almak:** `reels_islem.json` içindeki sayıyı artırın. Günde birden fazla Reels eklenmez.
+  - **TikTok:** Aynı video `reels.yml` içinde doğrudan TikTok'a gider (`araclar/tiktok.py`). İncelemeden geçmemiş
+    TikTok uygulamaları yalnızca gizli paylaşabildiğinden video gizli yüklenir; kanal sahibi uygulamadan herkese açar.
+    - Bağlantı: `tiktok_baglan.yml` (yetki kodu). Token "tiktok" ön-sürümünde şifreli durur.
+    - Gerekli gizli ayarlar: `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`.
+    - `marka.json` → `tiktok_mod: "taslak"` ile video gizli paylaşım yerine TikTok gelen kutusuna taslak olarak gider.
 - **Ayarlar** (Settings → Variables, isteğe bağlı):
 
   | Değişken | Ne işe yarar |
   |---|---|
   | `UZUN_CLAUDE_MODEL` | `opus` ya da `sonnet`. Sonnet kotayı daha az tüketir. |
   | `UZUN_SAHNE_GRUP` | Paralel sahne ajanı sayısı (varsayılan 8). |
+
+## Haftalık canlı maraton
+
+`.github/workflows/uzun_en_canli.yml` her cumartesi 17:47 UTC'de yayınlanmış bölümleri arka arkaya canlı yayın olarak
+akıtır (`araclar/canli.py`): açılış kartı, her bölümden önce "Up next" kartı, kapanış kartı, sağ üstte
+"LIVE MARATHON i/N" rozeti. Yalnızca YouTube'da herkese açık bölümler kullanılır; son maratondan beri yayınlananlar
+önce, sonra izlenmeye göre; toplam en çok 150 dk. Kayıtlar `canli/kayit.json`'a yazılır.
+
+- Hemen denemek: `canli/tetik.json` içindeki sayıyı artırın. `"mod": "deneme"` özel (private), 2 bölümden 45 sn;
+  `"mod": "tam"` herkese açık maraton.
+- Kanalda canlı yayın bir kez YouTube Studio'dan etkinleştirilmiş olmalı (onay 24 saate kadar sürebilir).
+
+## Bekleyen kararlar
+
+- **Anlatıcı sesi (19 Ekim 2026):** Kanal sahibinin kendi ses klonu (Chatterbox Turbo, `klon` motoru) hazır ve
+  denendi. Yumurta videosunun Shorts ve uzun önizlemesi üretildi (`ses_klon_video.yml`), kanal sahibi beğendi.
+  - **Karar:** Ses ŞİMDİLİK DEĞİŞMEYECEK. Önce Michael (Kokoro) sesli videoların verilerine bakılacak:
+    - ilk 30 saniyede kalan izleyici,
+    - ortalama izlenme süresi,
+    - Shorts'ta kaydırmadan izleyenlerin oranı.
+  - Geçişe kanal sahibiyle birlikte karar verilecek. O zamana kadar `marka.json` → `ses_motoru: kokoro` kalır.
+  - Hiçbir oturum ya da ajan sesi kendi başına değiştirmez.
+  - Geçiş yapılırsa:
+    - yayınlanmış projeler `proje.json`'da `ses_motoru: kokoro` ile sabitlenir;
+    - üretim işlerine ses örneğinin çözülmesi ve `chatterbox-tts` kurulumu eklenir (`ses_klon.yml`'deki adımlar).
+  - Ses örneği yalnızca şifreli durur: `assets/ses/referans.enc`, `araclar/sifre.sh`.
 
 ## Dosyalar
 

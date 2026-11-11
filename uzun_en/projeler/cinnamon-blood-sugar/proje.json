@@ -1,0 +1,565 @@
+{
+  "slug": "cinnamon-blood-sugar",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Cinnamon and Blood Sugar: What Studies Show",
+  "yorum": "Do you add cinnamon to your coffee or oatmeal, and do you know whether your jar is Ceylon or cassia? Has your doctor or pharmacist ever mentioned it?",
+  "aciklama_giris": "Pooled trials in adults with type 2 diabetes suggest cinnamon may lower fasting blood sugar by roughly 25 milligrams per deciliter, but the effect on A1C is small, uncertain and not consistent across reviews. The cinnamon sold in most American grocery stores is usually cassia, which contains far more coumarin than Ceylon cinnamon, a compound that can affect the liver in sensitive people.\n\nIn this video we look at the meta-analyses and trials, why they disagree, what the National Institutes of Health says, how much coumarin is in each type, how much cinnamon in your coffee is reasonable, and why cinnamon is never a substitute for diabetes medication.",
+  "kaynaklar": [
+    "National Center for Complementary and Integrative Health (NIH). Cinnamon. nccih.nih.gov/health/cinnamon",
+    "Khan A, Safdar M, Ali Khan MM, Khattak KN, Anderson RA. Cinnamon improves glucose and lipids of people with type 2 diabetes. Diabetes Care. 2003;26(12):3215-3218. doi:10.2337/diacare.26.12.3215 (expression of concern added 2025: doi:10.2337/dc25-ec09)",
+    "Baker WL, Gutierrez-Williams G, White CM, Kluger J, Coleman CI. Effect of cinnamon on glucose control and lipid parameters. Diabetes Care. 2008;31(1):41-43. doi:10.2337/dc07-1711",
+    "Allen RW, Schwartzman E, Baker WL, Coleman CI, Phung OJ. Cinnamon use in type 2 diabetes: an updated systematic review and meta-analysis. Annals of Family Medicine. 2013;11(5):452-459. doi:10.1370/afm.1517, PMID 24019277",
+    "Crawford P. Effectiveness of cinnamon for lowering hemoglobin A1C in patients with type 2 diabetes: a randomized, controlled trial. Journal of the American Board of Family Medicine. 2009;22(5):507-512. doi:10.3122/jabfm.2009.05.080093, PMID 19734396",
+    "Costello RB, Dwyer JT, Saldanha L, Bailey RL, Merkel J, Wambogo E. Do cinnamon supplements have a role in glycemic control in type 2 diabetes? A narrative review. Journal of the Academy of Nutrition and Dietetics. 2016;116(11):1794-1802. doi:10.1016/j.jand.2016.07.015, PMID 27618575",
+    "Moridpour AH, Kavyani Z, Khosravi S, et al. The effect of cinnamon supplementation on glycemic control in patients with type 2 diabetes mellitus: an updated systematic review and dose-response meta-analysis of randomized controlled trials. Phytotherapy Research. 2024;38(1):117-130. doi:10.1002/ptr.8026, PMID 37818728",
+    "Yu T, Lu K, Cao X, et al. The effect of cinnamon on glycolipid metabolism: a dose-response meta-analysis of randomized controlled trials. Nutrients. 2023;15(13):2983. doi:10.3390/nu15132983, PMID 37447309",
+    "Zhou Q, Lei X, Fu S, et al. Efficacy of cinnamon supplementation on glycolipid metabolism in T2DM diabetes: a meta-analysis and systematic review. Frontiers in Physiology. 2022;13. PMID 36505061",
+    "AGES (Austrian Agency for Health and Food Safety). Coumarin. ages.at/en/human/nutrition-food/residues-contaminants-from-a-to-z/coumarin",
+    "German Federal Institute for Risk Assessment (BfR). Cassia cinnamon with high coumarin contents to be consumed in moderation. Press release, 27 September 2012. bfr.bund.de",
+    "Yesukumar SJ, Bakir L, Mohamed IA, Danjuma M. Probable cinnamon-induced mixed hepatocellular-cholestatic liver injury in a young woman: a case report. Cureus. 2025;17(9):e93328. doi:10.7759/cureus.93328, PMID 41158894"
+  ],
+  "kapak": {
+    "satirlar": [
+      "CINNAMON",
+      "WORKS?"
+    ],
+    "vurgu": "–25",
+    "vurgu_alt": "mg/dL",
+    "serit": "Fasting glucose, A1C unclear",
+    "gorsel": "a big bundle of rolled cinnamon sticks tied with twine, overlapping a small wooden bowl of ground cinnamon, a glucose meter with a blank screen tucked right behind them, very large, close up and appetizing"
+  },
+  "kahraman": "cinnamon",
+  "etiketler": [
+    "cinnamon blood sugar",
+    "ceylon vs cassia cinnamon",
+    "cinnamon diabetes study",
+    "cinnamon in coffee after 60",
+    "coumarin in cinnamon",
+    "type 2 diabetes",
+    "A1C",
+    "fasting glucose",
+    "nutrition science",
+    "food myths"
+  ],
+  "seslendirme_duzelt": {
+    "A1C": "A 1 C",
+    "HbA1c": "H B A 1 C",
+    "Ceylon": "say lon",
+    "Almanac": "all man ack",
+    "BfR": "B F R",
+    "AGES": "ay jess"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The cinnamon question",
+      "metin": "If you add cinnamon to your oatmeal for blood sugar, ten trials in 543 adults with type 2 diabetes found fasting glucose fell about 25 milligrams per deciliter.",
+      "gorsel": "a ceramic bowl of oatmeal dusted with ground cinnamon beside two cinnamon sticks and a wooden spoon, soft morning light",
+      "etiket": "Allen et al. · Ann Fam Med · 2013",
+      "baslik": {
+        "satirlar": [
+          "CINNAMON",
+          "FASTING",
+          "GLUCOSE"
+        ],
+        "vurgu": "–25",
+        "not": "mg/dL in a review of 10 trials"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But A1C, your three-month average, showed no significant change. And most American cinnamon has a catch.",
+      "gorsel": "a pantry shelf of small spice jars with plain blank labels, one jar of ground cinnamon pulled forward beside a cinnamon stick"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know which cinnamon to buy and how much is too much.",
+      "gorsel": "two bundles of cinnamon sticks side by side on a wooden table, one thick and dark, one pale and thin with many layers, a small kitchen scale beside them"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what cinnamon actually is.",
+      "gorsel": "a cinnamon tree branch with glossy leaves lying beside rolled cinnamon bark sticks, botanical plate style"
+    },
+    {
+      "id": 5,
+      "metin": "Cinnamon is the dried bark of certain trees, rolled into sticks or ground into powder. People have wondered whether it can help the body handle sugar. In humans, the answer is still being sorted out.",
+      "gorsel": "ground cinnamon in a small wooden bowl with a cinnamon stick resting across it, a wooden spoon and a few curls of cinnamon bark"
+    },
+    {
+      "id": 6,
+      "metin": "There are two main kinds. Ceylon cinnamon, sometimes called true cinnamon, grows mainly in Sri Lanka. Cassia is the type more commonly sold in North America.",
+      "gorsel": "a cinnamon stick of pale thin Ceylon bark beside a thicker darker cassia cinnamon stick on a plain tray, a small globe behind",
+      "baslik": {
+        "satirlar": [
+          "CEYLON",
+          "VS CASSIA"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "The National Institutes of Health says the two differ in chemical makeup, and a label often doesn't say which one is in the jar. Keep that in mind. It matters later.",
+      "gorsel": "a plain spice jar of ground cinnamon with a blank label on a kitchen counter beside a cinnamon stick and a small magnifying glass"
+    },
+    {
+      "id": 8,
+      "bolum": "What the trials found",
+      "tip": "kart",
+      "metin": "So what have the trials actually shown? Let's take them in order.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "What the trials found",
+        "alt": "Trials and meta-analyses · 2003 to 2024"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "A widely cited 2003 trial gave 60 adults with type 2 diabetes one, three or six grams of cinnamon daily for forty days. Fasting glucose fell 18 to 29 percent, while placebo groups showed no significant change.",
+      "gorsel": "three small bowls holding ground cinnamon in three different sized heaps, a measuring spoon and a cinnamon stick",
+      "etiket": "Khan et al. · Diabetes Care · 2003",
+      "baslik": {
+        "satirlar": [
+          "THE 2003",
+          "TRIAL"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "metin": "That result got a lot of attention. But in 2025, the journal added an editorial expression of concern to the paper, so it's best treated with caution.",
+      "gorsel": "an old closed journal with a blank cover on a desk, a magnifying glass resting on it and one cinnamon stick beside it"
+    },
+    {
+      "id": 11,
+      "metin": "A 2008 analysis pooled five placebo-controlled trials with 282 people with diabetes. It found no significant change in A1C, fasting glucose or cholesterol.",
+      "gorsel": "five small jars in a row each holding a cinnamon stick, a glucose meter with a blank screen at the end of the row",
+      "etiket": "Baker et al. · Diabetes Care · 2008",
+      "baslik": {
+        "satirlar": [
+          "NO CHANGE",
+          "IN 2008"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Five years later, an update pooled ten trials and 543 adults with type 2 diabetes. Doses ranged from 120 milligrams to 6 grams a day, for four to eighteen weeks.",
+      "gorsel": "a long wooden table with ten small bowls of ground cinnamon in different amounts and a cinnamon stick in front of each",
+      "etiket": "Allen et al. · Ann Fam Med · 2013"
+    },
+    {
+      "id": 13,
+      "metin": "Quick definitions. Fasting glucose is your blood sugar after not eating for several hours, in milligrams per deciliter. A1C reflects your average over roughly three months, so doctors lean on it for long-term control.",
+      "gorsel": "a glass of water and a glucose meter with a blank screen on a bedside table in morning light, a cinnamon stick resting beside the glass",
+      "baslik": {
+        "satirlar": [
+          "FASTING",
+          "VS A1C"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Fasting glucose came out about 25 milligrams per deciliter lower. But the range of likely true values was wide, from about 9 to 41.",
+      "gorsel": "a glucose meter with a blank screen and a lancet beside a bowl of ground cinnamon and a cinnamon stick",
+      "baslik": {
+        "satirlar": [
+          "FASTING",
+          "GLUCOSE"
+        ],
+        "vurgu": "–25",
+        "not": "mg/dL on average, range 9 to 41"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "A1C, though, fell by only about 0.16 percentage points, and the range of possible values included zero. The results also varied a lot from trial to trial.",
+      "gorsel": "a thin cinnamon stick laid across a small brass balance scale, the scale almost level, a bowl of ground cinnamon behind",
+      "baslik": {
+        "satirlar": [
+          "A1C",
+          "NOT SIGNIFICANT"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "metin": "To put that in perspective, 0.16 is a small shift, while half a point is more noticeable. As you'll see, a bigger drop was reported in a single trial that had no placebo.",
+      "gorsel": "a wooden ruler with fine tick marks laid beside a cinnamon stick and a small bowl of ground cinnamon"
+    },
+    {
+      "id": 17,
+      "metin": "Even the authors of that 2013 review said the best dose and duration remain unclear, and that the high variation limits how the results can be used in practice.",
+      "gorsel": "a cinnamon stick lying on an open notebook with blank pages beside a pen and a pair of reading glasses"
+    },
+    {
+      "id": 18,
+      "metin": "One of the more encouraging trials followed 109 adults with type 2 diabetes and an A1C above 7. For 90 days, half took one gram of cinnamon daily, on top of usual care.",
+      "gorsel": "a row of gelatin capsules next to a small heap of ground cinnamon and a cinnamon stick, a kitchen calendar page with blank squares behind",
+      "etiket": "Crawford · J Am Board Fam Med · 2009"
+    },
+    {
+      "id": 19,
+      "tip": "grafik",
+      "metin": "A1C fell 0.83 points with cinnamon plus usual care, and 0.37 points with usual care alone. A gap of about half a point.",
+      "grafik": {
+        "baslik": "A1C drop after 90 days",
+        "alt": "Percentage points, cinnamon plus usual care vs. usual care alone",
+        "cubuklar": [
+          {
+            "etiket": "Usual care alone",
+            "deger": 0.37,
+            "metin": "−0.37"
+          },
+          {
+            "etiket": "Cinnamon + usual care",
+            "deger": 0.83,
+            "metin": "−0.83"
+          }
+        ],
+        "kaynak": "Crawford, J Am Board Fam Med 2009 · 109 adults with type 2 diabetes · 1 g/day for 90 days"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "Notice the comparison group got usual care alone, not a placebo capsule. That can make a result look better than it is.",
+      "gorsel": "two identical trays, one holding a cinnamon stick and capsules and the other holding only an empty folded napkin, a pair of round eyeglasses between them"
+    },
+    {
+      "id": 21,
+      "metin": "A 2016 review looked at eleven trials with 694 adults. It found very modest A1C decreases, and did not pool them because the trials were too different from one another.",
+      "gorsel": "eleven mismatched spice jars and bowls of different shapes arranged in a loose circle, each with a little ground cinnamon, a cinnamon stick in the middle",
+      "etiket": "Costello et al. · J Acad Nutr Diet · 2016"
+    },
+    {
+      "id": 22,
+      "bolum": "Why studies disagree",
+      "tip": "kart",
+      "metin": "So why do the results disagree?",
+      "kart": {
+        "ust": "THE PUZZLE",
+        "baslik": "Why studies disagree",
+        "alt": "Dose · Type · Time · Who"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Here's the puzzle in one example. Two meta-analyses, both published in 2023, reached different conclusions about cinnamon and type 2 diabetes.",
+      "gorsel": "two stacks of papers with blank pages on a desk, a cinnamon stick laid between them like a divider",
+      "baslik": {
+        "satirlar": [
+          "TWO 2023",
+          "ANSWERS"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "metin": "One team pooled 24 trials and reported lower fasting glucose and lower A1C. Another team, in the journal Nutrients, found no significant overall effect on either one.",
+      "gorsel": "a brass balance scale with a cinnamon stick on one pan and a bowl of ground cinnamon on the other, tilted to one side",
+      "etiket": "Moridpour et al. and Yu et al. · 2023"
+    },
+    {
+      "id": 25,
+      "metin": "Reason one is size. Many trials enrolled only a few dozen people, and small trials swing widely. In the 2013 review, the scatter between trials was high, around 67 to 95 percent.",
+      "gorsel": "a handful of small cinnamon sticks scattered unevenly across a wooden table, some close together and some far apart"
+    },
+    {
+      "id": 26,
+      "metin": "Reason two is dose and time. Trials used anywhere from 120 milligrams to 6 grams a day, for a month to a few months. Many people sprinkle far less than the larger doses tested.",
+      "gorsel": "a set of measuring spoons from tiny to large, each holding ground cinnamon, a cinnamon stick laid alongside",
+      "baslik": {
+        "satirlar": [
+          "120 MG",
+          "TO 6 G"
+        ],
+        "not": "daily doses tested in the 2013 review"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Reason three is the cinnamon itself. The National Institutes of Health says it's often unclear which species or plant part was tested, which makes results hard to interpret.",
+      "gorsel": "a pile of cinnamon bark pieces, quills and powder in different shades laid out on a tray, a magnifying glass over one piece"
+    },
+    {
+      "id": 28,
+      "metin": "Reason four is who gets studied. One analysis found a benefit in lower-dose groups, 1,200 milligrams a day or less. Another suggested bigger effects when A1C started around 8 percent.",
+      "gorsel": "a small bowl with a modest spoonful of ground cinnamon and one cinnamon stick, a glucose meter with a blank screen beside it"
+    },
+    {
+      "id": 29,
+      "metin": "Put it together, and the National Institutes of Health says it's unclear whether cinnamon supplements help with diabetes. Its page says research doesn't clearly support cinnamon for any health condition.",
+      "gorsel": "a cinnamon stick resting on a closed leather-bound reference book beside an hourglass and a pair of eyeglasses",
+      "baslik": {
+        "satirlar": [
+          "NIH:",
+          "STILL UNCLEAR"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "Now, a more practical question. Which cinnamon is actually in your jar? There's one detail that changes how much you should use.",
+      "gorsel": "a small spice rack with three jars of ground cinnamon of slightly different shades, one cinnamon stick resting in front"
+    },
+    {
+      "id": 31,
+      "bolum": "The coumarin catch",
+      "tip": "kart",
+      "metin": "It comes down to one compound.",
+      "kart": {
+        "ust": "ON THE SHELF",
+        "baslik": "Cassia, Ceylon and coumarin",
+        "alt": "What is really in the jar"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Cassia contains a natural compound called coumarin. Ceylon has only a trace. In large amounts over a long time, coumarin can affect the liver in sensitive people.",
+      "gorsel": "a thick dark cassia cinnamon stick beside a thin pale Ceylon cinnamon quill on a white dish, a simple liver sketched in the corner as a textbook engraving",
+      "baslik": {
+        "satirlar": [
+          "COUMARIN"
+        ],
+        "not": "a natural compound in cassia cinnamon"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "How different are they? Austria's food safety agency reported coumarin in cassia from about 1,880 to 3,260 milligrams per kilogram. The highest it found in Ceylon was 185.",
+      "gorsel": "two laboratory scoops of ground cinnamon on a bench, one heaped and one tiny, with a magnifying glass between them",
+      "etiket": "AGES · Austrian food safety agency"
+    },
+    {
+      "id": 34,
+      "tip": "grafik",
+      "metin": "Even next to the highest Ceylon sample, cassia held roughly ten to eighteen times more coumarin.",
+      "grafik": {
+        "baslik": "Coumarin in cinnamon",
+        "alt": "Milligrams of coumarin per kilogram of cinnamon",
+        "cubuklar": [
+          {
+            "etiket": "Ceylon, highest",
+            "deger": 185,
+            "metin": "185"
+          },
+          {
+            "etiket": "Cassia, low end",
+            "deger": 1880,
+            "metin": "1,880"
+          },
+          {
+            "etiket": "Cassia, high end",
+            "deger": 3260,
+            "metin": "3,260"
+          }
+        ],
+        "kaynak": "AGES, Austrian Agency for Health and Food Safety · measured values in cinnamon"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "European regulators set a tolerable daily intake of 0.1 milligram of coumarin per kilogram of body weight. For a 60 kilogram adult, about 132 pounds, that's 6 milligrams a day.",
+      "gorsel": "a small brass kitchen scale holding a tiny pinch of ground cinnamon, a cinnamon stick beside it, a soft ring of light",
+      "baslik": {
+        "satirlar": [
+          "6 MG",
+          "A DAY"
+        ],
+        "not": "coumarin limit for a 60 kg adult"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "The German Federal Institute for Risk Assessment estimates an adult that size reaches it with about 2 grams of cassia at average coumarin levels. That's a little less than a teaspoon of ground cinnamon.",
+      "gorsel": "a single level teaspoon of ground cinnamon on a white saucer beside a cinnamon stick",
+      "etiket": "BfR · 2012"
+    },
+    {
+      "id": 37,
+      "metin": "Going slightly over for a week or two is considered safe. The concern is steady, high intake over a long time. And a jar's label often doesn't say which type is inside.",
+      "gorsel": "two small identical heaps of brown ground cinnamon side by side on a plate, a cinnamon stick laid across the plate"
+    },
+    {
+      "id": 38,
+      "metin": "The limit is per kilogram, so smaller people reach it sooner. If you bake cinnamon treats for grandchildren, an amount that suits you may be too much for a small child.",
+      "gorsel": "a plate of cinnamon cookies beside a cinnamon stick and a small child's cup on a kitchen table"
+    },
+    {
+      "id": 39,
+      "metin": "Some diabetes trials used up to 6 grams a day. If that was cassia, our math puts it well over the daily limit, and the type often wasn't reported.",
+      "gorsel": "a large heaped tablespoon of ground cinnamon next to a small brass scale and a cinnamon stick, a notebook with blank pages"
+    },
+    {
+      "id": 40,
+      "metin": "Real harm from ordinary use looks rare. The National Institutes of Health says typical food amounts usually aren't enough to cause major problems. But cases are documented.",
+      "gorsel": "a cinnamon stick resting on a doctor's open notebook with blank pages beside a stethoscope"
+    },
+    {
+      "id": 41,
+      "metin": "In a 2025 case report, a 34-year-old woman developed liver injury after taking cinnamon for weight loss over a prolonged period. Her liver tests returned to normal after she stopped.",
+      "gorsel": "a small bottle of cinnamon capsules spilling a few onto a table beside a cinnamon stick, a glass of water",
+      "etiket": "Yesukumar et al. · Cureus · 2025"
+    },
+    {
+      "id": 42,
+      "metin": "Ceylon is the low-coumarin choice, and German regulators suggest frequent heavy users pick it. But it's often unclear which type was tested, so we can't say Ceylon works better for blood sugar.",
+      "gorsel": "a bundle of pale layered Ceylon cinnamon quills tied with twine on a wooden table next to a small bowl of ground cinnamon"
+    },
+    {
+      "id": 43,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What is supported, and what isn't?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What cinnamon can't do",
+        "alt": "Limits and medications"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "What's reasonably supported: in several analyses of small trials, cinnamon was linked with somewhat lower fasting glucose in adults with type 2 diabetes. The effect on A1C is smaller and less certain.",
+      "gorsel": "a glucose meter with a blank screen beside a small bowl of ground cinnamon and a cinnamon stick, calm morning light"
+    },
+    {
+      "id": 45,
+      "metin": "What isn't supported is cinnamon as a treatment. The reviews describe it, at most, as an add-on to usual care. None of them suggests it can replace diabetes medication.",
+      "gorsel": "a weekly pill organizer with seven compartments next to a cinnamon stick, the stick set apart on its own small dish",
+      "baslik": {
+        "satirlar": [
+          "NOT A",
+          "SUBSTITUTE"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "So please don't stop, skip or lower a diabetes medicine because you take cinnamon. Any change to your medicine should come from your doctor, based on your own numbers.",
+      "gorsel": "a doctor's desk with a prescription pad, a stethoscope and a small dish holding a cinnamon stick",
+      "baslik": {
+        "satirlar": [
+          "KEEP YOUR",
+          "MEDICINE"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "If you take any medicine, or have a liver condition, ask your doctor or pharmacist before using cinnamon supplements. The National Institutes of Health gives the same advice.",
+      "gorsel": "a pharmacist's counter with a mortar and pestle holding ground cinnamon, a cinnamon stick and a row of amber bottles"
+    },
+    {
+      "id": 48,
+      "metin": "Capsules deserve extra caution, because the dose is concentrated and the label may not name the type. The trials we found studied adults with type 2 diabetes in general, so we can't say much about people over 60 specifically.",
+      "gorsel": "an open capsule with ground cinnamon pouring out beside a cinnamon stick, a magnifying glass over the powder"
+    },
+    {
+      "id": 49,
+      "metin": "A dusting of cinnamon on your food is another matter. The National Institutes of Health says the amounts used in cooking are likely safe.",
+      "gorsel": "a small sieve dusting ground cinnamon over a slice of toast on a plate, a cinnamon stick beside the plate"
+    },
+    {
+      "id": 50,
+      "metin": "Notice what the trials measured. The most consistent change was in fasting glucose, a single morning reading, not in the long-term picture that your A1C shows.",
+      "gorsel": "a morning kitchen scene with a glucose meter with a blank screen, a cup of coffee and a cinnamon stick on a saucer"
+    },
+    {
+      "id": 51,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how can you use cinnamon sensibly? Here are five ideas.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Cinnamon, sensibly",
+        "alt": "Five practical ways"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "One. Treat cinnamon as flavor, not medicine. Keep taking the treatment your doctor prescribed.",
+      "gorsel": "a bowl of plain yogurt dusted lightly with ground cinnamon and a cinnamon stick on a kitchen table"
+    },
+    {
+      "id": 53,
+      "metin": "Two. If you use it every day, look for a label that says Ceylon. A jar that just says cinnamon may well be cassia.",
+      "gorsel": "a hand holding a jar of ground cinnamon up to the light, a bundle of Ceylon cinnamon quills on the table"
+    },
+    {
+      "id": 54,
+      "metin": "Three. A quarter teaspoon in your morning coffee is about 0.6 grams. By our math, with average cassia that's roughly one to two milligrams of coumarin, well under the 6 milligram limit.",
+      "gorsel": "a white coffee cup with a cinnamon stick standing in it, a pinch of ground cinnamon on the saucer",
+      "baslik": {
+        "satirlar": [
+          "COFFEE",
+          "PINCH"
+        ],
+        "vurgu": "1–2 MG",
+        "not": "coumarin in a quarter teaspoon of average cassia (our estimate)"
+      }
+    },
+    {
+      "id": 55,
+      "metin": "A full teaspoon, about 2.5 grams, comes to roughly five to eight milligrams with cassia. Do that every day, and you can pass the limit.",
+      "gorsel": "a full level teaspoon of ground cinnamon held over a coffee cup, a cinnamon stick on the saucer"
+    },
+    {
+      "id": 56,
+      "metin": "Four. Count all your sources. Cinnamon rolls, cinnamon tea, sprinkled cinnamon and supplements all add up. If you use it daily, keep a rough tally.",
+      "gorsel": "a breakfast table with a cinnamon roll, a cup of cinnamon tea with a cinnamon stick, a bowl of oatmeal dusted with cinnamon and a small jar of cinnamon"
+    },
+    {
+      "id": 57,
+      "metin": "Five. If you have liver disease, ask your doctor or pharmacist before making cinnamon a daily habit.",
+      "gorsel": "a quiet consultation room with a chair, a notebook, and a small dish holding a cinnamon stick on the desk"
+    },
+    {
+      "id": 58,
+      "metin": "And if you check your sugar at home, your own meter tells you more than any headline. Share what you see with your care team.",
+      "gorsel": "a glucose meter with a blank screen next to a notebook and a cup of coffee with a cinnamon stick in it"
+    },
+    {
+      "id": 59,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A spice, not a treatment",
+        "alt": "Evidence · Cassia vs Ceylon · Safety"
+      }
+    },
+    {
+      "id": 60,
+      "metin": "Pooled trials suggest cinnamon may lower fasting glucose in type 2 diabetes by about 25 milligrams per deciliter. The A1C effect is small and inconsistent, and reviews disagree.",
+      "gorsel": "a bowl of oatmeal dusted with ground cinnamon and two cinnamon sticks, a glucose meter with a blank screen beside it"
+    },
+    {
+      "id": 61,
+      "metin": "Most cinnamon in American stores is cassia, which carries much more coumarin than Ceylon. For a 60 kilogram adult, daily use of about a teaspoon of cassia can reach or pass the limit.",
+      "gorsel": "a thick dark cassia cinnamon stick beside a thin pale Ceylon cinnamon quill on a wooden board, a small brass scale behind"
+    },
+    {
+      "id": 62,
+      "metin": "In practice, that means a quarter teaspoon in coffee, Ceylon if you can find it, no stacking of supplements, and a talk with your doctor or pharmacist first if you take medicine.",
+      "gorsel": "a coffee cup with a cinnamon stick, a bundle of Ceylon cinnamon quills and a pill organizer lined up neatly on a tray"
+    },
+    {
+      "id": 63,
+      "metin": "And cinnamon is never a substitute for diabetes medication. Enjoy it for flavor, and talk to your doctor or pharmacist before using supplements.",
+      "gorsel": "a cup of coffee with a cinnamon stick, a pill organizer and a stethoscope arranged together on a kitchen table"
+    },
+    {
+      "id": 64,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

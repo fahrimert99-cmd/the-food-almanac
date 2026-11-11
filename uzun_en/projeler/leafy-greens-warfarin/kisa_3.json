@@ -1,0 +1,14 @@
+{
+  "baslik": ["NEWER DRUGS:", "DIET RULE?"],
+  "baslik_yt": "Eliquis and Xarelto: Do Greens Still Matter?",
+  "aciklama": "Warfarin works against vitamin K, but newer blood thinners work differently. Here is what the trials and MedlinePlus say, and why you should never switch on your own.",
+  "parcalar": [
+    {"sahne": 34, "cumleler": [0], "gorsel": 35, "baslik": null, "etiket": null},
+    {"sahne": 36, "cumleler": [0, 1], "baslik": {"satirlar": ["BLOCKS", "FACTOR XA"]}, "etiket": null},
+    {"sahne": 36, "cumleler": [2], "gorsel": 55, "baslik": {"satirlar": ["CONTINUE YOUR", "NORMAL DIET"], "not": "unless your doctor says so"}, "etiket": "MedlinePlus · NLM"},
+    {"sahne": 37, "cumleler": [1], "baslik": {"satirlar": ["FIXED DOSE", "VS INR-TUNED"]}, "etiket": null},
+    {"sahne": 40, "cumleler": [0], "baslik": {"satirlar": ["RIVAROXABAN", "VS WARFARIN"], "vurgu": "14,264", "not": "atrial fibrillation patients"}},
+    {"sahne": 40, "cumleler": [1], "baslik": {"satirlar": ["ABOUT AS GOOD", "FOR STROKES"]}},
+    {"sahne": 41, "cumleler": [1, 2]}
+  ]
+}

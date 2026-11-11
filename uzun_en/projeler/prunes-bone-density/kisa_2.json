@@ -1,0 +1,21 @@
+{
+  "baslik": ["PRUNES VS", "PSYLLIUM?"],
+  "baslik_yt": "Prunes vs Psyllium for Constipation: Trial Results",
+  "aciklama": "Prunes are famous for loosening things up, but how do they compare with the fiber powder on the pharmacy shelf? Here is what a small crossover trial found, and where the evidence stops.",
+  "parcalar": [
+    {"sahne": 41, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 59, "cumleler": [0],
+     "baslik": {"satirlar": ["PRUNES", "VS PSYLLIUM"], "vurgu": "2 TRIALS", "not": "one small, one similar"},
+     "etiket": "Attaluri · Chey · 2011 · 2021"},
+    {"sahne": 34, "cumleler": [0],
+     "baslik": {"satirlar": ["EACH TRIED", "BOTH"], "vurgu": "40", "not": "adults with constipation"},
+     "etiket": "Attaluri · Aliment Pharmacol Ther · 2011"},
+    {"sahne": 36, "cumleler": [0, 1], "gorsel": 35,
+     "baslik": {"satirlar": ["BOWEL MOVES", "PER WEEK"], "vurgu": "3.5 / 2.8", "not": "prunes vs psyllium"},
+     "etiket": "Attaluri · Aliment Pharmacol Ther · 2011"},
+    {"sahne": 38, "cumleler": [1]},
+    {"sahne": 38, "cumleler": [2], "baslik": {"satirlar": ["NOT TESTED", "OVER 60"]}},
+    {"sahne": 42, "cumleler": [1]},
+    {"sahne": 42, "cumleler": [2], "baslik": {"satirlar": ["START SMALL"]}}
+  ]
+}

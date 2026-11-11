@@ -12,9 +12,11 @@ The channel publishes calm, evidence-based explainers about everyday food questi
 
 Two videos go out every week. Your work is published automatically, so accuracy is everything.
 
-**Audience.** English-speaking viewers, mostly in the US and UK. The core of this niche is adults over 50, who care
-about blood sugar, heart, muscle, joints, gut and brain health. Write for them: plain words, practical takeaways, no jargon
-without an explanation. Do not exclude younger viewers.
+**Audience.** Viewers in the **United States**, predominantly **aged 60 and older** (YouTube Analytics: 54% aged 65+ and 46% aged 55–64, women and men about equally; about 28% of long-video views on TV screens, 18–25 October 2026). They care about blood sugar and A1C, heart and blood pressure, LDL cholesterol, preserving muscle and bone, joints, memory, eyesight, sleep, kidney and gut health, and many take daily prescription medicines. Write specifically for them: use **American English** spelling (`fiber`, `aging`, `yogurt`), **US kitchen measures** (`cups`, `tablespoons`, `ounces` alongside grams), **US lab units** (`mg/dL` for blood glucose and cholesterol), **US grocery context** (American supermarket shelves and FDA labels), and prioritize US health authorities (NIH, FDA, AHA, USPSTF, ADA).
+- plain words, practical takeaways, no jargon without an explanation;
+- prefer studies in older adults, and say so when a study was done in younger people;
+- mention medicine interactions and "ask your doctor or pharmacist" where they are relevant;
+- do not address one gender only, and do not exclude younger viewers.
 
 The prompt tells you three things:
 - the project **SLUG**,
@@ -30,6 +32,10 @@ The prompt tells you three things:
   - every field format.
 
   Study it closely. Then write a **new** video on your topic in the same style. Do not copy its sentences.
+  Exception: its opening (scenes 1–5, with a "Welcome" card) predates the current rules. Build scenes 1–4 as described
+  in Step 3 below, not like the reference.
+  Also do not copy its `ses_motoru`, `ses` or `length_scale` fields: that video used an older voice. The narrator voice
+  comes from `uzun_en/marka.json`, so leave these fields out of your `proje.json`.
 - `uzun_en/marka.json` gives the channel name and audience.
 
 ## Deliverables (write only these files)
@@ -76,26 +82,28 @@ The prompt tells you three things:
     "Eggs and Cholesterol: What Studies Show".
   - One food or habit and one outcome. Do not stack two organs ("... to Your Heart and Muscles").
 - 30–55 characters; never more than 60. Cut filler words ("Really", "Your", "Actually") before cutting meaning.
-- Age angle: when your sources studied older adults, or the effect clearly matters more with age, you may add "After 50"
-  (or "After 60" when the studies were in that age group). Only when the evidence supports it.
+- Age angle: when your sources studied older adults, or the effect clearly matters more with age, add "After 60" (or "After 65" when the studies or guidelines focus on 65+). Only when the evidence supports it.
 - Banned: fear or hype words ("shock", "shocking", "never", "poison", "toxic", "doctors hate", "miracle", "destroys",
   "!!", ALL CAPS words).
 - The title must match what the evidence actually shows.
 
 **Thumbnail (`kapak`)**
 
-The thumbnail decides whether anyone clicks. It is a white card: huge text on the left, one big vivid image bleeding
-off the right edge, a number badge top right. Our first video got only 2.4% clicks with long text and a small object.
+The thumbnail decides whether anyone clicks. It is a dark navy card (since 26 October 2026; white cards got only
+1.4–2.7% clicks because they vanish on YouTube's white pages): huge white text with a black outline on the left, one big
+vivid image of the food on the right, and a red number badge top right.
 
 - The whole thumbnail is a 3–4 word hook. Count every word in `satirlar`, `serit` and `vurgu_alt` together: at most
   4 words. Long thumbnail text is unreadable on a phone and lost clicks.
 - `satirlar`: 2–3 UPPERCASE lines, each at most 12 characters, together 2–4 words: the food plus the hook.
   - Every line is enlarged separately to the full width of the text block, so short lines become giant words.
-  - The last line is drawn in gold. A question mark makes a good hook.
+  - The last line is drawn in yellow. A question mark makes a good hook.
   - Examples: `["GARLIC", "LOWERS BP?"]`, `["WALK", "AFTER MEALS"]`, `["EGGS", "VS HEART?"]`.
 - `serit`: leave it out. Use it only when `satirlar` has 2 words and one more word is truly needed.
-- `vurgu` (optional): one striking but real number from your sources, at most 6 characters (for example `–37%`).
-- `vurgu_alt` (optional): at most 1 word under that number (for example `"points"`), counted in the 4 words.
+- `vurgu` (strongly recommended): the result in one real number from your sources, at most 6 characters (for example
+  `–37%`, `–10`, `–3.5`). It should hint at the answer, not repeat an input such as a dose ("3 g" says nothing).
+- `vurgu_alt`: the unit or measure of that number in at most 1 word (for example `"LDL"`, `"mmHg"`, `"A1C"`), so the
+  number makes sense on its own. Counted in the 4 words.
 - `gorsel`: the image model's description. The style (bright, saturated, pure white background) is added automatically.
   - Make the hero food or drink very large, close-up and appetizing.
   - Group the objects tightly, overlapping (for example sneakers behind the plate), never side by side in a wide row:
@@ -112,19 +120,28 @@ off the right edge, a number badge top right. Our first video got only 2.4% clic
 
 Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes with the current narrator voice. Use 50–64 scenes. The validator rejects anything under 10 or over 14.5 minutes (it counts about 2.59 words per second).
 
-1. **Cold open** (scenes 1–4). Most viewers decide in these first seconds whether to stay.
+1. **Cold open** (scenes 1–3, at most 60 words together, about 25 seconds). Most viewers decide here whether to stay.
+   Channel data (25 October 2026): more than half of viewers left within the first 5% of the video, and on two videos
+   the average viewer stayed only 36 seconds. Data from 9 November 2026 (videos whose cold opens were 80–100 words
+   and began "If you …, here is what the research shows"): a quarter of viewers left in the first 20 seconds and half
+   were gone after the first minute; those who stayed mostly watched to the end. Every sentence in the cold open must
+   earn the next one. The validator now rejects a cold open over about 60 words, filler such as "here is what the
+   research shows" or "let's take a look", and any `kart` in scenes 1–3.
    - Scene 1 has a `bolum` (the first chapter title).
    - The very first sentence goes straight in: it speaks to the viewer's own situation ("If you eat eggs most
-     mornings, …") or states the surprising finding. Never open with scene-setting ("Picture…", "Imagine…"): in our
-     first video 73% of viewers left within 30 seconds, before the number arrived in scene 3.
-   - Within scenes 1–2 (about the first 15 seconds), give a concrete, cited finding with its number: what was studied,
-     in whom, and what changed. Keep scenes 1–3 short, one or two sentences each.
-   - Then promise the specific practical payoff the viewer gets by the end, for example "By the end, you'll know when to
-     start walking and how long is enough." The video must deliver it.
-   - Then say what this video will answer. No hype ("you won't believe", "shocking").
-2. **Scene 5: channel card** (`"tip": "kart"`).
-   - Narration starts with "Welcome to The Food Almanac." and leads into chapter 1.
-   - `kart.ust` is "THE FOOD ALMANAC". `kart.baslik` is the video's short name (at most 32 characters). `kart.alt` is a one-line subtitle.
+     mornings, …") or states the surprising finding. Never open with scene-setting ("Picture…", "Imagine…").
+   - Scene 1 gives the concrete, cited finding with its number: what was studied, in whom, and what changed.
+   - Scene 2 opens a curiosity gap: the twist, the condition or the catch that the video resolves ("But it only
+     worked for one group, and most people get the dose wrong.").
+   - Scene 3 promises the specific practical payoff the viewer gets by the end, for example "By the end, you'll know
+     when to start walking and how long is enough." The video must deliver it.
+   - No filler that restates the question ("So what does the research really say? Let's take a look."). No hype ("you
+     won't believe", "shocking"). All three scenes are illustrated; no `kart` in the cold open.
+2. **Scene 4: channel name, then straight into chapter 1.**
+   - A normal illustrated scene (not a `kart`). One short sentence names the channel and moves on, for example
+     "This is The Food Almanac. Let's start with what's actually inside an oat." The validator requires the channel
+     name in the first 8 scenes.
+   - Do not use a separate "Welcome" title card: a text-only card at about 30 seconds is where viewers were leaving.
 3. **5–7 chapters.** Each chapter's first scene has `bolum` (at most 40 characters). Most chapters open with a `kart` scene whose `ust` is a short kicker ("THE EXPERIMENT", "INSIDE YOUR BODY", "THE HONEST PART", "HOW TO USE IT"). A good arc:
    - the basics: what the thing is and how it works in the body, in plain language;
    - the key study or studies: what was done and what was found, with one `grafik` scene of real numbers;

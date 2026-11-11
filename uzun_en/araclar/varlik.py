@@ -32,7 +32,10 @@ def surum_olustur(slug):
     if surum_var(slug):
         return
     p = O.proje(slug) or {}
-    O.gh("release", "create", O.etiket(slug), "--prerelease", "--target", os.environ.get("GITHUB_SHA", "main"),
+    # Etiket main'in ucuna konur: iş akışı dosyaları main'dekinden farklı eski bir commit'e etiket koymak GITHUB_TOKEN için
+    # "workflows" izni ister (403 Resource not accessible by integration), örn. çalışma sırasında main'e iş akışı
+    # değişikliği girdiyse.
+    O.gh("release", "create", O.etiket(slug), "--prerelease", "--target", "main",
          "--title", f"[uzun_en] {p.get('baslik', slug)}"[:120],
          "--notes", "İngilizce uzun video hattının görsel/ses/video arşivi (otomatik).")
 

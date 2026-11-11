@@ -1,0 +1,17 @@
+{
+  "baslik": ["CAN VINEGAR", "CANCEL CAKE?"],
+  "baslik_yt": "Apple Cider Vinegar and Blood Sugar: The Honest Numbers",
+  "aciklama": "A small trial found liquid vinegar cut the first-hour blood sugar rise by about 31 percent. Here is what that does and does not tell us.",
+  "parcalar": [
+    {"sahne": 36, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 14, "cumleler": [0], "gorsel": 2,
+     "baslik": {"satirlar": ["STARCHY MEAL"], "vurgu": "-31%", "not": "rise in the first hour"},
+     "etiket": "Feise & Johnston · J Nutr Metab · 2020"},
+    {"sahne": 15, "cumleler": [1, 2]},
+    {"sahne": 17, "cumleler": [0], "baslik": null},
+    {"sahne": 17, "cumleler": [1], "baslik": null},
+    {"sahne": 54, "cumleler": [1], "baslik": {"satirlar": ["VERY LOW", "CERTAINTY"]}, "etiket": "Cherta-Murillo et al. · AJCN · 2022"},
+    {"sahne": 56, "cumleler": [0], "baslik": {"satirlar": ["TRY IT", "SAFELY"]}, "etiket": null},
+    {"sahne": 56, "cumleler": [1], "gorsel": 51, "baslik": null, "etiket": null}
+  ]
+}

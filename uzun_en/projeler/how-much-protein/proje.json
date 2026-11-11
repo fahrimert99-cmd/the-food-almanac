@@ -1,0 +1,584 @@
+{
+  "slug": "how-much-protein",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "How Much Protein Do You Need After 60?",
+  "yorum": "Do you tend to eat most of your protein at dinner, or do you get some at breakfast and lunch too? What has worked for you in staying strong?",
+  "aciklama_giris": "The official US recommended allowance for protein is 0.8 grams per kilogram of body weight a day. But a group of geriatric nutrition experts, the PROT-AGE Study Group, suggests that healthy adults over 65 aim for at least 1.0 to 1.2 grams per kilogram. In this video we look at what that means in real grams, what a large cohort of adults in their seventies showed, and what trials in older adults found when protein was combined with resistance exercise.\n\nWe also look at why spreading about 25 to 30 grams across breakfast, lunch and dinner may beat one big dinner, where the evidence is thin, who should be careful (people with advanced kidney disease), and five practical steps you can take. Ask your doctor or a registered dietitian about your own number.",
+  "kaynaklar": [
+    "Institute of Medicine (National Academies). Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids. National Academies Press, 2005.",
+    "Bauer J, Biolo G, Cederholm T, et al. Evidence-based recommendations for optimal dietary protein intake in older people: a position paper from the PROT-AGE Study Group. Journal of the American Medical Directors Association. 2013;14(8):542-559. DOI 10.1016/j.jamda.2013.05.021.",
+    "Houston DK, Nicklas BJ, Ding J, et al. Dietary protein intake is associated with lean mass change in older, community-dwelling adults: the Health, Aging, and Body Composition (Health ABC) Study. American Journal of Clinical Nutrition. 2008;87(1):150-155. PMID 18175749.",
+    "Tieland M, Dirks ML, van der Zwaluw N, et al. Protein supplementation increases muscle mass gain during prolonged resistance-type exercise training in frail elderly people: a randomized, double-blind, placebo-controlled trial. Journal of the American Medical Directors Association. 2012;13(8):713-719. DOI 10.1016/j.jamda.2012.05.020.",
+    "Tieland M, van de Rest O, Dirks ML, et al. Protein supplementation improves physical performance in frail elderly people: a randomized, double-blind, placebo-controlled trial. Journal of the American Medical Directors Association. 2012;13(8):720-726. DOI 10.1016/j.jamda.2012.07.005.",
+    "Morton RW, Murphy KT, McKellar SR, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. British Journal of Sports Medicine. 2018;52(6):376-384. PMID 28698222.",
+    "Mamerow MM, Mettler JA, English KL, et al. Dietary protein distribution positively influences 24-h muscle protein synthesis in healthy adults. Journal of Nutrition. 2014;144(6):876-880. PMC4018950.",
+    "Symons TB, Sheffield-Moore M, Wolfe RR, Paddon-Jones D. A moderate serving of high-quality protein maximally stimulates skeletal muscle protein synthesis in young and elderly subjects. Journal of the American Dietetic Association. 2009;109(9):1582-1586. PMID 19699838.",
+    "KDIGO CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney International. 2024;105(4S):S117-S314."
+  ],
+  "kapak": {
+    "satirlar": [
+      "PROTEIN",
+      "AFTER 60?"
+    ],
+    "vurgu": "1.2",
+    "vurgu_alt": "g/kg",
+    "gorsel": "a large white plate piled close up with a grilled chicken breast, two halved boiled eggs and a small bowl of Greek yogurt, overlapping tightly, a cheerful smiling woman in her sixties with gray hair holding a fork behind the plate"
+  },
+  "etiketler": [
+    "protein after 60",
+    "protein for seniors",
+    "how much protein",
+    "sarcopenia",
+    "muscle loss",
+    "older adults nutrition",
+    "protein per meal",
+    "resistance exercise",
+    "healthy aging",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "PROT-AGE": "Prot Age",
+    "RDA": "R D A",
+    "KDIGO": "kuh DEE go",
+    "DXA": "D X A"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Muscle after sixty",
+      "metin": "In a study of 2,066 adults in their seventies, those who ate the most protein lost about 40 percent less lean mass over three years.",
+      "gorsel": "a pair of older hands resting on a kitchen table beside a white plate holding a grilled chicken breast and two boiled eggs, soft morning window light",
+      "etiket": "Houston et al. · Am J Clin Nutr · 2008",
+      "baslik": {
+        "satirlar": [
+          "AGES 70 TO 79"
+        ],
+        "vurgu": "–40%",
+        "not": "less lean mass lost with the highest protein intake"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But how much, and maybe when you eat it, may matter. And one group of people should be careful.",
+      "gorsel": "a white dinner plate with a grilled chicken breast, a small bowl of Greek yogurt and a measuring cup on a wooden table, a pocket watch beside it"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know your daily number in grams, and how to spread it across the day.",
+      "gorsel": "a kitchen scale with a small bowl of cottage cheese on it, a breakfast plate of two boiled eggs and a notebook with blank pages beside it"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what happens to muscle as we age.",
+      "gorsel": "an antique science-book style study of a thigh muscle shown as bundles of long fibers, a white plate with grilled chicken and eggs placed in the corner",
+      "baslik": {
+        "satirlar": [
+          "MUSCLE",
+          "AND AGING"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "metin": "As we get older, we tend to lose muscle mass and strength. When the loss goes far enough to affect everyday life, doctors call it sarcopenia.",
+      "gorsel": "a bundle of long muscle fibers drawn as a textbook engraving, some fibers thinner and paler than the others, a single white plate with chicken and eggs beside it",
+      "baslik": {
+        "satirlar": [
+          "SARCOPENIA"
+        ],
+        "not": "age-related loss of muscle mass and strength"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "It matters for practical things: standing up from a chair, climbing stairs, carrying groceries, and catching yourself if you stumble.",
+      "gorsel": "a sturdy wooden chair beside a staircase with a handrail, a canvas bag of groceries with bread and vegetables on the bottom step"
+    },
+    {
+      "id": 7,
+      "metin": "Researchers also describe something called anabolic resistance. Older muscle may need a bigger signal, from protein and from exercise, to build at the same rate.",
+      "gorsel": "two muscle fiber bundles side by side, a thicker one with many small green growth particles and a thinner one receiving fewer particles, a plate of chicken and eggs in the corner",
+      "baslik": {
+        "satirlar": [
+          "ANABOLIC",
+          "RESISTANCE"
+        ],
+        "not": "older muscle may need a bigger signal to build"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "So how much protein is enough? One of the best-known looks came from the Health ABC study, which followed 2,066 men and women aged 70 to 79 in the United States.",
+      "gorsel": "a long row of five identical white plates, each holding a different portion of grilled chicken, from a small piece to a very large one, on a white tablecloth",
+      "etiket": "Houston et al. · Am J Clin Nutr · 2008"
+    },
+    {
+      "id": 9,
+      "tip": "grafik",
+      "metin": "Researchers measured their protein intake, and their lean mass with body scans, over three years. The highest fifth lost about half a kilogram of lean mass. The lowest fifth lost almost nine tenths of a kilogram.",
+      "grafik": {
+        "baslik": "Lean mass lost over 3 years",
+        "alt": "Lowest vs. highest fifth of protein intake · kilograms",
+        "cubuklar": [
+          {
+            "etiket": "Lowest fifth",
+            "deger": 0.883,
+            "metin": "−0.88 kg"
+          },
+          {
+            "etiket": "Highest fifth",
+            "deger": 0.501,
+            "metin": "−0.50 kg"
+          }
+        ],
+        "kaynak": "Houston et al., Am J Clin Nutr 2008 · 2,066 adults aged 70 to 79 · total lean mass, 3 years"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "That's a link, not proof. People who eat more protein may differ in other ways. But it fits with the trials we'll get to in a few minutes.",
+      "gorsel": "a magnifying glass held over two white plates, one with a small portion of chicken and one with a large portion, a quiet library table with closed books"
+    },
+    {
+      "id": 11,
+      "bolum": "The official number",
+      "tip": "kart",
+      "metin": "First, the number most people have heard.",
+      "kart": {
+        "ust": "THE OFFICIAL NUMBER",
+        "baslik": "0.8 grams per kilogram",
+        "alt": "The US recommended allowance"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "The Recommended Dietary Allowance for protein in the United States is 0.8 grams per kilogram of body weight a day. It was set by the National Academies, and it applies to all adults, including those over 65.",
+      "gorsel": "an antique balance scale with a small white plate of grilled chicken on one side and weights on the other, a quiet library background of closed books",
+      "etiket": "Institute of Medicine · Dietary Reference Intakes · 2005",
+      "baslik": {
+        "satirlar": [
+          "THE RDA"
+        ],
+        "vurgu": "0.8",
+        "not": "grams per kilogram per day"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "In pounds, that's about 0.36 grams per pound. For a person who weighs 170 pounds, or about 77 kilograms, the RDA works out to roughly 62 grams of protein a day.",
+      "gorsel": "a bathroom scale on a wooden floor beside a small kitchen scale holding a bowl of cottage cheese, a white plate with chicken and eggs behind them"
+    },
+    {
+      "id": 14,
+      "metin": "That figure comes from nitrogen balance studies, which look for the smallest intake that keeps the body from steadily losing protein. It was designed to prevent deficiency in healthy adults, not to keep muscle strong in later life.",
+      "gorsel": "a laboratory bench with glass flasks, an antique microscope and a notebook with blank pages, a small plate of chicken in the corner",
+      "baslik": {
+        "satirlar": [
+          "A FLOOR,",
+          "NOT A GOAL"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "So a question followed. Is the minimum that prevents deficiency also the right amount for older people, who may be less active, or living with illness?",
+      "gorsel": "an older man sitting in an armchair by a window with a blanket on his knees, a small side table with a cup of tea and a bowl of Greek yogurt"
+    },
+    {
+      "id": 16,
+      "bolum": "What experts recommend",
+      "tip": "kart",
+      "metin": "In 2013, an international group of geriatric and nutrition experts tried to answer it.",
+      "kart": {
+        "ust": "THE EXPERTS",
+        "baslik": "PROT-AGE: 1.0 to 1.2",
+        "alt": "Healthy adults over 65"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "The PROT-AGE Study Group reviewed the research and published a position paper in the Journal of the American Medical Directors Association.",
+      "gorsel": "a long wooden conference table with a neat row of closed books and a stack of papers with blank pages, brass lamps and tall windows",
+      "etiket": "Bauer et al. · J Am Med Dir Assoc · 2013"
+    },
+    {
+      "id": 18,
+      "metin": "Their main advice: healthy adults over 65 should aim for an average of at least 1.0 to 1.2 grams of protein per kilogram of body weight a day. That's about 0.45 to 0.55 grams per pound.",
+      "gorsel": "a white plate with a grilled chicken breast, two halved boiled eggs and a bowl of Greek yogurt placed in the center of a clean wooden table",
+      "baslik": {
+        "satirlar": [
+          "AT LEAST"
+        ],
+        "vurgu": "1.0–1.2",
+        "not": "grams per kilogram per day after 65"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "For that same 170 pound person, that works out to about 77 to 93 grams a day, compared with about 62 grams at the official allowance.",
+      "gorsel": "two stacks of white bowls on a kitchen counter, a shorter stack and a taller stack, each bowl holding eggs, yogurt or chicken pieces",
+      "baslik": {
+        "satirlar": [
+          "62 G VS",
+          "77–93 G"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "metin": "They suggested more for two groups: older adults who exercise, at 1.2 grams per kilogram or higher, and older adults with acute or chronic illness, at 1.2 to 1.5 grams per kilogram.",
+      "gorsel": "a pair of walking shoes and a small set of dumbbells on a wooden floor beside a white plate of grilled chicken and eggs"
+    },
+    {
+      "id": 21,
+      "metin": "It's worth being clear about what this is. PROT-AGE is an expert consensus built from the research, not a law of nature, and the group itself noted open questions about protein type, timing and supplements.",
+      "gorsel": "a quiet research desk with stacked journals with blank covers, an oil lamp and a teacup with rising steam, a small bowl of Greek yogurt at the edge",
+      "baslik": {
+        "satirlar": [
+          "EXPERT",
+          "CONSENSUS"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "The group also pointed to about 25 to 30 grams of protein per meal as the amount older adults may need to switch muscle building on. In the meal-spreading part, we'll see what supports that.",
+      "gorsel": "a white dinner plate with a palm-sized grilled chicken breast, a small bowl of lentils and a few green beans, a measuring cup beside it"
+    },
+    {
+      "id": 23,
+      "bolum": "Protein plus exercise",
+      "tip": "kart",
+      "metin": "Now, what happens when older adults actually eat more protein in a trial?",
+      "kart": {
+        "ust": "THE TRIALS",
+        "baslik": "Protein plus lifting",
+        "alt": "Frail older adults · 24 weeks"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "Tieland and colleagues in the Netherlands recruited 62 frail older adults, with an average age of 78. Everyone did supervised resistance training twice a week for 24 weeks.",
+      "gorsel": "a bright community exercise room with elastic resistance bands hanging on a wall rack, a row of empty chairs and a leg-press machine, large windows",
+      "etiket": "Tieland et al. · J Am Med Dir Assoc · 2012"
+    },
+    {
+      "id": 25,
+      "metin": "Half also took a protein supplement, 15 grams twice a day. The other half took a placebo drink. Neither the participants nor the researchers knew who received which.",
+      "gorsel": "two identical glass cups on a tray, one holding a creamy drink and one holding a clear drink, a small stack of paper cups beside them",
+      "baslik": {
+        "satirlar": [
+          "PROTEIN",
+          "OR PLACEBO"
+        ],
+        "not": "double-blind, 24 weeks"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "The protein group gained about 1.3 kilograms of lean body mass. The placebo group did not gain any. Their average slipped slightly.",
+      "gorsel": "a thigh muscle shown as thick bundles of fibers in a textbook engraving, small green growth particles gathering around the fibers, a white plate of chicken and eggs in the corner",
+      "etiket": "Tieland et al. · J Am Med Dir Assoc · 2012",
+      "baslik": {
+        "satirlar": [
+          "LEAN MASS"
+        ],
+        "vurgu": "+1.3 kg",
+        "not": "protein group, with exercise, over 24 weeks"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Both groups got stronger, so the exercise itself clearly helped. But only the group that added protein built muscle mass.",
+      "gorsel": "an older woman in athletic clothes lifting a light dumbbell in a bright room, a white plate of chicken and eggs on a bench behind her"
+    },
+    {
+      "id": 28,
+      "metin": "The same team tested protein without an exercise program in 65 frail older adults. Physical performance scores improved with protein. But muscle mass did not go up.",
+      "gorsel": "an older man rising from a wooden chair in a bright room, a bowl of Greek yogurt and a spoon on a side table",
+      "etiket": "Tieland et al. · J Am Med Dir Assoc · 2012",
+      "baslik": {
+        "satirlar": [
+          "PROTEIN",
+          "ALONE"
+        ],
+        "not": "better function, but no extra muscle mass"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "Does this hold in healthy people? In 2018, Morton and colleagues pooled 49 randomized trials with 1,863 adults doing resistance training. Protein supplements gave a small extra gain in muscle mass, about 0.3 kilograms, and in strength.",
+      "gorsel": "a tall stack of closed research volumes beside a pair of dumbbells and a white plate with grilled chicken and eggs on a laboratory table",
+      "etiket": "Morton et al. · Br J Sports Med · 2018"
+    },
+    {
+      "id": 30,
+      "metin": "Two details matter here. That extra benefit got smaller with age. And the analysis estimated that once total protein reached roughly 1.6 grams per kilogram a day, eating more added no further gain in lean mass.",
+      "gorsel": "a tall glass cylinder filled with golden particles up to a clear line near the top, a white plate of grilled chicken and eggs placed in front of it",
+      "baslik": {
+        "satirlar": [
+          "A CEILING"
+        ],
+        "vurgu": "1.6",
+        "not": "grams per kilogram: no extra muscle gain above this"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "So the best-supported pattern is protein together with resistance exercise. Protein alone did less in the frail adults we saw, and far more protein than needed does not seem to help.",
+      "gorsel": "a bright kitchen table with a plate of grilled chicken, eggs and Greek yogurt, a pair of dumbbells and walking shoes placed on the floor next to it",
+      "baslik": {
+        "satirlar": [
+          "PROTEIN +",
+          "EXERCISE"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "bolum": "Spread it across the day",
+      "tip": "kart",
+      "metin": "Next is the timing detail I mentioned: how you divide your protein across the day.",
+      "kart": {
+        "ust": "TIMING",
+        "baslik": "Three meals, not one",
+        "alt": "About 25 to 30 grams each"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "A common pattern is a light breakfast, a modest lunch, and a large protein-rich dinner. Researchers asked whether that pattern wastes some of the muscle-building effect.",
+      "gorsel": "three white plates in a row on a long table: a small plate with toast, a medium plate with a sandwich and a large plate with a big grilled steak",
+      "baslik": {
+        "satirlar": [
+          "ONE BIG",
+          "DINNER?"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "In a 2014 crossover study at the University of Texas Medical Branch, eight healthy adults, with an average age of 37, ate two versions of a diet with about the same 90 grams of protein a day.",
+      "gorsel": "a research kitchen with three covered meal trays on a steel counter, a clipboard with blank pages and a tall window",
+      "etiket": "Mamerow et al. · J Nutr · 2014"
+    },
+    {
+      "id": 35,
+      "metin": "On one diet, protein was spread evenly, about 30 grams at each meal. On the other, it was mostly at dinner: about 11 grams at breakfast, 16 at lunch and 63 at dinner.",
+      "gorsel": "two sets of three white plates, the first set with equal medium portions of chicken and eggs, the second set with a tiny portion, a small portion and a very large portion"
+    },
+    {
+      "id": 36,
+      "tip": "grafik",
+      "metin": "Over 24 hours, muscle protein synthesis, the body's rate of building new muscle protein, was about 25 percent higher with the even pattern.",
+      "grafik": {
+        "baslik": "Muscle protein synthesis over 24 hours",
+        "alt": "Percent per hour · same daily protein, two patterns",
+        "cubuklar": [
+          {
+            "etiket": "Mostly at dinner",
+            "deger": 5.6,
+            "metin": "0.056"
+          },
+          {
+            "etiket": "Even across meals",
+            "deger": 7.5,
+            "metin": "0.075"
+          }
+        ],
+        "kaynak": "Mamerow et al., J Nutr 2014 · 8 healthy adults, mean age 37 · 7-day crossover"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "The catch: only eight people, younger than most of our audience, and the outcome was a 24-hour measure, not months of real muscle. It's a useful clue, not proof.",
+      "gorsel": "a single laboratory chair at a steel bench next to a small stack of only a few research papers with blank pages, a plate of chicken and eggs nearby"
+    },
+    {
+      "id": 38,
+      "metin": "A second study asked how much per meal is enough. Researchers at the same university gave 17 young adults and 17 older adults, with an average age of 68, either 30 or 90 grams of protein in lean beef.",
+      "gorsel": "two white plates of cooked lean beef, a small portion on one and a triple portion on the other, on a laboratory table with a notebook",
+      "etiket": "Symons et al. · J Am Diet Assoc · 2009"
+    },
+    {
+      "id": 39,
+      "metin": "Thirty grams raised muscle protein building by roughly 50 percent in both age groups. Three times as much protein added nothing more. That suggests a big dinner may not fully make up for a light breakfast.",
+      "gorsel": "a tall measuring cylinder filled with golden particles to a medium line and a second identical cylinder overflowing, a small plate of beef in front of each",
+      "baslik": {
+        "satirlar": [
+          "30 GRAMS"
+        ],
+        "vurgu": "+50%",
+        "not": "muscle protein building, in young and older adults"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Put together, a tidy goal for many healthy older adults is about 25 to 30 grams at each of three meals. That's 75 to 90 grams a day, close to the PROT-AGE range for a 170 pound person.",
+      "gorsel": "three white plates side by side at breakfast, lunch and dinner, each with a similar portion of eggs, chicken or yogurt, a window showing a rising sun, high sun and a moon",
+      "baslik": {
+        "satirlar": [
+          "25–30 G",
+          "PER MEAL"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. Who should be careful, and what do we not know?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Who should be careful",
+        "alt": "Kidney disease · limits of the evidence"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "The biggest exception is kidney disease. The higher targets we've discussed are for generally healthy older adults. PROT-AGE said people with severe kidney disease who are not on dialysis may need to limit protein instead.",
+      "gorsel": "a textbook engraving of a pair of kidneys with a small tube-shaped vessel and tiny red discs, a white plate with a modest portion of chicken beside them",
+      "etiket": "Bauer et al. · J Am Med Dir Assoc · 2013",
+      "baslik": {
+        "satirlar": [
+          "THE KIDNEY",
+          "EXCEPTION"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "metin": "The 2024 KDIGO kidney guideline likewise suggests that adults with moderate to advanced chronic kidney disease, not on dialysis, keep protein near the standard 0.8 grams per kilogram, and avoid very high intakes. It graded that recommendation as weak, because the evidence is limited.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a clipboard with blank pages, a small plate of chicken on the corner",
+      "etiket": "KDIGO · Kidney Int · 2024"
+    },
+    {
+      "id": 44,
+      "metin": "If you have kidney disease, or you're not sure how well your kidneys work, ask your doctor, kidney specialist or a registered dietitian for your own protein number before you change how much you eat.",
+      "gorsel": "a friendly consultation room with a wooden desk, two chairs, a stethoscope and a white plate with a small portion of grilled fish",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "DOCTOR FIRST"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Now the limits. The Health ABC finding is observational. The Dutch trials were small and in frail adults. The meal-spreading study had eight people. No single study settles the exact number.",
+      "gorsel": "five small stacks of papers with blank pages on a wooden table, a magnifying glass resting on the smallest stack, a white plate of eggs nearby",
+      "baslik": {
+        "satirlar": [
+          "NO SINGLE",
+          "STUDY SETTLES IT"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "And the 1.0 to 1.2 range is a consensus minimum for healthy older adults, not a goal to keep pushing higher. Beyond roughly 1.6 grams per kilogram, the training analysis estimated no extra muscle.",
+      "gorsel": "a white plate of grilled chicken and eggs on a wooden table with a tape measure curled around it, soft window light"
+    },
+    {
+      "id": 47,
+      "metin": "Protein powders aren't required either. Many trials used supplements because they make the dose easy to control, but protein from food counts too, and it brings other nutrients with it.",
+      "gorsel": "a kitchen counter with a tub of protein powder on one side and a basket of eggs, a block of cheese and a bowl of lentils on the other"
+    },
+    {
+      "id": 48,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you put this to work? Here are five practical steps.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five practical steps",
+        "alt": "Grams · meals · movement"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "One. Find your range. Divide your weight in pounds by 2.2 to get kilograms, then multiply by 1.0 and by 1.2. At 170 pounds, that's about 77 to 93 grams a day.",
+      "gorsel": "a bathroom scale on a wooden floor beside a small notebook with blank pages and a pencil, a white plate of eggs and chicken in the corner"
+    },
+    {
+      "id": 50,
+      "metin": "Two. Aim for 25 to 30 grams at each meal. As a rough guide, three ounces of cooked chicken breast has about 26 grams, and a large egg has about 6.",
+      "gorsel": "a white plate with a palm-sized grilled chicken breast, and beside it a small basket of brown eggs, a measuring cup and a fork",
+      "baslik": {
+        "satirlar": [
+          "ROUGH GUIDE"
+        ],
+        "not": "3 ounces of chicken about 26 g · 1 egg about 6 g"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "Three. Fix breakfast first, because it's often the lightest. Two eggs with half a cup of cottage cheese gets you to roughly 25 grams. Plain Greek yogurt is another easy option.",
+      "gorsel": "a breakfast table with two boiled eggs on a white plate, a bowl of cottage cheese, a bowl of Greek yogurt, a slice of whole grain toast and a teacup"
+    },
+    {
+      "id": 52,
+      "metin": "At lunch and dinner, a portion of chicken, fish or lean meat about the size of your palm usually does it. For plant-based meals, a cup of cooked lentils has about 18 grams, so pair it with yogurt, cheese or eggs.",
+      "gorsel": "a dinner plate with a palm-sized piece of baked salmon, a bowl of cooked lentils, steamed green beans and a spoon on a wooden table"
+    },
+    {
+      "id": 53,
+      "metin": "Four. Pair protein with resistance exercise, such as bands, weights or body-weight moves. In the Dutch trial, it was supervised and twice a week. Ask your doctor what's safe for you.",
+      "gorsel": "a living room with a rolled exercise mat, elastic bands and a pair of light dumbbells, a white plate of grilled chicken and eggs on a side table",
+      "baslik": {
+        "satirlar": [
+          "LIFT",
+          "TWICE A WEEK"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Five. Check with your care team if you have kidney disease, take regular medicines, or have been losing weight without trying. A registered dietitian can tailor the numbers to you.",
+      "gorsel": "a pharmacy counter with an amber pill bottle, a stethoscope and a small bowl of Greek yogurt on a wooden tray",
+      "baslik": {
+        "satirlar": [
+          "CHECK WITH",
+          "YOUR CARE TEAM"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "More than 0.8, in thirds",
+        "alt": "1.0–1.2 g/kg · 25–30 g per meal"
+      }
+    },
+    {
+      "id": 56,
+      "metin": "The official allowance is 0.8 grams per kilogram. Experts suggest healthy adults over 65 aim for at least 1.0 to 1.2 grams per kilogram, and more if they exercise or live with illness.",
+      "gorsel": "two white plates side by side, a smaller portion of grilled chicken and eggs on the left and a larger portion on the right, a wooden table by a window"
+    },
+    {
+      "id": 57,
+      "metin": "Protein works best together with resistance exercise. And spreading about 25 to 30 grams across three meals may beat one big dinner, though that evidence is still thin.",
+      "gorsel": "a bright kitchen table with three small white plates of eggs, chicken and yogurt, a pair of dumbbells on the floor beside it"
+    },
+    {
+      "id": 58,
+      "metin": "The exception is advanced kidney disease, where the target may be lower. If that's you, or you're unsure, ask your doctor or a registered dietitian first.",
+      "gorsel": "a quiet consultation desk with a stethoscope and a notebook with blank pages, a small plate of grilled fish and eggs on the corner"
+    },
+    {
+      "id": 59,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

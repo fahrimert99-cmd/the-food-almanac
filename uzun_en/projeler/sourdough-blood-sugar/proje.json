@@ -1,0 +1,545 @@
+{
+  "slug": "sourdough-blood-sugar",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Sourdough Bread: What It Does to Blood Sugar",
+  "yorum": "Do you buy sourdough at a bakery or at the supermarket? Have you ever checked the ingredient list to see what is in the loaf?",
+  "aciklama_giris": "In a small crossover trial of 16 adults with impaired glucose tolerance, sourdough bread produced a smaller early rise in blood sugar and insulin than bread made with baker's yeast. But other trials found no average difference, and a pooled analysis of 18 studies rated the certainty of the evidence as low to very low. This video looks at what those studies actually found, why fermentation and whole-grain flour may matter, and where the evidence runs out.\n\nWe also cover how to read a US bread label, since the federal bread standard does not define the word sourdough, and five practical tips for shopping and eating. For education only; if you have diabetes or take medicine, talk to your doctor or pharmacist before changing how you eat.",
+  "kaynaklar": [
+    "Maioli M, Pes GM, Sanna M, Cherchi S, Dettori M, Manca E, Farris GA. Sourdough-leavened bread improves postprandial glucose and insulin plasma levels in subjects with impaired glucose tolerance. Acta Diabetologica. 2008;45(2):91-96. PMID 18317680. DOI 10.1007/s00592-008-0029-8.",
+    "Lappi J, Selinheimo E, Schwab U, Katina K, Lehtinen P, Mykkänen H, Kolehmainen M, Poutanen K. Sourdough fermentation of wholemeal wheat bread increases solubility of arabinoxylan and protein and decreases postprandial glucose and insulin responses. Journal of Cereal Science. 2010;51(1):152-158. DOI 10.1016/j.jcs.2009.11.006.",
+    "Mofidi A, Ferraro ZM, Stewart KA, Tulk HM, Robinson LE, Duncan AM, Graham TE. The acute impact of ingestion of sourdough and whole-grain breads on blood glucose, insulin, and incretins in overweight and obese men. Journal of Nutrition and Metabolism. 2012;2012:184710. PMID 22474577. DOI 10.1155/2012/184710.",
+    "Korem T, Zeevi D, Zmora N, et al. Bread affects clinical parameters and induces gut microbiome-associated personal glycemic responses. Cell Metabolism. 2017;25(6):1243-1253. PMID 28591632. DOI 10.1016/j.cmet.2017.05.002.",
+    "Rolim ME, Fortes MI, Von Frankenberg A, Duarte CK. Consumption of sourdough bread and changes in the glycemic control and satiety: a systematic review. Critical Reviews in Food Science and Nutrition. 2024;64(3):801-816. PMID 35943419. DOI 10.1080/10408398.2022.2108756.",
+    "Ribet L, Dessalles R, Lesens C, Brusselaers N, Durand-Dubief M. Nutritional benefits of sourdoughs: a systematic review. Advances in Nutrition. 2023;14(1):22-29. PMID 36811591. DOI 10.1016/j.advnut.2022.10.003.",
+    "Stamataki NS, Yanni AE, Karathanos VT. Bread making technology influences postprandial glucose response: a review of the clinical evidence. British Journal of Nutrition. 2017;117(7):1001-1012. PMID 28462730. DOI 10.1017/S0007114517000770.",
+    "Östman E, Granfeldt Y, Persson L, Björck I. Vinegar supplementation lowers glucose and insulin responses and increases satiety after a bread meal in healthy subjects. European Journal of Clinical Nutrition. 2005;59(9):983-988. PMID 16015276. DOI 10.1038/sj.ejcn.1602197.",
+    "US Food and Drug Administration. 21 CFR 136.110, Bread, rolls, and buns (standard of identity). Code of Federal Regulations, Title 21."
+  ],
+  "kapak": {
+    "satirlar": [
+      "SOURDOUGH",
+      "BETTER?"
+    ],
+    "gorsel": "a large crusty sourdough loaf with a scored top, one thick slice leaning in front of it, a glucose meter with a blank screen tucked behind the loaf, close up and overlapping, the loaf very large"
+  },
+  "kahraman": "sourdough",
+  "etiketler": [
+    "sourdough bread",
+    "sourdough blood sugar",
+    "is sourdough good for diabetics",
+    "sourdough glycemic index",
+    "real sourdough",
+    "bread and blood sugar",
+    "prediabetes diet",
+    "whole grain bread",
+    "nutrition science",
+    "healthy eating after 60"
+  ],
+  "seslendirme_duzelt": {
+    "A1C": "A 1 C",
+    "FDA": "F D A",
+    "Östman": "Ost man",
+    "Maioli": "My oh lee",
+    "Korem": "Koh rem",
+    "Lappi": "Lap pee",
+    "Mofidi": "Moh fee dee",
+    "Weizmann": "Vights man"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Two trials, two answers",
+      "metin": "In a crossover trial of 16 adults with impaired glucose tolerance, sourdough bread gave a smaller early blood sugar and insulin rise than regular yeast bread.",
+      "gorsel": "a round crusty sourdough loaf with a scored top on a wooden board, a glucose meter with a blank screen beside it, a folded linen cloth",
+      "etiket": "Maioli et al. · Acta Diabetologica · 2008",
+      "baslik": {
+        "satirlar": [
+          "SOURDOUGH",
+          "VS YEAST BREAD"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But a second trial found no average difference, and the word sourdough guarantees little on a US label.",
+      "gorsel": "a crusty sourdough boule beside a soft sliced sandwich loaf in a plastic bag, on a kitchen counter, side by side",
+      "baslik": {
+        "satirlar": [
+          "MIXED",
+          "RESULTS"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what to expect, and how to spot real sourdough on a shelf.",
+      "gorsel": "a supermarket bread shelf with several loaves, a sourdough boule at the front, a wire shopping basket hanging nearby"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what sourdough actually is.",
+      "gorsel": "a glass jar of bubbling sourdough starter with a wooden spoon, a small sack of flour and a sourdough loaf beside it"
+    },
+    {
+      "id": 5,
+      "bolum": "What sourdough really is",
+      "tip": "kart",
+      "metin": "Sourdough is one of the oldest ways to make bread, and also one of the most misunderstood.",
+      "kart": {
+        "ust": "THE BASICS",
+        "baslik": "What is sourdough?",
+        "alt": "Starter · Fermentation · Flour"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "A traditional sourdough baker doesn't rely on packaged baker's yeast alone. They use a starter: a living mix of flour, water, wild yeast and lactic acid bacteria.",
+      "gorsel": "a sourdough starter jar with bubbles, a bag of whole wheat flour spilling onto a wooden table, a sourdough loaf behind",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "STARTER"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "As the bacteria work, they make lactic acid and other organic acids. That gives sourdough its tang, and it may also change how quickly you digest the bread.",
+      "gorsel": "a halved sourdough loaf showing its open airy crumb, a magnified circular inset of oval bacteria cells and round yeast cells among flour grains"
+    },
+    {
+      "id": 8,
+      "metin": "Standard yeast bread is usually made differently, with baker's yeast and a much shorter rise.",
+      "gorsel": "a soft sliced white sandwich loaf next to a crusty sourdough loaf on a wooden table, a small packet of baker's yeast between them"
+    },
+    {
+      "id": 9,
+      "metin": "Why would that matter for blood sugar? When you eat bread, the starch breaks down into glucose, your blood sugar rises, and your pancreas releases insulin to move that glucose into your cells.",
+      "gorsel": "a slice of sourdough with small golden glucose spheres rising from it, beside a simple textbook pancreas releasing small green insulin particles",
+      "baslik": {
+        "satirlar": [
+          "BREAD",
+          "→ GLUCOSE"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "metin": "For people with prediabetes or type 2 diabetes, that rise can be bigger and last longer. So a bread that raises blood sugar a little less is an appealing idea.",
+      "gorsel": "a glucose meter with a blank screen beside a plate holding two slices of sourdough, a pair of reading glasses and a notebook"
+    },
+    {
+      "id": 11,
+      "metin": "The question is simple. Does slow fermentation really make bread gentler on blood sugar? Let's look at the trials.",
+      "gorsel": "a large magnifying glass held over a sliced sourdough loaf on a board, flour dusted across the wood"
+    },
+    {
+      "id": 12,
+      "bolum": "What the trials found",
+      "tip": "kart",
+      "metin": "We'll start with the studies that put sourdough directly against ordinary bread.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Sourdough on trial",
+        "alt": "Crossover studies in adults"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Most of these are crossover trials. Each volunteer eats every bread on different days, so each person is their own comparison. That makes small studies more informative.",
+      "gorsel": "two plates on a kitchen table, one holding sourdough slices and the other white sandwich bread slices, a calendar page with blank squares between them"
+    },
+    {
+      "id": 14,
+      "metin": "In 2008, Maioli and colleagues studied sixteen adults with impaired glucose tolerance, a stage before diabetes. Their ages ranged from fifty-two to seventy-five.",
+      "gorsel": "a quiet research room with a table, a plate of sourdough slices, a glucose meter with a blank screen and a pair of round eyeglasses",
+      "etiket": "Maioli et al. · Acta Diabetologica · 2008",
+      "baslik": {
+        "satirlar": [
+          "16 ADULTS",
+          "AGES 52 TO 75"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "On separate days they ate sourdough bread, leavened for eight hours with lactobacilli and yeast, and bread leavened with baker's yeast for just two hours. Samples were taken for three hours.",
+      "gorsel": "an antique wall clock above a sourdough dough ball rising in a ceramic bowl under a cloth, a second small bowl with a quick-rise white dough beside it",
+      "baslik": {
+        "satirlar": [
+          "8 HOURS",
+          "VS 2 HOURS"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "metin": "After the sourdough, glucose was lower at thirty minutes, and its rise over the first thirty and sixty minutes was smaller. Insulin was lower at thirty minutes too.",
+      "gorsel": "a gently rolling hill drawn as a low golden curve over a sliced sourdough loaf, a second taller hill behind it in a paler color",
+      "baslik": {
+        "satirlar": [
+          "LOWER IN",
+          "THE FIRST HOUR"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "metin": "Notice the timing. The differences the authors reported were early, in the first hour, rather than lasting through the whole three hours.",
+      "gorsel": "a pocket watch lying open on a wooden table beside a thick slice of sourdough bread"
+    },
+    {
+      "id": 18,
+      "metin": "The authors suggested that sourdough bread may benefit people with impaired glucose metabolism. That's a hopeful finding, but it comes from one small trial.",
+      "gorsel": "a sourdough loaf on a cooling rack by a bright kitchen window, morning light drawn as fine radiating lines"
+    },
+    {
+      "id": 19,
+      "metin": "In another small crossover study, Lappi and colleagues tested four breads, each with fifty grams of available carbohydrate, in eleven people with insulin resistance.",
+      "gorsel": "four different bread slices in a row on a tray, a wholemeal sourdough slice at the front, a rye slice, a white slice and a seeded slice",
+      "etiket": "Lappi et al. · J Cereal Sci · 2010"
+    },
+    {
+      "id": 20,
+      "metin": "Wholemeal sourdough wheat bread gave the lowest glucose and insulin responses of the four. Again, flour and fermentation went together.",
+      "gorsel": "a wholemeal sourdough loaf with a dark crust and a sliced piece showing a dense brown crumb, wheat grains scattered on the table",
+      "baslik": {
+        "satirlar": [
+          "WHOLEMEAL",
+          "SOURDOUGH"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "But not every trial agrees. In 2012, Mofidi and colleagues tested commercial breads in overweight and obese men. Sprouted-grain bread lowered glucose the most. The sourdough did not.",
+      "gorsel": "five store-bought bread loaves in plastic bags lined up on a counter, a sourdough loaf at one end and a sprouted-grain loaf at the other",
+      "etiket": "Mofidi et al. · J Nutr Metab · 2012",
+      "baslik": {
+        "satirlar": [
+          "NOT EVERY",
+          "TRIAL AGREES"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "In one part of that study, a white sourdough produced a higher glucose and insulin response than three whole-grain breads. These were small groups of eleven and twelve men, eating store-bought loaves.",
+      "gorsel": "a store-bought sourdough loaf next to three whole-grain loaves on a wooden table, a glucose meter with a blank screen in front"
+    },
+    {
+      "id": 23,
+      "metin": "It's a hint that the name on the bag may not predict what happens in your body. We'll come back to that in the shopping section.",
+      "gorsel": "a paper bag holding a sourdough baguette, with a plain blank tag tied to the handle, on a market stall table"
+    },
+    {
+      "id": 24,
+      "metin": "Then there's the famous trial from the Weizmann Institute of Science in Israel, led by Korem and colleagues, with Eran Segal and Eran Elinav as senior authors.",
+      "gorsel": "a laboratory bench with an antique microscope, a loaf of sourdough on a board and a slice of white sandwich bread beside it",
+      "etiket": "Korem et al. · Cell Metabolism · 2017"
+    },
+    {
+      "id": 25,
+      "metin": "Twenty healthy adults ate industrial white bread for one week, and traditional whole-grain sourdough for another week, with two weeks off between. Researchers tracked blood sugar and many other health measures.",
+      "gorsel": "two stacks of bread slices on a table, one of industrial white bread and one of whole-grain sourdough, a glucose sensor patch lying between them",
+      "baslik": {
+        "satirlar": [
+          "20 ADULTS",
+          "ONE WEEK EACH"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "metin": "On average, there was no significant difference between the breads. But individuals differed. About half did better on white bread, and about half did better on sourdough.",
+      "gorsel": "a sliced sourdough loaf on the left and a sliced white loaf on the right, a simple balance scale in the middle, perfectly level",
+      "baslik": {
+        "satirlar": [
+          "NO AVERAGE",
+          "DIFFERENCE"
+        ],
+        "not": "but half did better on each bread"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "The team could even predict, from each person's gut microbiome before the trial, which bread would suit them better. That's intriguing, but it needs confirming in larger studies.",
+      "gorsel": "a ceramic bowl of sourdough slices beside a simple engraving of the small intestine with tiny bacteria cells drawn in a circular inset"
+    },
+    {
+      "id": 28,
+      "metin": "Remember what was compared, though: traditional whole-grain sourdough against industrial white bread. Flour and fermentation changed together, which makes the result hard to untangle.",
+      "gorsel": "a dark whole-grain sourdough loaf on the left and a pale white sandwich loaf on the right, a sack of whole wheat flour and a sack of white flour behind them"
+    },
+    {
+      "id": 29,
+      "metin": "Researchers have pooled the trials. In a 2024 meta-analysis of eighteen studies, Rolim and colleagues found that glucose rose less after sourdough than after industrial bread or glucose, at both sixty and one hundred twenty minutes.",
+      "gorsel": "a tall stack of research papers with blank covers beside a sourdough loaf and a glucose meter with a blank screen",
+      "etiket": "Rolim et al. · Crit Rev Food Sci Nutr · 2024",
+      "baslik": {
+        "satirlar": [
+          "18 STUDIES",
+          "POOLED"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "The effect was strongest with whole wheat sourdough. But sourdough did not lower fasting insulin, and the authors rated the certainty of the evidence as low to very low.",
+      "gorsel": "a whole wheat sourdough loaf with a sheaf of wheat stalks tied with string, a dim oil lamp throwing soft light across the table",
+      "baslik": {
+        "satirlar": [
+          "LOW TO VERY",
+          "LOW CERTAINTY"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "A second review, by Ribet and colleagues in 2023, covered twenty-five randomized trials with five hundred forty-two adults. It found no clear consensus, because flour, fermentation and microbes differed so much between studies.",
+      "gorsel": "a long wooden table with many small bowls of different sourdough starters and flours, a sourdough loaf at the end of the row",
+      "etiket": "Ribet et al. · Adv Nutr · 2023"
+    },
+    {
+      "id": 32,
+      "bolum": "Why it might work",
+      "tip": "kart",
+      "metin": "So why might sourdough be gentler on blood sugar? There are a few ideas, and none is settled.",
+      "kart": {
+        "ust": "INSIDE THE LOAF",
+        "baslik": "Why it might work",
+        "alt": "Acids · Slow rise · Structure"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "One idea involves acids. During a long fermentation, bacteria make lactic and other organic acids. A 2017 review by Stamataki and colleagues said these acids may play a role, but the mechanism isn't confirmed.",
+      "gorsel": "a cross-section of a sourdough loaf with its airy crumb, tiny oval bacteria cells releasing small clear drops among flour grains in a circular inset",
+      "etiket": "Stamataki et al. · Br J Nutr · 2017",
+      "baslik": {
+        "satirlar": [
+          "THE ACIDS"
+        ],
+        "not": "may play a role, not confirmed"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "In the 2008 trial, the authors also pointed to fewer available simple carbohydrates in the sourdough after its long ferment.",
+      "gorsel": "a ceramic bowl of rising sourdough dough with a few bubbles at the surface, small golden sugar grains dissolving into the dough"
+    },
+    {
+      "id": 35,
+      "metin": "Another idea is the bread itself. The same review noted that proofing time, baking method and the structure of the bread can all change the glucose response. So fermentation is only one factor.",
+      "gorsel": "a sourdough loaf coming out of a stone oven on a wooden peel, steam drawn as fine curling lines",
+      "baslik": {
+        "satirlar": [
+          "MORE THAN",
+          "FERMENTATION"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "There's also vinegar. Acetic acid, the acid in vinegar, has its own effect. In a 2005 crossover trial, Östman and colleagues gave twelve healthy adults white bread with different amounts of vinegar.",
+      "gorsel": "a small glass cruet of vinegar beside a plate of white bread slices, a spoon and a folded napkin",
+      "etiket": "Östman et al. · Eur J Clin Nutr · 2005"
+    },
+    {
+      "id": 37,
+      "metin": "The highest vinegar dose gave a smaller glucose and insulin rise in the first half hour or so. In the practical part, that detail will help you read a bread label.",
+      "gorsel": "a glucose meter with a blank screen beside a glass cruet of vinegar and two slices of white bread on a plate"
+    },
+    {
+      "id": 38,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What can we say with confidence, and what can't we?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What we can and can't say",
+        "alt": "Limits of the evidence"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "Put together, sourdough, especially whole wheat sourdough, may lower the after-meal glucose rise a little. The pooled effect is modest, and the certainty is low.",
+      "gorsel": "a whole wheat sourdough loaf on a board next to a small, gentle hill drawn as a low line, restful and minimal"
+    },
+    {
+      "id": 40,
+      "metin": "The trials we covered looked at single meals or a week or two, not years of eating. None of them tells us what sourdough does to your long-term A1C or heart health.",
+      "gorsel": "a single slice of sourdough on a laboratory bench next to a short stack of blank-cover notebooks and a small hourglass"
+    },
+    {
+      "id": 41,
+      "metin": "Sourdough also isn't a low-carb food. A slice is still starch, and a big sourdough sandwich can still raise your blood sugar.",
+      "gorsel": "a tall sourdough sandwich with turkey, lettuce and tomato on a plate, cut in half, with a toothpick holding it together"
+    },
+    {
+      "id": 42,
+      "metin": "And sourdough made from wheat contains gluten, so it isn't safe for people with celiac disease.",
+      "gorsel": "a sheaf of wheat stalks lying across a sliced sourdough loaf on a board"
+    },
+    {
+      "id": 43,
+      "metin": "What about age? Of the trials we covered, only Maioli gave an age range we could confirm, fifty-two to seventy-five. So there's little age-specific evidence for people over sixty-five.",
+      "gorsel": "an older couple's kitchen table seen from above, a sourdough loaf on a board, two teacups and a pair of reading glasses",
+      "baslik": {
+        "satirlar": [
+          "AGE",
+          "GAP"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "metin": "So it would be a mistake to treat sourdough as a free pass. At best, it's a modestly gentler choice, and it never replaces medicine or advice from your care team.",
+      "gorsel": "a sourdough loaf on a board beside a pill organizer and a stethoscope on a wooden desk"
+    },
+    {
+      "id": 45,
+      "bolum": "Spotting real sourdough",
+      "tip": "kart",
+      "metin": "Now to the grocery store, where the word sourdough doesn't always mean what you'd hope.",
+      "kart": {
+        "ust": "AT THE STORE",
+        "baslik": "Real or imitation?",
+        "alt": "Reading a US bread aisle"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "The FDA's standard of identity for bread doesn't mention sourdough. So there is no federal definition of what the word requires, or how long the dough has to ferment.",
+      "gorsel": "a long supermarket aisle of packaged bread loaves, a sourdough loaf in the middle, a shopping cart at the edge",
+      "baslik": {
+        "satirlar": [
+          "NO FEDERAL",
+          "DEFINITION"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "That leaves the reading to you. Start with the ingredient list. Traditional sourdough can be very simple: flour, water, salt and the starter.",
+      "gorsel": "a sourdough loaf in a paper bag held open on a counter, a small pile of flour and a salt dish beside it"
+    },
+    {
+      "id": 48,
+      "metin": "A short list with no vinegar and no added sour flavoring is a good sign. A long list of dough conditioners and flavorings is a reason to look harder.",
+      "gorsel": "two sourdough loaves in bags, one with a short blank slip tied to it and one with a long blank paper strip hanging from it",
+      "baslik": {
+        "satirlar": [
+          "SHORT LIST",
+          "GOOD SIGN"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Here's the detail I mentioned earlier. Vinegar may lower the glucose rise on its own, as Östman's small trial in healthy adults showed. So a sour taste doesn't prove slow fermentation, and it doesn't prove the same benefit.",
+      "gorsel": "a sourdough slice on a plate next to a glass cruet of vinegar, a gentle curl of steam rising between them"
+    },
+    {
+      "id": 50,
+      "metin": "Next, check the flour. The pooled results were strongest with whole wheat. Look for whole wheat or whole grain flour near the top of the list, not just wheat flour.",
+      "gorsel": "a whole wheat sourdough loaf with a dark crust beside a sack of whole wheat flour and a wooden scoop of grain",
+      "baslik": {
+        "satirlar": [
+          "WHOLE GRAIN",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "And if you can, ask the baker. How long does the dough ferment, and does the bakery use a starter? It's a fair question.",
+      "gorsel": "a bakery counter with sourdough loaves on wooden shelves behind it, a baker's apron hanging on a hook, flour on the counter"
+    },
+    {
+      "id": 52,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you use all this? Here are five practical tips.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five practical tips",
+        "alt": "For everyday shopping and eating"
+      }
+    },
+    {
+      "id": 53,
+      "metin": "One. Choose whole grain sourdough when you can. That's where the pooled results were strongest.",
+      "gorsel": "a whole grain sourdough loaf, a halved loaf showing seeds and a dense crumb, on a wooden board"
+    },
+    {
+      "id": 54,
+      "metin": "Two. Read the ingredient list, not just the front of the bag. Short, with whole grain flour near the top, and no vinegar or sour flavoring.",
+      "gorsel": "a bag of sourdough held in two hands in a bright kitchen, with a blank white panel on the back, reading glasses beside it"
+    },
+    {
+      "id": 55,
+      "metin": "Three. Keep portions sensible. Sourdough is still bread. A slice or two with eggs, vegetables or beans makes a more balanced plate than a huge sandwich.",
+      "gorsel": "a plate with one slice of sourdough toast, a poached egg, sliced tomatoes and a handful of greens, seen from above"
+    },
+    {
+      "id": 56,
+      "metin": "Four. Your own response may differ. In the Weizmann trial, about half the people did better on each bread. If you use a glucose meter, try the same portion of two breads on different days and compare.",
+      "gorsel": "two sourdough slices on separate small plates on a kitchen table, a glucose meter with a blank screen between them, a notebook and pencil",
+      "baslik": {
+        "satirlar": [
+          "TEST",
+          "YOURSELF"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Five. If you have diabetes or take medicine such as insulin, talk to your doctor, pharmacist or dietitian before changing how much bread you eat, because your doses may be matched to your usual carbohydrates.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, an insulin pen and a sourdough slice on a small plate",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Better, but only a little",
+        "alt": "Read the label · Choose whole grain"
+      }
+    },
+    {
+      "id": 59,
+      "metin": "In several small crossover trials, sourdough, especially whole wheat sourdough, produced a smaller rise in glucose, and sometimes insulin, than yeast bread. A pooled analysis of eighteen studies agreed, with low certainty.",
+      "gorsel": "a whole wheat sourdough loaf on a wooden board with a thick slice cut in front, a glucose meter with a blank screen beside it"
+    },
+    {
+      "id": 60,
+      "metin": "But one trial found no average difference, and another found a higher response than three whole-grain breads. The effect looks modest, and it varies from person to person.",
+      "gorsel": "a sourdough loaf and a white sandwich loaf on either side of a level balance scale on a kitchen table"
+    },
+    {
+      "id": 61,
+      "metin": "At the store, the FDA bread standard doesn't define sourdough. So read the ingredients, look for whole grain, avoid added vinegar or sour flavoring, and enjoy sourdough in sensible portions.",
+      "gorsel": "a sourdough loaf in a paper bag on a kitchen counter beside a pair of reading glasses and a small bowl of olive oil"
+    },
+    {
+      "id": 62,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

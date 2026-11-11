@@ -1,0 +1,90 @@
+name: Ses Klonu Denemesi (The Food Almanac)
+# Anlatıcının kendi ses örneğinden (KikiVoice çıktısı) Chatterbox ile örnek cümleler üretir; hız raporu verir.
+# Üretim hattına dokunmaz. Ücretsiz: model yerelde (CPU) çalışır, API anahtarı ve kredi yok.
+# Depo herkese açık olduğundan ses örneği ve çıktılar yalnızca şifreli durur (uzun_en/araclar/sifre.sh):
+#   - İlk çalıştırma 'ses-klon' ön-sürümüne bir anahtar çifti koyar (özel anahtar YT_CLIENT_SECRET ile şifreli).
+#   - Ses örneği bu açık anahtarla şifrelenip uzun_en/assets/ses/referans.enc(+ .key.enc) olarak depoya girer.
+#   - Örnekler uzun_en/assets/klon_cikti.pub ile şifrelenip sürüme yüklenir (ornek.enc + ornek.key.enc).
+# Tetik: uzun_en/ses_klon.json main'e gelince (tetik sayısını artırın) ya da elle.
+on:
+  push:
+    branches: [main]
+    paths: [uzun_en/ses_klon.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ses-klon
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  klon:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Anahtar ve ses örneği (şifreli)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KEK: ${{ secrets.YT_CLIENT_SECRET }}
+        run: |
+          S=uzun_en/araclar/sifre.sh
+          mkdir -p /tmp/k
+          gh release view ses-klon >/dev/null 2>&1 || gh release create ses-klon --prerelease --title "Ses klonu (şifreli)" \
+            --notes "Anlatıcı sesi klonu: şifreli anahtar ve örnekler. Açık metin ses dosyası içermez."
+          if ! gh release download ses-klon -D /tmp/k -p klon_anahtar.pub -p klon_anahtar.enc 2>/dev/null \
+             || [ ! -s /tmp/k/klon_anahtar.enc ]; then
+            bash "$S" anahtar /tmp/k
+            gh release upload ses-klon /tmp/k/klon_anahtar.pub /tmp/k/klon_anahtar.enc --clobber
+            echo "::notice title=Ses klonu::anahtar çifti üretildi (ses-klon sürümünde açık anahtar)"
+          fi
+          R=uzun_en/assets/ses/referans
+          if [ ! -f "$R.enc" ]; then
+            echo "::notice title=Ses klonu::şifreli ses örneği henüz yok; açık anahtarla şifrelenip $R.enc olarak eklenmeli"
+            echo "HAZIR=false" >> "$GITHUB_ENV"; exit 0
+          fi
+          bash "$S" ozel /tmp/k /tmp/k/ozel.pem
+          bash "$S" coz /tmp/k/ozel.pem "$R" /tmp/k/referans.ses
+          rm -f /tmp/k/ozel.pem
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          ffmpeg -v error -y -i /tmp/k/referans.ses -ac 1 -ar 24000 /tmp/k/referans.wav && rm -f /tmp/k/referans.ses
+          echo "HAZIR=true" >> "$GITHUB_ENV"
+      - name: Bağımlılıklar (CPU, ücretsiz)
+        if: env.HAZIR == 'true'
+        run: |
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q chatterbox-tts==0.1.7 numpy
+      - uses: actions/cache@v4
+        if: env.HAZIR == 'true'
+        with:
+          path: ~/.cache/huggingface
+          key: ses-klon-chatterbox-0.1.7
+      - name: Örnekleri üret
+        if: env.HAZIR == 'true'
+        run: python3 uzun_en/araclar/ses_klon.py --referans /tmp/k/referans.wav --cikti /tmp/ornek 2>&1 | tee /tmp/klon.txt
+      - name: Şifrele ve sürüme yükle
+        if: always() && env.HAZIR == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f /tmp/k/referans.wav
+          [ -d /tmp/ornek ] || exit 0
+          tar -C /tmp -cf /tmp/ornek.tar ornek
+          bash uzun_en/araclar/sifre.sh sifrele uzun_en/assets/klon_cikti.pub /tmp/ornek.tar /tmp/ornek
+          gh release upload ses-klon /tmp/ornek.enc /tmp/ornek.key.enc --clobber
+          rm -rf /tmp/ornek /tmp/ornek.tar
+      - name: Özet
+        if: always() && env.HAZIR == 'true'
+        run: |
+          [ -f /tmp/klon.txt ] || exit 0
+          grep -E "✓|✗|Error|Traceback" /tmp/klon.txt | head -20 | sed 's/^/::notice title=Ses klonu::/' || true

@@ -1,0 +1,14 @@
+{
+  "baslik": ["PILL AT 8,", "FRUIT AT 12?"],
+  "baslik_yt": "Does Spacing Out Grapefruit and Your Pill Work?",
+  "aciklama": "Many people hope that taking a pill in the morning and eating grapefruit at lunch avoids a drug interaction. Here is what gut biopsies and a CMAJ review show about why timing does not protect you.",
+  "parcalar": [
+    {"sahne": 29, "cumleler": [1], "gorsel": 59, "baslik": null, "etiket": null},
+    {"sahne": 30, "cumleler": [0, 1, 2]},
+    {"sahne": 31, "cumleler": [0]},
+    {"sahne": 31, "cumleler": [1], "baslik": {"satirlar": ["CYP3A4", "DOWN 62%"], "vurgu": "-62%", "not": "gut enzyme, 6 days of juice"}},
+    {"sahne": 33, "cumleler": [1]},
+    {"sahne": 34, "cumleler": [1], "baslik": null, "etiket": "Maskalyk · CMAJ · 2002"},
+    {"sahne": 59, "cumleler": [1], "gorsel": 41, "baslik": {"satirlar": ["ASK YOUR", "PHARMACIST"]}, "etiket": null}
+  ]
+}

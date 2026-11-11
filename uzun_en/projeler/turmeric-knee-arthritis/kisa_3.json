@@ -1,0 +1,15 @@
+{
+  "baslik": ["CURRY FOR", "KNEE PAIN?"],
+  "baslik_yt": "Curry vs Capsules: Why Turmeric Trials Don't Apply",
+  "aciklama": "Curcumin is hard for the body to absorb, and the knee arthritis trials tested specific extracts, not kitchen spice. Here is what that means for the bottle you pick.",
+  "parcalar": [
+    {"sahne": 33, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 33, "cumleler": [1], "baslik": {"satirlar": ["HARD TO", "ABSORB"]}, "etiket": null},
+    {"sahne": 34, "cumleler": [1], "baslik": {"satirlar": ["ADD", "BLACK PEPPER"]}},
+    {"sahne": 34, "cumleler": [2], "gorsel": 35, "baslik": null},
+    {"sahne": 36, "cumleler": [0], "baslik": {"satirlar": ["NOT EVERY", "BOTTLE"]}, "etiket": null},
+    {"sahne": 37, "cumleler": [0, 1]},
+    {"sahne": 48, "cumleler": [2]},
+    {"sahne": 48, "cumleler": [3], "baslik": null}
+  ]
+}

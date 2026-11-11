@@ -1,0 +1,18 @@
+{
+  "baslik": ["A SAFER", "CITRUS?"],
+  "baslik_yt": "Which Citrus Is Safer If You Take Medicine?",
+  "aciklama": "Not all citrus fruits act like grapefruit in your gut. Here is what the FDA and published studies say about oranges, lemons, Seville oranges, pomelos and mandarins.",
+  "parcalar": [
+    {"sahne": 45, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 47, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["SAME EFFECT?", "WATCH THESE"], "vurgu": "3 FRUITS", "not": "Seville, pomelo, tangelo"},
+     "etiket": "FDA"},
+    {"sahne": 46, "cumleler": [0], "baslik": {"satirlar": ["LEMONS", "AND LIMES"]}, "etiket": null},
+    {"sahne": 46, "cumleler": [1, 2], "baslik": null, "etiket": null},
+    {"sahne": 49, "cumleler": [1],
+     "baslik": {"satirlar": ["61 CITRUS", "SPECIES"], "vurgu": "61", "not": "citrus species measured"},
+     "etiket": "Dugrand-Judek et al. · PLoS ONE · 2015"},
+    {"sahne": 49, "cumleler": [2], "baslik": null, "etiket": "Dugrand-Judek et al. · PLoS ONE · 2015"},
+    {"sahne": 55, "cumleler": [1, 2, 3], "baslik": {"satirlar": ["EASY", "SWAP"]}, "etiket": null}
+  ]
+}

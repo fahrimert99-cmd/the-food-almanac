@@ -1,0 +1,15 @@
+{
+  "baslik": ["CRUSH GARLIC,", "THEN WAIT?"],
+  "baslik_yt": "Why You Should Let Crushed Garlic Rest 10 Minutes",
+  "aciklama": "A whole garlic clove has little smell until you crush it. Here is what happens inside, what heat does to it, and the honest gap in the blood pressure research.",
+  "parcalar": [
+    {"sahne": 25, "cumleler": [0], "baslik": null},
+    {"sahne": 25, "cumleler": [1]},
+    {"sahne": 26, "cumleler": [0]},
+    {"sahne": 27, "cumleler": [0]},
+    {"sahne": 28, "cumleler": [0], "etiket": "Song & Milner · J Nutr · 2001"},
+    {"sahne": 28, "cumleler": [1], "etiket": null},
+    {"sahne": 31, "cumleler": [0, 1, 2]},
+    {"sahne": 49, "cumleler": [1, 3], "baslik": {"satirlar": ["REST IT", "10 MINUTES"]}, "etiket": null}
+  ]
+}

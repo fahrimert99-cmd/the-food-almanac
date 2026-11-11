@@ -1,0 +1,26 @@
+{
+  "baslik": ["ONE BIG", "DINNER?"],
+  "baslik_yt": "Is a Big Protein Dinner Wasting Your Muscle?",
+  "aciklama": "Many people eat a light breakfast and a huge dinner. A small crossover study asked whether spreading protein evenly builds more muscle, and what it can and cannot prove.",
+  "parcalar": [
+    {"sahne": 33, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 33, "cumleler": [1], "gorsel": 34,
+     "baslik": {"satirlar": ["TWO DIETS"], "vurgu": "90 G", "not": "protein a day, both diets"},
+     "etiket": "Mamerow et al. · J Nutr · 2014"},
+    {"sahne": 35, "cumleler": [0],
+     "baslik": {"satirlar": ["EVEN SPLIT"], "vurgu": "30 G", "not": "at each meal"},
+     "etiket": "Mamerow et al. · J Nutr · 2014"},
+    {"sahne": 35, "cumleler": [1],
+     "baslik": {"satirlar": ["DINNER-HEAVY"], "vurgu": "63 G", "not": "at dinner alone"},
+     "etiket": "Mamerow et al. · J Nutr · 2014"},
+    {"sahne": 36, "cumleler": [0], "gorsel": 26,
+     "baslik": {"satirlar": ["MUSCLE BUILD"], "vurgu": "+25%", "not": "with the even pattern, 24 h"},
+     "etiket": "Mamerow et al. · J Nutr · 2014"},
+    {"sahne": 37, "cumleler": [0],
+     "baslik": {"satirlar": ["ONLY 8", "PEOPLE"]},
+     "etiket": "Mamerow et al. · J Nutr · 2014"},
+    {"sahne": 37, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 50, "cumleler": [1],
+     "baslik": {"satirlar": ["25–30 G", "PER MEAL"]}, "etiket": null}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "baslik": ["CINNAMON", "VS SUGAR?"],
+  "baslik_yt": "Does Cinnamon Lower Blood Sugar? What Trials Say",
+  "aciklama": "Pooled trials link cinnamon to lower fasting glucose in type 2 diabetes, but the A1C effect is unclear and cassia carries coumarin. Here is the balanced picture.",
+  "parcalar": [
+    {"sahne": 14, "cumleler": [0], "gorsel": 1, "baslik": null, "etiket": null},
+    {"sahne": 14, "cumleler": [1],
+     "baslik": {"satirlar": ["FASTING", "GLUCOSE"], "vurgu": "-25", "not": "mg/dL, 10 trials, 543 adults"},
+     "etiket": "Allen et al. · Ann Fam Med · 2013"},
+    {"sahne": 15, "cumleler": [0],
+     "baslik": {"satirlar": ["A1C: NO", "CLEAR DROP"], "vurgu": "-0.16", "not": "A1C points, range includes 0"},
+     "etiket": "Allen et al. · Ann Fam Med · 2013"},
+    {"sahne": 29, "cumleler": [0], "etiket": "NIH · Office of Dietary Supplements"},
+    {"sahne": 61, "cumleler": [0],
+     "baslik": {"satirlar": ["CASSIA", "HAS COUMARIN"]},
+     "etiket": null},
+    {"sahne": 61, "cumleler": [1], "gorsel": 36,
+     "baslik": {"satirlar": ["THE LIMIT"], "vurgu": "~1 TSP", "not": "daily cassia, 60 kg adult"},
+     "etiket": "BfR · 2012"},
+    {"sahne": 63, "cumleler": [0], "gorsel": 46,
+     "baslik": {"satirlar": ["NOT A", "SUBSTITUTE"]},
+     "etiket": null},
+    {"sahne": 63, "cumleler": [1], "baslik": null, "etiket": null}
+  ]
+}

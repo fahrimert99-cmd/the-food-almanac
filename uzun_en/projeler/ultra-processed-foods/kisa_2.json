@@ -1,0 +1,23 @@
+{
+  "baslik": ["SODA = BREAD?", "ONE LABEL"],
+  "baslik_yt": "Soda and Whole Grain Bread: One Label, Same Risk?",
+  "aciklama": "The ultra-processed label lumps very different foods together. In a large American diabetes study, sweet drinks were linked with higher risk, while whole grain bread and yogurt were linked with lower risk.",
+  "parcalar": [
+    {"sahne": 37, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 10, "cumleler": [2], "baslik": {"satirlar": ["HOW, NOT", "WHAT'S INSIDE"]}, "etiket": null},
+    {"sahne": 47, "cumleler": [2], "gorsel": 37,
+     "baslik": {"satirlar": ["SWEET DRINKS", "HIGHER RISK"]},
+     "etiket": "Chen et al. · Diabetes Care · 2023"},
+    {"sahne": 38, "cumleler": [0],
+     "baslik": {"satirlar": ["LOWER RISK", "SUBGROUPS"]},
+     "etiket": "Chen et al. · Diabetes Care · 2023"},
+    {"sahne": 38, "cumleler": [1], "baslik": null,
+     "etiket": "Chen et al. · Diabetes Care · 2023"},
+    {"sahne": 39, "cumleler": [1],
+     "baslik": {"satirlar": ["IT DEPENDS", "WHICH ONES"]}, "etiket": null},
+    {"sahne": 51, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["AIM FOR", "ONE SWAP"]},
+     "etiket": "Chen et al. · Diabetes Care · 2023"},
+    {"sahne": 51, "cumleler": [3], "gorsel": 41, "baslik": null, "etiket": null}
+  ]
+}

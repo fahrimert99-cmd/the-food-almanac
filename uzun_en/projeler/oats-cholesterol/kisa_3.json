@@ -1,0 +1,20 @@
+{
+  "baslik": ["ONE BOWL OF", "OATS: ENOUGH?"],
+  "baslik_yt": "How Many Bowls of Oatmeal Is 3 Grams of Fiber?",
+  "aciklama": "Studies on oat beta-glucan use about three grams a day. Here is where that number comes from, how many bowls it takes, and what the evidence cannot tell you.",
+  "parcalar": [
+    {"sahne": 31, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 13, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["WHY", "THREE GRAMS?"], "vurgu": "3 G", "not": "beta-glucan a day"},
+     "etiket": "Health Canada review"},
+    {"sahne": 31, "cumleler": [0]},
+    {"sahne": 31, "cumleler": [2], "gorsel": 44, "baslik": null},
+    {"sahne": 45, "cumleler": [2]},
+    {"sahne": 24, "cumleler": [0],
+     "baslik": {"satirlar": ["MODEST,", "NOT MAGIC"], "vurgu": "-7 TO -10", "not": "mg/dL LDL"},
+     "etiket": "Whitehead 2014 · Ho 2016 meta-analyses"},
+    {"sahne": 28, "cumleler": [1]},
+    {"sahne": 48, "cumleler": [2]},
+    {"sahne": 54, "cumleler": [1]}
+  ]
+}

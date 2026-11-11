@@ -1,0 +1,20 @@
+{
+  "baslik": ["11 YEARS", "YOUNGER BRAIN?"],
+  "baslik_yt": "Leafy Greens and Memory: What Rush Studies Found",
+  "aciklama": "Rush University researchers found leafy greens had the steadiest link to slower memory decline in older adults. Here is how big the numbers were, what they really mean, and how much to eat.",
+  "parcalar": [
+    {"sahne": 19, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 19, "cumleler": [2],
+     "baslik": {"satirlar": ["LEAFY GREENS"], "vurgu": "1.3/day", "not": "servings vs almost none"},
+     "etiket": "Morris et al. · Neurology · 2018"},
+    {"sahne": 20, "cumleler": [0], "gorsel": 18,
+     "baslik": {"satirlar": ["ELEVEN YEARS", "YOUNGER?"], "vurgu": "11 YEARS", "not": "pace of decline, on paper"},
+     "etiket": "Morris et al. · Neurology · 2018"},
+    {"sahne": 20, "cumleler": [2], "baslik": {"satirlar": ["NOT A", "YOUNGER BRAIN"]}, "etiket": null},
+    {"sahne": 21, "cumleler": [1], "baslik": {"satirlar": ["BERRIES TOO"], "vurgu": "16,010", "not": "women aged 70 and older"},
+     "etiket": "Devore et al. · Ann Neurol · 2012"},
+    {"sahne": 21, "cumleler": [2], "baslik": {"satirlar": ["UP TO", "2.5 YEARS"]}, "etiket": null},
+    {"sahne": 22, "cumleler": [1], "gorsel": 23, "baslik": {"satirlar": ["ONLY", "ASSOCIATIONS"]}, "etiket": null},
+    {"sahne": 55, "cumleler": [0], "gorsel": 45, "baslik": {"satirlar": ["A SERVING", "A DAY"]}, "etiket": null}
+  ]
+}

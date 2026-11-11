@@ -1,0 +1,20 @@
+{
+  "baslik": ["IS IT REALLY", "SOURDOUGH?"],
+  "baslik_yt": "How to Spot Real Sourdough at the Store",
+  "aciklama": "In the US, the FDA bread standard doesn't define sourdough, so the label alone tells you little. Here is what to check on the ingredient list.",
+  "parcalar": [
+    {"sahne": 46, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 46, "cumleler": [1],
+     "baslik": {"satirlar": ["NO FEDERAL", "DEFINITION"], "vurgu": "NO RULE", "not": "for the word sourdough"},
+     "etiket": "FDA standard of identity"},
+    {"sahne": 47, "cumleler": [1, 2], "baslik": {"satirlar": ["READ THE", "INGREDIENTS"]}, "etiket": null},
+    {"sahne": 48, "cumleler": [0], "baslik": {"satirlar": ["SHORT LIST", "GOOD SIGN"]}, "etiket": null},
+    {"sahne": 49, "cumleler": [1],
+     "baslik": {"satirlar": ["VINEGAR", "ALONE HELPS"]},
+     "etiket": "Östman et al. · Eur J Clin Nutr · 2005"},
+    {"sahne": 49, "cumleler": [2], "gorsel": 23, "baslik": {"satirlar": ["SOUR ≠", "SLOW FERMENT"]}, "etiket": null},
+    {"sahne": 50, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["WHOLE GRAIN", "FIRST"]},
+     "etiket": "Rolim et al. · Crit Rev Food Sci · 2024"}
+  ]
+}

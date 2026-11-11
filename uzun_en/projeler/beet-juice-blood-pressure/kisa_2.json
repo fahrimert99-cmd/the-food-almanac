@@ -1,0 +1,18 @@
+{
+  "baslik": ["MOUTHWASH VS", "BEET JUICE?"],
+  "baslik_yt": "Can Mouthwash Cancel Beet Juice's Effect?",
+  "aciklama": "Beet juice relies on bacteria in your mouth to work. Here is what two small studies found when people used antiseptic mouthwash, and what that does and does not prove.",
+  "parcalar": [
+    {"sahne": 33, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 34, "cumleler": [0],
+     "baslik": {"satirlar": ["ANTISEPTIC", "MOUTHWASH"], "vurgu": "-90%", "not": "oral nitrite production"},
+     "etiket": "Kapil et al. · Free Radic Biol Med 2013"},
+    {"sahne": 34, "cumleler": [1], "gorsel": 33, "baslik": null, "etiket": "Kapil et al. · Free Radic Biol Med 2013"},
+    {"sahne": 35, "cumleler": [0],
+     "baslik": {"satirlar": ["BLOOD PRESSURE", "ROSE"], "vurgu": "+2.5", "not": "systolic points over 24 h"},
+     "etiket": "Kapil et al. · Free Radic Biol Med 2013"},
+    {"sahne": 35, "cumleler": [1], "baslik": {"satirlar": ["A CLUE,", "NOT PROOF"]}, "etiket": null},
+    {"sahne": 38, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 38, "cumleler": [1, 2], "gorsel": 50, "baslik": {"satirlar": ["PRECAUTION,", "NOT A RULE"]}, "etiket": null}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "baslik": ["KIDNEY STONE?", "SKIP DAIRY?"],
+  "baslik_yt": "Kidney Stones: Should You Really Skip Dairy?",
+  "aciklama": "A five-year trial and large cohort studies suggest cutting calcium may backfire for calcium stones. Here is why calcium and oxalate bind in your gut.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1],
+     "baslik": {"satirlar": ["STONE RELAPSE"], "vurgu": "23 VS 12", "not": "low vs normal calcium"},
+     "etiket": "Borghi et al. · N Engl J Med · 2002"},
+    {"sahne": 1, "cumleler": [2], "baslik": null, "etiket": "Borghi et al. · N Engl J Med · 2002"},
+    {"sahne": 1, "cumleler": [3], "baslik": null, "etiket": null},
+    {"sahne": 13, "cumleler": [1], "baslik": {"satirlar": ["TWO WHOLE", "DIETS"]}, "etiket": null},
+    {"sahne": 26, "cumleler": [0]},
+    {"sahne": 26, "cumleler": [1], "gorsel": 27, "baslik": null},
+    {"sahne": 29, "cumleler": [0, 1], "gorsel": 28,
+     "baslik": {"satirlar": ["OXALATE", "ABSORBED"], "vurgu": "18% → 8%", "not": "without vs with calcium"},
+     "etiket": "Liebman & Chai · Am J Clin Nutr · 1997"},
+    {"sahne": 36, "cumleler": [0, 1]},
+    {"sahne": 59, "cumleler": [1], "baslik": {"satirlar": ["KNOW YOUR", "STONE TYPE"]}}
+  ]
+}

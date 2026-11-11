@@ -1,0 +1,21 @@
+{
+  "baslik": ["UP 2X A NIGHT?", "AFTER 70"],
+  "baslik_yt": "Waking Up to Pee After 70? What Helps",
+  "aciklama": "A clinical review found that up to 62 percent of people aged 70 to 80 wake at least twice a night to urinate. Here is the expert guidance on evening drinks, timing and diuretics.",
+  "parcalar": [
+    {"sahne": 44, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 44, "cumleler": [1],
+     "baslik": {"satirlar": ["AGES 70–80", "NIGHT WAKING"], "vurgu": "28–62%", "not": "wake 2+ times a night"},
+     "etiket": "Oelke et al. · Int J Clin Pract · 2017"},
+    {"sahne": 45, "cumleler": [1], "gorsel": 45,
+     "baslik": {"satirlar": ["EVENING", "DRINKS FIRST"]},
+     "etiket": "Oelke et al. · Int J Clin Pract · 2017"},
+    {"sahne": 46, "cumleler": [0],
+     "baslik": {"satirlar": ["2 HOURS", "BEFORE BED"]},
+     "etiket": "Oelke et al. · Int J Clin Pract · 2017"},
+    {"sahne": 46, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 47, "cumleler": [0], "baslik": {"satirlar": ["WATER PILL?", "TAKE EARLIER"]}, "etiket": null},
+    {"sahne": 47, "cumleler": [1], "baslik": {"satirlar": ["ASK FIRST"]}, "etiket": null},
+    {"sahne": 48, "cumleler": [1], "baslik": {"satirlar": ["TELL YOUR", "DOCTOR"]}, "etiket": null}
+  ]
+}

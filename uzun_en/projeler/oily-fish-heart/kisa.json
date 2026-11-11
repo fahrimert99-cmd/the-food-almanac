@@ -1,0 +1,15 @@
+{
+  "baslik": ["PILLS OR FISH?", "FOR YOUR HEART"],
+  "baslik_yt": "Fish Oil Pills vs Sardines: What the Trials Show",
+  "aciklama": "Big trials found plain fish oil capsules did not clearly cut heart attacks, yet eating fish is linked with lower heart risk. Here is what the research says, and what to put on your plate.",
+  "parcalar": [
+    {"sahne": 34, "cumleler": [1], "gorsel": 35, "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0]},
+    {"sahne": 26, "cumleler": [0], "gorsel": 24,
+     "baslik": {"satirlar": ["PRESCRIPTION", "EPA"], "vurgu": "-25%", "not": "major heart events"},
+     "etiket": "Bhatt et al. · N Engl J Med · 2019"},
+    {"sahne": 33, "cumleler": [0]},
+    {"sahne": 59, "cumleler": [0], "baslik": {"satirlar": ["FISH ON", "THE PLATE"]}, "etiket": "Rimm et al. · Circulation · 2018"},
+    {"sahne": 60, "cumleler": [0]}
+  ]
+}

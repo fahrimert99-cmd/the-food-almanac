@@ -1,0 +1,638 @@
+{
+  "slug": "oily-fish-heart",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Sardines vs Fish Oil Pills: Heart Health After 60",
+  "yorum": "How often do you eat fish in a typical week, and do you take a fish oil capsule too? Has your doctor ever talked with you about either one?",
+  "aciklama_giris": "In VITAL, a trial of 25,871 older Americans, a daily fish oil capsule did not significantly lower the combined risk of heart attack, stroke or heart death. Yet people who eat fish regularly are linked with lower heart risk, and one high-dose prescription form of omega-3 did reduce events in a specific group. Why the difference?\n\nIn this video we look at the large supplement trials (VITAL, ASCEND and STRENGTH), the prescription exception (REDUCE-IT), the link between eating fish and heart disease, what the American Heart Association recommends, how the FDA ranks sardines and salmon for mercury, and five practical ways to fit fish into your week.",
+  "kaynaklar": [
+    "Manson JE, Cook NR, Lee IM, et al. Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer (VITAL). N Engl J Med. 2019;380:23-32. DOI 10.1056/NEJMoa1811403. PMID 30415637.",
+    "ASCEND Study Collaborative Group. Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. N Engl J Med. 2018;379:1540-1550. DOI 10.1056/NEJMoa1804989. PMID 30146932.",
+    "Gencer B, Djousse L, Al-Ramady OT, et al. Effect of Long-Term Marine omega-3 Fatty Acids Supplementation on the Risk of Atrial Fibrillation in Randomized Controlled Trials of Cardiovascular Outcomes. Circulation. 2021;144:1981-1990. PMID 34612056.",
+    "Bhatt DL, Steg PG, Miller M, et al. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia (REDUCE-IT). N Engl J Med. 2019;380:11-22. DOI 10.1056/NEJMoa1812792. PMID 30415628.",
+    "Nicholls SJ, Lincoff AM, Garcia M, et al. Effect of High-Dose Omega-3 Fatty Acids vs Corn Oil on Major Adverse Cardiovascular Events in Patients at High Cardiovascular Risk (STRENGTH). JAMA. 2020;324:2268-2280. Summary: American College of Cardiology, https://www.acc.org/Latest-in-Cardiology/Clinical-Trials/2020/11/11/21/29/STRENGTH",
+    "Zhang B, Xiong K, Cai J, Ma A. Fish Consumption and Coronary Heart Disease: A Meta-Analysis. Nutrients. 2020;12:2278. DOI 10.3390/nu12082278. PMID 32751304.",
+    "Caldeira D, Nogueira-Garcia B, Abreu A, Pinto FJ. Fish intake and risk of cardiovascular events: an analysis of the VITAL cohort. Eur J Clin Nutr. 2023. DOI 10.1038/s41430-022-01244-w. PMID 36482183.",
+    "Rimm EB, Appel LJ, Chiuve SE, et al. Seafood Long-Chain n-3 Polyunsaturated Fatty Acids and Cardiovascular Disease: A Science Advisory From the American Heart Association. Circulation. 2018;138:e35-e47. DOI 10.1161/CIR.0000000000000574. PMID 29773586.",
+    "American Heart Association. Eating fish twice a week reduces heart, stroke risk. heart.org news, 25 May 2018. https://www.heart.org/en/news/2018/05/25/eating-fish-twice-a-week-reduces-heart-stroke-risk",
+    "U.S. Food and Drug Administration and U.S. Environmental Protection Agency. Advice About Eating Fish. https://www.fda.gov/food/consumers/advice-about-eating-fish"
+  ],
+  "kapak": {
+    "satirlar": [
+      "SARDINES",
+      "OR PILLS?"
+    ],
+    "vurgu": "–15%",
+    "vurgu_alt": "DEATHS",
+    "serit": "Fish eaters vs heart deaths",
+    "gorsel": "a large open tin of silver sardines packed tightly, a grilled salmon fillet overlapping behind it, a few golden fish oil capsules in a small glass dish in front, a red heart symbol at the top, very close up and appetizing"
+  },
+  "kahraman": "sardines",
+  "etiketler": [
+    "sardines heart health",
+    "fish oil pills vs eating fish",
+    "omega 3 after 60",
+    "canned sardines benefits",
+    "salmon heart health",
+    "fish oil supplements",
+    "VITAL trial",
+    "REDUCE-IT",
+    "omega-3 EPA DHA",
+    "mercury in fish"
+  ],
+  "seslendirme_duzelt": {
+    "EPA": "E P A",
+    "DHA": "D H A",
+    "FDA": "F D A",
+    "REDUCE-IT": "reduce it",
+    "omega-3": "omega 3",
+    "icosapent": "eye-koh-SAP-ent"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Fish or pills?",
+      "metin": "In a trial of 25,871 older Americans, a daily fish oil capsule did not significantly lower the combined risk of heart attack, stroke or heart death.",
+      "gorsel": "a small glass dish of golden fish oil capsules beside an open tin of sardines on a wooden table, a simple engraved heart above them",
+      "etiket": "Manson et al. · N Engl J Med · 2019",
+      "baslik": {
+        "satirlar": [
+          "25,871",
+          "OLDER ADULTS"
+        ],
+        "not": "a daily fish oil capsule did not clearly lower heart events"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "Yet regular fish eaters are linked with lower heart risk, and one prescription version worked, for a specific group.",
+      "gorsel": "a plate with a grilled salmon fillet and a small pile of sardines on one side, a single golden capsule in a spoon on the other side, a question mark shaped steam curl above",
+      "baslik": {
+        "satirlar": [
+          "FISH: LINKED.",
+          "PILLS: NOT?"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what to choose and how to fit it in.",
+      "gorsel": "a weekly kitchen calendar drawn as a wooden board with two small plates of sardines and salmon placed on two of the days, a pencil beside it"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what's inside an oily fish.",
+      "gorsel": "an open tin of sardines, a whole fresh sardine and a salmon steak on a marble counter, a lemon half beside them, morning light drawn as fine lines"
+    },
+    {
+      "id": 5,
+      "bolum": "What omega-3 is",
+      "tip": "kart",
+      "metin": "Fish gets its heart-healthy reputation from two fats called EPA and DHA, the main omega-3s found in seafood.",
+      "kart": {
+        "ust": "THE BASICS",
+        "baslik": "EPA and DHA",
+        "alt": "The omega-3 fats in seafood"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Oily fish such as salmon, sardines, herring and mackerel are the classic sources, and the American Heart Association lists them among good choices.",
+      "gorsel": "a tidy arrangement of whole salmon, a row of sardines, a herring and a mackerel laid on crushed ice in a shallow tray",
+      "baslik": {
+        "satirlar": [
+          "OILY FISH"
+        ],
+        "not": "salmon · sardines · herring · mackerel"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Researchers have proposed that these fats may help steady the heart's rhythm, calm inflammation and affect how blood clots. Most of those ideas still need longer dietary trials to confirm.",
+      "gorsel": "a simple engraved heart with a calm wave line passing through it, a tin of sardines and a salmon fillet sketched beside it with dashed callout lines",
+      "baslik": {
+        "satirlar": [
+          "PROPOSED",
+          "BENEFITS"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "metin": "The American Heart Association's 2018 advisory supports one to two seafood meals a week. Its public guidance is two servings of non-fried fish, about three and a half ounces each.",
+      "gorsel": "a white plate with a baked salmon fillet and a small side of sardines on whole-grain toast, a fork and knife, a simple measuring cup of flaked fish beside it",
+      "etiket": "Rimm et al. · Circulation · 2018",
+      "baslik": {
+        "satirlar": [
+          "TWICE",
+          "A WEEK"
+        ],
+        "vurgu": "3.5 OZ",
+        "not": "per serving of non-fried fish"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "The advisory links fish with a lower risk of heart failure, coronary heart disease, stroke caused by clots, and sudden cardiac death.",
+      "gorsel": "a bowl of sardines and a salmon steak on a table, beside a simple engraved heart, a brain and a pulse line drawn as a gentle wave",
+      "baslik": {
+        "satirlar": [
+          "FISH AND",
+          "THE HEART"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "metin": "Notice that this advice is about fish on a plate, not capsules. That difference turns out to matter.",
+      "gorsel": "two items placed apart on a clean wooden table: a plate of sardines on the left and a small amber pill bottle on the right, empty space between them"
+    },
+    {
+      "id": 11,
+      "metin": "Here's the plan. First, what happened when researchers tested capsules. Then the prescription exception. Then what fish may offer that capsules don't.",
+      "gorsel": "an open notebook with blank pages on a desk beside an open tin of sardines and a fountain pen, a magnifying glass resting on the pages"
+    },
+    {
+      "id": 12,
+      "bolum": "Fish oil pills, tested",
+      "tip": "kart",
+      "metin": "Over the last several years, large trials put fish oil capsules to a fair test.",
+      "kart": {
+        "ust": "THE PILL TRIALS",
+        "baslik": "Fish oil, tested",
+        "alt": "VITAL · ASCEND"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "The best known is VITAL, led by JoAnn Manson and colleagues in the United States. It enrolled 25,871 men aged 50 or older and women aged 55 or older.",
+      "gorsel": "a long table of neatly arranged small brown pill bottles in two rows, an open tin of sardines at one end, soft window light",
+      "etiket": "Manson et al. · N Engl J Med · 2019",
+      "baslik": {
+        "satirlar": [
+          "VITAL"
+        ],
+        "vurgu": "25,871",
+        "not": "adults aged 50 and older"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Half took one gram a day of marine omega-3 fats, and half took a placebo. They were followed for a median of 5.3 years, and neither group knew which they were taking.",
+      "gorsel": "two identical glass jars on a shelf, one holding golden capsules and one holding pale capsules, a sardine tin between them and an antique calendar behind",
+      "baslik": {
+        "satirlar": [
+          "1 GRAM A DAY"
+        ],
+        "not": "for a median of 5.3 years"
+      }
+    },
+    {
+      "id": 15,
+      "tip": "grafik",
+      "metin": "In the main result, 386 people in the fish oil group had a heart attack, stroke or heart death, compared with 419 on placebo. Statistically, that gap could be chance.",
+      "grafik": {
+        "baslik": "People with a major heart event",
+        "alt": "Fish oil capsule vs placebo, 1 gram a day",
+        "cubuklar": [
+          {
+            "etiket": "Fish oil",
+            "deger": 386,
+            "metin": "386"
+          },
+          {
+            "etiket": "Placebo",
+            "deger": 419,
+            "metin": "419"
+          }
+        ],
+        "kaynak": "Manson et al., N Engl J Med 2019 · 25,871 US adults, men 50+ and women 55+ · median 5.3 years"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "In plain terms, a result like that means the capsules made little measurable difference to heart events over about five years.",
+      "gorsel": "a balance scale with a small heap of golden capsules on one pan and a tin of sardines on the other, the scale held almost level, calm minimal composition"
+    },
+    {
+      "id": 17,
+      "metin": "One detail did stand out. Heart attacks on their own were about 28 percent lower in the fish oil group. That was a secondary outcome, so it's treated as a clue, not as proof.",
+      "gorsel": "a magnifying glass held over a single golden capsule resting on a tin of sardines, a simple engraved heart in a circular inset",
+      "baslik": {
+        "satirlar": [
+          "HEART ATTACKS",
+          "ALONE"
+        ],
+        "vurgu": "–28%",
+        "not": "a secondary result, treated as a clue"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Strokes and heart deaths were about the same in both groups. The trial also checked cancer and found no difference, and it found no excess bleeding.",
+      "gorsel": "a doctor's desk with a stethoscope, a clipboard with blank sheets, a small dish of capsules and a tin of sardines in the corner"
+    },
+    {
+      "id": 19,
+      "metin": "A second large trial, ASCEND, tested one gram a day in 15,480 adults with diabetes. Over about seven and a half years, serious vascular events happened in 8.9 percent on omega-3 and 9.2 percent on placebo.",
+      "gorsel": "a glucose meter with a blank screen next to a small dish of golden capsules and an open tin of sardines on a cloth-covered table",
+      "etiket": "ASCEND Collaborative Group · N Engl J Med · 2018",
+      "baslik": {
+        "satirlar": [
+          "ASCEND"
+        ],
+        "vurgu": "15,480",
+        "not": "adults with diabetes · 8.9% vs 9.2%"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "So plain fish oil capsules did not clearly prevent heart attacks or strokes in these groups, and the American Heart Association doesn't recommend them to prevent heart disease in the general public. If you don't like fish, I'll come back to you in the practical part.",
+      "gorsel": "a small dish of golden capsules set aside on a wooden table while a plate of grilled salmon and sardines takes the center, a red heart symbol above"
+    },
+    {
+      "id": 21,
+      "metin": "There's a second concern. A 2021 analysis pooled seven trials and 81,210 people. Omega-3 supplements were linked with about 25 percent higher risk of atrial fibrillation, an irregular heart rhythm, and higher doses looked riskier.",
+      "gorsel": "a simple engraved heart with an uneven, jagged pulse line passing across it, a small dish of capsules and a tin of sardines in the corner",
+      "etiket": "Gencer et al. · Circulation · 2021",
+      "baslik": {
+        "satirlar": [
+          "ATRIAL",
+          "FIBRILLATION"
+        ],
+        "vurgu": "+25%",
+        "not": "higher risk with supplements in pooled trials"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "In that analysis, the risk looked larger above one gram a day. If you have an irregular heartbeat or take a blood thinner, ask your doctor or pharmacist before taking fish oil.",
+      "gorsel": "a pharmacy counter with a pharmacist's mortar and pestle, a small pill bottle, a tin of sardines and a notepad with blank lines",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "bolum": "The prescription exception",
+      "tip": "kart",
+      "metin": "But there's a twist. One prescription medicine made from omega-3 did lower heart events.",
+      "kart": {
+        "ust": "THE EXCEPTION",
+        "baslik": "Prescription EPA",
+        "alt": "REDUCE-IT · 2019"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "It's called icosapent ethyl, a purified form of EPA alone, taken at four grams a day. That's four times the dose used in VITAL.",
+      "gorsel": "a single prescription bottle with a blank label on a pharmacy shelf beside four small stacked tins of sardines, drawn like a comparison of quantity",
+      "baslik": {
+        "satirlar": [
+          "4 GRAMS",
+          "A DAY"
+        ],
+        "not": "prescription EPA, four times the VITAL dose"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "The trial, called REDUCE-IT, enrolled 8,179 adults who were already taking statins and had high triglycerides. About 71 percent already had heart disease.",
+      "gorsel": "a clinic waiting room with a row of empty chairs, a clipboard on one chair and a bowl of sardines on a side table, a tall window",
+      "etiket": "Bhatt et al. · N Engl J Med · 2019"
+    },
+    {
+      "id": 26,
+      "tip": "grafik",
+      "metin": "After a median of 4.9 years, 17.2 percent had a major heart event on the prescription EPA, compared with 22.0 percent on placebo. That's a 25 percent lower risk.",
+      "grafik": {
+        "baslik": "Major heart events",
+        "alt": "Prescription EPA 4 g/day vs placebo, percent of patients",
+        "cubuklar": [
+          {
+            "etiket": "Prescription EPA",
+            "deger": 17.2,
+            "metin": "17.2%"
+          },
+          {
+            "etiket": "Placebo",
+            "deger": 22.0,
+            "metin": "22.0%"
+          }
+        ],
+        "kaynak": "Bhatt et al., N Engl J Med 2019 · 8,179 statin-treated adults with high triglycerides · median 4.9 years"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "Heart death was also lower, 4.3 percent against 5.2 percent. But these were people with high triglycerides, so the result may not apply to everyone.",
+      "gorsel": "a quiet laboratory bench with a vial of pale golden oil, a tin of sardines and an open notebook with blank pages, a small simple engraved heart in the corner"
+    },
+    {
+      "id": 28,
+      "metin": "There was a trade-off. Hospital stays for atrial fibrillation were 3.1 percent on the drug and 2.1 percent on placebo. Even the success story comes with a caution.",
+      "gorsel": "a balance scale with a small simple engraved heart on one pan and a pill bottle on the other, a tin of sardines at the base of the scale",
+      "baslik": {
+        "satirlar": [
+          "A TRADE-OFF"
+        ],
+        "not": "AF hospital stays: 3.1% vs 2.1%"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "Triglycerides are a type of fat that circulates in your blood. In the next trial, people were enrolled when their levels were between 180 and 500 milligrams per deciliter.",
+      "gorsel": "a glass test tube rack with small tubes of pale yellow liquid, a tin of sardines and a stack of blank cards on a laboratory bench"
+    },
+    {
+      "id": 30,
+      "metin": "That trial, STRENGTH, tested a different prescription product, with both EPA and DHA, at four grams a day. It enrolled 13,078 statin-treated adults, average age 63, and was stopped early because benefit looked unlikely.",
+      "gorsel": "an open clinical trial folder with blank pages on a desk, a prescription bottle, a tin of sardines and a round wall clock showing a late hour",
+      "etiket": "Nicholls et al. · JAMA · 2020",
+      "baslik": {
+        "satirlar": [
+          "STRENGTH"
+        ],
+        "vurgu": "13,078",
+        "not": "adults, average age 63"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "Major heart events happened in 12.0 percent of the omega-3 group and 12.2 percent of the comparison group. Atrial fibrillation was 2.2 percent against 1.3 percent.",
+      "gorsel": "two small identical stacks of coins of nearly equal height on a table, a tin of sardines behind them and a simple engraved heart beside",
+      "baslik": {
+        "satirlar": [
+          "12.0% VS",
+          "12.2%"
+        ],
+        "not": "major heart events, no clear difference"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Why the two high-dose products gave different results is still debated. Differences in the fats used and in the comparison oil are among the ideas, but nothing is settled.",
+      "gorsel": "two paths in a quiet garden diverging at a stone marker, a small tin of sardines on the stone, soft fine-line shading"
+    },
+    {
+      "id": 33,
+      "metin": "The key point: these are medicines for people with high triglycerides, usually already on statins, and monitored by a doctor. If your doctor prescribed one, keep taking it.",
+      "gorsel": "a doctor's hands holding a prescription pad over a desk, a tin of sardines and a glass of water on the desk",
+      "baslik": {
+        "satirlar": [
+          "A MEDICINE,",
+          "NOT A SNACK"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "bolum": "What whole fish may add",
+      "tip": "kart",
+      "metin": "Which brings us back to the plate. If capsules mostly disappoint, why does fish keep looking good?",
+      "kart": {
+        "ust": "BACK TO THE PLATE",
+        "baslik": "What fish may add",
+        "alt": "Studies of people who eat fish"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "In 2020, Zhang and colleagues pooled 40 studies that followed people for years. Compared with those eating the least fish, those eating the most had about 9 percent lower risk of coronary heart disease, and about 15 percent lower risk of dying from it.",
+      "gorsel": "a long wooden market table with a generous spread of sardines, salmon steaks and herring on ice, a simple engraved heart in a circular inset",
+      "etiket": "Zhang et al. · Nutrients · 2020",
+      "baslik": {
+        "satirlar": [
+          "40 STUDIES"
+        ],
+        "vurgu": "–15%",
+        "not": "coronary heart disease deaths, most fish vs least"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "These were observational studies, so they show a link, not a cause. People who eat fish may also differ in other ways, such as how they exercise or what else they eat, though researchers try to adjust for that.",
+      "gorsel": "a kitchen table with a plate of sardines on toast, a pair of walking shoes by the door and a bowl of vegetables, quiet daylight through a window"
+    },
+    {
+      "id": 37,
+      "metin": "The pooled estimate suggested about 4 percent lower risk for every extra 20 grams of fish a day. That's a little under an ounce, so the effect appears to build gradually.",
+      "gorsel": "a kitchen scale with a small portion of sardines on the plate, a measuring spoon and a small salmon flake beside it",
+      "baslik": {
+        "satirlar": [
+          "20 GRAMS",
+          "MORE FISH"
+        ],
+        "not": "about 4% lower risk per extra 20 g a day"
+      }
+    },
+    {
+      "id": 38,
+      "metin": "The American Heart Association advisory adds that the benefit is greatest when seafood replaces less healthy foods. So what fish replaces on your plate may be part of the story.",
+      "gorsel": "a dinner plate with grilled sardines and vegetables in front, and behind it a faded plate with fried food pushed aside to the edge of the table",
+      "baslik": {
+        "satirlar": [
+          "A SWAP,",
+          "NOT AN ADD-ON"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "A 2023 analysis of the VITAL cohort adds some caution. Among 25,435 people, those eating at least one and a half servings of fish a week did not clearly have fewer heart events, though the authors said a benefit couldn't be ruled out.",
+      "gorsel": "a researcher's desk with stacked journals with blank covers, a magnifying glass and a small tin of sardines",
+      "etiket": "Caldeira et al. · Eur J Clin Nutr · 2023",
+      "baslik": {
+        "satirlar": [
+          "THE HONEST",
+          "PART"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "metin": "So here's an honest summary. Eating fish is linked with lower heart risk in most large studies, but longer dietary trials are still needed to show that fish itself prevents heart attacks.",
+      "gorsel": "a plate of sardines and salmon on a table beside a stack of research journals with blank covers, a quiet window and an open notebook"
+    },
+    {
+      "id": 41,
+      "metin": "And the two kinds of evidence aren't necessarily in conflict. A capsule delivers a fixed dose of a few fats in a trial. Fish is a food, eaten for years, and it often takes the place of other foods.",
+      "gorsel": "on the left, a dish of golden capsules, on the right a family dinner table with a platter of sardines and salmon and bowls of vegetables, a divider drawn as a thin dashed line"
+    },
+    {
+      "id": 42,
+      "bolum": "Mercury and the can",
+      "tip": "kart",
+      "metin": "What about mercury? It's a common reason people avoid fish.",
+      "kart": {
+        "ust": "THE MERCURY QUESTION",
+        "baslik": "Sardines and salmon",
+        "alt": "How the FDA ranks fish"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "The FDA and the EPA sort fish into groups by mercury level. Sardines, salmon, herring, anchovies, trout and canned light tuna are all on the Best Choices list, the lower-mercury group.",
+      "gorsel": "a market display of small silver sardines, salmon steaks, herring and anchovies in neat rows on ice, and a few canned tins stacked at the side",
+      "baslik": {
+        "satirlar": [
+          "BEST",
+          "CHOICES"
+        ],
+        "not": "FDA list of lower-mercury fish"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "Canned albacore, or white, tuna is in the Good Choices group, which has more mercury. Swordfish, shark, king mackerel, marlin, orange roughy and bigeye tuna are on the list to avoid.",
+      "gorsel": "a shelf of canned fish with an albacore tuna can in front of a stack of sardines tins, a large swordfish bill drawn at the far end of the shelf, small separation lines between the groups"
+    },
+    {
+      "id": 45,
+      "metin": "The FDA suggests judging a serving by the palm of your hand. For most people, that's an easy way to picture it.",
+      "gorsel": "an open palm held above a plate with a portion of sardines and a salmon fillet of about the same size, a soft plain background"
+    },
+    {
+      "id": 46,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you put this to use? Here are five practical ways.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "A fish week",
+        "alt": "Five practical ways"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "One. Aim for two servings of fish a week, about three and a half ounces each. Choose oily fish when you can: salmon, sardines, herring, trout or Atlantic mackerel.",
+      "gorsel": "a weekly plate lineup: a baked salmon fillet, a pile of sardines on toast, a herring fillet and a small trout on a long wooden board",
+      "baslik": {
+        "satirlar": [
+          "TWO",
+          "SERVINGS"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "Two. A can counts. Canned salmon and canned sardines keep well in the pantry. Check the label for sodium, especially if you're watching blood pressure.",
+      "gorsel": "a pantry shelf with a row of unopened tins of sardines and canned salmon, an open tin on a counter with a fork beside it",
+      "baslik": {
+        "satirlar": [
+          "A CAN",
+          "COUNTS"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Three. Keep it unfried. The advisory counts non-fried fish, and in two US studies of more than 90,000 people, eating fried fish at least once a week was linked with up to 48 percent higher risk of heart failure.",
+      "gorsel": "a baking tray with a salmon fillet and a few whole sardines with lemon slices, set beside an empty deep frying pan pushed to the back of the stove",
+      "etiket": "American Heart Association · 2018",
+      "baslik": {
+        "satirlar": [
+          "BAKE, BROIL,",
+          "DON'T FRY"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "metin": "Four. Make fish a swap. Put it where a deli meat sandwich or a fatty cut of beef might have gone, rather than simply adding it on top.",
+      "gorsel": "a lunch plate with sardines mashed on whole-grain toast and a green salad, beside it a pushed-aside plate with a deli meat sandwich"
+    },
+    {
+      "id": 51,
+      "metin": "Five. If you don't eat fish, the big trials suggest an over-the-counter capsule shouldn't be counted on to protect your heart. Ask your doctor what makes sense for you.",
+      "gorsel": "a small dish of golden capsules next to a plate of sardines and a notepad with blank lines, a pen resting across the notepad",
+      "baslik": {
+        "satirlar": [
+          "NO FISH?",
+          "ASK YOUR DOCTOR"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "If the strong taste puts you off, start with salmon, which is milder. Or try mashing sardines on whole-grain toast with a squeeze of lemon.",
+      "gorsel": "slices of whole-grain toast topped with mashed sardines and lemon slices on a wooden board, a small salmon fillet on the side"
+    },
+    {
+      "id": 53,
+      "metin": "One safety note. Fish oil can interact with other medicines and conditions. Talk to your doctor or pharmacist if you take blood thinners, have an irregular heartbeat or high triglycerides, and never stop a prescribed medicine on your own.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, a pill organizer and a tin of sardines at the edge",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "If you have a fish allergy, skip fish entirely and ask your doctor about other options.",
+      "gorsel": "a closed tin of sardines pushed to the edge of a kitchen counter, a doctor's notepad with blank lines and a cup of tea beside it"
+    },
+    {
+      "id": 55,
+      "metin": "A simple week might be canned salmon over a salad at lunch on Tuesday, and a baked fillet or a sardine toast on Friday. Two servings, no special equipment.",
+      "gorsel": "a kitchen calendar drawn as a wooden board with a plate of salmon salad on one square and a baked fillet and sardine toast on another, a pencil beside it",
+      "baslik": {
+        "satirlar": [
+          "TUESDAY",
+          "AND FRIDAY"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Food first, pills second",
+        "alt": "What the trials show"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "In large trials of older adults and adults with diabetes, plain fish oil capsules did not clearly cut heart attacks or strokes, and supplements were linked with more atrial fibrillation.",
+      "gorsel": "a small dish of golden capsules beside an open tin of sardines on a wooden table, a simple engraved heart above them"
+    },
+    {
+      "id": 58,
+      "metin": "A high-dose prescription EPA lowered heart events in people with high triglycerides, but it's a medicine for a specific group, not a supplement for everyone.",
+      "gorsel": "a prescription bottle with a blank label next to a bowl of sardines on a pharmacy counter, a stethoscope curled beside them"
+    },
+    {
+      "id": 59,
+      "metin": "Eating fish is linked with lower heart risk, and the American Heart Association suggests two servings a week. Sardines, salmon and canned light tuna are lower-mercury choices.",
+      "gorsel": "a plate with a baked salmon fillet and sardines on toast, a small canned light tuna tin beside, a simple engraved heart above"
+    },
+    {
+      "id": 60,
+      "metin": "Two servings a week, baked or canned, not fried. A small habit you can start this week.",
+      "gorsel": "a wooden kitchen table with an open tin of sardines, a lemon half, a fork and a plate of whole-grain toast in warm morning light",
+      "baslik": {
+        "satirlar": [
+          "TWO A WEEK"
+        ]
+      }
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

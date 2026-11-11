@@ -9,6 +9,12 @@ on:
 permissions:
   contents: read
 
+# shell açıkça "bash" olunca GitHub -eo pipefail ile çalıştırır: "komut | tail" gibi borularda
+# ilk komutun hatası gizlenmez (yoksa proje_kontrol.py başarısız olsa da CI yeşil görünür).
+defaults:
+  run:
+    shell: bash
+
 jobs:
   kontrol:
     runs-on: ubuntu-24.04
@@ -47,7 +53,9 @@ jobs:
             python3 uzun_en/araclar/proje_kontrol.py --proje "$(basename "$(dirname "$p")")" | tail -1
           done
       - name: Plan (takvim kararı, yazmadan)
-        run: python3 uzun_en/araclar/plan.py --goster | tail -3
+        run: |
+          python3 -m unittest discover -s uzun_en/araclar -p "test_*.py" -v
+          python3 uzun_en/araclar/plan.py --goster | tail -3
       - name: Remotion tip denetimi (her projenin sahneleri)
         run: |
           python3 - <<'PY'

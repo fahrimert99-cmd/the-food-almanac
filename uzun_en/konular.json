@@ -66,7 +66,7 @@
         "beta glucan cholesterol",
         "overnight oats benefits"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
       "slug": "coffee-and-hydration",
@@ -77,7 +77,7 @@
         "coffee count as water intake",
         "caffeine diuretic myth"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
       "slug": "fermented-foods-gut",
@@ -89,7 +89,7 @@
         "fermented foods microbiome",
         "kefir benefits"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
       "slug": "apple-cider-vinegar-blood-sugar",
@@ -100,7 +100,7 @@
         "vinegar before meals",
         "acv glucose spike"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
       "slug": "beet-juice-blood-pressure",
@@ -112,163 +112,513 @@
         "beet juice benefits",
         "nitric oxide foods"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
-      "slug": "cooling-rice-resistant-starch",
-      "soru": "Does cooling rice or potatoes really change the carbs?",
-      "aci": "Starch retrogradation and resistant starch; the cooled-and-reheated rice study, how big the change in glucose response really is, potatoes and pasta, food safety of leftover rice, and why it is a small tweak, not a hack.",
+      "slug": "turmeric-knee-arthritis",
+      "soru": "Does turmeric really help knee arthritis pain?",
+      "aci": "Curcumin trials in knee osteoarthritis compared with placebo and with ibuprofen, why absorption is the catch, the meta-analyses and their limits, and safety with blood thinners and gallbladder problems. Most viewers are over 55 and many live with joint pain.",
       "anahtar": [
-        "cooled rice resistant starch",
-        "reheated rice blood sugar",
-        "cold potatoes resistant starch"
+        "turmeric for knee pain",
+        "curcumin osteoarthritis",
+        "does turmeric help arthritis",
+        "turmeric joint pain after 60"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
+    },
+    {
+      "slug": "grapefruit-medications",
+      "soru": "Why can grapefruit interfere with common medications after 60?",
+      "aci": "How grapefruit furanocoumarins block the CYP3A4 enzyme in the small intestine, which widely prescribed US drugs are affected (certain statins like atorvastatin and simvastatin, blood pressure calcium-channel blockers, heart-rhythm drugs) according to the FDA, why separating the dose by a few hours does not fix it, and which citrus fruits are safe alternatives (Valencia oranges, lemons). Practical: check with your pharmacist and never stop a medicine on your own.",
+      "anahtar": [
+        "grapefruit and medication",
+        "grapefruit statin interaction",
+        "grapefruit blood pressure medication",
+        "why can't you eat grapefruit with medicine"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "b12-after-60",
+      "soru": "Why is vitamin B12 deficiency so common after 60?",
+      "aci": "Age-related drop in stomach acid (atrophic gastritis) that prevents releasing B12 from food, common US prescriptions (metformin, proton-pump inhibitors and H2 blockers) that lower B12 over time, why crystalline B12 in fortified foods or supplements still absorbs well, subtle signs often mistaken for normal aging (fatigue, tingling in hands or feet, memory slips), and when to ask your doctor for a blood test.",
+      "anahtar": [
+        "b12 deficiency older adults",
+        "metformin and b12",
+        "vitamin b12 after 60",
+        "signs of low b12 after 60"
+      ],
+      "durum": "yayinda"
     },
     {
       "slug": "olive-oil-heart",
       "soru": "What does extra virgin olive oil really do to your heart?",
-      "aci": "The PREDIMED trial and its 2018 republication, polyphenols in extra virgin vs refined oil, large cohort studies on olive oil and mortality, whether cooking with olive oil is safe, and how much people in the trials used.",
+      "aci": "The PREDIMED trial (adults aged 55 to 80) and its 2018 republication, US nurse and health-professional cohort studies on ½ tablespoon a day, polyphenols in extra virgin vs regular refined olive oil on American supermarket shelves, whether cooking with extra virgin olive oil is safe, and how much people in the trials actually used.",
       "anahtar": [
         "olive oil heart health",
         "extra virgin olive oil benefits",
         "cooking with olive oil",
-        "olive oil a day"
+        "olive oil a day after 60"
       ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "multivitamins-evidence",
-      "soru": "Do multivitamins actually do anything for healthy people?",
-      "aci": "Large randomized trials (Physicians' Health Study II, COSMOS), the 2022 US Preventive Services Task Force review, who may genuinely need a supplement (pregnancy and folic acid, vitamin B12 in older adults and vegans, vitamin D), and food first.",
-      "anahtar": [
-        "do multivitamins work",
-        "are multivitamins worth it",
-        "multivitamin study"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "walnuts-heart",
-      "soru": "What do walnuts really do to your heart?",
-      "aci": "Meta-analyses of walnut trials on LDL cholesterol, the two-year Walnuts and Healthy Aging trial in adults aged 63 to 79, plant omega-3 (ALA), what the evidence does and doesn't say about the brain, and calories per handful.",
-      "anahtar": [
-        "walnuts cholesterol",
-        "walnuts heart health",
-        "walnuts benefits",
-        "walnuts brain"
-      ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
       "slug": "how-much-protein",
-      "soru": "How much protein do you actually need?",
-      "aci": "The RDA of 0.8 grams per kilogram and where it comes from, higher needs in older adults and people doing strength training, the meta-analysis on protein and muscle gains, spreading protein across meals, and when to be careful (kidney disease).",
+      "soru": "How much protein do you actually need after 60?",
+      "aci": "The standard US RDA of 0.8 grams per kilogram and why geriatric nutrition groups (PROT-AGE) recommend 1.0 to 1.2 grams per kilogram after 60 to counter anabolic resistance and muscle loss (sarcopenia), trials combining protein with resistance exercise, why spreading 25 to 30 grams across breakfast, lunch and dinner beats one big dinner, and the kidney-disease exception.",
       "anahtar": [
-        "how much protein per day",
-        "protein requirements",
-        "too much protein"
+        "how much protein after 60",
+        "protein for older adults",
+        "prevent muscle loss after 60",
+        "protein per meal seniors"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
+    },
+    {
+      "slug": "walnuts-heart",
+      "soru": "What do walnuts really do to your heart and cholesterol?",
+      "aci": "Meta-analyses of walnut trials on LDL cholesterol and apolipoprotein B, the two-year Walnuts and Healthy Aging (WAHA) randomized trial in adults aged 63 to 79, plant omega-3 (ALA), what the WAHA trial found for cognition and high-risk subgroups, and portion size in ounces and handfuls.",
+      "anahtar": [
+        "walnuts cholesterol",
+        "walnuts heart health after 60",
+        "walnuts benefits seniors",
+        "walnuts brain aging"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "calcium-vitamin-d-fractures",
+      "soru": "Do calcium and vitamin D supplements prevent fractures after 60?",
+      "aci": "What large US trials (VITAL, Women's Health Initiative) and the US Preventive Services Task Force found for community-dwelling older adults versus those in care homes or with low levels, why getting calcium from food (dairy, fortified foods, canned salmon with bones) differs from high-dose pills, kidney stone and arterial calcification questions, and when doctors do prescribe them (osteoporosis, osteopenia).",
+      "anahtar": [
+        "vitamin d and calcium fractures",
+        "calcium supplements after 60",
+        "vitamin d bone health older adults",
+        "do calcium supplements work"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "leafy-greens-warfarin",
+      "soru": "Do you have to avoid leafy greens on blood thinners?",
+      "aci": "How vitamin K interacts with warfarin (Coumadin), why AHA and anticoagulation clinics advise a consistent weekly intake of spinach, kale and broccoli rather than avoiding greens altogether, trials showing steadier INR with stable vitamin K intake, and why newer direct oral anticoagulants (apixaban/Eliquis, rivaroxaban/Xarelto) do not have the vitamin K interaction.",
+      "anahtar": [
+        "warfarin and leafy greens",
+        "vitamin k and blood thinners",
+        "foods to avoid on warfarin",
+        "eliquis vs warfarin diet"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "mind-diet-memory",
+      "soru": "Can the MIND diet slow memory decline after 60?",
+      "aci": "The Rush University observational cohorts behind the MIND diet (berries, leafy greens, olive oil, nuts, fish), the 2023 three-year New England Journal of Medicine randomized trial in older adults (aged 65+) that found similar cognitive changes in both groups, why both groups improved, and the food habits with the strongest evidence for aging brains.",
+      "anahtar": [
+        "mind diet memory after 60",
+        "diet and dementia risk",
+        "foods for brain health after 60",
+        "mind diet study nejm"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "prunes-bone-density",
+      "soru": "What do prunes really do to bone loss and digestion after 60?",
+      "aci": "The 12-month Penn State randomized controlled trial in postmenopausal women comparing 50 grams (about 5 to 6 prunes) and 100 grams a day with control on hip bone mineral density and inflammatory markers, how polyphenols and vitamin K affect osteoclasts, clinical trials of prunes versus psyllium for chronic constipation, and blood sugar and sorbitol cautions.",
+      "anahtar": [
+        "prunes bone density",
+        "5 prunes a day bones",
+        "prunes osteoporosis study",
+        "prunes constipation older adults"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "multivitamins-evidence",
+      "soru": "Do daily multivitamins actually do anything after 60?",
+      "aci": "Large US randomized trials in older adults: Physicians' Health Study II (heart disease, cancer, cataracts) and the COSMOS cognitive sub-studies in adults over 60 showing modest memory benefits over 2 to 3 years, the US Preventive Services Task Force review, and which targeted nutrients matter most after 60 (B12, vitamin D) versus mega-dose pills.",
+      "anahtar": [
+        "do multivitamins work after 60",
+        "cosmos multivitamin memory study",
+        "are multivitamins worth it seniors",
+        "daily multivitamin evidence"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "oily-fish-heart",
+      "soru": "What do sardines and salmon do to your heart vs fish-oil pills?",
+      "aci": "Omega-3 EPA and DHA, the American Heart Association's two servings a week, why over-the-counter fish-oil supplement trials (VITAL, STRENGTH, ASCEND) mostly showed little benefit for healthy older adults while eating whole fish consistently links to lower heart risk, prescription high-dose EPA (REDUCE-IT), and why small fish like sardines and canned salmon are low in mercury.",
+      "anahtar": [
+        "sardines heart health",
+        "fish oil pills vs eating fish",
+        "omega 3 after 60",
+        "canned sardines benefits"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "hydration-after-60",
+      "soru": "Why does thirst fade after 60, and how much water do you really need?",
+      "aci": "Clinical evidence that the brain's thirst signal and the kidney's ability to concentrate urine weaken after 60, why older adults can become mildly dehydrated without feeling thirsty, US National Academies fluid guidelines (including water from food, coffee and tea), when fluid restriction applies (heart failure, kidney disease), and timing drinks earlier in the day to reduce waking up at night.",
+      "anahtar": [
+        "hydration after 60",
+        "why older adults feel less thirsty",
+        "how much water after 60",
+        "stop waking up at night to pee"
+      ],
+      "durum": "yayinda"
     },
     {
       "slug": "cinnamon-blood-sugar",
       "soru": "What does cinnamon really do to your blood sugar?",
-      "aci": "Mixed results from meta-analyses of cinnamon in type 2 diabetes and prediabetes, why the trials disagree, cassia vs Ceylon cinnamon and the coumarin liver warning, and why it is not a replacement for medication.",
+      "aci": "Mixed results from meta-analyses of cinnamon in type 2 diabetes and prediabetes (fasting glucose in mg/dL and A1C), why trials disagree, the critical difference between Cassia cinnamon (sold in most US grocery stores, high in liver-toxic coumarin) and Ceylon cinnamon, and why it is never a substitute for diabetes medication.",
       "anahtar": [
         "cinnamon blood sugar",
-        "cinnamon diabetes",
         "ceylon vs cassia cinnamon",
-        "cinnamon benefits"
+        "cinnamon diabetes study",
+        "cinnamon in coffee after 60"
       ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "breakfast-most-important-meal",
-      "soru": "Is breakfast really the most important meal of the day?",
-      "aci": "Where the saying came from, observational studies vs randomized trials, the 2019 BMJ meta-analysis, the Bath Breakfast Project, children and school performance, and why the best pattern depends on the person.",
-      "anahtar": [
-        "is breakfast important",
-        "skipping breakfast",
-        "breakfast most important meal myth"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "oily-fish-heart",
-      "soru": "What do oily fish like sardines really do to your heart?",
-      "aci": "Omega-3 EPA and DHA, the American Heart Association's two servings a week, why fish-oil pill trials such as VITAL, REDUCE-IT and STRENGTH gave mixed results, whole fish vs supplements, and mercury in small vs large fish.",
-      "anahtar": [
-        "sardines heart health",
-        "omega 3 fish heart",
-        "fish oil vs eating fish",
-        "sardines benefits"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "eight-glasses-of-water",
-      "soru": "Do you really need eight glasses of water a day?",
-      "aci": "The origin of the eight glasses idea, official adequate intakes (EFSA, US National Academies), water from food and other drinks, the 2022 study measuring water turnover in thousands of people, and when people need more.",
-      "anahtar": [
-        "8 glasses of water a day myth",
-        "how much water should I drink",
-        "daily water intake"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "dark-chocolate-heart",
-      "soru": "Is dark chocolate actually good for your heart?",
-      "aci": "Cocoa flavanols vs chocolate bars, blood pressure trials, the COSMOS cocoa extract trial, how much flavanol is in real chocolate and how processing removes it, sugar and calories, and an honest verdict.",
-      "anahtar": [
-        "is dark chocolate healthy",
-        "dark chocolate heart health",
-        "cocoa flavanols"
-      ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
       "slug": "cooking-and-vegetable-nutrients",
-      "soru": "Does cooking destroy the nutrients in vegetables?",
-      "aci": "Water-soluble vitamins lost in boiling water, steaming and microwaving compared, nutrients that become more available with cooking (lycopene in tomatoes, beta-carotene in carrots), and simple ways to keep more of them.",
+      "soru": "Does boiling or microwaving destroy the nutrients in vegetables?",
+      "aci": "Water-soluble vitamins (vitamin C, folate, B vitamins) leached into boiling water versus steaming, roasting and microwaving, which vegetables actually become more nutritious and easier to absorb when cooked with a little olive oil (lycopene in tomatoes, beta-carotene in carrots, lutein in spinach for aging eyes), and simple kitchen habits.",
       "anahtar": [
         "does cooking destroy nutrients",
         "steaming vs boiling vegetables",
+        "does microwaving vegetables destroy nutrients",
         "raw vs cooked vegetables"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
-      "slug": "spicy-food-metabolism",
-      "soru": "Does spicy food really boost your metabolism?",
-      "aci": "Capsaicin and energy expenditure: what controlled studies and meta-analyses measured, how small the effect is in calories, appetite effects, and why it is not a weight-loss tool.",
+      "slug": "dark-chocolate-heart",
+      "soru": "Is dark chocolate actually good for your heart after 60?",
+      "aci": "Cocoa flavanols versus commercial chocolate bars, blood pressure trials, the large US COSMOS trial of cocoa extract in adults aged 60+ (27% lower cardiovascular death, though total cardiovascular events missed significance), why Dutch-processed/alkalized cocoa loses most flavanols, heavy metals (lead and cadmium) in some dark bars, and how to read a US label.",
       "anahtar": [
-        "spicy food metabolism",
-        "capsaicin calories",
-        "chili pepper metabolism"
+        "is dark chocolate good for your heart",
+        "dark chocolate blood pressure",
+        "cocoa flavanols cosmos study",
+        "dark chocolate after 60"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
-      "slug": "honey-vs-sugar",
-      "soru": "Is honey healthier than sugar?",
-      "aci": "What honey is made of compared with table sugar, glycemic index, the tiny amounts of antioxidants and what doses studies used, honey for coughs in children (and never for babies under one), and the free sugars guideline.",
+      "slug": "cooling-rice-resistant-starch",
+      "soru": "Does cooling rice or potatoes really lower the blood sugar spike?",
+      "aci": "Starch retrogradation and type 3 resistant starch: clinical crossover trials comparing freshly cooked white rice, potatoes and pasta with cooled-and-reheated versions on post-meal blood glucose (mg/dL), how modest the real-world difference is, safe refrigeration rules (Bacillus cereus), and portion size.",
       "anahtar": [
-        "is honey healthier than sugar",
-        "honey vs sugar blood sugar",
-        "honey glycemic index"
+        "cooled rice resistant starch",
+        "reheated rice blood sugar",
+        "cold potatoes blood sugar",
+        "resistant starch diabetes"
       ],
-      "durum": "bekliyor"
+      "durum": "yayinda"
     },
     {
       "slug": "sourdough-blood-sugar",
-      "soru": "Is sourdough bread better for your blood sugar?",
-      "aci": "Fermentation, organic acids and the glycemic response; what the small crossover studies show compared with white and whole grain bread, why the flour matters more than the method, and how to read labels for real sourdough.",
+      "soru": "Is sourdough bread really better for your blood sugar?",
+      "aci": "How slow lactic-acid fermentation lowers the glycemic response compared with standard yeast bread, crossover trials measuring post-meal glucose and insulin in adults, why whole-grain flour still matters, and how to spot genuine slow-fermented sourdough versus commercial bread with added vinegar or 'sour' flavoring on US grocery shelves.",
       "anahtar": [
         "sourdough blood sugar",
-        "is sourdough healthier",
-        "sourdough glycemic index"
+        "is sourdough better for diabetics",
+        "sourdough glycemic index",
+        "real sourdough grocery store"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "breakfast-most-important-meal",
+      "soru": "Does skipping breakfast hurt your blood sugar or muscles after 60?",
+      "aci": "Where the 'most important meal' slogan came from, randomized trials on weight and metabolism, why skipping breakfast before a high-carb lunch exaggerates the afternoon blood sugar spike in people with prediabetes or type 2 diabetes (the second-meal phenomenon), morning protein for preserving muscle after 60, and timing morning medications.",
+      "anahtar": [
+        "skipping breakfast after 60",
+        "breakfast and blood sugar",
+        "protein at breakfast seniors",
+        "is breakfast the most important meal"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "honey-vs-sugar",
+      "soru": "Is raw honey really better for your blood sugar than table sugar?",
+      "aci": "What honey is made of (fructose and glucose) compared with sucrose, clinical trials and the 2022 Toronto meta-analysis on raw, single-floral honey and fasting glucose/cholesterol, why a tablespoon of honey still has 64 calories and 17 grams of sugar, commercial pasteurized honey vs raw honey, and AHA added-sugar limits.",
+      "anahtar": [
+        "is honey better than sugar for blood sugar",
+        "raw honey vs sugar diabetes",
+        "honey glycemic index",
+        "raw honey cholesterol study"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "washing-raw-chicken",
+      "soru": "Should you wash raw chicken before cooking it?",
+      "aci": "Washing raw poultry: USDA kitchen studies showing rinsing splashes bacteria such as Salmonella and Campylobacter onto sinks and nearby food, why cooking to 165°F is what makes chicken safe, why food poisoning hits harder after 60, and what to do instead (pat dry, clean the sink, separate boards).",
+      "anahtar": [
+        "should you wash raw chicken",
+        "washing chicken before cooking",
+        "is it safe to rinse chicken"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "beans-blood-sugar",
+      "soru": "Do beans and lentils really help control blood sugar?",
+      "aci": "Legumes and glucose: the Jenkins 2012 trial on A1C and blood pressure, meta-analyses of pulses on fasting glucose, the 'second meal effect', and easy ways to add a cup a day without the gas.",
+      "anahtar": [
+        "beans blood sugar",
+        "lentils diabetes",
+        "legumes A1C"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "artificial-sweeteners-blood-sugar",
+      "soru": "Do artificial sweeteners raise your blood sugar?",
+      "aci": "Diet drinks and sweeteners: trials on sucralose, aspartame and stevia and glucose, the 2023 WHO guidance, the erythritol and blood clotting study, and what the evidence does and does not show for people with diabetes.",
+      "anahtar": [
+        "do artificial sweeteners raise blood sugar",
+        "diet soda blood sugar",
+        "erythritol heart risk",
+        "stevia diabetes"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "coconut-oil-cholesterol",
+      "soru": "Is coconut oil good or bad for your cholesterol?",
+      "aci": "Coconut oil and LDL: the 2020 meta-analysis of 16 trials comparing coconut oil with other oils, saturated fat and the AHA advisory, why the 'MCT' claim does not transfer, and what to cook with instead.",
+      "anahtar": [
+        "coconut oil cholesterol",
+        "is coconut oil healthy",
+        "coconut oil LDL"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "ultra-processed-foods",
+      "soru": "Are ultra-processed foods really that bad for you?",
+      "aci": "Ultra-processed foods: what the NOVA label means, the NIH 2019 inpatient trial (about 500 extra calories a day), large cohort links with heart disease and diabetes, why some processed foods are fine, and how to read a package.",
+      "anahtar": [
+        "ultra processed foods",
+        "what are ultra processed foods",
+        "ultra processed food health risks"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "bananas-potassium-blood-pressure",
+      "soru": "Can bananas and potassium really lower blood pressure?",
+      "aci": "Potassium and blood pressure: meta-analyses of potassium intake, the DASH pattern, the sodium-to-potassium balance, how much a banana actually gives you, and the important caution for kidney disease and some blood pressure pills.",
+      "anahtar": [
+        "potassium blood pressure",
+        "bananas blood pressure",
+        "foods high in potassium for blood pressure"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "red-wine-heart",
+      "soru": "Is a glass of red wine really good for your heart?",
+      "aci": "Red wine and the heart: where the 'French paradox' came from, why the old J-curve studies are now doubted (the 'sick quitter' problem), the 2023 JAMA meta-analysis, resveratrol doses, and what heart guidelines now say about alcohol after 60.",
+      "anahtar": [
+        "is red wine good for your heart",
+        "red wine heart health",
+        "moderate drinking heart"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "pickle-juice-leg-cramps",
+      "soru": "Does pickle juice really stop nighttime leg cramps?",
+      "aci": "Night leg cramps after 60: the small 2010 trial on pickle juice and cramp duration, the reflex (not electrolyte) explanation, why magnesium did not beat placebo in reviews, stretching evidence, and medicines that can cause cramps.",
+      "anahtar": [
+        "pickle juice leg cramps",
+        "night leg cramps remedy",
+        "magnesium leg cramps"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "hidden-sodium",
+      "soru": "Where does most of the salt you eat really come from?",
+      "aci": "Hidden sodium: the CDC finding that most sodium comes from packaged and restaurant food, not the salt shaker, the top sources (bread, deli meat, soup, pizza), how to read 'low sodium' labels, and trials of cutting salt on blood pressure in older adults.",
+      "anahtar": [
+        "hidden sodium in foods",
+        "where does salt in diet come from",
+        "high sodium foods list"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "foods-for-macular-degeneration",
+      "soru": "Can leafy greens and eggs protect your eyes from macular degeneration?",
+      "aci": "Lutein, zeaxanthin and the macula: the AREDS and AREDS2 trials (who the supplement helps and who it does not), dietary lutein from greens and eggs, why beta-carotene was dropped for smokers, and what an eye-friendly plate looks like.",
+      "anahtar": [
+        "foods for macular degeneration",
+        "lutein eyes",
+        "AREDS2 vitamins",
+        "eggs eye health"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "kidney-stones-oxalate-calcium",
+      "soru": "Should you cut out spinach and dairy if you get kidney stones?",
+      "aci": "Kidney stones and diet: why low-calcium diets backfired in trials, pairing calcium with oxalate-rich foods, fluid and citrus advice from urology guidelines, salt and animal protein, and why the answer depends on the stone type.",
+      "anahtar": [
+        "kidney stones diet",
+        "oxalate foods kidney stones",
+        "calcium kidney stones",
+        "spinach kidney stones"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "green-tea-cholesterol",
+      "soru": "Does green tea really lower cholesterol?",
+      "aci": "Green tea and LDL: meta-analyses of catechin trials (a modest drop), how many cups that takes, green tea extract and the liver safety warnings, the caffeine question, and green tea with blood thinners.",
+      "anahtar": [
+        "green tea cholesterol",
+        "green tea LDL",
+        "green tea benefits heart"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "cranberry-uti",
+      "soru": "Does cranberry juice really prevent urinary tract infections?",
+      "aci": "Cranberry and UTIs: the 2023 Cochrane review of 50 trials (fewer repeat infections in women with recurrent UTIs, children and after procedures, but little help for older adults in care homes), juice vs capsules, the sugar in cocktail juice, and the warfarin caution.",
+      "anahtar": [
+        "cranberry juice uti",
+        "does cranberry prevent uti",
+        "cranberry pills uti"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "food-expiration-dates",
+      "soru": "What do 'best by' and 'use by' dates on food really mean?",
+      "aci": "Date labels: why most US dates are about quality, not safety (only infant formula is federally required), what 'sell by', 'best if used by' and 'use by' mean, which foods really need the date respected (deli meats, soft cheeses, for Listeria risk after 60), and how much good food gets thrown out.",
+      "anahtar": [
+        "best by date meaning",
+        "use by vs best by",
+        "is food safe after expiration date"
+      ],
+      "durum": "yayinda"
+    },
+    {
+      "slug": "soy-breast-cancer",
+      "soru": "Is soy safe, or does it raise breast cancer risk?",
+      "aci": "Soy and breast cancer: where the fear came from (rodent studies on isoflavones), large Asian and US cohort studies linking moderate soy food intake to similar or lower risk and better survival, AICR and ACS guidance, whole soy foods vs isoflavone pills, and soy for hot flashes.",
+      "anahtar": [
+        "is soy safe",
+        "soy breast cancer",
+        "soy and estrogen",
+        "tofu breast cancer survivors"
+      ],
+      "durum": "uretimde"
+    },
+    {
+      "slug": "detox-cleanses",
+      "soru": "Do detox juice cleanses really remove toxins?",
+      "aci": "Detox cleanses: what 'toxins' marketers mean, how the liver and kidneys actually clear waste, the 2015 systematic review finding no good evidence for commercial detox diets, the real risks for older adults (blood sugar swings, potassium and oxalate overload from juice, kidney injury cases), and what helps the liver instead.",
+      "anahtar": [
+        "do detox cleanses work",
+        "juice cleanse benefits",
+        "liver detox myth"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "vitamin-c-colds",
+      "soru": "Does vitamin C or orange juice help prevent or shorten a cold?",
+      "aci": "Vitamin C and colds: the Cochrane review of 29 trials (no fewer colds for most people, slightly shorter colds with regular intake, nothing from starting after symptoms begin), the exception for people under heavy physical stress, food vs supplements, and the kidney stone caution with high doses.",
+      "anahtar": [
+        "vitamin c for colds",
+        "does orange juice help a cold",
+        "vitamin c immune system"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "organic-vs-conventional",
+      "soru": "Is organic food really healthier than conventional?",
+      "aci": "Organic vs conventional: the 2012 Stanford review and later meta-analyses on nutrient differences (small), pesticide residues compared with safety limits, the French NutriNet-Santé cohort and its limits, cost per serving, and the 'Dirty Dozen' list's evidence, so viewers can spend where it matters.",
+      "anahtar": [
+        "is organic food healthier",
+        "organic vs conventional produce",
+        "pesticides on produce"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "ginger-nausea",
+      "soru": "Does ginger really settle an upset stomach?",
+      "aci": "Ginger and nausea: trials and meta-analyses for nausea after surgery, from chemotherapy and motion sickness, typical doses (about 1 gram a day), ginger tea vs capsules vs ginger ale (which usually has little real ginger), and the caution with blood thinners.",
+      "anahtar": [
+        "ginger for nausea",
+        "does ginger help upset stomach",
+        "ginger tea benefits"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "gluten-free-healthier",
+      "soru": "Is a gluten-free diet healthier if you don't have celiac disease?",
+      "aci": "Gluten-free for everyone?: who truly needs it (celiac disease, wheat allergy, non-celiac gluten sensitivity), the Harvard cohort linking low gluten intake to no heart benefit and less whole grain, what gluten-free processed foods often add, and when to get tested before cutting gluten.",
+      "anahtar": [
+        "is gluten free healthier",
+        "gluten free diet without celiac",
+        "should i go gluten free"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "chamomile-sleep",
+      "soru": "Can chamomile tea really help you sleep?",
+      "aci": "Chamomile and sleep: the small trials in older adults and postpartum women (better sleep quality, little change in insomnia severity), the 2019 meta-analysis, apigenin and how it may work, a warm-drink routine effect, and cautions with blood thinners and ragweed allergy.",
+      "anahtar": [
+        "chamomile tea for sleep",
+        "does chamomile help insomnia",
+        "bedtime tea sleep"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "tea-with-meals-iron",
+      "soru": "Does drinking tea or coffee with meals block iron?",
+      "aci": "Tea, coffee and iron: absorption studies showing tannins and polyphenols can cut non-heme iron absorption by more than half, why it matters most for people with low iron or anemia after 60, timing tips (an hour apart), vitamin C as a counterweight, and why most people with normal iron need not worry.",
+      "anahtar": [
+        "tea iron absorption",
+        "coffee with meals iron",
+        "drinking tea with food anemia"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "tomatoes-prostate",
+      "soru": "Do tomatoes and lycopene protect against prostate cancer?",
+      "aci": "Tomatoes and the prostate: the Health Professionals Follow-up Study, meta-analyses of tomato and lycopene intake, why cooked tomato products with a little fat deliver more lycopene, the FDA's 2005 qualified-claim review, and why lycopene pills have not proven the same benefit.",
+      "anahtar": [
+        "tomatoes prostate cancer",
+        "lycopene prostate",
+        "cooked tomatoes lycopene"
+      ],
+      "durum": "bekliyor"
+    },
+    {
+      "slug": "leftovers-safety",
+      "soru": "How long are leftovers really safe to eat?",
+      "aci": "Leftovers: the USDA two-hour rule and 3–4 day fridge guideline, why smell is not a safety test (Listeria and Bacillus cereus don't announce themselves), cooling big pots quickly, reheating to 165°F, freezing to pause the clock, and why food poisoning is riskier after 60.",
+      "anahtar": [
+        "how long are leftovers good for",
+        "leftovers safe to eat",
+        "reheating leftovers safely"
       ],
       "durum": "bekliyor"
     }

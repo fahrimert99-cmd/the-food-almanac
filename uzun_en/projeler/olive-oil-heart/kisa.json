@@ -1,0 +1,20 @@
+{
+  "baslik": ["COOK WITH", "OLIVE OIL?"],
+  "baslik_yt": "Olive Oil and Your Heart: Is Cooking With It OK?",
+  "aciklama": "A Spanish trial of 7,447 older adults linked a Mediterranean diet rich in olive oil to fewer heart events. Here is what the research says, and whether cooking with it is safe.",
+  "parcalar": [
+    {"sahne": 39, "cumleler": [1], "gorsel": 40, "baslik": null, "etiket": null},
+    {"sahne": 15, "cumleler": [0],
+     "baslik": {"satirlar": ["PREDIMED", "TRIAL"], "vurgu": "-31%", "not": "heart events vs comparison"},
+     "etiket": "Estruch et al. · N Engl J Med · 2018"},
+    {"sahne": 16, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 58, "cumleler": [0],
+     "baslik": {"satirlar": ["½ TBSP", "A DAY"], "vurgu": "-18%", "not": "coronary disease, US cohorts"},
+     "etiket": "Guasch-Ferré et al. · JACC · 2020"},
+    {"sahne": 58, "cumleler": [1], "gorsel": 29,
+     "baslik": {"satirlar": ["NOT PROOF"]}, "etiket": null},
+    {"sahne": 40, "cumleler": [0]},
+    {"sahne": 41, "cumleler": [1], "baslik": {"satirlar": ["REUSED OIL?", "AVOID IT"]}, "etiket": null},
+    {"sahne": 59, "cumleler": [1], "baslik": {"satirlar": ["GENTLE HEAT"]}}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "baslik": ["FRESH VEG", "LOSES VIT C?"],
+  "baslik_yt": "Fridge Clock: Fresh Veg Lose Vitamin C Daily",
+  "aciklama": "Fresh vegetables start changing the moment they are picked, and vitamin C is especially fragile. Here is how frozen compares, where it falls short, and how to use both.",
+  "parcalar": [
+    {"sahne": 6, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 6, "cumleler": [1], "gorsel": 28,
+     "baslik": {"satirlar": ["LOSING C,", "DAY BY DAY"], "vurgu": "5 DAYS", "not": "fridge storage, 2017 study"},
+     "etiket": "Li et al. · J Food Compos Anal · 2017"},
+    {"sahne": 7, "cumleler": [0, 1]},
+    {"sahne": 27, "cumleler": [1, 2]},
+    {"sahne": 53, "cumleler": [2], "baslik": null, "etiket": "Bouzari et al. · J Agric Food Chem 2015", "gorsel": 30},
+    {"sahne": 45, "cumleler": [1], "baslik": {"satirlar": ["FROZEN =", "RELIABLE"]}, "etiket": null},
+    {"sahne": 45, "cumleler": [2], "gorsel": 22, "baslik": null, "etiket": null},
+    {"sahne": 47, "cumleler": [1, 2], "baslik": {"satirlar": ["EAT FRESH", "WITHIN DAYS"]}}
+  ]
+}

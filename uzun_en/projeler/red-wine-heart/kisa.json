@@ -1,0 +1,19 @@
+{
+  "baslik": ["RED WINE", "& YOUR HEART?"],
+  "baslik_yt": "Red Wine and Your Heart: The Flaw in the Old Studies",
+  "aciklama": "A 2023 review of 107 studies found no significant drop in the risk of dying for light drinkers. Here is the flaw in the old research, and what the American Heart Association says.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0],
+     "baslik": {"satirlar": ["107 STUDIES"], "vurgu": "4.8M", "not": "people pooled"},
+     "etiket": "Zhao et al. · JAMA Netw Open · 2023"},
+    {"sahne": 2, "cumleler": [1]},
+    {"sahne": 11, "cumleler": [0, 1], "baslik": null},
+    {"sahne": 11, "cumleler": [2]},
+    {"sahne": 13, "cumleler": [1]},
+    {"sahne": 54, "cumleler": [0], "gorsel": 34,
+     "baslik": {"satirlar": ["DON'T DRINK?", "DON'T START"]},
+     "etiket": "AHA Statement · Circulation · 2025"},
+    {"sahne": 54, "cumleler": [1, 2], "baslik": {"satirlar": ["A PLEASURE,", "NOT A PLAN"]}, "etiket": null}
+  ]
+}

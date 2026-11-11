@@ -1,0 +1,18 @@
+{
+  "baslik": ["VITAMIN D", "FOR BONES?"],
+  "baslik_yt": "Vitamin D and Broken Bones: Who Benefits?",
+  "aciklama": "A trial of nearly 26,000 adults found no drop in fractures from vitamin D, yet frail women in care homes seemed to benefit. Here is what separates the two results.",
+  "parcalar": [
+    {"sahne": 13, "cumleler": [1, 2], "gorsel": 12, "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0],
+     "baslik": {"satirlar": ["NO DROP IN", "FRACTURES"], "vurgu": "~26,000", "not": "adults over 50, 5 years"},
+     "etiket": "LeBoff et al. · NEJM · 2022"},
+    {"sahne": 2, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 25, "cumleler": [2],
+     "baslik": {"satirlar": ["CARE HOMES,", "AGE 84"], "vurgu": "-43%", "not": "hip fractures, care homes"},
+     "etiket": "Chapuy et al. · NEJM · 1992"},
+    {"sahne": 31, "cumleler": [1]},
+    {"sahne": 31, "cumleler": [2], "gorsel": 22, "baslik": null, "etiket": null},
+    {"sahne": 33, "cumleler": [0], "baslik": {"satirlar": ["FOOD FIRST"]}, "etiket": null}
+  ]
+}

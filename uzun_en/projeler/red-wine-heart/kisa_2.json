@@ -1,0 +1,15 @@
+{
+  "baslik": ["WINE'S SECRET", "INGREDIENT?"],
+  "baslik_yt": "Resveratrol in Red Wine: Is One Glass Enough?",
+  "aciklama": "Resveratrol is the compound most often credited for red wine's heart benefits. Here is how little a glass actually holds, and what heart experts advise.",
+  "parcalar": [
+    {"sahne": 26, "cumleler": [0], "gorsel": 32, "baslik": null, "etiket": null},
+    {"sahne": 27, "cumleler": [0], "baslik": {"satirlar": ["RESVERATROL"], "vurgu": "≤1 MG", "not": "per glass of red wine"}, "etiket": null},
+    {"sahne": 28, "cumleler": [0], "etiket": null},
+    {"sahne": 28, "cumleler": [1], "baslik": {"satirlar": ["PILL STUDIES:", "150 MG+"]}, "etiket": null},
+    {"sahne": 29, "cumleler": [0, 1], "baslik": {"satirlar": ["500 MG =", "DOZENS LITERS"]}, "etiket": null},
+    {"sahne": 32, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 45, "cumleler": [1], "baslik": {"satirlar": ["DON'T DRINK?", "DON'T START"]}, "etiket": "AHA Statement · Circulation · 2025"},
+    {"sahne": 46, "cumleler": [1]}
+  ]
+}

@@ -1,22 +1,23 @@
 name: Uzun Video EN (The Food Almanac, otonom)
 # Haftada 2 İngilizce uzun video (Salı + Cuma 14:00 UTC = 17:00 TR), tamamen otomatik:
-#   plan -> [konu] -> senaryo + bağımsız doğruluk denetimi -> görseller (NVIDIA) + ses (Piper)
+#   plan -> [konu] -> senaryo + bağımsız doğruluk denetimi -> görseller (NVIDIA) + ses (Kokoro; eski projeler Piper)
 #        -> sahne tasarımı (paralel ajanlar) -> render (Remotion) -> kalite kontrol -> zamanlanmış yükleme
-# Her 3 saatte bir plan.py ne yapılacağına karar verir; çoğu çalıştırma ~20 sn'de "iş yok" der.
+#        -> Shorts (ayrı iş akışı: uzun_en_kisa.yml)
+# Her saat (gece dahil) plan.py ne yapılacağına karar verir; çoğu çalıştırma ~20 sn'de "iş yok" der.
 # Kesilen her aşama (kota, hata) bir sonraki çalıştırmada kaldığı yerden devam eder. Slota az kalırsa
 # tasarlanamayan sahneler otomatik şablonla çizilir; video yine zamanında yayınlanır.
 #
 # KREDİ HARCANMAZ:
 #   Claude -> önce CLAUDE_YEDEK2_TOKEN, sonra CLAUDE_ANA_TOKEN, sonra CLAUDE_CODE_OAUTH_TOKEN — uzun_en/araclar/claude_calistir.sh.
-#             İkisi de OAuth token (claude setup-token, abonelik kotası). API anahtarı (sk-ant-api...) verilse bile kullanılmaz.
+#             Üçü de OAuth token (claude setup-token, abonelik kotası). API anahtarı (sk-ant-api...) verilse bile kullanılmaz.
 #   Gemini -> GEMINI_API_KEY ücretsiz katman (faturalandırma kapalı proje). Claude kotası biterse devralır.
-#   Görsel -> NVIDIA_API_KEY (ücretsiz); NVIDIA çökerse Cloudflare Workers AI FLUX (CLOUDFLARE_ACCOUNT_ID/API_TOKEN, günlük ücretsiz kota). Ses -> Piper (yerel, açık kaynak). Müzik -> kodla üretilir.
+#   Görsel -> NVIDIA_API_KEY (ücretsiz); NVIDIA çökerse Cloudflare Workers AI FLUX (CLOUDFLARE_ACCOUNT_ID/API_TOKEN, kota bitince ikinci hesap CLOUDFLARE_ACCOUNT_ID_2/API_TOKEN_2; günlük ücretsiz kota). Ses -> Kokoro (yerel, açık kaynak; eski projeler Piper). Müzik -> kodla üretilir.
 # Ayarlar (Settings > Variables, isteğe bağlı): UZUN_CLAUDE_MODEL (ör. opus / sonnet; boş = CLI varsayılanı),
 #   UZUN_GEMINI_MODEL, UZUN_SAHNE_GRUP (paralel sahne ajanı sayısı, varsayılan 8).
 # Durdurmak: Actions > bu iş akışı > "..." > Disable workflow.
 on:
   schedule:
-    - cron: "23 */3 * * *"
+    - cron: "23 * * * *"     # saatte bir: NVIDIA düzelince / Cloudflare kotası (03:00 TR) açılınca hemen devam
   push:
     branches: [main]
     paths: [uzun_en/calistir.json]
@@ -31,10 +32,16 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write   # yükleme sonrası Shorts iş akışını başlatmak için (uzun_en_kisa.yml)
 
 concurrency:
   group: uzun-en
   cancel-in-progress: false
+
+# shell açıkça "bash" olunca GitHub -eo pipefail ile çalıştırır: borularda (| tee, | grep) hata gizlenmez.
+defaults:
+  run:
+    shell: bash
 
 env:
   PYTHONDONTWRITEBYTECODE: "1"
@@ -54,6 +61,7 @@ jobs:
       asama_no: ${{ steps.p.outputs.asama_no }}
       slot: ${{ steps.p.outputs.slot }}
       sablon: ${{ steps.p.outputs.sablon }}
+      onde: ${{ steps.p.outputs.onde }}       # slota 72 saatten fazla var: yalnızca Claude, yedek model yok
     steps:
       - uses: actions/checkout@v5
         with:
@@ -91,6 +99,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           bash uzun_en/araclar/kaydet.sh "uzun_en: plan (${{ steps.p.outputs.slug }} / ${{ steps.p.outputs.asama }})" uzun_en/durum.json uzun_en/konular.json uzun_en/projeler uzun_en/calistir.json
+      - name: Uyandırmayı kur (görsel kotası bekleniyor)
+        if: steps.p.outputs.uyandir != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ZAMAN: ${{ steps.p.outputs.uyandir }}
+        run: |
+          # saatlik zamanlayıcı saatlerce atlayabiliyor: hattı bekleme bitince uzun_en_uyandir.yml başlatır
+          gh workflow run uzun_en_uyandir.yml --repo "$GITHUB_REPOSITORY" --ref main -f zaman="$ZAMAN" \
+            || echo "::warning::uyandırma kurulamadı; saatlik zamanlayıcı yakalar"
 
   # ---------------------------------------------------------------------------------------------
   konu:
@@ -145,6 +162,7 @@ jobs:
     timeout-minutes: 240
     env:
       SLUG: ${{ needs.plan.outputs.slug }}
+      ONDE: ${{ needs.plan.outputs.onde }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -156,6 +174,13 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: "22"
+      - name: Tek seferlik senaryo modeli (uzun_en/senaryo_tek.json varsa)
+        run: |
+          # Dosya varsa bu videonun senaryosu ve doğruluk denetimi oradaki modelle yapılır; senaryo onaylanıp
+          # kaydedilince dosya silinir, sonraki videolar yine CMODEL ile yazılır. Model sonuç vermezse CMODEL denenir.
+          M=$(python3 -c "import json;print(json.load(open('uzun_en/senaryo_tek.json')).get('model',''))" 2>/dev/null || true)
+          echo "SMODEL=${M:-$CMODEL}" >> "$GITHUB_ENV"
+          echo "tek seferlik model: ${M:-yok}"
       - name: Ajanlar ve anahtarlar (kredi KULLANILMAZ)
         env:
           OAUTH: ${{ secrets.CLAUDE_YEDEK2_TOKEN || secrets.CLAUDE_ANA_TOKEN || secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -182,11 +207,19 @@ jobs:
           CLAUDE_YEDEK: ${{ secrets.CLAUDE_ANA_TOKEN }}
           CLAUDE_YEDEK2: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
-          bash uzun_en/araclar/claude_calistir.sh -p "Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic (from uzun_en/konular.json): $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json." \
-            ${CMODEL:+--model "$CMODEL"} --max-turns 150 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+          P="Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic (from uzun_en/konular.json): $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json."
+          A=(--max-turns 150 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch")
+          echo "senaryo modeli: ${SMODEL:-varsayılan}"
+          bash uzun_en/araclar/claude_calistir.sh -p "$P" ${SMODEL:+--model "$SMODEL"} "${A[@]}" && exit 0
+          [ -f "uzun_en/projeler/$SLUG/proje.json" ] && exit 1
+          [ "$SMODEL" != "$CMODEL" ] || exit 1
+          echo "::warning::senaryo modeli ($SMODEL) sonuç vermedi; genel modelle yeniden deneniyor"
+          bash uzun_en/araclar/claude_calistir.sh -p "$P" ${CMODEL:+--model "$CMODEL"} "${A[@]}"
       - name: Yapı denetimi (1)
         id: k1
-        run: python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" --yazim | tee /tmp/k1.txt && echo "ok=true" >> "$GITHUB_OUTPUT" || echo "ok=false" >> "$GITHUB_OUTPUT"
+        run: |
+          set -o pipefail    # tee'nin çıkış kodu denetim hatasını gizlemesin (yoksa düzeltme turu hiç çalışmaz)
+          python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" --yazim | tee /tmp/k1.txt && echo "ok=true" >> "$GITHUB_OUTPUT" || echo "ok=false" >> "$GITHUB_OUTPUT"
       - name: "Senaryo: düzeltme turu (Claude)"
         if: steps.k1.outputs.ok != 'true' && env.CLAUDE_OK == 'true' && hashFiles(format('uzun_en/projeler/{0}/proje.json', env.SLUG)) != ''
         continue-on-error: true
@@ -199,7 +232,7 @@ jobs:
           bash uzun_en/araclar/claude_calistir.sh -p "The script uzun_en/projeler/$SLUG/proje.json failed automatic validation (rules: uzun_en/gorev/SENARYO.md). Fix ONLY these problems with minimal edits, keeping all facts sourced: $(grep HATA /tmp/k1.txt)" \
             ${CMODEL:+--model "$CMODEL"} --max-turns 40 --allowedTools "Read,Write,Edit,Glob,Grep"
       - name: "Senaryo: Gemini yedek (Claude yoksa / kota bittiyse)"
-        if: env.GEMINI_OK == 'true'
+        if: env.GEMINI_OK == 'true' && env.ONDE != 'true'
         continue-on-error: true
         timeout-minutes: 90
         env:
@@ -214,6 +247,15 @@ jobs:
             gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/SENARYO.md and do that task now. SLUG: $SLUG. Topic: $(cat /tmp/konu.json). Write uzun_en/projeler/$SLUG/arastirma.md and uzun_en/projeler/$SLUG/proje.json."
           fi
           rm -rf .gemini
+      - name: "Ajan değişikliklerini sınırla (yalnızca uzun_en/projeler/SLUG kalır)"
+        if: always()
+        run: |
+          # Web'den beslenen ajan (prompt injection) araç kodunu (araclar/*.py, kaydet.sh ...) değiştirmiş olabilir;
+          # sonraki adımlar bu kodu GH_TOKEN ile çalıştırır. Proje klasörü dışındaki her değişiklik geri alınır.
+          rm -rf .gemini
+          git ls-files -z -m -d -- . ":(exclude)uzun_en/projeler/$SLUG" | xargs -0 -r git checkout HEAD --
+          git ls-files -z -o --exclude-standard -- . ":(exclude)uzun_en/projeler/$SLUG" | xargs -0 -r rm -f
+          git status --short
       - name: "Doğruluk denetimi: bağımsız editör (Claude, yedek Gemini)"
         id: dogrula
         continue-on-error: true
@@ -230,35 +272,69 @@ jobs:
           D="uzun_en/projeler/$SLUG/dogrulama.json"
           rm -f "$D"
           if [ "$CLAUDE_OK" = true ]; then
-            bash uzun_en/araclar/claude_calistir.sh -p "$P" ${CMODEL:+--model "$CMODEL"} --max-turns 120 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" || true
+            A=(--max-turns 120 --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch")
+            echo "doğrulama modeli: ${SMODEL:-varsayılan}"
+            bash uzun_en/araclar/claude_calistir.sh -p "$P" ${SMODEL:+--model "$SMODEL"} "${A[@]}" || true
+            if [ ! -f "$D" ] && [ "$SMODEL" != "$CMODEL" ]; then
+              echo "::warning::doğrulama modeli ($SMODEL) sonuç vermedi; genel modelle yeniden deneniyor"
+              bash uzun_en/araclar/claude_calistir.sh -p "$P" ${CMODEL:+--model "$CMODEL"} "${A[@]}" || true
+            fi
           fi
-          if [ ! -f "$D" ] && [ "$GEMINI_OK" = true ]; then
+          if [ ! -f "$D" ] && [ "$GEMINI_OK" = true ] && [ "$ONDE" != true ]; then
             mkdir -p .gemini && echo '{"tools":{"exclude":["run_shell_command"]}}' > .gemini/settings.json
             gemini ${GMODEL:+-m "$GMODEL"} -y -p "$P" || true
             rm -rf .gemini
           fi
           [ -f "$D" ] || { echo "::warning::doğruluk denetimi tamamlanamadı (kota?) — bir sonraki çalıştırmada tekrar"; exit 1; }
           cat "$D"
+      - name: "Doğrulama sonrası yapı düzeltmesi (Claude)"
+        if: env.CLAUDE_OK == 'true' && hashFiles(format('uzun_en/projeler/{0}/dogrulama.json', env.SLUG)) != ''
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          CLAUDE_ANA: ${{ secrets.CLAUDE_YEDEK2_TOKEN }}
+          CLAUDE_YEDEK: ${{ secrets.CLAUDE_ANA_TOKEN }}
+          CLAUDE_YEDEK2: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          # Editör onay verip proje.json'da düzeltme yaptıysa (ör. kapak satırı) yapı kuralı bozulmuş olabilir; o zaman
+          # yalnızca bu hatalar en küçük düzenlemeyle giderilir. Yoksa doğrulanmış senaryo kaydedilmeden atılıyor ve
+          # sonraki çalıştırma her şeyi baştan yazıyordu (30 Ekim, kalsiyum).
+          D="uzun_en/projeler/$SLUG/dogrulama.json"
+          SONUC=$(D="$D" python3 -c "import json,os;print(json.load(open(os.environ['D'])).get('sonuc',''))" 2>/dev/null || echo "")
+          [ "$SONUC" = "onay" ] || exit 0
+          python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" > /tmp/k3.txt && { echo "yapı geçerli"; exit 0; }
+          grep -E "HATA|UYARI" /tmp/k3.txt || true
+          bash uzun_en/araclar/claude_calistir.sh -p "The fact-checked script uzun_en/projeler/$SLUG/proje.json now fails automatic validation (rules: uzun_en/gorev/SENARYO.md). Fix ONLY these problems with minimal edits. Do not change any facts, numbers, quotes or sources: $(grep HATA /tmp/k3.txt)" \
+            ${CMODEL:+--model "$CMODEL"} --max-turns 30 --allowedTools "Read,Write,Edit,Glob,Grep"
+      - name: "Ajan değişikliklerini sınırla (doğrulama ajanından sonra)"
+        if: always()
+        run: |
+          rm -rf .gemini
+          git ls-files -z -m -d -- . ":(exclude)uzun_en/projeler/$SLUG" | xargs -0 -r git checkout HEAD --
+          git ls-files -z -o --exclude-standard -- . ":(exclude)uzun_en/projeler/$SLUG" | xargs -0 -r rm -f
+          git status --short
       - name: Karar ve kayıt
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           D="uzun_en/projeler/$SLUG/dogrulama.json"
-          SONUC=$(python3 -c "import json;print(json.load(open('$D')).get('sonuc',''))" 2>/dev/null || echo "")
+          SONUC=$(D="$D" python3 -c "import json,os;print(json.load(open(os.environ['D'])).get('sonuc',''))" 2>/dev/null || echo "")
           if [ "$SONUC" = "red" ]; then
-            python3 -c "import sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle('$SLUG','reddedildi')"
+            python3 -c "import os,sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle(os.environ['SLUG'],'reddedildi')"
             python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" iptal
             python3 - <<'PY'
           import json, os
           p = "uzun_en/durum.json"; d = json.load(open(p)); d["videolar"][os.environ["SLUG"]]["slot"] = None
           json.dump(d, open(p, "w"), ensure_ascii=False, indent=2)
           PY
-            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG doğruluk denetiminde reddedildi (konu değişecek)" uzun_en
-          elif [ "$SONUC" = "onay" ] && python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" >/dev/null; then
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG doğruluk denetiminde reddedildi (konu değişecek)" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG"
+          elif [ "$SONUC" = "onay" ] && python3 uzun_en/araclar/proje_kontrol.py --proje "$SLUG" > /tmp/k4.txt; then
             python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" varlik
-            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG senaryosu yazıldı ve doğrulandı" uzun_en
+            rm -f uzun_en/senaryo_tek.json   # tek seferlik model ayarı kullanıldı
+            bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG senaryosu yazıldı ve doğrulandı" uzun_en/durum.json uzun_en/konular.json "uzun_en/projeler/$SLUG" uzun_en/senaryo_tek.json
           else
+            [ -f /tmp/k4.txt ] && grep -E "HATA" /tmp/k4.txt | sed 's/^/::warning title=Senaryo yapısı::/' || true
             echo "Senaryo aşaması tamamlanmadı; bir sonraki çalıştırma yeniden dener."
             exit 1
           fi
@@ -277,7 +353,7 @@ jobs:
           ref: main
       - name: Aşama hâlâ 'varlik' mı?
         run: |
-          A=$(python3 -c "import json;print(json.load(open('uzun_en/durum.json'))['videolar'].get('$SLUG',{}).get('asama',''))")
+          A=$(python3 -c "import json,os;print(json.load(open('uzun_en/durum.json'))['videolar'].get(os.environ['SLUG'],{}).get('asama',''))")
           echo "aşama: $A"; [ "$A" = "varlik" ] || { echo "DEVAM=false" >> "$GITHUB_ENV"; exit 0; }
           echo "DEVAM=true" >> "$GITHUB_ENV"
       - uses: actions/setup-python@v6
@@ -287,11 +363,13 @@ jobs:
       - name: Bağımlılıklar
         if: env.DEVAM == 'true'
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng >/dev/null
+          bash uzun_en/araclar/apt_kur.sh ffmpeg espeak-ng
           pip install -q -r requirements.txt numpy piper-tts
           # Kokoro (torch CPU) yalnızca bu projenin ses motoruysa kurulur
           if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
-            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
+            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile "preshed<3.0.14"  # preshed 3.0.14 spaCy modelini bozuyor (OverflowError, 25 Eki 2026)
+            # Kokoro (misaki) spaCy modelini çalışırken GitHub'dan indirir; GitHub 504 verirse (8 Kasım 2026) hat durmasın diye önceden, yeniden deneyerek ve Hugging Face yedeğiyle
+            for i in 1 2 3 4 5; do pip install -q "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" && break; pip install -q "https://huggingface.co/spacy/en_core_web_sm/resolve/main/en_core_web_sm-any-py3-none-any.whl" && break; echo "spaCy modeli indirilemedi (GitHub ve Hugging Face), $((i * 20)) sn sonra tekrar"; sleep $((i * 20)); done
           fi
       - uses: actions/cache@v4
         if: env.DEVAM == 'true'
@@ -307,15 +385,30 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID_2: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_2 }}
+          CLOUDFLARE_API_TOKEN_2: ${{ secrets.CLOUDFLARE_API_TOKEN_2 }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GORSEL_DURUM: /tmp/gorsel_durum.json
         run: |
           python3 uzun_en/araclar/varlik.py indir --proje "$SLUG"
+          # Slota zaman varsa zayıf yedek (Pollinations) üretilmez: kalite kapısı onu zaten kabul etmez, bir saat sürüyordu
+          if python3 uzun_en/araclar/plan.py --gorsel-bekle "$SLUG" >/dev/null; then export UZUN_GORSEL_SIRA=nvidia,cloudflare,gemini; fi
           python3 uzun_en/araclar/gorsel.py --proje "$SLUG" || echo "::warning::bazı görseller üretilemedi (bir önceki sahnenin görseli kullanılır; sahne ajanı yeniden dener)"
           python3 uzun_en/araclar/ses.py --proje "$SLUG"
           python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG"
           # Kalite kapısı: görsellerin çoğu NVIDIA'dan gelmediyse (geçici NVIDIA arızası) ve slota zaman varsa aşama
-          # ilerlemez; bir sonraki çalıştırma (3 saat sonra) yalnızca zayıf görselleri yeniden dener.
+          # ilerlemez; bir sonraki çalıştırma (1 saat sonra) yalnızca zayıf görselleri yeniden dener.
           if ! python3 uzun_en/araclar/gorsel.py --proje "$SLUG" --kalite && python3 uzun_en/araclar/plan.py --gorsel-bekle "$SLUG"; then
+            # NVIDIA hata veriyor ve Cloudflare günlük kotası bittiyse kota yenilenene kadar (en geç 3 saat) ertelenir;
+            # hazır görseller ve ses sürümde, sonraki çalıştırma kaldığı yerden devam eder.
+            if python3 -c "import json,sys;sys.exit(0 if json.load(open('/tmp/gorsel_durum.json')).get('kota_bitti') else 1)" 2>/dev/null; then
+              python3 uzun_en/araclar/plan.py --gorsel-ertele "$SLUG"
+              Z=$(python3 -c "import json,os;print(json.load(open('uzun_en/durum.json'))['videolar'][os.environ['SLUG']]['gorsel_bekle'])")
+              bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG görsel kotası bitti, kaldığı yerden devam edecek" uzun_en/durum.json
+              # saatlik zamanlayıcı saatlerce atlayabiliyor: hattı ertelenen zamanda uzun_en_uyandir.yml başlatır
+              gh workflow run uzun_en_uyandir.yml --repo "$GITHUB_REPOSITORY" --ref main -f zaman="$Z" \
+                || echo "::warning::uyandırma kurulamadı; saatlik zamanlayıcı yakalar"
+            fi
             echo "::warning::görsellerin çoğu yedek kaynaktan geldi (NVIDIA arızası?) — sahne aşamasına geçilmedi, sonraki çalıştırmada yeniden denenecek"
             exit 0
           fi
@@ -362,6 +455,7 @@ jobs:
         grup: ${{ fromJSON(needs.gruplar.outputs.matris) }}
     env:
       SLUG: ${{ needs.plan.outputs.slug }}
+      ONDE: ${{ needs.plan.outputs.onde }}
       SAHNELER: ${{ matrix.grup.sahneler }}
       GRUP: ${{ matrix.grup.no }}
     steps:
@@ -379,7 +473,7 @@ jobs:
           cache-dependency-path: uzun_en/remotion/package-lock.json
       - name: Bağımlılıklar
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter >/dev/null
+          bash uzun_en/araclar/apt_kur.sh ffmpeg fonts-inter
           pip install -q -r requirements.txt numpy
           cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Ajanlar (kredi KULLANILMAZ)
@@ -408,6 +502,8 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID_2: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_2 }}
+          CLOUDFLARE_API_TOKEN_2: ${{ secrets.CLOUDFLARE_API_TOKEN_2 }}
         run: |
           bash uzun_en/araclar/claude_calistir.sh -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: $SAHNELER. Your group number (for the report file name): $GRUP." \
             ${CMODEL:+--model "$CMODEL"} --max-turns 600 --allowedTools "Bash,Read,Write,Edit,Glob,Grep"
@@ -424,7 +520,7 @@ jobs:
           )
           echo "kalan=$K" >> "$GITHUB_OUTPUT"; echo "tasarlanmamış: ${K:-yok}"
       - name: "Gemini kalan sahneleri tasarlar (ücretsiz kota)"
-        if: steps.kalan.outputs.kalan != '' && env.GEMINI_OK == 'true'
+        if: steps.kalan.outputs.kalan != '' && env.GEMINI_OK == 'true' && env.ONDE != 'true'
         continue-on-error: true
         timeout-minutes: 120
         env:
@@ -433,8 +529,20 @@ jobs:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID_2: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_2 }}
+          CLOUDFLARE_API_TOKEN_2: ${{ secrets.CLOUDFLARE_API_TOKEN_2 }}
         run: |
           gemini ${GMODEL:+-m "$GMODEL"} -y -p "Read uzun_en/gorev/SAHNE.md and do that task now. SLUG: $SLUG. Your scenes: ${{ steps.kalan.outputs.kalan }}. Your group number: $GRUP."
+      - name: "Ajan değişikliklerini sınırla (araç kodu geri alınır)"
+        if: always()
+        run: |
+          # Sonraki adım araclar/*.py ve kaydet.sh'yi GH_TOKEN ile çalıştırır; Bash yetkili ajan bunları
+          # değiştirmiş olabilir. Sahne dosyaları (remotion/src/tam/sahneler, projeler/SLUG) dokunulmadan kalır.
+          rm -rf .gemini
+          git checkout HEAD -- uzun_en/araclar uzun_en/gorev requirements.txt .github
+          git clean -fdq -- uzun_en/araclar uzun_en/gorev .github
+          rm -rf .git/hooks && mkdir -p .git/hooks
+          git config --local --unset-all core.hooksPath || true
       - name: Doğrula ve kaydet (tip hatalı sahne kaydedilmez)
         if: always()
         env:
@@ -465,6 +573,7 @@ jobs:
       SLUG: ${{ needs.plan.outputs.slug }}
       SLOT: ${{ needs.plan.outputs.slot }}
       SABLON: ${{ needs.plan.outputs.sablon }}
+      ONDE: ${{ needs.plan.outputs.onde }}
       SAHNE_CALISTI: ${{ needs.sahne.result == 'success' || needs.sahne.result == 'failure' }}
     steps:
       - uses: actions/checkout@v5
@@ -477,7 +586,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          [ "$SAHNE_CALISTI" = "true" ] && python3 uzun_en/araclar/plan.py --sahne-deneme "$SLUG"
+          # önde üretimde (kota bekleniyor olabilir) deneme sayılmaz; şablona yalnızca slot yaklaşınca düşülür
+          [ "$SAHNE_CALISTI" = "true" ] && [ "$ONDE" != "true" ] && python3 uzun_en/araclar/plan.py --sahne-deneme "$SLUG"
           python3 - <<'PY'
           import os, sys
           sys.path.insert(0, "uzun_en/araclar")
@@ -493,7 +603,7 @@ jobs:
               f.write(f"DEVAM={str(devam).lower()}\nSABLON_SAYI={n}\n")
           PY
           bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG sahne deneme sayacı" uzun_en/durum.json
-      - name: YouTube kotası (doluysa render boşuna yapılmaz)
+      - name: YouTube kotası (doluysa render yine yapılır, video GitHub sürümünde bekler)
         if: env.DEVAM == 'true'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -502,7 +612,7 @@ jobs:
         run: |
           pip install -q -r requirements.txt
           set +e; python3 uzun_en/araclar/yukle.py --kota-kontrol; K=$?; set -e
-          if [ "$K" = "3" ]; then echo "DEVAM=false" >> "$GITHUB_ENV"; elif [ "$K" != "0" ]; then exit "$K"; fi
+          if [ "$K" = "3" ]; then echo "YT_KOTA=dolu" >> "$GITHUB_ENV"; elif [ "$K" != "0" ]; then exit "$K"; fi
       - uses: actions/setup-node@v5
         if: env.DEVAM == 'true'
         with:
@@ -512,10 +622,12 @@ jobs:
       - name: Bağımlılıklar
         if: env.DEVAM == 'true'
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter espeak-ng >/dev/null
+          bash uzun_en/araclar/apt_kur.sh ffmpeg fonts-inter espeak-ng
           pip install -q -r requirements.txt numpy piper-tts
           if [ "$(python3 uzun_en/araclar/ses.py --proje "$SLUG" --motor)" = "kokoro" ]; then
-            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile
+            pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q "kokoro>=0.9.4" soundfile "preshed<3.0.14"  # preshed 3.0.14 spaCy modelini bozuyor (OverflowError, 25 Eki 2026)
+            # Kokoro (misaki) spaCy modelini çalışırken GitHub'dan indirir; GitHub 504 verirse (8 Kasım 2026) hat durmasın diye önceden, yeniden deneyerek ve Hugging Face yedeğiyle
+            for i in 1 2 3 4 5; do pip install -q "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" && break; pip install -q "https://huggingface.co/spacy/en_core_web_sm/resolve/main/en_core_web_sm-any-py3-none-any.whl" && break; echo "spaCy modeli indirilemedi (GitHub ve Hugging Face), $((i * 20)) sn sonra tekrar"; sleep $((i * 20)); done
           fi
           cd uzun_en/remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - uses: actions/cache@v4
@@ -559,24 +671,55 @@ jobs:
           ffmpeg -v error -y -i "$C/video.mp4" -vf scale=1280:720 -c:v libx264 -preset veryfast -crf 26 -c:a aac -b:a 128k \
             -movflags +faststart "$C/onizleme_720p.mp4"
           python3 uzun_en/araclar/varlik.py yukle --proje "$SLUG" --tur video
-      - name: YouTube'a zamanlanmış yükleme
+      - name: YouTube'a zamanlanmış yükleme (kota doluysa GitHub sürümünde bekler)
         if: env.DEVAM == 'true'
         env:
+          GH_TOKEN: ${{ github.token }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python3 uzun_en/araclar/yukle.py --proje "$SLUG" --slot "$SLOT"
+        run: |
+          K=3
+          if [ "${YT_KOTA:-}" != "dolu" ]; then
+            set +e; python3 uzun_en/araclar/yukle.py --proje "$SLUG" --slot "$SLOT"; K=$?; set -e
+          fi
+          if [ "$K" = "3" ]; then
+            # Kota dolu: tam video ve yükleme bilgileri sürüme; plan işi (yukle.py --tamamla) kota açılınca yükler.
+            C=uzun_en/projeler/"$SLUG"/cikti
+            gh release upload "uzun-en-$SLUG" "$C/video.mp4" "$C/meta.json" "$C/kalite.json" "$C/kapak_yt.jpg" --clobber
+            echo "YT_KOTA=dolu" >> "$GITHUB_ENV"
+            echo "::notice title=YouTube kotası dolu::$SLUG GitHub sürümüne arşivlendi; kota açılınca YouTube'a yüklenecek"
+          elif [ "$K" != "0" ]; then
+            exit "$K"
+          fi
       - name: Kaydet
         if: env.DEVAM == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" yuklendi
-          python3 -c "import sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle('$SLUG','yayinda')"
+          if [ "${YT_KOTA:-}" = "dolu" ]; then A=yukleme_bekliyor; else A=yuklendi; fi
+          python3 uzun_en/araclar/plan.py --asama-yaz "$SLUG" "$A"
+          python3 -c "import os,sys;sys.path.insert(0,'uzun_en/araclar');import plan;plan.konu_isaretle(os.environ['SLUG'],'yayinda')"
           cp uzun_en/projeler/"$SLUG"/cikti/aciklama.txt uzun_en/projeler/"$SLUG"/aciklama.txt
           # ilk kurulum tohumu artık sürümde: depodan kaldır
           if [ -d uzun_en/projeler/"$SLUG"/tohum ]; then git rm -rq uzun_en/projeler/"$SLUG"/tohum; fi
-          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG YouTube'a yüklendi (yayın $SLOT)" uzun_en
+          if [ "$A" = "yuklendi" ]; then M="YouTube'a yüklendi (yayın $SLOT)"; else M="GitHub'a arşivlendi, YouTube kotası bekleniyor (yayın $SLOT)"; fi
+          bash uzun_en/araclar/kaydet.sh "uzun_en: $SLUG $M" uzun_en
+      - name: Shorts'u başlat (uzun_en_kisa.yml)
+        if: env.DEVAM == 'true' && env.YT_KOTA != 'dolu'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run uzun_en_kisa.yml --repo "$GITHUB_REPOSITORY" --ref main -f proje="$SLUG" \
+            || echo "::warning::Shorts iş akışı başlatılamadı; günlük tarama yakalar"
+      - name: Sıradaki uzun video (önde üretim; saatlik zamanlayıcıyı beklemeden)
+        if: env.DEVAM == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # plan.py iş yoksa (önde yeterli video var / boş slot yok) hemen biter; zincir orada durur.
+          gh workflow run uzun_en.yml --repo "$GITHUB_REPOSITORY" --ref main \
+            || echo "::warning::sıradaki çalıştırma başlatılamadı; saatlik zamanlayıcı yakalar"
       - name: Hata bildirimi
         if: failure() && env.DEVAM == 'true'
         env:

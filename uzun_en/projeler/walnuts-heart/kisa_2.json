@@ -1,0 +1,16 @@
+{
+  "baslik": ["HOW MANY", "WALNUTS A DAY?"],
+  "baslik_yt": "How Many Walnuts a Day Did the Trials Use?",
+  "aciklama": "A two-year trial of older adults used one to two ounces of walnuts a day. Here is what that looks like in a kitchen, what it did for LDL cholesterol, and what is still unknown.",
+  "parcalar": [
+    {"sahne": 46, "cumleler": [2], "gorsel": 3,
+     "baslik": {"satirlar": ["1 TO 2", "OUNCES A DAY"]}, "etiket": null},
+    {"sahne": 46, "cumleler": [3], "baslik": {"satirlar": ["1/4 CUP", "≈ 1 OUNCE"]}, "etiket": null},
+    {"sahne": 40, "cumleler": [0],
+     "baslik": {"satirlar": ["LDL, A", "LITTLE LOWER"], "vurgu": "–4.3", "not": "LDL mg/dL after two years"},
+     "etiket": "Guasch-Ferré 2018 · Rajaram 2021"},
+    {"sahne": 43, "cumleler": [0, 1]},
+    {"sahne": 44, "cumleler": [1], "baslik": {"satirlar": ["NOT A", "MEDICINE"]}, "etiket": null},
+    {"sahne": 48, "cumleler": [2]}
+  ]
+}

@@ -1,0 +1,582 @@
+{
+  "slug": "dark-chocolate-heart",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Is Dark Chocolate Good for Your Heart After 60?",
+  "yorum": "How often do you eat dark chocolate, and do you ever check the label or the cacao percentage when you buy it?",
+  "aciklama_giris": "In a trial of 21,442 adults aged 60 and older, a cocoa extract capsule was linked with a 27 percent lower risk of cardiovascular death. But the trial's main result, total cardiovascular events, did not reach statistical significance, and the capsules were not chocolate bars. This video goes through what that trial really found, what pooled blood pressure trials show, and why cocoa is not all the same.\n\nWe also look at how Dutch-processed cocoa loses most of its flavanols, what Consumer Reports found when it tested 28 dark chocolate bars for lead and cadmium, and five practical ways to read a US label and enjoy chocolate sensibly.",
+  "kaynaklar": [
+    "Sesso HD, Manson JE, Aragaki AK, et al. Effect of cocoa flavanol supplementation for the prevention of cardiovascular disease events: the COcoa Supplement and Multivitamin Outcomes Study (COSMOS) randomized clinical trial. American Journal of Clinical Nutrition. 2022;115(6):1490-1500. DOI 10.1093/ajcn/nqac055. PMID 35294962.",
+    "Ried K, Fakler P, Stocks NP. Effect of cocoa on blood pressure. Cochrane Database of Systematic Reviews. 2017;4:CD008893. DOI 10.1002/14651858.CD008893.pub3.",
+    "Miller KB, Hurst WJ, Payne MJ, et al. Impact of alkalization on the antioxidant and flavanol content of commercial cocoa powders. Journal of Agricultural and Food Chemistry. 2008;56(18):8527-8533. DOI 10.1021/jf801670p. PMID 18710243.",
+    "U.S. Food and Drug Administration. FDA Announces Qualified Health Claim for Cocoa Flavanols in High Flavanol Cocoa Powder and Reduced Risk of Cardiovascular Disease. February 2023.",
+    "Consumer Reports. Lead and cadmium in dark chocolate (testing of 28 dark chocolate bars). December 2022.",
+    "U.S. Code of Federal Regulations, Title 21, Section 163.112: Breakfast cocoa (labeling of cocoa processed with alkali)."
+  ],
+  "kapak": {
+    "satirlar": [
+      "DARK",
+      "CHOCOLATE?"
+    ],
+    "vurgu": "–1.8",
+    "vurgu_alt": "mmHg",
+    "gorsel": "a broken dark chocolate bar with several glossy squares stacked and overlapping in the foreground, one square leaning upright, a red heart symbol directly behind the pile, very large, close up and appetizing"
+  },
+  "kahraman": "dark chocolate",
+  "etiketler": [
+    "dark chocolate",
+    "heart health",
+    "cocoa flavanols",
+    "blood pressure",
+    "cosmos trial",
+    "dutch processed cocoa",
+    "lead and cadmium in chocolate",
+    "healthy aging",
+    "nutrition science",
+    "after 60"
+  ],
+  "seslendirme_duzelt": {
+    "flavanols": "flav uh nolls",
+    "flavanol": "flav uh noll",
+    "COSMOS": "cosmos",
+    "cacao": "cuh cow"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Cocoa versus chocolate",
+      "metin": "If you eat dark chocolate for your heart, note this: a trial of 21,442 older adults linked cocoa extract to a 27 percent lower risk of cardiovascular death.",
+      "gorsel": "a broken dark chocolate bar with several glossy squares stacked on a wooden table, a red heart symbol drawn behind the pile",
+      "etiket": "Sesso et al. · Am J Clin Nutr · 2022",
+      "baslik": {
+        "satirlar": [
+          "CARDIOVASCULAR",
+          "DEATH"
+        ],
+        "vurgu": "–27%",
+        "not": "lower risk with cocoa extract, in 21,442 older adults"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But the main result missed statistical significance, and the pills weren't chocolate bars.",
+      "gorsel": "two small capsules resting on a white saucer beside a single square of dark chocolate, a pair of round reading glasses nearby",
+      "baslik": {
+        "satirlar": [
+          "CAPSULES,",
+          "NOT CHOCOLATE"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what to look for on a label.",
+      "gorsel": "a magnifying glass resting on a dark chocolate bar beside a folded paper wrapper with blank panels"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what's actually inside a cacao bean.",
+      "gorsel": "an open cacao pod showing rows of beans in pale pulp, a piece of dark chocolate beside it on a wooden table"
+    },
+    {
+      "id": 5,
+      "metin": "Cocoa comes from the seeds of the cacao tree. Those seeds naturally contain plant compounds called flavanols, and they are the reason researchers study cocoa for the heart.",
+      "gorsel": "a cacao tree branch with a ripe ridged pod, a halved pod with beans, and a square of dark chocolate in the foreground",
+      "baslik": {
+        "satirlar": [
+          "COCOA",
+          "FLAVANOLS"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Here's the first thing to know. Flavanols can be lost when cocoa is processed. Hold on to that, because it matters a lot later in this video.",
+      "gorsel": "a small heap of brown cocoa powder in a wooden scoop, some powder falling away from the scoop onto the table, a dark chocolate square behind it"
+    },
+    {
+      "id": 7,
+      "metin": "That means the words dark chocolate on a wrapper don't tell you how many flavanols are inside. Two bars that look alike can be very different.",
+      "gorsel": "two nearly identical dark chocolate bars lying side by side on a white plate, one slightly broken, a small pair of kitchen scales behind them"
+    },
+    {
+      "id": 8,
+      "metin": "The research falls into three groups: a large trial using cocoa extract, many short trials of blood pressure, and laboratory tests of what's actually in the products we buy.",
+      "gorsel": "three items in a row on a table: a bottle of capsules, a cup of hot cocoa, and a dark chocolate bar, a laboratory flask of brown liquid behind them"
+    },
+    {
+      "id": 9,
+      "bolum": "The COSMOS trial",
+      "tip": "kart",
+      "metin": "First, the biggest trial.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "The COSMOS trial",
+        "alt": "21,442 US adults · 2022"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "It's called COSMOS, short for the Cocoa Supplement and Multivitamin Outcomes Study. A research team including Howard Sesso and JoAnn Manson recruited 21,442 older adults across the United States: women aged 65 and older, and men aged 60 and older.",
+      "gorsel": "a rural mailbox with several envelopes tucked inside, a bottle of capsules on a table beside it, a dark chocolate square next to the bottle",
+      "etiket": "Sesso et al. · Am J Clin Nutr · 2022",
+      "baslik": {
+        "satirlar": [
+          "21,442",
+          "OLDER ADULTS"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "metin": "None of them had a major cardiovascular disease when they joined. Their average age was about 72.",
+      "gorsel": "a cozy sitting room with an armchair, a reading lamp, a cup of tea and a plate holding a few squares of dark chocolate"
+    },
+    {
+      "id": 12,
+      "metin": "Half took a cocoa extract capsule every day, providing 500 milligrams of flavanols. The other half took a look-alike placebo. Neither the volunteers nor the researchers knew who got which, and the trial lasted a median of about three and a half years.",
+      "gorsel": "two identical glass bottles of capsules side by side on a wooden table, a calendar page with blank squares leaning against them, a dark chocolate square in front",
+      "baslik": {
+        "satirlar": [
+          "500 MG",
+          "FLAVANOLS A DAY"
+        ],
+        "not": "cocoa extract capsules versus placebo"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Before the trial began, everyone took placebo pills for at least two months, and people who skipped too many were dropped. That leaves a group of volunteers who are good at taking their pills.",
+      "gorsel": "a weekly pill organizer with compartments mostly filled, a glass of water and a dark chocolate square beside it"
+    },
+    {
+      "id": 14,
+      "metin": "The main question was total cardiovascular events: heart attacks, strokes, procedures to open arteries, cardiovascular death, and other events. There were 410 in the cocoa group and 456 in the placebo group. That is about ten percent fewer.",
+      "gorsel": "a pair of old brass balance scales, one pan holding a small heap of dark chocolate pieces and the other a slightly heavier heap of plain pebbles",
+      "baslik": {
+        "satirlar": [
+          "410 VS 456"
+        ],
+        "not": "cardiovascular events, cocoa extract versus placebo"
+      }
+    },
+    {
+      "id": 15,
+      "tip": "grafik",
+      "metin": "But the statistical range around that result included no effect at all. In other words, the main result could have been chance. Heart attacks and strokes showed small differences that were also not significant.",
+      "grafik": {
+        "baslik": "How much lower the risk was with cocoa extract",
+        "alt": "Compared with placebo; only cardiovascular death was statistically significant",
+        "cubuklar": [
+          {
+            "etiket": "All CV events",
+            "deger": 10,
+            "metin": "−10%"
+          },
+          {
+            "etiket": "Heart attack",
+            "deger": 13,
+            "metin": "−13%"
+          },
+          {
+            "etiket": "Stroke",
+            "deger": 9,
+            "metin": "−9%"
+          },
+          {
+            "etiket": "CV death",
+            "deger": 27,
+            "metin": "−27%"
+          }
+        ],
+        "kaynak": "Sesso et al., Am J Clin Nutr 2022 · 21,442 adults aged 60+ · median 3.6 years"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Among the separate outcomes, only one crossed the line: death from cardiovascular causes, 27 percent lower with the extract. The researchers' range for that result ran from about 2 percent lower to about 46 percent lower.",
+      "gorsel": "a close view of an old brass compass lying on an open notebook with blank pages, a single square of dark chocolate beside it",
+      "baslik": {
+        "satirlar": [
+          "CV DEATH"
+        ],
+        "vurgu": "–27%",
+        "not": "range from about 2 to 46 percent lower"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "This is where headlines got carried away. Cardiovascular death was one of several secondary outcomes, and the team did not adjust for how many outcomes they looked at. The authors describe such results as hypothesis-generating.",
+      "gorsel": "a tall stack of thick journals with blank covers on a desk, a magnifying glass on top and a square of dark chocolate beside the stack",
+      "baslik": {
+        "satirlar": [
+          "A SECOND-",
+          "ARY RESULT"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "metin": "When the team looked only at people who kept taking their capsules, total events came out about 15 percent lower, and that range just excluded zero. But that kind of analysis rests on extra assumptions, and the authors urged caution.",
+      "gorsel": "a hand-drawn row of tiny capsules in a neat line, some faded, leading toward a plate with a dark chocolate square"
+    },
+    {
+      "id": 19,
+      "metin": "On safety, the researchers reported no safety concerns. Nausea was slightly more common with the extract.",
+      "gorsel": "a glass of water and two capsules on a small tray, a calm hand-drawn stomach sketched in the corner, a dark chocolate square at the edge"
+    },
+    {
+      "id": 20,
+      "metin": "The trial was supported by the National Institutes of Health. Mars Edge, part of the candy company Mars, gave a grant and donated the capsules. The paper says Mars had no role in designing or analyzing the study.",
+      "gorsel": "an old wooden laboratory bench with a rack of sealed bottles, an antique microscope and a dark chocolate bar in its paper wrapper with blank panels",
+      "baslik": {
+        "satirlar": [
+          "WHO PAID?"
+        ],
+        "not": "NIH grants plus cocoa and pills from Mars Edge"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "One more detail, and it is the key to everything else. COSMOS used capsules with a measured flavanol dose. A chocolate bar is not that. We'll come back to why in a few minutes.",
+      "gorsel": "a capsule on the left and a dark chocolate bar on the right, a dashed line between them with a small question mark shape made of dots",
+      "baslik": {
+        "satirlar": [
+          "A CAPSULE",
+          "IS NOT A BAR"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "bolum": "Blood pressure trials",
+      "tip": "kart",
+      "metin": "The best-studied effect of cocoa is on blood pressure.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Blood pressure trials",
+        "alt": "Cochrane review · 2017"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "A Cochrane review pooled 35 randomized trials with 1,804 mostly healthy adults. The trials lasted from two to 18 weeks, about nine weeks on average, and volunteers had flavanol-rich cocoa or chocolate products or a comparison.",
+      "gorsel": "a cup of hot cocoa and a plate of dark chocolate squares beside a vintage blood pressure cuff with a rubber bulb, a stack of closed folders",
+      "etiket": "Ried et al. · Cochrane Database Syst Rev · 2017",
+      "baslik": {
+        "satirlar": [
+          "35 TRIALS",
+          "1,804 ADULTS"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "metin": "On average, systolic pressure, the top number, was about 1.8 millimeters of mercury lower. Diastolic pressure, the bottom number, was also about 1.8 lower.",
+      "gorsel": "an antique mercury blood pressure gauge dial with a blank face beside a square of dark chocolate on a saucer",
+      "baslik": {
+        "satirlar": [
+          "BLOOD PRESSURE"
+        ],
+        "vurgu": "–1.8",
+        "not": "millimeters of mercury, top and bottom number"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "That is small. A reading of 130 over 80 would drop to roughly 128 over 78. Real, but modest.",
+      "gorsel": "a vintage sphygmomanometer cuff wrapped around a rolled towel on a table, a single dark chocolate square beside the bulb"
+    },
+    {
+      "id": 26,
+      "metin": "Trials in people with high blood pressure showed a larger drop than those in people with normal pressure, though that difference was only borderline. The reviewers rated the evidence as moderate quality, partly because the trials disagreed with each other.",
+      "gorsel": "a row of three simple white teacups of different heights on a shelf, a dark chocolate bar leaning against the tallest cup"
+    },
+    {
+      "id": 27,
+      "metin": "Side effects were mild. Digestive complaints and dislike of the product came up in about 1 percent of people eating cocoa, and in under half a percent of people in the comparison groups.",
+      "gorsel": "a plain bowl of hot cocoa with a spoon and a small plate with one square of dark chocolate, a folded napkin beside it"
+    },
+    {
+      "id": 28,
+      "metin": "Here is the limit. None of those trials ran long enough to count heart attacks or strokes. So a slightly lower blood pressure number is a hopeful sign, not proof that chocolate protects your heart.",
+      "gorsel": "a quiet path leading up a gentle hill toward a distant small house, a square of dark chocolate drawn small in the foreground on a stone",
+      "baslik": {
+        "satirlar": [
+          "A HOPEFUL SIGN,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "metin": "Most volunteers were healthy adults, and the review was not built around people over 60. In the practical part, there is one phrase on a label that matters here, so keep listening.",
+      "gorsel": "a grocery store shelf with several dark chocolate bars standing upright in neat rows, blank wrappers, a small basket on the lower shelf"
+    },
+    {
+      "id": 30,
+      "bolum": "What processing removes",
+      "tip": "kart",
+      "metin": "Now, back to the question of chocolate versus capsules.",
+      "kart": {
+        "ust": "INSIDE THE COCOA",
+        "baslik": "What processing removes",
+        "alt": "Natural versus Dutch-processed cocoa"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "Some cocoa is treated with an alkali, a step often called Dutch processing. It changes the color of the cocoa and, as it turns out, its flavanol content.",
+      "gorsel": "a small copper pot of melted dark chocolate on a stove with a wooden spoon, two spoonfuls of cocoa powder, one pale brown and one dark brown, on a plate",
+      "baslik": {
+        "satirlar": [
+          "DUTCH-",
+          "PROCESSED"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "metin": "In 2008, a team of food scientists tested commercial cocoa powders. Natural, untreated powders averaged about 35 milligrams of flavanols in every gram.",
+      "gorsel": "four small glass dishes in a row on a laboratory bench, each holding cocoa powder of a darker brown, an antique balance scale beside them",
+      "etiket": "Miller et al. · J Agric Food Chem · 2008",
+      "baslik": {
+        "satirlar": [
+          "NATURAL COCOA"
+        ],
+        "vurgu": "35",
+        "not": "milligrams of flavanols per gram"
+      }
+    },
+    {
+      "id": 33,
+      "tip": "grafik",
+      "metin": "Lightly processed cocoa averaged about 14. Medium processing, about 8. And heavily processed cocoa, only about 4.",
+      "grafik": {
+        "baslik": "Flavanols in cocoa powder",
+        "alt": "Milligrams of flavanols per gram, by degree of alkali processing",
+        "cubuklar": [
+          {
+            "etiket": "Natural",
+            "deger": 34.6,
+            "metin": "34.6"
+          },
+          {
+            "etiket": "Light",
+            "deger": 13.8,
+            "metin": "13.8"
+          },
+          {
+            "etiket": "Medium",
+            "deger": 7.8,
+            "metin": "7.8"
+          },
+          {
+            "etiket": "Heavy",
+            "deger": 3.9,
+            "metin": "3.9"
+          }
+        ],
+        "kaynak": "Miller et al., J Agric Food Chem 2008 · commercial cocoa powders, laboratory analysis"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "That is about 90 percent fewer flavanols in heavily processed cocoa than in natural cocoa. The more alkali, the fewer flavanols remained.",
+      "gorsel": "two mounds of cocoa powder on a wooden board, a tall pale one and a very small dark one, a dark chocolate square behind each",
+      "baslik": {
+        "satirlar": [
+          "ABOUT 90%",
+          "FEWER"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "This is the payoff of that earlier hint. The COSMOS capsules gave a measured 500 milligrams of flavanols. The dark chocolate bar in your pantry carries an amount nobody has told you.",
+      "gorsel": "a dark chocolate bar sitting in a kitchen pantry shelf beside jars of flour and sugar, a hand-drawn question mark shape made of dots above it"
+    },
+    {
+      "id": 36,
+      "metin": "The FDA has weighed in too. In 2023 it allowed a limited health claim for cocoa flavanols in high flavanol cocoa powder, and it said the evidence is very limited. The claim does not cover regular cocoa powder or chocolate.",
+      "gorsel": "a government office desk with a rubber stamp and a closed folder with a blank cover, a small tin of cocoa powder and a dark chocolate square beside it",
+      "baslik": {
+        "satirlar": [
+          "FDA CLAIM:",
+          "VERY LIMITED"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "metin": "And the cacao percentage on the front of a bar doesn't tell you how much of the cocoa's flavanols survived. That number describes the recipe, not the processing.",
+      "gorsel": "a dark chocolate bar with a measuring tape laid across it on a wooden table, a small pile of cocoa beans at one side"
+    },
+    {
+      "id": 38,
+      "bolum": "Lead and cadmium",
+      "tip": "kart",
+      "metin": "Now for the part many people don't expect.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Heavy metals in some bars",
+        "alt": "Consumer Reports · December 2022"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "In late 2022, Consumer Reports tested 28 dark chocolate bars for two heavy metals, lead and cadmium. Both were found in every single bar.",
+      "gorsel": "a row of many dark chocolate bars lined up on a laboratory bench, small sample dishes and an antique balance scale in front",
+      "etiket": "Consumer Reports · December 2022",
+      "baslik": {
+        "satirlar": [
+          "28 BARS",
+          "TESTED"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "metin": "For 23 of the 28 bars, eating one ounce a day, about 28 grams, would put an adult over a level that public health authorities and Consumer Reports experts say may be harmful for at least one of the metals. Five bars were high in both.",
+      "gorsel": "a small kitchen scale holding one ounce of dark chocolate squares, a dark chocolate bar with a few squares missing beside it",
+      "baslik": {
+        "satirlar": [
+          "23 OF 28"
+        ],
+        "not": "bars over a precautionary level at one ounce a day"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "The good news: five bars were relatively low in both metals. They came from the brands Mast, Taza, Valrhona, and Ghirardelli. So the choice of bar really matters.",
+      "gorsel": "five dark chocolate bars lined up at the front of a store shelf, a basket in front of them with one bar placed inside"
+    },
+    {
+      "id": 42,
+      "metin": "Why are the metals there at all? Cacao trees take up cadmium from the soil. Lead mostly lands on the outside of the beans after harvest, from dust, while the beans dry.",
+      "gorsel": "cacao beans spread out on a flat wooden drying tray in sunlight, soil in a small heap beside a young cacao seedling, a dark chocolate square at the corner"
+    },
+    {
+      "id": 43,
+      "metin": "Consumer Reports said the worry is eating these bars often, over years. The confectioners' trade association says the California benchmark used is not a food-safety standard, and that its products meet strict safety requirements.",
+      "gorsel": "a calm calendar page with blank squares, a dark chocolate square placed on a few of the squares, a small teacup beside it",
+      "baslik": {
+        "satirlar": [
+          "OFTEN, OVER",
+          "YEARS"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "metin": "Organic bars weren't safer in these tests. Milk chocolate generally had lower levels but more sugar. And Consumer Reports advises that children and pregnant people limit dark chocolate. This was a consumer test, not a peer-reviewed trial, so treat it as a warning, not a final word.",
+      "gorsel": "a milk chocolate bar and a dark chocolate bar side by side on a white plate, a child's small toy bear sitting beside the plate"
+    },
+    {
+      "id": 45,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you enjoy chocolate sensibly? Here are five practical ways.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Chocolate, chosen well",
+        "alt": "Five practical ways"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "One. Don't treat a candy bar as a medicine. The best trial used a capsule, and nothing in the research shows that eating chocolate prevents heart attacks.",
+      "gorsel": "a pharmacy shelf with a medicine bottle on the left and a dark chocolate bar on the right, a clear gap between them"
+    },
+    {
+      "id": 47,
+      "metin": "Two. If you enjoy dark chocolate, treat it as a small pleasure. Consumer Reports suggests a few servings a week of a lower-metal bar, rather than a daily habit.",
+      "gorsel": "a small white plate with two squares of dark chocolate and a cup of tea on a quiet kitchen table, morning light drawn as fine lines",
+      "baslik": {
+        "satirlar": [
+          "A FEW",
+          "SERVINGS A WEEK"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "Three. Check the ingredient list. Federal rules require cocoa powder made with alkali to be labeled as processed with alkali. On a bar, check the ingredients for that phrase or the word Dutched, and choose one without it when you can.",
+      "gorsel": "a hand holding the back of a dark chocolate bar wrapper with blank panels, a magnifying glass over the panels, the dark chocolate bar below",
+      "baslik": {
+        "satirlar": [
+          "PROCESSED",
+          "WITH ALKALI"
+        ],
+        "not": "the phrase to look for"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Four. Look up independent test results for your brand. And when a bar hasn't been tested, Consumer Reports suggests picking a lower cacao percentage, such as 70 over 80.",
+      "gorsel": "an open notebook with blank lines and a pen on a desk, two dark chocolate bars beside it, one tied with a small ribbon"
+    },
+    {
+      "id": 50,
+      "metin": "Five. Unsweetened cocoa powder stirred into warm milk or oatmeal gives you cocoa without a bar's sugar. Pick one that isn't processed with alkali. The metal tests we covered were of bars, so the same careful approach applies.",
+      "gorsel": "a bowl of oatmeal with a light dusting of cocoa powder, a tin of cocoa powder and a spoon beside it, a dark chocolate square on the saucer"
+    },
+    {
+      "id": 51,
+      "metin": "A safety note. If you take blood pressure medicine, a few squares of chocolate are not a replacement for it. Please don't change any medicine because of this video, and ask your doctor or pharmacist about anything you plan to eat every day.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, a pill organizer and a single square of dark chocolate on a saucer",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "And remember that chocolate still adds calories. If you are watching your weight or your blood sugar, the sugar in a bar counts too.",
+      "gorsel": "a dark chocolate bar beside a small bowl of sugar cubes and a measuring spoon on a kitchen counter"
+    },
+    {
+      "id": 53,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A treat, not a treatment",
+        "alt": "Dark chocolate and your heart"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "In a large trial of older adults, a cocoa extract did not significantly lower total cardiovascular events. Cardiovascular deaths were 27 percent lower, but that was a secondary finding, and the researchers call it hypothesis-generating.",
+      "gorsel": "the opening dark chocolate bar with a red heart symbol behind it, now with two capsules resting beside the pile of squares"
+    },
+    {
+      "id": 55,
+      "metin": "Short trials show cocoa can lower blood pressure by about two millimeters of mercury. That is small, and it is not proof of fewer heart attacks.",
+      "gorsel": "a vintage blood pressure cuff on a table, a cup of hot cocoa and a square of dark chocolate beside the gauge"
+    },
+    {
+      "id": 56,
+      "metin": "Processing can strip away most flavanols, and some dark bars carry lead and cadmium. So read the label, pick your bar carefully, and keep portions modest.",
+      "gorsel": "a hand picking one dark chocolate bar from a store shelf of many bars, the others standing in neat rows, a basket nearby"
+    },
+    {
+      "id": 57,
+      "metin": "Dark chocolate is not a heart medicine. But a small square, well chosen, can still have a place in a calm and varied way of eating.",
+      "gorsel": "a single square of dark chocolate on a white saucer beside a cup of tea in warm window light, a small red heart symbol faintly drawn on the wall behind"
+    },
+    {
+      "id": 58,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

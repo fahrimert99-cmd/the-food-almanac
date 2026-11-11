@@ -1,0 +1,16 @@
+{
+  "baslik": ["COOL IT OR", "PARBOIL IT?"],
+  "baslik_yt": "Chilled Rice vs Parboiled Rice: Which Won?",
+  "aciklama": "A New Zealand trial compared white rice, parboiled rice and chilled, reheated parboiled rice. Here is what actually lowered the blood sugar response.",
+  "parcalar": [
+    {"sahne": 21, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 21, "cumleler": [3], "gorsel": 23, "baslik": null, "etiket": "Lu et al. · Nutrients · 2017"},
+    {"sahne": 22, "cumleler": [0], "gorsel": 21,
+     "baslik": {"satirlar": ["PARBOILED", "RICE"], "vurgu": "-42%", "not": "chilled parboiled vs white"},
+     "etiket": "Lu et al. · Nutrients · 2017"},
+    {"sahne": 23, "cumleler": [0, 1], "etiket": "Lu et al. · Nutrients · 2017"},
+    {"sahne": 23, "cumleler": [2], "baslik": null},
+    {"sahne": 24, "cumleler": [1], "baslik": null},
+    {"sahne": 40, "cumleler": [1], "baslik": {"satirlar": ["A HARMLESS", "BONUS"]}}
+  ]
+}

@@ -41,6 +41,8 @@ For each statement:
   them if they are wrong rather than deleting them. Check that every promise and forward reference is paid off
   later in the video; if one isn't, fix the promise or add the missing payoff.
 - Do not change `id`s, scene count, `tip`, `gorsel` or `kart` layout fields unless a factual error requires it.
+- If you rewrite the thumbnail, keep its format: `kapak.satirlar` 2–3 lines of at most 12 characters each, `vurgu`
+  at most 6 characters, `vurgu_alt` one word. Put longer detail in `kapak.serit`.
 - `kaynaklar`: fix wrong citations. Remove sources that are not used or not real.
 
 **Write `uzun_en/projeler/SLUG/dogrulama.md`.**

@@ -1,0 +1,21 @@
+{
+  "baslik": ["BEET JUICE", "LOWERS BP?"],
+  "baslik_yt": "Does Beet Juice Really Lower Blood Pressure?",
+  "aciklama": "Pooled trials show a small drop in blood pressure from beet juice, but studies in patients disagree. Here is what the research says, and the mouthwash catch.",
+  "parcalar": [
+    {"sahne": 27, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0],
+     "baslik": {"satirlar": ["22 TRIALS"], "vurgu": "–3.55", "not": "points of systolic pressure"},
+     "etiket": "Bahadoran et al. · Adv Nutr · 2017"},
+    {"sahne": 16, "cumleler": [1],
+     "baslik": {"satirlar": ["2 WEEKS", "OR MORE"], "vurgu": "–5.1", "not": "systolic, in longer trials"},
+     "etiket": "Bahadoran et al. · Adv Nutr · 2017"},
+    {"sahne": 17, "cumleler": [0], "etiket": null},
+    {"sahne": 54, "cumleler": [1], "gorsel": 20,
+     "baslik": {"satirlar": ["PATIENTS:", "MIXED"], "vurgu": "–8 / 0", "not": "4-week vs 1-week trial"},
+     "etiket": "Kapil 2015 · Bondonno 2015"},
+    {"sahne": 55, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["MOUTHWASH", "BLUNTS IT"]}, "etiket": null},
+    {"sahne": 43, "cumleler": [1]}
+  ]
+}

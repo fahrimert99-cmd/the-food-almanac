@@ -83,7 +83,7 @@ def _guvenli_prompt(prompt):
     return re.sub(r"\s{2,}", " ", yeni)
 
 
-def _cloudflare(prompt, cikti, tohum=0):
+def _cloudflare(prompt, cikti, tohum=0, w=1344, h=768):
     """NVIDIA çöktüğünde aynı FLUX ailesi (Cloudflare Workers AI, günlük ücretsiz kota)."""
     if "cloudflare" in _KAPALI:
         return None
@@ -95,9 +95,9 @@ def _cloudflare(prompt, cikti, tohum=0):
     if not CF.var_mi():
         return None
     for pr in (prompt, _guvenli_prompt(prompt)):
-        kaynak = CF.uret(pr, cikti, tohum)
+        kaynak = CF.uret(pr, cikti, tohum, w=w, h=h)
         if not kaynak:
-            if all(m in CF._KAPALI for m in CF.MODELLER):
+            if CF.tukendi():
                 _kapat("cloudflare", "günlük kota bitti ya da yetki yok")
             return None
         if not _bos_mu(cikti):
@@ -118,7 +118,7 @@ def _kapla(src, hedef, boyut=(W, H), kalite=92, alt_kirp=0.0):
     im.crop((x, y, x + tw, y + th)).save(hedef, "JPEG", quality=kalite)
 
 
-def _nvidia(prompt, cikti, tohum=0):
+def _nvidia(prompt, cikti, tohum=0, w=1344, h=768):
     if not re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or "") or "nvidia" in _KAPALI:
         return None
     try:
@@ -133,7 +133,7 @@ def _nvidia(prompt, cikti, tohum=0):
             if tohum:                                          # farklı kompozisyon için FLUX tohumu
                 NA._gorsel_govde = lambda mm, p, w, h: dict(govde(mm, p, w, h), seed=tohum)
             try:
-                ok = NA._gorsel_tek(m, pr, cikti, 1344, 768, 300)
+                ok = NA._gorsel_tek(m, pr, cikti, w, h, 300)
             finally:
                 NA._gorsel_govde = govde
             if not ok:
@@ -205,6 +205,54 @@ def sahne_prompt(sahne):
     return f"{sahne['gorsel'].rstrip('.')}.{yer} {STIL} {YASAK}"
 
 
+# Shorts için dikey (9:16) sahne görseli: aynı tarif ve gravür stili, konu dikey çerçevenin ortasında; üstte başlık,
+# altta altyazı için sakin alan. NVIDIA 768x1344 üretir, 1080x1920'ye oturtulur (yatay görseli kırpmaktan çok daha net).
+# Shorts'ta üstte başlık, altta altyazı ve YouTube arayüzü var: konu çerçevenin ortasında (yüksekliğin ~%25-65'i), alt üçte
+# bir boş kalmalı (kisa.py BANT). Konu yine de aşağıda kalırsa kisa.py dikey_yer görseli yukarı taşır.
+DIKEY_YER = (" Composition: tall vertical 9:16 portrait frame, close-up; the main subject is large and centered in the middle "
+             "of the frame, between about one quarter and two thirds of its height; the bottom third of the frame is plain empty "
+             "surface or soft background with nothing important in it; plain calm background above the subject.")
+
+
+def dikey_prompt(sahne):
+    return f"{sahne['gorsel'].rstrip('.')}.{DIKEY_YER} {STIL} {YASAK}"
+
+
+def dikey(proje, idler, cikti):
+    """Shorts için seçili sahnelerin dikey görsellerini üretir: cikti/dikey_NN.jpg (1080x1920). Önce NVIDIA (iki tohum),
+    olmazsa Cloudflare FLUX; ikisi de olmazsa kisa.py yatay görseli kırpar. Var olan dosyalar yeniden üretilmez.
+    Üretilemeyenlerin listesini döndürür."""
+    os.makedirs(cikti, exist_ok=True)
+    sahneler = {s["id"]: s for s in proje["sahneler"]}
+    eksik = []
+    for n in idler:
+        s = sahneler.get(n)
+        if not s or not s.get("gorsel"):
+            O.log(f"   ✗ dikey {n}: sahnede görsel tarifi yok")
+            eksik.append(n)
+            continue
+        ham, hedef = os.path.join(cikti, f"dikey_{n:02d}.ham"), os.path.join(cikti, f"dikey_{n:02d}.jpg")
+        if os.path.exists(hedef):
+            continue
+        kaynak = None
+        for tohum in (0, 11):
+            kaynak = _nvidia(dikey_prompt(s), ham, tohum=tohum, w=768, h=1344)
+            if kaynak and os.path.exists(ham) and not _bos_mu(ham):
+                break
+            kaynak = None
+        if not kaynak:
+            kaynak = _cloudflare(dikey_prompt(s), ham, w=768, h=1344)
+        if kaynak:
+            _kapla(ham, hedef, boyut=(1080, 1920))
+            O.log(f"   ✓ dikey {n} ({kaynak})")
+        else:
+            eksik.append(n)
+            O.log(f"   ✗ dikey {n} üretilemedi")
+        if os.path.exists(ham):
+            os.remove(ham)
+    return eksik
+
+
 def kapak_prompt(proje):
     return f"{proje['kapak']['gorsel'].rstrip('.')}.{KAPAK_YER} {KAPAK_STIL} {YASAK}"
 
@@ -238,8 +286,8 @@ def uret(prompt, hedef, min_puan=-1, tohum=0, sira=None):
 
 
 def _cf_var():
-    return bool(re.sub(r"\s", "", os.environ.get("CLOUDFLARE_ACCOUNT_ID") or "")
-                and re.sub(r"\s", "", os.environ.get("CLOUDFLARE_API_TOKEN") or ""))
+    return any(re.sub(r"\s", "", os.environ.get(f"CLOUDFLARE_ACCOUNT_ID{ek}") or "")
+               and re.sub(r"\s", "", os.environ.get(f"CLOUDFLARE_API_TOKEN{ek}") or "") for ek in ("", "_2", "_3"))
 
 
 class Kayit:
@@ -385,6 +433,18 @@ def aday(slug, proje, n, aciklama, tohum, kabul):
     O.log(f"aday: {os.path.relpath(ay, O.REPO)} ({kaynak}) — Read ile inceleyin; uygunsa --kabul")
 
 
+def kaynak_durumu():
+    """Kaliteli kaynakların bu çalıştırmadaki durumu GORSEL_DURUM dosyasına yazılır (iş akışı okur): NVIDIA hata
+    veriyor/kapalı ve Cloudflare günlük kotası bittiyse "kota_bitti" — proje kota yenilenene kadar ertelenir."""
+    yol = os.environ.get("GORSEL_DURUM")
+    if not yol:
+        return
+    nv = "nvidia" in _KAPALI or not re.sub(r"\s", "", os.environ.get("NVIDIA_API_KEY") or "")
+    cfk = "cloudflare" in _KAPALI or not _cf_var()
+    with open(yol, "w") as f:
+        json.dump({"kota_bitti": nv and cfk, "nvidia_kapali": nv, "cloudflare_kapali": cfk}, f)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--proje")
@@ -394,14 +454,20 @@ def main():
     ap.add_argument("--kabul", action="store_true")
     ap.add_argument("--sadece", default="", help="yalnızca bu görseller (ör. kapak veya 4,7); diğerlerine dokunulmaz")
     ap.add_argument("--kalite", action="store_true", help="görsel kalitesini denetle (çıkış 3: çoğu yedek/eksik)")
+    ap.add_argument("--dikey", default="", help="Shorts için dikey görseller (ör. 1,29,32); --cikti klasörüne dikey_NN.jpg")
+    ap.add_argument("--cikti", default="/tmp/dikey")
     a = ap.parse_args()
     slug = O.aktif_slug(a.proje)
     proje = O.proje(slug)
     if a.kalite:
         return kalite(slug, proje)
+    if a.dikey:
+        eksik = dikey(proje, [int(x) for x in a.dikey.split(",") if x.strip()], a.cikti)
+        sys.exit(1 if eksik else 0)
     if a.sahne is not None:
         return aday(slug, proje, a.sahne, a.aciklama, a.tohum, a.kabul)
     eksik = hepsi(slug, proje, {x.strip() for x in a.sadece.split(",") if x.strip()} or None)
+    kaynak_durumu()
     sys.exit(1 if eksik else 0)
 
 

@@ -1,0 +1,23 @@
+{
+  "baslik": ["NO SUGAR,", "NO SPIKE?"],
+  "baslik_yt": "Do Diet Drinks Raise Your Blood Sugar?",
+  "aciklama": "Reviews pooling dozens of trials found no rise in blood sugar from sweeteners, yet a two-week trial in 120 healthy adults found a small one with two of them. Here is how both can be true.",
+  "parcalar": [
+    {"sahne": 7, "cumleler": [1, 2], "baslik": null, "etiket": null},
+    {"sahne": 58, "cumleler": [0], "gorsel": 13,
+     "baslik": {"satirlar": ["POOLED", "REVIEWS"], "vurgu": "29 + 26", "not": "randomized trials"},
+     "etiket": "Nichol 2018 · Greyling 2020"},
+    {"sahne": 58, "cumleler": [1], "gorsel": 24,
+     "baslik": {"satirlar": ["BUT ONE", "TRIAL DIFFERED"], "vurgu": "2 WEEKS", "not": "120 healthy adults"},
+     "etiket": "Suez et al. · Cell · 2022"},
+    {"sahne": 29, "cumleler": [1, 2, 3],
+     "baslik": {"satirlar": ["DIFFERENT", "QUESTIONS"]},
+     "etiket": null},
+    {"sahne": 59, "cumleler": [1], "gorsel": 38,
+     "baslik": {"satirlar": ["WATER", "FIRST"]},
+     "etiket": "ADA · Standards of Care · 2025"},
+    {"sahne": 55, "cumleler": [1],
+     "baslik": {"satirlar": ["JUST A", "SWAP"]},
+     "etiket": null}
+  ]
+}

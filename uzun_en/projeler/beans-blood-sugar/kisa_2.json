@@ -1,0 +1,15 @@
+{
+  "baslik": ["LENTILS AT", "BREAKFAST?"],
+  "baslik_yt": "How Breakfast Lentils Changed Lunch Blood Sugar",
+  "aciklama": "A 1982 study found that a lentil breakfast flattened the blood sugar response to a bread lunch four hours later. Here is the second meal effect, and how to use it, with the caveat that it comes from a very small study.",
+  "parcalar": [
+    {"sahne": 26, "cumleler": [1], "gorsel": 28, "baslik": null, "etiket": null},
+    {"sahne": 27, "cumleler": [0], "baslik": {"satirlar": ["LENTILS", "VS BREAD"], "vurgu": "7 PEOPLE", "not": "healthy volunteers"}, "etiket": "Jenkins et al. · Am J Clin Nutr · 1982"},
+    {"sahne": 27, "cumleler": [1]},
+    {"sahne": 28, "cumleler": [0], "baslik": null},
+    {"sahne": 28, "cumleler": [1], "baslik": {"satirlar": ["LUNCH WAS", "FLATTER"], "vurgu": "38%", "not": "flatter blood sugar response"}, "etiket": "Jenkins et al. · Am J Clin Nutr · 1982"},
+    {"sahne": 29, "cumleler": [1], "baslik": {"satirlar": ["SLOW", "RELEASE"]}, "etiket": null},
+    {"sahne": 44, "cumleler": [2], "baslik": {"satirlar": ["TRY IT AT", "BREAKFAST"]}, "etiket": null},
+    {"sahne": 44, "cumleler": [3], "gorsel": 30, "baslik": {"satirlar": ["A GENTLE", "BONUS"]}, "etiket": "Jenkins et al. · Am J Clin Nutr · 1982"}
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "slug": "red-wine-heart",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does Red Wine Protect Your Heart After 60?",
+  "yorum": "Do you enjoy a glass of red wine now and then? Has your doctor ever said anything to you about alcohol and your heart?",
+  "aciklama_giris": "For decades, a daily glass of red wine has been called a gift to the heart. In this video we look at where that idea came from, why the older studies behind it are now doubted, and what a 2023 review of 107 studies and about 4.8 million people found: no significant drop in the risk of dying for light drinkers, and higher risk at heavier levels.\n\nWe also cover the 'sick quitter' problem, genetic evidence on stroke, how little resveratrol a glass of wine actually contains, what the American Heart Association says about alcohol today, and five practical points for adults over 60.",
+  "kaynaklar": [
+    "Renaud S, de Lorgeril M. Wine, alcohol, platelets, and the French paradox for coronary heart disease. Lancet. 1992;339(8808):1523-1526. doi:10.1016/0140-6736(92)91277-F. PMID 1351198.",
+    "Fillmore KM, Kerr WC, Stockwell T, Chikritzhs T, Bostrom A. Moderate alcohol use and reduced mortality risk: systematic error in prospective studies. Addiction Research & Theory. 2006;14(2):101-132. doi:10.1080/16066350500497983.",
+    "Zhao J, Stockwell T, Naimi T, Churchill S, Clay J, Sherk A. Association Between Daily Alcohol Intake and Risk of All-Cause Mortality: A Systematic Review and Meta-analyses. JAMA Network Open. 2023;6(3):e236185. doi:10.1001/jamanetworkopen.2023.6185.",
+    "Millwood IY, Walters RG, Mei XW, et al. Conventional and genetic evidence on alcohol and vascular disease aetiology: a prospective study of 500 000 men and women in China. Lancet. 2019;393(10183):1831-1842. PMID 30955975.",
+    "Semba RD, Ferrucci L, Bartali B, et al. Resveratrol levels and all-cause mortality in older community-dwelling adults. JAMA Internal Medicine. 2014;174(7):1077-1084.",
+    "American Heart Association. Alcohol Use and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation. 2025, and the AHA fact sheet 'Alcohol Use and Cardiovascular Disease' (newsroom.heart.org/facts/alcohol-use-and-cardiovascular-disease)."
+  ],
+  "kapak": {
+    "satirlar": [
+      "RED WINE",
+      "HEART?"
+    ],
+    "gorsel": "a large glass of red wine filled halfway, shown close up, with a bold red heart symbol overlapping behind the glass, tightly grouped and filling the right half of the page"
+  },
+  "kahraman": "red wine",
+  "etiketler": [
+    "red wine",
+    "red wine heart health",
+    "is red wine good for your heart",
+    "moderate drinking",
+    "french paradox",
+    "resveratrol",
+    "alcohol and heart",
+    "heart health after 60",
+    "nutrition science",
+    "food myths"
+  ],
+  "seslendirme_duzelt": {
+    "AHA": "A H A",
+    "JAMA": "JAMMA",
+    "ALDH2": "A L D H 2"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "A glass and the heart",
+      "metin": "A 2023 review pooled 107 studies and about 4.8 million people. Light drinkers showed no significant drop in their risk of dying.",
+      "gorsel": "a glass of red wine on a wooden table beside a small red heart symbol, an open antique book of engravings behind it, soft window light",
+      "etiket": "Zhao et al. · JAMA Netw Open · 2023"
+    },
+    {
+      "id": 2,
+      "metin": "So why did decades of studies say wine protects the heart? The catch hides in who counted as a non-drinker.",
+      "gorsel": "two empty chairs at a small table, one with a glass of red wine in front of it and one with nothing, a tall window behind",
+      "baslik": {
+        "satirlar": [
+          "WHO COUNTS",
+          "AS A NON-DRINKER?"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know the flaw, the resveratrol truth, and what heart experts say after sixty.",
+      "gorsel": "an antique brass magnifying glass held over a glass of red wine and a small red heart symbol on a wooden table"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start in France, with a puzzle that made red wine famous.",
+      "gorsel": "a French cafe table by a street window with a glass of red wine, a small loaf of bread and a wedge of cheese, a bicycle leaning outside"
+    },
+    {
+      "id": 5,
+      "bolum": "Where the idea began",
+      "tip": "kart",
+      "metin": "In the early 1990s, doctors noticed something odd about France.",
+      "kart": {
+        "ust": "THE FRENCH PARADOX",
+        "baslik": "Rich food, healthy hearts?",
+        "alt": "Renaud and de Lorgeril · Lancet · 1992"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "People in France ate plenty of saturated fat, yet had low rates of death from heart disease. In 1992, researchers Serge Renaud and Michel de Lorgeril suggested that wine might be part of the reason.",
+      "gorsel": "a French market stall with wheels of cheese, butter and cured sausages, and a bottle and a glass of red wine on the counter",
+      "etiket": "Renaud & de Lorgeril · Lancet · 1992",
+      "baslik": {
+        "satirlar": [
+          "FAT, YET",
+          "HEALTHY HEARTS"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "They also offered a mechanism. Alcohol at moderate intake seemed to make platelets, the tiny cells that start clots, a little less sticky.",
+      "gorsel": "tube-shaped vessel opened to show small red discs and a few tiny pale platelets drifting apart, a glass of red wine sketched in the corner"
+    },
+    {
+      "id": 8,
+      "metin": "The idea spread, and a daily glass of red wine became a popular heart habit. But it began by comparing countries, and that can't tell us what one person's glass actually does.",
+      "gorsel": "an old world map engraving with two countries shaded, a glass of red wine standing on top of it like a paperweight",
+      "baslik": {
+        "satirlar": [
+          "COUNTRIES,",
+          "NOT PEOPLE"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Later, large studies followed individual people for years. Many found a J-shaped curve. Light drinkers seemed to have less heart disease than non-drinkers, and heavy drinkers had more.",
+      "gorsel": "a hand-drawn smooth fishhook-shaped curve on aged paper, a glass of red wine placed at the bottom of the curve",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "J-CURVE"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "bolum": "The sick quitter problem",
+      "tip": "kart",
+      "metin": "So why do many scientists now doubt that curve?",
+      "kart": {
+        "ust": "THE CATCH",
+        "baslik": "Who counts as a non-drinker?",
+        "alt": "The sick quitter problem"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Think about who sits in the non-drinking group. Some have never touched alcohol. But others used to drink and stopped, often because of illness, new medicines, or frailty, which grow more common with age.",
+      "gorsel": "a quiet bedside table with a pill organizer, a glass of water, a pair of reading glasses and an unopened bottle of red wine pushed to the back",
+      "baslik": {
+        "satirlar": [
+          "QUIT",
+          "FOR A REASON"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "metin": "These people are sometimes called sick quitters. When they are lumped in with lifelong non-drinkers, the non-drinking group looks unhealthy, and light drinkers look good by comparison.",
+      "gorsel": "two groups of simple wooden figures on a table, one group leaning on small canes, the other standing tall beside a glass of red wine",
+      "baslik": {
+        "satirlar": [
+          "SICK",
+          "QUITTERS"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "The 2023 review measured it. Compared with people who had never drunk, former drinkers had a 26 percent higher risk of dying.",
+      "gorsel": "an antique balance scale with an empty wine glass on one side and a heavy brass weight on the other, tipped downward",
+      "etiket": "Zhao et al. · JAMA Netw Open · 2023",
+      "baslik": {
+        "satirlar": [
+          "FORMER",
+          "DRINKERS"
+        ],
+        "vurgu": "+26%",
+        "not": "higher risk of dying than lifelong non-drinkers"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "An earlier analysis, led by Kaye Fillmore in 2006, pooled 54 studies. In the studies that avoided this mistake, it found no significant protection against death from any cause, or from heart disease.",
+      "gorsel": "a tall stack of 54 closed research folders on a desk, with a glass of red wine and a pen beside them, lamp light",
+      "etiket": "Fillmore et al. · Addict Res Theory · 2006"
+    },
+    {
+      "id": 15,
+      "metin": "The authors were careful, though. There were too few clean studies to prove that light drinking is harmless or useless. It showed that the old evidence stood on shaky ground, not that the question was closed.",
+      "gorsel": "a small wooden stool with one leg shorter than the others holding up a glass of red wine, soft engraved shading"
+    },
+    {
+      "id": 16,
+      "metin": "In the 2023 review, light drinkers looked 15 percent less likely to die before the authors adjusted for study problems like this one. After adjusting, the gap shrank to 7 percent and was no longer statistically significant.",
+      "gorsel": "a glass of red wine seen through a camera lens being slowly brought into sharp focus, two framed views side by side, one blurry and one clear",
+      "etiket": "Zhao et al. · JAMA Netw Open · 2023",
+      "baslik": {
+        "satirlar": [
+          "15% → 7%"
+        ],
+        "not": "the apparent benefit shrank, and was not significant"
+      }
+    },
+    {
+      "id": 17,
+      "bolum": "The 2023 review",
+      "tip": "kart",
+      "metin": "Let's look at that review more closely.",
+      "kart": {
+        "ust": "THE BIG REVIEW",
+        "baslik": "107 studies, 4.8 million adults",
+        "alt": "Zhao et al. · JAMA Network Open · 2023"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Researchers led by Jinhui Zhao gathered 107 studies that followed people over time. Together they included about 4.8 million participants and more than 425,000 deaths.",
+      "gorsel": "a long library table covered with open ledgers, a magnifying glass, and a glass of red wine at the corner, rows of shelves behind",
+      "baslik": {
+        "satirlar": [
+          "107 STUDIES"
+        ],
+        "vurgu": "4.8M",
+        "not": "people followed over time"
+      }
+    },
+    {
+      "id": 19,
+      "tip": "grafik",
+      "metin": "Under about two drinks a day was linked with a 7 percent lower risk of dying, not statistically significant. At two to three drinks it was 5 percent higher, also not significant. Then 19 percent higher, and 35 percent higher.",
+      "grafik": {
+        "baslik": "Risk of dying vs. lifelong non-drinkers",
+        "alt": "Relative risk, fully adjusted · 1.00 means no difference",
+        "cubuklar": [
+          {
+            "etiket": "Under 2 drinks",
+            "deger": 0.93,
+            "metin": "0.93 (ns)"
+          },
+          {
+            "etiket": "2–3 drinks",
+            "deger": 1.05,
+            "metin": "1.05 (ns)"
+          },
+          {
+            "etiket": "3–4.5 drinks",
+            "deger": 1.19,
+            "metin": "+19%"
+          },
+          {
+            "etiket": "4.5+ drinks",
+            "deger": 1.35,
+            "metin": "+35%"
+          }
+        ],
+        "kaynak": "Zhao et al., JAMA Netw Open 2023 · 107 cohort studies, 4.8 million people · drinks per day"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "The pattern was gentler for men than for women. In women, the risk was already 21 percent higher at two to three drinks a day. In men, it was not clearly higher until about three drinks.",
+      "gorsel": "two identical wine glasses of red wine side by side on a table, one with a thin brass ruler standing beside it and one with a taller ruler",
+      "baslik": {
+        "satirlar": [
+          "WOMEN: RISK",
+          "STARTS SOONER"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "One more point. That review counted deaths from any cause, not heart disease alone. In the practical part, I'll also explain exactly how much counts as one drink of wine.",
+      "gorsel": "a closed medical bag and a stethoscope on a desk beside a half-full glass of red wine, a small red heart symbol on the glass"
+    },
+    {
+      "id": 22,
+      "metin": "A different kind of study aims at the heart question. Some people carry gene variants that make them drink less. Because genes are fixed at conception, these natural differences work a bit like a randomized trial.",
+      "gorsel": "a double-helix strand drawn as an engraving twisting upward beside a glass of red wine, two small figures of different heights below",
+      "baslik": {
+        "satirlar": [
+          "GENES AS",
+          "A TEST"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "In 2019, researchers followed 512,715 adults in China for about ten years, and studied genes in 161,498 of them. In men, reported drinking showed the familiar U-shape for stroke. The genes told a different story.",
+      "gorsel": "a busy street market in a Chinese city with a bowl of rice and a small cup of rice wine on a stall, lantern light",
+      "etiket": "Millwood et al. · Lancet · 2019"
+    },
+    {
+      "id": 24,
+      "metin": "Genetically higher drinking in men went with more ischemic stroke, 27 percent higher for each 280 grams a week, and with higher blood pressure. For heart attacks there was no significant link. The authors concluded the apparent stroke protection was largely not causal.",
+      "gorsel": "a mercury blood pressure gauge with a cuff on the left and a glass of red wine on the right, a red heart symbol between them",
+      "etiket": "Millwood et al. · Lancet · 2019",
+      "baslik": {
+        "satirlar": [
+          "STROKE",
+          "PROTECTION?"
+        ],
+        "not": "mostly not causal, said the authors"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "To be fair, this was in China, mostly in men, where drinking patterns differ from the United States. Few women drank, so it says little about women. It's one more piece of the puzzle, not the final word.",
+      "gorsel": "a half-finished jigsaw puzzle on a table with a few pieces left, one piece shaped like a heart, a glass of red wine beside it"
+    },
+    {
+      "id": 26,
+      "bolum": "What about resveratrol?",
+      "tip": "kart",
+      "metin": "But maybe red wine has something special inside it.",
+      "kart": {
+        "ust": "THE COMPOUND",
+        "baslik": "Resveratrol: a dose problem",
+        "alt": "Grape skins · red wine"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "The compound most often credited is resveratrol, a plant chemical found in grape skins. The key question isn't whether it exists in wine. It's whether a person gets enough of it from a glass.",
+      "gorsel": "a bunch of dark grapes beside a glass of red wine, a magnified circular inset showing the grape skin cells, engraving style"
+    },
+    {
+      "id": 28,
+      "metin": "Estimates vary, but a glass of red wine seems to hold about one milligram of resveratrol or less. Studies of resveratrol pills have used much larger doses, often 150 milligrams or more.",
+      "gorsel": "a tiny brass measuring spoon holding a few specks of powder beside a glass of red wine, and a tall jar of capsules in the background",
+      "baslik": {
+        "satirlar": [
+          "ABOUT 1 MG",
+          "OR LESS / GLASS"
+        ],
+        "not": "estimates vary by wine"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "By rough estimates, reaching 500 milligrams from wine alone would take dozens of liters a day. That is plainly not a plan.",
+      "gorsel": "a comically huge copper barrel of red wine towering over a small kitchen table with a single wine glass on it"
+    },
+    {
+      "id": 30,
+      "metin": "What about people who simply eat and drink resveratrol in daily life? Researchers led by Richard Semba followed 783 adults aged 65 and older in Tuscany, Italy, for nine years, measuring resveratrol in their urine.",
+      "gorsel": "a rustic Tuscan kitchen with a table set with olives, bread and a glass of red wine, hills with cypress trees seen through the window",
+      "etiket": "Semba et al. · JAMA Intern Med · 2014"
+    },
+    {
+      "id": 31,
+      "metin": "During those years, 268 people died. Those with the highest resveratrol levels were no less likely to die than those with the lowest, and levels were not linked with heart disease or cancer. It's observational, so it can't prove cause.",
+      "gorsel": "four glass test tubes in a row holding different amounts of dark red liquid, a glass of red wine in front and a notebook with blank pages",
+      "etiket": "Semba et al. · JAMA Intern Med · 2014",
+      "baslik": {
+        "satirlar": [
+          "NO LINK",
+          "TO DEATHS"
+        ],
+        "not": "in 783 adults aged 65 and older"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "So resveratrol doesn't look like wine's secret ingredient. Other grape compounds are still being studied, but according to the American Heart Association, no research has proven a direct cause-and-effect link between drinking and better heart health.",
+      "gorsel": "an empty velvet-lined jewelry box beside a glass of red wine, soft light, nothing inside the box"
+    },
+    {
+      "id": 33,
+      "bolum": "What heart experts say",
+      "tip": "kart",
+      "metin": "So what does heart guidance say today?",
+      "kart": {
+        "ust": "THE GUIDANCE",
+        "baslik": "Heart experts on alcohol",
+        "alt": "American Heart Association · 2025"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "In 2025, the American Heart Association published a scientific statement on alcohol and heart disease. Its message is plain: if you don't drink, don't start. It does not recommend wine or any alcohol for health benefits.",
+      "gorsel": "a doctor's desk with an open folder, a stethoscope and a red heart symbol, and a glass of red wine placed gently aside",
+      "etiket": "AHA Scientific Statement · Circulation · 2025",
+      "baslik": {
+        "satirlar": [
+          "DON'T DRINK?",
+          "DON'T START"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Heavy and binge drinking are consistently linked with high blood pressure, coronary artery disease, stroke, irregular heart rhythms, and heart failure. The AHA also says any level of drinking carries potential health risks.",
+      "gorsel": "a vintage engraving of a human heart, slightly strained, in a ring of empty glasses and one tall glass of red wine"
+    },
+    {
+      "id": 36,
+      "metin": "If you have high blood pressure, the AHA notes that even one to two drinks a day may make it worse. And for people with high blood pressure or atrial fibrillation, cutting back or stopping may be important.",
+      "gorsel": "a sphygmomanometer cuff resting on a table next to a small glass of red wine, a notepad with blank lines and a pencil",
+      "baslik": {
+        "satirlar": [
+          "HIGH BLOOD",
+          "PRESSURE"
+        ],
+        "not": "even 1 to 2 drinks a day may worsen it"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "The AHA also says alcohol may affect some people differently, including older adults. And it advises people on medicines that interact with alcohol, or with heart failure, uncontrolled high blood pressure or liver disease, not to drink.",
+      "gorsel": "a weekly pill organizer with seven compartments open on a table beside a glass of red wine in soft window light",
+      "baslik": {
+        "satirlar": [
+          "MEDICINES",
+          "AND ALCOHOL"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What do we know, and what don't we?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What is and isn't known",
+        "alt": "Where the evidence runs out"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "What is well supported? Heavy drinking raises risk. In the 2023 review, the risk of dying was 35 percent higher at the highest intake level. And there is no solid proof that a daily glass protects your heart.",
+      "gorsel": "a large antique scale with a tall heap of empty glasses on one side outweighing a single glass of red wine on the other"
+    },
+    {
+      "id": 40,
+      "metin": "What is uncertain? Light drinking could still turn out to help a little for some people. Cleaner studies just haven't shown it. The low-volume result in the review leaned slightly below one, but was not statistically significant.",
+      "gorsel": "a foggy morning landscape with a winding path disappearing among vineyard rows, a single glass of red wine standing on a post at the front"
+    },
+    {
+      "id": 41,
+      "metin": "And what is not supported? The claim that red wine is a proven heart protector. And the idea that non-drinkers should start for their health.",
+      "gorsel": "a cracked stone pedestal with a glass of red wine on top and a small red heart symbol sliding off it"
+    },
+    {
+      "id": 42,
+      "metin": "None of this means a glass at a family dinner is a disaster. The question is whether to count on it for your heart, and the evidence doesn't back that up.",
+      "gorsel": "a warm family dinner table seen from above with roast chicken, vegetables, bread and one glass of red wine, candles in the middle"
+    },
+    {
+      "id": 43,
+      "metin": "One more limit. The big review wasn't designed to answer what happens after sixty specifically. That's why the AHA's note that older adults may respond differently matters.",
+      "gorsel": "a pair of reading glasses resting on a folded newspaper beside a glass of red wine, afternoon sunlight, a walking cane hooked on the chair"
+    },
+    {
+      "id": 44,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you use this? Here are five practical points.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five practical points",
+        "alt": "If you drink wine, or wonder whether to"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "One. If you don't drink, don't start for your heart. The AHA says so plainly, and the cleaner evidence doesn't show a protective effect worth that trade.",
+      "gorsel": "a tall glass of water with a lemon slice beside a closed bottle of red wine on a kitchen counter, morning light"
+    },
+    {
+      "id": 46,
+      "metin": "Two. If you enjoy red wine, treat it as a pleasure, not a heart medicine. The AHA says that for those who drink, the limit is no more than two drinks a day for men and one for women, and that any level carries potential risk.",
+      "gorsel": "a single elegant glass of red wine on a small tray next to a plate of olives and a linen napkin, quiet evening",
+      "baslik": {
+        "satirlar": [
+          "A PLEASURE,",
+          "NOT MEDICINE"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Three. Know what one drink is. For wine, it's five ounces at about 12 percent alcohol, a little over half a cup. Measure it once at home with a measuring cup, and you'll see what that looks like in your own glass.",
+      "gorsel": "a glass measuring cup filled with red wine up to its five ounce mark beside an empty wine glass, on a kitchen counter",
+      "baslik": {
+        "satirlar": [
+          "ONE DRINK",
+          "= 5 OUNCES"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "Four. Check your medicines. Many drugs interact with alcohol, so ask your pharmacist or doctor about yours. Mention it if you have high blood pressure, atrial fibrillation, heart failure, or liver disease.",
+      "gorsel": "a pharmacy counter with a few small brown medicine bottles, a pharmacist's mortar and pestle, and a glass of red wine left on the customer's side"
+    },
+    {
+      "id": 49,
+      "metin": "Five. Ask your doctor which steps matter most for your own heart, such as blood pressure checks, cholesterol, movement, and the way you eat. Those are better bets than a nightly glass.",
+      "gorsel": "an older adult's walking shoes by a front door next to a basket of vegetables, a small red heart symbol hanging on the hook above"
+    },
+    {
+      "id": 50,
+      "metin": "A safety note. Never stop or change a heart medicine because of anything in a video. And if it's hard to cut back on drinking, talk with your doctor. Help is available.",
+      "gorsel": "a consultation room with two chairs facing each other, a stethoscope on the desk and a box of tissues, calm light",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Not a heart medicine",
+        "alt": "Red wine and your heart"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "The French paradox came from comparing countries. And older studies may have flattered light drinkers by mixing sick quitters into the non-drinking group.",
+      "gorsel": "the opening French cafe table with a glass of red wine, and a faint second empty chair, soft light"
+    },
+    {
+      "id": 53,
+      "metin": "The 2023 review of 107 studies found no significant drop in the risk of dying for light drinkers, and higher risk at heavier levels. Genetic evidence pointed away from protection for stroke. And a glass of wine holds only a tiny amount of resveratrol.",
+      "gorsel": "a glass of red wine in the center with three small engraved icons around it: a stack of books, a double helix and a single grape"
+    },
+    {
+      "id": 54,
+      "metin": "The American Heart Association says that if you don't drink, don't start. If you do, stay within the limits, and know that no level is risk-free. A glass of red wine can be a pleasure, but it isn't a heart plan.",
+      "gorsel": "a calm table with a glass of red wine, a small red heart symbol and a stethoscope, arranged with plenty of empty space around them"
+    },
+    {
+      "id": 55,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

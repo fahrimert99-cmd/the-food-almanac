@@ -1,0 +1,16 @@
+{
+  "baslik": ["A CUP OF", "BEANS A DAY?"],
+  "baslik_yt": "A Cup of Beans a Day: What the Trial Found",
+  "aciklama": "In a three-month trial of adults with type 2 diabetes, a cup of legumes a day lowered A1C. But the comparison diet helped too, so here is the honest size of the benefit.",
+  "parcalar": [
+    {"sahne": 14, "cumleler": [0], "gorsel": 1, "baslik": null, "etiket": null},
+    {"sahne": 12, "cumleler": [0], "baslik": {"satirlar": ["1 CUP", "OF LEGUMES"], "vurgu": "-0.5", "not": "A1C points in 3 months"}, "etiket": "Jenkins et al. · Arch Intern Med · 2012"},
+    {"sahne": 13, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 14, "cumleler": [1, 2], "gorsel": 13, "baslik": {"satirlar": ["BEANS VS", "WHEAT FIBER"], "vurgu": "-0.2", "not": "extra A1C points"}, "etiket": "Jenkins et al. · Arch Intern Med · 2012"},
+    {"sahne": 16, "cumleler": [1, 2], "baslik": null, "etiket": null},
+    {"sahne": 24, "cumleler": [0], "etiket": null},
+    {"sahne": 25, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 54, "cumleler": [0], "baslik": {"satirlar": ["ON DIABETES", "MEDICINE?"]}, "etiket": null},
+    {"sahne": 47, "cumleler": [0, 1], "etiket": null}
+  ]
+}

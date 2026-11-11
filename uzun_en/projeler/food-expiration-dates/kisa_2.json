@@ -1,0 +1,14 @@
+{
+  "baslik": ["COLD FRIDGE,", "STILL RISKY?"],
+  "baslik_yt": "The Germ That Grows in Your Fridge",
+  "aciklama": "Listeria can grow at refrigerator temperatures, and adults 65 and older are at higher risk. Here is what the CDC and FDA say to do about deli meat and fridge temperature.",
+  "parcalar": [
+    {"sahne": 31, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 31, "cumleler": [1], "baslik": {"satirlar": ["GROWS IN", "THE FRIDGE"], "vurgu": "40°F", "not": "FDA fridge limit"}, "etiket": "FDA · Listeria (Listeriosis)"},
+    {"sahne": 29, "cumleler": [0], "baslik": null, "etiket": "Silk et al. · Clin Infect Dis · 2012"},
+    {"sahne": 28, "cumleler": [1]},
+    {"sahne": 30, "cumleler": [0]},
+    {"sahne": 53, "cumleler": [1], "baslik": {"satirlar": ["HEAT THE", "DELI MEAT"], "vurgu": "165°F", "not": "or until steaming hot"}, "etiket": "CDC · Listeria prevention"},
+    {"sahne": 39, "cumleler": [2]}
+  ]
+}

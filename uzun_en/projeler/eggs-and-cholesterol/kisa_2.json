@@ -1,0 +1,18 @@
+{
+  "baslik": ["SKIP THE", "YOLK?"],
+  "baslik_yt": "Should You Skip the Egg Yolk?",
+  "aciklama": "For years, U.S. guidelines capped dietary cholesterol at 300 milligrams a day, and one egg used up more than half of it. Here is what the research found about yolks since then.",
+  "parcalar": [
+    {"sahne": 8, "cumleler": [0], "baslik": null},
+    {"sahne": 11, "cumleler": [1, 2], "baslik": {"satirlar": ["2010 LIMIT:", "300 MG A DAY"]}},
+    {"sahne": 12, "cumleler": [0], "gorsel": 15,
+     "baslik": {"satirlar": ["1 EGG =", "OVER HALF"], "vurgu": "185 MG", "not": "cholesterol per large egg"},
+     "etiket": "USDA FoodData Central"},
+    {"sahne": 12, "cumleler": [1], "baslik": {"satirlar": ["EGG WHITE", "OMELETS"]}},
+    {"sahne": 17, "cumleler": [1], "baslik": {"satirlar": ["SMALLER THAN", "WE THOUGHT"]}},
+    {"sahne": 24, "cumleler": [0], "baslik": {"satirlar": ["ABOUT 7 IN 10:", "MILD OR NONE"]},
+     "etiket": "Fernandez · Curr Opin Clin Nutr · 2006"},
+    {"sahne": 26, "cumleler": [1], "baslik": {"satirlar": ["KNOW YOUR", "OWN NUMBERS"]}},
+    {"sahne": 52, "cumleler": [1], "baslik": {"satirlar": ["SWAP THE SIDES", "KEEP THE EGG"]}}
+  ]
+}

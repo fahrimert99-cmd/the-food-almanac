@@ -1,0 +1,16 @@
+{
+  "baslik": ["TURMERIC:", "ALWAYS SAFE?"],
+  "baslik_yt": "Turmeric Supplements: 3 Safety Checks First",
+  "aciklama": "Natural does not always mean risk-free. Here is what researchers and regulators report about turmeric supplements, the liver and blood thinners.",
+  "parcalar": [
+    {"sahne": 38, "cumleler": [1], "gorsel": 39, "baslik": null, "etiket": null},
+    {"sahne": 40, "cumleler": [0], "baslik": {"satirlar": ["THE LIVER"], "vurgu": "10", "not": "liver injury cases"}, "etiket": "Halegoua-DeMarzio · Am J Med · 2023"},
+    {"sahne": 40, "cumleler": [1], "baslik": null, "etiket": "Halegoua-DeMarzio · Am J Med · 2023"},
+    {"sahne": 40, "cumleler": [2], "gorsel": 41, "baslik": null, "etiket": null},
+    {"sahne": 41, "cumleler": [0], "baslik": {"satirlar": ["RARE, BUT", "REAL"]}, "etiket": null},
+    {"sahne": 43, "cumleler": [0], "baslik": {"satirlar": ["BLOOD", "THINNERS"]}, "etiket": "Medsafe · New Zealand · 2018"},
+    {"sahne": 44, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 44, "cumleler": [1], "gorsel": 43, "baslik": {"satirlar": ["SUPPLEMENTS,", "NOT FOOD"]}, "etiket": null},
+    {"sahne": 47, "cumleler": [1], "baslik": {"satirlar": ["ASK YOUR", "DOCTOR FIRST"]}, "etiket": null}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "baslik": ["PRUNES VS", "BONE LOSS?"],
+  "baslik_yt": "Do Prunes Really Slow Bone Loss After 60?",
+  "aciklama": "A 12 month trial of 235 postmenopausal women tested prunes against hip bone loss. Here is what slowed it, and what did not.",
+  "parcalar": [
+    {"sahne": 49, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 49, "cumleler": [1, 2], "gorsel": 58,
+     "baslik": {"satirlar": ["SLOWER", "HIP LOSS"], "vurgu": "-0.3%", "not": "vs –1.1% with no prunes"},
+     "etiket": "De Souza et al. · Am J Clin Nutr · 2022"},
+    {"sahne": 12, "cumleler": [0]},
+    {"sahne": 15, "cumleler": [0]},
+    {"sahne": 16, "cumleler": [0]},
+    {"sahne": 18, "cumleler": [1, 2]},
+    {"sahne": 52, "cumleler": [0]}
+  ]
+}

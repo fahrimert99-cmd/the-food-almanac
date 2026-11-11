@@ -1,0 +1,14 @@
+{
+  "baslik": ["YOUR YOGURT", "SUGAR TRAP?"],
+  "baslik_yt": "Is Your Yogurt Hiding Sugar? 900 Tubs Checked",
+  "aciklama": "Researchers compared the sugar in about 900 yogurts from five UK online supermarkets. Here is what they found, and how to keep sugar out of your bowl.",
+  "parcalar": [
+    {"sahne": 37, "cumleler": [1], "gorsel": 38, "baslik": null, "etiket": null},
+    {"sahne": 38, "cumleler": [0], "baslik": {"satirlar": ["900 YOGURTS", "CHECKED"], "vurgu": "900", "not": "yogurts compared"}, "etiket": "Moore et al. · BMJ Open · 2018"},
+    {"sahne": 39, "cumleler": [0], "gorsel": 42, "baslik": {"satirlar": ["PLAIN OR", "GREEK"], "vurgu": "5 G", "not": "sugar per 100 g, median"}, "etiket": "Moore et al. · BMJ Open · 2018"},
+    {"sahne": 39, "cumleler": [1], "gorsel": 41, "baslik": {"satirlar": ["FLAVORED TO", "DESSERT STYLE"], "vurgu": "12-16 G", "not": "sugar per 100 g, median"}, "etiket": "Moore et al. · BMJ Open · 2018"},
+    {"sahne": 40, "cumleler": [0], "baslik": {"satirlar": ["LACTOSE", "COUNTS TOO"]}, "etiket": null},
+    {"sahne": 40, "cumleler": [1], "gorsel": 38, "baslik": {"satirlar": ["UNDER 9%", "LOW SUGAR"], "vurgu": "<9%", "not": "of yogurts were low sugar"}, "etiket": "Moore et al. · BMJ Open · 2018"},
+    {"sahne": 42, "cumleler": [1], "baslik": {"satirlar": ["CHOOSE PLAIN", "ADD YOUR OWN"]}, "etiket": null}
+  ]
+}

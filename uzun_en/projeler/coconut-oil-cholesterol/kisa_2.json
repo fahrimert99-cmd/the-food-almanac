@@ -1,0 +1,15 @@
+{
+  "baslik": ["COCONUT OIL", "= MCT OIL?"],
+  "baslik_yt": "Coconut Oil Is Not MCT Oil: Only 12% Matches",
+  "aciklama": "Coconut oil is often sold as full of MCTs, the fats linked to a small weight benefit. USDA data show the two shortest medium-chain fats are only about 12 percent of the jar.",
+  "parcalar": [
+    {"sahne": 55, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 30, "cumleler": [0], "baslik": {"satirlar": ["WHAT IS", "MCT?"]}, "etiket": null},
+    {"sahne": 31, "cumleler": [0]},
+    {"sahne": 31, "cumleler": [1], "baslik": null},
+    {"sahne": 32, "cumleler": [0, 1]},
+    {"sahne": 33, "cumleler": [0]},
+    {"sahne": 34, "cumleler": [1]},
+    {"sahne": 46, "cumleler": [1]}
+  ]
+}

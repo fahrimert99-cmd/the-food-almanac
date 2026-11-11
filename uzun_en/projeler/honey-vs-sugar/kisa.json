@@ -1,0 +1,14 @@
+{
+  "baslik": ["HONEY BEATS", "SUGAR?"],
+  "baslik_yt": "Honey vs Sugar: Is It Really Better for Blood Sugar?",
+  "aciklama": "Honey's glycemic index is about 61, and table sugar's is about 65. Here is what a 2022 analysis of 18 trials found, and how weak that evidence is.",
+  "parcalar": [
+    {"sahne": 5, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 8, "cumleler": [1]},
+    {"sahne": 9, "cumleler": [0, 1], "baslik": null, "etiket": null},
+    {"sahne": 11, "cumleler": [0]},
+    {"sahne": 21, "cumleler": [0]},
+    {"sahne": 28, "cumleler": [0, 1], "baslik": {"satirlar": ["PUBLICATION", "BIAS"]}, "etiket": "Ahmed et al. · Nutr Rev · 2022"},
+    {"sahne": 55, "cumleler": [0, 1], "baslik": {"satirlar": ["REPLACE,", "MEASURE, COUNT"]}, "etiket": null}
+  ]
+}

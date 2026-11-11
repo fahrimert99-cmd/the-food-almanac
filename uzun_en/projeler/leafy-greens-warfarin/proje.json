@@ -1,0 +1,593 @@
+{
+  "slug": "leafy-greens-warfarin",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Warfarin and Leafy Greens: Avoid or Keep Steady?",
+  "yorum": "If you take a blood thinner, has anyone ever told you to avoid spinach or kale? What did your clinic or pharmacist actually tell you about greens?",
+  "aciklama_giris": "If you take warfarin, you may have been told to stay away from spinach, kale and broccoli. But in a small randomized crossover trial of 12 patients, cutting vitamin K intake by 80 percent pushed the average INR clotting score up from 2.6 to 3.3, and adding vitamin K lowered it. The advice from official drug information is to keep your vitamin K intake consistent from week to week.\n\nIn this video we look at how warfarin and vitamin K work against each other, what Franco and colleagues, Khan and colleagues, and Sconce and colleagues found, how much vitamin K is in common greens, why newer blood thinners such as apixaban and rivaroxaban have no vitamin K diet rule, where the evidence is thin, and five practical ways to eat greens safely on warfarin.",
+  "kaynaklar": [
+    "Franco V, Polanczyk CA, Clausell N, Rohde LE. Role of dietary vitamin K intake in chronic oral anticoagulation: prospective evidence from observational and randomized protocols. American Journal of Medicine. 2004;116(10):651-656. doi:10.1016/j.amjmed.2003.12.036. PMID 15121490.",
+    "Khan T, Wynne H, Wood P, Torrance A, Hankey C, Avery P, Kesteven P, Kamali F. Dietary vitamin K influences intra-individual variability in anticoagulant response to warfarin. British Journal of Haematology. 2004;124(3):348-354. doi:10.1046/j.1365-2141.2003.04787.x. PMID 14717783.",
+    "Sconce E, Avery P, Wynne H, Kamali F. Vitamin K supplementation can improve stability of anticoagulation for patients with unexplained variability in response to warfarin. Blood. 2007;109(6):2419-2423. doi:10.1182/blood-2006-09-049262. PMID 17110451.",
+    "Mahtani KR, Heneghan CJ, Nunan D, Roberts NW. Vitamin K for improved anticoagulation control in patients receiving warfarin. Cochrane Database of Systematic Reviews. 2014;(5):CD009917. doi:10.1002/14651858.CD009917.pub2. PMID 24832594.",
+    "Granger CB, Alexander JH, McMurray JJV, et al. Apixaban versus warfarin in patients with atrial fibrillation. New England Journal of Medicine. 2011;365(11):981-992. doi:10.1056/NEJMoa1107039. PMID 21870978.",
+    "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation. New England Journal of Medicine. 2011;365(10):883-891. doi:10.1056/NEJMoa1009638. PMID 21830957.",
+    "MedlinePlus, National Library of Medicine. Warfarin: drug information (special dietary instructions). https://medlineplus.gov/druginfo/meds/a682277.html",
+    "MedlinePlus, National Library of Medicine. Vitamin K (adequate intake and food sources). https://medlineplus.gov/ency/article/002407.htm",
+    "MedlinePlus, National Library of Medicine. Apixaban and rivaroxaban: drug information (special dietary instructions). https://medlineplus.gov/druginfo/meds/a613032.html and https://medlineplus.gov/druginfo/meds/a611049.html",
+    "U.S. Department of Agriculture. FoodData Central, SR Legacy: spinach, cooked, boiled, drained; kale, raw (vitamin K, phylloquinone). https://fdc.nal.usda.gov/"
+  ],
+  "kapak": {
+    "satirlar": [
+      "GREENS",
+      "ON WARFARIN?"
+    ],
+    "vurgu": "–0.2",
+    "vurgu_alt": "INR",
+    "gorsel": "a huge bunch of dark green curly kale leaves with fresh spinach leaves and broccoli florets piled tightly together, very large and close up, a small white pill bottle with a blank label tucked in front"
+  },
+  "etiketler": [
+    "warfarin and leafy greens",
+    "vitamin k and blood thinners",
+    "foods to avoid on warfarin",
+    "eliquis vs warfarin diet",
+    "coumadin diet",
+    "vitamin k foods",
+    "inr",
+    "apixaban",
+    "rivaroxaban",
+    "spinach and kale"
+  ],
+  "seslendirme_duzelt": {
+    "INR": "I N R",
+    "Coumadin": "KOO-muh-din",
+    "apixaban": "uh-PIX-uh-ban",
+    "rivaroxaban": "riv-uh-ROX-uh-ban",
+    "Eliquis": "ELL-ih-kwiss",
+    "Xarelto": "zuh-REL-toe",
+    "ARISTOTLE": "air-iss-TOT-ul",
+    "ROCKET": "ROCKET",
+    "Rohde": "ROH-duh",
+    "CYP2C9": "C Y P 2 C 9",
+    "mcg": "micrograms",
+    "µg": "micrograms"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Warfarin and vitamin K",
+      "metin": "If you take warfarin, you may have been told to skip spinach and kale. But in a small trial of 12 adults, eating 80 percent less vitamin K pushed their clotting test up.",
+      "gorsel": "a bunch of dark green kale leaves and a pile of fresh spinach leaves on a wooden kitchen table, a small white pill bottle with a blank label beside them, soft morning light",
+      "etiket": "Franco et al. · Am J Med · 2004",
+      "baslik": {
+        "satirlar": [
+          "LESS GREENS",
+          "HIGHER INR"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "metin": "So skipping greens may not be the safe choice.",
+      "gorsel": "a dinner plate with a generous serving of steamed spinach and broccoli beside a pill organizer with blank lids on a wooden table"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know the real rule, and why newer blood thinners work differently.",
+      "gorsel": "two small pill bottles with blank labels standing beside a bunch of kale and a head of broccoli, a magnifying glass resting in front of them"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what warfarin actually does.",
+      "gorsel": "an antique brass microscope beside a bunch of kale, a pill bottle with a blank label and a small open notebook with blank pages on a wooden desk"
+    },
+    {
+      "id": 5,
+      "metin": "Warfarin is a blood thinner, prescribed to help prevent clots that can cause strokes. It doesn't really thin anything. It makes it harder for your body to form clots.",
+      "gorsel": "a tube-shaped vessel opened to show small red discs flowing smoothly, a few loose thread-like strands drifting among them, textbook engraving style",
+      "baslik": {
+        "satirlar": [
+          "WARFARIN"
+        ],
+        "not": "makes it harder for clots to form"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "It works by getting in the way of vitamin K. Your liver needs vitamin K to build several of the proteins that help blood clot. With less vitamin K to work with, it builds fewer of them.",
+      "gorsel": "a textbook engraving of a human liver with small green leaf-shaped particles entering it and a few small coral-colored protein shapes leaving it, dashed lines linking them",
+      "baslik": {
+        "satirlar": [
+          "VITAMIN K",
+          "BUILDS CLOTTERS"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Because of that, vitamin K in your food pulls in the opposite direction. More vitamin K can weaken warfarin's effect. Less can make it stronger.",
+      "gorsel": "an old-fashioned balance scale, one pan holding a bunch of kale and spinach, the other pan holding a single pill, the scale gently tilting",
+      "baslik": {
+        "satirlar": [
+          "A TUG OF WAR"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "metin": "Doctors track this with a blood test called the INR, which shows how long your blood takes to clot. In the large trial we'll visit later, the target for people on warfarin was an INR between 2 and 3.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes, an antique timer and an open notebook with blank pages",
+      "baslik": {
+        "satirlar": [
+          "THE INR"
+        ],
+        "vurgu": "2–3",
+        "not": "the target range in the ARISTOTLE trial"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Too low, and clots are a risk. Too high, and bleeding is a risk. Clinics steer you with tests and dose changes, so the goal isn't a low vitamin K diet; it's a steady one.",
+      "gorsel": "a gentle hand-drawn wave line staying within two parallel horizontal bands on aged paper, a bunch of broccoli and spinach in the corner",
+      "baslik": {
+        "satirlar": [
+          "STEADY",
+          "NOT ZERO"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "bolum": "Where vitamin K hides",
+      "tip": "kart",
+      "metin": "So where is vitamin K found? Mostly in green, leafy plants.",
+      "kart": {
+        "ust": "WHERE IT HIDES",
+        "baslik": "Vitamin K in your food",
+        "alt": "Leafy greens · Broccoli · Some oils"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Kale, spinach, collards, turnip greens and broccoli are named as food sources by MedlinePlus, from the National Library of Medicine. Fish, meat, eggs and cereals have smaller amounts.",
+      "gorsel": "a market table with bunches of kale, spinach, collard greens, turnip greens, Swiss chard and broccoli florets arranged in neat rows, a small egg basket at the end"
+    },
+    {
+      "id": 12,
+      "metin": "To give you a sense of scale, government food data show about 494 micrograms of vitamin K in 100 grams of boiled spinach, roughly three and a half ounces. Raw kale has about 390 micrograms in the same weight.",
+      "gorsel": "a small white bowl of boiled spinach beside a bunch of raw kale on an old kitchen scale with a blank dial",
+      "etiket": "USDA · FoodData Central",
+      "baslik": {
+        "satirlar": [
+          "COOKED",
+          "SPINACH"
+        ],
+        "vurgu": "494",
+        "not": "micrograms of vitamin K in 100 grams"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Compare that with the daily target. Adult men are advised to get about 120 micrograms a day, and women about 90. One serving of cooked greens can hold several days' worth.",
+      "gorsel": "a tiny teaspoon heaped with a few green crystals beside a very large pile of cooked spinach in a bowl, showing a contrast in size",
+      "baslik": {
+        "satirlar": [
+          "90 TO 120",
+          "MICROGRAMS"
+        ],
+        "not": "the daily adequate intake for adults"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "That's why greens earn their reputation on warfarin. They're the biggest swing factor on the plate. But a swing factor isn't a forbidden food, and the studies show why.",
+      "gorsel": "a plate of cooked collard greens, broccoli florets and a small piece of baked fish on a wooden table, a pill organizer with blank lids beside it"
+    },
+    {
+      "id": 15,
+      "bolum": "What happens when you cut greens",
+      "tip": "kart",
+      "metin": "Let's look at what happens when people really change how much vitamin K they eat.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Cut the greens, then add them",
+        "alt": "Franco et al. · Am J Med · 2004"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "First, researchers led by Valéria Franco watched 39 people at an anticoagulation clinic over 230 visits. The more vitamin K a person ate, the lower their clotting score tended to be.",
+      "gorsel": "a quiet clinic waiting room with a row of empty wooden chairs, a small table with a notebook and a bowl of fresh spinach leaves",
+      "etiket": "Franco et al. · Am J Med · 2004"
+    },
+    {
+      "id": 17,
+      "metin": "Then came a small experiment. Twelve patients with stable warfarin control ate two different hospital diets, one to two weeks apart, each for four days.",
+      "gorsel": "a hospital meal tray with a covered dish, a glass of water and a pill cup, set on a bedside table by a tall window",
+      "baslik": {
+        "satirlar": [
+          "12 PATIENTS",
+          "2 DIETS"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "metin": "One diet had 80 percent less vitamin K than usual. The other had 500 percent more.",
+      "gorsel": "two plates side by side, the left one with plain rice and chicken and no greens, the right one piled high with kale, spinach and broccoli",
+      "baslik": {
+        "satirlar": [
+          "–80%  VS  +500%"
+        ],
+        "not": "vitamin K compared with usual intake"
+      }
+    },
+    {
+      "id": 19,
+      "tip": "grafik",
+      "metin": "On the low vitamin K diet, the average INR climbed from 2.6 to 3.3 by day seven. On the high vitamin K diet, it dipped from 3.1 to 2.8.",
+      "grafik": {
+        "baslik": "Average INR before and after the diets",
+        "alt": "Low vitamin K diet and high vitamin K diet, same 12 patients",
+        "cubuklar": [
+          {
+            "etiket": "Low-K start",
+            "deger": 2.6,
+            "metin": "2.6"
+          },
+          {
+            "etiket": "Low-K end",
+            "deger": 3.3,
+            "metin": "3.3"
+          },
+          {
+            "etiket": "High-K start",
+            "deger": 3.1,
+            "metin": "3.1"
+          },
+          {
+            "etiket": "High-K end",
+            "deger": 2.8,
+            "metin": "2.8"
+          }
+        ],
+        "kaynak": "Franco et al., Am J Med 2004 · 12 patients on stable warfarin, randomized crossover"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "So eating less vitamin K made the blood thinner act stronger, which can raise bleeding risk. Eating more made it act weaker.",
+      "gorsel": "a simple old-fashioned thermometer-like gauge with a green bulb rising on one side and falling on the other, a bunch of kale resting at its base",
+      "baslik": {
+        "satirlar": [
+          "LESS GREENS",
+          "STRONGER DRUG"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "That means skipping greens isn't a neutral, safe move. It changes your numbers too, just in the other direction.",
+      "gorsel": "a plate of plain white rice and chicken on a bare table, a lonely sprig of kale lying at the far edge, lots of empty paper around it"
+    },
+    {
+      "id": 22,
+      "metin": "A caution, though. Twelve people, four days, and very large changes in diet. This shows that vitamin K matters, not exactly how much of a swing is too much.",
+      "gorsel": "a single small stack of research papers with blank pages beside a magnifying glass and a bowl of spinach on a plain desk"
+    },
+    {
+      "id": 23,
+      "metin": "Another study followed 53 people with stable warfarin control for four weeks. They wrote down everything they ate, and had weekly blood tests.",
+      "gorsel": "an open food diary notebook with blank lines and a pencil, beside a bowl of mixed greens and a pill organizer with blank lids",
+      "etiket": "Khan et al. · Br J Haematol · 2004"
+    },
+    {
+      "id": 24,
+      "metin": "When a person's four-day average of vitamin K was higher, their INR was lower. For every extra 100 micrograms in the daily diet, the INR was about 0.2 lower.",
+      "gorsel": "a bowl of cooked spinach with a small downward-curving dashed arrow drawn on aged paper beside it, a pencil laid across",
+      "etiket": "Khan et al. · Br J Haematol · 2004",
+      "baslik": {
+        "satirlar": [
+          "+100 MICROGRAMS"
+        ],
+        "vurgu": "–0.2",
+        "not": "INR, on average, per 100 micrograms of vitamin K a day"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Remember that one serving of cooked greens can hold several times 100 micrograms. So a week with no greens, followed by one big spinach dinner, may move the number.",
+      "gorsel": "a large dinner plate heaped with steamed spinach next to a calendar page with blank squares, a fork resting on the plate"
+    },
+    {
+      "id": 26,
+      "metin": "The researchers concluded that consistent vitamin K intake could reduce those swings and make warfarin safer. It's an association, not proof, but it matches the experiment.",
+      "gorsel": "a calm wave line drawn gently across aged paper, a magnifying glass above it and a bunch of kale in the corner",
+      "etiket": "Khan et al. · Br J Haematol · 2004"
+    },
+    {
+      "id": 27,
+      "bolum": "The steady rule",
+      "tip": "kart",
+      "metin": "This is the idea behind the advice you hear at anticoagulation clinics.",
+      "kart": {
+        "ust": "THE RULE",
+        "baslik": "Steady beats strict",
+        "alt": "Same amount, week to week"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "MedlinePlus, from the National Library of Medicine, puts it plainly: eat consistent amounts of vitamin K foods on a week-to-week basis.",
+      "gorsel": "a weekly pill organizer with blank lids on a kitchen counter, beside a bowl of green beans, broccoli and spinach",
+      "baslik": {
+        "satirlar": [
+          "WEEK TO WEEK"
+        ],
+        "not": "consistent amounts of vitamin K foods"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "It also says not to eat large amounts of leafy green vegetables. So the rule isn't zero, and it isn't unlimited. It's a regular amount that you and your clinic can plan around.",
+      "gorsel": "a medium-sized bowl of mixed leafy greens on a wooden table, a measuring cup and a small notebook with blank pages beside it"
+    },
+    {
+      "id": 30,
+      "metin": "Researchers even tested the steadiness idea with a pill. In a placebo-controlled trial, 70 adults whose warfarin response was unstable for no known reason took 150 micrograms of vitamin K a day, or a placebo, for six months.",
+      "gorsel": "two identical small white pill bottles with blank labels side by side on a clinic desk, a calendar page with blank squares behind them",
+      "etiket": "Sconce et al. · Blood · 2007"
+    },
+    {
+      "id": 31,
+      "tip": "grafik",
+      "metin": "Time in the target range rose by 28 percent with vitamin K, and 15 percent with placebo. And 19 of 35 people reached stable control on vitamin K, compared with 7 of 33 on placebo.",
+      "grafik": {
+        "baslik": "Rise in time spent in target INR range",
+        "alt": "Daily vitamin K supplement vs placebo, six months",
+        "cubuklar": [
+          {
+            "etiket": "Vitamin K",
+            "deger": 28,
+            "metin": "+28%"
+          },
+          {
+            "etiket": "Placebo",
+            "deger": 15,
+            "metin": "+15%"
+          }
+        ],
+        "kaynak": "Sconce et al., Blood 2007 · 70 adults on warfarin with unstable control"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "In these patients, a small steady amount of vitamin K helped. For them, steadier intake may have mattered more than low intake.",
+      "gorsel": "a gentle hill-shaped curve drawn on aged paper that flattens into a calm level line, a single green leaf at its end"
+    },
+    {
+      "id": 33,
+      "metin": "But don't take this as a reason to buy a supplement. It was a pill, in a selected group, supervised by a clinic. A Cochrane review found only two such trials, 100 people in total, and called the evidence insufficient.",
+      "gorsel": "a pharmacy shelf with a few plain amber bottles with blank labels, a pharmacist's mortar and pestle in front",
+      "etiket": "Mahtani et al. · Cochrane Database · 2014",
+      "baslik": {
+        "satirlar": [
+          "NOT A REASON",
+          "FOR SUPPLEMENTS"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "bolum": "Newer blood thinners",
+      "tip": "kart",
+      "metin": "Now, what about the newer blood thinners?",
+      "kart": {
+        "ust": "A DIFFERENT DRUG",
+        "baslik": "No vitamin K rule",
+        "alt": "Apixaban · Rivaroxaban"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Two common ones are apixaban, sold as Eliquis, and rivaroxaban, sold as Xarelto. They're used for the same kinds of problems, including stroke prevention in atrial fibrillation, an irregular heart rhythm.",
+      "gorsel": "two small plain pill bottles with blank labels standing next to a simple heart engraving with a wavy rhythm line drawn above it"
+    },
+    {
+      "id": 36,
+      "metin": "They work differently. Instead of interfering with vitamin K, they block a clotting protein called factor Xa. Their MedlinePlus pages say: unless your doctor tells you otherwise, continue your normal diet.",
+      "gorsel": "a plate of steamed spinach, broccoli and baked fish with a glass of water, set in front of a single pill bottle with a blank label",
+      "baslik": {
+        "satirlar": [
+          "CONTINUE YOUR",
+          "NORMAL DIET"
+        ],
+        "not": "MedlinePlus, apixaban and rivaroxaban"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "The big trials fit that picture. These drugs were given at fixed doses, while the warfarin doses were adjusted to hit an INR target.",
+      "gorsel": "on one side a pill bottle beside a plain white dinner plate; on the other side a pill bottle beside a laboratory test tube rack, a dashed line between the two sides"
+    },
+    {
+      "id": 38,
+      "metin": "In the ARISTOTLE trial, 18,201 people with atrial fibrillation were randomly given apixaban or warfarin. Over a median of 1.8 years, stroke or clots elsewhere in the body happened 1.27 percent per year on apixaban, and 1.60 percent on warfarin.",
+      "gorsel": "a long wooden hospital corridor with two empty chairs and a clipboard on a small table, soft light from a window at the end",
+      "etiket": "Granger et al. · N Engl J Med · 2011",
+      "baslik": {
+        "satirlar": [
+          "18,201",
+          "PATIENTS"
+        ],
+        "not": "apixaban versus warfarin, atrial fibrillation"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "Major bleeding was lower with apixaban too: 2.13 percent per year, compared with 3.09 percent on warfarin.",
+      "gorsel": "two glass laboratory cylinders filled with small red discs to two different heights, a taller one beside a shorter one, a pill bottle in front of each"
+    },
+    {
+      "id": 40,
+      "metin": "Rivaroxaban was tested in 14,264 people with the same kind of rhythm problem. It did about as well as warfarin at preventing strokes, 2.1 versus 2.4 percent per year, with similar overall bleeding.",
+      "gorsel": "an open textbook-style research journal stacked on a desk beside a pill bottle with a blank label and a pair of round eyeglasses",
+      "etiket": "Patel et al. · N Engl J Med · 2011"
+    },
+    {
+      "id": 41,
+      "metin": "So why doesn't everyone switch? Your doctor weighs your heart condition, your kidneys and your other medicines. Never stop or switch a blood thinner on your own.",
+      "gorsel": "a doctor's consultation desk with a stethoscope, a closed notebook and a single pill bottle with a blank label",
+      "baslik": {
+        "satirlar": [
+          "NEVER SWITCH",
+          "ON YOUR OWN"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What we don't know",
+        "alt": "Small trials · Limits"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "The strongest diet experiment had twelve people. The everyday study was observational, which shows a link, not proof of cause.",
+      "gorsel": "a small group of twelve empty wooden chairs arranged in a quiet room, a single notebook on one chair"
+    },
+    {
+      "id": 44,
+      "metin": "The abstracts we read don't report ages, so we can't say how closely these patients match people in their sixties and seventies. And no large trial has compared a steady greens diet with no greens for clots or bleeding.",
+      "gorsel": "a quiet research desk with stacked journals with blank covers, an oil lamp and a teacup with rising steam"
+    },
+    {
+      "id": 45,
+      "metin": "The advice rests on how the drug works, and on these INR studies. It's sensible and well accepted, but it's not been tested in a giant trial.",
+      "gorsel": "a signpost standing in a green meadow with two blank arrow-shaped boards pointing the same way, a bunch of kale at its foot"
+    },
+    {
+      "id": 46,
+      "metin": "So here's what's not supported. That you must avoid all greens. That greens make warfarin stop working. Or that you should change drugs just to eat what you like.",
+      "gorsel": "a bunch of kale and a bowl of spinach on a wooden table with a pill organizer beside them, no other objects",
+      "baslik": {
+        "satirlar": [
+          "THREE MYTHS"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Greens aren't the only thing. MedlinePlus also mentions certain vegetable oils that are high in vitamin K. Ask your pharmacist about oils, supplements and any new medicine.",
+      "gorsel": "a small glass bottle of cooking oil beside a bowl of spinach and a plain pill bottle with a blank label on a kitchen counter"
+    },
+    {
+      "id": 48,
+      "bolum": "How to eat greens on warfarin",
+      "tip": "kart",
+      "metin": "So how do you use all this? Here are five practical ways.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Keep it steady",
+        "alt": "Five practical ways"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "One. Don't cut greens out on your own. If you've been avoiding them, talk to your anticoagulation clinic before adding them back, because your dose may need adjusting.",
+      "gorsel": "a telephone on a wooden desk beside a bunch of kale and a notebook with blank pages"
+    },
+    {
+      "id": 50,
+      "metin": "Two. Pick a pattern. Maybe a serving of cooked greens a few times a week, or a salad every day. Whatever you choose, aim for about the same amount week to week.",
+      "gorsel": "a weekly pill organizer with blank lids beside a bowl of cooked greens and a bowl of fresh salad on a kitchen table"
+    },
+    {
+      "id": 51,
+      "metin": "Three. Know the big ones. Cooked spinach, kale, collards, turnip greens and Swiss chard lead the list, so keep their portions steady.",
+      "gorsel": "five small plates in a row on a wooden counter, each holding cooked spinach, kale, collards, turnip greens or Swiss chard"
+    },
+    {
+      "id": 52,
+      "metin": "Four. Watch for changes, not just greens. A new diet, a daily smoothie, a vitamin or supplement, or a stretch of poor appetite can all change your intake. Tell your clinic.",
+      "gorsel": "a blender holding green leaves beside a bottle of vitamins with a blank label and a glass of water on a kitchen counter"
+    },
+    {
+      "id": 53,
+      "metin": "Five. Keep your INR checks, and tell every doctor and pharmacist that you take warfarin. Ask for a list of vitamin K foods, as MedlinePlus suggests.",
+      "gorsel": "a pharmacy counter with a paper bag, a pill bottle with a blank label and a pharmacist's hands handing over a folded blank leaflet"
+    },
+    {
+      "id": 54,
+      "metin": "One safety note. Your target INR and your dose are set for you personally. Don't change your medicine, or make a big change to your diet, without asking your care team first.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a pill organizer with blank lids",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "And if you take apixaban or rivaroxaban, their pages say to continue your normal diet unless your doctor says otherwise. Keep taking the medicine exactly as prescribed.",
+      "gorsel": "a healthy dinner plate with baked fish, steamed broccoli and spinach, a glass of water and a single pill bottle with a blank label beside it"
+    },
+    {
+      "id": 56,
+      "metin": "Here's a simple example. If you enjoy a spinach salad on Sundays and Wednesdays, keep that rhythm. The trouble comes from skipping it for weeks, then eating it three nights in a row.",
+      "gorsel": "a wooden table with a large bowl of spinach salad, a fork and a simple wall calendar with two days circled and no writing"
+    },
+    {
+      "id": 57,
+      "metin": "If you take several medicines, keep one up-to-date list of everything, including supplements and oils, and bring it to every visit. A pharmacist can check each new item for interactions.",
+      "gorsel": "a pharmacist's counter with a blank folded sheet of paper, a pencil, a small stack of pill bottles with blank labels and a bottle of cooking oil"
+    },
+    {
+      "id": 58,
+      "metin": "And if you're ever unsure about a food, call your clinic and ask before the meal, not after. Questions about food are a perfectly normal thing to ask.",
+      "gorsel": "an old telephone beside a plate of steamed broccoli and spinach on a kitchen table, a notebook with blank pages open next to it"
+    },
+    {
+      "id": 59,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Steady, not zero",
+        "alt": "Consistent vitamin K on warfarin"
+      }
+    },
+    {
+      "id": 60,
+      "metin": "Warfarin works against vitamin K, so big changes in vitamin K can move your INR. In a twelve-person trial, eating 80 percent less raised it from 2.6 to 3.3.",
+      "gorsel": "a bunch of kale and a bowl of spinach on a wooden table with a pill bottle with a blank label, framed by broccoli florets at the corners"
+    },
+    {
+      "id": 61,
+      "metin": "That's why the advice is steady, not zero. Eat consistent amounts of vitamin K foods from week to week, and tell your clinic when your habits change.",
+      "gorsel": "a weekly pill organizer with blank lids beside a plate of steamed greens, a pencil and a notebook with blank pages"
+    },
+    {
+      "id": 62,
+      "metin": "Newer blood thinners like apixaban and rivaroxaban don't carry this diet rule. But choosing between drugs is a decision for you and your doctor.",
+      "gorsel": "two pill bottles with blank labels beside a plate of broccoli and spinach, a doctor's stethoscope lying in front"
+    },
+    {
+      "id": 63,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "baslik": ["FROZEN VEG:", "SECOND BEST?"],
+  "baslik_yt": "Frozen vs Fresh Veg: What Lab Studies Found",
+  "aciklama": "Is frozen produce really second best? Controlled studies compared vitamin C in fresh, fridge-stored and frozen vegetables, and the results may surprise you.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [1]},
+    {"sahne": 17, "cumleler": [0, 1]},
+    {"sahne": 21, "cumleler": [0, 1]},
+    {"sahne": 30, "cumleler": [0]},
+    {"sahne": 53, "cumleler": [0, 1], "baslik": {"satirlar": ["IT DEPENDS", "ON THE WAIT"]}, "etiket": null}
+  ]
+}

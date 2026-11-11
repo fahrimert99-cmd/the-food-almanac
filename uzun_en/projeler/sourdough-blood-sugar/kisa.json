@@ -1,0 +1,23 @@
+{
+  "baslik": ["SOURDOUGH VS", "WHITE BREAD?"],
+  "baslik_yt": "Sourdough vs White Bread: Does Blood Sugar Differ?",
+  "aciklama": "Does sourdough really go easier on blood sugar? Small trials point both ways, and a pooled analysis finds only a modest effect with low certainty.",
+  "parcalar": [
+    {"sahne": 26, "cumleler": [0], "baslik": null, "etiket": "Korem et al. · Cell Metabolism · 2017"},
+    {"sahne": 26, "cumleler": [1, 2], "gorsel": 25,
+     "baslik": {"satirlar": ["20 ADULTS,", "1 WEEK EACH"], "vurgu": "HALF/HALF", "not": "did better on each bread"},
+     "etiket": "Korem et al. · Cell Metabolism · 2017"},
+    {"sahne": 16, "cumleler": [0],
+     "baslik": {"satirlar": ["LOWER IN", "THE FIRST HOUR"], "vurgu": "16 ADULTS", "not": "crossover trial"},
+     "etiket": "Maioli et al. · Acta Diabetol · 2008"},
+    {"sahne": 18, "cumleler": [1], "baslik": null, "etiket": "Maioli et al. · Acta Diabetol · 2008"},
+    {"sahne": 21, "cumleler": [0, 1]},
+    {"sahne": 21, "cumleler": [2, 3], "gorsel": 22, "baslik": null,
+     "etiket": "Mofidi et al. · J Nutr Metab · 2012"},
+    {"sahne": 39, "cumleler": [0], "etiket": "Rolim et al. · Crit Rev Food Sci · 2024"},
+    {"sahne": 39, "cumleler": [1], "gorsel": 30,
+     "baslik": {"satirlar": ["MODEST", "EFFECT"], "vurgu": "LOW", "not": "certainty of evidence"},
+     "etiket": "Rolim et al. · Crit Rev Food Sci · 2024"},
+    {"sahne": 53, "cumleler": [1], "baslik": {"satirlar": ["CHOOSE", "WHOLE GRAIN"]}, "etiket": null}
+  ]
+}

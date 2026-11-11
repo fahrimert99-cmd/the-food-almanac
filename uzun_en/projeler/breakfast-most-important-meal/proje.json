@@ -1,0 +1,587 @@
+{
+  "slug": "breakfast-most-important-meal",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does Skipping Breakfast Raise Blood Sugar in Type 2 Diabetes?",
+  "yorum": "Are you a breakfast eater or a breakfast skipper, and has that changed as you got older? Has your doctor or pharmacist ever talked to you about when to take your morning pills?",
+  "aciklama_giris": "Is breakfast really the most important meal of the day? Randomized trials found that eating it did not help adults control their weight. But in a small crossover trial of 22 adults with type 2 diabetes, skipping breakfast made the blood sugar response after an identical lunch about 37 percent higher.\n\nIn this video we look at where the slogan came from, what trials say about weight and metabolism, the second-meal effect on blood sugar, what research says about protein and muscle after 60, why the evidence on heart disease is only an association, and how to think about the timing of morning medicines such as metformin and levothyroxine.",
+  "kaynaklar": [
+    "Brown AW, Bohan Brown MM, Allison DB. Belief beyond the evidence: using the proposed effect of breakfast on obesity to show 2 practices that distort scientific evidence. Am J Clin Nutr. 2013;98(5):1298-1308. doi:10.3945/ajcn.113.064410 (PMID 24004890).",
+    "Sievert K, Hussain SM, Page MJ, Wang Y, Hughes HJ, Malek M, Cicuttini FM. Effect of breakfast on weight and energy intake: systematic review and meta-analysis of randomised controlled trials. BMJ. 2019;364:l42. doi:10.1136/bmj.l42 (PMID 30700403).",
+    "Betts JA, Richardson JD, Chowdhury EA, Holman GD, Tsintzas K, Thompson D. The causal role of breakfast in energy balance and health: a randomized controlled trial in lean adults. Am J Clin Nutr. 2014;100(2):539-547. doi:10.3945/ajcn.114.083402 (PMID 24898233).",
+    "Chowdhury EA, Richardson JD, Holman GD, Tsintzas K, Thompson D, Betts JA. The causal role of breakfast in energy balance and health: a randomized controlled trial in obese adults. Am J Clin Nutr. 2016;103(3):747-756. doi:10.3945/ajcn.115.122044 (PMID 26864365).",
+    "Jakubowicz D, Wainstein J, Ahren B, Landau Z, Bar-Dayan Y, Froy O. Fasting until noon triggers increased postprandial hyperglycemia and impaired insulin response after lunch and dinner in individuals with type 2 diabetes: a randomized clinical trial. Diabetes Care. 2015;38(10):1820-1826. doi:10.2337/dc15-0761 (PMID 26220945).",
+    "Ogata H, Hatamoto Y, Goto Y, et al. Association between breakfast skipping and postprandial hyperglycaemia after lunch in healthy young individuals. Br J Nutr. 2019;122(4):431-440. doi:10.1017/S0007114519001235 (PMID 31486356).",
+    "Rong S, Snetselaar LG, Xu G, Sun Y, Liu B, Wallace RB, Bao W. Association of skipping breakfast with cardiovascular and all-cause mortality. J Am Coll Cardiol. 2019;73(16):2025-2032. doi:10.1016/j.jacc.2019.01.065 (PMID 31023424).",
+    "Santos HO, Genario R, Macedo RCO, Pareek M, Tinsley GM. Association of breakfast skipping with cardiovascular outcomes and cardiometabolic risk factors: an updated review of clinical evidence. Crit Rev Food Sci Nutr. 2022;62(2):466-474. doi:10.1080/10408398.2020.1819768 (PMID 32935557).",
+    "Bauer J, Biolo G, Cederholm T, et al. Evidence-based recommendations for optimal dietary protein intake in older people: a position paper from the PROT-AGE Study Group. J Am Med Dir Assoc. 2013;14(8):542-559. doi:10.1016/j.jamda.2013.05.021 (PMID 23867520).",
+    "Mamerow MM, Mettler JA, English KL, et al. Dietary protein distribution positively influences 24-h muscle protein synthesis in healthy adults. J Nutr. 2014;144(6):876-880. doi:10.3945/jn.113.185280 (PMID 24477298).",
+    "Kim IY, Schutzler S, Schrader AM, Spencer HJ, Azhar G, Wolfe RR, Ferrando AA. Protein intake distribution pattern does not affect anabolic response, lean body mass, muscle strength or function over 8 weeks in older adults: a randomized-controlled trial. Clin Nutr. 2018;37(2):488-493. doi:10.1016/j.clnu.2017.02.020 (PMID 28318687).",
+    "Norton C, Toomey C, McCormack WG, Francis P, Saunders J, Kerin E, Jakeman P. Protein supplementation at breakfast and lunch for 24 weeks beyond habitual intakes increases whole-body lean tissue mass in healthy older adults. J Nutr. 2016;146(1):65-69. doi:10.3945/jn.115.219022 (PMID 26581685).",
+    "Kinoshita K, Otsuka R, Nishita Y, et al. Breakfast protein quality and muscle strength in Japanese older adults: a community-based longitudinal study. J Am Med Dir Assoc. 2022;23(5):729-735. doi:10.1016/j.jamda.2021.11.037 (PMID 35007507).",
+    "Loenneke JP, Loprinzi PD, Murphy CH, Phillips SM. Per meal dose and frequency of protein consumption is associated with lean mass and muscle performance. Clin Nutr. 2016;35(6):1506-1511. doi:10.1016/j.clnu.2016.04.002 (PMID 27086196).",
+    "Levothyroxine sodium tablets prescribing information, Dosage and Administration (section 2.1). DailyMed, U.S. National Library of Medicine. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a6233381-3043-4e9a-aaa6-a6b105e5142b",
+    "Glucophage (metformin hydrochloride) prescribing information, Dosage and Administration and Adverse Reactions. https://drugs.com/pro/glucophage.html",
+    "National Institute of Diabetes and Digestive and Kidney Diseases. Low blood glucose (hypoglycemia): causes include insulin or insulin-stimulating pills with meals that are skipped or delayed. https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia"
+  ],
+  "kapak": {
+    "satirlar": [
+      "SKIP",
+      "BREAKFAST?"
+    ],
+    "vurgu": "+37%",
+    "vurgu_alt": "glucose",
+    "serit": "Small trial · diabetes · lunch",
+    "gorsel": "a large breakfast plate with two fried eggs and a slice of toast, a bowl of oatmeal beside it, a glucose meter with a blank screen overlapping behind the plate, everything close up and tightly grouped"
+  },
+  "etiketler": [
+    "skipping breakfast",
+    "breakfast and blood sugar",
+    "is breakfast the most important meal",
+    "protein at breakfast",
+    "skipping breakfast after 60",
+    "type 2 diabetes",
+    "sarcopenia",
+    "second meal effect",
+    "metformin timing",
+    "levothyroxine timing",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "GLP-1": "G L P 1",
+    "A1C": "A 1 C",
+    "PROT-AGE": "PROT AGE",
+    "NIDDK": "N I D D K"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The slogan",
+      "metin": "If you skip breakfast, one trial found your next meal hits harder: lunchtime blood sugar ran 37 percent higher in adults with type 2 diabetes.",
+      "gorsel": "a breakfast plate with two fried eggs, a slice of toast and a bowl of oatmeal on a wooden table, an empty second plate pushed to the side",
+      "etiket": "Jakubowicz et al. · Diabetes Care · 2015",
+      "baslik": {
+        "satirlar": [
+          "SKIP",
+          "BREAKFAST?"
+        ],
+        "vurgu": "+37%",
+        "not": "blood sugar after lunch, type 2 diabetes"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "Yet for weight, skipping looked harmless. The catch depends on your health and medicines.",
+      "gorsel": "a bathroom scale on a tile floor beside a pair of slippers and a glass of water, soft morning light through a window"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know whether to eat breakfast, what to put in it, and when to take morning pills.",
+      "gorsel": "a kitchen counter with a small pill organizer, a glass of water, a bowl of oatmeal and two eggs in a dish",
+      "baslik": {
+        "satirlar": [
+          "EAT IT?",
+          "SKIP IT?"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with where the famous slogan came from.",
+      "gorsel": "an old-fashioned kitchen table set for breakfast with eggs, toast, a bowl of oatmeal and a coffee cup, an antique wall clock above"
+    },
+    {
+      "id": 5,
+      "metin": "You have heard it all your life: breakfast is the most important meal of the day. But it began as a saying, not as a study.",
+      "gorsel": "a vintage breakfast tray with a boiled egg in an egg cup, a slice of toast and a glass of orange juice, a folded newspaper with blank columns beside it"
+    },
+    {
+      "id": 6,
+      "metin": "Food historians often link its popularity to early twentieth-century cereal and bacon marketing, though accounts of who said it first differ. The slogan itself is not a scientific finding.",
+      "gorsel": "an old cereal box with a plain engraved picture of a sunrise, a strip of bacon on a plate and a bowl of flakes with milk",
+      "baslik": {
+        "satirlar": [
+          "A SLOGAN,",
+          "NOT A STUDY"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "In 2013, Andrew Brown and colleagues reviewed the research on breakfast and obesity. They concluded that the belief that skipping breakfast causes weight gain rested mostly on observational links, and that belief had run ahead of the evidence.",
+      "gorsel": "a stack of old research journals with blank covers beside a breakfast plate with eggs and toast, a pair of round eyeglasses on top",
+      "etiket": "Brown et al. · Am J Clin Nutr · 2013"
+    },
+    {
+      "id": 8,
+      "bolum": "Breakfast and weight",
+      "tip": "kart",
+      "metin": "So what happens when scientists actually test it? Let's start with weight.",
+      "kart": {
+        "ust": "THE TRIALS",
+        "baslik": "Breakfast and weight",
+        "alt": "Randomized trials, 2014 to 2019"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "In the Bath Breakfast Project in England, researchers randomly assigned 33 lean adults, and separately 23 adults with obesity, all aged 21 to 60, to eat breakfast or fast until noon for six weeks.",
+      "gorsel": "a university research kitchen with a long table, one place set with eggs, toast and oatmeal and another place with only an empty plate and a glass of water",
+      "etiket": "Betts et al. · Am J Clin Nutr · 2014",
+      "baslik": {
+        "satirlar": [
+          "SIX WEEKS"
+        ],
+        "not": "breakfast or no food until noon"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "Breakfast meant at least 700 calories before eleven in the morning. Fasting meant nothing at all until noon.",
+      "gorsel": "an antique clock showing late morning beside a large breakfast spread of oatmeal, eggs, toast and fruit on a wooden table"
+    },
+    {
+      "id": 11,
+      "metin": "In both groups, weight and body fat did not differ between breakfast and fasting. Resting metabolism stayed steady too, changing by less than a dozen calories a day.",
+      "gorsel": "a bathroom scale on a wooden floor with a measuring tape coiled beside it, a bowl of oatmeal in the background",
+      "etiket": "Chowdhury et al. · Am J Clin Nutr · 2016",
+      "baslik": {
+        "satirlar": [
+          "NO WEIGHT",
+          "DIFFERENCE"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Pooling 13 randomized trials, a 2019 analysis in the BMJ led by Kristine Sievert found that in the seven that measured weight, people assigned to breakfast ended up about 0.4 kilograms, or about one pound, heavier than those who skipped it.",
+      "gorsel": "a balance scale with a plate of eggs and toast on one side and an empty plate on the other, the scale tipping slightly toward the full plate",
+      "etiket": "Sievert et al. · BMJ · 2019",
+      "baslik": {
+        "satirlar": [
+          "13 TRIALS"
+        ],
+        "vurgu": "0.4 kg",
+        "not": "heavier with breakfast, on average"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Breakfast eaters also took in about 260 more calories a day. The trials were short, a few weeks, and all had some risk of bias, so this does not prove breakfast makes you gain weight.",
+      "gorsel": "a breakfast plate with eggs and toast beside a small dinner plate with a modest portion of chicken and vegetables, a kitchen clock between them"
+    },
+    {
+      "id": 14,
+      "metin": "What it does show is that the weight claim is weaker than the slogan. If your only reason to eat breakfast is weight control, the trials do not back that up.",
+      "gorsel": "a plain white plate with a single slice of toast and a boiled egg, a lot of empty table around it, a window with morning light"
+    },
+    {
+      "id": 15,
+      "metin": "But blood sugar and muscle are different questions, and the answers are not the same. And later, there's a timing detail about your morning pills that matters more than the slogan.",
+      "gorsel": "a pill organizer with morning and evening compartments beside a bowl of oatmeal, a glass of water and a glucose meter with a blank screen"
+    },
+    {
+      "id": 16,
+      "bolum": "The second-meal effect",
+      "tip": "kart",
+      "metin": "First, blood sugar. Researchers have noticed that one meal can change how your body handles the next.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "The second-meal effect",
+        "alt": "How breakfast shapes lunch"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "Eating switches on your insulin response and your gut hormones. So the next meal may meet a body that is already warmed up, instead of one starting from scratch.",
+      "gorsel": "a simple textbook engraving of a stomach, small intestine and pancreas, with small coral-colored hormone particles drifting from the intestine to the pancreas, a bowl of oatmeal beside it",
+      "baslik": {
+        "satirlar": [
+          "WARMED UP",
+          "FOR LUNCH"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "metin": "In 2015, Daniela Jakubowicz and colleagues in Israel tested what happens when the first meal is missing.",
+      "gorsel": "a hospital research ward corridor with a single empty chair at a table, a covered meal tray and a glucose meter on the table, tall windows"
+    },
+    {
+      "id": 19,
+      "metin": "They studied 22 adults with type 2 diabetes, average age 57. Each person had two test days. On one, they ate breakfast, lunch and dinner. On the other, they skipped breakfast.",
+      "gorsel": "two side by side tables: the first with a breakfast plate of eggs and toast and a lunch plate, the second with only a lunch plate, a clock above each",
+      "etiket": "Jakubowicz et al. · Diabetes Care · 2015",
+      "baslik": {
+        "satirlar": [
+          "SAME FOOD,",
+          "NO BREAKFAST"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "metin": "Lunch and dinner were exactly the same on both days: 700 calories each.",
+      "gorsel": "a large lunch plate with grilled chicken, rice and green beans next to a measuring cup and a kitchen scale"
+    },
+    {
+      "id": 21,
+      "tip": "grafik",
+      "metin": "After the skipped breakfast, blood sugar rose about 37 percent more after lunch, and about 27 percent more after dinner. Free fatty acids and the hormone glucagon rose more as well.",
+      "grafik": {
+        "baslik": "Higher after a skipped breakfast",
+        "alt": "No-breakfast day vs. breakfast day, same lunch and dinner",
+        "cubuklar": [
+          {
+            "etiket": "Lunch glucose",
+            "deger": 36.8,
+            "metin": "+36.8%"
+          },
+          {
+            "etiket": "Dinner glucose",
+            "deger": 26.6,
+            "metin": "+26.6%"
+          },
+          {
+            "etiket": "Lunch fatty acids",
+            "deger": 41.1,
+            "metin": "+41.1%"
+          },
+          {
+            "etiket": "Lunch glucagon",
+            "deger": 14.8,
+            "metin": "+14.8%"
+          }
+        ],
+        "kaynak": "Jakubowicz et al., Diabetes Care 2015 · 22 adults with type 2 diabetes · area under the curve, 0 to 180 minutes"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Insulin was 17 percent lower after lunch, and its peak came 30 minutes later. GLP-1, a gut hormone that helps the body respond to a meal, was 19 percent lower.",
+      "gorsel": "a glass laboratory cylinder with a few green insulin particles at the bottom and a tall column of golden glucose spheres above, a small clock showing a late hour",
+      "baslik": {
+        "satirlar": [
+          "LESS INSULIN,",
+          "LESS GLP-1"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "In plain words, the same lunch was harder for the body to handle when it arrived without a breakfast before it. The afternoon spike was bigger.",
+      "gorsel": "a rolling hill landscape where one tall steep hill stands behind a gentle low one, a lunch plate with chicken and rice resting in front"
+    },
+    {
+      "id": 24,
+      "metin": "Remember the limits. It was 22 people, one day each, with a fixed test meal in a lab. It did not test prediabetes, and it did not show whether A1C changes over time.",
+      "gorsel": "a single small research notebook with blank pages on a lab bench beside a lunch plate and a glucose meter with a blank screen",
+      "baslik": {
+        "satirlar": [
+          "THE LIMITS"
+        ],
+        "not": "22 people · one day each"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "A small study of nine healthy young men saw higher blood sugar after lunch when breakfast was skipped, too. But their average blood sugar over 24 hours was not different.",
+      "gorsel": "a young man's hands holding a lunch tray with a sandwich and an apple beside a glucose sensor patch resting on the table",
+      "etiket": "Ogata et al. · Br J Nutr · 2019"
+    },
+    {
+      "id": 26,
+      "metin": "So the second-meal effect looks real, but it may be mostly a short-term swing. For someone with diabetes, a taller swing after lunch can matter. For a healthy person, it may matter much less.",
+      "gorsel": "a calm river landscape with two meandering water lines, one high and steep and one low and flat, a breakfast plate in the foreground"
+    },
+    {
+      "id": 27,
+      "metin": "Notice what the trial tested: a skipped breakfast followed by a big, fixed lunch. What you eat at lunch matters too, not only whether you ate breakfast.",
+      "gorsel": "a very full lunch plate with pasta, bread and a small salad, an empty breakfast plate pushed aside, a kitchen clock at midday"
+    },
+    {
+      "id": 28,
+      "bolum": "Muscle after 60",
+      "tip": "kart",
+      "metin": "Now to muscle, which matters more as we age.",
+      "kart": {
+        "ust": "AFTER 60",
+        "baslik": "Breakfast and muscle",
+        "alt": "Protein, timing and strength"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "First, how much protein do older adults need? An expert group called PROT-AGE recommended at least 1 to 1.2 grams per kilogram of body weight a day for people over 65.",
+      "gorsel": "a kitchen scale beside a plate of grilled chicken, a bowl of Greek yogurt, two boiled eggs and a block of tofu",
+      "etiket": "Bauer et al. · J Am Med Dir Assoc · 2013",
+      "baslik": {
+        "satirlar": [
+          "1 TO 1.2",
+          "G PER KG"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "metin": "For a 170-pound person, that is roughly 77 to 93 grams a day. Active older adults may need a bit more, while people with severe kidney disease may need to limit protein, so ask your doctor first.",
+      "gorsel": "a kitchen table with a pair of reading glasses, a notebook with blank pages, a plate of fish and beans and a glass of milk"
+    },
+    {
+      "id": 31,
+      "metin": "Now the timing question. In a small study from Douglas Paddon-Jones's group, eight healthy adults, average age 37, ate the same protein spread evenly or mostly at dinner. Muscle building over 24 hours was 25 percent higher with the even spread.",
+      "gorsel": "three plates in a row, each with a similar portion of eggs, chicken and yogurt, beside a single oversized dinner plate heaped with meat, a clock above",
+      "etiket": "Mamerow et al. · J Nutr · 2014",
+      "baslik": {
+        "satirlar": [
+          "EVEN SPREAD"
+        ],
+        "vurgu": "+25%",
+        "not": "muscle building over 24 hours, in young adults"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "But those were young adults. In an eight-week trial of 14 older adults, led by Il-Young Kim, there was no difference in muscle mass, strength or muscle building between an even spread and mostly dinner.",
+      "gorsel": "an elderly person's walking cane and a pair of dumbbells beside a dinner plate of chicken and vegetables on a wooden floor",
+      "etiket": "Kim et al. · Clin Nutr · 2018"
+    },
+    {
+      "id": 33,
+      "metin": "So whether the spread itself matters is unsettled. Both studies were tiny. Total protein across the day has the stronger case.",
+      "gorsel": "two small research papers with blank pages pointing in opposite directions on a desk, a balance scale between them"
+    },
+    {
+      "id": 34,
+      "metin": "A different design added protein in the morning. In a 24-week trial of 60 adults, average age 61, milk protein drinks at breakfast and midday added about 0.45 kilograms of lean tissue. The comparison group, on a carbohydrate drink, lost about 0.16 kilograms.",
+      "gorsel": "a tall glass of milk and a small bowl of Greek yogurt with berries on a breakfast table, a measuring tape coiled beside them",
+      "etiket": "Norton et al. · J Nutr · 2016",
+      "baslik": {
+        "satirlar": [
+          "24 WEEKS"
+        ],
+        "vurgu": "+0.45 kg",
+        "not": "lean tissue with protein at breakfast and midday"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "That is a modest gain, a little over a pound of difference. And the drinks came at breakfast and lunch, so we can't say breakfast alone did it.",
+      "gorsel": "a small pile of fresh fruit and a glass of milk beside a bowl of oatmeal, a pocket watch showing the morning"
+    },
+    {
+      "id": 36,
+      "metin": "In Japan, researchers followed 701 adults aged 60 to 83 for about seven years. Those whose breakfasts had the highest quality protein had about half the odds of developing weak grip strength. That is an association, not proof.",
+      "gorsel": "a traditional Japanese breakfast tray with grilled fish, a bowl of rice, a bowl of miso soup, a small dish of tofu and a cup of green tea",
+      "etiket": "Kinoshita et al. · J Am Med Dir Assoc · 2022"
+    },
+    {
+      "id": 37,
+      "metin": "In a US health survey of 1,081 adults aged 50 to 85, those who had more meals with at least 30 grams of protein had more leg muscle and more strength. Again, that is an association.",
+      "gorsel": "a row of simple meals on a long table, a plate with salmon and broccoli, a plate with eggs and cheese, a plate with chicken and beans",
+      "etiket": "Loenneke et al. · Clin Nutr · 2016"
+    },
+    {
+      "id": 38,
+      "metin": "We found no trial that assigned people over 60 to eat or skip breakfast and then measured their muscles. So we can't say skipping breakfast itself shrinks muscle. Getting enough protein overall is what the evidence supports, and breakfast is one easy place to add some.",
+      "gorsel": "a breakfast plate with scrambled eggs, a bowl of Greek yogurt and a slice of whole grain toast, a glass of milk beside it",
+      "baslik": {
+        "satirlar": [
+          "ENOUGH",
+          "PROTEIN"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now the honest part. What can't these studies tell us?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What the evidence can't say",
+        "alt": "Heart outcomes and cause"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "You may have seen headlines linking skipping breakfast with early death. A US study followed 6,550 adults aged 40 to 75 for about 17 years. People who said they never ate breakfast had an 87 percent higher risk of dying from cardiovascular disease than daily eaters.",
+      "gorsel": "a red heart symbol beside an empty breakfast plate and a folded newspaper with blank columns, soft window light",
+      "etiket": "Rong et al. · J Am Coll Cardiol · 2019",
+      "baslik": {
+        "satirlar": [
+          "NEVER ATE",
+          "BREAKFAST"
+        ],
+        "vurgu": "HR 1.87",
+        "not": "cardiovascular death, compared with daily eaters"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "But people who skip breakfast often differ in other ways, like smoking, diet and income, and statistics cannot remove all of that. The authors reported an association, not a cause. Their all-cause result was not statistically significant.",
+      "gorsel": "a crowded kitchen counter with a coffee cup, a briefcase, a plate of toast and a stack of mail, an empty chair pulled back from the table"
+    },
+    {
+      "id": 42,
+      "metin": "A 2022 review reached the same place: skipping breakfast is linked with worse heart outcomes, but unmeasured factors may explain part of it, and long randomized trials with real outcomes are missing.",
+      "gorsel": "an old library desk with a stack of journals with blank covers, a reading lamp and a bowl of oatmeal"
+    },
+    {
+      "id": 43,
+      "metin": "So here is the honest summary. Skipping breakfast is not a weight disaster. It may mean a bigger blood sugar swing later if you have type 2 diabetes. And for muscle, total protein matters most.",
+      "gorsel": "a balanced breakfast plate with an egg, oatmeal with berries and a slice of toast, an empty plate and a glucose meter with a blank screen behind it",
+      "baslik": {
+        "satirlar": [
+          "NOT A DISASTER,",
+          "NOT MAGIC"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "bolum": "Pills and practical tips",
+      "tip": "kart",
+      "metin": "Now the timing detail I promised, because many of us take pills in the morning.",
+      "kart": {
+        "ust": "TIMING",
+        "baslik": "Pills and breakfast",
+        "alt": "Ask before you change anything"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Some medicines are meant to be taken with food, and some are meant to be taken before it. The difference matters if you skip breakfast.",
+      "gorsel": "two small dishes on a kitchen counter, one with a pill beside a slice of toast and the other with a pill beside only a glass of water"
+    },
+    {
+      "id": 46,
+      "metin": "Metformin, a common diabetes medicine, is dosed with meals. Its prescribing information lists diarrhea, nausea and indigestion among the common side effects.",
+      "gorsel": "a single pill bottle with a blank front beside a plate of eggs and toast and a glass of water, a pair of reading glasses",
+      "etiket": "Glucophage prescribing information"
+    },
+    {
+      "id": 47,
+      "metin": "Levothyroxine, a thyroid medicine, is the opposite. Its label says to take it on an empty stomach, half an hour to one hour before breakfast, with a full glass of water.",
+      "gorsel": "a tall glass of water and a single small tablet on a saucer next to an antique alarm clock showing early morning",
+      "etiket": "Levothyroxine label · DailyMed",
+      "baslik": {
+        "satirlar": [
+          "EMPTY STOMACH"
+        ],
+        "not": "30 to 60 minutes before breakfast"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "The same label says to keep it at least four hours away from iron and calcium supplements and antacids, which can reduce how well it is absorbed.",
+      "gorsel": "a small group of supplement bottles with blank fronts and a roll of antacid tablets, set apart from a glass of water and a single tablet by a wide gap on the table"
+    },
+    {
+      "id": 49,
+      "metin": "And insulin and some diabetes pills called sulfonylureas can cause low blood sugar if you take them and then skip or delay a meal, according to the National Institute of Diabetes and Digestive and Kidney Diseases.",
+      "gorsel": "an insulin pen, a glucose meter with a blank screen and a small plate of toast on a bedside table, an empty breakfast plate beside them",
+      "baslik": {
+        "satirlar": [
+          "SKIPPED MEAL",
+          "+ INSULIN"
+        ],
+        "not": "can mean low blood sugar"
+      }
+    },
+    {
+      "id": 50,
+      "metin": "That is why skipping breakfast is not a decision to make alone if you use these medicines. Don't change when you take a dose, or skip meals, without asking your doctor or pharmacist.",
+      "gorsel": "a pharmacy counter with a stethoscope, a closed notebook and a paper bag of medicines, a pharmacist's white coat on a hook",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "tip": "kart",
+      "metin": "So how can you put this to use? Here are four practical ideas.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Four practical ideas",
+        "alt": "No rules, just options"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "One. If you feel well and prefer to eat later, there is no need to force breakfast down because of the slogan. The weight trials do not give a reason.",
+      "gorsel": "a relaxed kitchen table with a cup of tea, a window with soft light and an empty plate, a pair of reading glasses and a folded newspaper with blank columns"
+    },
+    {
+      "id": 53,
+      "metin": "Two. If you have type 2 diabetes, pay attention to lunch. Prediabetes was not tested. If you check your blood sugar, compare days with and without breakfast, and share what you see with your care team.",
+      "gorsel": "a glucose meter with a blank screen and a small notebook with blank pages beside a lunch plate of chicken and vegetables",
+      "baslik": {
+        "satirlar": [
+          "WATCH",
+          "LUNCH"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Three. If you do eat in the morning, include protein, like eggs, Greek yogurt, cottage cheese, tofu or beans. Studies in older adults often looked at meals with around 30 grams of protein.",
+      "gorsel": "a breakfast table with a plate of scrambled eggs, a bowl of Greek yogurt with berries, a dish of cottage cheese and a block of tofu"
+    },
+    {
+      "id": 55,
+      "metin": "Four. Ask your pharmacist when each morning medicine should be taken, with food or without. Write it on a card by your pills, and don't shift your times just to fit a new eating schedule.",
+      "gorsel": "a pill organizer with a blank index card propped beside it, a glass of water and a bowl of oatmeal on a kitchen counter"
+    },
+    {
+      "id": 56,
+      "metin": "One more safety note. If you have kidney disease, check with your doctor before raising your protein. If you take insulin or a sulfonylurea, check before changing when you eat.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and an insulin pen, a glass of water and a small plate of toast",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Breakfast: a slogan, not a rule",
+        "alt": "Blood sugar · Muscle · Medicines"
+      }
+    },
+    {
+      "id": 58,
+      "metin": "The slogan looks more like marketing than a trial. Randomized trials found that eating breakfast did not help adults control their weight.",
+      "gorsel": "the opening breakfast plate with two fried eggs, a slice of toast and a bowl of oatmeal, a bathroom scale on the floor beside the table"
+    },
+    {
+      "id": 59,
+      "metin": "In one small trial of adults with type 2 diabetes, a skipped breakfast meant a bigger blood sugar rise after lunch and dinner. That is the strongest reason to think twice.",
+      "gorsel": "a lunch plate of chicken and rice with a glucose meter with a blank screen, a tall steep hill drawn behind it"
+    },
+    {
+      "id": 60,
+      "metin": "For muscle after 60, total protein matters most, and breakfast is an easy place to add some. And with morning medicines, ask your pharmacist about timing before you change anything.",
+      "gorsel": "a breakfast plate with scrambled eggs, Greek yogurt and toast beside a pill organizer and a glass of water on a bright kitchen counter"
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

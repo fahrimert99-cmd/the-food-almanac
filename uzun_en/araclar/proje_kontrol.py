@@ -18,6 +18,9 @@ MOTOR_KELIME_SN = {"piper": KELIME_SN,
 SURE_DK = (9.0, 14.5)       # kesin sınır; yazım aşaması --asgari-dk 10 ile daha sıkı denetlenir
 SAYI = re.compile(r"\d|\b(two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty|"
                   r"sixty|seventy|eighty|ninety|hundred|thousand|percent|half|third|quarter|dozen)\b", re.I)
+ACILIS_AZAMI = 70   # ilk üç sahne (gorev/SENARYO.md: en çok 60 kelime; küçük pay)
+DOLGU = re.compile(r"here(?:'s| is) what the research (?:really )?(?:shows|says)|what does the (?:research|science) "
+                   r"(?:really |actually )?say|let'?s (?:take a look|find out|dive in)|you won'?t believe|shocking", re.I)
 ABARTI_BUYUK = {"really", "never", "always", "stop", "warning", "danger", "what", "this", "does", "your", "eat", "now",
                 "must", "worst", "best", "truth", "secret", "every", "after", "before", "real", "happens"}
 NVIDIA_RISKLI = re.compile(r"\b(blood|gore|wound|anatomy|anatomical|cut-away|label|labels|callout|chart|diagram|text|"
@@ -45,6 +48,11 @@ def denetle(slug, asgari_dk=None, yazim=False):
     ad = m.get("ad", "")
     if p.get("slug") != slug:
         h.append(f"slug '{p.get('slug')}' klasör adıyla ('{slug}') aynı olmalı")
+    # Ses kanal genelinde marka.json'dan gelir. Senaryo ajanı referans projeden (food-order-blood-sugar, Piper ile
+    # seslendirilmişti) "ses_motoru"/"ses" alanlarını kopyalayınca zerdeçal ve B12 videoları eski Piper sesiyle çıktı.
+    farkli = [a for a in ("ses_motoru", "ses", "length_scale", "ses_hiz") if a in p and p[a] != m.get(a)]
+    if yazim and farkli:
+        h.append(f"{', '.join(farkli)} alan(lar)ını silin: anlatıcı sesi marka.json'dan gelir, proje sesi değiştiremez")
     b = p.get("baslik", "")
     if not 20 <= len(b) <= 100:
         h.append(f"baslik 20–100 karakter olmalı (şu an {len(b)})")
@@ -151,6 +159,16 @@ def denetle(slug, asgari_dk=None, yazim=False):
         if not SAYI.search(acilis):
             h.append("açılış: ilk iki sahnede kaynaklı somut bir rakam olmalı (izleyici ilk 15 saniyede karar veriyor); "
                      "ör. 'in a trial of 41 adults … about 12 percent lower'")
+        acik3 = S[:3]
+        acik_kelime = sum(len(x.get("metin", "").split()) for x in acik3)
+        if acik_kelime > ACILIS_AZAMI:
+            h.append(f"açılış: ilk üç sahne en çok ~60 kelime olmalı (şu an {acik_kelime}); eski 80–100 kelimelik "
+                     "açılışlı videolarda izleyicinin yarısı ilk dakikada çıktı (analiz 9 Kasım 2026)")
+        dolgu = DOLGU.search(" ".join(x.get("metin", "") for x in acik3))
+        if dolgu:
+            h.append(f"açılış: soruyu tekrarlayan/abartan dolgu yok ('{dolgu.group(0)}'); doğrudan bulguya girin")
+        if any(x.get("tip") == "kart" for x in acik3):
+            h.append("açılış: ilk üç sahnede yazı kartı ('kart') olmaz; hepsi görselli sahne olmalı")
         if S and re.match(r"\s*(picture|imagine|think about|let'?s start|have you ever)\b", S[0].get("metin", ""), re.I):
             h.append("açılış: ilk cümle sahne kurmamalı ('Picture…', 'Imagine…'); izleyicinin kendi durumuna ya da "
                      "çarpıcı bulguya doğrudan girmeli (1. videoda izleyicilerin %73'ü ilk 30 saniyede çıktı)")

@@ -1,0 +1,594 @@
+{
+  "slug": "washing-raw-chicken",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Should You Wash Raw Chicken Before Cooking?",
+  "yorum": "Do you rinse your chicken before cooking, or skip it? Where did you learn that habit?",
+  "aciklama_giris": "Many of us rinse raw chicken before cooking, hoping to wash the germs away. Kitchen studies point the other way: rinsing can splash bacteria beyond the sink, and in a North Carolina State University study of 300 home cooks, kitchen sinks became contaminated whether or not people washed their chicken, and about one in four salads picked up bacteria from the raw chicken.\n\nIn this video we look at what the splash experiments and the home kitchen studies actually found, why only heat, 165 degrees Fahrenheit, makes chicken safe, why food poisoning can hit harder after 60, where the evidence is uncertain, and five simple habits to use instead of the rinse.",
+  "kaynaklar": [
+    "Centers for Disease Control and Prevention. Chicken and Food Poisoning. CDC Food Safety. https://www.cdc.gov/food-safety/foods/chicken.html",
+    "Food Standards Agency (UK). Campylobacter. https://www.food.gov.uk/safety-hygiene/campylobacter",
+    "Carmody CD, Mueller RC, Grodner BM, Chlumsky O, Wilking JN, McCalla SG. Chickensplash! Exploring the health concerns of washing raw chicken. Physics of Fluids. 2022;34(3):031910. doi:10.1063/5.0083979",
+    "Shumaker ET, Kirchner M, Shelley L, Goulter R, Goodson L, Jaykus LA, Chapman B, Cates SC, Bernstein C, Lavallee A. Observational Study of the Impact of a Food Safety Intervention on Consumer Poultry Washing. Journal of Food Protection. 2022. doi:10.4315/JFP-21-397",
+    "U.S. Department of Agriculture, Food Safety and Inspection Service, with RTI International and North Carolina State University. Washing Raw Poultry: Our Science, Your Choice (home kitchen observational study). 2019.",
+    "Henley SC, et al. Don't Wash Your Chicken!: A Food Safety Education Campaign to Address a Common Food Mishandling Practice. Food Protection Trends. 2016.",
+    "Centers for Disease Control and Prevention. About Food Safety: estimates of foodborne illness and people at higher risk. https://www.cdc.gov/food-safety/about/index.html"
+  ],
+  "kapak": {
+    "satirlar": [
+      "WASH",
+      "CHICKEN?"
+    ],
+    "vurgu": "165°F",
+    "vurgu_alt": "SAFE",
+    "gorsel": "a large raw whole chicken in the foreground under a chrome kitchen faucet with water splashing in big droplets, a digital food thermometer standing beside it, tightly grouped, close-up and appetizing"
+  },
+  "kahraman": "raw chicken",
+  "etiketler": [
+    "should you wash raw chicken",
+    "washing chicken before cooking",
+    "is it safe to rinse chicken",
+    "food safety",
+    "salmonella",
+    "campylobacter",
+    "cross contamination",
+    "chicken safe temperature",
+    "food poisoning after 60",
+    "kitchen hygiene"
+  ],
+  "seslendirme_duzelt": {
+    "CDC": "C D C",
+    "USDA": "U S D A",
+    "RTI": "R T I",
+    "NC State": "N C State",
+    "Campylobacter": "Camp ee low back ter"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Why we rinse chicken",
+      "metin": "In a kitchen study of 300 home cooks, about one in four got germs from raw chicken onto their salad.",
+      "gorsel": "a raw chicken thigh and drumstick on a white plate beside a chrome kitchen faucet with water running over them, tiny droplets splashing outward over the sink",
+      "etiket": "Shumaker et al. · J Food Prot · 2022",
+      "baslik": {
+        "satirlar": [
+          "300 HOME COOKS"
+        ],
+        "vurgu": "1 IN 4",
+        "not": "got raw chicken germs onto their salad"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But the cooks who skipped the rinse weren't automatically safe. The real problem is bigger than the water.",
+      "gorsel": "a green salad bowl of lettuce on a wooden counter next to a raw chicken thigh on a plate, a faint dotted trail of tiny bacteria drifting from the raw chicken to the lettuce",
+      "baslik": {
+        "satirlar": [
+          "NOT RINSING",
+          "ISN'T ENOUGH"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what truly makes chicken safe, and a simple routine that protects you.",
+      "gorsel": "a raw chicken thigh on a board beside a digital food thermometer, a bar of soap and a clean empty kitchen sink, neatly arranged"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with why so many of us rinse chicken in the first place.",
+      "gorsel": "an open vintage almanac with blank pages on a kitchen table, a raw chicken on a plate, a bowl of lettuce and a copper faucet in the background"
+    },
+    {
+      "id": 5,
+      "metin": "For many of us, rinsing chicken is a habit passed down in the kitchen. Maybe you watched a parent do it. It feels clean, like washing a vegetable, and it feels like the careful thing to do.",
+      "gorsel": "a warm family kitchen with a grandmother's apron hanging by the sink, a raw chicken resting in a colander under the faucet, a window with morning light"
+    },
+    {
+      "id": 6,
+      "metin": "The logic is simple. If chicken might carry germs, a good rinse should wash them away. It's an understandable instinct, and nobody should feel ashamed of it.",
+      "gorsel": "a raw chicken thigh held under a gentle stream of running water in a stainless steel sink, a small bar of soap on the edge",
+      "baslik": {
+        "satirlar": [
+          "THE RINSE",
+          "INSTINCT"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "The trouble is that raw chicken often does carry germs. The CDC says about one in 25 packages of chicken at the grocery store is contaminated with Salmonella.",
+      "gorsel": "a supermarket shelf with several plastic-wrapped trays of raw chicken parts, one tray highlighted with a faint circle of tiny rod-shaped bacteria magnified in an inset",
+      "etiket": "CDC · Chicken and Food Poisoning",
+      "baslik": {
+        "satirlar": [
+          "SALMONELLA"
+        ],
+        "vurgu": "1 IN 25",
+        "not": "grocery store chicken packages contaminated"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "The CDC also estimates that about one million people in the United States get sick each year from eating contaminated poultry. Salmonella causes more foodborne illness than any other bacteria.",
+      "gorsel": "a dinner table set for four with a roasted chicken at the center, a small magnified inset of rod-shaped bacteria in the corner, calm and quiet"
+    },
+    {
+      "id": 9,
+      "metin": "Another germ often linked to chicken is Campylobacter. Britain's Food Standards Agency warns that washing raw chicken can spread it, by splashing it onto hands, work surfaces, clothing, and cooking equipment.",
+      "gorsel": "a raw chicken under a kitchen faucet with water droplets landing on a pair of hands, a cutting board, a sleeve of a shirt and a pot nearby"
+    },
+    {
+      "id": 10,
+      "metin": "Health agencies have pushed back on the habit for years. In 2019, a USDA official said it plainly: the best practice is not to wash poultry.",
+      "gorsel": "a government kitchen safety poster style engraving of a raw chicken with a crossed-out water faucet beside it, no text, vintage science-book style",
+      "etiket": "USDA FSIS · 2019"
+    },
+    {
+      "id": 11,
+      "metin": "So the question isn't whether raw chicken can carry germs. It can. The question is what rinsing actually does to them, and where they go while the water runs.",
+      "gorsel": "a raw chicken thigh under a running faucet with small bacteria drawn as tiny dots flying off in all directions across the sink and counter"
+    },
+    {
+      "id": 12,
+      "bolum": "What the splash does",
+      "tip": "kart",
+      "metin": "Let's follow the water, and the germs, from the sink to the rest of your kitchen.",
+      "kart": {
+        "ust": "THE LAB TEST",
+        "baslik": "What the splash does",
+        "alt": "Physics of Fluids · 2022"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Start with the physics. In 2022, a team of engineers and microbiologists published a study nicknamed Chickensplash in the journal Physics of Fluids.",
+      "gorsel": "a laboratory bench with a high-speed camera on a tripod aimed at a raw chicken breast under a small faucet, a stack of round petri dishes beside it",
+      "etiket": "Carmody et al. · Phys Fluids · 2022"
+    },
+    {
+      "id": 14,
+      "metin": "They ran sixteen trials, rinsing raw chicken breasts and thighs under a faucet while filming the splashes with high speed cameras and setting out plates of nutrient jelly nearby.",
+      "gorsel": "a raw chicken breast and a raw chicken thigh on a lab sink with water streaming over them, three round petri dishes set beside the sink",
+      "baslik": {
+        "satirlar": [
+          "16 TRIALS"
+        ],
+        "not": "raw chicken rinsed under a faucet, filmed in slow motion"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Chicken is soft, so the stream makes a small dent in its surface, and that dent throws droplets sideways. A higher faucet can make the splashing worse.",
+      "gorsel": "a close-up of a stream of water hitting the surface of a raw chicken thigh, a small dent in the skin with droplets arcing outward in fine engraved lines"
+    },
+    {
+      "id": 16,
+      "metin": "The plates grew bacteria that came from the chicken. So the lab confirmed what you might fear. Rinsing really can send bacteria flying off the meat.",
+      "gorsel": "round petri dishes with small clusters of colonies beside a raw chicken thigh on a lab counter, a magnifying glass resting nearby",
+      "baslik": {
+        "satirlar": [
+          "BACTERIA",
+          "ON THE PLATES"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "metin": "To be fair, the team did not find dangerous pathogens on those plates, only relatives of known germs. So this study shows the splash route, not the exact illness risk.",
+      "gorsel": "a scientist's desk with a notebook of blank pages, a microscope and a raw chicken thigh in a glass dish, quiet and careful, a lamp glowing"
+    },
+    {
+      "id": 18,
+      "metin": "An earlier USDA experiment, from 2003, used colored water to see how far droplets travel from a sink during a rinse. It did not test for germs, but it showed that droplets leave the sink area.",
+      "gorsel": "a kitchen sink with a faucet running and pink-colored water droplets scattered across the counter and backsplash in a wide fan, a raw chicken in the basin",
+      "etiket": "USDA · 2003 dye study, via Carmody et al."
+    },
+    {
+      "id": 19,
+      "bolum": "The home kitchen study",
+      "tip": "kart",
+      "metin": "Next, let's step out of the lab and into a test kitchen.",
+      "kart": {
+        "ust": "THE KITCHEN STUDY",
+        "baslik": "A real kitchen test",
+        "alt": "NC State · RTI · USDA FSIS · 2022"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "Researchers at North Carolina State University, with RTI International and the USDA's Food Safety and Inspection Service, studied 300 home cooks who said they washed poultry.",
+      "gorsel": "a bright test kitchen with a stainless steel sink, a counter set with a cutting board, a raw chicken on a plate and a bowl of lettuce, a clipboard on a stool",
+      "etiket": "Shumaker et al. · J Food Prot · 2022",
+      "baslik": {
+        "satirlar": [
+          "300",
+          "HOME COOKS"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "Each cook prepared chicken thighs and a salad. The thighs carried a harmless tracer bacteria, so scientists could follow exactly where it landed, including on the lettuce.",
+      "gorsel": "raw chicken thighs on a plate beside a bowl of lettuce and a sink, tiny glowing dots drawn as a dotted trail from the raw chicken to the lettuce and the faucet"
+    },
+    {
+      "id": 22,
+      "tip": "grafik",
+      "metin": "Among cooks who got no special message, the tracer reached the lettuce in 26 percent of cases when they washed the chicken. And in 31 percent of cases when they didn't wash it.",
+      "grafik": {
+        "baslik": "Tracer found on the salad lettuce",
+        "alt": "Cooks who washed vs. did not wash raw chicken",
+        "cubuklar": [
+          {
+            "etiket": "Washed chicken",
+            "deger": 26,
+            "metin": "26%"
+          },
+          {
+            "etiket": "Did not wash",
+            "deger": 31,
+            "metin": "31%"
+          }
+        ],
+        "kaynak": "Shumaker et al., J Food Prot 2022 · 158 home cooks, no-message (control) group"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Read that again. Skipping the rinse did not keep the lettuce clean. The researchers also found that, regardless of whether people washed their chicken, the kitchen sinks became contaminated.",
+      "gorsel": "a clean salad bowl of lettuce beside a kitchen sink where a raw chicken thigh sits on a plate, a faint trail of dots reaching the sink and the lettuce",
+      "baslik": {
+        "satirlar": [
+          "SINKS GOT",
+          "CONTAMINATED"
+        ],
+        "not": "whether or not people washed the chicken"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "The scientists suspect hands. Hand-facilitated cross-contamination, meaning germs moving from raw chicken to hands and then to everything hands touch, may explain much of the lettuce contamination.",
+      "gorsel": "a pair of hands holding a raw chicken thigh over a plate, the same hands then reaching for a faucet handle and a refrigerator door, small dots on each touched surface",
+      "baslik": {
+        "satirlar": [
+          "THE HANDS",
+          "CONNECTION"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "A 2019 USDA kitchen study saw a similar pattern. About 25 percent of side salads became contaminated, and 75 percent of volunteers did not wash their hands, even though they said they had.",
+      "gorsel": "a row of small side salad bowls on a counter with a raw chicken on a plate behind them and a bar of soap untouched beside the sink",
+      "etiket": "USDA FSIS / RTI / NC State · 2019",
+      "baslik": {
+        "satirlar": [
+          "SIDE SALADS"
+        ],
+        "vurgu": "25%",
+        "not": "contaminated in the USDA kitchen study"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Cleaning up afterward helps, but it isn't perfect. The CDC cites a USDA study in which one in seven people who cleaned their sink after washing chicken still had germs in it.",
+      "gorsel": "a person's gloved hands scrubbing a stainless steel sink with a sponge, a raw chicken resting on a plate beside the sink, soap bubbles",
+      "etiket": "CDC · citing a USDA study",
+      "baslik": {
+        "satirlar": [
+          "1 IN 7",
+          "STILL HAD GERMS"
+        ],
+        "not": "even after cleaning the sink"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "There's some good news from the same NC State study. Cooks who were given a don't wash message mostly followed it. Ninety-three percent skipped the rinse, compared with 39 percent of cooks who got no message.",
+      "gorsel": "a happy cook in their 60s smiling at a kitchen counter placing a raw chicken thigh straight into a roasting pan, the sink empty and clean behind them",
+      "baslik": {
+        "satirlar": [
+          "93% SKIPPED",
+          "THE RINSE"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "metin": "Education campaigns have worked in small pilots before. A Drexel University team used comic style brochures and short videos, and people who saw them reported better knowledge and more confidence about not washing chicken.",
+      "gorsel": "a small stack of illustrated brochures and a tablet leaning on a kitchen counter beside a raw chicken on a plate, a community center table",
+      "etiket": "Henley et al. · Food Prot Trends · 2016"
+    },
+    {
+      "id": 29,
+      "metin": "So the picture is this. Rinsing throws germs into the air and onto the sink. But the bigger lesson is that germs also travel on hands and surfaces, with or without running water.",
+      "gorsel": "a kitchen scene seen from above with a raw chicken on a plate, dotted lines of tiny dots running to the sink, the faucet handle, a cutting board and the lettuce bowl"
+    },
+    {
+      "id": 30,
+      "metin": "In the practical part, I'll share a short routine that handles both problems, the splash and the hands.",
+      "gorsel": "a kitchen counter with a cutting board for raw chicken, a bar of soap, a sponge and a food thermometer laid out in a tidy row, a raw chicken on a plate behind them"
+    },
+    {
+      "id": 31,
+      "bolum": "What makes chicken safe",
+      "tip": "kart",
+      "metin": "So if a rinse doesn't make chicken safe, what does?",
+      "kart": {
+        "ust": "THE REAL SAFEGUARD",
+        "baslik": "Heat, not water",
+        "alt": "165 degrees Fahrenheit"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Heat. The USDA's Food Safety and Inspection Service has said it plainly: the only way to kill these germs is by cooking chicken to a safe internal temperature of 165 degrees.",
+      "gorsel": "a roasted golden chicken thigh in a skillet over a flame with a digital food thermometer inserted, steam rising in fine engraved lines",
+      "etiket": "USDA FSIS · 2019",
+      "baslik": {
+        "satirlar": [
+          "ONLY HEAT",
+          "KILLS THEM"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "metin": "That's 165 degrees Fahrenheit, which is about 74 degrees Celsius, and the CDC says to check it with a food thermometer.",
+      "gorsel": "a digital food thermometer inserted into a cooked chicken thigh on a plate, the screen blank, beside a raw chicken thigh waiting on a separate board",
+      "baslik": {
+        "satirlar": [
+          "165°F"
+        ],
+        "not": "about 74 °C, checked with a food thermometer"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "That one number is the real safeguard. Any germs left on the chicken are handled by heat in the pan or oven, and a thermometer tells you when the job is done.",
+      "gorsel": "a raw chicken going into an oven on a roasting tray with a thermometer probe, the oven door open and a warm glow"
+    },
+    {
+      "id": 35,
+      "metin": "It also means the germs on the chicken itself aren't the main worry once it's cooked. The bigger worry is where they travel before cooking, onto the sink, the hands, and foods that never get heated, like salad.",
+      "gorsel": "a raw chicken thigh on a board in the middle of a kitchen counter, a bowl of lettuce, a sink and two hands, with dotted arrows pointing outward from the raw chicken"
+    },
+    {
+      "id": 36,
+      "metin": "Food safety guidance also says that rinsing chicken with salt water, vinegar, or lemon juice isn't a substitute for cooking. Only heat reliably kills the bacteria.",
+      "gorsel": "a lemon half, a small bottle of vinegar and a bowl of coarse salt beside a raw chicken thigh on a plate, with a crossed thin line drawn over the bottle",
+      "baslik": {
+        "satirlar": [
+          "NO SHORTCUT",
+          "FROM LEMON"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "metin": "If there's one inexpensive tool worth owning for this, it's a food thermometer. Not a rinse, not a special cleaner, just a thermometer.",
+      "gorsel": "a simple food thermometer standing upright on a clean kitchen counter, a raw chicken on a plate nearby"
+    },
+    {
+      "id": 38,
+      "bolum": "Why age matters",
+      "tip": "kart",
+      "metin": "Now, why does this matter especially for adults past sixty?",
+      "kart": {
+        "ust": "WHO IS AT RISK",
+        "baslik": "Food poisoning and age",
+        "alt": "CDC · adults 65 and older"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "The CDC estimates that about 48 million Americans get sick from foodborne illness each year. About 128,000 are hospitalized, and about 3,000 die.",
+      "gorsel": "a quiet hospital waiting room corridor with empty chairs and a window, a small bedside table with a glass of water and a thermometer",
+      "etiket": "CDC · About Food Safety",
+      "baslik": {
+        "satirlar": [
+          "48 MILLION"
+        ],
+        "not": "Americans sick from food each year"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Adults 65 and older are among the groups most likely to become very sick from foodborne germs. The others are children under five, pregnant women, and people with weakened immune systems.",
+      "gorsel": "an older couple in their 70s seated at a kitchen table sharing a roast chicken dinner, a window with soft light, a raw chicken thermometer on the counter"
+    },
+    {
+      "id": 41,
+      "metin": "The CDC explains that as people age, their immune systems and organs don't recognize and get rid of harmful germs as well as they once did. That is one reason an infection can hit older adults harder.",
+      "gorsel": "an open textbook-style engraving of a stomach with small droplets of acid inside, a soft shield shape beside it, a raw chicken thigh sketched in the corner"
+    },
+    {
+      "id": 42,
+      "metin": "And diarrhea and vomiting can cause dehydration, which is a particular worry for older adults. So a bout of food poisoning can be harder to shake off after sixty.",
+      "gorsel": "a glass of water and a pitcher on a bedside table beside a folded blanket and a thermometer, soft morning light",
+      "baslik": {
+        "satirlar": [
+          "HITS HARDER",
+          "AFTER 60"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "metin": "That isn't a reason to be afraid of chicken. It's a reason to make a few handling habits automatic, because they cost almost nothing.",
+      "gorsel": "a cheerful person in their 60s at a kitchen sink washing their hands with soap, a raw chicken on a plate waiting on the counter behind them"
+    },
+    {
+      "id": 44,
+      "metin": "If you have a weakened immune system, or take medicines that weaken your immune system, ask your doctor or pharmacist whether you need extra food safety precautions.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a pill organizer, a small plate of raw chicken sketched in the corner",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What is well supported, and what isn't?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What we know, and don't",
+        "alt": "Strong evidence and open questions"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Well supported: rinsing raw chicken doesn't make it safe, rinsing splashes bacteria, and kitchens get contaminated whether or not people rinse. Cooking to 165 degrees is what makes chicken safe.",
+      "gorsel": "a raw chicken thigh on a board beside a thermometer, a faucet and a bowl of lettuce, balanced on a simple brass scale"
+    },
+    {
+      "id": 47,
+      "metin": "Less certain: the lab study used clean water and did not find dangerous pathogens on its plates, and the home kitchen study used a harmless tracer instead of real Salmonella.",
+      "gorsel": "a laboratory flask of clear water and a petri dish beside a raw chicken thigh in a glass dish, a magnifying glass held over the dish"
+    },
+    {
+      "id": 48,
+      "metin": "Also, nobody has measured how many illnesses come from rinsing alone. These studies tracked where bacteria travel, not how many people later got sick.",
+      "gorsel": "a quiet research desk with neatly stacked journals with blank covers, a teacup with rising steam and a raw chicken thigh on a small dish",
+      "baslik": {
+        "satirlar": [
+          "OPEN",
+          "QUESTION"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "The CDC's current guidance is also a bit softer than a flat ban. It says chicken doesn't need washing, but if you do wash it, run the water gently and then clean and sanitize the sink.",
+      "gorsel": "a raw chicken thigh under a very gentle trickle of water from a faucet, a sponge and a spray bottle beside the sink, ready for cleaning"
+    },
+    {
+      "id": 50,
+      "metin": "And one myth is false. Rinsing chicken with vinegar, lemon juice, or salt water doesn't make it safe either. Only heat reliably kills these germs.",
+      "gorsel": "a raw chicken on a plate with a small bowl of vinegar, a lemon and salt beside it, and a calm stern thermometer standing in front",
+      "baslik": {
+        "satirlar": [
+          "MYTH:",
+          "A RINSE",
+          "MAKES IT SAFE"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "bolum": "What to do instead",
+      "tip": "kart",
+      "metin": "So what should you do instead? Here are five simple habits.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five safer habits",
+        "alt": "No rinse needed"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "One. Skip the rinse. Take the chicken straight from the package to the pan. If it's very wet, pat it dry with paper towels and throw them away.",
+      "gorsel": "a raw chicken thigh being patted with a sheet of paper towel on a plate next to a stovetop skillet, a trash bin beside the counter"
+    },
+    {
+      "id": 53,
+      "metin": "Two. Use a separate cutting board for raw chicken. Afterward, wash the board, utensils, and countertops with hot, soapy water before you prepare anything else.",
+      "gorsel": "two cutting boards side by side, a raw chicken thigh on one and chopped vegetables on the other, a sink of hot soapy water behind them",
+      "baslik": {
+        "satirlar": [
+          "A SEPARATE",
+          "BOARD"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Three. Wash your hands with warm, soapy water for twenty seconds right after touching raw chicken, before you touch the faucet, the refrigerator handle, or anything else.",
+      "gorsel": "hands lathered with soap under a faucet beside a raw chicken thigh on a plate, an antique pocket watch on the counter showing twenty seconds",
+      "baslik": {
+        "satirlar": [
+          "20 SECONDS",
+          "OF SOAP"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "Four. Clean and sanitize the sink and the area around it, even if you never ran water on the chicken. In the NC State study, the sinks were contaminated either way.",
+      "gorsel": "a stainless steel sink being wiped with a cloth and a spray bottle, a raw chicken resting on a plate on the counter nearby",
+      "etiket": "Shumaker et al. · J Food Prot · 2022"
+    },
+    {
+      "id": 56,
+      "metin": "That's the short routine I promised. Hands, board, and sink. It handles the splash, and it handles the hands.",
+      "gorsel": "a tidy kitchen counter with a bar of soap, a cutting board and a clean empty sink arranged in a row, a raw chicken on a plate at the end"
+    },
+    {
+      "id": 57,
+      "metin": "Five. Cook chicken to 165 degrees Fahrenheit, checked with a food thermometer. Then put leftovers in the refrigerator within two hours.",
+      "gorsel": "a cooked chicken thigh on a plate with a thermometer in it, a covered container of leftovers beside an open refrigerator",
+      "baslik": {
+        "satirlar": [
+          "COOK TO",
+          "165°F"
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "metin": "And keep foods that won't be cooked, like salad, fruit, and bread, away from raw chicken and its juices.",
+      "gorsel": "a fruit bowl, a basket of bread and a salad bowl on one side of a kitchen counter, a raw chicken thigh on a board on the far side, a clear gap between"
+    },
+    {
+      "id": 59,
+      "metin": "If you still prefer to rinse, the CDC's advice is to run the water gently to limit splashing, then clean and sanitize the sink. Just don't count on the rinse to make the chicken safer.",
+      "gorsel": "a raw chicken thigh rinsed under a gentle trickle, then a sponge and sanitizing spray beside the sink for cleanup, two-step arrangement"
+    },
+    {
+      "id": 60,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Heat, not water",
+        "alt": "Cook to 165°F"
+      }
+    },
+    {
+      "id": 61,
+      "metin": "Rinsing raw chicken does not make it safer. In kitchen studies, it splashes bacteria around, and sinks and salads picked up germs whether or not people rinsed.",
+      "gorsel": "a raw chicken thigh under a faucet with droplets spreading across the sink and counter, a bowl of lettuce at the edge of the scene"
+    },
+    {
+      "id": 62,
+      "metin": "What makes chicken safe is heat. A safe internal temperature of 165 degrees Fahrenheit, checked with a food thermometer.",
+      "gorsel": "a food thermometer inserted into a golden roasted chicken thigh on a plate, steam rising, a raw chicken thigh on a board behind"
+    },
+    {
+      "id": 63,
+      "metin": "The habits that protect you are simple. Skip the rinse, separate the board, wash your hands, sanitize the sink, and cook to temperature.",
+      "gorsel": "a kitchen counter with a raw chicken on a separate cutting board, a bar of soap, a sponge, a thermometer and an empty clean sink in a neat row"
+    },
+    {
+      "id": 64,
+      "metin": "They matter a little more as we get older, when food poisoning can hit harder. A few small habits, and the chicken dinner stays just a dinner.",
+      "gorsel": "a family dinner table with a roasted chicken at the center, an older couple and a younger person smiling, a window with evening light"
+    },
+    {
+      "id": 65,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

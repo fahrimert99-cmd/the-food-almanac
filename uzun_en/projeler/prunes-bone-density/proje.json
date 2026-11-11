@@ -1,0 +1,659 @@
+{
+  "slug": "prunes-bone-density",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Prunes After 60: What They Do to Bone Loss",
+  "yorum": "Do prunes have a place in your kitchen, and has anyone ever suggested them for your bones or your digestion? How much do you eat in a typical week?",
+  "aciklama_giris": "In the Prune Study from Penn State, 235 postmenopausal women were randomly assigned to no prunes, 50 grams of prunes a day (about five or six prunes) or 100 grams a day for 12 months. Hip bone density fell 1.1 percent in the control group and 0.3 percent in the 50 gram group. The 100 gram group did not differ significantly from control, and 41 percent of that group dropped out.\n\nIn this video we look at that trial and a follow-up on inflammation, what is and is not known about why prunes might help bones, two clinical trials comparing prunes with psyllium for constipation, and the cautions around sorbitol, sugar, potassium and vitamin K if you take warfarin. We finish with practical ways to use prunes.",
+  "kaynaklar": [
+    "De Souza MJ, et al. Prunes preserve hip bone mineral density in a 12-month randomized controlled trial in postmenopausal women: the Prune Study. American Journal of Clinical Nutrition. 2022;116(4):897-910. DOI 10.1093/ajcn/nqac189. PMID 35798020.",
+    "Damani JJ, Oh ES, De Souza MJ, et al. Prune consumption attenuates proinflammatory cytokine secretion and alters monocyte activation in postmenopausal women: secondary outcome analysis of a 12-month randomized controlled trial. Journal of Nutrition. 2024;154(5):1699-1710. PMID 37984741.",
+    "Hooshmand S, Chai SC, Saadat RL, Payton ME, Brummel-Smith K, Arjmandi BH. Comparative effects of dried plum and dried apple on bone in postmenopausal women. British Journal of Nutrition. 2011;106(6):923-930. DOI 10.1017/S000711451100119X. PMID 21736808.",
+    "Wallace TC. Dried plums, prunes and bone health: a comprehensive review. Nutrients. 2017;9(4):401. DOI 10.3390/nu9040401. PMID 28422064.",
+    "Attaluri A, Donahoe R, Valestin J, Brown K, Rao SSC. Randomised clinical trial: dried plums (prunes) vs. psyllium for constipation. Alimentary Pharmacology and Therapeutics. 2011;33(7):822-828. DOI 10.1111/j.1365-2036.2011.04594.x. PMID 21323688.",
+    "Lever E, Cole J, Scott SM, Emery PW, Whelan K. Systematic review: the effect of prunes on gastrointestinal function. Alimentary Pharmacology and Therapeutics. 2014;40(7):750-758. PMID 25109788.",
+    "Chey SW, Chey WD, Jackson K, Eswaran S. Exploratory comparative effectiveness trial of green kiwifruit, psyllium, or prunes in US patients with chronic constipation. American Journal of Gastroenterology. 2021;116(6):1304-1312. DOI 10.14309/ajg.0000000000001149. PMID 34074830.",
+    "Stacewicz-Sapuntzakis M, Bowen PE, Hussain EA, Damayanti-Wood BI, Farnsworth NR. Chemical composition and potential health effects of prunes: a functional food? Critical Reviews in Food Science and Nutrition. 2001;41(4):251-286. DOI 10.1080/20014091091814. PMID 11401245.",
+    "U.S. Department of Agriculture, FoodData Central. Plums, dried (prunes), uncooked (SR Legacy, item 168162). https://fdc.nal.usda.gov/",
+    "MedlinePlus (National Library of Medicine). Vitamin K. https://medlineplus.gov/ency/article/002407.htm"
+  ],
+  "kapak": {
+    "satirlar": [
+      "PRUNES",
+      "SAVE BONE?"
+    ],
+    "vurgu": "–0.3%",
+    "vurgu_alt": "HIP",
+    "gorsel": "a large ceramic bowl heaped with dark wrinkled prunes in the foreground, a few prunes spilling out in front, a cheerful woman in her 60s smiling behind the bowl, close up and appetizing"
+  },
+  "kahraman": "prunes",
+  "etiketler": [
+    "prunes bone density",
+    "5 prunes a day bones",
+    "prunes osteoporosis study",
+    "prunes constipation older adults",
+    "dried plums bone health",
+    "prunes vs psyllium",
+    "postmenopausal bone loss",
+    "prune study penn state",
+    "food and bone health",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "FRAX": "frax",
+    "psyllium": "sill ee um",
+    "sorbitol": "sor bih tall",
+    "osteoclasts": "oss tee oh clasts",
+    "osteoblasts": "oss tee oh blasts",
+    "TNF": "T N F",
+    "CRP": "C R P",
+    "A1C": "A 1 C",
+    "De Souza": "duh soo zuh",
+    "Attaluri": "at uh loo ree",
+    "Hooshmand": "hoo shmand"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "What a prune is",
+      "metin": "In a 12 month trial of 235 postmenopausal women, eating about five or six prunes a day slowed the loss of hip bone density.",
+      "gorsel": "a ceramic bowl of dark wrinkled prunes on a wooden kitchen table, a few prunes beside it, soft window light",
+      "etiket": "De Souza et al. · Am J Clin Nutr · 2022",
+      "baslik": {
+        "satirlar": [
+          "PRUNES",
+          "AND BONES"
+        ],
+        "vurgu": "–0.3%",
+        "not": "hip bone loss in a year, vs –1.1% with no prunes"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But double the prunes did not work better, and they come with catches.",
+      "gorsel": "two bowls of prunes side by side on a table, one with a small handful and one heaped high, kitchen scale between them"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know the amount that worked and who should be careful.",
+      "gorsel": "a kitchen scale holding a small dish of prunes, a notebook with blank pages and a pencil beside it, morning light",
+      "baslik": {
+        "satirlar": [
+          "HOW MANY?",
+          "WHO CAUTIONS?"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what a prune actually is, and what is in a handful.",
+      "gorsel": "an open hand-drawn fruit chart style still life: a branch with ripe plums, and beside it a small pile of dried prunes on a plate"
+    },
+    {
+      "id": 5,
+      "metin": "A prune is a dried plum. According to the US Department of Agriculture, 100 grams, about three and a half ounces, has 240 calories, 7 grams of fiber and 732 milligrams of potassium.",
+      "gorsel": "a plate of prunes next to a kitchen scale showing a heap of dried prunes, a whole fresh plum beside the plate",
+      "etiket": "USDA FoodData Central",
+      "baslik": {
+        "satirlar": [
+          "100 GRAMS",
+          "OF PRUNES"
+        ],
+        "vurgu": "240",
+        "not": "calories in 100 grams, about 3.5 ounces"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "That same 100 grams carries about 38 grams of natural sugars. The smaller dose in the trial was half of it, 50 grams, under two ounces: roughly 120 calories and 19 grams of sugars.",
+      "gorsel": "a small white saucer holding five prunes, a teaspoon beside it, a wooden table and a folded cloth napkin"
+    },
+    {
+      "id": 7,
+      "metin": "Prunes are also rich in a sugar alcohol called sorbitol, about 14.7 grams per 100 grams in one chemical review. Hold on to that number, because it matters for digestion.",
+      "gorsel": "a halved prune showing its glossy dark flesh and pit, simple hexagon ring molecule outlines drifting above it",
+      "etiket": "Stacewicz-Sapuntzakis et al. · Crit Rev Food Sci Nutr · 2001",
+      "baslik": {
+        "satirlar": [
+          "SORBITOL"
+        ],
+        "vurgu": "14.7 g",
+        "not": "per 100 grams of prunes"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "Prunes also contain plant compounds called polyphenols, and some vitamin K, about 60 micrograms per 100 grams. In the practical part, you'll see why that second number matters if you take certain medicines.",
+      "gorsel": "a mortar and pestle with crushed prunes, a small bowl of whole prunes beside it, a sprig of plum blossom"
+    },
+    {
+      "id": 9,
+      "metin": "Two questions drive this video. Can a daily portion slow bone loss after menopause? And does it help with constipation as well as the fiber powders on the pharmacy shelf?",
+      "gorsel": "a pharmacy shelf with a jar of fiber powder and a plain tin, and in front of them a bowl of prunes on the counter"
+    },
+    {
+      "id": 10,
+      "bolum": "The Penn State trial",
+      "tip": "kart",
+      "metin": "First, bones. The best evidence is a trial from Penn State called the Prune Study.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "The Prune Study",
+        "alt": "235 women · 12 months"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Researchers led by Mary Jane De Souza enrolled 235 postmenopausal women. Their average age was 62, and they ranged from 55 to 75.",
+      "gorsel": "a quiet clinic waiting room with empty chairs and a small table holding a bowl of prunes, a tall window",
+      "etiket": "De Souza et al. · Am J Clin Nutr · 2022"
+    },
+    {
+      "id": 12,
+      "metin": "The women were randomly assigned to one of three groups: no prunes, 50 grams a day, or 100 grams a day. That is about five or six prunes, or about ten.",
+      "gorsel": "three wooden trays in a row, the first empty, the second holding five prunes, the third holding a heaped pile of prunes",
+      "baslik": {
+        "satirlar": [
+          "THREE GROUPS"
+        ],
+        "not": "none, 50 grams or 100 grams of prunes a day"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Random assignment means chance decides who gets what. That makes it a much stronger design than simply asking people what they eat. The trial lasted a full year.",
+      "gorsel": "a wooden bowl of numbered wooden tokens, a bowl of prunes beside it, a desk calendar showing twelve blank months"
+    },
+    {
+      "id": 14,
+      "metin": "The team scanned bone density at the hip at the start and then every six months.",
+      "gorsel": "a plain bone density scanning table in a quiet room, a bowl of prunes on a stool beside it, soft light",
+      "baslik": {
+        "satirlar": [
+          "HIP SCANS",
+          "EVERY 6 MONTHS"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "In the group that ate no prunes, total hip bone density fell by 1.1 percent over the year. That was the loss the researchers were trying to slow.",
+      "gorsel": "a simple empty plate and a bare table in cool light, a single dried prune pit lying alone on the plate",
+      "baslik": {
+        "satirlar": [
+          "NO PRUNES"
+        ],
+        "vurgu": "–1.1%",
+        "not": "total hip bone density after 12 months"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "In the group eating 50 grams of prunes a day, hip density fell by only 0.3 percent. That difference from the control group was statistically meaningful.",
+      "gorsel": "a small bowl of five prunes glowing in warm light on a wooden table, a folded napkin beside it",
+      "etiket": "De Souza et al. · Am J Clin Nutr · 2022",
+      "baslik": {
+        "satirlar": [
+          "50 GRAMS"
+        ],
+        "vurgu": "–0.3%",
+        "not": "total hip bone density after 12 months"
+      }
+    },
+    {
+      "id": 17,
+      "tip": "grafik",
+      "metin": "Here are the two numbers side by side: the percent change in total hip bone density after a year, with no prunes and with 50 grams of prunes a day.",
+      "grafik": {
+        "baslik": "Loss of total hip bone density",
+        "alt": "Percent decline over 12 months, postmenopausal women",
+        "cubuklar": [
+          {
+            "etiket": "No prunes",
+            "deger": 1.1,
+            "metin": "−1.1%"
+          },
+          {
+            "etiket": "50 g prunes",
+            "deger": 0.3,
+            "metin": "−0.3%"
+          }
+        ],
+        "kaynak": "De Souza et al., Am J Clin Nutr 2022 · 235 postmenopausal women, 12 months"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Now the surprise. The group eating 100 grams, double the dose, did not differ significantly from the control group. More prunes did not mean more protection.",
+      "gorsel": "a heaped bowl of prunes overflowing onto a table, beside a much smaller bowl of prunes, both in even light",
+      "baslik": {
+        "satirlar": [
+          "DOUBLE DOSE",
+          "NO BETTER"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "There is a practical clue. Dropout was 41 percent in the 100 gram group, compared with 15 percent at 50 grams and 10 percent in the control group. The abstract does not say why.",
+      "gorsel": "a row of empty wooden chairs beside a table with a large bowl of prunes, one chair pulled slightly out",
+      "baslik": {
+        "satirlar": [
+          "DROPOUT"
+        ],
+        "vurgu": "41%",
+        "not": "left the 100 gram group, vs 10% with no prunes"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "The researchers also estimated hip fracture risk with a standard tool called FRAX. In the control group the estimate worsened at six months. In the prune groups combined, it held steady.",
+      "gorsel": "a bowl of prunes beside a pair of reading glasses and a closed antique notebook on a desk, a round magnifying glass resting nearby",
+      "etiket": "De Souza et al. · Am J Clin Nutr · 2022"
+    },
+    {
+      "id": 21,
+      "metin": "That is an estimate built from bone density and other factors. The trial measured density, not actual broken bones, so it cannot tell us whether prunes prevent fractures.",
+      "gorsel": "a bone density scan sketch drawn on an engraved plate, no writing, a few prunes in a dish beside the plate",
+      "baslik": {
+        "satirlar": [
+          "DENSITY,",
+          "NOT FRACTURES"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "An earlier trial points the same way. Hooshmand and colleagues randomized 160 postmenopausal women with low bone density to 100 grams of prunes or dried apples a day for a year, and the prune group did better on forearm and spine density.",
+      "gorsel": "a bowl of prunes on one side of a table and a bowl of dried apple rings on the other, a small ruler lying between them",
+      "etiket": "Hooshmand et al. · Br J Nutr · 2011",
+      "baslik": {
+        "satirlar": [
+          "PRUNES VS",
+          "DRIED APPLE"
+        ],
+        "not": "forearm and spine density higher with prunes than apple"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "So two randomized trials found a bone benefit. That is encouraging. But it is a small body of research, and a review of the field called the results not completely consistent.",
+      "gorsel": "two small stacks of old books on a table with a bowl of prunes between them, a lit desk lamp",
+      "etiket": "Wallace · Nutrients · 2017"
+    },
+    {
+      "id": 24,
+      "bolum": "Why it might work",
+      "tip": "kart",
+      "metin": "Why might a dried fruit affect bone at all? Here the evidence gets thinner.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Why it might work",
+        "alt": "Mostly cells and animals"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Bone is living tissue. Cells called osteoclasts break old bone down, and cells called osteoblasts build new bone.",
+      "gorsel": "a long bone drawn as a textbook engraving beside a bowl of prunes, tiny dots of two kinds scattered along its surface",
+      "baslik": {
+        "satirlar": [
+          "BONE IS ALIVE"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "metin": "In 2017, researcher Taylor Wallace reviewed 24 cell, animal and human studies. Prunes and their extracts seemed to act on signals that influence both kinds of bone cells.",
+      "gorsel": "a large stack of old journals with a bowl of prunes on top, a magnifying glass lying across them",
+      "etiket": "Wallace · Nutrients · 2017"
+    },
+    {
+      "id": 27,
+      "metin": "The author suggests the many plant polyphenols in prunes may be part of the reason. But much of that evidence comes from lab dishes and animals, which cannot tell us what happens in a person.",
+      "gorsel": "a glass laboratory dish with a few drops of dark prune extract, a small mouse sketch in the corner and a whole prune beside it",
+      "baslik": {
+        "satirlar": [
+          "LAB DISHES,",
+          "NOT PEOPLE"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "metin": "A follow-up of the Penn State trial looked at inflammation in the 183 women who finished. Immune cells from the prune groups released less of certain inflammatory signals when stimulated in the lab.",
+      "gorsel": "a row of small glass test tubes in a wooden rack, a bowl of prunes in front of the rack, engraved laboratory style",
+      "etiket": "Damani et al. · J Nutr · 2024"
+    },
+    {
+      "id": 29,
+      "metin": "The 50 gram group had lower TNF alpha, and the 100 gram group had lower interleukin 1 beta, 6 and 8. These were secondary results, and the numbers were noisy.",
+      "gorsel": "a handful of prunes on a plate beside a simple scale with a tiny weight on one pan, laboratory glassware in the background",
+      "baslik": {
+        "satirlar": [
+          "SECONDARY",
+          "RESULTS"
+        ],
+        "not": "different doses moved different signals"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "And here is the catch. Measures in the blood itself, including C reactive protein, did not change. So the trial did not show that prunes lower inflammation throughout the body.",
+      "gorsel": "a tube-shaped vessel with small red discs drifting through it, a single prune resting beside the vessel",
+      "baslik": {
+        "satirlar": [
+          "CRP DID NOT",
+          "CHANGE"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "So the honest summary is this. Prunes contain several things that might help bones. Nobody has shown which one does the work, or that inflammation is the explanation.",
+      "gorsel": "a bowl of prunes at the center of a table, with a question-shaped curl of steam rising from a cup of tea beside it"
+    },
+    {
+      "id": 32,
+      "bolum": "Prunes and digestion",
+      "tip": "kart",
+      "metin": "Now, digestion. Prunes have an old reputation here, so let's check it.",
+      "kart": {
+        "ust": "THE GUT",
+        "baslik": "Prunes vs. psyllium",
+        "alt": "Chronic constipation trials"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "A 2014 systematic review by Lever and colleagues found only four randomized trials of prunes and gut function. Just one was in people with constipation.",
+      "gorsel": "an open antique ledger with blank pages, four small prunes arranged in a row on it, a quill pen beside the ledger",
+      "etiket": "Lever et al. · Aliment Pharmacol Ther · 2014"
+    },
+    {
+      "id": 34,
+      "metin": "That trial compared prunes with psyllium, the fiber in many pharmacy powders. It enrolled 40 adults with chronic constipation, who tried 50 grams of prunes twice a day for three weeks, and psyllium for three weeks, in random order.",
+      "gorsel": "a bowl of prunes on the left and a glass jar of pale psyllium powder with a wooden scoop on the right, on a kitchen counter",
+      "etiket": "Attaluri et al. · Aliment Pharmacol Ther · 2011",
+      "baslik": {
+        "satirlar": [
+          "PRUNES VS",
+          "PSYLLIUM"
+        ],
+        "not": "40 adults, each tried both"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Both treatments supplied about 6 grams of fiber a day, and each person had a one week break between them. That way every person served as their own comparison.",
+      "gorsel": "two identical glass mugs on a table, one filled with chopped prunes and one with a pale fiber powder, a small hourglass between them"
+    },
+    {
+      "id": 36,
+      "tip": "grafik",
+      "metin": "On prunes, people averaged 3.5 natural, complete bowel movements per week. On psyllium, they averaged 2.8.",
+      "grafik": {
+        "baslik": "Complete spontaneous bowel movements",
+        "alt": "Average per week, after 3 weeks of each treatment",
+        "cubuklar": [
+          {
+            "etiket": "Psyllium",
+            "deger": 2.8,
+            "metin": "2.8"
+          },
+          {
+            "etiket": "Prunes",
+            "deger": 3.5,
+            "metin": "3.5"
+          }
+        ],
+        "kaynak": "Attaluri et al., Aliment Pharmacol Ther 2011, as summarized by Lever et al. 2014 · 40 adults with chronic constipation"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "Stool consistency also improved more with prunes. Straining and overall symptoms did not differ between the two treatments, and both were well tolerated.",
+      "gorsel": "a bowl of prunes beside a small wooden spoon and an empty glass, a clean tiled kitchen counter",
+      "baslik": {
+        "satirlar": [
+          "FEWER HARD",
+          "STOOLS"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "Here is the limit. The average age in that trial was 38. Prunes were tested in younger adults, not mainly in people over 60, so we are borrowing the result for older viewers.",
+      "gorsel": "a bowl of prunes beside a young green sapling in a pot and an old twisted tree branch, even daylight",
+      "baslik": {
+        "satirlar": [
+          "AVERAGE AGE",
+          "38"
+        ],
+        "not": "constipation trials used younger adults"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "A 2021 small, partly randomized trial by Chey and colleagues gave 75 adults with chronic constipation, average age about 43, either 100 grams of prunes, psyllium, or two green kiwifruit for four weeks.",
+      "gorsel": "three small plates in a row on a table: one with prunes, one with two green kiwifruit, one with a heap of pale powder",
+      "etiket": "Chey et al. · Am J Gastroenterol · 2021"
+    },
+    {
+      "id": 40,
+      "metin": "All three improved the number of natural bowel movements, and the groups were similar on the main measure. Kiwifruit had the fewest side effects. So prunes look like a reasonable option, not a clear winner.",
+      "gorsel": "a bowl of prunes beside two halved green kiwifruit on a cutting board, a knife resting nearby",
+      "baslik": {
+        "satirlar": [
+          "ALL THREE",
+          "HELPED"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "Why do prunes loosen things? Fiber probably helps. So does sorbitol, which is thought to be absorbed slowly and fermented by gut bacteria, a process that can also cause gas.",
+      "gorsel": "a halved prune beside a drop of clear syrup on a spoon, tiny bubbles rising from it, hexagon ring outlines above",
+      "baslik": {
+        "satirlar": [
+          "SORBITOL"
+        ],
+        "not": "thought to add to the laxative effect"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "That also hints at the side effect. 100 grams of prunes holds around 15 grams of sorbitol, and for some people that may bring gas, cramps or loose stools. Starting smaller is sensible.",
+      "gorsel": "a small bowl with just two prunes on a plate, beside a large bowl heaped with prunes pushed to the far side of the table",
+      "baslik": {
+        "satirlar": [
+          "START SMALL"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now the honest part: who the evidence covers, and who it does not.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Limits and cautions",
+        "alt": "Who should be careful"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "The bone trials enrolled postmenopausal women. A 2017 review noted that research in men and in diverse racial and ethnic groups is lacking, so we cannot say the result carries over.",
+      "gorsel": "a bowl of prunes placed at the center of a long table with many empty chairs around it, evening light",
+      "etiket": "Wallace · Nutrients · 2017"
+    },
+    {
+      "id": 45,
+      "metin": "A difference of 0.8 percentage points in hip density is real but modest. Prunes should not replace any bone treatment your doctor has prescribed.",
+      "gorsel": "a bowl of prunes on a table beside a closed pill organizer and a glass of water, a doctor's folded reading glasses",
+      "baslik": {
+        "satirlar": [
+          "MODEST",
+          "NOT A CURE"
+        ],
+        "vurgu": "0.8",
+        "not": "percentage points of hip density saved in a year"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "On blood sugar, I did not find a prune trial in people with diabetes. What we do know is the composition: about 38 grams of sugars per 100 grams. If you track your glucose or A1C, ask how a daily portion fits your plan.",
+      "gorsel": "a glucose meter with a blank screen beside a small bowl of prunes on a white kitchen table",
+      "baslik": {
+        "satirlar": [
+          "SUGAR",
+          "38 G / 100 G"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Prunes are also high in potassium, 732 milligrams per 100 grams. That matters mainly for people on a potassium limit, such as in advanced kidney disease. Check with your care team first.",
+      "gorsel": "a bowl of prunes beside a banana and a small dish of dried apricots on a plain kitchen table, side light",
+      "etiket": "USDA FoodData Central"
+    },
+    {
+      "id": 48,
+      "metin": "Then there is the blood thinner warfarin. Vitamin K affects how it works, so MedlinePlus advises keeping intake fairly steady. A 50 gram portion has about 30 micrograms. Tell your anticoagulation clinic if prunes become a daily habit.",
+      "gorsel": "a weekly pill organizer beside a small bowl of five prunes on a kitchen table, a calendar page with no writing",
+      "baslik": {
+        "satirlar": [
+          "WARFARIN?",
+          "KEEP IT STEADY"
+        ],
+        "vurgu": "30 µg",
+        "not": "vitamin K in a 50 gram portion"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "You may hear that prunes reverse osteoporosis. Nothing in these trials shows that. They show slower hip bone loss over a year, in women, measured by bone density.",
+      "gorsel": "a crumbling stone column beside a bowl of prunes in warm light, the column intact and unbroken",
+      "baslik": {
+        "satirlar": [
+          "REVERSE",
+          "OSTEOPOROSIS?"
+        ],
+        "not": "not shown in these trials"
+      }
+    },
+    {
+      "id": 50,
+      "metin": "Another idea is that more is better. In the Penn State trial, double the prunes was not better, and many more women left the study.",
+      "gorsel": "a tall tower of prunes stacked beside a small neat pile of five prunes, plain table in even light"
+    },
+    {
+      "id": 51,
+      "bolum": "How to use prunes",
+      "tip": "kart",
+      "metin": "So how could you use prunes, if your doctor agrees?",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Practical tips",
+        "alt": "If your doctor agrees"
+      }
+    },
+    {
+      "id": 52,
+      "metin": "First, start with the amount studied for bones: about five or six prunes, 50 grams, which is under two ounces. Build up over a week or two if your gut is sensitive.",
+      "gorsel": "five prunes lined up on a small white plate beside a glass of water, morning light on a wooden table",
+      "baslik": {
+        "satirlar": [
+          "TIP 1",
+          "5 TO 6 A DAY"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "metin": "Second, count them as food, not an extra. Fifty grams is about 120 calories, so swap them in for another snack rather than adding on top.",
+      "gorsel": "a bowl of prunes beside a plain bowl of yogurt on a breakfast tray, a spoon laid across the tray",
+      "baslik": {
+        "satirlar": [
+          "TIP 2",
+          "SWAP, DON'T ADD"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "Third, choose plain prunes and read the label on the package. Prune juice is a different product, with about 6.1 grams of sorbitol per 100 grams, and it was not what the bone trials used.",
+      "gorsel": "a package of dried prunes with a clear window and a glass of prune juice side by side on a grocery counter",
+      "etiket": "Stacewicz-Sapuntzakis et al. · Crit Rev Food Sci Nutr · 2001",
+      "baslik": {
+        "satirlar": [
+          "TIP 3",
+          "PLAIN PRUNES"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "Fourth, if constipation is new, lasts more than a few weeks, or comes with pain, bleeding or weight loss, see your doctor instead of treating it yourself.",
+      "gorsel": "a bowl of prunes on a table beside a telephone and a small appointment notebook with blank pages",
+      "baslik": {
+        "satirlar": [
+          "TIP 4",
+          "NEW SYMPTOMS?"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "metin": "And if you take a blood thinner, have diabetes, or have kidney disease, ask your doctor or pharmacist before making prunes a daily habit.",
+      "gorsel": "a pharmacist's counter with a bowl of prunes beside a paper pill bag and a small brass scale",
+      "baslik": {
+        "satirlar": [
+          "ASK FIRST"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "What to remember",
+        "alt": "Prunes, bones and digestion"
+      }
+    },
+    {
+      "id": 58,
+      "metin": "For bones, in a 12 month trial of 235 postmenopausal women, 50 grams of prunes a day slowed hip bone loss, 0.3 percent versus 1.1 percent with no prunes. Double the dose did no better.",
+      "gorsel": "a ceramic bowl of five prunes glowing on a wooden table, a small engraved hip bone drawn beside the bowl"
+    },
+    {
+      "id": 59,
+      "metin": "For digestion, prunes beat psyllium in one small trial and performed similarly in another. But those trials averaged adults around 40, not people over 60.",
+      "gorsel": "a bowl of prunes beside a jar of psyllium powder and a glass of water on a kitchen counter"
+    },
+    {
+      "id": 60,
+      "metin": "The catches: sorbitol can upset the stomach, prunes carry sugar and potassium, and the vitamin K matters if you take warfarin.",
+      "gorsel": "a bowl of prunes beside a small brass scale and a pill organizer on a table, soft evening light"
+    },
+    {
+      "id": 61,
+      "metin": "The evidence is promising but modest. Think of prunes as a helpful food, not a treatment, and talk with your doctor about your own bones.",
+      "gorsel": "a bowl of prunes on a sunlit windowsill beside a cup of tea, a quiet garden through the window"
+    },
+    {
+      "id": 62,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

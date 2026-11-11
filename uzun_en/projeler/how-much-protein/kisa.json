@@ -1,0 +1,25 @@
+{
+  "baslik": ["PROTEIN", "AFTER 60?"],
+  "baslik_yt": "Protein After 60: Is the Official Number Enough?",
+  "aciklama": "The official protein allowance is 0.8 g per kilogram, but experts suggest healthy adults over 65 aim higher. Here is the range, plus who should check with a doctor first.",
+  "parcalar": [
+    {"sahne": 5, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 12, "cumleler": [0],
+     "baslik": {"satirlar": ["THE RDA"], "vurgu": "0.8", "not": "g per kg per day"},
+     "etiket": "Institute of Medicine · DRI · 2005"},
+    {"sahne": 18, "cumleler": [0],
+     "baslik": {"satirlar": ["AT LEAST"], "vurgu": "1.0–1.2", "not": "g per kg per day after 65"},
+     "etiket": "Bauer et al. · J Am Med Dir Assoc · 2013"},
+    {"sahne": 31, "cumleler": [0],
+     "baslik": {"satirlar": ["PROTEIN +", "EXERCISE"]},
+     "etiket": null},
+    {"sahne": 42, "cumleler": [1],
+     "baslik": {"satirlar": ["THE KIDNEY", "EXCEPTION"]},
+     "etiket": "Bauer et al. · J Am Med Dir Assoc · 2013"},
+    {"sahne": 42, "cumleler": [2], "baslik": null,
+     "etiket": "Bauer et al. · J Am Med Dir Assoc · 2013"},
+    {"sahne": 40, "cumleler": [0],
+     "baslik": {"satirlar": ["25–30 G", "PER MEAL"]},
+     "etiket": null}
+  ]
+}

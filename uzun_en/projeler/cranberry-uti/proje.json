@@ -1,0 +1,488 @@
+{
+  "slug": "cranberry-uti",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does Cranberry Juice Prevent UTIs?",
+  "yorum": "Do you drink cranberry juice or take capsules to keep UTIs away? Has your doctor ever talked it over with you, especially if you take warfarin or another daily medicine?",
+  "aciklama_giris": "Cranberry juice is one of the most popular home remedies for urinary tract infections, but does it work? A 2023 Cochrane review of 50 trials and more than 8,800 people found that cranberry products lowered the risk of symptomatic infections in women with recurrent UTIs, in children, and in people prone to infection after bladder procedures. It did little for older adults in care homes, pregnant women, or adults whose bladders do not empty fully.\n\nIn this video we look at what the review and two key trials found, juice versus capsules, the sugar in cranberry juice cocktail, the limits of the evidence, and the medicine caution for people who take warfarin. Cranberry is not a treatment for an infection you already have.",
+  "kaynaklar": [
+    "Williams G, Hahn D, Stephens JH, Craig JC, Hodson EM. Cranberries for preventing urinary tract infections. Cochrane Database of Systematic Reviews. 2023;(4):CD001321. DOI 10.1002/14651858.CD001321.pub6. PMID 37068952.",
+    "Maki KC, Kaspar KL, Khoo C, Derrig LH, Schild AL, Gupta K. Consumption of a cranberry juice beverage lowered the number of clinical urinary tract infection episodes in women with a recent history of urinary tract infection. American Journal of Clinical Nutrition. 2016;103(6):1434-1442.",
+    "Juthani-Mehta M, et al. Effect of cranberry capsules on bacteriuria plus pyuria among older women in nursing homes: a randomized clinical trial. JAMA. 2016;316(18):1879-1887. DOI 10.1001/jama.2016.16141.",
+    "National Center for Complementary and Integrative Health (NIH). Cranberry. nccih.nih.gov/health/cranberry (updated November 2024).",
+    "Ocean Spray Cranberry Juice Cocktail, Nutrition Facts panel (8 fl oz serving), retailer listing, stopandshop.com."
+  ],
+  "kapak": {
+    "satirlar": [
+      "CRANBERRY",
+      "FOR UTI?"
+    ],
+    "vurgu": "–26%",
+    "vurgu_alt": "repeats",
+    "gorsel": "a tall glass of deep red cranberry juice in the foreground with a small pile of fresh whole cranberries overlapping its base, close up, glossy and appetizing"
+  },
+  "kahraman": "cranberry juice",
+  "etiketler": [
+    "cranberry juice uti",
+    "does cranberry prevent uti",
+    "cranberry pills uti",
+    "urinary tract infection",
+    "recurrent uti",
+    "cranberry capsules",
+    "cochrane review",
+    "cranberry and warfarin",
+    "uti prevention",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "UTI": "U T I",
+    "UTIs": "U T Is",
+    "PAC": "P A C",
+    "PACs": "P A Cs",
+    "Cochrane": "Cock ran",
+    "proanthocyanidins": "pro an tho sigh an ih dins",
+    "Juthani-Mehta": "Joo tah nee May tah"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Cranberry and UTIs",
+      "metin": "In a Cochrane review of fifty trials, cranberry cut repeat urinary infections by about a quarter in women who get them often.",
+      "gorsel": "a tall glass of cranberry juice beside a small bowl of fresh whole cranberries on a kitchen table, morning light from a window drawn as fine lines",
+      "baslik": {
+        "satirlar": ["50 TRIALS"],
+        "vurgu": "–26%",
+        "not": "repeat infections in women with recurrent UTIs"
+      },
+      "etiket": "Williams et al. · Cochrane · 2023"
+    },
+    {
+      "id": 2,
+      "metin": "But it didn't clearly help older adults in care homes, and a lot of the juice in stores comes with a catch.",
+      "gorsel": "an armchair beside a window in a quiet care home room with a glass of cranberry juice on a small side table, a folded blanket on the chair",
+      "baslik": {
+        "satirlar": ["NOT FOR", "EVERYONE"]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know who it may help, juice or capsules, and one medicine warning.",
+      "gorsel": "a glass of cranberry juice and a small amber bottle of capsules side by side on a wooden shelf, a pair of round reading glasses beside them"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what cranberry is supposed to do for the bladder.",
+      "gorsel": "a ripe cranberry bush branch with clusters of red berries, a glass of cranberry juice resting on a mossy stone below it"
+    },
+    {
+      "id": 5,
+      "metin": "A urinary tract infection, or UTI, is a bacterial infection of the urinary system. For some people, infections keep coming back, and cranberry is one of the most commonly promoted ways to try to prevent that.",
+      "gorsel": "a simple textbook engraving of the bladder and kidneys with two thin tubes between them, a glass of cranberry juice drawn small in the corner",
+      "baslik": {
+        "satirlar": ["INFECTIONS", "THAT RETURN"]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "The idea centers on compounds in cranberries called proanthocyanidins, or PACs. Researchers think they may stop bacteria from sticking to the wall of the bladder, which could make it harder for an infection to start.",
+      "gorsel": "a halved cranberry beside a glass of cranberry juice, a circular magnified inset showing tiny rod-shaped bacteria slipping off a smooth curved wall",
+      "baslik": {
+        "satirlar": ["PACs"],
+        "not": "compounds thought to stop bacteria sticking to the bladder wall"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "A mechanism like that is only a hypothesis. What really counts is whether fewer people get infections, and that's what randomized trials measure.",
+      "gorsel": "a laboratory bench with a glass of cranberry juice, a glass of clear placebo liquid that looks the same, and two identical trays, an antique brass microscope behind them"
+    },
+    {
+      "id": 8,
+      "metin": "Notice the wording: prevent, not treat. The National Institutes of Health says cranberry isn't recommended as a treatment for an existing infection in any group of people. If you think you have a UTI, see a health care provider.",
+      "gorsel": "a doctor's desk with a stethoscope, a closed notebook and a glass of cranberry juice pushed gently to one side",
+      "baslik": {
+        "satirlar": ["PREVENT,", "NOT TREAT"]
+      }
+    },
+    {
+      "id": 9,
+      "metin": "So the real question is narrower. Can cranberry lower the chance that infections come back, and for whom? The answer depends a lot on who you are, and there's a catch in the juice aisle and a medicine warning that we'll get to.",
+      "gorsel": "a supermarket shelf with several bottles of red cranberry juice with blank labels, a shopping basket on the floor in front"
+    },
+    {
+      "id": 10,
+      "bolum": "The Cochrane review",
+      "tip": "kart",
+      "metin": "Let's look at the best evidence available.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "The Cochrane review",
+        "alt": "50 trials · 2023"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Cochrane is an independent group that pools the results of many trials. In 2023, Gabrielle Williams and colleagues updated its review of cranberry and UTIs. It covers fifty randomized trials with more than 8,800 people.",
+      "gorsel": "a tall stack of bound journal volumes with blank spines on an oak table, a glass of cranberry juice and a magnifying glass resting on top",
+      "etiket": "Williams et al. · Cochrane · 2023",
+      "baslik": {
+        "satirlar": ["50 TRIALS"],
+        "not": "more than 8,800 people"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Most of the trials compared cranberry with a placebo or with no treatment. People took juice, capsules, tablets or powder, and each trial lasted at least four weeks.",
+      "gorsel": "four small arrangements in a row on a table: a glass of cranberry juice, a small bottle of capsules, a few tablets on a saucer and a spoonful of red powder"
+    },
+    {
+      "id": 13,
+      "metin": "When 26 of those trials, with 6,211 people, were pooled, cranberry products lowered the risk of a symptomatic, lab-confirmed infection by about 30 percent. The authors rated this moderate certainty.",
+      "gorsel": "a glass of cranberry juice with a smaller empty glass beside it, a balance scale tipped gently toward the empty glass, soft light",
+      "etiket": "Williams et al. · Cochrane · 2023",
+      "baslik": {
+        "satirlar": ["ALL TRIALS", "POOLED"],
+        "vurgu": "–30%",
+        "not": "risk of a symptomatic, lab-confirmed UTI"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Notice the careful wording: symptomatic and lab-confirmed. The trials counted infections that caused symptoms and were confirmed by a urine culture, not just a feeling that something was wrong.",
+      "gorsel": "a small glass lab dish and a row of capped sample tubes in a rack beside a glass of cranberry juice, an antique brass microscope in the background"
+    },
+    {
+      "id": 15,
+      "metin": "The National Institutes of Health reaches a similar conclusion. It says that in general, cranberry products may decrease the overall risk of symptomatic, recurrent UTIs in women by about 25 percent.",
+      "gorsel": "a bowl of fresh cranberries and a glass of cranberry juice on a table, an open reference book with blank pages and a quill pen beside them",
+      "baslik": {
+        "satirlar": ["ABOUT", "A QUARTER"],
+        "not": "lower risk of recurrent UTIs in women, per NIH"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "But the results varied a lot from trial to trial. One trial pointed the opposite way, and without it, the results for women with recurrent infections lined up much better. That's why the review also looked at each group separately.",
+      "gorsel": "several glasses of cranberry juice on a long table filled to noticeably different heights, a ruler lying across the front"
+    },
+    {
+      "id": 17,
+      "bolum": "Who it helps",
+      "tip": "kart",
+      "metin": "So who does it help? Let's go group by group.",
+      "kart": {
+        "ust": "WHO IT HELPS",
+        "baslik": "Group by group",
+        "alt": "Cochrane review · 2023"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "First, women with recurrent infections. In eight trials with 1,555 women, cranberry lowered the risk of another infection by about 26 percent. The plausible range was wide, from roughly one percent to 45 percent.",
+      "gorsel": "a woman's hand holding a glass of cranberry juice over a kitchen counter, a bowl of fresh cranberries beside it, no face visible",
+      "etiket": "Williams et al. · Cochrane · 2023",
+      "baslik": {
+        "satirlar": ["WOMEN,", "RECURRENT UTIs"],
+        "vurgu": "–26%",
+        "not": "range 1% to 45% lower"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "That's a relative drop in risk, not a guarantee. How many infections it might spare you depends on how often you get them in the first place.",
+      "gorsel": "two shelves of small red cranberries in jars, the upper shelf with many jars and the lower shelf with fewer jars, a glass of cranberry juice at the front"
+    },
+    {
+      "id": 20,
+      "metin": "Second, children. In five trials with 504 children, cranberry products were linked with roughly half the risk of a UTI. The certainty was rated moderate.",
+      "gorsel": "a child's small cup of cranberry juice on a low wooden table beside a bowl of cranberries and a wooden toy block, soft window light",
+      "etiket": "Williams et al. · Cochrane · 2023",
+      "baslik": {
+        "satirlar": ["CHILDREN"],
+        "vurgu": "–54%",
+        "not": "risk of UTI, 5 trials, 504 children"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "Third, people who are prone to infection after a bladder-related procedure, such as radiation treatment. In six trials with 1,434 people, the risk was about 53 percent lower.",
+      "gorsel": "a hospital bedside table with a glass of cranberry juice, a folded towel and a small bowl of cranberries, a plain screen in the background"
+    },
+    {
+      "id": 22,
+      "tip": "grafik",
+      "metin": "Side by side, three groups show a lower risk. The last bar is older adults in care homes, where the difference was small and statistically unclear.",
+      "grafik": {
+        "baslik": "Lower risk of a UTI with cranberry",
+        "alt": "Cranberry products vs placebo or no treatment, by group",
+        "cubuklar": [
+          { "etiket": "Women, recurrent", "deger": 26, "metin": "−26%" },
+          { "etiket": "Children", "deger": 54, "metin": "−54%" },
+          { "etiket": "After procedures", "deger": 53, "metin": "−53%" },
+          { "etiket": "Care homes", "deger": 7, "metin": "−7%" }
+        ],
+        "kaynak": "Williams et al., Cochrane 2023 · 50 trials, 8,857 participants · care-home result not statistically clear"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Care homes are where the evidence stops being friendly. In three trials with 1,489 older residents, the risk with cranberry was about the same as without. Pregnant women, and adults whose bladders don't empty fully, also saw little or no benefit.",
+      "gorsel": "a quiet care home dining room with a small table set for one, a glass of cranberry juice and a plate with a spoon, a window with curtains",
+      "baslik": {
+        "satirlar": ["CARE HOMES"],
+        "not": "little or no benefit in older residents"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "One of those trials was led by Manisha Juthani-Mehta at Yale. It gave 185 women living in nursing homes, average age 86, either cranberry capsules or a placebo every day for a year.",
+      "gorsel": "two identical small amber bottles of capsules on a tray, a glass of cranberry juice and an antique wall clock with a blank face behind them",
+      "etiket": "Juthani-Mehta et al. · JAMA · 2016",
+      "baslik": {
+        "satirlar": ["185 WOMEN,", "1 YEAR"],
+        "not": "average age 86, cranberry capsules vs placebo"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Bacteria and white cells in the urine, a sign of possible infection, turned up in about 29 percent of both groups. Symptomatic infections were also similar: ten with cranberry and twelve with placebo.",
+      "gorsel": "two equal glass cylinders filled with red cranberry juice to exactly the same height, a bowl of cranberries between them",
+      "etiket": "Juthani-Mehta et al. · JAMA · 2016",
+      "baslik": {
+        "satirlar": ["29% VS 29%"],
+        "not": "bacteria plus white cells in urine, cranberry vs placebo"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "That doesn't prove cranberry is useless for every older adult. It was one trial of one type of capsule. But the pooled care home results in the review pointed the same way: little or no benefit.",
+      "gorsel": "a scale with a glass of cranberry juice on one side and nothing on the other, both pans level, a bowl of cranberries beside it"
+    },
+    {
+      "id": 27,
+      "metin": "Those trials don't tell us what happens in older adults who live at home. For them, this review can't give a clear answer, so it's a good question for your own doctor.",
+      "gorsel": "a sunny kitchen in an ordinary home with a glass of cranberry juice on the table next to a pair of reading glasses and a small notepad with blank pages"
+    },
+    {
+      "id": 28,
+      "bolum": "Juice, capsules and sugar",
+      "tip": "kart",
+      "metin": "Next, the question most people ask. Juice or capsules?",
+      "kart": {
+        "ust": "JUICE OR CAPSULES?",
+        "baslik": "Juice, capsules and sugar",
+        "alt": "What the trials can and can't tell us"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "The Cochrane review tested both. Juice or concentrate was used in 19 trials, and tablets, capsules or powder in 29. But the authors said it's unclear whether one form works better, because the certainty of that evidence was very low.",
+      "gorsel": "a glass of cranberry juice on the left and a small bottle of capsules on the right, a thin dashed line and a question-free empty space between them on a wooden table",
+      "etiket": "Williams et al. · Cochrane · 2023",
+      "baslik": {
+        "satirlar": ["JUICE OR", "CAPSULES?"],
+        "not": "unclear which works better, certainty very low"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "A trial of juice is worth knowing. Kevin Maki and colleagues gave 373 women with a recent UTI either an eight ounce serving of cranberry beverage or a placebo drink every day for 24 weeks. The average age was about 41.",
+      "gorsel": "a row of small glasses of cranberry juice on a tray, each filled the same amount, a small stack of paper cups beside the tray",
+      "etiket": "Maki et al. · Am J Clin Nutr · 2016",
+      "baslik": {
+        "satirlar": ["373 WOMEN,", "24 WEEKS"],
+        "not": "daily cranberry beverage vs placebo drink"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "Clinical infections diagnosed by investigators happened 39 times with cranberry and 67 times with placebo, a rate about 39 percent lower. But infections confirmed by urine culture didn't differ significantly.",
+      "gorsel": "two glasses on a table, one of cranberry juice and one of pale placebo drink, with a small row of red beads beside each, fewer beads beside the cranberry juice",
+      "etiket": "Maki et al. · Am J Clin Nutr · 2016",
+      "baslik": {
+        "satirlar": ["39 VS 67"],
+        "vurgu": "–39%",
+        "not": "clinical UTI episodes, cranberry vs placebo"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "The researchers estimated that preventing one clinical infection took roughly three years of daily cranberry beverage in one woman, though the range ran up to about 13 years. These women were also younger, which is worth remembering.",
+      "gorsel": "a long row of glasses of cranberry juice lined up along a windowsill, receding into the distance, a single red bead beside the last glass"
+    },
+    {
+      "id": 33,
+      "metin": "Juice has a practical problem too. In several trials, people found it hard to keep drinking it. Cochrane noted poor adherence and dropouts, in one pregnancy trial because of the volume of juice required.",
+      "gorsel": "a very tall glass and a large pitcher of cranberry juice on a kitchen table, a small half-empty cup pushed aside, a quiet dining chair"
+    },
+    {
+      "id": 34,
+      "metin": "Then there's the sugar. One popular cranberry juice cocktail lists 110 calories and 25 grams of sugar in an eight ounce glass, 23 grams of it added. That's roughly six teaspoons of sugar in one glass.",
+      "gorsel": "a glass of cranberry juice beside six small mounds of white sugar on a saucer, a silver teaspoon resting on the saucer",
+      "etiket": "Nutrition Facts · cranberry juice cocktail, 8 fl oz",
+      "baslik": {
+        "satirlar": ["25 g SUGAR", "PER GLASS"],
+        "not": "8 oz of one popular cranberry juice cocktail, 23 g added"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "If you're watching blood sugar or weight, that matters. Unsweetened or low-sugar products, or capsules, avoid it, though the evidence can't tell us which form works best.",
+      "gorsel": "a glass of cranberry juice beside a glucose meter with a blank screen on a kitchen counter, a small bowl of fresh cranberries behind"
+    },
+    {
+      "id": 36,
+      "metin": "Other cranberry products, such as sweetened dried cranberries or blended juices, weren't what these trials tested. So we can't say they give the same benefit.",
+      "gorsel": "a small bowl of sweetened dried cranberries next to a glass of cranberry juice and a glass of mixed red juice, a wooden spoon on the table"
+    },
+    {
+      "id": 37,
+      "metin": "Dose is unclear as well. The review found no clear difference between low, moderate and high doses of PACs, and many products never measured how much PAC they contained.",
+      "gorsel": "three small glasses of cranberry juice of the same size beside three small bottles of capsules of increasing size, arranged on a tray",
+      "baslik": {
+        "satirlar": ["WHAT DOSE?"],
+        "not": "no clear difference between low, moderate and high PAC doses"
+      }
+    },
+    {
+      "id": 38,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What are the limits of this evidence?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What we can't say yet",
+        "alt": "Limits of the evidence"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "Many trials were small, and in many it wasn't clear that participants and researchers were properly kept blind to who got cranberry. Definitions of infection also differed between trials.",
+      "gorsel": "a quiet research desk with a glass of cranberry juice, a small stack of papers with blank pages and a pair of round glasses, a banker's lamp"
+    },
+    {
+      "id": 40,
+      "metin": "Cochrane's authors also noted that 23 of the studies had commercial involvement, including five with Ocean Spray. That doesn't make them wrong, but it's one reason to want more independent trials.",
+      "gorsel": "a glass of cranberry juice on a boardroom table beside a closed briefcase and a pair of eyeglasses, a plain window behind"
+    },
+    {
+      "id": 41,
+      "metin": "What about antibiotics? Two trials with 385 people found little or no difference between cranberry and antibiotics for preventing infections. But the review couldn't say whether one is better, so this is no reason to set aside a prescription.",
+      "gorsel": "a glass of cranberry juice on a tray beside a pill organizer and a small brown pharmacy bottle, a stethoscope curled behind them",
+      "baslik": {
+        "satirlar": ["VS", "ANTIBIOTICS?"],
+        "not": "two trials, 385 people: no clear difference, can't say which is better"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "Cranberry also did better than probiotics in three small trials with 215 people. That's an interesting hint, but a small one, and nothing here replaces advice from your own care team.",
+      "gorsel": "a glass of cranberry juice on the left and a small bowl of plain yogurt on the right on a wooden table, a spoon in the yogurt"
+    },
+    {
+      "id": 43,
+      "metin": "And one firm point. Cranberry isn't a treatment. If you think you have an infection right now, see a health care provider rather than reaching for a glass of juice.",
+      "gorsel": "a glass of cranberry juice set aside on a side table while a telephone handset rests on a desk in the foreground, a clock with a blank face on the wall",
+      "baslik": {
+        "satirlar": ["NOT A", "TREATMENT"]
+      }
+    },
+    {
+      "id": 44,
+      "metin": "Side effects were uncommon. In ten trials with 2,166 people, stomach upset was slightly more common with cranberry, though Cochrane judged it probably no different from placebo. Very large amounts can cause stomach upset and diarrhea.",
+      "gorsel": "an oversized glass of cranberry juice and a pitcher on a table, a person's hand resting on a stomach drawn as a simple outline, no face visible",
+      "etiket": "Williams et al. · Cochrane · 2023"
+    },
+    {
+      "id": 45,
+      "metin": "Now the medicine warning. If you take warfarin, a blood thinner, talk to your doctor or pharmacist before making cranberry a daily habit. The National Institutes of Health says the evidence on a warfarin interaction is conflicting.",
+      "gorsel": "a glass of cranberry juice on a pharmacy counter next to a small brown medicine bottle and a weekly pill box, a mortar and pestle at the back",
+      "baslik": {
+        "satirlar": ["WARFARIN?", "ASK FIRST"],
+        "not": "evidence on an interaction is conflicting, per NIH"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Conflicting means nobody can promise it's safe or unsafe for you. If you take any prescription medicine, it's worth asking, so your care team can keep an eye on things.",
+      "gorsel": "a pharmacist's hands with a clipboard behind a counter, a glass of cranberry juice and a paper bag with a pill bottle in front, no face visible"
+    },
+    {
+      "id": 47,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how do you actually use this? Here are five practical ideas.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five practical ideas",
+        "alt": "For juice, capsules and everything between"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "One. Ask whether you're in a group with the best-supported benefit: women with recurrent infections, children, or people prone to infection after a bladder procedure. Your doctor can help you decide.",
+      "gorsel": "a glass of cranberry juice on a consultation desk with a closed notebook and a stethoscope, a window with soft light behind"
+    },
+    {
+      "id": 49,
+      "metin": "Two. If you choose juice, read the label. Check the added sugars, and remember that a sweetened cocktail can carry about 25 grams of sugar in eight ounces.",
+      "gorsel": "a bottle of cranberry juice with a blank label held up in a supermarket aisle, a hand gripping the neck, rows of shelves behind"
+    },
+    {
+      "id": 50,
+      "metin": "Three. If you choose capsules, know that products differ, and many don't measure their PAC content. There's no proven dose, so don't assume more is better.",
+      "gorsel": "a small amber bottle with capsules spilled onto a saucer beside a glass of cranberry juice, a spoon and a glass of water nearby"
+    },
+    {
+      "id": 51,
+      "metin": "Four. Treat cranberry as a possible helper, not a plan. It can sit alongside whatever your doctor recommends for repeat infections, not replace it.",
+      "gorsel": "a wooden table with a glass of cranberry juice, a glass of water, a pill organizer and a small notebook with blank pages laid out neatly together"
+    },
+    {
+      "id": 52,
+      "metin": "Five. If you or someone you care for lives in a care home, the trials found little or no benefit. It's reasonable to ask the care team about other ways to lower the risk.",
+      "gorsel": "a care home hallway with a trolley holding a glass of cranberry juice and a pitcher of water, a handrail along the wall, soft light"
+    },
+    {
+      "id": 53,
+      "metin": "And if infections keep returning even when you use cranberry, that's a reason to call your provider, not to drink more juice.",
+      "gorsel": "a telephone on a small table beside a glass of cranberry juice and a notepad with blank pages, a lamp glowing softly in the evening"
+    },
+    {
+      "id": 54,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "May help some. Not a cure.",
+        "alt": "Cranberry and UTIs"
+      }
+    },
+    {
+      "id": 55,
+      "metin": "In a 2023 Cochrane review of fifty trials, cranberry products lowered the risk of repeat infections in women who get them often, in children, and after bladder procedures.",
+      "gorsel": "a tall glass of cranberry juice with a few fresh cranberries beside it, morning light across a wooden table"
+    },
+    {
+      "id": 56,
+      "metin": "They did little for older adults in care homes, pregnant women, or adults whose bladders don't empty fully. And cranberry is not a treatment for an infection you already have.",
+      "gorsel": "a quiet room with an armchair and a small table holding a glass of cranberry juice, a window with curtains, a blanket folded on the arm"
+    },
+    {
+      "id": 57,
+      "metin": "Juice or capsules? Nobody can say yet. But sweetened juice brings a lot of sugar, and if you take warfarin, ask first.",
+      "gorsel": "a glass of cranberry juice beside a small bottle of capsules, a teaspoon of white sugar between them on a wooden table"
+    },
+    {
+      "id": 58,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "baslik": ["BOIL, STEAM", "OR MICROWAVE?"],
+  "baslik_yt": "Boil, Steam or Microwave? Vitamin C Losses",
+  "aciklama": "Studies of how cooking changes vitamin C in vegetables, from boiling losses of up to 71 percent to microwaving that kept over 90 percent. Here is how to cook frozen vegetables gently.",
+  "parcalar": [
+    {"sahne": 37, "cumleler": [1], "gorsel": 41, "baslik": null, "etiket": null},
+    {"sahne": 38, "cumleler": [0],
+     "baslik": {"satirlar": ["BOILING", "COSTS MOST"], "vurgu": "10-71%", "not": "vitamin C lost"},
+     "etiket": "Razzak et al. · Heliyon · 2023"},
+    {"sahne": 39, "cumleler": [0]},
+    {"sahne": 40, "cumleler": [0, 2], "baslik": null},
+    {"sahne": 42, "cumleler": [1], "baslik": {"satirlar": ["COOKING ISN'T", "JUST A LOSS"]}, "etiket": null},
+    {"sahne": 43, "cumleler": [0], "baslik": {"satirlar": ["FROZEN ALREADY", "BLANCHED"]}},
+    {"sahne": 43, "cumleler": [1], "gorsel": 54, "baslik": {"satirlar": ["STEAM OR", "MICROWAVE"], "vurgu": "SHORT", "not": "with a little water"}}
+  ]
+}

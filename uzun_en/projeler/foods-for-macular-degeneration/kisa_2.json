@@ -1,0 +1,18 @@
+{
+  "baslik": ["TINY EGG,", "BIG LUTEIN?"],
+  "baslik_yt": "Why Egg Yolk Lutein Gets Absorbed So Well",
+  "aciklama": "An egg holds far less lutein than a cup of spinach, yet the body may absorb it unusually well. Here is what the research suggests, what it doesn't prove, and how to add a little fat to your greens.",
+  "parcalar": [
+    {"sahne": 41, "cumleler": [0]},
+    {"sahne": 41, "cumleler": [1],
+     "baslik": {"satirlar": ["EGG YOLK"], "vurgu": "<0.3 MG", "not": "lutein in one egg"}},
+    {"sahne": 42, "cumleler": [1]},
+    {"sahne": 44, "cumleler": [0]},
+    {"sahne": 44, "cumleler": [1, 2], "baslik": null},
+    {"sahne": 47, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["ADD A", "LITTLE FAT"]}},
+    {"sahne": 60, "cumleler": [0]},
+    {"sahne": 60, "cumleler": [1],
+     "baslik": {"satirlar": ["EYE EXAM", "FIRST"]}}
+  ]
+}

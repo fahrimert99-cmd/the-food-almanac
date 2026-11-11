@@ -1,0 +1,608 @@
+{
+  "slug": "apple-cider-vinegar-blood-sugar",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does Apple Cider Vinegar Lower Blood Sugar?",
+  "yorum": "Have you ever tried apple cider vinegar before a meal? Did you notice any difference, or did you stop because of the taste?",
+  "aciklama_giris": "In a small trial of 12 healthy young adults, a drink of liquid vinegar before a starchy meal made the blood sugar rise in the first hour about 31 percent smaller than water did. Pooled reviews agree that vinegar can modestly lower the after-meal rise, but the trials are small and short, and reviewers rate the certainty of the evidence as very low.\n\nIn this video we look at what the studies actually found, how acetic acid may slow the stomach, why the evidence is thinner than the headlines, and the safety points about teeth, the throat, tablets and medication. We finish with practical, careful ways to use vinegar, if you choose to.",
+  "kaynaklar": [
+    "Feise NK, Johnston CS. Commercial Vinegar Tablets Do Not Display the Same Physiological Benefits for Managing Postprandial Glucose Concentrations as Liquid Vinegar. Journal of Nutrition and Metabolism. 2020;2020:9098739. doi:10.1155/2020/9098739.",
+    "Shishehbor F, Mansoori A, Shirani F. Vinegar consumption can attenuate postprandial glucose and insulin responses; a systematic review and meta-analysis of clinical trials. Diabetes Research and Clinical Practice. 2017;127. doi:10.1016/j.diabres.2017.01.021.",
+    "Cherta-Murillo A, Pugh JE, Alaraj-Alshehhi S, Hajjar D, Chambers ES, Frost GS. The effects of SCFAs on glycemic control in humans: a systematic review and meta-analysis. American Journal of Clinical Nutrition. 2022;116(2):335-361. doi:10.1093/ajcn/nqac085. PMID 35388874.",
+    "Siddiqui FJ, Assam PN, de Souza NN, Sultana R, Dalan R, Chan ES. Diabetes Control: Is Vinegar a Promising Candidate to Help Achieve Targets? Journal of Evidence-Based Integrative Medicine. 2018;23:2156587217753004. doi:10.1177/2156587217753004.",
+    "Hlebowicz J, Darwiche G, Björgell O, Almér LO. Effect of apple cider vinegar on delayed gastric emptying in patients with type 1 diabetes mellitus: a pilot study. BMC Gastroenterology. 2007;7:46. doi:10.1186/1471-230X-7-46. PMID 18093343.",
+    "Hill LL, Woodruff LH, Foote JC, Barreto-Alcoba M. Esophageal injury by apple cider vinegar tablets and subsequent evaluation of products. Journal of the American Dietetic Association. 2005;105(7):1141-1144. doi:10.1016/j.jada.2005.04.003. PMID 15983536.",
+    "Chang J, Han SE, Paik SS, Kim YJ. Corrosive Esophageal Injury due to a Commercial Vinegar Beverage in an Adolescent. Clinical Endoscopy. 2020;53(3):366-369. doi:10.5946/ce.2019.066. PMID 31405264.",
+    "Maladkar SR, et al. Erosive Effect of Acidic Beverages and Dietary Preservatives on Extracted Human Teeth: An In Vitro Analysis. European Journal of Dentistry. 2022;16(4):919-929. doi:10.1055/s-0041-1742131. PMID 35436789.",
+    "RxList. Apple Cider Vinegar: uses, side effects and interactions (potassium, diuretics, insulin and diabetes medicines). https://www.rxlist.com/apple_cider_vinegar/supplements.htm"
+  ],
+  "kapak": {
+    "satirlar": [
+      "VINEGAR",
+      "VS SUGAR?"
+    ],
+    "gorsel": "a large glass bottle of apple cider vinegar with a cork stopper in front, a glass of golden vinegar and two whole red apples overlapping at its base, a glucose meter with a blank screen tucked beside them, very large and close up"
+  },
+  "kahraman": "apple cider vinegar",
+  "etiketler": [
+    "apple cider vinegar",
+    "apple cider vinegar blood sugar",
+    "vinegar before meals",
+    "acv glucose spike",
+    "blood sugar",
+    "type 2 diabetes",
+    "prediabetes",
+    "acetic acid",
+    "nutrition science",
+    "food myths"
+  ],
+  "seslendirme_duzelt": {
+    "HbA1c": "H B A 1 C"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The vinegar claim",
+      "metin": "If you take apple cider vinegar before meals to calm your blood sugar, here is what one small trial found.",
+      "gorsel": "a tall glass bottle of apple cider vinegar with a cork stopper on a kitchen table, a small glass of golden apple cider vinegar beside it, two whole apples, morning light",
+      "baslik": {
+        "satirlar": [
+          "VINEGAR",
+          "BEFORE MEALS"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "metin": "At Arizona State University, twelve healthy adults ate the same starchy meal on different days. When they drank liquid vinegar first, their blood sugar rise in the first hour was about 31 percent smaller than with water.",
+      "gorsel": "a glass of apple cider vinegar beside a plate of white pasta and a bread roll, a glucose meter with a blank screen, a gentle rolling hill line drawn above the plate",
+      "etiket": "Feise & Johnston · J Nutr Metab · 2020",
+      "baslik": {
+        "satirlar": [
+          "STARCHY MEAL"
+        ],
+        "vurgu": "−31%",
+        "not": "smaller rise in the first hour, 12 adults"
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know how big the effect really is, why the evidence is thinner than the headlines, and how to try vinegar safely if you want to.",
+      "gorsel": "an open notebook with blank pages, a pair of round eyeglasses, a small glass bottle of apple cider vinegar and a single apple on a wooden desk"
+    },
+    {
+      "id": 4,
+      "metin": "So does apple cider vinegar really lower blood sugar? Today we'll look at the studies, the way it may work in your stomach, and the safety points that rarely make it onto the label.",
+      "gorsel": "a large magnifying glass held over a bottle of apple cider vinegar and a halved apple, small hexagon ring molecule sketches around them joined by dashed callout lines",
+      "baslik": {
+        "satirlar": [
+          "REAL EFFECT",
+          "OR MYTH?"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "Welcome to The Food Almanac. Let's begin with what a blood sugar spike is, and why people try to soften it.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Apple Cider Vinegar",
+        "alt": "What it does to your blood sugar"
+      }
+    },
+    {
+      "id": 6,
+      "bolum": "Why spikes matter",
+      "metin": "When you eat bread, rice, pasta or potatoes, your digestive system breaks the starch down into glucose, a simple sugar that passes into your bloodstream.",
+      "gorsel": "a slice of bread, a bowl of white rice, some pasta and a potato, small golden glucose spheres rising from them, simple hexagon ring chains breaking apart",
+      "baslik": {
+        "satirlar": [
+          "STARCH",
+          "→ GLUCOSE"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Your pancreas answers by releasing insulin, a hormone that helps move that glucose into your muscles and other tissues. Blood sugar rises, and then settles back down.",
+      "gorsel": "textbook engraving of the pancreas beside the small intestine, green insulin particles drifting into a tube-shaped vessel with small red discs, dashed lines to a muscle fiber",
+      "baslik": {
+        "satirlar": [
+          "INSULIN"
+        ],
+        "not": "helps move glucose into your cells"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "In type 2 diabetes and prediabetes, this system works less smoothly. The same meal can push blood sugar higher, and keep it high for longer.",
+      "gorsel": "a tube-shaped vessel crowded with golden glucose spheres between small red discs, next to a muscle cell with small closed gates on its surface",
+      "baslik": {
+        "satirlar": [
+          "HIGHER",
+          "AND LONGER"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "metin": "That is why a cheap kitchen ingredient that might soften the rise gets so much attention. Vinegar has been tested for exactly this in small trials for years.",
+      "gorsel": "a kitchen shelf with a bottle of apple cider vinegar, a wooden spoon, a bowl of apples and a small glucose meter with a blank screen"
+    },
+    {
+      "id": 10,
+      "metin": "Apple cider vinegar is mostly water and acetic acid, the compound that gives it that sharp smell. In one trial, a dose of 25 grams, a little under two tablespoons, supplied about 1.25 grams of acetic acid.",
+      "gorsel": "a glass measuring spoon filled with apple cider vinegar beside a bottle of apple cider vinegar, a simple two-carbon acetic acid molecule sketch with dashed callout lines",
+      "baslik": {
+        "satirlar": [
+          "ACETIC",
+          "ACID"
+        ],
+        "vurgu": "1.25 g",
+        "not": "in a 25 gram dose of vinegar"
+      }
+    },
+    {
+      "id": 11,
+      "bolum": "The small trials",
+      "tip": "kart",
+      "metin": "Let's start with the kind of study that gets quoted most: a test meal, with and without vinegar.",
+      "kart": {
+        "ust": "THE EXPERIMENT",
+        "baslik": "Vinegar before a meal",
+        "alt": "Arizona State University · 2020"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Researchers led by Carol Johnston ran a crossover trial. Fifteen young adults signed up, twelve finished, with an average age of about 23 and no diabetes.",
+      "gorsel": "a quiet research room with a single chair at a table, a glucose meter with a blank screen, a glass of apple cider vinegar and a covered meal tray, tall window"
+    },
+    {
+      "id": 13,
+      "metin": "Each person ate the same test meal, with 64 grams of carbohydrate, on four different days. Once with plain water, once with liquid vinegar, and twice with vinegar tablets.",
+      "gorsel": "four small glass cups in a row on a tray: plain water, apple cider vinegar, whole vinegar tablets, and crushed tablets dissolved in water, a plate of pasta and bread behind them",
+      "baslik": {
+        "satirlar": [
+          "FOUR DAYS,",
+          "ONE MEAL"
+        ],
+        "vurgu": "64 g",
+        "not": "of carbohydrate in the test meal"
+      }
+    },
+    {
+      "id": 14,
+      "tip": "grafik",
+      "metin": "In the first hour, the blood sugar rise was smallest after liquid vinegar, about 31 percent lower than with water. Whole vinegar tablets did no better than water.",
+      "grafik": {
+        "baslik": "Blood sugar rise in the first hour",
+        "alt": "Area under the curve, mmol·h/L · lower is better",
+        "cubuklar": [
+          {
+            "etiket": "Water",
+            "deger": 4.9,
+            "metin": "4.9"
+          },
+          {
+            "etiket": "Liquid vinegar",
+            "deger": 3.4,
+            "metin": "3.4"
+          },
+          {
+            "etiket": "Whole tablets",
+            "deger": 4.9,
+            "metin": "4.9"
+          },
+          {
+            "etiket": "Crushed tablets",
+            "deger": 4.1,
+            "metin": "4.1"
+          }
+        ],
+        "kaynak": "Feise & Johnston, J Nutr Metab 2020 · 12 healthy adults, 64 g carbohydrate meal"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "It is a neat result, but look at the limits. Twelve young, healthy people, one meal, and blood sugar measured for only the first hour. The authors said so themselves.",
+      "gorsel": "a single plate of pasta and bread on a laboratory bench next to a glass of apple cider vinegar and a small stack of research papers with blank pages",
+      "baslik": {
+        "satirlar": [
+          "12 PEOPLE",
+          "ONE HOUR"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Many similar small trials exist, including some in people with diabetes. So researchers began to pool them, to see whether the pattern holds up when you add everything together.",
+      "gorsel": "several small glass jars of golden apple cider vinegar being poured into one large glass beaker on a laboratory bench, an antique brass scale beside it"
+    },
+    {
+      "id": 17,
+      "bolum": "What the pooled studies say",
+      "metin": "In 2017, Shishehbor and colleagues pooled controlled trials of vinegar taken with a meal. Blood sugar and insulin after eating were lower with vinegar than without it.",
+      "gorsel": "a glass of apple cider vinegar beside a plate of rice and bread, two gentle hill-shaped lines drawn above it, one tall and one lower, calm and minimal",
+      "etiket": "Shishehbor et al. · Diabetes Res Clin Pract · 2017"
+    },
+    {
+      "id": 18,
+      "metin": "A larger review in 2022, from Imperial College London, searched for randomized trials of vinegar and related compounds. It covered 46 studies and 913 people in total, across all short-chain fatty acids, not vinegar alone.",
+      "gorsel": "a library table stacked with journals with blank covers, an oil lamp, a bottle of apple cider vinegar and a teacup with rising steam",
+      "etiket": "Cherta-Murillo et al. · Am J Clin Nutr · 2022"
+    },
+    {
+      "id": 19,
+      "metin": "For vinegar taken once with a meal, the blood sugar response was lower in people with type 2 diabetes or impaired glucose tolerance. But that pooled result rested on just 67 people.",
+      "gorsel": "a small group of sixty-seven tiny round pebbles in a glass dish beside a glass of apple cider vinegar and a glucose meter with a blank screen",
+      "baslik": {
+        "satirlar": [
+          "ONLY 67",
+          "PEOPLE"
+        ],
+        "not": "behind the pooled result in diabetes and prediabetes"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "In healthy volunteers, the effect was smaller still, sitting right at the edge of statistical significance. That fits with a simple idea: people with smaller spikes have less to gain.",
+      "gorsel": "an apple cider vinegar bottle and a halved apple on a table, beside them a low flat gentle wave line, calm and minimal",
+      "baslik": {
+        "satirlar": [
+          "SMALLER IN",
+          "HEALTHY ADULTS"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "What about drinking it every day for weeks? A 2018 review looked at 11 studies in 278 people with diabetes. Pooling three trials of 147 people, the HbA1c, a three-month blood sugar marker, fell by about 0.4 percentage points after 8 to 12 weeks.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes, a glass of apple cider vinegar and a wall calendar with blank pages",
+      "etiket": "Siddiqui et al. · J Evid Based Integr Med · 2018",
+      "baslik": {
+        "satirlar": [
+          "8–12 WEEKS"
+        ],
+        "vurgu": "−0.4",
+        "not": "HbA1c points, 3 trials, 147 people"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Fasting blood sugar was also slightly lower, by about 0.8 millimoles per liter, which is roughly 14 milligrams per deciliter. A modest change, from only three small trials.",
+      "gorsel": "a spoon of apple cider vinegar over a glass of water in the early morning, a glucose meter with a blank screen on the table",
+      "baslik": {
+        "satirlar": [
+          "FASTING",
+          "SUGAR"
+        ],
+        "vurgu": "−14",
+        "not": "mg/dL on average, 3 trials"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "That sounds promising. But the authors of that review wrote that the quantity and quality of evidence was insufficient to be sure about either effectiveness or safety.",
+      "gorsel": "a scholar's desk with an open notebook with blank pages, a bottle of apple cider vinegar and a hand-drawn question mark shape made of apple peel"
+    },
+    {
+      "id": 24,
+      "bolum": "How it may work",
+      "tip": "kart",
+      "metin": "So how might a splash of vinegar change what happens in your body? The leading idea involves your stomach.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "How vinegar may work",
+        "alt": "Acetic acid · Stomach emptying"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Your stomach acts as a gatekeeper. It releases food into the small intestine a little at a time, a process called gastric emptying.",
+      "gorsel": "textbook engraving of the stomach with its lower valve, the pylorus, letting a small portion of food into the small intestine, clean educational plate",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "GATEKEEPER"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "metin": "If that release slows down, starch reaches the intestine more gradually, and glucose enters your blood more slowly. A flatter curve, rather than a sharp peak.",
+      "gorsel": "a stomach holding apple cider vinegar and rice, releasing a thin slow stream of golden glucose spheres into the small intestine, next to a low gentle hill line",
+      "baslik": {
+        "satirlar": [
+          "SLOWER",
+          "RELEASE"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "metin": "A 2007 pilot study tested this in ten people with type 1 diabetes and a slow stomach, called gastroparesis. They drank 30 milliliters of apple cider vinegar in water before breakfast for two weeks.",
+      "gorsel": "a tall glass of water with a small measure of apple cider vinegar beside a bowl of rice pudding and a spoon, a small stomach sketch in the corner",
+      "etiket": "Hlebowicz et al. · BMC Gastroenterol · 2007"
+    },
+    {
+      "id": 28,
+      "metin": "Using ultrasound after a rice pudding meal, the researchers found that stomach emptying fell from a median of 27 percent to 17 percent. So in these patients, vinegar did slow the stomach.",
+      "gorsel": "a stomach next to a bowl of rice pudding and a glass of apple cider vinegar, a slow trickle of food leaving the stomach, an antique pocket watch beside them",
+      "baslik": {
+        "satirlar": [
+          "STOMACH",
+          "EMPTYING"
+        ],
+        "vurgu": "27 → 17%",
+        "not": "median, 10 people with gastroparesis"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "But notice the catch. These patients' stomachs already emptied too slowly. The authors warned that slowing them further could be a disadvantage for blood sugar control. We'll come back to this in the safety part.",
+      "gorsel": "a stomach sketched with a closed valve and a glass of apple cider vinegar beside it, a small caution flag made of cloth on a stick",
+      "baslik": {
+        "satirlar": [
+          "A CATCH"
+        ],
+        "not": "for people whose stomach already empties slowly"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "One more thing matters here. In the tablet trial, whole vinegar tablets did no better than water. And a separate team tested eight tablet products and were unsure whether apple cider vinegar was even present in some of them.",
+      "gorsel": "a small glass dish of round vinegar tablets beside a bottle of apple cider vinegar, a small scale and a magnifying glass over the tablets",
+      "etiket": "Hill et al. · J Am Diet Assoc · 2005"
+    },
+    {
+      "id": 31,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now for the honest part. Why is the evidence thinner than the headlines suggest?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Why the evidence is thin",
+        "alt": "Small · Short · Mixed quality"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Most of these trials are small, often with only a few dozen people or fewer. A lot of them test a single meal in a lab, not months of ordinary life.",
+      "gorsel": "a single bottle of apple cider vinegar and a plate of pasta on a laboratory bench, an empty chair, a stopwatch beside the plate",
+      "baslik": {
+        "satirlar": [
+          "SMALL.",
+          "SHORT."
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "metin": "In the 2022 review, 47 percent of the studies had a high risk of bias, and the authors found signs of publication bias for several outcomes. That is when small studies with exciting results are more likely to get published.",
+      "gorsel": "a stack of research folders with blank covers, the top few folders glowing slightly, one apple cider vinegar bottle on the shelf behind them",
+      "baslik": {
+        "satirlar": [
+          "HIGH RISK",
+          "OF BIAS"
+        ],
+        "vurgu": "47%",
+        "not": "of the studies"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Results for daily use varied enormously from trial to trial, and the reviewers rated the overall certainty of the evidence as very uncertain.",
+      "gorsel": "a row of glass jars of apple cider vinegar each filled to a very different height on a wooden shelf, an antique brass scale tilted at the end",
+      "baslik": {
+        "satirlar": [
+          "VERY",
+          "UNCERTAIN"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Doses and products differed too. Apple cider vinegar, white vinegar, wine vinegar, even tablets. About 15 to 20 grams, roughly one to two tablespoons, was common.",
+      "gorsel": "a small shelf with a bottle of apple cider vinegar, a bottle of white vinegar, a bottle of wine vinegar and a dish of tablets, a wooden spoon in front"
+    },
+    {
+      "id": 36,
+      "metin": "So what is false? Vinegar does not make carbohydrates disappear, or cancel out a large dessert. And nothing in this research shows it can replace diabetes treatment.",
+      "gorsel": "a large slice of layered cake on a plate next to a small glass of apple cider vinegar, the glass looking tiny beside the cake",
+      "baslik": {
+        "satirlar": [
+          "NOT A",
+          "SUBSTITUTE"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "metin": "A fair summary is this. A modest nudge to the rise after a starchy meal, seen mostly in small short trials. Interesting, but not a proven treatment.",
+      "gorsel": "an apple cider vinegar bottle on a table next to a plate of rice and vegetables, a low gentle hill line drawn above the plate, calm morning light"
+    },
+    {
+      "id": 38,
+      "bolum": "Safety first",
+      "tip": "kart",
+      "metin": "Before you reach for the bottle, a few safety points. This is where vinegar's acidity matters.",
+      "kart": {
+        "ust": "BEFORE YOU TRY IT",
+        "baslik": "Teeth, throat, medication",
+        "alt": "What the reports show"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "Start with teeth. In one laboratory study, 190 extracted human teeth were soaked in nine acidic liquids. Vinegar and apple cider caused some of the greatest mineral loss.",
+      "gorsel": "a row of extracted human teeth in small glass dishes beside a bottle of apple cider vinegar, a magnifying glass over one tooth",
+      "etiket": "Maladkar et al. · Eur J Dent · 2022",
+      "baslik": {
+        "satirlar": [
+          "TEETH"
+        ],
+        "not": "vinegar eroded the most in a lab test"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "That was teeth in a dish, without saliva, so it cannot tell us how much harm real drinking does. But it is a good reason to dilute vinegar, and not to sip it all day.",
+      "gorsel": "a tall glass of water with a splash of apple cider vinegar beside a toothbrush resting in a ceramic cup, soft window light"
+    },
+    {
+      "id": 41,
+      "metin": "Then the throat. Undiluted vinegar can burn. A 2020 case report described a 15-year-old who drank a vinegar beverage every day without enough dilution, and developed ulcers along the esophagus. He recovered with treatment.",
+      "gorsel": "a bottle of apple cider vinegar with a small caution flag beside a glass of water, a textbook engraving of the throat and esophagus in an inset circle",
+      "etiket": "Chang et al. · Clin Endosc · 2020",
+      "baslik": {
+        "satirlar": [
+          "DILUTE",
+          "IT"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "Tablets carry their own risks. In 2005, after a report of esophageal injury linked to apple cider vinegar tablets, researchers found that tablet size, acidity and acid content varied widely between products.",
+      "gorsel": "a handful of round vinegar tablets in a glass dish beside a bottle of apple cider vinegar, a small caution flag, a magnifying glass over the tablets",
+      "etiket": "Hill et al. · J Am Diet Assoc · 2005"
+    },
+    {
+      "id": 43,
+      "metin": "Now medication. Reference sources note that large amounts of vinegar may lower potassium, which matters for people who take water pills or insulin. They also flag a possible overlap with some diabetes medicines.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, a bottle of apple cider vinegar, a few capsules in a dish and a glucose meter with a blank screen",
+      "baslik": {
+        "satirlar": [
+          "MEDICATION"
+        ],
+        "not": "ask your doctor or pharmacist first"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "That overlap is mostly a theoretical precaution, not something shown in trials. But it is reason enough to talk to your doctor or pharmacist before making vinegar a daily habit if you use these medicines.",
+      "gorsel": "a doctor's desk with a glass of diluted apple cider vinegar, a notebook with blank pages and a pen, a pill organizer beside a glucose meter"
+    },
+    {
+      "id": 45,
+      "metin": "And remember the gastroparesis study. If you have diabetes with a slow stomach, vinegar may slow it further, so ask first. That is the detail we flagged earlier, and it can matter.",
+      "gorsel": "a stomach sketch with a slow trickle leaving it, a bottle of apple cider vinegar and a small caution flag on a wooden table",
+      "baslik": {
+        "satirlar": [
+          "SLOW",
+          "STOMACH?"
+        ],
+        "not": "ask your doctor before trying vinegar"
+      }
+    },
+    {
+      "id": 46,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So if you still want to try it, here are four careful ways to use vinegar.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Four careful steps",
+        "alt": "If you choose to try vinegar"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "One. Dilute it. The trials mostly used about one to two tablespoons of apple cider vinegar mixed into a glass of water, not a shot straight from the bottle.",
+      "gorsel": "a tablespoon of apple cider vinegar being stirred into a tall glass of water, a bottle of apple cider vinegar beside it",
+      "baslik": {
+        "satirlar": [
+          "1. DILUTE",
+          "IT"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "Two. Pair it with a starchy meal. In the trials, vinegar was taken with or shortly before the food. We don't know whether it helps when taken hours earlier, or on its own.",
+      "gorsel": "a glass of diluted apple cider vinegar beside a plate of pasta and bread, an antique pocket watch resting between them",
+      "baslik": {
+        "satirlar": [
+          "2. WITH A",
+          "STARCHY MEAL"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Three. Protect your teeth and throat. Drink it diluted, don't sip it slowly through the day, and rinse your mouth with plain water afterward.",
+      "gorsel": "a glass of diluted apple cider vinegar next to a second glass of plain water, a toothbrush in a cup, soft window light",
+      "baslik": {
+        "satirlar": [
+          "3. PROTECT",
+          "YOUR TEETH"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "metin": "Four. Skip the tablets. In the one trial that compared them with liquid vinegar, whole tablets did no better than water, and product quality varies.",
+      "gorsel": "a dish of round vinegar tablets pushed to the side of a table, a glass of diluted apple cider vinegar in front, a bottle of apple cider vinegar behind",
+      "baslik": {
+        "satirlar": [
+          "4. SKIP THE",
+          "TABLETS"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "And keep it in proportion. Vinegar cannot undo a large plate of refined carbohydrates. If you have diabetes, kidney disease or take regular medication, check with your doctor or pharmacist before making it a habit.",
+      "gorsel": "a modest dinner plate of grilled fish, roasted vegetables and a small portion of rice, a glass of diluted apple cider vinegar beside it",
+      "baslik": {
+        "satirlar": [
+          "KEEP IT IN",
+          "PROPORTION"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A small nudge, not a cure",
+        "alt": "What vinegar can and cannot do"
+      }
+    },
+    {
+      "id": 53,
+      "metin": "In small trials, vinegar taken with a starchy meal lowered the rise in blood sugar afterward, by about 31 percent in one study of twelve young adults.",
+      "gorsel": "a glass of apple cider vinegar beside a plate of pasta and bread and a glucose meter with a blank screen, a low gentle hill line above the plate"
+    },
+    {
+      "id": 54,
+      "metin": "Pooled reviews agree on a modest effect, bigger in people with diabetes or prediabetes. But the trials are small and short, and reviewers rate the certainty as very low.",
+      "gorsel": "a tidy stack of research folders with blank covers beside a bottle of apple cider vinegar and an antique brass scale, evenly balanced"
+    },
+    {
+      "id": 55,
+      "metin": "It may work by slowing the stomach. That is also why it needs care with a slow stomach, with tablets, with undiluted drinking, and with some medicines.",
+      "gorsel": "a bottle of apple cider vinegar beside a stomach sketch and a glass of diluted vinegar, a small caution flag on the table"
+    },
+    {
+      "id": 56,
+      "metin": "If you try it, dilute it, pair it with a starchy meal, skip the tablets, and let your doctor know. A small habit, with small, honest expectations.",
+      "gorsel": "a glass of diluted apple cider vinegar, a halved apple and a bottle of apple cider vinegar on a wooden kitchen table in morning light"
+    },
+    {
+      "id": 57,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

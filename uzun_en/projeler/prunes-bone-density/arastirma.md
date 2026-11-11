@@ -1,0 +1,60 @@
+# Research notes: prunes, bone loss and digestion after 60
+
+Topic: "What do prunes really do to bone loss and digestion after 60?" (slug `prunes-bone-density`).
+Pages opened for this note (WebFetch/WebSearch, 30 Oct 2026): PubMed records for De Souza 2022, Damani 2024, Hooshmand 2011, Wallace 2017, Attaluri 2011, Lever 2014, Chey 2021 and Stacewicz-Sapuntzakis 2001; a USDA-based nutrient table (getfoodfacts.com mirror of USDA SR Legacy item 168162); the repo note on vitamin K (MedlinePlus, see `leafy-greens-warfarin/arastirma.md`).
+Not opened / not used: the full text of De Souza 2022 (PMC returned a bot check), so spine and femoral neck results, adverse events and funding are NOT in the script. Mechanism papers on osteoclasts (cell lines) were seen only in search snippets, so the script cites only the Wallace 2017 review for mechanism. A first guessed PMID (27704168) turned out to be an unrelated paper and was discarded.
+
+## 1. The Prune Study (Penn State): 12-month RCT of 50 g and 100 g prunes
+- Figures: total hip BMD change at 12 months: control −1.1 ± 0.2%; 50 g/day prunes −0.3 ± 0.2% (P < 0.05 vs control); the group × time interaction was significant for control vs 50 g but not for control vs 100 g (P > 0.05). Difference between control and 50 g = 0.8 percentage points (our subtraction). FRAX hip fracture score: control worsened at 6 months (10.3 ± 0.5% vs 9.8 ± 0.5% baseline, P < 0.05); the pooled prune groups held their score.
+- Design/population: single-center, parallel-arm RCT (NCT02822378); 235 postmenopausal women, mean age 62.1 ± 5.0 y (range 55–75 per the companion J Nutr abstract); control 78, 50 g 79, 100 g 78. BMD every 6 months. Compliance 90.2% (50 g), 87.1% (100 g). Dropout overall 22%; 41% in the 100 g group vs 10% control and 15% 50 g (P < 0.001). The abstract does not give the reason for dropout.
+- "50 g ≈ 5 to 6 prunes, 100 g ≈ 10": 50 g/100 g are the trial doses; the prune counts come from the topic brief and press coverage of the study (100 g ≈ 10 prunes, Hooshmand 2011 press release).
+- Source: De Souza MJ, Strock NCA, Williams NI, et al. Prunes preserve hip bone mineral density in a 12-month randomized controlled trial in postmenopausal women: the Prune Study. Am J Clin Nutr. 2022;116(4):897-910. DOI 10.1093/ajcn/nqac189. PMID 35798020. https://pubmed.ncbi.nlm.nih.gov/35798020/
+- Limits: one center; high dropout in the 100 g arm (attrition bias possible); outcome is bone density (a surrogate), not fractures; women only; no placebo food (participants know whether they eat prunes). Funding not verified.
+
+## 2. Prune Study secondary analysis: inflammation
+- Figures (183 completers): activated monocytes lower with 100 g than control (−1.8 ± 4.0% vs 0.1 ± 2.9%, P < 0.01). LPS-stimulated blood cells (PBMC) TNF-α lower with 50 g than control (−4.4 ± 43.0% vs 24.3 ± 70.7%, P < 0.01); IL-1β, IL-6, IL-8 lower with 100 g (−8.9, −4.3, −14.3% vs +46.9, +16.9, +39.8% in control, P < 0.05). Plasma cytokines (IL-1β, IL-6, IL-8, MCP-1, TNF-α): no change. hs-CRP: no change. Total antioxidant capacity and 8-isoprostane: no change.
+- Design/population: secondary outcome analysis of the same 12-month RCT; postmenopausal women aged 55–75; 235 recruited, 183 completed.
+- Source: Damani JJ, Oh ES, De Souza MJ, et al. Prune consumption attenuates proinflammatory cytokine secretion and alters monocyte activation in postmenopausal women: secondary outcome analysis of a 12-month randomized controlled trial. J Nutr. 2024;154(5):1699-1710. PMID 37984741. https://pubmed.ncbi.nlm.nih.gov/37984741/
+- Limits: secondary analysis; effects seen in stimulated cells in the lab, not in circulating plasma; large variability (SD often above the mean); small subsets (n about 15–30 per group in figures); different doses affected different markers.
+
+## 3. Earlier RCT: dried plum vs dried apple (Hooshmand 2011)
+- Figures: 100 g/day dried plum vs dried apple, both with 500 mg calcium and 400 IU vitamin D daily, significantly increased ulna and spine BMD compared with dried apple; only the plum group had significant falls in bone-specific alkaline phosphatase and TRAP-5b (turnover markers). The abstract gives no numeric BMD values and no duration; blood draws at 3, 6 and 12 months and press coverage indicate 12 months.
+- Population: 236 recruited, 160 randomized; women 1–10 years postmenopausal, not on hormone therapy or bone drugs. (Press: 55 plum, 45 apple completers.)
+- Source: Hooshmand S, Chai SC, Saadat RL, Payton ME, Brummel-Smith K, Arjmandi BH. Comparative effects of dried plum and dried apple on bone in postmenopausal women. Br J Nutr. 2011;106(6):923-930. DOI 10.1017/S000711451100119X. PMID 21736808. https://pubmed.ncbi.nlm.nih.gov/21736808/
+- Limits: comparator was another dried fruit; calcium and vitamin D given to everyone; duration not stated in the abstract; no fracture outcome.
+
+## 4. Review of prunes and bone (mechanism, consistency)
+- Wallace reviewed 24 cell, animal, population and clinical studies (PubMed search to 24 Jan 2017). Prunes and extracts appear to act on signaling pathways that influence osteoblast and osteoclast differentiation; the author proposes that the variety of phenolic compounds may partly explain bone effects. Clinical data "not completely consistent"; needs long-term prospective studies with fracture/BMD endpoints; research in men and diverse racial/ethnic groups is lacking; no adverse effects reported across included studies. The California Dried Plum Board reported no role in the review's design or publication decision.
+- Source: Wallace TC. Dried plums, prunes and bone health: a comprehensive review. Nutrients. 2017;9(4):401. DOI 10.3390/nu9040401. PMID 28422064. https://pubmed.ncbi.nlm.nih.gov/28422064/
+- Limits: much of the mechanism is cell and animal work; the abstract does not mention vitamin K. NO claim is made in the script that vitamin K explains the bone effect (not established in any source opened).
+
+## 5. Prunes vs psyllium for constipation (Attaluri 2011, as summarized by Lever 2014)
+- Figures: dried plums 50 g twice daily (100 g/day) vs psyllium 11 g twice daily, each for 3 weeks, both about 6 g fiber/day. Complete spontaneous bowel movements per week 3.5 (prunes) vs 2.8 (psyllium), P = 0.006; Bristol stool scale 3.2 vs 2.8, P = 0.02 (numbers from Lever's review of the trial). Straining and global symptoms did not differ; palatability equal; both "safe and well tolerated".
+- Design/population: randomized, single-blind crossover, 3 weeks per arm, 1 week washout; n = 40 (3 men, 37 women) with chronic constipation, mean age 38.
+- Sources: Attaluri A, Donahoe R, Valestin J, Brown K, Rao SSC. Randomised clinical trial: dried plums (prunes) vs. psyllium for constipation. Aliment Pharmacol Ther. 2011;33(7):822-828. PMID 21323688. https://pubmed.ncbi.nlm.nih.gov/21323688/ (author list as I recall it; the page I opened gave first author Attaluri A et al.). Lever E, Cole J, Scott SM, Emery PW, Whelan K. Systematic review: the effect of prunes on gastrointestinal function. Aliment Pharmacol Ther. 2014;40(7):750-758. PMID 25109788. https://pubmed.ncbi.nlm.nih.gov/25109788/
+- Lever review: only 4 RCTs met criteria (1 in constipated, 3 in non-constipated people); no meta-analysis because of heterogeneity; prunes increased stool weight in a non-constipated trial (628 vs 514 g per 72 h, P = 0.001); the review concludes prunes appear superior to psyllium for constipation but evidence elsewhere is weak.
+- Limits: small, short, young (mean age 38, 93% women); single-blind; not a trial in people over 60.
+
+## 6. Prunes vs psyllium vs kiwifruit (Chey 2021)
+- Figures: 4 weeks of 100 g prunes/day, 12 g psyllium/day or 2 green kiwifruit/day. Primary outcome (proportion gaining at least 1 CSBM/week for at least 2 of 4 weeks) similar across treatments. Weekly CSBM rate rose with all three (P ≤ 0.003). Stool consistency improved with kiwifruit (P = 0.01) and prunes (P = 0.049); straining improved with all three. Adverse events most common with psyllium and least with kiwifruit; fewer patients dissatisfied with kiwifruit than with prunes or psyllium (P = 0.02).
+- Design/population: partially randomized comparative-effectiveness trial; 79 patients, 75 with complete data (kiwi 29, prunes 24, psyllium 22); adults with chronic constipation (3 or fewer CSBM per week), mean age 42.7, 87% female.
+- Source: Chey SW, Chey WD, Jackson K, Eswaran S. Exploratory comparative effectiveness trial of green kiwifruit, psyllium, or prunes in US patients with chronic constipation. Am J Gastroenterol. 2021;116(6):1304-1312. DOI 10.14309/ajg.0000000000001149. PMID 34074830. https://pubmed.ncbi.nlm.nih.gov/34074830/ (author list as I recall it; page opened confirmed Chey SW et al.)
+- Limits: "exploratory", partially randomized, small, mean age 42.7; no placebo.
+
+## 7. Composition: calories, sugars, fiber, potassium, vitamin K, sorbitol
+- USDA (SR Legacy, "Plums, dried (prunes), uncooked", item 168162), per 100 g: 240 kcal; carbohydrate 63.9 g; total sugars 38.1 g; fiber 7.1 g; vitamin K 59.5 µg; potassium 732 mg. 50 g therefore ≈ 120 kcal, ≈ 19 g sugars, ≈ 30 µg vitamin K (our arithmetic). 100 g = 3.5 oz; 50 g = 1.76 oz. Page used: https://getfoodfacts.com/food/plums-dried-prunes-uncooked-168162 (mirror of USDA FoodData Central https://fdc.nal.usda.gov/).
+- Sorbitol: prunes 14.7 g per 100 g; prune juice 6.1 g per 100 g. Source: Stacewicz-Sapuntzakis M, Bowen PE, Hussain EA, Damayanti-Wood BI, Farnsworth NR. Chemical composition and potential health effects of prunes: a functional food? Crit Rev Food Sci Nutr. 2001;41(4):251-286. DOI 10.1080/20014091091814. PMID 11401245. https://pubmed.ncbi.nlm.nih.gov/11401245/
+- The statement that sorbitol is absorbed slowly and fermented by gut bacteria (so it can cause gas and loose stools) comes from a search summary of consumer-health pages, not from a page I opened; the script words it as "is thought to".
+- Limits: single sample values; varieties and brands differ.
+
+## 8. Vitamin K and warfarin
+- Adequate Intake of vitamin K for adults: 120 µg/day (men 19+), 90 µg/day (women 19+). People on warfarin are advised to keep vitamin K intake fairly steady because sudden changes can alter the medicine's effect. Source: MedlinePlus, Vitamin K. https://medlineplus.gov/ency/article/002407.htm (as recorded in `leafy-greens-warfarin/arastirma.md`).
+- Limits: that page did not open again for this project; the script keeps the statement general and adds "tell your anticoagulation clinic".
+
+## 9. Blood sugar
+- No randomized trial of prunes in adults with type 2 diabetes was found. Searches surfaced only a small acute study in women without diabetes and several low-quality web pages with unverifiable figures, which were NOT used. The script therefore states composition (38.1 g sugars per 100 g) and says no prune trial in diabetes was found.
+
+## Honest verdict
+- **Well supported:** In one 12-month RCT of 235 postmenopausal women, 50 g of prunes a day left hip bone density about 0.8 percentage points higher than no prunes (−0.3% vs −1.1%). An earlier RCT (dried plum vs dried apple, 100 g/day) also found gains at the forearm and spine. In small constipation trials in adults averaging about 38–43, prunes eased constipation at least as well as psyllium and beat it on stool frequency and consistency in one crossover trial.
+- **Uncertain:** whether prunes prevent fractures (never measured); whether the effect holds in men, in women over 75, or with other bone medicines; why it works (polyphenols, vitamin K, fiber, inflammation are hypotheses; blood CRP did not change); why 100 g did no better and had 41% dropout; whether constipation results apply to people over 60; effects on blood sugar.
+- **False or unsupported:** that prunes "reverse" osteoporosis or replace medicine; that more prunes means more bone protection (the 100 g arm did not differ significantly from control); that prunes lower inflammation throughout the body (hs-CRP and plasma cytokines did not change).

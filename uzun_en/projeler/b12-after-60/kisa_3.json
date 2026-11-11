@@ -1,0 +1,17 @@
+{
+  "baslik": ["B12 PILLS", "BEAT LOW ACID?"],
+  "baslik_yt": "Low Stomach Acid? Why B12 Supplements Still Work",
+  "aciklama": "Food B12 needs stomach acid to be released, but the B12 in fortified foods and supplements does not. Here is what two studies found about who ends up low.",
+  "parcalar": [
+    {"sahne": 31, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 33, "cumleler": [1],
+     "baslik": {"satirlar": ["SUPPLEMENT", "USERS"], "vurgu": "8% VS 20%", "not": "low B12: users vs non-users"},
+     "etiket": "Tucker et al. · Am J Clin Nutr · 2000"},
+    {"sahne": 34, "cumleler": [1], "baslik": null, "etiket": "Tucker et al. · Am J Clin Nutr · 2000"},
+    {"sahne": 35, "cumleler": [0], "gorsel": 48, "baslik": {"satirlar": ["FORTIFIED", "FOODS"]}, "etiket": "Porter et al. · Am J Clin Nutr · 2021"},
+    {"sahne": 35, "cumleler": [1], "gorsel": 12,
+     "baslik": {"satirlar": ["THINNING", "LINING"], "vurgu": "30 VS 50%", "not": "low B12, atrophic gastritis"},
+     "etiket": "Porter et al. · Am J Clin Nutr · 2021"},
+    {"sahne": 36, "cumleler": [2], "baslik": {"satirlar": ["HELPS,", "NOT PERFECT"]}, "etiket": null}
+  ]
+}

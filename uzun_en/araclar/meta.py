@@ -41,6 +41,17 @@ def hashtag(etiketler, n=3):
     return " ".join(f"#{h}" for h in out)
 
 
+def etiket_listesi(p, m):
+    """YouTube etiketleri: projeninkiler + kanalın anahtar kelimeleri (toplam ~480 karakter)."""
+    etiketler, toplam = [], 0
+    for e in list(p.get("etiketler", [])) + list(m.get("anahtar_kelimeler", [])):
+        e = temiz(e.strip())
+        if e and e.lower() not in (x.lower() for x in etiketler) and toplam + len(e) + 3 <= 480:
+            etiketler.append(e)
+            toplam += len(e) + 3
+    return etiketler
+
+
 def uret(slug):
     p = O.proje(slug)
     m = O.marka()
@@ -57,12 +68,7 @@ def uret(slug):
     parca.append(f"Subscribe to {m.get('ad', '')} for a new food-science explainer every Tuesday and Friday.")
     parca.append(hashtag(p.get("etiketler", [])))
     aciklama = temiz("\n\n".join(x for x in parca if x))[:4900]
-    etiketler, toplam = [], 0
-    for e in list(p.get("etiketler", [])) + list(m.get("anahtar_kelimeler", [])):
-        e = temiz(e.strip())
-        if e and e.lower() not in (x.lower() for x in etiketler) and toplam + len(e) + 3 <= 480:
-            etiketler.append(e)
-            toplam += len(e) + 3
+    etiketler = etiket_listesi(p, m)
     meta = {"baslik": temiz(p["baslik"])[:100], "aciklama": aciklama, "etiketler": etiketler,
             "kategori": m.get("kategori", "27"), "dil": m.get("dil", "en"), "sure_sn": round(veri["toplam"], 1),
             "bolum_sayisi": len(b)}

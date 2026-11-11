@@ -1,0 +1,13 @@
+{
+  "baslik": ["CRANBERRY", "FOR UTIS?"],
+  "baslik_yt": "Does Cranberry Really Prevent UTIs? 50 Trials Say",
+  "aciklama": "A Cochrane review of 50 trials found cranberry cut repeat UTIs in some groups, but not in others. Here is who it may help, and the medicine to ask about first.",
+  "parcalar": [
+    {"sahne": 43, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0]},
+    {"sahne": 20, "cumleler": [0, 1]},
+    {"sahne": 23, "cumleler": [1], "etiket": "Williams et al. · Cochrane · 2023"},
+    {"sahne": 45, "cumleler": [1]},
+    {"sahne": 51, "cumleler": [1, 2], "baslik": {"satirlar": ["A HELPER,", "NOT A PLAN"]}, "etiket": null}
+  ]
+}

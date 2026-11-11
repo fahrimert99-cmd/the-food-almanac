@@ -6,7 +6,10 @@
 # Her token kota/yetki hatasında sıradakine geçer; başarısız token aynı job içinde tekrar denenmez.
 set -u
 BITTI=/tmp/claude_bitti
-LIMIT="usage[[:space:]]+limit|limit[[:space:]]+reached|hit[[:space:]]+your|you('ve| have)?[[:space:]]+hit|weekly[[:space:]]+limit|daily[[:space:]]+limit|limit[[:space:]]+will[[:space:]]+reset|rate.?limit|credit[[:space:]]+balance|quota|insufficient|invalid[[:space:]]+(api[[:space:]]+key|bearer|x-api-key)|authentication|unauthori[sz]ed|oauth[[:space:]]+token|token[[:space:]]+(has[[:space:]]+)?expired|/login|\b(401|403|429)\b"
+# Yalnızca CLI/API'nin kendi hata ifadeleri aranır. "quota", "insufficient", "authentication", çıplak 403 gibi genel
+# kelimeler ajanın kendi metninde de geçer (ör. "insufficient evidence") ve sağlam tokenı boşuna "bitti" sayıp görevi
+# baştan başka hesapla çalıştırırdı; bu yüzden desenden çıkarıldı.
+LIMIT="usage[[:space:]]+limit|limit[[:space:]]+reached|you('ve| have)?[[:space:]]+hit[[:space:]]+your|(weekly|daily|5-hour)[[:space:]]+limit|limit[[:space:]]+will[[:space:]]+reset|rate_limit_error|authentication_error|permission_error|credit[[:space:]]+balance[[:space:]]+is[[:space:]]+too[[:space:]]+low|invalid[[:space:]]+(api[[:space:]]+key|bearer|x-api-key)|(oauth[[:space:]]+)?token[[:space:]]+(has[[:space:]]+)?expired|please[[:space:]]+run[[:space:]]+/login|api[[:space:]]+error:?[[:space:]]*(401|403|429)"
 
 temizle() { printf '%s' "$1" | tr -d '[:space:]'; }
 ANA=$(temizle "${CLAUDE_ANA:-}"); YEDEK=$(temizle "${CLAUDE_YEDEK:-}"); YEDEK2=$(temizle "${CLAUDE_YEDEK2:-}")
@@ -32,7 +35,7 @@ for pair in "ANA:$ANA" "YEDEK:$YEDEK" "YEDEK2:$YEDEK2"; do
   echo "Claude: $isim tokenı (fallback slot)"
   calistir "$k" "$@" 2>&1 | tee "$LOG"; RC=${PIPESTATUS[0]}
   [ "$RC" -eq 0 ] && { rm -f "$LOG"; exit 0; }
-  if ! tail -n 40 "$LOG" | grep -qiE "$LIMIT"; then rm -f "$LOG"; exit "$RC"; fi
+  if ! tail -n 15 "$LOG" | grep -qiE "$LIMIT"; then rm -f "$LOG"; exit "$RC"; fi
   echo "::warning::Claude $isim tokenı kota/yetki hatası verdi; sıradaki tokena geçiliyor"
   touch "/tmp/claude_${isim}_bitti"
 done

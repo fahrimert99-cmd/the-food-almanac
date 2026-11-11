@@ -1,0 +1,442 @@
+{
+  "slug": "beans-blood-sugar",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Beans and Lentils: What They Do to Blood Sugar",
+  "yorum": "How often do beans or lentils show up on your plate in a typical week? And if gas has ever put you off, what happened when you tried again?",
+  "aciklama_giris": "In a three-month trial of 121 adults with type 2 diabetes, a low glycemic diet that included about a cup of beans and lentils a day lowered A1C by half a point and systolic blood pressure by more than a high wheat fiber diet. But the comparison group improved too, so how much credit do the beans deserve?\n\nIn this video we look at the Toronto trial by Jenkins and colleagues, pooled analyses of pulses and blood sugar, the 'second meal effect' that was first seen with lentils, the honest limits of the evidence, and five easy ways to add a cup a day without the gas. For education only, not medical advice.",
+  "kaynaklar": [
+    "Jenkins DJA, Kendall CWC, Augustin LSA, et al. Effect of legumes as part of a low glycemic index diet on glycemic control and cardiovascular risk factors in type 2 diabetes mellitus: a randomized controlled trial. Archives of Internal Medicine. 2012;172(21):1653-1660. PMID 23089999.",
+    "Sievenpiper JL, et al. Effect of non-oil-seed pulses on glycaemic control: a systematic review and meta-analysis of randomised controlled experimental trials in people with and without diabetes. Diabetologia. 2009;52(8):1479-1495. DOI 10.1007/s00125-009-1395-7.",
+    "Hafiz MS, Campbell MD, O'Mahoney LL, Holmes M, Orfila C, Boesch C. Pulse consumption improves indices of glycemic control in adults with and without type 2 diabetes: a systematic review and meta-analysis of acute and long-term randomized controlled trials. European Journal of Nutrition. 2022.",
+    "Jenkins DJ, et al. Slow release dietary carbohydrate improves second meal tolerance. American Journal of Clinical Nutrition. 1982;35(6):1339-1346.",
+    "Winham DM, Hutchins AM. Perceptions of flatulence from bean consumption among adults in 3 feeding studies. Nutrition Journal. 2011;10:128.",
+    "National Kidney Foundation. Beans and chronic kidney disease (kidney.org)."
+  ],
+  "kapak": {
+    "satirlar": [
+      "BEANS",
+      "FOR SUGAR?"
+    ],
+    "vurgu": "–0.2",
+    "vurgu_alt": "A1C",
+    "gorsel": "a big white bowl heaped with cooked beans and lentils in close up, a few dry beans and red lentils scattered around its base, a glucose meter with a blank screen tucked behind the bowl"
+  },
+  "kahraman": "beans",
+  "etiketler": [
+    "beans blood sugar",
+    "lentils diabetes",
+    "legumes a1c",
+    "type 2 diabetes",
+    "prediabetes",
+    "second meal effect",
+    "high fiber foods",
+    "healthy eating after 60",
+    "pulses",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "A1C": "A 1 C",
+    "HbA1c": "H B A 1 C",
+    "GI": "G I",
+    "mmol/L": "millimoles per liter"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "A cup a day",
+      "metin": "In a three-month trial of 121 adults with type 2 diabetes, a daily cup of beans and lentils helped lower A1C by half a point.",
+      "gorsel": "a close-up of a deep bowl heaped with cooked beans and lentils, a wooden spoon resting in it, soft morning light on a kitchen table",
+      "etiket": "Jenkins et al. · Arch Intern Med · 2012",
+      "baslik": {
+        "satirlar": ["A CUP", "A DAY"],
+        "vurgu": "–0.5",
+        "not": "A1C points after three months"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "But the comparison group improved too. So what did the beans really add?",
+      "gorsel": "two identical bowls side by side on a table, one filled with beans and lentils, the other with whole wheat bread slices and wheat stalks",
+      "baslik": {
+        "satirlar": ["WHAT DID", "BEANS ADD?"]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know, and you'll know how to add a cup a day without the gas.",
+      "gorsel": "a kitchen counter with a measuring cup full of cooked beans beside a colander of rinsed canned beans and a steaming pot",
+      "baslik": {
+        "satirlar": ["WITHOUT", "THE GAS"]
+      }
+    },
+    {
+      "id": 4,
+      "bolum": "Why beans are different",
+      "metin": "This is The Food Almanac. Let's start with what a bean actually does once you eat it.",
+      "gorsel": "a single dried bean in the foreground, a heap of dried beans, lentils and chickpeas in a burlap sack behind it, a scoop resting on top"
+    },
+    {
+      "id": 5,
+      "metin": "Beans, lentils, chickpeas and dried peas belong to one food family, called legumes or pulses. You'll find them dried, canned, and in soups, chili and hummus.",
+      "gorsel": "a wooden table with small bowls of black beans, kidney beans, red lentils, green lentils and chickpeas, arranged closely together",
+      "baslik": {
+        "satirlar": ["ONE FOOD", "FAMILY"]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Like bread or rice, they contain starch, so they do count as carbohydrate. A half cup of cooked beans or lentils has roughly 15 to 20 grams of carbohydrate. They also bring protein and fiber, which is part of why they fill you up.",
+      "gorsel": "a half-cup measuring cup filled with cooked beans beside a slice of bread and a small bowl of white rice, all on a wooden board"
+    },
+    {
+      "id": 7,
+      "metin": "But the starch in beans is packed differently. It sits inside tough cell walls, alongside fiber and protein, so your digestive enzymes work through it slowly.",
+      "gorsel": "a magnified circular inset of a bean cut open showing dense starch granules inside thick cell walls, next to a whole bean and a lentil",
+      "baslik": {
+        "satirlar": ["SLOW", "RELEASE"]
+      }
+    },
+    {
+      "id": 8,
+      "metin": "That slow release is what the glycemic index describes: how fast a food raises blood sugar. Beans and lentils tend to score low.",
+      "gorsel": "a gentle hand-drawn hill-shaped curve rising slowly, a bowl of beans placed at its foot and a slice of white bread beside a much steeper hill",
+      "baslik": {
+        "satirlar": ["LOW", "GLYCEMIC INDEX"]
+      }
+    },
+    {
+      "id": 9,
+      "metin": "So the idea is sensible. The real question is whether it shows up in real people, over months, on real lab tests.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes and a bowl of cooked beans beside an antique brass microscope"
+    },
+    {
+      "id": 10,
+      "bolum": "The Toronto trial",
+      "tip": "kart",
+      "metin": "Here is the best trial we have, from the University of Toronto in 2012.",
+      "kart": {
+        "ust": "THE TRIAL",
+        "baslik": "A cup of legumes a day",
+        "alt": "Jenkins et al. · Toronto · 2012"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "A team led by David Jenkins randomly assigned 121 adults with type 2 diabetes to one of two diets. Then they followed them for three months. It was a test with ordinary food, not with supplements.",
+      "gorsel": "a quiet clinic room with a table, two covered meal trays, a glucose meter and a clipboard with blank pages, tall window light",
+      "etiket": "Jenkins et al. · Arch Intern Med · 2012"
+    },
+    {
+      "id": 12,
+      "metin": "One group followed a low glycemic index diet that included at least one cup of legumes a day. That is about 190 grams of beans, lentils or chickpeas.",
+      "gorsel": "a full measuring cup of cooked beans next to a plate holding lentil stew, chickpeas and a small salad",
+      "baslik": {
+        "satirlar": ["1 CUP", "OF LEGUMES"],
+        "not": "about 190 grams a day"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "The other group ate a healthy diet with extra fiber from whole wheat products. So the comparison group was also asked to improve, which makes this a tougher and fairer test.",
+      "gorsel": "a wooden table with whole wheat bread, a bowl of bran cereal and wheat stalks, a cup of tea beside them"
+    },
+    {
+      "id": 14,
+      "tip": "grafik",
+      "metin": "On the legume diet, A1C fell by half a percentage point. On the wheat fiber diet it fell by three tenths. The gap between the two was two tenths of a point.",
+      "grafik": {
+        "baslik": "How much A1C fell over three months",
+        "alt": "Percentage points, low glycemic legume diet vs. high wheat fiber diet",
+        "cubuklar": [
+          {"etiket": "Legume diet", "deger": 0.5, "metin": "−0.5"},
+          {"etiket": "Wheat fiber diet", "deger": 0.3, "metin": "−0.3"},
+          {"etiket": "Difference", "deger": 0.2, "metin": "−0.2"}
+        ],
+        "kaynak": "Jenkins et al., Arch Intern Med 2012 · 121 adults with type 2 diabetes · 3 months"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "A1C is your average blood sugar over about three months. Doctors use it to judge how well eating habits or medicines are working over time. A drop of two tenths of a point is small but clear, and it was statistically solid.",
+      "gorsel": "a rack of small capped sample tubes in a laboratory, a bowl of beans beside it and an antique calendar page with blank squares",
+      "baslik": {
+        "satirlar": ["A1C"],
+        "not": "your average blood sugar over about three months"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "So the honest reading is this. Part of the improvement came from eating better overall. The beans added a modest extra on top. That's worth saying out loud, because headlines tend to skip it.",
+      "gorsel": "a balanced dinner plate with lentil stew, steamed greens and a small portion of brown rice, with a bowl of beans at the side"
+    },
+    {
+      "id": 17,
+      "metin": "Blood pressure moved too. Systolic pressure, the top number, fell about 4.5 millimeters of mercury more on the legume diet than on the wheat fiber diet.",
+      "gorsel": "a sphygmomanometer cuff and gauge on a kitchen table beside a bowl of cooked beans and a glass of water",
+      "etiket": "Jenkins et al. · Arch Intern Med · 2012",
+      "baslik": {
+        "satirlar": ["TOP NUMBER"],
+        "vurgu": "–4.5",
+        "not": "mm Hg more than the wheat fiber diet"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Mostly because of that, the researchers' estimated heart disease risk score fell by 0.8 percent on the legume diet. Keep in mind that this is a calculation, not a count of actual heart attacks.",
+      "gorsel": "an old-fashioned notebook with blank pages and a pencil beside a small bowl of beans and a red heart symbol drawn as a simple engraving"
+    },
+    {
+      "id": 19,
+      "bolum": "Pooling the evidence",
+      "metin": "One trial is only one trial. So researchers pool many of them, which gives a wider and steadier picture. It is like asking the same question many times.",
+      "gorsel": "a tall stack of research journals with blank covers on a desk beside a bowl of mixed beans and lentils and a brass magnifying glass"
+    },
+    {
+      "id": 20,
+      "metin": "In 2009, John Sievenpiper and colleagues pooled 41 controlled trials of pulses. Eaten on their own, pulses lowered fasting blood glucose across 11 trials.",
+      "gorsel": "a morning kitchen scene with a bowl of cooked lentils and a glucose meter with a blank screen, steam rising from the bowl",
+      "etiket": "Sievenpiper et al. · Diabetologia · 2009",
+      "baslik": {
+        "satirlar": ["41 TRIALS", "POOLED"]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "When pulses were part of a low glycemic diet, A1C or a similar long-term marker fell too, across 19 trials. The authors also noted that results varied a lot from trial to trial.",
+      "gorsel": "nineteen small bowls of beans and lentils in neat rows on a long wooden table, seen from above, some fuller than others"
+    },
+    {
+      "id": 22,
+      "metin": "A newer review in the European Journal of Nutrition gathered 65 trials. Among adults with type 2 diabetes, long-term pulse eating was linked with fasting glucose about 10 milligrams per deciliter lower.",
+      "gorsel": "a hand-drawn bar of small beans stacked into a tower beside a glucose meter with a blank screen and a bowl of black beans",
+      "etiket": "Hafiz et al. · Eur J Nutr · 2022",
+      "baslik": {
+        "satirlar": ["FASTING", "GLUCOSE"],
+        "vurgu": "–10",
+        "not": "mg/dL, about 0.54 millimoles per liter"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "A1C was lower by about 0.17 points in that review, which sits right at the edge of statistical significance. In other words, the benefit might be real, or it might be small enough to disappear in the next trial.",
+      "gorsel": "a sheet of paper with a faint line and a bowl of beans on it, a pair of reading glasses placed on the paper's edge"
+    },
+    {
+      "id": 24,
+      "metin": "The reviewers graded the certainty of the long-term results as very low. The trials were small and different from one another, and the range of likely results included no effect at all.",
+      "gorsel": "a set of old brass balance scales, one pan holding a small heap of beans and the other nearly empty, level and calm",
+      "baslik": {
+        "satirlar": ["CERTAINTY:", "VERY LOW"]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "In plain words, the direction is consistent and the size is modest. We just can't say exactly how modest. That doesn't make beans a bad bet. It just keeps the claim honest.",
+      "gorsel": "a small bowl of cooked beans on a wooden table beside a notebook with blank pages and a pencil, calm afternoon light"
+    },
+    {
+      "id": 26,
+      "bolum": "The second meal effect",
+      "tip": "kart",
+      "metin": "Now for something that surprised scientists. It is called the second meal effect, and it started with lentils.",
+      "kart": {
+        "ust": "THE SECOND MEAL",
+        "baslik": "Breakfast changes lunch",
+        "alt": "Jenkins et al. · 1982"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "In 1982, Jenkins's group asked seven healthy volunteers to eat either lentils or whole wheat bread for breakfast. Both breakfasts had the same amount of carbohydrate.",
+      "gorsel": "two breakfast bowls on a plain table, one of cooked lentils and one of whole wheat toast slices, morning light",
+      "etiket": "Jenkins et al. · Am J Clin Nutr · 1982"
+    },
+    {
+      "id": 28,
+      "metin": "Four hours later, everyone ate the same bread lunch. After the lentil breakfast, the blood sugar response to lunch was about 38 percent flatter.",
+      "gorsel": "an antique round wall clock above a lunch plate with a slice of bread, a bowl of lentils pushed to the side, soft window light",
+      "baslik": {
+        "satirlar": ["LUNCH WAS", "38% FLATTER"],
+        "vurgu": "38%",
+        "not": "flatter blood sugar response after a lentil breakfast"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "Breakfast changed how the body handled lunch. When the team fed the bread breakfast slowly over four hours, they saw a similar pattern, which points to slow release as the reason.",
+      "gorsel": "a slow trickle of lentils pouring from a small scoop into a bowl, an antique hourglass beside it on a wooden table"
+    },
+    {
+      "id": 30,
+      "metin": "Seven healthy volunteers is a very small study, so treat this as a promising clue, not a promise. But it explains why beans may help beyond the meal you eat them in. In the practical part, I'll show you how to use that.",
+      "gorsel": "a bowl of lentil soup with a spoon on a table, a small notebook with blank pages and a pencil beside it, a single window behind"
+    },
+    {
+      "id": 31,
+      "bolum": "The honest part",
+      "tip": "kart",
+      "metin": "Now, the honest part. What can beans do, and what can't they?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What beans can't do",
+        "alt": "Limits of the evidence"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Beans are not a medicine. The best trial shows a modest benefit, about two tenths of an A1C point beyond a good high fiber diet. That is real, but it does not replace treatment.",
+      "gorsel": "a bowl of beans on a kitchen table beside a closed pill organizer and a glass of water, evenly lit and calm",
+      "baslik": {
+        "satirlar": ["A HELPER,", "NOT A CURE"]
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Beans in that trial also came as part of a low glycemic diet. So we can't fully separate the beans from the rest of the eating pattern. Nobody can say how much credit each part deserves.",
+      "gorsel": "a dinner plate divided into portions of beans, vegetables and a small piece of fish, set on a plain wooden table"
+    },
+    {
+      "id": 34,
+      "metin": "None of the studies we've covered singled out adults over 60. So the results are best read as a general trend, not a promise for any one person. If you're over 60, the sensible move is to try it gradually and watch how you feel.",
+      "gorsel": "a kitchen table set for two with bowls of bean soup and bread, reading glasses and a teapot between the bowls"
+    },
+    {
+      "id": 35,
+      "metin": "One myth to retire is that beans are a free food for blood sugar. They contain carbohydrate, so a big bowl still raises it. The rise is just lower and slower.",
+      "gorsel": "a very large bowl of beans heaped high on a table beside a small bowl for comparison, a glucose meter with a blank screen nearby",
+      "baslik": {
+        "satirlar": ["NOT A", "FREE FOOD"]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "Another myth is that canned beans don't count. They are simply cooked beans. The main issue is sodium, so look for cans marked no salt added, or rinse the beans in a colander.",
+      "gorsel": "a metal colander full of canned beans under a running kitchen tap, an open can and a wooden spoon beside the sink"
+    },
+    {
+      "id": 37,
+      "metin": "If you take insulin or medicines that can lower blood sugar, such as sulfonylureas, tell your doctor or pharmacist before making a big change in how much fiber and carbohydrate you eat. Your doses may need adjusting.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, an insulin pen and a bowl of cooked beans on a tray",
+      "baslik": {
+        "satirlar": ["SAFETY", "FIRST"]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "A note on kidneys. The National Kidney Foundation says most people with kidney disease who aren't on dialysis usually don't need to limit beans. If you have high potassium or phosphorus on lab tests, or you are on dialysis, ask a kidney dietitian.",
+      "gorsel": "a small bowl of beans on a clinic table next to a folded lab report with blank lines and a pair of reading glasses"
+    },
+    {
+      "id": 39,
+      "bolum": "A cup a day, without the gas",
+      "tip": "kart",
+      "metin": "So how do you get to a cup a day without regrets? Let's start with the gas.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "A cup a day, gently",
+        "alt": "Five practical ways"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Researchers pooled three feeding studies in which adults ate half a cup of beans every day for eight or twelve weeks. In the first week, fewer than half reported more gas after pinto or baked beans.",
+      "gorsel": "a half-cup measuring cup of beans on a wooden table beside a simple wall calendar with blank squares",
+      "etiket": "Winham & Hutchins · Nutr J · 2011"
+    },
+    {
+      "id": 41,
+      "metin": "Even some people on control diets without beans, three to eleven percent, reported more gas. The authors concluded that worries about gas may be exaggerated. Individual experience still varies, so go gradually.",
+      "gorsel": "a calm bowl of beans and rice on a kitchen table, an open window with curtains moving softly",
+      "baslik": {
+        "satirlar": ["WEEK 1:", "UNDER HALF"],
+        "not": "reported more gas after pinto or baked beans"
+      }
+    },
+    {
+      "id": 42,
+      "metin": "One. Start small. Try two to four tablespoons a day, then build toward half a cup over a few weeks. Rushing from zero to a full cup is what gives beans their reputation. Giving your body time is the whole trick.",
+      "gorsel": "three bowls in a row holding a tablespoon, a quarter cup and a half cup of cooked beans, each bowl a bit fuller than the last"
+    },
+    {
+      "id": 43,
+      "metin": "Two. Rinse canned beans in a colander, or choose no salt added. It's a simple habit that also trims some of the sodium.",
+      "gorsel": "a hand-held colander of rinsed beans tilted over a bowl, an open can of beans on the counter behind it"
+    },
+    {
+      "id": 44,
+      "metin": "Three. Use the second meal effect. Put beans or lentils at breakfast or lunch, like a lentil soup or a bean salad, so they may help steady the meal that follows. That idea comes from one small study, so treat it as a gentle bonus.",
+      "gorsel": "a lunch table with a bowl of lentil soup and a bean salad, an antique clock on the wall behind them"
+    },
+    {
+      "id": 45,
+      "metin": "Four. Swap, don't pile on. Replace part of the rice, pasta or potatoes with beans or lentils. In the trials, beans were part of a whole eating pattern, so keep the total carbohydrate in check.",
+      "gorsel": "a dinner plate where half of the usual rice has been replaced by black beans, with roasted vegetables and grilled chicken beside them"
+    },
+    {
+      "id": 46,
+      "metin": "Five. Keep it easy. Stir a half cup of beans into soup or chili, toss white beans in a salad, mash chickpeas into a dip, or snack on hummus with raw vegetables.",
+      "gorsel": "a spread of everyday dishes: chili with beans in a pot, a salad with white beans, a bowl of hummus with carrot sticks and cucumber"
+    },
+    {
+      "id": 47,
+      "metin": "A cup a day, about 190 grams as in the trial, is the goal. Half a cup is a perfectly good place to start. Canned, frozen or dried all count, so use whichever you will actually eat.",
+      "gorsel": "a measuring cup of cooked beans and a half-cup measure of beans side by side on a wooden board, kitchen window behind",
+      "baslik": {
+        "satirlar": ["A CUP", "A DAY"],
+        "not": "half a cup is a good start"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "And if you wear a glucose monitor, you can test this yourself. Compare a meal with beans in place of some rice, and see how your own curve responds. Just remember that one person's curve is a single data point, not a verdict.",
+      "gorsel": "a smartphone lying face down beside a lunch bowl of beans and a small round glucose sensor patch on a table"
+    },
+    {
+      "id": 49,
+      "metin": "Remember the cold open? The beans in that trial helped, but the high fiber comparison diet helped too. Beans are an easy way to get fiber, protein and a slower carbohydrate in one food.",
+      "gorsel": "a bowl of beans and a bowl of whole wheat grains side by side, a measuring tape coiled loosely beside them"
+    },
+    {
+      "id": 50,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A cup a day, gently",
+        "alt": "Modest help, real food"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "In a three-month trial of 121 adults with type 2 diabetes, a low glycemic diet with about a cup of legumes a day lowered A1C by half a point, and blood pressure more than a high wheat fiber diet.",
+      "gorsel": "the opening bowl of cooked beans and lentils on the kitchen table, a wooden spoon in it, soft light from the window"
+    },
+    {
+      "id": 52,
+      "metin": "The extra benefit beyond a good high fiber diet was modest, about two tenths of an A1C point. Pooled trials point the same way, but the certainty is low.",
+      "gorsel": "a balance scale with a small heap of beans in one pan and a pile of whole wheat grains in the other, almost level"
+    },
+    {
+      "id": 53,
+      "metin": "Lentils at breakfast flattened lunch in a small study, and worries about gas may be overblown. Start small, rinse canned beans, and swap beans in rather than piling them on.",
+      "gorsel": "a bowl of lentil soup, a colander of rinsed beans and a measuring cup of beans arranged together on a wooden table"
+    },
+    {
+      "id": 54,
+      "metin": "If you take diabetes medicine, check with your care team first. Beans can be a gentle helper at the table, never a replacement for treatment.",
+      "gorsel": "a bowl of beans beside a stethoscope and a notebook on a doctor's desk, warm light from a window"
+    },
+    {
+      "id": 55,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

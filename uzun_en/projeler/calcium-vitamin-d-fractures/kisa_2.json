@@ -1,0 +1,16 @@
+{
+  "baslik": ["CALCIUM:", "FOOD OR PILLS?"],
+  "baslik_yt": "Calcium: Which Foods Beat the Pills?",
+  "aciklama": "A cup of yogurt, a glass of milk and a serving of canned salmon add up to nearly 800 mg of calcium. Here is why bone health groups say food first, and how to fill any gap safely.",
+  "parcalar": [
+    {"sahne": 36, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 34, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["YOGURT,", "MILK"], "vurgu": "310 MG", "not": "calcium in one yogurt cup"},
+     "etiket": null},
+    {"sahne": 37, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 18, "cumleler": [1]},
+    {"sahne": 40, "cumleler": [2]},
+    {"sahne": 52, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 52, "cumleler": [2], "baslik": null, "etiket": null}
+  ]
+}

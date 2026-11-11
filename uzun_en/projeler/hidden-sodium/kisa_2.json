@@ -1,0 +1,18 @@
+{
+  "baslik": ["CUT SALT,", "LOWER BP?"],
+  "baslik_yt": "Cut Sodium for a Week: What Happened to BP",
+  "aciklama": "A JAMA trial of 213 adults aged 50 to 75 compared a week of high sodium with a week of low sodium. Here is what happened to their blood pressure, and the limits of the result.",
+  "parcalar": [
+    {"sahne": 36, "cumleler": [0], "gorsel": 41, "baslik": null, "etiket": null},
+    {"sahne": 41, "cumleler": [0],
+     "baslik": {"satirlar": ["3 IN 4", "IMPROVED"], "vurgu": "3 IN 4", "not": "had lower pressure"},
+     "etiket": "Gupta et al. · JAMA · 2023"},
+    {"sahne": 37, "cumleler": [0], "baslik": {"satirlar": ["213 ADULTS", "AGED 50-75"]}, "etiket": "Gupta et al. · JAMA · 2023"},
+    {"sahne": 38, "cumleler": [0], "etiket": "Gupta et al. · JAMA · 2023"},
+    {"sahne": 41, "cumleler": [1], "gorsel": 63,
+     "baslik": {"satirlar": ["LOW SODIUM", "WEEK"], "vurgu": "-8 MMHG", "not": "top number, on or off pills"},
+     "etiket": "Gupta et al. · JAMA · 2023"},
+    {"sahne": 42, "cumleler": [1], "baslik": {"satirlar": ["ONE WEEK,", "NOT A LIFETIME"]}, "etiket": null},
+    {"sahne": 51, "cumleler": [1, 2], "baslik": {"satirlar": ["THE PATTERN", "COUNTS"]}, "etiket": null}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "baslik": ["PICKLE JUICE", "VS CRAMPS?"],
+  "baslik_yt": "Does Pickle Juice Really Stop Night Cramps?",
+  "aciklama": "A 2010 lab study found pickle juice ended induced cramps about 49 seconds sooner than water. Here is why that does not yet prove it works for the cramps that wake you at night.",
+  "parcalar": [
+    {"sahne": 2, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0]},
+    {"sahne": 26, "cumleler": [1], "etiket": null},
+    {"sahne": 27, "cumleler": [1], "baslik": {"satirlar": ["LAB-MADE", "CRAMPS"]}, "etiket": null},
+    {"sahne": 28, "cumleler": [1], "etiket": null},
+    {"sahne": 29, "cumleler": [0], "etiket": null},
+    {"sahne": 29, "cumleler": [1], "gorsel": 28, "baslik": null, "etiket": null},
+    {"sahne": 30, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 63, "cumleler": [1], "baslik": null, "etiket": null}
+  ]
+}

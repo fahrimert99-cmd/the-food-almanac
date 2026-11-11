@@ -1,0 +1,15 @@
+{
+  "baslik": ["COOKED SPINACH", "FOR YOUR EYES?"],
+  "baslik_yt": "Does Cooked Spinach Help Your Eyes?",
+  "aciklama": "Many people think cooking spinach unlocks more lutein for eye health. A three-week human study compared whole, minced and liquefied spinach and found a surprising answer.",
+  "parcalar": [
+    {"sahne": 38, "cumleler": [0], "gorsel": 37, "baslik": null, "etiket": null},
+    {"sahne": 38, "cumleler": [1], "baslik": {"satirlar": ["SPINACH,", "3 FORMS"], "vurgu": "3 WEEKS", "not": "volunteers ate spinach"}, "etiket": "Castenmiller et al. · J Nutr · 1999"},
+    {"sahne": 38, "cumleler": [2], "baslik": {"satirlar": ["BLOOD LUTEIN", "THE SAME"]}, "etiket": "Castenmiller et al. · J Nutr · 1999"},
+    {"sahne": 39, "cumleler": [0]},
+    {"sahne": 40, "cumleler": [0], "baslik": {"satirlar": ["COOKING", "UNLOCK IT?"], "not": "not supported"}, "etiket": "Castenmiller et al. · J Nutr · 1999"},
+    {"sahne": 40, "cumleler": [1], "gorsel": 37, "baslik": null, "etiket": null},
+    {"sahne": 43, "cumleler": [1, 2], "baslik": {"satirlar": ["NO PROMISES", "FOR EYES"]}, "etiket": null},
+    {"sahne": 46, "cumleler": [2], "gorsel": 53, "baslik": {"satirlar": ["RAW + COOKED"]}, "etiket": null}
+  ]
+}

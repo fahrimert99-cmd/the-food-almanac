@@ -1,7 +1,10 @@
 // YouTube kapak görseli (1280x720). Rakip analizinden (Food code, ilk videonun %2,4 tıklama oranı): beyaz zemin, solda her
 // satırı ayrı ayrı blok genişliğine büyütülmüş dev başlık (son satır, yani vücuttaki sonuç, altın renkte) ve altında
 // isteğe bağlı kısa şerit; sağda kenarlara taşan büyük, canlı konu görseli; sağ üstte vurgu rozeti. Çerçeve ve kanal rozeti yok.
-// Girdi: tam.gen.json -> kapak {satirlar, serit, vurgu, vurgu_alt, gorsel, kutu, zemin}.
+// Girdi: tam.gen.json -> kapak {satirlar, serit, vurgu, vurgu_alt, gorsel, kesik, kutu, zemin}.
+// Stil (marka.json -> kapak_stil): "beyaz" (yukarıdaki) ya da "koyu" (26 Ekim 2026'dan beri): lacivert zemin, beyaz yazı,
+// son satır sarı, siyah kontur; konu arka planı saydam yapılmış görselle (kapak_kesik.png) gölgeli olarak durur.
+// Neden: beyaz kapak YouTube'un beyaz arayüzünde kayboluyordu (tıklama oranı %1,4–2,7); koyu zemin her temada öne çıkar.
 import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import "./fontlar";
@@ -52,9 +55,12 @@ const yerlesim = (kutu: number[] | null | undefined) => {
   return { w, h, sol: P.x0 + pw * 0.56 - ((x0 + x1) / 2) * w, ust: P.y0 + ph / 2 - ((y0 + y1) / 2) * h };
 };
 
+const KOYU = { zemin: "#13213A", isik: "#2B3F63", yazi: "#FFFFFF", vurgu: "#FFCD3C", kontur: "#0A0F1A" };
+
 export const Kapak: React.FC = () => {
-  const k = TAM.kapak;
-  const zemin = k.zemin || "#FFFFFF";
+  const k = TAM.kapak as typeof TAM.kapak & { kesik?: string | null };
+  const koyu = (marka as { kapak_stil?: string }).kapak_stil === "koyu" && !!k.kesik;
+  const zemin = koyu ? KOYU.zemin : k.zemin || "#FFFFFF";
   const satirlar = k.satirlar.length ? k.satirlar : [marka.ad.toUpperCase()];
   const seritH = k.serit ? SERIT * 1.9 + 22 : 0;
   const p = puntolar(satirlar, 720 - 2 * DIKEY - seritH);
@@ -63,19 +69,33 @@ export const Kapak: React.FC = () => {
   const yer = yerlesim(k.kutu);
   return (
     <AbsoluteFill style={{ backgroundColor: zemin, overflow: "hidden" }}>
-      {k.gorsel && (
+      {koyu && (
+        <div style={{ position: "absolute", inset: 0,
+          background: `radial-gradient(ellipse 60% 75% at 74% 50%, ${KOYU.isik} 0%, ${rgba(KOYU.zemin, 0)} 75%)` }} />
+      )}
+      {koyu && k.kesik ? (
+        <Img src={staticFile(`img/${k.kesik}.png`)} style={{ position: "absolute", left: yer.sol, top: yer.ust, width: yer.w, height: yer.h,
+          objectFit: "cover", filter: "drop-shadow(14px 22px 26px rgba(0,0,0,0.55))" }} />
+      ) : k.gorsel && (
         <Img src={staticFile(`img/${k.gorsel}.jpg`)} style={{ position: "absolute", left: yer.sol, top: yer.ust, width: yer.w, height: yer.h,
           objectFit: "cover", WebkitMaskImage: MASKE, WebkitMaskComposite: "source-in", maskImage: MASKE, maskComposite: "intersect" }} />
       )}
       {/* Görsel sola taşarsa yazının altı zemin rengiyle örtülür */}
       <div style={{ position: "absolute", inset: 0,
-        background: `linear-gradient(90deg, ${rgba(zemin, 1)} 0%, ${rgba(zemin, 1)} 46%, ${rgba(zemin, 0)} 56%)` }} />
+        background: `linear-gradient(90deg, ${rgba(zemin, 1)} 0%, ${rgba(zemin, koyu ? 0.85 : 1)} 44%, ${rgba(zemin, 0)} 56%)` }} />
       {satirlar.map((s, i) => {
         const ust = y;
         y += p[i] * SATIR;
+        const son = i === satirlar.length - 1 && satirlar.length > 1;
+        const stil = { position: "absolute" as const, left: SOL, top: ust, fontFamily: ANTON, fontSize: p[i],
+          lineHeight: `${p[i] * SATIR}px`, whiteSpace: "nowrap" as const };
+        if (!koyu) return <div key={i} style={{ ...stil, color: son ? RENK.altin : RENK.lacivert }}>{s}</div>;
+        // koyu: önce kalın siyah kontur katmanı, üstüne dolgu (Altyazi ile aynı iki katman yöntemi)
         return (
-          <div key={i} style={{ position: "absolute", left: SOL, top: ust, fontFamily: ANTON, fontSize: p[i], lineHeight: `${p[i] * SATIR}px`,
-            whiteSpace: "nowrap", color: i === satirlar.length - 1 && satirlar.length > 1 ? RENK.altin : RENK.lacivert }}>{s}</div>
+          <React.Fragment key={i}>
+            <div style={{ ...stil, color: KOYU.kontur, WebkitTextStroke: `${Math.round(p[i] * 0.07)}px ${KOYU.kontur}` }}>{s}</div>
+            <div style={{ ...stil, color: son ? KOYU.vurgu : KOYU.yazi }}>{s}</div>
+          </React.Fragment>
         );
       })}
       {k.serit && (
