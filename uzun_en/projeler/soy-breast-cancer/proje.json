@@ -1,0 +1,611 @@
+{
+  "slug": "soy-breast-cancer",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Soy and Breast Cancer: What the Studies Show",
+  "yorum": "Do tofu, edamame or soy milk show up in your kitchen? Has anyone ever told you to avoid soy, and did you ever find out why?",
+  "aciklama_giris": "For years, soy has carried a warning label in people's minds: does a plant food with hormone-like compounds raise breast cancer risk? The fear began with experiments in rodents using concentrated isoflavones. In large studies of women who had breast cancer, eating soy foods was not linked with worse outcomes, and in several it was linked with a lower chance of recurrence. The evidence is observational, though, so it shows a link, not proof of cause.\n\nIn this video we look at where the worry came from, the Shanghai Breast Cancer Survival Study and a pooled analysis of 9,514 survivors, what soy intake means for the risk of developing breast cancer, why soy foods and isoflavone pills are not the same thing, what a meta-analysis found for hot flashes, where the evidence runs out, and four practical points.",
+  "kaynaklar": [
+    "Messina M, Wu AH. Perspectives on the soy-breast cancer relation. American Journal of Clinical Nutrition. 2009;89(5):1673S-1679S. DOI 10.3945/ajcn.2009.26736v.",
+    "Shu XO, Zheng Y, Cai H, Gu K, Chen Z, Zheng W, Lu W. Soy food intake and breast cancer survival. JAMA. 2009;302(22):2437-2443. DOI 10.1001/jama.2009.1783.",
+    "Vanderbilt University Medical Center news. Soy food linked to decreased risk of breast cancer recurrence and death. December 11, 2009. https://news.vumc.org/?p=333864",
+    "Nechuta SJ, Caan BJ, Chen WY, et al. Soy food intake after diagnosis of breast cancer and survival: an in-depth analysis of combined evidence from cohort studies of US and Chinese women. American Journal of Clinical Nutrition. 2012;96(1):123-132. DOI 10.3945/ajcn.112.035972.",
+    "Dong JY, Qin LQ. Soy isoflavones consumption and risk of breast cancer incidence or recurrence: a meta-analysis of prospective studies. Breast Cancer Research and Treatment. 2011;125(2):315-323. DOI 10.1007/s10549-010-1270-8. PMID 21113655.",
+    "ASCO Post. Soy phytoestrogens and breast cancer: an enduring dilemma (discussing the American Cancer Society's 2012 guidelines for cancer survivors). July 15, 2012. https://ascopost.com/issues/july-15-2012/soy-phytoestrogens-and-breast-cancer-an-enduring-dilemma/",
+    "American Institute for Cancer Research. Soy and cancer: myths and misconceptions. October 2024. https://www.aicr.org/resources/blog/soy-and-cancer-myths-and-misconceptions/",
+    "Taku K, Melby MK, Kronenberg F, Kurzer MS, Messina M. Extracted or synthesized soybean isoflavones reduce menopausal hot flash frequency and severity: systematic review and meta-analysis of randomized controlled trials. Menopause. 2012;19(7):776-790. DOI 10.1097/gme.0b013e3182410159."
+  ],
+  "kapak": {
+    "satirlar": [
+      "SOY",
+      "SAFE?"
+    ],
+    "vurgu": "–25%",
+    "vurgu_alt": "RECURRENCE",
+    "gorsel": "a large block of tofu with several white tofu cubes in front of it, a bowl of green edamame pods and a glass of soy milk tightly overlapping, a small pink ribbon symbol leaning on the tofu, close-up and appetizing"
+  },
+  "kahraman": "tofu",
+  "etiketler": [
+    "soy and breast cancer",
+    "is soy safe",
+    "soy and estrogen",
+    "tofu",
+    "isoflavones",
+    "breast cancer survivors",
+    "hot flashes",
+    "phytoestrogens",
+    "nutrition science",
+    "food myths"
+  ],
+  "seslendirme_duzelt": {
+    "genistein": "JEN iss teen",
+    "isoflavones": "eye so FLAY vones",
+    "edamame": "ed uh MAH may",
+    "tempeh": "TEM pay",
+    "miso": "MEE so",
+    "tamoxifen": "ta MOK sih fen",
+    "phytoestrogens": "fye toe ESS tro jens"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The soy question",
+      "metin": "Among more than 5,000 women with breast cancer in Shanghai, those eating the most soy had about 32 percent lower risk of recurrence.",
+      "gorsel": "a bowl of white tofu cubes beside green edamame pods on a wooden table, soft morning light, a ceramic teacup behind them",
+      "etiket": "Shu et al. · JAMA · 2009",
+      "baslik": {
+        "satirlar": [
+          "SHANGHAI",
+          "5,000 WOMEN"
+        ],
+        "vurgu": "–32%",
+        "not": "risk of recurrence, most soy vs least"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "Yet soy has long carried a warning. It began with experiments, and the catch is what was tested.",
+      "gorsel": "a block of tofu sitting under a large antique magnifying glass on a laboratory bench, a small glass flask and a notebook with blank pages nearby",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "WARNING"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what to eat, what to skip, and what soy can do for hot flashes.",
+      "gorsel": "a kitchen table set with a plate of sliced tofu, a bowl of edamame and a glass of soy milk, a small pink ribbon symbol resting beside the plate"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what soy is, and why anyone worried about it.",
+      "gorsel": "a woven basket of whole soybean pods with a block of tofu and a glass bottle of soy milk, simple farmhouse kitchen"
+    },
+    {
+      "id": 5,
+      "metin": "Soy comes from soybeans. We eat them as tofu, edamame, soy milk, miso and tempeh. Soybeans are unusually rich in plant compounds called isoflavones.",
+      "gorsel": "a spread of soy foods: a block of tofu, a bowl of edamame, a slab of tempeh, a small bowl of miso paste and a glass of soy milk, arranged tightly on a wooden board",
+      "baslik": {
+        "satirlar": [
+          "ISOFLAVONES"
+        ],
+        "not": "plant compounds in soybeans"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Isoflavones have hormone-like effects, which is why they're called phytoestrogens, or plant estrogens.",
+      "gorsel": "a magnified circular inset of simple hexagon ring molecule outlines connected by dashed lines, beside a soybean pod and a cube of tofu"
+    },
+    {
+      "id": 7,
+      "metin": "Breast cancer is common, and some treatments, such as tamoxifen, work on estrogen's effects in the body. So anything with hormone-like effects deserves a careful look.",
+      "gorsel": "a doctor's desk with a stethoscope, a closed notebook and a small plate of tofu cubes, a tall window in the background"
+    },
+    {
+      "id": 8,
+      "metin": "Could eating soy interfere with that, or even feed some cancers? That was the worry.",
+      "gorsel": "a pale tofu cube on a plate with a large question-mark shaped curl of steam rising from it, vintage engraving style"
+    },
+    {
+      "id": 9,
+      "tip": "kart",
+      "bolum": "Where the fear began",
+      "metin": "So where did the fear come from? It started in laboratories, with animals.",
+      "kart": {
+        "ust": "WHERE IT STARTED",
+        "baslik": "The rodent experiments",
+        "alt": "Concentrated genistein · mice and rats"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "In some experiments, researchers gave concentrated genistein, the main isoflavone in soy, to rodents. In certain models, it stimulated the growth of estrogen-dependent breast tumors.",
+      "gorsel": "a white laboratory mouse in a glass cage beside a small dish of pale powder, a block of tofu on a shelf behind the cage",
+      "etiket": "Messina & Wu · Am J Clin Nutr · 2009",
+      "baslik": {
+        "satirlar": [
+          "RODENT",
+          "STUDIES"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Those findings were taken seriously. But a mouse is not a person, and a concentrated compound is not a serving of tofu.",
+      "gorsel": "a small white mouse sitting on the left of a balance scale, a plate of tofu cubes sitting on the right, the scale clearly uneven, antique brass"
+    },
+    {
+      "id": 12,
+      "metin": "Even in the animal work, form mattered. One animal study, described in a 2012 oncology review, found that whole soy did not show the tumor-promoting effect that isolated isoflavones did.",
+      "gorsel": "two small dishes side by side on a laboratory bench, one holding whole soybeans and tofu, the other holding a spoonful of pale powder",
+      "etiket": "ASCO Post · 2012 review",
+      "baslik": {
+        "satirlar": [
+          "WHOLE SOY",
+          "VS. EXTRACT"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Human studies were more reassuring. A 2009 review by Mark Messina and Anna Wu noted that breast tissue measured after isoflavone exposure did not show the cell-multiplying effect seen with combined hormone therapy.",
+      "gorsel": "an antique brass microscope on a desk beside a plate of tofu cubes, a circular inset of calm, evenly spaced round cells",
+      "etiket": "Messina & Wu · Am J Clin Nutr · 2009"
+    },
+    {
+      "id": 14,
+      "metin": "Research also took off for another reason. Japan has long had both high soy intake and low breast cancer rates, which made scientists wonder whether soy might protect.",
+      "gorsel": "a traditional Japanese table with a bowl of miso soup containing tofu cubes, a small dish of edamame and a pair of chopsticks on a rest",
+      "baslik": {
+        "satirlar": [
+          "A CLUE",
+          "FROM JAPAN"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "tip": "kart",
+      "bolum": "What large studies found",
+      "metin": "Animal studies raise questions. Only people can answer them, so researchers followed thousands of women for years.",
+      "kart": {
+        "ust": "THE BIG STUDIES",
+        "baslik": "Following real women",
+        "alt": "Shanghai · United States"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "The best-known is the Shanghai Breast Cancer Survival Study, led by Xiao-Ou Shu of Vanderbilt University. It followed 5,042 women in China who had been diagnosed with breast cancer.",
+      "gorsel": "a quiet clinic waiting room with a wooden bench, a window, and a small table with a bowl of tofu and vegetables, a pair of round eyeglasses resting on a notebook",
+      "etiket": "Shu et al. · JAMA · 2009"
+    },
+    {
+      "id": 17,
+      "metin": "The women, aged 20 to 75, reported what they ate about six months after diagnosis, then again over the next five years. The team followed them for a median of almost four years.",
+      "gorsel": "a hand-drawn wall calendar page with blank squares beside a plate of tofu and rice, an antique pocket watch resting on the page",
+      "baslik": {
+        "satirlar": [
+          "FOLLOWED",
+          "FOR YEARS"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "tip": "grafik",
+      "metin": "Women in the highest quarter of soy protein intake had a 29 percent lower risk of death, and a 32 percent lower risk of recurrence, than women in the lowest quarter.",
+      "grafik": {
+        "baslik": "Lower risk with the most soy",
+        "alt": "Highest vs. lowest quarter of soy protein intake",
+        "cubuklar": [
+          {
+            "etiket": "Death",
+            "deger": 29,
+            "metin": "−29%"
+          },
+          {
+            "etiket": "Recurrence",
+            "deger": 32,
+            "metin": "−32%"
+          }
+        ],
+        "kaynak": "Shu et al., JAMA 2009 · 5,033 surgically treated women with breast cancer, China"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "In plain numbers, about 10 percent of the lowest-soy group had died within four years, against about 7 percent in the highest. For recurrence, it was 11 percent against 8 percent.",
+      "gorsel": "two glass jars on a wooden shelf, one filled nearly to the top with dry soybeans and the other only partly filled, a block of tofu between them",
+      "baslik": {
+        "satirlar": [
+          "10% VS 7%",
+          "4-YEAR DEATHS"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "metin": "The pattern held for women whose tumors were estrogen receptor positive and for those whose tumors were not. It also held for women who took tamoxifen and women who did not.",
+      "gorsel": "a tray with a block of tofu, a small white pill bottle and a glass of water, a closed medical notebook beside them"
+    },
+    {
+      "id": 21,
+      "metin": "A second team pooled three studies, two in the United States and one in China, covering 9,514 survivors followed for about seven years. Those eating at least 10 milligrams of isoflavones a day had 25 percent lower risk of recurrence than those eating under four.",
+      "gorsel": "three woven baskets in a row, each holding soybean pods and a cube of tofu, a world globe with blank continents beside them",
+      "etiket": "Nechuta et al. · Am J Clin Nutr · 2012",
+      "baslik": {
+        "satirlar": [
+          "9,514",
+          "SURVIVORS"
+        ],
+        "vurgu": "–25%",
+        "not": "recurrence at 10 mg or more of isoflavones a day"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Deaths were a different story. Risk of dying was lower too, but the difference was small enough that it could be chance. Only the recurrence finding was statistically solid.",
+      "gorsel": "a balance scale with a small tofu cube on one pan and a few dried soybeans on the other, nearly level, antique brass"
+    },
+    {
+      "id": 23,
+      "metin": "These are observational studies, so they show a link, not proof of cause. Women who eat more soy may also exercise more or eat more vegetables. In the practical part, we'll get to how much soy seems to matter.",
+      "gorsel": "a woman in her sixties seen from behind walking on a park path carrying a cloth bag with a block of tofu and vegetables inside",
+      "baslik": {
+        "satirlar": [
+          "A LINK,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "metin": "Now, what about women who have never had breast cancer? Does soy change the chance of developing it in the first place?",
+      "gorsel": "a market stall with crates of fresh tofu blocks, soybean pods and soy milk bottles, an elderly shopper reaching for a block of tofu"
+    },
+    {
+      "id": 25,
+      "metin": "A 2011 analysis by Dong and Qin pooled 14 prospective studies of breast cancer incidence. Overall, higher isoflavone intake was linked with 11 percent lower risk.",
+      "gorsel": "a tall stack of fourteen closed books with blank covers and a block of tofu resting on top, a small brass magnifying glass in front",
+      "etiket": "Dong & Qin · Breast Cancer Res Treat · 2011",
+      "baslik": {
+        "satirlar": [
+          "14 STUDIES"
+        ],
+        "vurgu": "–11%",
+        "not": "risk of breast cancer, higher isoflavone intake"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "But that benefit showed up only in Asian populations, about 24 percent lower risk. In Western populations, there was essentially no difference.",
+      "gorsel": "two bowls side by side on a table, one holding a generous portion of tofu cubes and edamame, the other holding only two small cubes of tofu",
+      "baslik": {
+        "satirlar": [
+          "ASIA: –24%",
+          "WEST: NONE"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "metin": "A possible clue is how much soy people eat. In the pooled survivor study, US women averaged about 3 milligrams of isoflavones a day. Women in Shanghai averaged about 46.",
+      "gorsel": "a tiny saucer holding two tofu cubes next to a large serving bowl heaped with tofu, edamame and miso soup, same wooden table",
+      "baslik": {
+        "satirlar": [
+          "3 MG VS 46 MG"
+        ],
+        "not": "isoflavones a day, US vs Shanghai survivors"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "Some researchers think timing may matter too, and that soy eaten earlier in life could be more protective. That remains an idea, not a settled fact.",
+      "gorsel": "a row of small wooden steps with a soybean sprout growing at the bottom, a tofu cube in a bowl at the top"
+    },
+    {
+      "id": 29,
+      "metin": "Across all this research, one thing is notable. Higher soy food intake was not linked with higher breast cancer risk or recurrence. The overall direction was neutral or protective.",
+      "gorsel": "a calm still life of a tofu block on a plate, a glass of soy milk and a small pink ribbon symbol, soft light"
+    },
+    {
+      "id": 30,
+      "tip": "kart",
+      "bolum": "Food versus pills",
+      "metin": "There's one more distinction that matters a lot: soy foods versus isoflavone pills and powders.",
+      "kart": {
+        "ust": "A KEY DIFFERENCE",
+        "baslik": "Soy foods, not soy pills",
+        "alt": "Whole foods and concentrates differ"
+      }
+    },
+    {
+      "id": 31,
+      "metin": "The reassuring survivor studies looked at soy foods, the ones people actually eat. Tofu, soy milk, edamame, miso.",
+      "gorsel": "a rustic kitchen counter with a block of tofu, a jug of soy milk, a bowl of edamame and a small crock of miso, all neatly grouped",
+      "baslik": {
+        "satirlar": [
+          "SOY FOODS"
+        ],
+        "not": "what the survivor studies measured"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "A supplement can deliver very high isoflavone doses in one go, according to a 2012 oncology review, and those products are poorly studied.",
+      "gorsel": "a row of small amber supplement bottles with blank labels beside a modest plate of tofu cubes, the bottles tall and the tofu small"
+    },
+    {
+      "id": 33,
+      "metin": "Trials of isoflavone products in women, measuring markers of breast cancer risk, haven't shown significant effects either way, according to that same 2009 review.",
+      "gorsel": "a laboratory bench with a rack of small empty glass tubes, a dish of tofu cubes and an open notebook with blank pages",
+      "etiket": "Messina & Wu · Am J Clin Nutr · 2009"
+    },
+    {
+      "id": 34,
+      "metin": "The American Cancer Society's 2012 guidelines for survivors said current evidence doesn't suggest soy foods are likely to have adverse effects. For isoflavone supplements, the evidence was more limited.",
+      "gorsel": "an open guideline booklet with blank pages on a desk beside a plate of tofu and a pair of reading glasses",
+      "baslik": {
+        "satirlar": [
+          "ACS",
+          "GUIDELINES"
+        ],
+        "not": "soy foods: not likely harmful; supplements: less evidence"
+      }
+    },
+    {
+      "id": 35,
+      "metin": "The American Institute for Cancer Research describes whole soy foods such as tofu and edamame as beneficial, and notes that soy protein powders lack some of the nutrients in whole foods.",
+      "gorsel": "a bowl of steamed edamame and a plate of grilled tofu slices on a table, a small tub of pale protein powder pushed to the edge"
+    },
+    {
+      "id": 36,
+      "metin": "That group's expert panels also rated the evidence as limited, with no firm conclusion on soy and breast cancer risk. That honesty matters, and we'll come back to it.",
+      "gorsel": "a panel of three empty chairs around a long table with a single tofu cube resting on a plate in the center, folders with blank covers",
+      "baslik": {
+        "satirlar": [
+          "EVIDENCE:",
+          "LIMITED"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "tip": "kart",
+      "bolum": "Soy and hot flashes",
+      "metin": "Soy also comes up for a second reason: hot flashes, which affect many women around menopause.",
+      "kart": {
+        "ust": "MENOPAUSE",
+        "baslik": "Soy and hot flashes",
+        "alt": "Isoflavone supplement trials"
+      }
+    },
+    {
+      "id": 38,
+      "metin": "In 2012, researchers led by Kaoru Taku and Mark Messina combined 17 double-blind randomized trials of soy isoflavone supplements in women around and after menopause.",
+      "gorsel": "a handheld paper fan beside a glass of water and a small plate of tofu cubes, a window with sheer curtains",
+      "etiket": "Taku et al. · Menopause · 2012"
+    },
+    {
+      "id": 39,
+      "tip": "grafik",
+      "metin": "Compared with placebo, isoflavones, at a median of 54 milligrams a day, reduced hot flash frequency by about 21 percent and severity by about 26 percent.",
+      "grafik": {
+        "baslik": "Hot flashes with isoflavone supplements",
+        "alt": "Reduction vs. placebo, median 54 mg isoflavones a day",
+        "cubuklar": [
+          {
+            "etiket": "Frequency",
+            "deger": 20.6,
+            "metin": "−21%"
+          },
+          {
+            "etiket": "Severity",
+            "deger": 26.2,
+            "metin": "−26%"
+          }
+        ],
+        "kaynak": "Taku et al., Menopause 2012 · 17 double-blind randomized trials, peri- and postmenopausal women"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "That's a modest effect, and the trials varied a lot, from clear benefit to very little. Treatment lasted anywhere from six weeks to a year.",
+      "gorsel": "a row of three small glasses of water filled to different levels on a windowsill, a tofu cube on a saucer beside them"
+    },
+    {
+      "id": 41,
+      "metin": "The authors themselves said more research is needed on the best dose, the form of isoflavone, and how long to take it.",
+      "gorsel": "a quiet research desk with stacked journals with blank covers, a lamp, a cup of tea and a small dish of tofu cubes"
+    },
+    {
+      "id": 42,
+      "metin": "Those trials tested supplements, not tofu. And for women who've had breast cancer, supplements are exactly what guidelines urge caution about. So that's a conversation for your care team.",
+      "gorsel": "a consultation desk with a stethoscope, an amber supplement bottle with a blank label and a plate of tofu cubes, two chairs facing each other",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "CARE TEAM"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "tip": "kart",
+      "bolum": "The honest part",
+      "metin": "Now, the honest part. What do we actually know, and what don't we?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "What's solid, what isn't",
+        "alt": "Limits of the evidence"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "What's well supported: eating soy foods in ordinary amounts has not been linked with higher breast cancer risk or recurrence. In several large studies, it was linked with lower recurrence.",
+      "gorsel": "a plate of grilled tofu slices with steamed greens and a small bowl of rice on a wooden table, soft light",
+      "baslik": {
+        "satirlar": [
+          "WELL",
+          "SUPPORTED"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "What's uncertain: whether soy actually causes that benefit. Healthier habits, differences in treatment, and how intake was measured could all play a part.",
+      "gorsel": "a tofu cube on a plate with a fine dashed line leading to a small question-mark shaped curl, vintage engraving style, empty paper around it"
+    },
+    {
+      "id": 46,
+      "metin": "Food questionnaires are imperfect, too. People misremember what they ate, and in the US studies, soy protein added to packaged foods may have been counted wrongly.",
+      "gorsel": "an open notebook with blank lines and a pencil beside a plate of tofu and vegetables and a packaged snack bar",
+      "baslik": {
+        "satirlar": [
+          "COUNTING",
+          "SOY IS HARD"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Another gap: only about 8 percent of women in the pooled study took aromatase inhibitors, another common breast cancer medicine, so that study couldn't say much about them.",
+      "gorsel": "a weekly pill organizer with a few compartments open next to a small bowl of tofu cubes on a kitchen counter"
+    },
+    {
+      "id": 48,
+      "metin": "And much of the data come from Asia. Whether the same applies to women in the US who eat little soy is less certain, though the US results in the pooled study pointed the same way.",
+      "gorsel": "a world map engraving with blank continents, a bowl of tofu and edamame placed on one side and a plate of bread and cheese on the other",
+      "baslik": {
+        "satirlar": [
+          "US RESULT:",
+          "SAME WAY"
+        ],
+        "vurgu": "–24%",
+        "not": "recurrence in US women at 10 mg or more a day"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Those studies were of soy foods. They tell us little about concentrated pills and powders.",
+      "gorsel": "a plate of tofu cubes with edamame on the left and an amber supplement bottle with a blank label on the right, a thin dashed line between them"
+    },
+    {
+      "id": 50,
+      "metin": "What's not supported: the idea that soy foods are a proven breast cancer risk. The fear came from animal experiments with concentrated isoflavones, and human studies haven't backed it up.",
+      "gorsel": "a block of tofu on a plate with a small white mouse sitting quietly beside it, a glass cloche cover lifted off to the side"
+    },
+    {
+      "id": 51,
+      "metin": "And soy isn't a cure. Nothing in this research suggests it replaces surgery, chemotherapy, hormone therapy or any other treatment.",
+      "gorsel": "a plate of tofu and vegetables beside a closed medical folder and a stethoscope, the folder placed in front as the larger object"
+    },
+    {
+      "id": 52,
+      "tip": "kart",
+      "bolum": "How to use it",
+      "metin": "So how do you use all this? Here are four practical points.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Soy foods, in moderation",
+        "alt": "Four practical points"
+      }
+    },
+    {
+      "id": 53,
+      "metin": "One. Think food first. Tofu, tempeh, edamame, soy milk and miso are all soy foods, and they can stand in for some meat or dairy in a meal.",
+      "gorsel": "a stir-fry pan with golden tofu cubes, green beans and sliced carrots on a stove, a wooden spoon resting on the rim",
+      "baslik": {
+        "satirlar": [
+          "FOOD",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "On a US grocery shelf, look for plain tofu, edamame, tempeh, unsweetened soy milk and miso. Check labels for added sugar, and remember that miso is salty.",
+      "gorsel": "a supermarket shelf with neat rows of tofu packages, glass bottles of soy milk and small tubs of miso, blank labels"
+    },
+    {
+      "id": 55,
+      "metin": "Two. Moderate is the idea. Vanderbilt researchers reported that in the Shanghai study, the pattern leveled off at about 11 grams of soy protein a day. More wasn't linked with extra benefit.",
+      "gorsel": "a modest portion of tofu cubes in a small white bowl on a placemat, a glass of soy milk beside it, plenty of empty table around them",
+      "baslik": {
+        "satirlar": [
+          "MODERATE",
+          "IS ENOUGH"
+        ],
+        "vurgu": "11 G",
+        "not": "soy protein a day, where the pattern leveled off"
+      }
+    },
+    {
+      "id": 56,
+      "metin": "Three. Be careful with supplements. Isoflavone pills and powders aren't the same as food, and guidelines advise caution, so talk with your doctor or pharmacist before taking them.",
+      "gorsel": "a pharmacy counter with a few amber bottles with blank labels, a paper bag, and a small plate of tofu cubes on the side",
+      "baslik": {
+        "satirlar": [
+          "PILLS ARE",
+          "NOT FOOD"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Four. If you've had breast cancer, or take tamoxifen or an aromatase inhibitor, bring soy up at your next appointment. In the studies, tamoxifen users did not do worse, but your team knows your situation.",
+      "gorsel": "two chairs facing each other across a small desk with a plate of tofu cubes and a notepad, a calendar with blank squares on the wall"
+    },
+    {
+      "id": 58,
+      "metin": "If you're allergic to soy, skip it. And if you take any medicine, ask your pharmacist whether soy matters for it. Never stop or change a cancer treatment because of something you saw in a video.",
+      "gorsel": "a pharmacist's counter with a mortar, a few small bottles with blank labels, and a block of tofu, a window behind them",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "tip": "kart",
+      "bolum": "Recap",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Soy foods: not the villain",
+        "alt": "Food yes · pills, ask first"
+      }
+    },
+    {
+      "id": 60,
+      "metin": "The fear began with animal studies using concentrated genistein. In people, soy foods haven't been linked with higher breast cancer risk, and in large survivor studies they were linked with lower recurrence.",
+      "gorsel": "a white laboratory mouse beside a plate of tofu cubes, a vintage magnifying glass between them, calm composition"
+    },
+    {
+      "id": 61,
+      "metin": "Soy foods and isoflavone pills are different things. Hot flash trials tested pills and found a modest reduction, but survivors should ask their doctors first.",
+      "gorsel": "a plate of tofu and edamame on the left, an amber supplement bottle with a blank label on the right, a paper fan between them"
+    },
+    {
+      "id": 62,
+      "metin": "Enjoy tofu, edamame and soy milk in everyday amounts, and keep your medical team in the loop.",
+      "gorsel": "a bowl of tofu cubes with edamame and a glass of soy milk on a sunny wooden table, a small pink ribbon symbol beside the bowl"
+    },
+    {
+      "id": 63,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
