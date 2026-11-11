@@ -80,7 +80,11 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   - Hat boş beklemez: uzun video yüklenince plan hemen yeniden çalışır. Her Shorts başarıyla bitince de sıradaki
     Shorts başlar: önce aynı videonunki, sonra Shorts'u eksik bir sonraki video. İş kalmayınca zincir kendiliğinden
     durur.
-- **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**.
+- **Üretimi durdurmak (yayın sürer):** `uzun_en/marka.json` → `"uretim_durdur": true`. Yeni uzun video ve Shorts
+  üretilmez, boş günlere ek Shorts ayrılmaz; zamanlanmış videoların yayını, yorumlar, Reels/TikTok/X paylaşımı ve
+  kota bekleyen yüklemeler sürer. Yarıda kalan video kaldığı aşamada bekler. Yeniden başlatmak: `false` yapın.
+  (11 Kasım 2026'dan beri `true`, kanal sahibinin isteğiyle.)
+- **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**. (her şeyi, yayın denetimini de durdurur)
 - **Durum:** `uzun_en/durum.json` her videonun aşamasını, slotunu ve YouTube kimliğini tutar
   (`projeler/<slug>/yayin.json`).
 - **Analiz:** Kanal Analizi iş akışı her pazartesi YouTube Analytics verisini `analiz/<tarih>.json` dosyasına

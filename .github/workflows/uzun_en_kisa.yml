@@ -81,6 +81,11 @@ jobs:
           if not istek and os.environ["OLAY"] == "push":
               istek, istek_no = str(k.get("proje") or "").strip(), str(k.get("no") or "").strip()
           sayi = int(O.marka().get("kisa_sayisi", 2))
+          if O.marka().get("uretim_durdur"):        # kanal sahibinin isteğiyle; zamanlanmış Shorts'ların yayını sürer
+              print("üretim durduruldu (marka.json uretim_durdur: true) -> iş yok")
+              with open(os.environ["GITHUB_ENV"], "a") as f:
+                  f.write("SLUG=\nKNO=1\nAD=kisa\n")
+              sys.exit(0)
           adaylar = []                      # (uzun video zamanı, -no, slug, no): en yeni video önce, kendi içinde sırayla
           for slug in O.durum()["videolar"]:
               pdir = O.proje_dir(slug)

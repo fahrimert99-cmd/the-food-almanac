@@ -135,6 +135,8 @@ def sahne_gruplari(slug, n=GRUP_SAYISI):
 
 def karar(d, t):
     """(slug, asama, slot, sablon, neden) — yapılacak iş yoksa slug None."""
+    if O.marka().get("uretim_durdur"):               # kanal sahibinin isteğiyle; yüklenmiş videoların yayını sürer
+        return None, None, None, False, "üretim durduruldu (marka.json uretim_durdur: true)"
     aktif = d.get("aktif")
     if aktif and d["videolar"].get(aktif, {}).get("asama") not in BITTI:
         v = d["videolar"][aktif]

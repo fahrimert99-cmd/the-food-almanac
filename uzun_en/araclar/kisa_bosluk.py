@@ -110,6 +110,8 @@ def main():
     ap.add_argument("--kuru", action="store_true", help="yalnızca yazdır, kayıt açma")
     a = ap.parse_args()
     m = O.marka()
+    if m.get("uretim_durdur"):
+        return O.log("üretim durduruldu (marka.json uretim_durdur: true) — ek Shorts ayrılmıyor")
     gunler, _ = bosluklar()
     if not gunler:
         return O.log("takvimde boş Shorts günü yok")
