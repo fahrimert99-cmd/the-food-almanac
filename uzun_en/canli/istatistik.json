@@ -1,0 +1,475 @@
+{
+  "donem": [
+    "2026-11-11",
+    "2026-11-12"
+  ],
+  "olusturma": "2026-11-12T05:54:22.026542+00:00",
+  "kanal_donem": {
+    "views": 0,
+    "dakika": 0
+  },
+  "maratonlar": [
+    {
+      "video_id": "VTI-P9uS1LE",
+      "gorunurluk": "public",
+      "izlenme_toplam": 27,
+      "begeni": 2,
+      "baslangic": "2026-11-11T10:12:51Z",
+      "bitis": "2026-11-11T12:04:57Z",
+      "analytics": null,
+      "tarih": "2026-11-11T10:12:45.838373+00:00"
+    },
+    {
+      "video_id": "LLN6jFEevWc",
+      "gorunurluk": "public",
+      "izlenme_toplam": 4,
+      "begeni": 0,
+      "baslangic": "2026-11-12T00:19:35Z",
+      "bitis": "2026-11-12T02:11:19Z",
+      "analytics": null,
+      "tarih": "2026-11-12T00:19:30.336231+00:00"
+    }
+  ],
+  "bolumler": [
+    {
+      "video_id": "B58MDYmrwGQ",
+      "gorunurluk": "public",
+      "izlenme_toplam": 592,
+      "begeni": 3,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "oats-cholesterol"
+    },
+    {
+      "video_id": "FnhfbVuH6N0",
+      "gorunurluk": "public",
+      "izlenme_toplam": 157,
+      "begeni": 1,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "coffee-and-hydration"
+    },
+    {
+      "video_id": "83c-U5D0fLA",
+      "gorunurluk": "public",
+      "izlenme_toplam": 57,
+      "begeni": 1,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "fermented-foods-gut"
+    },
+    {
+      "video_id": "AxPV1xa_6so",
+      "gorunurluk": "public",
+      "izlenme_toplam": 52,
+      "begeni": 2,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "food-order-blood-sugar"
+    },
+    {
+      "video_id": "WUgBI3ROt9U",
+      "gorunurluk": "public",
+      "izlenme_toplam": 26,
+      "begeni": 1,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "walking-after-meals"
+    },
+    {
+      "video_id": "tK0egQpS6H8",
+      "gorunurluk": "public",
+      "izlenme_toplam": 23,
+      "begeni": 2,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "eggs-and-cholesterol"
+    },
+    {
+      "video_id": "ODv9piaf6rE",
+      "gorunurluk": "public",
+      "izlenme_toplam": 23,
+      "begeni": 2,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "frozen-vs-fresh-vegetables"
+    },
+    {
+      "video_id": "5QYM4NhE2b8",
+      "gorunurluk": "public",
+      "izlenme_toplam": 22,
+      "begeni": 1,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "garlic-blood-pressure"
+    },
+    {
+      "video_id": "tn2rHqSYbxs",
+      "gorunurluk": "public",
+      "izlenme_toplam": 11,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "apple-cider-vinegar-blood-sugar"
+    },
+    {
+      "video_id": "V8hsBq-mpPQ",
+      "gorunurluk": "public",
+      "izlenme_toplam": 9,
+      "begeni": 1,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "beet-juice-blood-pressure"
+    },
+    {
+      "video_id": "W_OyxRiQMnA",
+      "gorunurluk": "private",
+      "izlenme_toplam": 1,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "b12-after-60"
+    },
+    {
+      "video_id": "crjf2UpmN9I",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "cinnamon-blood-sugar"
+    },
+    {
+      "video_id": "PXRnrZahZUU",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "bananas-potassium-blood-pressure"
+    },
+    {
+      "video_id": "lGWkim1Fpak",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "turmeric-knee-arthritis"
+    },
+    {
+      "video_id": "2Vq3aG97SRw",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "oily-fish-heart"
+    },
+    {
+      "video_id": "MpFRymSQC-s",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "red-wine-heart"
+    },
+    {
+      "video_id": "P87RM6gsPnE",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "how-much-protein"
+    },
+    {
+      "video_id": "jyCPLJ2YGpQ",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "artificial-sweeteners-blood-sugar"
+    },
+    {
+      "video_id": "8gSJ2onCRiE",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "mind-diet-memory"
+    },
+    {
+      "video_id": "54K6P7hQDig",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "multivitamins-evidence"
+    },
+    {
+      "video_id": "f_OVMeY7Bss",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "coconut-oil-cholesterol"
+    },
+    {
+      "video_id": "FWz0_9TUKVI",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "food-expiration-dates"
+    },
+    {
+      "video_id": "Ers2cR3VMFw",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "sourdough-blood-sugar"
+    },
+    {
+      "video_id": "Ms539cMljVg",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "breakfast-most-important-meal"
+    },
+    {
+      "video_id": "vEIeutv0q_M",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "grapefruit-medications"
+    },
+    {
+      "video_id": "EuPzVQZA3eo",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "olive-oil-heart"
+    },
+    {
+      "video_id": "wC-N-k4KqvU",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "dark-chocolate-heart"
+    },
+    {
+      "video_id": "2wk2BtozliQ",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "cooling-rice-resistant-starch"
+    },
+    {
+      "video_id": "LsmtbW8cSpk",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "pickle-juice-leg-cramps"
+    },
+    {
+      "video_id": "Ri0RbgmtI6w",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "kidney-stones-oxalate-calcium"
+    },
+    {
+      "video_id": "8gnmocJXS4c",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "calcium-vitamin-d-fractures"
+    },
+    {
+      "video_id": "oU08ELnOpG0",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "walnuts-heart"
+    },
+    {
+      "video_id": "4XwaEaZEaZw",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "leafy-greens-warfarin"
+    },
+    {
+      "video_id": "2H1surUX6wQ",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "washing-raw-chicken"
+    },
+    {
+      "video_id": "6iSbTUfRbvg",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "honey-vs-sugar"
+    },
+    {
+      "video_id": "HqudiDS5gUg",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "beans-blood-sugar"
+    },
+    {
+      "video_id": "wlkUHZBa4AI",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "foods-for-macular-degeneration"
+    },
+    {
+      "video_id": "0uXZ9ZWmAz8",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "cooking-and-vegetable-nutrients"
+    },
+    {
+      "video_id": "dLa2hMM23OU",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "prunes-bone-density"
+    },
+    {
+      "video_id": "jJ8Eg-CfWGY",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "ultra-processed-foods"
+    },
+    {
+      "video_id": "qV-x2qmLanc",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "hydration-after-60"
+    },
+    {
+      "video_id": "LDDLEVuNiO0",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "cranberry-uti"
+    },
+    {
+      "video_id": "XWpD9e2DYTQ",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "green-tea-cholesterol"
+    },
+    {
+      "video_id": "mIvU0M3wwBM",
+      "gorunurluk": "private",
+      "izlenme_toplam": 0,
+      "begeni": 0,
+      "baslangic": null,
+      "bitis": null,
+      "analytics": null,
+      "slug": "hidden-sodium"
+    }
+  ]
+}
