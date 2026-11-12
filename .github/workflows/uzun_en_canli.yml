@@ -1,10 +1,10 @@
 name: Canlı Maraton (The Food Almanac)
-# Her gün yayınlanmış uzun videoları arka arkaya canlı yayın olarak akıtır: açılış kartı, her bölümden
+# Haftada iki gün (çarşamba + cumartesi 17:47 UTC) yayınlanmış uzun videoları arka arkaya canlı yayın olarak akıtır: açılış kartı, her bölümden
 # önce 'Up next' kartı, kapanış kartı. Yalnızca herkese açık bölümler kullanılır; toplam en çok 150 dk.
 # Hemen çalıştırmak için uzun_en/canli/tetik.json içindeki sayıyı artırın ("mod": "deneme" = özel, kısa deneme yayını).
 on:
   schedule:
-    - cron: "47 17 * * *"
+    - cron: "47 17 * * 3,6"
   push:
     branches: [main]
     paths: [uzun_en/canli/tetik.json]
