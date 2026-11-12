@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       mod:
-        description: "tam (herkese açık maraton) ya da deneme (özel, kısa)"
+        description: "tam (herkese açık maraton), deneme (özel, kısa) ya da istatistik (yalnızca rakamlar)"
         default: deneme
 
 permissions:
@@ -51,7 +51,7 @@ jobs:
           else
             M=tam
           fi
-          [ "$M" = tam ] || M=deneme
+          case "$M" in tam|istatistik) ;; *) M=deneme ;; esac
           echo "MOD=$M" >> "$GITHUB_ENV"; echo "mod: $M"
       - name: Deneme yayınlarını sil (tam modda)
         if: env.MOD == 'tam'
@@ -60,7 +60,15 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python3 uzun_en/araclar/canli.py deneme_sil || true
+      - name: İstatistik (yalnızca rakamlar)
+        if: env.MOD == 'istatistik'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 uzun_en/araclar/canli.py istatistik
       - name: Hazırla (bölüm seçimi, kartlar, kodlama)
+        if: env.MOD != 'istatistik'
         env:
           GH_TOKEN: ${{ github.token }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -68,6 +76,7 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python3 uzun_en/araclar/canli.py hazirla --mod "$MOD"
       - name: Canlı yayın
+        if: env.MOD != 'istatistik'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -78,4 +87,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          bash uzun_en/araclar/kaydet.sh "uzun_en: canlı maraton kaydı ($MOD)" uzun_en/canli/kayit.json
+          bash uzun_en/araclar/kaydet.sh "uzun_en: canlı maraton kaydı ($MOD)" uzun_en/canli/kayit.json uzun_en/canli/istatistik.json
