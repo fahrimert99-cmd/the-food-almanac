@@ -454,6 +454,79 @@ def deneme_sil():
     return 0
 
 
+def istatistik():
+    """Maraton kayıtlarının izlenme rakamları + aynı dönemde normal uzun bölümlerle karşılaştırma.
+    Sonuç uzun_en/canli/istatistik.json'a yazılır. Analytics verisi 1-2 gün gecikmeli gelir."""
+    import glob
+    from googleapiclient.discovery import build
+    from youtube_api import _kimlik
+    kim = _kimlik()
+    yt = build("youtube", "v3", credentials=kim, cache_discovery=False)
+    ya = build("youtubeAnalytics", "v2", credentials=kim, cache_discovery=False)
+    kayit = [k for k in O.json_oku(KAYIT, []) if k.get("mod") == "tam" and k.get("video_id")]
+    bolum = {}
+    for y in glob.glob(os.path.join(O.PROJELER, "*", "yayin.json")):
+        d = O.json_oku(y, {}) or {}
+        if d.get("video_id"):
+            bolum[d["video_id"]] = os.path.basename(os.path.dirname(y))
+    bas = min([k["tarih"][:10] for k in kayit] or [dt.date.today().isoformat()])
+    bit = dt.date.today().isoformat()
+
+    def veri(ids):
+        out = {}
+        for i in range(0, len(ids), 50):
+            r = yt.videos().list(id=",".join(ids[i:i + 50]),
+                                 part="statistics,status,liveStreamingDetails,contentDetails").execute()
+            for v in r.get("items", []):
+                out[v["id"]] = v
+        return out
+
+    def analitik(ids):
+        out = {}
+        for i in range(0, len(ids), 200):
+            try:
+                r = ya.reports().query(ids="channel==MINE", startDate=bas, endDate=bit, dimensions="video",
+                                       metrics="views,estimatedMinutesWatched,averageViewDuration",
+                                       filters="video==" + ",".join(ids[i:i + 200]), maxResults=200).execute()
+                for s in r.get("rows") or []:
+                    out[s[0]] = {"views": s[1], "dakika": s[2], "ort_sn": s[3]}
+            except Exception as e:  # noqa: BLE001
+                O.log(f"  ! analytics: {str(e)[:200]}")
+        return out
+
+    mids = [k["video_id"] for k in kayit]
+    bids = list(bolum)
+    v = veri(mids + bids)
+    a = analitik(mids + bids)
+    try:
+        r = ya.reports().query(ids="channel==MINE", startDate=bas, endDate=bit,
+                               metrics="views,estimatedMinutesWatched").execute()
+        kanal = dict(zip(["views", "dakika"], (r.get("rows") or [[0, 0]])[0]))
+    except Exception as e:  # noqa: BLE001
+        kanal = {"hata": str(e)[:200]}
+
+    def satir(vid):
+        x = v.get(vid, {})
+        st, ld = x.get("statistics", {}), x.get("liveStreamingDetails", {})
+        return {"video_id": vid, "gorunurluk": x.get("status", {}).get("privacyStatus", "yok/silinmiş"),
+                "izlenme_toplam": int(st.get("viewCount", 0)), "begeni": int(st.get("likeCount", 0)),
+                "baslangic": ld.get("actualStartTime"), "bitis": ld.get("actualEndTime"),
+                "analytics": a.get(vid)}
+
+    marat = [dict(satir(k["video_id"]), tarih=k["tarih"]) for k in kayit]
+    bol = sorted((dict(satir(i), slug=bolum[i]) for i in bids), key=lambda x: -x["izlenme_toplam"])
+    sonuc = {"donem": [bas, bit], "olusturma": dt.datetime.now(dt.timezone.utc).isoformat(),
+             "kanal_donem": kanal, "maratonlar": marat, "bolumler": bol}
+    O.json_yaz(os.path.join(os.path.dirname(KAYIT), "istatistik.json"), sonuc)
+    O.log(f"dönem {bas} → {bit}; kanal: {kanal}")
+    for m in marat:
+        O.log(f"MARATON {m['video_id']} ({m['gorunurluk']}): toplam izlenme {m['izlenme_toplam']}, "
+              f"beğeni {m['begeni']}, analytics {m['analytics']}")
+    for b in bol:
+        O.log(f"bölüm {b['slug']}: toplam {b['izlenme_toplam']}, dönem analytics {b['analytics']}")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     alt = ap.add_subparsers(dest="komut", required=True)
@@ -461,7 +534,10 @@ def main():
     h.add_argument("--mod", choices=["tam", "deneme"], default="tam")
     alt.add_parser("yayinla")
     alt.add_parser("deneme_sil")
+    alt.add_parser("istatistik")
     a = ap.parse_args()
+    if a.komut == "istatistik":
+        return istatistik()
     if a.komut == "deneme_sil":
         return deneme_sil()
     if a.komut == "hazirla":
