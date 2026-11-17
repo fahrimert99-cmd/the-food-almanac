@@ -191,6 +191,15 @@ def main():
         R["izleyici_tutma"] = {v["id"]: sorgu(ya, metrics="audienceWatchRatio,relativeRetentionPerformance",
                                               dimensions="elapsedVideoTimeRatio", startDate=bas, endDate=bitis,
                                               filters=f"video=={v['id']}") for v in yayinda}
+        # Video bazında trafik kaynağı + 'ilgili video' ayrıntısı (izleyici Shorts'tan mı geliyor? analiz 16 Kasım 2026)
+        R["video_trafik"] = {v["id"]: {
+            "kaynak": sorgu(ya, metrics="views,estimatedMinutesWatched,averageViewDuration",
+                            dimensions="insightTrafficSourceType", sort="-views", startDate=bas, endDate=bitis,
+                            filters=f"video=={v['id']}"),
+            "ilgili": sorgu(ya, metrics="views,averageViewDuration", dimensions="insightTrafficSourceDetail",
+                            sort="-views", maxResults=10, startDate=bas, endDate=bitis,
+                            filters=f"video=={v['id']};insightTrafficSourceType==RELATED_VIDEO"),
+        } for v in yayinda}
 
         R["gosterim"] = gosterim(kimlik, {v["id"] for v in vs}, bas)
 

@@ -135,11 +135,19 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
    earn the next one. The validator now rejects a cold open over about 60 words, filler such as "here is what the
    research shows" or "let's take a look", and any `kart` in scenes 1–3.
    - Scene 1 has a `bolum` (the first chapter title).
-   - The very first sentence goes straight in: it speaks to the viewer's own situation ("If you eat eggs most
-     mornings, …") or states the surprising finding. Never open with scene-setting ("Picture…", "Imagine…").
-   - Scene 1 gives the concrete, cited finding with its number: what was studied, in whom, and what changed.
-   - Scene 2 opens a curiosity gap: the twist, the condition or the catch that the video resolves ("But it only
-     worked for one group, and most people get the dose wrong.").
+   - **Do not give away the verdict in the cold open.** Data from 16 November 2026: on the two videos whose cold
+     open answered the title's question in the first or second sentence ("no clear extra risk", "nearly nine points…
+     That is the finding"), about 70% of viewers had left by 30 seconds and over 90% by one minute. Viewers who get the
+     answer in 15 seconds have no reason to stay. The clear verdict comes at the end of the key-study chapter, about
+     1–2 minutes in, never in scenes 1–3.
+   - The very first sentence goes straight in: a surprising, concrete fact or a real conflict between studies. Never
+     open with scene-setting ("Picture…", "Imagine…"). Vary the first sentence from video to video; do not use the
+     worn patterns "If you …, you've probably heard …" or "here is something worth knowing".
+   - Scene 1 gives one concrete, cited number that creates tension rather than settling the question, for example
+     two large studies that seem to disagree, or a big number with a catch ("A review of 20 trials found garlic lowered
+     blood pressure. But the people who gained the most were not who you'd expect.").
+   - Scene 2 opens the curiosity gap: the twist, the condition or the catch that the video resolves, still without
+     the final answer.
    - Scene 3 promises the specific practical payoff the viewer gets by the end, for example "By the end, you'll know
      when to start walking and how long is enough." The video must deliver it.
    - No filler that restates the question ("So what does the research really say? Let's take a look."). No hype ("you
