@@ -2,7 +2,7 @@
   "slug": "food-order-blood-sugar",
   "kanal": "The Food Almanac",
   "dil": "en",
-  "baslik": "Eat Vegetables First? What Food Order Really Does to Your Blood Sugar",
+  "baslik": "Eat Vegetables First: What It Does to Blood Sugar",
   "yorum": "Do you usually eat your vegetables first, or save them for last? If you have tried changing the order, did you notice any difference in how you felt after the meal?",
   "aciklama_giris": "Same lunch, same portions, same person. The only difference is the order you eat it in. In small clinical studies, eating vegetables and protein before carbohydrates lowered the rise in blood sugar after a meal. In this video we look at what those studies actually found, the three mechanisms that may explain it (gastric emptying, fiber and the gut hormone GLP-1), who benefits most, where the evidence runs out, and five practical ways to use it.",
   "kaynaklar": [
@@ -17,14 +17,12 @@
   ],
   "kapak": {
     "satirlar": [
-      "VEGGIES FIRST:",
-      "WHAT IT DOES",
-      "TO YOUR",
-      "BLOOD SUGAR"
+      "VEGGIES",
+      "FIRST?"
     ],
     "vurgu": "–37%",
-    "vurgu_alt": "glucose at 1 hour",
-    "gorsel": "a single large white dinner plate with a fresh green salad in front, a grilled chicken breast in the middle and a slice of ciabatta bread at the back, the plate large and close up, placed on the right half of the page, the left half left as empty off-white paper"
+    "vurgu_alt": "glucose",
+    "gorsel": "a large white dinner plate seen close up, a big fresh green salad heaped in front, a grilled chicken breast overlapping behind it and a slice of crusty bread tucked at the back, with a glucose meter with a blank screen leaning against the plate, tightly grouped, bright and appetizing"
   },
   "etiketler": [
     "food order",
