@@ -1,0 +1,47 @@
+name: Gemini deneme
+# uzun_en/gemini_deneme.json main'e gelince/değişince çalışır (tetik sayısını artırın).
+# Uzun video iş akışındaki Gemini yedeğinin (GMODEL) gerçekten çalıştığını sınar: model listesi, doğrudan API ve Gemini CLI.
+# Kredi harcanmaz: GEMINI_API_KEY ücretsiz katman.
+on:
+  push:
+    branches: [main]
+    paths: [uzun_en/gemini_deneme.json]
+permissions:
+  contents: read
+jobs:
+  deneme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GMODEL: ${{ vars.UZUN_GEMINI_MODEL || 'gemini-3.8-flash' }}
+    steps:
+      - name: Model listesi ve doğrudan API
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.error
+          k, m = os.environ["GEMINI_API_KEY"], os.environ["GMODEL"]
+          b = "https://generativelanguage.googleapis.com/v1beta"
+          def iste(url, veri=None):
+              r = urllib.request.Request(url, data=veri, headers={"x-goog-api-key": k, "Content-Type": "application/json"})
+              try:
+                  with urllib.request.urlopen(r, timeout=60) as y:
+                      return y.status, json.load(y)
+              except urllib.error.HTTPError as e:
+                  return e.code, json.loads(e.read() or b"{}")
+          print("GMODEL:", m)
+          s, j = iste(f"{b}/models?pageSize=1000")
+          adlar = sorted(x["name"].split("/")[-1] for x in j.get("models", []))
+          print("liste HTTP", s, "| gemini-3.x modelleri:", [a for a in adlar if a.startswith("gemini-3")])
+          print("GMODEL listede mi:", m in adlar)
+          s, j = iste(f"{b}/models/{m}:generateContent",
+                      json.dumps({"contents": [{"parts": [{"text": "Reply with exactly: GEMINI OK"}]}]}).encode())
+          if s == 200:
+              print("API HTTP 200 ->", j["candidates"][0]["content"]["parts"][0]["text"].strip())
+          else:
+              print(f"::error::API HTTP {s} -> {j.get('error', {}).get('message', '')[:300]}")
+          PY
+      - name: Gemini CLI
+        run: |
+          npm install -g @google/gemini-cli >/dev/null 2>&1; gemini --version
+          gemini -m "$GMODEL" -p "Reply with exactly: GEMINI CLI OK" 2>&1 | tail -5
