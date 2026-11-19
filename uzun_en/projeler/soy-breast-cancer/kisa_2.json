@@ -1,0 +1,19 @@
+{
+  "baslik": ["SOY & RISK:", "ASIA VS WEST"],
+  "baslik_yt": "Does Soy Lower Breast Cancer Risk? Asia vs the West",
+  "aciklama": "A 2011 analysis pooled 14 studies on soy and breast cancer risk. The benefit appeared in Asian women but not Western ones, and the amount of soy eaten may explain why.",
+  "parcalar": [
+    {"sahne": 24, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 25, "cumleler": [0],
+     "baslik": {"satirlar": ["14 STUDIES"], "vurgu": "-11%", "not": "risk, all studies pooled"},
+     "etiket": "Dong & Qin · BCRT · 2011"},
+    {"sahne": 25, "cumleler": [1], "baslik": null, "etiket": "Dong & Qin · BCRT · 2011"},
+    {"sahne": 26, "cumleler": [0], "etiket": "Dong & Qin · BCRT · 2011"},
+    {"sahne": 26, "cumleler": [1], "baslik": null, "etiket": "Dong & Qin · BCRT · 2011"},
+    {"sahne": 27, "cumleler": [0], "etiket": null},
+    {"sahne": 27, "cumleler": [1], "baslik": null, "etiket": "Nechuta et al. · AJCN · 2012"},
+    {"sahne": 27, "cumleler": [2], "baslik": null, "etiket": "Nechuta et al. · AJCN · 2012"},
+    {"sahne": 55, "cumleler": [2], "etiket": "Shu et al. · JAMA · 2009"},
+    {"sahne": 55, "cumleler": [3], "baslik": null, "etiket": "Shu et al. · JAMA · 2009"}
+  ]
+}
