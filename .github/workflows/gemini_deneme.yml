@@ -18,6 +18,7 @@ jobs:
       GEMINI_CLI_TRUST_WORKSPACE: "true"
     steps:
       - name: Model listesi ve doğrudan API
+        continue-on-error: true
         run: |
           python3 - <<'PY'
           import json, os, urllib.request, urllib.error
@@ -26,10 +27,12 @@ jobs:
           def iste(url, veri=None):
               r = urllib.request.Request(url, data=veri, headers={"x-goog-api-key": k, "Content-Type": "application/json"})
               try:
-                  with urllib.request.urlopen(r, timeout=60) as y:
+                  with urllib.request.urlopen(r, timeout=120) as y:
                       return y.status, json.load(y)
               except urllib.error.HTTPError as e:
                   return e.code, json.loads(e.read() or b"{}")
+              except (TimeoutError, OSError) as e:          # yoğunlukta yanıt gecikebilir
+                  return 503, {"error": {"message": f"zaman aşımı: {e}"}}
           print("GMODEL:", m)
           s, j = iste(f"{b}/models?pageSize=1000")
           adlar = sorted(x["name"].split("/")[-1] for x in j.get("models", []))
