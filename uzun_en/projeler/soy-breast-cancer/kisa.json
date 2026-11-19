@@ -1,0 +1,15 @@
+{
+  "baslik": ["SOY & BREAST", "CANCER: SAFE?"],
+  "baslik_yt": "Is Soy Safe After Breast Cancer? What Studies Found",
+  "aciklama": "Soy has long carried a cancer warning, but it began with rodent experiments. Here is what large studies of thousands of breast cancer survivors found, and what is still uncertain.",
+  "parcalar": [
+    {"sahne": 2, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0]},
+    {"sahne": 10, "cumleler": [0]},
+    {"sahne": 11, "cumleler": [1]},
+    {"sahne": 23, "cumleler": [0]},
+    {"sahne": 29, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 61, "cumleler": [0], "baslik": {"satirlar": ["FOOD VS", "PILLS"]}, "etiket": null},
+    {"sahne": 62, "cumleler": [0], "baslik": null, "etiket": null}
+  ]
+}
