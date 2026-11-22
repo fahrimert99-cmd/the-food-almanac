@@ -1,0 +1,23 @@
+{
+  "baslik": ["NEVER EAT", "BREAKFAST?"],
+  "baslik_yt": "Skipping Breakfast and Early Death: Real Risk?",
+  "aciklama": "A US study of 6,550 adults linked never eating breakfast with an 87 percent higher risk of cardiovascular death. Here is why that headline does not prove cause and effect.",
+  "parcalar": [
+    {"sahne": 40, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 40, "cumleler": [1],
+     "baslik": {"satirlar": ["17 YEARS"], "vurgu": "6,550", "not": "US adults followed"},
+     "etiket": "Rong et al. · JACC · 2019"},
+    {"sahne": 40, "cumleler": [2],
+     "baslik": {"satirlar": ["NEVER ATE", "BREAKFAST"], "vurgu": "+87%", "not": "cardiovascular death risk"},
+     "etiket": "Rong et al. · JACC · 2019"},
+    {"sahne": 41, "cumleler": [0],
+     "baslik": {"satirlar": ["BUT NOT", "PROOF"]},
+     "etiket": "Rong et al. · JACC · 2019"},
+    {"sahne": 41, "cumleler": [1, 2],
+     "baslik": null,
+     "etiket": "Rong et al. · JACC · 2019"},
+    {"sahne": 52, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["NO NEED TO", "FORCE IT"]},
+     "etiket": null}
+  ]
+}
