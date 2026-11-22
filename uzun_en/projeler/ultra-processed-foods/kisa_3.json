@@ -1,0 +1,16 @@
+{
+  "baslik": ["5% LOW,", "20% HIGH?"],
+  "baslik_yt": "How to Read a Food Label in 30 Seconds",
+  "aciklama": "Not every packaged food is the same. Here is how to size up a package using the FDA's 5% and 20% rule, the ingredient list, and added sugar and sodium.",
+  "parcalar": [
+    {"sahne": 49, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 49, "cumleler": [2], "baslik": {"satirlar": ["DAILY VALUE"], "vurgu": "20%+", "not": "counts as high"}, "etiket": "FDA · Nutrition Facts label"},
+    {"sahne": 49, "cumleler": [3], "baslik": {"satirlar": ["LOWER: SUGAR,", "SODIUM, FAT"]}, "etiket": null},
+    {"sahne": 50, "cumleler": [1, 2], "baslik": {"satirlar": ["ADDED SUGAR", "AND SODIUM"]}, "etiket": null},
+    {"sahne": 48, "cumleler": [1], "baslik": {"satirlar": ["FLIP IT", "OVER"]}, "etiket": null},
+    {"sahne": 48, "cumleler": [2], "baslik": {"satirlar": ["LONG LIST?", "THINK ULTRA"]}, "etiket": null},
+    {"sahne": 52, "cumleler": [0], "gorsel": 41, "baslik": {"satirlar": ["NOT EVERY", "PACKAGE"]}, "etiket": null},
+    {"sahne": 52, "cumleler": [1], "baslik": {"satirlar": ["CONVENIENCE", "HAS A PLACE"]}, "etiket": null},
+    {"sahne": 52, "cumleler": [2], "gorsel": 53, "baslik": null, "etiket": null}
+  ]
+}
