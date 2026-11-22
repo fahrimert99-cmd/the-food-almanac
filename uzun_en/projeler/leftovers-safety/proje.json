@@ -1,0 +1,663 @@
+{
+  "slug": "leftovers-safety",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Are 4-Day-Old Leftovers Safe After 60?",
+  "yorum": "How long do you usually keep leftovers before you toss them? Do you go by the date on the container, or by the smell test?",
+  "aciklama_giris": "The usual advice says leftovers last three to four days in the refrigerator. But the clock starts when the food comes off the stove, not when it reaches the fridge, and some of the germs involved do not announce themselves. This video looks at what extension services, the American Heart Association, the FDA and the CDC say, plus a 1993 rice outbreak and a laboratory study on Listeria.\n\nWe cover the two-hour rule, the real fridge window, why a nose is not a safety test, how to cool a big pot, how to reheat, when freezing helps, and why food poisoning is riskier after 65. Five practical habits at the end.",
+  "kaynaklar": [
+    "American Heart Association. Food Safety: How to Store and How Long to Keep Leftovers. heart.org, healthy eating, cooking skills.",
+    "Patton P, Larvick C, Albrecht JA. Leftover Food Safety. University of Nebraska-Lincoln Extension, Food Safety for Families (2008; page updated 2026). https://food.unl.edu/article/leftover-food-safety",
+    "Elnakib S, Schaffner D. Handling Leftovers Safely. Rutgers Cooperative Extension Fact Sheet FS588. December 2019.",
+    "Centers for Disease Control and Prevention. Bacillus cereus food poisoning associated with fried rice at two child day care centers, Virginia, 1993. MMWR Epidemiologic Notes and Reports. https://www.cdc.gov/mmwr/preview/mmwrhtml/00025744.htm",
+    "Yang S, Wang Y, Liu Y, Jia K, Zhang Z, Dong Q. Cereulide and emetic Bacillus cereus: characterizations, impacts and public precautions. Foods. 2023;12(4):833. doi:10.3390/foods12040833.",
+    "Evans EW, Redmond EC. Laboratory re-enactment of storage practices of older adults to determine potential implications for Listeria monocytogenes growth. Food Protection Trends. 2019;39(3):225-236.",
+    "U.S. Food and Drug Administration. Listeria (Listeriosis). https://www.fda.gov/food/foodborne-pathogens/listeria-listeriosis",
+    "Centers for Disease Control and Prevention. About Listeria Infection. https://www.cdc.gov/listeria/about/index.html",
+    "Centers for Disease Control and Prevention. About Clostridium perfringens Food Poisoning. https://www.cdc.gov/clostridium-perfringens/about/index.html",
+    "U.S. Food and Drug Administration. Food Safety for Older Adults and People with Cancer, Diabetes, HIV/AIDS, Organ Transplants, and Autoimmune Disease.",
+    "Centers for Disease Control and Prevention. People at Increased Risk for Food Poisoning. https://www.cdc.gov/food-safety/risk-factors/index.html"
+  ],
+  "kapak": {
+    "satirlar": [
+      "OLD",
+      "LEFTOVERS?"
+    ],
+    "vurgu": "3–4",
+    "vurgu_alt": "DAYS",
+    "gorsel": "a big glass food storage container full of hearty beef stew with a snap lid beside a white bowl of steaming rice, a round refrigerator thermometer leaning against the container, tightly grouped and overlapping, bright and appetizing"
+  },
+  "etiketler": [
+    "leftovers",
+    "how long are leftovers good for",
+    "leftovers safe to eat",
+    "reheating leftovers",
+    "food safety",
+    "food poisoning",
+    "listeria",
+    "food safety after 60",
+    "refrigerator",
+    "two hour rule"
+  ],
+  "seslendirme_duzelt": {
+    "Bacillus cereus": "Bah sill us seer ee us",
+    "Listeria": "Liss teer ee uh",
+    "Clostridium perfringens": "Klo strid ee um per frin jens",
+    "cereulide": "ser ee you lide",
+    "CDC": "C D C",
+    "FDA": "F D A",
+    "MMWR": "M M W R"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Why leftovers are tricky",
+      "metin": "In 1993, rice cooked the night before sickened 14 people at Virginia day care centers, even after it was fried again.",
+      "gorsel": "a white bowl of fried rice with small vegetables and chicken pieces on a wooden table beside a stainless steel pan, soft morning light from a kitchen window",
+      "etiket": "CDC · MMWR · 1993",
+      "baslik": {
+        "satirlar": [
+          "COOKED",
+          "THE NIGHT BEFORE"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "metin": "The usual rule says leftovers last three to four days. But the clock can start long before the food ever reaches your refrigerator.",
+      "gorsel": "an antique round kitchen clock on a wall above a steaming pot of stew left on a stovetop, an empty refrigerator with its door ajar in the background",
+      "baslik": {
+        "satirlar": [
+          "THE CLOCK",
+          "STARTS EARLY"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know the numbers that matter, and how to cool a big pot.",
+      "gorsel": "a big pot of soup next to a row of shallow glass containers, a ladle resting on the pot, a food thermometer standing in a mug",
+      "baslik": {
+        "satirlar": [
+          "THE NUMBERS",
+          "THAT MATTER"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what is actually going on inside a pot of leftover food.",
+      "gorsel": "a magnifying glass held over a pot of stew, small round and rod-shaped bacteria drawn as fine engraved shapes rising gently from the surface"
+    },
+    {
+      "id": 5,
+      "metin": "Cooking kills many bacteria, but not all. Some, like Bacillus cereus, form tough spores that survive the heat. When cooked food cools slowly, those spores can wake up and start to multiply.",
+      "gorsel": "a bowl of cooked rice cooling on a counter, a magnified circular inset showing tiny oval spores sprouting into rod-shaped cells",
+      "etiket": "Yang et al. · Foods · 2023",
+      "baslik": {
+        "satirlar": [
+          "SPORES",
+          "WAKE UP"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "metin": "The range where this happens has a name, the danger zone. The CDC puts unsafe holding temperatures between 40 and 140 degrees Fahrenheit.",
+      "gorsel": "a tall antique glass thermometer with the middle section shaded in a soft red band, a pot of stew beside it, engraved style",
+      "baslik": {
+        "satirlar": [
+          "THE DANGER",
+          "ZONE"
+        ],
+        "vurgu": "40–140°F"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Big batches are where it often goes wrong. The CDC says outbreaks of Clostridium perfringens, linked to nearly 900,000 illnesses a year in the United States, most often involve food cooked in large batches and held at unsafe temperatures.",
+      "gorsel": "a large stockpot of stew and a roasting pan with a sliced roast and gravy boat on a long table, a serving ladle, steam rising",
+      "etiket": "CDC · C. perfringens",
+      "baslik": {
+        "satirlar": [
+          "BIG BATCHES"
+        ],
+        "vurgu": "900,000",
+        "not": "illnesses a year in the US"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "So the first question is not how many days. It is how long the food spent in that warm range before it ever got cold.",
+      "gorsel": "a pot of stew on a stovetop on the left and a refrigerator on the right, a curved dotted arrow between them and an antique pocket watch in the middle"
+    },
+    {
+      "id": 9,
+      "bolum": "The two-hour rule",
+      "tip": "kart",
+      "metin": "Rule number one is about hours, not days.",
+      "kart": {
+        "ust": "RULE NUMBER ONE",
+        "baslik": "The two-hour rule",
+        "alt": "Cooked food at room temperature"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "The American Heart Association says not to leave food out of the refrigerator for more than two hours. When the temperature is above 90 degrees Fahrenheit, that drops to one hour.",
+      "gorsel": "a dinner table with a roast chicken, bowls of vegetables and a casserole, an antique hourglass with sand running standing among the dishes",
+      "etiket": "American Heart Association",
+      "baslik": {
+        "satirlar": [
+          "2 HOURS",
+          "OUT"
+        ],
+        "vurgu": "1 HOUR",
+        "not": "when it's above 90°F"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "That covers a holiday table, a picnic, and a pot left on the stove after dinner. If it has been out longer, Nebraska Extension says to discard it.",
+      "gorsel": "a picnic blanket on a lawn with a basket, a bowl of potato salad and a covered dish in the sun, a tree casting a short shadow",
+      "etiket": "Patton et al. · UNL Extension"
+    },
+    {
+      "id": 12,
+      "metin": "Now back to Virginia. Investigators found the rice had been cooked the night before and cooled at room temperature before refrigeration. Bacillus cereus was found in the leftover rice and in a sick child's vomit.",
+      "gorsel": "a covered pot of cooked rice sitting on a kitchen counter at night, a small window with a crescent moon behind it, an empty refrigerator in the corner",
+      "etiket": "CDC · MMWR · Virginia · 1993"
+    },
+    {
+      "id": 13,
+      "tip": "grafik",
+      "metin": "Of 48 people who ate the chicken fried rice, 14 became sick. Of 16 who did not eat it, none did. Symptoms began a median of just two hours after eating.",
+      "grafik": {
+        "baslik": "Share who got sick",
+        "alt": "Chicken fried rice at two day care centers, 1993",
+        "cubuklar": [
+          {
+            "etiket": "Ate the rice",
+            "deger": 29.2,
+            "metin": "14 of 48"
+          },
+          {
+            "etiket": "Did not eat it",
+            "deger": 0,
+            "metin": "0 of 16"
+          }
+        ],
+        "kaynak": "CDC, MMWR 1993 · Virginia day care outbreak · people who ate the chicken fried rice vs. did not"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "The CDC's advice was simple. Stop cooling rice and other foods at room temperature, and keep food below 41 degrees or above 140 degrees Fahrenheit. In the kitchen section, you'll see how to cool a big pot quickly.",
+      "gorsel": "a shallow metal pan of rice sitting in a larger basin filled with ice cubes, a spoon resting beside it, bright kitchen counter",
+      "baslik": {
+        "satirlar": [
+          "BELOW 41°F",
+          "OR ABOVE 140°F"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "bolum": "The three to four day window",
+      "tip": "kart",
+      "metin": "Now the number everybody asks about.",
+      "kart": {
+        "ust": "THE FRIDGE CLOCK",
+        "baslik": "Three to four days",
+        "alt": "Refrigerated leftovers"
+      }
+    },
+    {
+      "id": 16,
+      "metin": "The American Heart Association says leftovers keep, on average, three to four days in the refrigerator, with the refrigerator set at 40 degrees Fahrenheit or below.",
+      "gorsel": "an open refrigerator with neatly stacked glass containers of stew, rice and roasted vegetables, a small round refrigerator thermometer on a shelf",
+      "etiket": "American Heart Association",
+      "baslik": {
+        "satirlar": [
+          "3–4 DAYS"
+        ],
+        "not": "in a fridge at 40°F or below"
+      }
+    },
+    {
+      "id": 17,
+      "metin": "Rutgers Cooperative Extension is a little stricter. As a general rule, it says, never keep leftovers for more than four days. So think of day four as the outer edge, not a target.",
+      "gorsel": "a wall calendar page drawn as four empty squares with the last square circled in a soft red line, a glass container of stew beside it",
+      "etiket": "Elnakib & Schaffner · Rutgers · 2019",
+      "baslik": {
+        "satirlar": [
+          "DAY FOUR",
+          "IS THE EDGE"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Why can't a cold fridge just solve the problem? Because some bacteria do not mind the cold. The FDA says Listeria monocytogenes can survive and grow even under refrigeration.",
+      "gorsel": "a frost-edged refrigerator shelf holding a wedge of soft cheese and sliced deli meat, a magnified circular inset with small rod-shaped bacteria",
+      "etiket": "FDA · Listeria",
+      "baslik": {
+        "satirlar": [
+          "GROWS IN",
+          "THE FRIDGE"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "A laboratory study showed how this plays out. Researchers added Listeria to soft cheese and ready-to-eat meat, stored them at three temperatures, and checked every day for up to 21 days.",
+      "gorsel": "a laboratory bench with small sealed sample dishes of cheese and sliced meat in neat rows, an antique brass microscope and an open notebook with blank pages",
+      "etiket": "Evans & Redmond · Food Prot Trends · 2019"
+    },
+    {
+      "id": 20,
+      "tip": "grafik",
+      "metin": "Listeria grew at every temperature. At about 36 degrees Fahrenheit, the population doubled roughly every 94 hours. At about 46, every 21 and a half hours. At room temperature, every 11 hours.",
+      "grafik": {
+        "baslik": "Hours for Listeria to double",
+        "alt": "Average generation time by storage temperature",
+        "cubuklar": [
+          {
+            "etiket": "36°F fridge",
+            "deger": 94,
+            "metin": "94 h"
+          },
+          {
+            "etiket": "46°F warm fridge",
+            "deger": 21.5,
+            "metin": "21.5 h"
+          },
+          {
+            "etiket": "67°F room",
+            "deger": 11,
+            "metin": "11 h"
+          }
+        ],
+        "kaynak": "Evans & Redmond, Food Protection Trends 2019 · laboratory study, soft cheese and ready-to-eat meat"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "To be fair, that was a lab experiment on cheese and deli meat, not a pot of soup. It shows how fast Listeria can grow, not how risky your own dinner is. But it explains why a fridge that runs warm shortens the safe window.",
+      "gorsel": "a kitchen refrigerator interior with a thermometer showing a warmer reading, a half-eaten casserole in a glass dish on the middle shelf",
+      "baslik": {
+        "satirlar": [
+          "WARMER FRIDGE,",
+          "FASTER GROWTH"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "metin": "The CDC estimates that about 1,250 people in the United States get a Listeria infection each year, and 172 die. It is rare, but serious, and adults 65 and older are among those at higher risk. Later, we'll see why age changes the math.",
+      "gorsel": "a quiet kitchen table set for one with a glass container of leftover stew, reading glasses and a folded newspaper beside it",
+      "etiket": "CDC · Listeria",
+      "baslik": {
+        "satirlar": [
+          "RARE,",
+          "BUT SERIOUS"
+        ],
+        "vurgu": "1,250",
+        "not": "US infections a year"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "A simple habit takes the guessing out. Rutgers suggests marking leftovers with the date they were cooked, so you are never wondering whether today is day three or day six.",
+      "gorsel": "a glass container of stew with a strip of masking tape on the lid and a pen lying beside it, a small kitchen calendar behind",
+      "baslik": {
+        "satirlar": [
+          "DATE THE",
+          "CONTAINER"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "bolum": "Why smell is not a test",
+      "tip": "kart",
+      "metin": "Many of us make this decision with our nose.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Smell is not a test",
+        "alt": "Toxins and quiet bacteria"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "If it smells fine, we eat it. But a 2023 review of Bacillus cereus noted that contaminated starchy foods, such as rice, will usually look and smell the same as normal food.",
+      "gorsel": "a woman in her sixties with gray hair sniffing a container of cooked rice, her face turned away from the viewer, a bright kitchen with a window",
+      "etiket": "Yang et al. · Foods · 2023",
+      "baslik": {
+        "satirlar": [
+          "LOOKS FINE.",
+          "SMELLS FINE."
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Here is the part that surprises people. Bacillus cereus can make a toxin in food called cereulide, and that toxin is extremely heat stable.",
+      "gorsel": "a bowl of cooked rice with a magnified circular inset showing rod-shaped bacteria releasing tiny star-shaped particles",
+      "baslik": {
+        "satirlar": [
+          "A TOXIN",
+          "THAT SURVIVES"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "metin": "The review cited stability even after two hours at 121 degrees Celsius, about 250 degrees Fahrenheit, as well as roasting, frying and microwaving. That fits Virginia, where the CDC noted that brief heating, such as stir-frying, can leave the toxin active.",
+      "gorsel": "a hot wok with fried rice over a gas flame, steam rising, a small circular inset of star-shaped particles unharmed in the rice",
+      "etiket": "Yang et al. · Foods · 2023",
+      "baslik": {
+        "satirlar": [
+          "FRYING",
+          "DOESN'T FIX IT"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "metin": "The review's authors note that reheating is inefficient at destroying these toxins once they have formed. That is why the time and cooling steps come first. Heat is the last step, not a rescue.",
+      "gorsel": "a microwave oven with a plate of rice inside and its door open, a kitchen towel and a food thermometer on the counter beside it"
+    },
+    {
+      "id": 29,
+      "metin": "Symptoms from the vomiting type usually start fast, within about half an hour to five hours. The diarrheal type shows up later, between eight and sixteen hours.",
+      "gorsel": "a bedside table with a glass of water, a clock and a folded blanket on a bed, soft evening light through a curtain",
+      "etiket": "Yang et al. · Foods · 2023"
+    },
+    {
+      "id": 30,
+      "metin": "Rutgers puts the advice plainly. Never taste leftovers of questionable age or safety. And if you are unsure, throw them out.",
+      "gorsel": "a kitchen trash bin with its lid open beside a glass container of stew, a kitchen towel draped on the counter",
+      "etiket": "Elnakib & Schaffner · Rutgers · 2019",
+      "baslik": {
+        "satirlar": [
+          "WHEN IN",
+          "DOUBT, TOSS"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "That can feel wasteful. But a pot of soup costs a few dollars, and the American Heart Association gives the same answer: if you're unsure whether food is safe, throw it away.",
+      "gorsel": "a pot of soup on a stovetop with a ladle, a thoughtful empty chair at the table behind it, warm light"
+    },
+    {
+      "id": 32,
+      "bolum": "Cooling, reheating and freezing",
+      "tip": "kart",
+      "metin": "Now the kitchen part. Cooling is where big batches go wrong.",
+      "kart": {
+        "ust": "IN THE KITCHEN",
+        "baslik": "Cool fast, reheat hot",
+        "alt": "Shallow pans · ice bath · 165°F"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "A deep pot of stew can hold heat in the middle for hours, which keeps it in the danger zone long after the outside feels cool. The fix is to give the heat somewhere to go.",
+      "gorsel": "a deep stockpot of stew in cross-section with a warm glowing center and cooler edges, drawn as an open engraving with a ladle across the top"
+    },
+    {
+      "id": 34,
+      "metin": "Divide food into shallow containers. Both Nebraska Extension and Rutgers say to keep it three inches deep or less.",
+      "gorsel": "three shallow glass containers of stew, rice and roasted vegetables lined up on a counter, a ladle and a pot beside them",
+      "etiket": "UNL Extension · Rutgers Extension",
+      "baslik": {
+        "satirlar": [
+          "3 INCHES",
+          "OR LESS"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "For soups and stews, Nebraska suggests an ice bath. It also says hot food can go into the refrigerator on the top shelf, covered loosely until it cools, rather than sitting out first.",
+      "gorsel": "a shallow pan of soup set in a sink basin of ice and cold water, a refrigerator in the background with its door open",
+      "etiket": "Patton et al. · UNL Extension",
+      "baslik": {
+        "satirlar": [
+          "ICE BATH"
+        ],
+        "not": "for soups and stews"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "Space matters too. Rutgers advises leaving room around the containers, so cold air can circulate and the food cools evenly.",
+      "gorsel": "a refrigerator shelf with four glass containers spaced apart with gaps between them, thin engraved lines showing cold air flowing around them"
+    },
+    {
+      "id": 37,
+      "metin": "When you reheat, aim for an internal temperature of 165 degrees Fahrenheit all the way through. The American Heart Association and both extension services agree on that number.",
+      "gorsel": "a digital food thermometer inserted into a steaming bowl of reheated stew on a counter, a spoon resting beside the bowl",
+      "etiket": "AHA · UNL · Rutgers",
+      "baslik": {
+        "satirlar": [
+          "REHEAT TO",
+          "165°F"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "Soups, sauces and gravies should come to a rolling boil. In a microwave, stir partway through, because microwaves can heat unevenly.",
+      "gorsel": "a saucepan of gravy at a rolling boil with steam rising, a wooden spoon, and a bowl of soup in a microwave in the corner"
+    },
+    {
+      "id": 39,
+      "tip": "kart",
+      "metin": "And if you will not finish it in time, there is a pause button.",
+      "kart": {
+        "ust": "THE PAUSE BUTTON",
+        "baslik": "Freezing leftovers",
+        "alt": "Safe indefinitely at 0°F"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "At zero degrees Fahrenheit, Nebraska Extension says frozen leftovers are safe indefinitely, though they lose moisture and flavor over time. The American Heart Association says up to six months for good quality.",
+      "gorsel": "an open chest freezer drawn in cross-section with neat stacked containers of stew, soup and rice with frost on the lids",
+      "etiket": "UNL Extension · AHA",
+      "baslik": {
+        "satirlar": [
+          "0°F",
+          "PAUSES THE CLOCK"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "One caveat. Freezing is a pause, not a cleaning. The FDA notes that freezing will not eliminate or reduce Listeria. So freeze food while it is fresh, not on day five.",
+      "gorsel": "a small bowl of stew inside a block of frost on a freezer shelf, a magnified circular inset showing tiny rod-shaped bacteria sitting still",
+      "etiket": "FDA · Listeria",
+      "baslik": {
+        "satirlar": [
+          "FREEZE",
+          "EARLY"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "Freeze in single-meal portions, and write the dish and date on the container. Thaw in the refrigerator, and use it within three to four days or refreeze it.",
+      "gorsel": "small freezer containers of soup in a neat row on a counter, a marker pen and masking tape beside them, a refrigerator door ajar behind",
+      "etiket": "AHA · UNL Extension"
+    },
+    {
+      "id": 43,
+      "bolum": "Why age changes the math",
+      "tip": "kart",
+      "metin": "Now, why this matters more as we get older.",
+      "kart": {
+        "ust": "WHY AGE MATTERS",
+        "baslik": "Risk after 65",
+        "alt": "Immune system · stomach acid"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "The FDA says people 65 and older are at higher risk of hospitalization and death from foodborne illness, because organs and body systems change as the body ages.",
+      "gorsel": "an older couple in their seventies seen from behind at a kitchen table with bowls of soup, a window with soft light",
+      "etiket": "FDA · Older adults",
+      "baslik": {
+        "satirlar": [
+          "65 AND OLDER:",
+          "HIGHER RISK"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "The CDC reports that nearly half of people 65 and older with a lab-confirmed infection from Salmonella, Campylobacter, Listeria or E. coli end up in the hospital. That count only includes confirmed cases, which tend to be the more severe ones.",
+      "gorsel": "a quiet hospital corridor with an empty wheelchair beside a window, engraved style, soft light",
+      "etiket": "CDC · Risk factors",
+      "baslik": {
+        "satirlar": [
+          "NEARLY HALF"
+        ],
+        "not": "of confirmed infections at 65 and older led to hospital care"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "The FDA gives two reasons. The immune system in most people begins to decline between ages 50 and 60. And the stomach may not make enough acid to limit intestinal bacteria. Diabetes may damage the cells that make that acid.",
+      "gorsel": "a simple engraved stomach with a few small acid droplets on the left and a faint shield outline on the right, a glass of water beside them",
+      "etiket": "FDA · Older adults",
+      "baslik": {
+        "satirlar": [
+          "LESS ACID,",
+          "SLOWER DEFENSE"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "metin": "Keep it in perspective. The FDA says about 48 million Americans of all ages, roughly one in six, get a foodborne illness each year, and about 128,000 are hospitalized. Most people are not. The point is that the margin for error gets smaller.",
+      "gorsel": "a long row of kitchen tables each with a single plate, drawn small and receding into the distance, engraved style",
+      "etiket": "FDA · Older adults",
+      "baslik": {
+        "satirlar": [
+          "1 IN 6",
+          "EACH YEAR"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "The Listeria lab study was built around older adults for a reason. The researchers noted that older consumers often keep ready-to-eat foods too long, and in refrigerators that run too warm.",
+      "gorsel": "an older man in his seventies peering into an open refrigerator with a thermometer on the shelf, seen from the side, kitchen with a window",
+      "etiket": "Evans & Redmond · Food Prot Trends · 2019"
+    },
+    {
+      "id": 49,
+      "metin": "A safety note. If you have diabetes, cancer, an organ transplant, or take medicines that weaken your immune system, ask your doctor or pharmacist whether you should follow stricter food safety rules.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a pill organizer, a pharmacist's mortar and pestle beside them",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "DOCTOR"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So here are five habits you can use tonight.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five leftover habits",
+        "alt": "Time · cool · date · reheat · doubt"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "One. Watch the two hours. Put leftovers away within two hours, or within one hour on a hot day, before you settle in after dinner.",
+      "gorsel": "a dinner table at the end of a meal with covered dishes being carried to a refrigerator, an antique pocket watch on the table"
+    },
+    {
+      "id": 52,
+      "metin": "Two. Cool in shallow containers, three inches deep or less. Divide the big pot before it goes in the fridge, and leave space between containers.",
+      "gorsel": "a big pot being ladled into two shallow glass containers on a counter, a refrigerator with an open door behind",
+      "baslik": {
+        "satirlar": [
+          "SHALLOW",
+          "AND SPACED"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "metin": "Three. Date the container and eat it within three to four days. Treat day four as the last call, and freeze what you won't finish early.",
+      "gorsel": "a glass container of stew with a dated strip of tape on the lid next to a small wall calendar, an open freezer with neat containers beside it"
+    },
+    {
+      "id": 54,
+      "metin": "Four. Reheat to 165 degrees Fahrenheit all the way through, bring soups, sauces and gravies to a boil, and stir partway through in the microwave.",
+      "gorsel": "a food thermometer in a steaming bowl of stew beside a saucepan of boiling gravy on a stovetop"
+    },
+    {
+      "id": 55,
+      "metin": "Five. When in doubt, throw it out. And don't use your nose as a test, especially for rice, pasta and other starchy foods.",
+      "gorsel": "a bowl of cooked rice and a bowl of pasta on a kitchen counter, a trash bin with its lid open beside them, a faint question mark made of steam",
+      "baslik": {
+        "satirlar": [
+          "NOSE IS NOT",
+          "A TEST"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "metin": "One bonus check. Put a thermometer in your refrigerator. The FDA says keep it at 40 degrees Fahrenheit or below, and the lab study showed Listeria doubling much faster at 46.",
+      "gorsel": "a small round refrigerator thermometer standing on a middle shelf next to glass containers of leftovers, an open refrigerator door",
+      "etiket": "FDA · Evans & Redmond · 2019"
+    },
+    {
+      "id": 57,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Respect the clock",
+        "alt": "2 hours · 3–4 days · 165°F"
+      }
+    },
+    {
+      "id": 58,
+      "metin": "Leftovers are safest when you respect the clock. Two hours out at most, three to four days in the refrigerator, and 165 degrees Fahrenheit when you reheat.",
+      "gorsel": "an antique round clock beside a refrigerator and a steaming bowl of reheated stew, arranged together on a kitchen counter"
+    },
+    {
+      "id": 59,
+      "metin": "Smell is not a test. Toxins from Bacillus cereus can survive reheating, and starchy foods may look and smell normal. Cool big pots in shallow containers.",
+      "gorsel": "a bowl of cooked rice with a magnified circular inset of tiny star-shaped particles, a shallow glass container nearby"
+    },
+    {
+      "id": 60,
+      "metin": "Freeze what you will not finish, early. And after 65, the margin for error is smaller, so this is worth getting right.",
+      "gorsel": "a freezer drawer with neat stacked containers of soup and stew, an older woman's hand placing one container inside"
+    },
+    {
+      "id": 61,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
