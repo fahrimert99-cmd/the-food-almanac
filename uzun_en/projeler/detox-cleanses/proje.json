@@ -1,0 +1,575 @@
+{
+  "slug": "detox-cleanses",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does a 3-Day Juice Cleanse Remove Toxins?",
+  "yorum": "Have you ever tried a juice cleanse or a detox tea? What made you try it, and how did you feel afterward?",
+  "aciklama_giris": "Detox juice cleanses promise to flush out toxins. A 2015 critical review of the evidence found very little clinical evidence for detox diets and knew of no randomized trials of commercial ones. Weight lost on a juice-only plan seems to come mostly from eating far fewer calories, and it tends to return. For older adults, juice-only plans can also carry real risks, and a few kidney injury cases have been reported.\n\nIn this video we look at what marketers mean by toxins, how your liver and kidneys already clear waste, what the reviews and a small 3-day juice study found, the risks tied to blood sugar, potassium and oxalate, and what the NIH says does help your liver.",
+  "kaynaklar": [
+    "Klein AV, Kiat H. Detox diets for toxin elimination and weight management: a critical review of the evidence. Journal of Human Nutrition and Dietetics. 2015;28(6):675-686. PMID 25522674. DOI 10.1111/jhn.12286.",
+    "National Center for Complementary and Integrative Health (NIH). Detoxes and Cleanses: What You Need to Know. nccih.nih.gov/health/detoxes-and-cleanses-what-you-need-to-know",
+    "National Institute of Diabetes and Digestive and Kidney Diseases (NIH). Your Kidneys & How They Work. niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+    "MedlinePlus, National Library of Medicine. Liver Diseases. medlineplus.gov/liverdiseases.html",
+    "Obert J, Pearlman M, Obert L, Chapin S. Popular weight loss strategies: a review of four weight loss techniques. Current Gastroenterology Reports. 2017;19(12):61. PMID 29124370. DOI 10.1007/s11894-017-0603-8.",
+    "Henning SM, Yang J, Shao P, et al. Health benefit of vegetable/fruit juice-based diet: Role of microbiome. Scientific Reports. 2017;7:2167. PMID 28526852. DOI 10.1038/s41598-017-02200-6.",
+    "Muraki I, Imamura F, Manson JE, et al. Fruit consumption and risk of type 2 diabetes: results from three prospective longitudinal cohort studies. BMJ. 2013;347:f5001. PMID 23990623. DOI 10.1136/bmj.f5001.",
+    "Mueller BA, Scott MK, Sowinski KM, Prag KA. Noni juice (Morinda citrifolia): hidden potential for hyperkalemia? American Journal of Kidney Diseases. 2000;35(2):310-312. PMID 10676732.",
+    "NIH Office of Dietary Supplements. Potassium: Fact Sheet for Consumers. ods.od.nih.gov/factsheets/Potassium-Consumer/",
+    "Getting JE, Gregoire JR, Phul A, Kasten MJ. Oxalate nephropathy due to 'juicing': case report and review. American Journal of Medicine. 2013;126(9):768-772. DOI 10.1016/j.amjmed.2013.03.019.",
+    "Makkapati S, D'Agati VD, Balsam L. \"Green Smoothie Cleanse\" causing acute oxalate nephropathy. American Journal of Kidney Diseases. 2018;71(2):281-286. PMID 29203127. DOI 10.1053/j.ajkd.2017.08.002.",
+    "Raja N, Radhakrishnan H, Masilamani S. Oxalate nephropathy: a case report of acute kidney injury due to juice diet. Cureus. 2023;15(12):e51226. DOI 10.7759/cureus.51226.",
+    "National Institute of Diabetes and Digestive and Kidney Diseases (NIH). Eating, Diet, & Nutrition for NAFLD & NASH. niddk.nih.gov/health-information/liver-disease/nafld-nash/eating-diet-nutrition",
+    "National Institute of Diabetes and Digestive and Kidney Diseases (NIH). Definition & Facts for NAFLD & NASH. niddk.nih.gov/health-information/liver-disease/nafld-nash/definition-facts"
+  ],
+  "kapak": {
+    "satirlar": [
+      "3-DAY",
+      "JUICE",
+      "CLEANSE?"
+    ],
+    "vurgu": "0",
+    "vurgu_alt": "RCTS",
+    "gorsel": "a tall glass bottle of vivid green juice with a cork, two filled tall glasses of green juice overlapping in front of it, tightly grouped, bright and appetizing, a plain bathroom scale tucked behind"
+  },
+  "kahraman": "green juice",
+  "etiketler": [
+    "detox",
+    "juice cleanse",
+    "do detox cleanses work",
+    "liver detox myth",
+    "toxins",
+    "kidney health",
+    "oxalate",
+    "liver health",
+    "nutrition science",
+    "healthy aging",
+    "food myths"
+  ],
+  "seslendirme_duzelt": {
+    "NIH": "N I H",
+    "NIDDK": "N I D D K",
+    "CDC": "C D C",
+    "FDA": "F D A",
+    "FTC": "F T C",
+    "ACE": "A C E",
+    "MedlinePlus": "Medline Plus",
+    "Kiat": "Kyat"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "The promise of a cleanse",
+      "metin": "In 2017, 20 healthy adults drank only juice for three days, and their weight and gut bacteria changed. Yet kidney doctors have reported juice diets that ended in dialysis.",
+      "gorsel": "a tall glass of green juice on a kitchen table beside a bunch of kale, a cucumber and a celery stalk, a plain bathroom scale and a pair of reading glasses nearby",
+      "etiket": "Henning et al. · Sci Rep · 2017",
+      "baslik": {
+        "satirlar": [
+          "3 DAYS",
+          "OF JUICE"
+        ],
+        "vurgu": "20",
+        "not": "healthy adults in one small study"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "Both are true. The catch is what a cleanse actually cleans.",
+      "gorsel": "a tall glass of green juice beside a small clear pitcher of green juice on a counter, a pair of kidneys drawn as a textbook engraving floating next to them"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what toxins really means, who should skip cleanses, and what does help your liver.",
+      "gorsel": "a glass of green juice and a wooden spoon on a table, a liver and a pair of kidneys drawn as textbook engravings arranged calmly beside it"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with the word that sells nearly every cleanse: toxins.",
+      "gorsel": "a corked bottle of green juice on a wooden shelf in an old-fashioned grocer, jars and crates in the background",
+      "baslik": {
+        "satirlar": [
+          "TOXINS"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "metin": "Detox programs are pitched as ways to remove toxins, lose weight, or promote health. The National Center for Complementary and Integrative Health, part of the NIH, says they include fasting, juices, special foods, supplements, herbs, and colon cleansing.",
+      "gorsel": "a shelf of detox items: a bottle of green juice, glass jars of dried herbs, a small bowl of capsules and a folded blanket, vintage apothecary style",
+      "baslik": {
+        "satirlar": [
+          "THE",
+          "PROMISE"
+        ],
+        "not": "remove toxins, lose weight, promote health"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "A fair question for any cleanse is simple. Which toxin, exactly, and how would anyone measure it leaving your body?",
+      "gorsel": "a large magnifying glass held over a glass of green juice, tiny hexagon ring molecule outlines floating above the glass"
+    },
+    {
+      "id": 7,
+      "metin": "Real poisoning does exist. For certain serious metal poisonings, the CDC recommends a hospital treatment called chelation therapy. That is medicine, not something sold with a juice.",
+      "gorsel": "a quiet hospital ward with a bed and folded sheets, antique laboratory flasks on a table, a glass of green juice left on the bedside table"
+    },
+    {
+      "id": 8,
+      "bolum": "Your built-in cleaners",
+      "tip": "kart",
+      "metin": "So what does your body already do with waste? Two organs do much of the work.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "Your built-in cleaners",
+        "alt": "Liver · Kidneys"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "MedlinePlus, from the National Library of Medicine, says the liver helps your body digest food, store energy, and remove poisons. It does that around the clock, with no special diet.",
+      "gorsel": "a liver drawn as a textbook engraving with a small glass of green juice beside it, fine radiating lines suggesting steady work",
+      "baslik": {
+        "satirlar": [
+          "THE LIVER"
+        ],
+        "not": "digests, stores energy, removes poisons"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "The kidneys are the filters. According to the NIH, healthy kidneys filter about half a cup of blood every minute. That adds up to about 150 quarts a day.",
+      "gorsel": "a pair of kidneys drawn as a textbook engraving with fine tubes, a half measuring cup shown beside them, a tube-shaped vessel with small red discs",
+      "etiket": "NIDDK · Your Kidneys & How They Work",
+      "baslik": {
+        "satirlar": [
+          "150 QUARTS",
+          "A DAY"
+        ],
+        "vurgu": "½ CUP",
+        "not": "of blood filtered every minute"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Only one to two quarts of that become urine. The rest goes back to your blood, and the kidneys also clear wastes and extra acid.",
+      "gorsel": "a large glass jug filled to the top beside one small glass of golden fluid, a pair of kidneys engraving connected to both by dashed lines"
+    },
+    {
+      "id": 12,
+      "metin": "The kidneys also keep minerals like potassium, sodium, and calcium in balance. Without that balance, the NIH says, nerves, muscles, and other tissues may not work normally. Remember that, because it matters in a moment.",
+      "gorsel": "a kidney shown open as a textbook engraving with tiny tubes, small spheres drawn as little weights on a brass balance scale",
+      "baslik": {
+        "satirlar": [
+          "MINERAL",
+          "BALANCE"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "A cleanse doesn't add a third filter. The real question is whether it makes these two organs work better. So that is what researchers tested.",
+      "gorsel": "a glass of green juice placed between a liver and two kidneys drawn as textbook engravings, a brass balance scale in the background"
+    },
+    {
+      "id": 14,
+      "bolum": "What the research found",
+      "tip": "kart",
+      "metin": "In 2015, researchers Klein and Kiat decided to review the evidence on detox diets.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "Do detox diets work?",
+        "alt": "A critical review · 2015"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Their review, in the Journal of Human Nutrition and Dietetics, asked four plain questions. Are detox diets necessary? What do they involve? Do they work? And are they risky?",
+      "gorsel": "four identical glass cylinders in a row on a laboratory bench, a glass of green juice at the end, an antique brass microscope behind",
+      "etiket": "Klein & Kiat · J Hum Nutr Diet · 2015",
+      "baslik": {
+        "satirlar": [
+          "FOUR",
+          "QUESTIONS"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "metin": "Their finding was that very little clinical evidence supports detox diets. A few small studies suggested more liver detoxification or lower pollutants in the body, but those studies had methodological flaws and small samples.",
+      "gorsel": "a nearly empty laboratory shelf with only a few test tubes, a glass of green juice and a magnifying glass resting beside them",
+      "baslik": {
+        "satirlar": [
+          "VERY LITTLE",
+          "EVIDENCE"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "metin": "Some foods, like coriander and nori, showed early signs of detox effects, but mostly in animal research. And the authors knew of no randomized controlled trials of commercial detox diets in people.",
+      "gorsel": "coriander sprigs and a sheet of nori seaweed on a laboratory bench, a small mouse in a cage, a glass of green juice at the front",
+      "baslik": {
+        "satirlar": [
+          "NO KNOWN",
+          "HUMAN TRIALS"
+        ],
+        "not": "of commercial detox diets, as of 2015"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Later reviews agree. In 2017, Obert and colleagues found that juicing and detox diets cut calories sharply for a short time, and weight tends to return once normal eating resumes.",
+      "gorsel": "a glass of green juice standing on a bathroom scale, a measuring tape curled around the glass",
+      "etiket": "Obert et al. · Curr Gastroenterol Rep · 2017",
+      "baslik": {
+        "satirlar": [
+          "FEWER CALORIES",
+          "THEN REGAIN"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "The NIH's own fact sheet adds that the few human studies are of low quality, and that there are no studies on long-term effects.",
+      "gorsel": "a small stack of thin notebooks beside a glass of green juice, an hourglass and empty shelves behind",
+      "etiket": "NCCIH · Detoxes and Cleanses"
+    },
+    {
+      "id": 20,
+      "metin": "Now back to that juice study. Henning and colleagues had 20 healthy adults drink only vegetable and fruit juices for three days, then eat normally for 14 days. Weight dropped by day four, and the drop was still measurable on day 17.",
+      "gorsel": "twenty small glasses of green juice lined up in neat rows on long tables in a research kitchen, a wall calendar with blank squares",
+      "etiket": "Henning et al. · Sci Rep · 2017",
+      "baslik": {
+        "satirlar": [
+          "3 DAYS",
+          "JUICE ONLY"
+        ],
+        "vurgu": "20",
+        "not": "healthy adults, then 14 days of normal eating"
+      }
+    },
+    {
+      "id": 21,
+      "metin": "Gut bacteria shifted on day four, and partly shifted back by day 17. A urine marker of damage to fats went down, and well-being scores improved by the end.",
+      "gorsel": "a magnified circular view of rod-shaped and round gut bacteria drifting calmly, a glass of green juice in the corner"
+    },
+    {
+      "id": 22,
+      "metin": "It is an honest, interesting study. But it was small, it had no comparison group, and it measured weight, gut bacteria, and a few body markers. It did not measure toxins leaving the body.",
+      "gorsel": "a single small glass of green juice on a laboratory bench, one empty chair, an antique clipboard with a blank sheet",
+      "baslik": {
+        "satirlar": [
+          "SMALL",
+          "NO CONTROLS"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "So the weight loss is real. But after a few days of mostly juice, fewer calories are the simplest explanation, and the reviews say weight tends to come back. Next, the safety side.",
+      "gorsel": "a glass of green juice beside a slice of whole-grain bread on a plate, a measuring tape and a bathroom scale on the floor"
+    },
+    {
+      "id": 24,
+      "bolum": "Safety after 60",
+      "tip": "kart",
+      "metin": "Now the safety side, which matters most if you are over 60.",
+      "kart": {
+        "ust": "WHAT CAN GO WRONG",
+        "baslik": "Safety after 60",
+        "alt": "Blood sugar · Potassium · Oxalate"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "First, blood sugar. Juice usually has less fiber than whole fruit. In a Harvard study following 187,382 American health professionals, each extra three servings a week of fruit juice was linked with 8 percent higher risk of type 2 diabetes.",
+      "gorsel": "a tall glass of orange juice beside a whole orange with its fibrous pulp, a glucose meter with a blank screen, a glass of green juice behind",
+      "etiket": "Muraki et al. · BMJ · 2013",
+      "baslik": {
+        "satirlar": [
+          "JUICE &",
+          "DIABETES RISK"
+        ],
+        "vurgu": "+8%",
+        "not": "per 3 extra servings a week"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "That is an observational link, and it is about everyday juice, not cleanses. Whole blueberries, grapes, and apples were linked with lower risk instead, by 26, 12, and 7 percent per three servings a week.",
+      "gorsel": "blueberries, grapes and apples in a wooden bowl beside a glass of green juice, a glucose meter with a blank screen"
+    },
+    {
+      "id": 27,
+      "metin": "If you have diabetes, the NIH says to follow your care team's eating plan and check with them before big diet changes. Fasting itself can cause headaches, fainting, weakness, and dehydration.",
+      "gorsel": "a glucose meter with a blank screen and a weekly pill organizer beside a glass of green juice and a closed consultation notebook"
+    },
+    {
+      "id": 28,
+      "metin": "Second, potassium. A 2000 case report in the American Journal of Kidney Diseases described a man with chronic kidney disease who developed high potassium after drinking noni juice. Its potassium level was similar to orange juice and tomato juice.",
+      "gorsel": "a banana, a tomato and a glass of green juice with small golden spheres floating above them, a brass balance scale beside them",
+      "etiket": "Mueller et al. · Am J Kidney Dis · 2000",
+      "baslik": {
+        "satirlar": [
+          "HIDDEN",
+          "POTASSIUM"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "metin": "Healthy kidneys usually cope. The NIH Office of Dietary Supplements says potassium from food has not been shown to harm people with normal kidney function. But people with chronic kidney disease, or on ACE inhibitors or potassium-sparing diuretics, can develop abnormally high levels.",
+      "gorsel": "a pair of healthy kidneys drawn as a textbook engraving with a glass of green juice beside it, small spheres moving through fine tubes",
+      "etiket": "NIH Office of Dietary Supplements"
+    },
+    {
+      "id": 30,
+      "metin": "If that is you, ask your doctor or pharmacist before any juice-heavy plan. Even a juice that sounds healthy can carry a meaningful amount of potassium.",
+      "gorsel": "a pharmacist's counter with an amber pill bottle, a blood pressure cuff and a glass of green juice",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "Third, oxalate, a natural compound in leafy greens, beets, and some other plants. The NIH notes that juices made from high-oxalate foods may be a risk for people prone to kidney stones.",
+      "gorsel": "kale, spinach, beetroot and a glass of green juice on a kitchen counter, a circular inset magnifying tiny needle-shaped crystals",
+      "baslik": {
+        "satirlar": [
+          "OXALATE"
+        ],
+        "not": "found in leafy greens and beets"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "In 2013, Getting and colleagues at Mayo Clinic described a patient whose kidneys failed after juicing oxalate-rich fruits and vegetables. They also reviewed 65 Mayo patients, from 1985 through 2010, whose kidney biopsies showed calcium oxalate crystals.",
+      "gorsel": "an antique brass microscope beside a glass of green juice, a small jar of juiced vegetables and a rack of glass slides",
+      "etiket": "Getting et al. · Am J Med · 2013"
+    },
+    {
+      "id": 33,
+      "metin": "Every one of those 65 had an identified cause. Three, including the juicing patient, had presumed diet-induced oxalate nephropathy. The authors concluded that heavy intake of oxalate-rich juices appears to be a potential cause.",
+      "gorsel": "a rack of microscope slides, a magnified circular view of needle-shaped crystals, a glass of green juice in the corner",
+      "baslik": {
+        "satirlar": [
+          "65 BIOPSIES",
+          "REVIEWED"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "In 2018, Makkapati and colleagues reported a 65-year-old woman whose kidney function was normal before a green smoothie cleanse. She had had a gastric bypass and a long course of antibiotics, and her kidney injury progressed to end-stage kidney disease.",
+      "gorsel": "a blender filled with kale and fruit beside a tall glass of green juice, a small row of antibiotic capsules on the counter",
+      "etiket": "Makkapati et al. · Am J Kidney Dis · 2018"
+    },
+    {
+      "id": 35,
+      "tip": "grafik",
+      "metin": "In 2023, doctors in India reported an 85-year-old man with diabetes who drank roughly 20 to 30 ounces of pomegranate juice a day for about a week. His kidney marker, creatinine, rose from 1.12 to 5.43 milligrams per deciliter, and he needed dialysis.",
+      "grafik": {
+        "baslik": "Creatinine, a kidney marker (mg/dL)",
+        "alt": "One 85-year-old man after about a week of juice-only diet",
+        "cubuklar": [
+          {
+            "etiket": "On admission",
+            "deger": 1.12,
+            "metin": "1.12"
+          },
+          {
+            "etiket": "Peak, day 11",
+            "deger": 5.43,
+            "metin": "5.43"
+          }
+        ],
+        "kaynak": "Raja et al., Cureus 2023 · single case report, 85-year-old man with diabetes"
+      }
+    },
+    {
+      "id": 36,
+      "metin": "He had chosen a juice-only diet after a stomach bleed, against advice to move to semi-solid food. His juice also supplied an estimated 450 milligrams of vitamin C a day, which the body partly turns into oxalate.",
+      "gorsel": "a pitcher of pomegranate juice and two halved pomegranates on a hospital tray, a small bottle of vitamin C tablets in a quiet ward",
+      "etiket": "Raja et al. · Cureus · 2023"
+    },
+    {
+      "id": 37,
+      "metin": "That is one patient, and kidney doctors describe this injury as uncommon. But the reports list shared risk factors: older age, diabetes, dehydration, kidney disease, gastric bypass, and recent antibiotics.",
+      "gorsel": "a glass of green juice, a glucose meter with a blank screen, a glass of water and a small bottle of tablets lined up on a bedside table",
+      "baslik": {
+        "satirlar": [
+          "KNOWN RISK",
+          "FACTORS"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "Two more cautions from the NIH. Unpasteurized juices can cause serious illness in older adults, children, and people with weakened immune systems. And large amounts of water or tea with no food for days can cause dangerous electrolyte imbalances.",
+      "gorsel": "a corked bottle of fresh green juice and a sealed bottle of pasteurized juice side by side on a table, a pair of reading glasses"
+    },
+    {
+      "id": 39,
+      "metin": "Cleanses that add laxatives or colon cleansing bring their own risks. Diarrhea can cause dehydration, and colon cleansing carries higher risk for people with kidney disease or heart disease.",
+      "gorsel": "a glass of green juice, a glass of water and a small bottle of herbal tea on a bathroom shelf beside a folded towel"
+    },
+    {
+      "id": 40,
+      "bolum": "What's unknown, and what helps",
+      "tip": "kart",
+      "metin": "So why do people feel better after a cleanse? Let's be fair about that.",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Feeling better, fairly",
+        "alt": "What we know and what we don't"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "Feeling lighter or more energetic can be real. In Henning's study, general well-being scores improved by the end. But a good feeling is not the same as proof that toxins left your body.",
+      "gorsel": "a cheerful person in their sixties seen from behind on a garden bench holding a glass of green juice in morning light"
+    },
+    {
+      "id": 42,
+      "metin": "And here is what is still unknown. The NIH says there are no studies on long-term effects. Klein and Kiat also called for more research, so people can understand both the possible benefits and the risks.",
+      "gorsel": "a long empty library shelf holding one thin folder, a glass of green juice on a desk below it, an hourglass",
+      "baslik": {
+        "satirlar": [
+          "LONG-TERM",
+          "EFFECTS?"
+        ],
+        "not": "no studies yet"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "There is also a business side. The NIH notes that the FDA and the Federal Trade Commission have acted against companies over hidden ingredients and false claims of treating serious disease.",
+      "gorsel": "a market stall table with bottles of green juice and jars of powders, a brass scale and a judge's gavel"
+    },
+    {
+      "id": 44,
+      "tip": "kart",
+      "metin": "So what does help your liver? The answer is less exciting than a cleanse, but better supported.",
+      "kart": {
+        "ust": "WHAT HELPS INSTEAD",
+        "baslik": "Looking after your liver",
+        "alt": "The NIH basics"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "The NIDDK, part of the NIH, says that for fatty liver disease, eating healthfully and controlling portions may help prevent it. Experts estimate that about 24 percent of American adults have it.",
+      "gorsel": "a plate of whole grains, vegetables and fruit beside a liver drawn as a textbook engraving, a glass of green juice pushed to the side",
+      "etiket": "NIDDK · Fatty liver (NAFLD)",
+      "baslik": {
+        "satirlar": [
+          "FATTY LIVER"
+        ],
+        "vurgu": "24%",
+        "not": "of American adults, by expert estimates"
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Its advice includes more fruits, vegetables, and whole grains, swapping saturated and trans fats for unsaturated fats, and avoiding sugary drinks and juices, especially those with fructose.",
+      "gorsel": "a bowl of oats, a bowl of fruit, a small bottle of olive oil and a glass of water, with a glass of green juice set aside"
+    },
+    {
+      "id": 47,
+      "metin": "It also says to minimize alcohol, which can further damage the liver. And if you are overweight, your doctor may recommend gradual weight loss, not a crash plan.",
+      "gorsel": "a glass of wine beside a liver drawn as a textbook engraving, walking shoes and a measuring tape next to a bowl of vegetables",
+      "baslik": {
+        "satirlar": [
+          "LIMIT",
+          "ALCOHOL"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So what should you actually do? Here are five practical tips.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Skip the cleanse, eat the basics",
+        "alt": "Five practical tips"
+      }
+    },
+    {
+      "id": 49,
+      "metin": "One. If you want more produce, eat it whole. In the Harvard data, several whole fruits were linked with lower diabetes risk, while juice was linked with higher risk.",
+      "gorsel": "a whole orange, an apple and a bowl of blueberries beside one small glass of green juice on a wooden table"
+    },
+    {
+      "id": 50,
+      "metin": "Two. If you enjoy juice, treat it as an occasional drink and choose a pasteurized one. Remember, unpasteurized juice carries extra risk for older adults.",
+      "gorsel": "a small glass of green juice beside a sealed bottle and a brass thermometer on a kitchen counter"
+    },
+    {
+      "id": 51,
+      "metin": "Three. Skip the fasting and the laxatives. Regular meals built around vegetables, fruits, and whole grains keep your calories steady, while your liver and kidneys keep doing the cleaning.",
+      "gorsel": "a set dinner table with a plate of vegetables, a bowl of whole-grain oats and a piece of fruit, a glass of green juice on the side"
+    },
+    {
+      "id": 52,
+      "metin": "Four. Be wary of any product that promises to remove toxins without naming them. Ask whether there are human trials, and remember that the FDA and the FTC have acted against false claims.",
+      "gorsel": "a magnifying glass held over a bottle of green juice and a jar of powder, a stack of blank forms"
+    },
+    {
+      "id": 53,
+      "metin": "Five. Talk to your doctor or pharmacist first if you have kidney disease, diabetes, or a history of kidney stones, or if you take medicines like ACE inhibitors. Never stop or change a prescription for a cleanse.",
+      "gorsel": "a pharmacist's counter with pill bottles and a kidney engraving, a glass of green juice set to one side",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "metin": "And if you ever feel dizzy, weak, or notice much less urine during a juice-only plan, stop and call your doctor.",
+      "gorsel": "a pair of slippers beside a bed, a glass of water and a telephone on the bedside table, a half-full glass of green juice"
+    },
+    {
+      "id": 55,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Your body already cleans",
+        "alt": "Liver · Kidneys · Whole foods"
+      }
+    },
+    {
+      "id": 56,
+      "metin": "A 2015 review found very little clinical evidence for detox diets, and knew of no randomized trials of commercial ones. Weight lost on juice cleanses seems to come from cutting calories, and it tends to return.",
+      "gorsel": "a glass of green juice beside a stack of journals with blank covers on a desk"
+    },
+    {
+      "id": 57,
+      "metin": "Your liver and kidneys already do the cleaning. For older adults, juice-only plans can bring blood sugar, potassium, and oxalate risks, and a few kidney failure cases have been reported.",
+      "gorsel": "a liver and two kidneys drawn as textbook engravings with a glass of green juice resting between them"
+    },
+    {
+      "id": 58,
+      "metin": "What helps your liver is plainer: more whole plant foods, less alcohol and sugary drinks, and gradual weight loss if your doctor advises it. Ask before changing anything.",
+      "gorsel": "a table with whole vegetables, whole grains and a glass of water, a small glass of green juice at the side"
+    },
+    {
+      "id": 59,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
