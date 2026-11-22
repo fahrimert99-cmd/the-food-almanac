@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "organic-vs-conventional",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -287,6 +287,12 @@
       "slot": "2026-12-09T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-11-22T14:24:08Z",
+      "sahne_deneme": 0
+    },
+    "organic-vs-conventional": {
+      "slot": "2027-02-12T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-11-22T15:53:58Z",
       "sahne_deneme": 0
     }
   }
