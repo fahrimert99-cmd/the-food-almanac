@@ -1,0 +1,19 @@
+{
+  "baslik": ["DIABETES &", "COOLED RICE?"],
+  "baslik_yt": "Cooled Rice and Diabetes: What Is Still Unproven",
+  "aciklama": "A 2023 review of 36 trials covered 982 people with type 2 diabetes or prediabetes. Here is what it found about the resistant starch made by cooling rice, and what nobody has tested yet.",
+  "parcalar": [
+    {"sahne": 31, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 32, "cumleler": [0], "gorsel": 31,
+     "baslik": {"satirlar": ["36 TRIALS"], "vurgu": "982", "not": "people with T2D/prediabetes"},
+     "etiket": "Pugh et al. · Front Nutr · 2023"},
+    {"sahne": 32, "cumleler": [1],
+     "baslik": {"satirlar": ["TYPE 3", "NOT PROVEN"], "not": "no significant meal effect"},
+     "etiket": "Pugh et al. · Front Nutr · 2023"},
+    {"sahne": 33, "cumleler": [0], "baslik": {"satirlar": ["NO TRIAL", "FOUND"]}, "etiket": null},
+    {"sahne": 38, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 39, "cumleler": [0], "baslik": {"satirlar": ["STILL", "MOSTLY STARCH"]}, "etiket": null},
+    {"sahne": 39, "cumleler": [1], "gorsel": 13, "baslik": null, "etiket": null},
+    {"sahne": 59, "cumleler": [0], "baslik": null, "etiket": null}
+  ]
+}
