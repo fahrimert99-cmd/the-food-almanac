@@ -1,0 +1,15 @@
+{
+  "baslik": ["GARLIC VS", "DASH DIET?"],
+  "baslik_yt": "Garlic vs. the DASH Diet: Which Lowers BP More?",
+  "aciklama": "Pooled trials found garlic supplements lowered systolic blood pressure by about eight points in people with hypertension. Here is how that compares with the DASH diet, and why the comparison has limits.",
+  "parcalar": [
+    {"sahne": 32, "cumleler": [0], "gorsel": 34, "baslik": null, "etiket": null},
+    {"sahne": 14, "cumleler": [2]},
+    {"sahne": 33, "cumleler": [1]},
+    {"sahne": 34, "cumleler": [0], "baslik": {"satirlar": ["SAME", "RANGE?"]}, "etiket": null},
+    {"sahne": 34, "cumleler": [1], "gorsel": 38, "baslik": {"satirlar": ["BUT SMALL", "TRIALS"]}, "etiket": null},
+    {"sahne": 35, "cumleler": [2]},
+    {"sahne": 36, "cumleler": [3], "baslik": null, "etiket": null},
+    {"sahne": 50, "cumleler": [2]}
+  ]
+}
