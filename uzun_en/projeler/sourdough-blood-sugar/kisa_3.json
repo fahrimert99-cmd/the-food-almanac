@@ -1,0 +1,17 @@
+{
+  "baslik": ["SOURDOUGH:", "FREE PASS?"],
+  "baslik_yt": "Is Sourdough a Free Pass for Blood Sugar?",
+  "aciklama": "Sourdough may be a little gentler on blood sugar, but it is still bread. Here is what 25 trials can and cannot tell us, and how to eat it sensibly.",
+  "parcalar": [
+    {"sahne": 41, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 41, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 31, "cumleler": [0],
+     "baslik": {"satirlar": ["LATEST", "REVIEW"], "vurgu": "25 TRIALS", "not": "542 adults pooled"},
+     "etiket": "Ribet et al. · Adv Nutr · 2023"},
+    {"sahne": 31, "cumleler": [1], "baslik": null},
+    {"sahne": 40, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 40, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 55, "cumleler": [3], "baslik": {"satirlar": ["PORTIONS", "MATTER"]}, "etiket": null},
+    {"sahne": 44, "cumleler": [1], "baslik": {"satirlar": ["NOT A", "FREE PASS"]}, "etiket": null}
+  ]
+}
