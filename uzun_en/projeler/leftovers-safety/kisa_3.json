@@ -1,0 +1,18 @@
+{
+  "baslik": ["COLD FRIDGE", "STOPS GERMS?"],
+  "baslik_yt": "Some Germs Keep Growing in Your Fridge",
+  "aciklama": "A cold fridge slows most bacteria, but Listeria can still grow. Here is what a lab study found, why it matters more after 65, and why freezing early helps.",
+  "parcalar": [
+    {"sahne": 18, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 18, "cumleler": [2]},
+    {"sahne": 19, "cumleler": [0]},
+    {"sahne": 20, "cumleler": [1], "gorsel": 19,
+     "baslik": {"satirlar": ["DOUBLES", "IN DAYS"], "vurgu": "94 HOURS", "not": "doubling time at 36°F"},
+     "etiket": "Evans & Redmond · Food Prot Trends 2019"},
+    {"sahne": 21, "cumleler": [1]},
+    {"sahne": 46, "cumleler": [1]},
+    {"sahne": 48, "cumleler": [1],
+     "baslik": {"satirlar": ["OLDER EATERS,", "WARMER FRIDGES"]}},
+    {"sahne": 41, "cumleler": [2, 3]}
+  ]
+}
