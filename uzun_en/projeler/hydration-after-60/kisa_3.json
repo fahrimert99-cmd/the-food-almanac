@@ -1,0 +1,23 @@
+{
+  "baslik": ["COFFEE COUNTS", "AS WATER?"],
+  "baslik_yt": "Does Coffee Count as Water? How Much You Need",
+  "aciklama": "The National Academies say coffee and tea count toward your daily water. Here is the adequate intake for women and men, and how to spread it through the day.",
+  "parcalar": [
+    {"sahne": 30, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 30, "cumleler": [1],
+     "baslik": {"satirlar": ["CAFFEINE", "STILL COUNTS"]},
+     "etiket": "National Academies panel"},
+    {"sahne": 58, "cumleler": [0],
+     "baslik": {"satirlar": ["DAILY TOTAL"], "vurgu": "2.7 L", "not": "women's total water a day"},
+     "etiket": "National Academies · adequate intake"},
+    {"sahne": 29, "cumleler": [1],
+     "baslik": {"satirlar": ["ACTIVE OR HOT?", "DRINK MORE"]},
+     "etiket": null},
+    {"sahne": 50, "cumleler": [2],
+     "baslik": {"satirlar": ["FRONT-LOAD", "YOUR DAY"]},
+     "etiket": null},
+    {"sahne": 54, "cumleler": [0],
+     "baslik": {"satirlar": ["YOUR CARE", "TEAM'S TARGET"]},
+     "etiket": null}
+  ]
+}
