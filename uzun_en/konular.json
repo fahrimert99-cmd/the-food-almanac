@@ -535,6 +535,17 @@
       "durum": "uretimde"
     },
     {
+      "slug": "leftovers-safety",
+      "soru": "How long are leftovers really safe to eat?",
+      "aci": "Leftovers: the USDA two-hour rule and 3–4 day fridge guideline, why smell is not a safety test (Listeria and Bacillus cereus don't announce themselves), cooling big pots quickly, reheating to 165°F, freezing to pause the clock, and why food poisoning is riskier after 60.",
+      "anahtar": [
+        "how long are leftovers good for",
+        "leftovers safe to eat",
+        "reheating leftovers safely"
+      ],
+      "durum": "bekliyor"
+    },
+    {
       "slug": "vitamin-c-colds",
       "soru": "Does vitamin C or orange juice help prevent or shorten a cold?",
       "aci": "Vitamin C and colds: the Cochrane review of 29 trials (no fewer colds for most people, slightly shorter colds with regular intake, nothing from starting after symptoms begin), the exception for people under heavy physical stress, food vs supplements, and the kidney stone caution with high doses.",
@@ -608,17 +619,6 @@
         "tomatoes prostate cancer",
         "lycopene prostate",
         "cooked tomatoes lycopene"
-      ],
-      "durum": "bekliyor"
-    },
-    {
-      "slug": "leftovers-safety",
-      "soru": "How long are leftovers really safe to eat?",
-      "aci": "Leftovers: the USDA two-hour rule and 3–4 day fridge guideline, why smell is not a safety test (Listeria and Bacillus cereus don't announce themselves), cooling big pots quickly, reheating to 165°F, freezing to pause the clock, and why food poisoning is riskier after 60.",
-      "anahtar": [
-        "how long are leftovers good for",
-        "leftovers safe to eat",
-        "reheating leftovers safely"
       ],
       "durum": "bekliyor"
     }

@@ -65,7 +65,7 @@ def uret(slug):
     parca.append("SOURCES\n" + "\n".join(f"{i}. {k}" for i, k in enumerate(p["kaynaklar"], 1)))
     if m.get("aciklama_sonu"):
         parca.append(m["aciklama_sonu"].strip())
-    parca.append(f"Subscribe to {m.get('ad', '')} for a new food-science explainer every Tuesday and Friday.")
+    parca.append(f"Subscribe to {m.get('ad', '')} for a new food-science explainer every {O.yayin_gunleri()}.")
     parca.append(hashtag(p.get("etiketler", [])))
     aciklama = temiz("\n\n".join(x for x in parca if x))[:4900]
     etiketler = etiket_listesi(p, m)

@@ -40,7 +40,7 @@ export const Afis: React.FC = () => (
       <div style={{ width: 300, height: 7, background: RENK.altin, borderRadius: 4, margin: "6px 0 18px" }} />
       <div style={{ fontFamily: INTER, fontWeight: 500, fontSize: 46, color: RENK.koyuYesil }}>{marka.slogan}</div>
       <div style={{ marginTop: 22, background: RENK.lacivert, color: "#fff", borderRadius: 999, padding: "10px 30px",
-        fontFamily: INTER, fontWeight: 800, fontSize: 26, letterSpacing: 5 }}>NEW VIDEOS EVERY TUESDAY &amp; FRIDAY</div>
+        fontFamily: INTER, fontWeight: 800, fontSize: 26, letterSpacing: 5 }}>NEW VIDEOS EVERY MONDAY, WEDNESDAY &amp; FRIDAY</div>
     </div>
   </AbsoluteFill>
 );
