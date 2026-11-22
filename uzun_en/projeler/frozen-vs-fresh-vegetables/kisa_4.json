@@ -1,0 +1,14 @@
+{
+  "baslik": ["FROZEN VEG:", "THE CATCH?"],
+  "baslik_yt": "Frozen Vegetables: The Catches Nobody Mentions",
+  "aciklama": "Frozen vegetables hold up well in vitamin tests, but there are limits those tests miss. Here is what to watch for, and how to buy smarter.",
+  "parcalar": [
+    {"sahne": 33, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 33, "cumleler": [1], "baslik": {"satirlar": ["SAUCE,", "BUTTER, SALT"]}, "etiket": null},
+    {"sahne": 49, "cumleler": [1, 2]},
+    {"sahne": 34, "cumleler": [1], "baslik": {"satirlar": ["WHO PAID", "FOR IT?"]}, "etiket": null},
+    {"sahne": 34, "cumleler": [2], "gorsel": 35, "baslik": null, "etiket": null},
+    {"sahne": 36, "cumleler": [1], "etiket": "NHS · Eat well guidance"},
+    {"sahne": 49, "cumleler": [3], "gorsel": 32, "baslik": {"satirlar": ["MIX IT UP"]}, "etiket": null}
+  ]
+}
