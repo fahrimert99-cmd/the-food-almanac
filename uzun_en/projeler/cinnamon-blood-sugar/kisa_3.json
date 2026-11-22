@@ -1,0 +1,22 @@
+{
+  "baslik": ["CINNAMON", "AS MEDICINE?"],
+  "baslik_yt": "The Famous Cinnamon Trial Has a Problem",
+  "aciklama": "A 2003 trial made cinnamon look like a blood sugar fix, but its journal later added an expression of concern, and a pooled analysis found no change. Here is what that means for your medicine.",
+  "parcalar": [
+    {"sahne": 45, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 9, "cumleler": [0],
+     "baslik": {"satirlar": ["THE 2003", "TRIAL"], "vurgu": "60 ADULTS", "not": "1, 3 or 6 g a day, 40 days"},
+     "etiket": "Khan et al. · Diabetes Care · 2003"},
+    {"sahne": 9, "cumleler": [1],
+     "baslik": {"satirlar": ["GLUCOSE", "FELL"], "vurgu": "18–29%", "not": "fasting glucose drop"},
+     "etiket": "Khan et al. · Diabetes Care · 2003"},
+    {"sahne": 10, "cumleler": [1],
+     "baslik": {"satirlar": ["2025:", "CONCERN"]},
+     "etiket": "Khan et al. · Diabetes Care · 2003"},
+    {"sahne": 11, "cumleler": [0]},
+    {"sahne": 11, "cumleler": [1], "gorsel": 14,
+     "baslik": {"satirlar": ["NO CHANGE", "IN A1C"]},
+     "etiket": "Baker et al. · Diabetes Care · 2008"},
+    {"sahne": 46, "cumleler": [0]}
+  ]
+}
