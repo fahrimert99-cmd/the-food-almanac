@@ -136,7 +136,7 @@ def kart_acilis(bolumler, yol, haftalik=False):
         y += 38
     if len(bolumler) > len(goster):
         c.text((80, y), f"       … and {len(bolumler) - len(goster)} more", font=f, fill=KREM)
-    c.text((80, H - 60), "Replay of past episodes  ·  New videos every Tuesday & Friday",
+    c.text((80, H - 60), f"Replay of past episodes  ·  New videos every {O.yayin_gunleri(' & ')}",
            font=_font("Inter-Medium.otf", 24), fill=SARI)
     im.save(yol)
 
@@ -146,7 +146,7 @@ def kart_siradaki(b, i, n, kapak, yol):
     im, c = _zemin()
     c.text((80, 120), f"UP NEXT  ·  EPISODE {i} OF {n}", font=_font("Inter-ExtraBold.otf", 30), fill=SARI)
     _yaz_sarili(c, (80, 180), b["baslik"].upper(), _font("Anton-Regular.ttf", 64), KREM, 560)
-    c.text((80, H - 90), "Subscribe for new episodes every Tuesday & Friday",
+    c.text((80, H - 90), f"Subscribe for new episodes every {O.yayin_gunleri(' & ')}",
            font=_font("Inter-Medium.otf", 24), fill=KREM)
     if kapak and os.path.exists(kapak):
         k = Image.open(kapak).convert("RGB").resize((560, 315))
@@ -157,9 +157,9 @@ def kart_siradaki(b, i, n, kapak, yol):
 def kart_kapanis(yol):
     im, c = _zemin()
     c.text((80, 200), "THANKS FOR WATCHING", font=_font("Anton-Regular.ttf", 110), fill=KREM)
-    c.text((80, 350), "New episodes every Tuesday & Friday. Subscribe so you don't miss them.",
+    c.text((80, 350), f"New episodes every {O.yayin_gunleri(' & ')}. Subscribe so you don't miss them.",
            font=_font("Inter-Medium.otf", 32), fill=KREM)
-    c.text((80, 410), "Live again tomorrow, same time", font=_font("Inter-Bold.otf", 32), fill=SARI)
+    c.text((80, 410), "Live again every Wednesday & Saturday", font=_font("Inter-Bold.otf", 32), fill=SARI)
     c.text((80, H - 80), "Education only, not medical advice. Talk to your doctor before changing your diet.",
            font=_font("Inter-Medium.otf", 22), fill=KREM)
     im.save(yol)
@@ -294,7 +294,7 @@ def baslik_aciklama(plan):
     m = O.marka()
     aciklama = (f"A live replay marathon of {n} episodes of The Food Almanac: popular food claims, checked against "
                 "the research.\n\nIn this stream:\n" + "\n".join(satir) +
-                "\n\nLive marathon every day. New episodes every Tuesday and Friday. Subscribe so you don't miss them.\n\n"
+                "\n\nLive replay marathon every Wednesday and Saturday. New episodes every " + O.yayin_gunleri() + ". Subscribe so you don't miss them.\n\n"
                 "This stream replays previously published episodes. Sources for each claim are listed in the "
                 "description of each full video above.\n\n" + m.get("aciklama_sonu", ""))
     return baslik[:100], aciklama[:4900]

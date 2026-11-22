@@ -48,6 +48,15 @@ def marka():
     return json_oku(os.path.join(KOK, "marka.json"), {})
 
 
+GUN_ADLARI = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+
+def yayin_gunleri(ayrac=" and "):
+    """marka.json yayin.gunler -> "Monday, Wednesday and Friday" (açıklama, kart ve kanal metinleri için)."""
+    ad = [GUN_ADLARI[g] for g in sorted(marka().get("yayin", {}).get("gunler", [1, 4]))]
+    return ad[0] if len(ad) == 1 else ", ".join(ad[:-1]) + ayrac + ad[-1]
+
+
 def durum():
     d = json_oku(DURUM, {}) or {}
     d.setdefault("videolar", {})
