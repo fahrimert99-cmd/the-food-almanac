@@ -1,0 +1,19 @@
+{
+  "baslik": ["ORANGE JUICE", "OR A PILL?"],
+  "baslik_yt": "Orange Juice or Vitamin C Pills for Colds?",
+  "aciklama": "The biggest review of vitamin C and colds tested supplements of 200 mg or more a day, not orange juice. Here is what that gap means and what food still does well.",
+  "parcalar": [
+    {"sahne": 33, "cumleler": [1], "gorsel": 3, "baslik": null, "etiket": null},
+    {"sahne": 34, "cumleler": [1], "gorsel": 12,
+     "baslik": {"satirlar": ["TESTED:", "SUPPLEMENTS"], "vurgu": "200 MG+", "not": "a day, in the review"},
+     "etiket": "Hemilä & Chalker · Cochrane · 2013"},
+    {"sahne": 34, "cumleler": [2], "baslik": {"satirlar": ["JUICE WAS", "NOT TESTED"]}, "etiket": null},
+    {"sahne": 35, "cumleler": [1],
+     "baslik": {"satirlar": ["ONE CUP", "OF JUICE"], "vurgu": "80–125 MG", "not": "vitamin C per cup"},
+     "etiket": "USDA FoodData Central values"},
+    {"sahne": 35, "cumleler": [2, 3], "baslik": null, "etiket": null},
+    {"sahne": 36, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 36, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 37, "cumleler": [1, 2], "baslik": {"satirlar": ["NOT A", "COLD SHIELD"]}, "etiket": null}
+  ]
+}
