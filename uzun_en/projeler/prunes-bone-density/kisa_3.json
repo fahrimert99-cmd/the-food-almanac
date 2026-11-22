@@ -1,0 +1,14 @@
+{
+  "baslik": ["PRUNES: ASK", "YOUR DOCTOR?"],
+  "baslik_yt": "Prunes and Your Medicines: Who Should Check First",
+  "aciklama": "Prunes are a healthy food, but a daily portion can matter if you take warfarin, track blood sugar or have kidney disease. Here is what to check first.",
+  "parcalar": [
+    {"sahne": 45, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 48, "cumleler": [0, 1], "baslik": {"satirlar": ["WARFARIN?", "KEEP IT STEADY"], "vurgu": "30 µg", "not": "vitamin K in 50 g of prunes"}, "etiket": "MedlinePlus · USDA"},
+    {"sahne": 48, "cumleler": [2, 3], "baslik": null, "etiket": null},
+    {"sahne": 47, "cumleler": [0], "baslik": {"satirlar": ["POTASSIUM"], "vurgu": "732 MG", "not": "per 100 grams of prunes"}, "etiket": "USDA FoodData Central"},
+    {"sahne": 47, "cumleler": [1, 2], "baslik": {"satirlar": ["KIDNEY", "DISEASE?"]}, "etiket": null},
+    {"sahne": 46, "cumleler": [2]},
+    {"sahne": 56, "cumleler": [0]}
+  ]
+}
