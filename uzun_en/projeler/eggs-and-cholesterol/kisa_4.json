@@ -1,0 +1,16 @@
+{
+  "baslik": ["EGGS WITH", "DIABETES?"],
+  "baslik_yt": "Eggs and Type 2 Diabetes: What the Research Says",
+  "aciklama": "Can people with type 2 diabetes eat eggs? Here is what the Harvard cohorts showed, why the answer is not the same for everyone, and when to talk to your doctor.",
+  "parcalar": [
+    {"sahne": 47, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 43, "cumleler": [1],
+     "baslik": {"satirlar": ["TYPE 2", "DIABETES"], "vurgu": "HR 1.06", "not": "wide margin of error"},
+     "etiket": "Drouin-Chartier et al. · BMJ · 2020"},
+    {"sahne": 48, "cumleler": [0]},
+    {"sahne": 48, "cumleler": [1], "gorsel": 47, "baslik": null},
+    {"sahne": 50, "cumleler": [3], "baslik": null},
+    {"sahne": 54, "cumleler": [1], "baslik": {"satirlar": ["SAFETY", "FIRST"]}},
+    {"sahne": 54, "cumleler": [2], "baslik": null}
+  ]
+}
