@@ -1,0 +1,17 @@
+{
+  "baslik": ["MIND DIET:", "NO SUPPLEMENTS"],
+  "baslik_yt": "The 15-Point MIND Diet Scorecard, Explained",
+  "aciklama": "The MIND diet is a 15-item scorecard built from ordinary supermarket foods. Here is what counts, what to limit, and what the evidence does and does not show.",
+  "parcalar": [
+    {"sahne": 9, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 6, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["MIND", "SCORECARD"], "vurgu": "15 ITEMS", "not": "10 to eat, 5 to limit"}, "etiket": null},
+    {"sahne": 7, "cumleler": [0]},
+    {"sahne": 7, "cumleler": [1, 2], "gorsel": 45, "baslik": null},
+    {"sahne": 8, "cumleler": [0]},
+    {"sahne": 49, "cumleler": [0, 1, 2]},
+    {"sahne": 49, "cumleler": [3, 4, 5], "gorsel": 46, "baslik": null},
+    {"sahne": 43, "cumleler": [0], "baslik": {"satirlar": ["A REASONABLE", "BET"]}},
+    {"sahne": 48, "cumleler": [1, 2], "baslik": {"satirlar": ["A DIRECTION,", "NOT A BAN"]}}
+  ]
+}
