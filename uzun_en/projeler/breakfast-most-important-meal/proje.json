@@ -2,7 +2,7 @@
   "slug": "breakfast-most-important-meal",
   "kanal": "The Food Almanac",
   "dil": "en",
-  "baslik": "Does Skipping Breakfast Raise Blood Sugar in Type 2 Diabetes?",
+  "baslik": "Does Skipping Breakfast Spike Blood Sugar in Diabetes?",
   "yorum": "Are you a breakfast eater or a breakfast skipper, and has that changed as you got older? Has your doctor or pharmacist ever talked to you about when to take your morning pills?",
   "aciklama_giris": "Is breakfast really the most important meal of the day? Randomized trials found that eating it did not help adults control their weight. But in a small crossover trial of 22 adults with type 2 diabetes, skipping breakfast made the blood sugar response after an identical lunch about 37 percent higher.\n\nIn this video we look at where the slogan came from, what trials say about weight and metabolism, the second-meal effect on blood sugar, what research says about protein and muscle after 60, why the evidence on heart disease is only an association, and how to think about the timing of morning medicines such as metformin and levothyroxine.",
   "kaynaklar": [
@@ -30,8 +30,7 @@
       "BREAKFAST?"
     ],
     "vurgu": "+37%",
-    "vurgu_alt": "glucose",
-    "serit": "Small trial · diabetes · lunch",
+    "vurgu_alt": "GLUCOSE",
     "gorsel": "a large breakfast plate with two fried eggs and a slice of toast, a bowl of oatmeal beside it, a glucose meter with a blank screen overlapping behind the plate, everything close up and tightly grouped"
   },
   "etiketler": [

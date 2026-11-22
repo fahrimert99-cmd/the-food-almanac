@@ -2,7 +2,7 @@
   "slug": "multivitamins-evidence",
   "kanal": "The Food Almanac",
   "dil": "en",
-  "baslik": "Do Multivitamins Work After 60?",
+  "baslik": "Is a Daily Multivitamin Worth It After 60?",
   "yorum": "Do you take a daily multivitamin, and what made you start? Has your doctor ever talked with you about B12 or vitamin D?",
   "aciklama_giris": "Do daily multivitamins do anything after 60? In the Physicians' Health Study II, a multivitamin did not prevent heart events and had at most a modest effect on cancer and cataracts in male doctors. In the COSMOS trials of adults over 60, it slightly improved memory scores over two to three years. Experts still call the evidence insufficient.\n\nIn this video we look at those trials, what the US Preventive Services Task Force concluded in 2022, why vitamin B12 and vitamin D may matter more than a combined pill, and five practical points, including medicine safety notes.",
   "kaynaklar": [
@@ -19,9 +19,10 @@
     "NIH Office of Dietary Supplements. Vitamin B12: Fact Sheet for Consumers. ods.od.nih.gov/factsheets/VitaminB12-Consumer/"
   ],
   "kapak": {
-    "satirlar": ["MULTIVITAMIN", "AFTER 60?"],
-    "vurgu": "~2 YRS",
-    "vurgu_alt": "cognition",
+    "satirlar": [
+      "MULTIVITAMIN",
+      "WORTH IT?"
+    ],
     "gorsel": "a large amber glass pill bottle with a plain cap tipped on its side, a few round tablets spilled in front of it, and a cheerful smiling person in their 60s holding a glass of water behind, tightly grouped and overlapping, close-up"
   },
   "etiketler": ["multivitamin", "multivitamins after 60", "cosmos study", "multivitamin memory", "vitamin b12", "vitamin d", "seniors supplements", "physicians health study", "uspstf supplements", "nutrition science"],

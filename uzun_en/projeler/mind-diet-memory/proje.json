@@ -2,7 +2,7 @@
   "slug": "mind-diet-memory",
   "kanal": "The Food Almanac",
   "dil": "en",
-  "baslik": "MIND Diet and Memory After 60: What Studies Show",
+  "baslik": "Can the MIND Diet Protect Your Memory After 65?",
   "yorum": "Do you already eat leafy greens or berries most days? Has your doctor ever talked with you about diet and memory?",
   "aciklama_giris": "In observational studies at Rush University, older adults who followed the MIND diet most closely had a lower rate of Alzheimer's disease and slower memory decline. But when a three-year randomized trial in 604 adults aged 65 and older tested the diet against a control diet, both groups improved and the difference was not statistically significant.\n\nIn this video we look at what the MIND diet is, what the Rush cohort studies found, what the New England Journal of Medicine trial showed, why both groups may have improved, and which simple food habits, such as leafy greens and berries, have the best support. We also cover a safety note for people taking blood thinners.",
   "kaynaklar": [
@@ -15,10 +15,10 @@
     "Huang L, Tao Y, Chen H, et al. Mediterranean-Dietary Approaches to Stop Hypertension Intervention for Neurodegenerative Delay (MIND) diet and cognitive function and its decline: a prospective study and meta-analysis of cohort studies. American Journal of Clinical Nutrition. 2023;118(1):174-182. doi:10.1016/j.ajcnut.2023.04.025. PMID 37105521."
   ],
   "kapak": {
-    "satirlar": ["MIND", "DIET?"],
-    "vurgu": "–53%",
-    "vurgu_alt": "Alzheimer's",
-    "serit": "Observation vs. 2023 trial",
+    "satirlar": [
+      "MIND DIET",
+      "FOR MEMORY?"
+    ],
     "gorsel": "a large white plate close up holding a grilled salmon fillet, a heap of dark leafy greens, a bowl of blueberries and a handful of walnuts, tightly grouped and overlapping, with a small bottle of olive oil behind"
   },
   "etiketler": ["mind diet", "memory after 60", "diet and dementia", "brain health foods", "alzheimer's prevention", "leafy greens", "blueberries", "cognitive decline", "mind diet study", "nutrition science"],
