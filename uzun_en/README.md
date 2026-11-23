@@ -83,7 +83,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
 - **Üretimi durdurmak (yayın sürer):** `uzun_en/marka.json` → `"uretim_durdur": true`. Yeni uzun video ve Shorts
   üretilmez, boş günlere ek Shorts ayrılmaz; zamanlanmış videoların yayını, yorumlar, Reels/TikTok/X paylaşımı ve
   kota bekleyen yüklemeler sürer. Yarıda kalan video kaldığı aşamada bekler. Yeniden başlatmak: `false` yapın.
-  (11 Kasım 2026'dan beri `true`, kanal sahibinin isteğiyle.)
+  (23 Kasım 2026'dan beri `true`, kanal sahibinin isteğiyle; yeni talimata kadar.)
   Durdurulmuşken tek bir yarım videoyu bitirtmek: `"uretim_tek": "slug"` (yalnızca o aktif proje ilerler; Shorts yine üretilmez).
 - **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**. (her şeyi, yayın denetimini de durdurur)
 - **Durum:** `uzun_en/durum.json` her videonun aşamasını, slotunu ve YouTube kimliğini tutar
