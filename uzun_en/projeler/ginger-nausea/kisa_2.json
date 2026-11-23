@@ -1,0 +1,14 @@
+{
+  "baslik": ["GINGER ALE:", "REAL GINGER?"],
+  "baslik_yt": "Is There Real Ginger in Ginger Ale?",
+  "aciklama": "One major ginger ale now lists less than 2 percent ginger extract on its U.S. label. Here is how tea, capsules and ginger ale compare as a source of ginger.",
+  "parcalar": [
+    {"sahne": 36, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 35, "cumleler": [1], "baslik": {"satirlar": ["GINGER ALE", "ON TRIAL"], "vurgu": "<2%", "not": "ginger extract on label"}, "etiket": null},
+    {"sahne": 36, "cumleler": [0, 1], "gorsel": 36, "baslik": null, "etiket": null},
+    {"sahne": 33, "cumleler": [0, 1], "baslik": {"satirlar": ["TEA: REAL,", "BUT UNMEASURED"]}},
+    {"sahne": 34, "cumleler": [0, 1], "baslik": {"satirlar": ["READ THE", "MILLIGRAMS"]}},
+    {"sahne": 37, "cumleler": [0], "baslik": null},
+    {"sahne": 37, "cumleler": [1], "gorsel": 56, "baslik": {"satirlar": ["A DRINK,", "NOT A DOSE"]}}
+  ]
+}
