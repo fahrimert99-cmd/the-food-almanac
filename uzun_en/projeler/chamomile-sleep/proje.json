@@ -1,0 +1,425 @@
+{
+  "slug": "chamomile-sleep",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Can Chamomile Tea Help You Sleep?",
+  "yorum": "Do you drink chamomile tea or another warm drink before bed? Has it made any difference in how you sleep, or is it mostly a relaxing habit?",
+  "aciklama_giris": "Older adults taking chamomile extract for four weeks rated their sleep better than those on a dummy pill. Yet adults with long-term insomnia, on a similar extract dose, showed no clear difference. This video walks through the small trials in older adults, new mothers and people with insomnia, and what two review papers found when they pooled them: some help for sleep quality, little evidence for insomnia itself.\n\nWe also look at how chamomile's compound apigenin might work (so far only in mice and lab tests), the possible role of a warm-drink routine, cautions for people with ragweed or daisy-family allergies, blood thinners such as warfarin, and sedatives, and four practical tips.",
+  "kaynaklar": [
+    "Adib-Hajbaghery M, Mousavi SN. The effects of chamomile extract on sleep quality among elderly people: A clinical trial. Complementary Therapies in Medicine. 2017;35:109-114. doi:10.1016/j.ctim.2017.09.010 (PMID 29154054)",
+    "Zick SM, Wright BD, Sen A, Arnedt JT. Preliminary examination of the efficacy and safety of a standardized chamomile extract for chronic primary insomnia: a randomized placebo-controlled pilot study. BMC Complementary and Alternative Medicine. 2011;11:78. doi:10.1186/1472-6882-11-78 (PMID 21939549)",
+    "Chang SM, Chen CH. Effects of an intervention with drinking chamomile tea on sleep quality and depression in sleep disturbed postnatal women: a randomized controlled trial. Journal of Advanced Nursing. 2016;72(2):306-315. doi:10.1111/jan.12836 (PMID 26483209)",
+    "Hieu TH, Dibas M, Surya Dila KA, et al. Therapeutic efficacy and safety of chamomile for state anxiety, generalized anxiety disorder, insomnia, and sleep quality: a systematic review and meta-analysis of randomized trials and quasi-randomized trials. Phytotherapy Research. 2019;33(6):1604-1615. doi:10.1002/ptr.6349 (PMID 31006899)",
+    "Effects of chamomile (Matricaria chamomilla L.) on sleep: a systematic review and meta-analysis of clinical trials. Complementary Therapies in Medicine. 2024;84:103071. doi:10.1016/j.ctim.2024.103071 (PMID 39106912)",
+    "National Center for Complementary and Integrative Health (NIH). Chamomile. https://www.nccih.nih.gov/health/chamomile",
+    "Viola H, Wasowski C, Levi de Stein M, et al. Apigenin, a component of Matricaria recutita flowers, is a central benzodiazepine receptors-ligand with anxiolytic effects. Planta Medica. 1995;61(3):213-216. doi:10.1055/s-2006-958058",
+    "Segal R, Pilote L. Warfarin interaction with Matricaria chamomilla. Canadian Medical Association Journal. 2006;174(9):1281-1282 (PMC1435958)",
+    "Anaphylactic reaction after the ingestion of chamomile tea: a study of cross-reactivity with other composite pollens. Journal of Allergy and Clinical Immunology. 1989 (PMID 2674263)",
+    "Qaseem A, Kansagara D, Forciea MA, Cooke M, Denberg TD; Clinical Guidelines Committee of the American College of Physicians. Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians. Annals of Internal Medicine. 2016;165(2):125-133. doi:10.7326/M15-2175 (PMID 27136449)",
+    "Srivastava JK, Shankar E, Gupta S. Chamomile: a herbal medicine of the past with bright future. Molecular Medicine Reports. 2010;3(6):895-901. doi:10.3892/mmr.2010.377 (PMID 21132119)"
+  ],
+  "kapak": {
+    "satirlar": [
+      "CHAMOMILE",
+      "HELPS SLEEP?"
+    ],
+    "gorsel": "a large white ceramic teacup full of golden chamomile tea with a curl of steam, a generous heap of fresh white chamomile flowers with yellow centers overlapping in front of it, a bright crescent moon behind, tightly grouped, bright and appetizing"
+  },
+  "kahraman": "chamomile",
+  "merak": [
+    {"soru": "Why did two trials of the same herb give opposite results?", "ac": 2, "cevap": 16},
+    {"soru": "Did older adults really sleep better on chamomile?", "ac": 6, "cevap": 10},
+    {"soru": "Does a cup of tea work like the capsules?", "ac": 17, "cevap": 21},
+    {"soru": "Is it the herb, or the warm-cup ritual?", "ac": 22, "cevap": 37},
+    {"soru": "What is the difference between sleep quality and insomnia?", "ac": 25, "cevap": 29},
+    {"soru": "Is chamomile a kind of mild sleeping pill?", "ac": 31, "cevap": 35},
+    {"soru": "Who should think twice before drinking it?", "ac": 40, "cevap": 46},
+    {"soru": "So what should you actually do with all this?", "ac": 47, "cevap": 52}
+  ],
+  "etiketler": [
+    "chamomile tea",
+    "chamomile for sleep",
+    "does chamomile help insomnia",
+    "bedtime tea",
+    "sleep after 60",
+    "herbal tea",
+    "apigenin",
+    "sleep quality",
+    "chamomile and warfarin",
+    "nutrition science"
+  ],
+  "seslendirme_duzelt": {
+    "INR": "I N R",
+    "CBT-I": "C B T I",
+    "apigenin": "uh pij eh nin",
+    "chamomile": "KAM uh meel",
+    "Matricaria": "mat rih KAIR ee uh"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Two trials, opposite results",
+      "metin": "Older adults who took chamomile extract for four weeks slept better than those given a dummy pill. But adults with long-term insomnia, on a similar extract dose, saw no clear difference.",
+      "gorsel": "two identical small glass jars of dried chamomile flowers side by side on a wooden table, one with a tiny green sprout beside it and one without, soft morning light",
+      "baslik": {"satirlar": ["SAME HERB,", "OPPOSITE RESULTS"]}
+    },
+    {
+      "id": 2,
+      "metin": "Same herb. Same four weeks. Opposite results. What explains that?",
+      "gorsel": "a pair of antique brass balance scales holding a handful of chamomile flowers on one pan and an empty pan on the other, tilting unevenly"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know what a bedtime cup can realistically do, and who should skip it.",
+      "gorsel": "a steaming cup of chamomile tea on a bedside table beside a closed book and an old oil lamp, a crescent moon visible through the window"
+    },
+    {
+      "id": 4,
+      "bolum": "What chamomile is",
+      "metin": "This is The Food Almanac. Let's start with the plant itself. Chamomile tea is made from the dried flower heads of a small, daisy-like herb.",
+      "gorsel": "a botanical engraving of a whole chamomile plant with slender stems and many small white chamomile flowers with raised yellow centers, roots included",
+      "baslik": {"satirlar": ["THE FLOWER", "BEHIND THE TEA"]}
+    },
+    {
+      "id": 5,
+      "metin": "People have sipped it as a calming drink for centuries. Traditional use isn't proof, of course, which is why researchers have put it to the test in sleep trials.",
+      "gorsel": "a wooden tray with a ceramic teapot, a small bowl of dried chamomile flowers and a glass cup of pale golden chamomile tea, set on a linen cloth"
+    },
+    {
+      "id": 6,
+      "metin": "Those trials come in two forms: cups of tea, and capsules of concentrated extract. That difference will matter later. First, the group closest to many of you. Did older adults sleep better?",
+      "gorsel": "on the left a cup of chamomile tea, on the right a small open dish holding a few plain capsules beside a few chamomile flowers, tightly grouped on a white table"
+    },
+    {
+      "id": 7,
+      "bolum": "Trial one: older adults",
+      "metin": "In 2017, Adib-Hajbaghery and Mousavi studied 60 adults, all aged 60 or older, at a day care nursing home in Iran.",
+      "gorsel": "a bright, quiet day room with two armchairs by a window, a small table holding a pot of chamomile tea and two cups, a folded blanket on one chair",
+      "etiket": "Adib-Hajbaghery & Mousavi · Complement Ther Med · 2017",
+      "baslik": {"satirlar": ["60 OLDER", "ADULTS"], "not": "aged 60 or more, Iran"}
+    },
+    {
+      "id": 8,
+      "metin": "Half took chamomile extract capsules, 200 milligrams twice a day, for 28 days. The other half took capsules filled with plain wheat flour. Then both groups rated their sleep on a standard questionnaire.",
+      "gorsel": "two matching glass dishes each holding identical capsules, one dish with a few chamomile flowers beside it and the other with a small sheaf of wheat, side by side",
+      "baslik": {"satirlar": ["200 MG", "TWICE A DAY"], "not": "for 28 days"}
+    },
+    {
+      "id": 9,
+      "metin": "The flour capsules are a placebo. They look the same, so if people feel better simply because they expect to, both groups should show it. That is what lets researchers isolate the herb.",
+      "gorsel": "a hand-drawn scene of two identical sealed paper envelopes on a table, one marked with a small chamomile flower and the other with a small wheat ear, a magnifying glass resting between them"
+    },
+    {
+      "id": 10,
+      "metin": "After four weeks, the chamomile group reported significantly better sleep quality than the flour group. That is a measured improvement, in an age group many viewers belong to.",
+      "gorsel": "an older adult's hands holding a cup of chamomile tea, resting on a quilted blanket, a crescent moon on a soft window curtain behind",
+      "etiket": "Adib-Hajbaghery & Mousavi · Complement Ther Med · 2017",
+      "baslik": {"satirlar": ["BETTER", "SLEEP QUALITY"], "not": "chamomile group vs placebo, 4 weeks"}
+    },
+    {
+      "id": 11,
+      "metin": "There is an asterisk. It was one site and 60 people, the pills were extract rather than tea, and sleep was self-reported. Good news, but with limits.",
+      "gorsel": "a small chamomile flower pressed beside a tiny star-shaped mark on aged paper, a pair of round reading glasses resting on it"
+    },
+    {
+      "id": 12,
+      "bolum": "Trial two: long-term insomnia",
+      "metin": "Now the other side. Zick and colleagues tested 34 adults, aged 18 to 65, who had been diagnosed with insomnia lasting at least six months.",
+      "gorsel": "a dim bedroom with a rumpled bed, a bedside clock with a blank face and a cup of chamomile tea going cold on the nightstand, a crescent moon in the window",
+      "etiket": "Zick et al. · BMC Complement Altern Med · 2011",
+      "baslik": {"satirlar": ["34 ADULTS", "WITH INSOMNIA"]}
+    },
+    {
+      "id": 13,
+      "metin": "Half took 270 milligrams of chamomile extract twice a day for 28 days, and half took a placebo. Everyone kept a daily sleep diary, so researchers could track how long it took to fall asleep and how often people woke.",
+      "gorsel": "an open notebook with plain lined pages beside a pencil, a small dish of chamomile flowers and a cup of chamomile tea, on a bedside table"
+    },
+    {
+      "id": 14,
+      "metin": "The result: no significant difference between the groups on any sleep diary measure. Time to fall asleep and night awakenings leaned toward chamomile, but total sleep time actually leaned toward the placebo.",
+      "gorsel": "a simple wooden see-saw balanced almost level, a chamomile flower on one end and a plain white pill on the other, soft studio light",
+      "etiket": "Zick et al. · BMC Complement Altern Med · 2011",
+      "baslik": {"satirlar": ["NO CLEAR", "DIFFERENCE"], "not": "sleep diary measures"}
+    },
+    {
+      "id": 15,
+      "metin": "It was a pilot study, with only 17 people per group, too small to catch modest effects. It excluded people with mood or anxiety disorders, and the authors noted that improvements could reflect the natural ups and downs of insomnia.",
+      "gorsel": "a small glass jar containing only a few chamomile flowers beside a much larger empty glass jar, on a plain table"
+    },
+    {
+      "id": 16,
+      "metin": "So why did the two trials disagree? Likely three reasons. One group had everyday poor sleep, the other had long-term insomnia. One measured sleep quality, the other measured diary minutes. And 34 people is very few.",
+      "gorsel": "three small brass keys of different shapes laid out beside a chamomile flower and a cup of chamomile tea, on a worn leather desk top",
+      "baslik": {"satirlar": ["WHY THEY", "DISAGREED"]}
+    },
+    {
+      "id": 17,
+      "bolum": "What about real tea?",
+      "tip": "kart",
+      "metin": "So what about an actual cup of tea?",
+      "kart": {
+        "ust": "THE CUP",
+        "baslik": "What about real tea?",
+        "alt": "Taiwan · 2016 · new mothers"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "In Taiwan, Chang and Chen studied 80 women who had recently given birth and were sleeping poorly. Half drank chamomile tea for two weeks. The others received routine care only.",
+      "gorsel": "a cozy nursery corner with a wooden cradle, a rocking chair and a small table holding a cup of chamomile tea and a few chamomile flowers",
+      "etiket": "Chang & Chen · J Adv Nurs · 2016",
+      "baslik": {"satirlar": ["80 NEW", "MOTHERS"], "not": "chamomile tea for 2 weeks"}
+    },
+    {
+      "id": 19,
+      "metin": "Sleep, mood and fatigue were all scored with questionnaires, right after the two weeks of tea and again at a four-week follow-up.",
+      "gorsel": "a clipboard with blank paper and a pencil beside a cup of chamomile tea and a small clock, on a quiet kitchen table"
+    },
+    {
+      "id": 20,
+      "metin": "Right after the two weeks, the tea group scored better on sleep inefficiency tied to physical symptoms, and on depression. At the four-week follow-up, the two groups looked about the same.",
+      "gorsel": "a gentle hand-drawn hill that rises and then slopes back to flat ground, a cup of chamomile tea steaming at the top of the hill",
+      "etiket": "Chang & Chen · J Adv Nurs · 2016",
+      "baslik": {"satirlar": ["BENEFIT", "FADED"], "not": "by the 4-week follow-up"}
+    },
+    {
+      "id": 21,
+      "metin": "So tea also showed a lift, on different measures than the capsules, but a short one. And these were new mothers, younger than most of us, not older adults.",
+      "gorsel": "a teacup of chamomile tea beside a small capsule dish, a thin dashed line connecting them like a bridge, on a white tablecloth"
+    },
+    {
+      "id": 22,
+      "metin": "One more detail. The comparison group got no warm drink at all. So did the herb help, or the ritual of a warm cup? Hold that thought.",
+      "gorsel": "a steaming empty mug in a pair of cupped hands next to a flickering candle, the mug drawn large in the foreground, quiet evening mood"
+    },
+    {
+      "id": 23,
+      "metin": "There is another gap. The capsule trials used measured doses. A cup of tea varies with the brand and the steeping, and none of the trials I found says how many cups match a capsule dose.",
+      "gorsel": "three cups of chamomile tea in a row, pale, medium and deep golden, beside a kitchen timer and a small dish of chamomile flowers"
+    },
+    {
+      "id": 24,
+      "bolum": "Pooling the evidence",
+      "metin": "Small trials can mislead, so reviewers pool them. In 2019, Hieu and colleagues combined 12 randomized and quasi-randomized trials of chamomile for anxiety and sleep.",
+      "gorsel": "a tall stack of plain bound research folders on a library table beside a jar of dried chamomile flowers and a brass magnifying glass",
+      "etiket": "Hieu et al. · Phytother Res · 2019",
+      "baslik": {"satirlar": ["12 TRIALS", "POOLED"]}
+    },
+    {
+      "id": 25,
+      "metin": "Sleep quality improved significantly with chamomile. But for insomnia severity, only one trial was available, and it found no significant change. Wait, isn't that the same thing?",
+      "gorsel": "a cup of chamomile tea on a table beside two small doors, one open with soft light and one closed, drawn as a simple engraving",
+      "etiket": "Hieu et al. · Phytother Res · 2019",
+      "baslik": {"satirlar": ["SLEEP QUALITY:", "BETTER"], "not": "insomnia severity: no clear change"}
+    },
+    {
+      "id": 26,
+      "metin": "The authors concluded chamomile appears helpful and safe for sleep quality, with only mild side effects in the trials that reported them. But they also said larger trials are needed.",
+      "gorsel": "an open research journal with blank pages beside a cup of chamomile tea and a small brass lamp, warm light"
+    },
+    {
+      "id": 27,
+      "metin": "A 2024 review looked at 10 clinical trials with 772 participants in total. Sleep quality scores improved, with fewer awakenings after falling asleep the clearest change.",
+      "gorsel": "a long row of ten small teacups of chamomile tea lined up on a shelf, one cup slightly larger than the others, soft light",
+      "etiket": "Chamomile and sleep meta-analysis · Complement Ther Med · 2024",
+      "baslik": {"satirlar": ["772", "PEOPLE"], "not": "10 trials pooled in 2024"}
+    },
+    {
+      "id": 28,
+      "metin": "But total sleep time and sleep efficiency did not clearly improve. The authors say future trials should measure sleep objectively, not only with questionnaires.",
+      "gorsel": "a bedside wristband sleep tracker lying next to a cup of chamomile tea and a small clock, on a wooden nightstand"
+    },
+    {
+      "id": 29,
+      "metin": "Here is the difference. Sleep quality is how smooth the night felt and how rested you feel. Insomnia is a persistent sleep disorder. So far, chamomile has nudged the first, not clearly the second.",
+      "gorsel": "a bed with a smooth folded quilt on one side and a tangled rumpled quilt on the other, a cup of chamomile tea on a table between them",
+      "baslik": {"satirlar": ["QUALITY", "NOT INSOMNIA"]}
+    },
+    {
+      "id": 30,
+      "metin": "The National Institutes of Health agrees the evidence is thin. Its chamomile page says there is very little information on insomnia, and points to one study in a 2019 review that found no benefit.",
+      "gorsel": "a quiet library desk with a tall stack of closed books, a cup of chamomile tea and a few dried chamomile flowers in a small dish"
+    },
+    {
+      "id": 31,
+      "bolum": "How it might work",
+      "tip": "kart",
+      "metin": "Is chamomile a kind of mild sleeping pill? Let's look at how it might work.",
+      "kart": {
+        "ust": "INSIDE YOUR BODY",
+        "baslik": "How might it work?",
+        "alt": "Apigenin · Brain receptors"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Chamomile flowers contain a plant compound called apigenin. In 1995, Viola and colleagues reported that apigenin from chamomile binds to a brain receptor that benzodiazepine sedatives act on.",
+      "gorsel": "a magnified circular inset of a chamomile flower with tiny golden particles drifting toward a small round receptor shape, surrounded by dashed lines, textbook engraving style",
+      "etiket": "Viola et al. · Planta Med · 1995",
+      "baslik": {"satirlar": ["APIGENIN"], "not": "a compound in chamomile flowers"}
+    },
+    {
+      "id": 33,
+      "metin": "In mice, it reduced anxiety-like behavior without obvious sedation. At ten times that dose, it caused mild sedation.",
+      "gorsel": "a small white laboratory mouse sitting calmly beside a chamomile flower on a bench, a brass dropper in the background"
+    },
+    {
+      "id": 34,
+      "metin": "But that was mice and lab tests, not people drinking tea. I found no study showing that the apigenin in a cup of tea reaches your brain in amounts that matter.",
+      "gorsel": "a large cup of chamomile tea with a very faint trail of tiny golden dots rising and fading before reaching a small brain drawing at the top of the page",
+      "baslik": {"satirlar": ["MICE,", "NOT PEOPLE"]}
+    },
+    {
+      "id": 35,
+      "metin": "So chamomile is best seen as a gentle, uncertain helper, not a mild sleeping pill. The trials show small shifts in how people rate their sleep, not knockout effects.",
+      "gorsel": "a gentle breeze shown as fine curved lines passing over a field of white chamomile flowers, a small cup of chamomile tea resting among them"
+    },
+    {
+      "id": 36,
+      "metin": "Taken together, the people most likely to notice something are those with everyday poor sleep, like the older adults and new mothers in these trials, rather than people with diagnosed insomnia.",
+      "gorsel": "an older couple's two empty armchairs by a lamp, a tray with a teapot of chamomile tea and two cups between them, evening light"
+    },
+    {
+      "id": 37,
+      "bolum": "The warm-drink effect",
+      "metin": "Back to the warm cup. It is plausible that part of any benefit comes from the routine: a warm mug, a slower evening, the same time each night. The tea trial wasn't designed to separate the herb from the habit.",
+      "gorsel": "a steaming mug of chamomile tea held in both hands beside a window at dusk, a crescent moon rising, a folded blanket in the corner",
+      "baslik": {"satirlar": ["HERB OR", "RITUAL?"]}
+    },
+    {
+      "id": 38,
+      "metin": "And that is not a bad thing. If a cup of tea helps you wind down, the calm is real, even if we can't say how much of it comes from the chamomile.",
+      "gorsel": "a ceramic cup of chamomile tea on a small tray with a folded napkin, a single lit candle beside it, quiet and unhurried"
+    },
+    {
+      "id": 39,
+      "metin": "Either way, keep your expectations modest. Not from lying awake for hours to sleeping like a log. A small shift in how rested you feel is what the best evidence supports.",
+      "gorsel": "a simple staircase of three low steps with a cup of chamomile tea on the first step and a crescent moon above the third, calm engraving"
+    },
+    {
+      "id": 40,
+      "bolum": "Who should be careful",
+      "tip": "kart",
+      "metin": "Now the part to take seriously. Who should think twice before drinking it?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Who should be careful",
+        "alt": "Allergy · Blood thinners · Pregnancy"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "The NIH says chamomile is likely safe in the amounts found in tea. But it belongs to the daisy family, and people allergic to ragweed, chrysanthemums, marigolds or daisies are more likely to react. Reactions range from nausea to rare, severe allergic shock.",
+      "gorsel": "a small plant family tree drawn as a branching engraving, chamomile flowers on one branch, with a cup of chamomile tea at the base of the tree",
+      "baslik": {"satirlar": ["DAISY-FAMILY", "ALLERGY"]}
+    },
+    {
+      "id": 42,
+      "metin": "A 1989 case report described an eight-year-old with hay fever who had a severe allergic reaction after his first cup of chamomile tea. Tests showed his immune system cross-reacted with ragweed and mugwort pollen.",
+      "gorsel": "a single cup of chamomile tea on a table beside a handkerchief and a small flowering ragweed sprig, a window with soft light behind"
+    },
+    {
+      "id": 43,
+      "metin": "The second caution is blood thinners. The NIH notes that interactions between chamomile and warfarin have been reported.",
+      "gorsel": "a weekly pill organizer with its small lids closed, a cup of chamomile tea and a few chamomile flowers beside it, on a kitchen counter"
+    },
+    {
+      "id": 44,
+      "metin": "In one 2006 case report, a 70-year-old woman on warfarin drank chamomile tea several times a day and used a chamomile lotion. Her blood-thinning measure, the INR, reached 7.9, and she had serious internal bleeding.",
+      "gorsel": "a hospital bedside with a folded blanket, a stethoscope and a cup of chamomile tea left untouched on a small tray",
+      "etiket": "Segal & Pilote · CMAJ · 2006",
+      "baslik": {"satirlar": ["WARFARIN", "CASE REPORT"], "not": "one patient, 2006"}
+    },
+    {
+      "id": 45,
+      "metin": "A single case cannot prove cause. But it is why pharmacists ask about herbal teas. If you take warfarin, ask your pharmacist or doctor before making chamomile a nightly habit.",
+      "gorsel": "a pharmacy counter with a pharmacist's mortar and pestle, a paper bag and a cup of chamomile tea, warm light",
+      "baslik": {"satirlar": ["ASK YOUR", "PHARMACIST"]}
+    },
+    {
+      "id": 46,
+      "metin": "The NIH also says chamomile might interact with sedatives, and that little is known about its safety in pregnancy or while breastfeeding. Mention it to your doctor if either applies to you.",
+      "gorsel": "a doctor's desk with an open appointment book with blank pages, a stethoscope and a cup of chamomile tea with a few chamomile flowers"
+    },
+    {
+      "id": 47,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So what should you actually do with all this? Here are four practical tips.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Four practical tips",
+        "alt": "Realistic expectations"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "One. Treat it as a bedtime ritual, not a treatment. A warm cup at the same time each evening is a low-risk habit, and the trials suggest at most a modest improvement in sleep quality.",
+      "gorsel": "a cup of chamomile tea on a saucer beside a wall clock showing evening, a small lamp turned low, calm composition"
+    },
+    {
+      "id": 49,
+      "metin": "Two. Give it a fair test. The trials ran two to four weeks. Pay attention to how you sleep for a couple of weeks. If nothing changes, you have learned something and can move on.",
+      "gorsel": "a wall calendar page with two weeks crossed out in simple pencil strokes beside a cup of chamomile tea and a few chamomile flowers"
+    },
+    {
+      "id": 50,
+      "metin": "Three. Check the ingredients. Choose a tea that lists chamomile, and look for other herbs in the blend, so you know exactly what you are drinking, especially if you have allergies or take medicines.",
+      "gorsel": "a small cardboard box of chamomile tea bags with an unmarked front, a tea bag and a few chamomile flowers laid out beside it"
+    },
+    {
+      "id": 51,
+      "metin": "Four. Don't let tea stand in for care. If poor sleep lasts for weeks, talk to your doctor. The American College of Physicians recommends cognitive behavioral therapy for insomnia as the first treatment for chronic insomnia.",
+      "gorsel": "a quiet clinic room with two chairs facing each other and a small table holding a cup of chamomile tea and a notebook",
+      "etiket": "Qaseem et al. · Ann Intern Med · 2016",
+      "baslik": {"satirlar": ["CBT-I FIRST"], "not": "for chronic insomnia, per ACP"}
+    },
+    {
+      "id": 52,
+      "metin": "That therapy is a structured program that retrains sleep habits and the thoughts around sleep. In the guideline, medicine is considered only if it alone does not work.",
+      "gorsel": "an open notebook with blank lined pages beside a bedside lamp, a pencil and a cup of chamomile tea, evening light"
+    },
+    {
+      "id": 53,
+      "metin": "One last safety note. Don't stop or change any sleep medicine on your own because of a tea. If you take blood thinners or sedatives, or have a ragweed or daisy-family allergy, check with your doctor or pharmacist first.",
+      "gorsel": "a doctor's open hand beside a cup of chamomile tea and a closed medicine bottle without any writing, simple clean composition",
+      "baslik": {"satirlar": ["SAFETY", "FIRST"]}
+    },
+    {
+      "id": 54,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "A gentle helper, not a cure",
+        "alt": "Modest help for sleep quality"
+      }
+    },
+    {
+      "id": 55,
+      "metin": "In small trials, chamomile improved how people rated their sleep quality, in older adults taking extract and in new mothers drinking tea. But one trial in people with long-term insomnia found no clear difference.",
+      "gorsel": "a cup of chamomile tea on a table with a crescent moon behind, a small pile of chamomile flowers in front, warm calm light"
+    },
+    {
+      "id": 56,
+      "metin": "Pooled reviews agree: some help for sleep quality, little evidence for insomnia itself. The benefit in new mothers faded by four weeks, and part of any effect may be the warm-cup routine.",
+      "gorsel": "a steaming cup of chamomile tea beside a quilted blanket on an armchair, a small lamp glowing, window showing a starry sky"
+    },
+    {
+      "id": 57,
+      "metin": "A bedtime cup is probably a safe, pleasant ritual for most people. Allergy to ragweed or its relatives, warfarin and sedatives are the cautions. And sleep trouble that lasts deserves a real conversation with your doctor.",
+      "gorsel": "a cup of chamomile tea on a bedside table next to a book and a pair of reading glasses, a crescent moon through the window"
+    },
+    {
+      "id": 58,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
