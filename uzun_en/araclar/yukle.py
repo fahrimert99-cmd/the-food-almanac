@@ -212,6 +212,19 @@ def kisalari_sil(yt, slug, slotu_koru=False):
 ESKI_GUN_METNI = ("every Tuesday and Friday", "every Tuesday & Friday")
 
 
+def yayin_zamani_tasi(yt, vid, yeni):
+    """Özel (zamanlanmış) videonun yayın zamanını değiştirir; özel değilse False."""
+    st = yt.videos().list(part="status", id=vid).execute()["items"][0]["status"]
+    if st.get("privacyStatus") != "private":
+        O.log(f"! {vid} özel değil ({st.get('privacyStatus')}), taşınmadı")
+        return False
+    govde = {k: st[k] for k in ("privacyStatus", "selfDeclaredMadeForKids", "embeddable", "license",
+                                "publicStatsViewable", "containsSyntheticMedia") if k in st}
+    govde["publishAt"] = yeni
+    yt.videos().update(part="status", body={"id": vid, "status": govde}).execute()
+    return True
+
+
 def takvim_istegi(yt):
     """calistir.json "takvim_yenile": {"ayir": ["YYYY-MM-DD", ...], "ata": {"slug": "YYYY-MM-DD"}} isteği (tek seferlik).
     Yayın günleri (marka.json yayin.gunler) değişince yayınlanmamış uzun videoları sırası bozulmadan yeni günlere taşır:
@@ -242,15 +255,8 @@ def takvim_istegi(yt):
                 continue
             yol = os.path.join(O.proje_dir(slug), "yayin.json")
             y = O.json_oku(yol, {}) or {}
-            if y.get("video_id"):
-                st = yt.videos().list(part="status", id=y["video_id"]).execute()["items"][0]["status"]
-                if st.get("privacyStatus") != "private":
-                    O.log(f"! {slug}: {y['video_id']} özel değil ({st.get('privacyStatus')}), taşınmadı")
-                    continue
-                govde = {k: st[k] for k in ("privacyStatus", "selfDeclaredMadeForKids", "embeddable", "license",
-                                            "publicStatsViewable", "containsSyntheticMedia") if k in st}
-                govde["publishAt"] = yeni
-                yt.videos().update(part="status", body={"id": y["video_id"], "status": govde}).execute()
+            if y.get("video_id") and not yayin_zamani_tasi(yt, y["video_id"], yeni):
+                continue
             if y:
                 y["slot"] = yeni
                 O.json_yaz(yol, y)
@@ -258,12 +264,20 @@ def takvim_istegi(yt):
             d["videolar"][slug]["slot"] = yeni
             O.durum_yaz(d)
             O.log(f"• {slug}: {eski} -> {yeni}")
-        d = O.durum()
-        for slug, yeni in ata.items():
-            if slug in d["videolar"] and d["videolar"][slug].get("slot") != yeni:
-                O.log(f"• {slug}: {d['videolar'][slug].get('slot')} -> {yeni} (ayrılmış gün)")
-                d["videolar"][slug]["slot"] = yeni
-        O.durum_yaz(d)
+        for slug, yeni in ata.items():                          # üretimdeki ya da yüklenmiş olabilir
+            d = O.durum()
+            yol = os.path.join(O.proje_dir(slug), "yayin.json")
+            y = O.json_oku(yol, {}) or {}
+            if slug not in d["videolar"] or (d["videolar"][slug].get("slot") == yeni and y.get("slot", yeni) == yeni):
+                continue
+            if y.get("video_id") and y.get("slot") != yeni:
+                yayin_zamani_tasi(yt, y["video_id"], yeni)
+            if y:
+                y["slot"] = yeni
+                O.json_yaz(yol, y)
+            O.log(f"• {slug}: {d['videolar'][slug].get('slot')} -> {yeni} (ayrılmış gün)")
+            d["videolar"][slug]["slot"] = yeni
+            O.durum_yaz(d)
         yeni_metin = f"every {O.yayin_gunleri()}"
         ids = [(O.json_oku(os.path.join(O.proje_dir(s_), "yayin.json"), {}) or {}).get("video_id") for s_ in d["videolar"]]
         ids = [i for i in ids if i]
@@ -293,6 +307,69 @@ def takvim_istegi(yt):
     c.pop("takvim_yenile", None)
     O.json_yaz(cyol, c)
     O.log("✓ takvim yenilendi")
+
+
+def kisa_takvim_plani(simdi):
+    """Yayınlanmamış Shorts'lar için yeni gün planı {kayıt yolu: (eski slot, yeni slot)}.
+    Her günde bir Shorts: videonun 1. Shorts'u uzun videodan bir gün, 2.'si iki gün sonra (Pzt -> Sal + Çar,
+    Çar -> Per + Cuma, Cuma -> Cmt + Paz); ek Shorts'lar (3+) ve gününe yerleşemeyenler boş günlere, sıraları korunarak.
+    Bilinen son uzun videonun iki gün sonrasından ötede ek Shorts yalnızca yeni videolara ayrılmayan günlere
+    (Pazartesi) konur: üretilecek yeni videoların Shorts günleri boş kalır."""
+    yayin = O.marka()["yayin"]
+    sa, dk = map(int, yayin["saat_utc"].split(":"))
+    ayrilan = {(g + k) % 7 for g in yayin["gunler"] for k in (1, 2)}
+    alt = (simdi + dt.timedelta(hours=3)).date()
+    ts = lambda t: dt.datetime.fromisoformat(t.replace("Z", "+00:00"))      # noqa: E731
+    slot = lambda g: f"{g.isoformat()}T{sa:02d}:{dk:02d}:00Z"                # noqa: E731
+    uzun, kisalar = {}, []
+    for slug, v in O.durum()["videolar"].items():
+        if v.get("slot"):
+            uzun[slug] = ts(v["slot"]).date()
+        for yol in glob.glob(os.path.join(O.proje_dir(slug), "kisa*_yayin.json")):
+            k = O.json_oku(yol, {}) or {}
+            if k.get("video_id") and k.get("slot") and ts(k["slot"]).date() >= alt:
+                ad = os.path.basename(yol)[:-len("_yayin.json")]
+                kisalar.append((k["slot"], slug, 1 if ad == "kisa" else int(ad.split("_")[1]), yol))
+    dolu, plan, kalan = set(), {}, []
+    for eski, slug, no, yol in sorted(kisalar):
+        g = uzun[slug] + dt.timedelta(days=no) if slug in uzun and no <= 2 else None
+        if g and g >= alt and g not in dolu:
+            dolu.add(g)
+            plan[yol] = (eski, slot(g))
+        else:
+            kalan.append((eski, slug, yol))
+    son = max(uzun.values(), default=alt) + dt.timedelta(days=2)
+    g = alt
+    for eski, slug, yol in kalan:                                   # sıra korunur (eski slota göre)
+        en_erken = max(alt, uzun.get(slug, alt) + dt.timedelta(days=1))
+        g = max(g, en_erken) if g < en_erken else g
+        while g in dolu or (g > son and g.weekday() in ayrilan):
+            g += dt.timedelta(days=1)
+        dolu.add(g)
+        plan[yol] = (eski, slot(g))
+        g += dt.timedelta(days=1)
+    return {y_: v for y_, v in plan.items() if v[0] != v[1]}
+
+
+def kisa_takvim_istegi(yt):
+    """calistir.json "kisa_takvim": true isteği (tek seferlik): Shorts'ları kisa_takvim_plani'na göre taşır (YouTube
+    publishAt + kisa*_yayin.json). Kota biterse istek korunur; sonraki çalıştırma kalanları taşır."""
+    cyol = os.path.join(O.KOK, "calistir.json")
+    plan = kisa_takvim_plani(dt.datetime.now(dt.timezone.utc))
+    try:
+        for yol, (eski, yeni) in sorted(plan.items(), key=lambda x: x[1][1]):
+            k = O.json_oku(yol, {}) or {}
+            if not yayin_zamani_tasi(yt, k["video_id"], yeni):
+                continue
+            k["slot"] = yeni
+            O.json_yaz(yol, k)
+            O.log(f"• Shorts {os.path.relpath(yol, O.PROJELER)}: {eski[:10]} -> {yeni[:10]}")
+    except Exception as e:
+        return O.log(f"! Shorts takvimi yarıda kaldı ({str(e)[:160]}) — istek korunur")
+    c = O.json_oku(cyol, {}) or {}
+    c.pop("kisa_takvim", None)
+    O.json_yaz(cyol, c)
+    O.log(f"✓ Shorts takvimi yenilendi ({len(plan)} Shorts)")
 
 
 def kisa_yenile_istegi(yt):
@@ -436,6 +513,8 @@ def tamamla():
         O.log(f"! bekleyen yüklemeler: {str(e)[:200]}")
     if (O.json_oku(os.path.join(O.KOK, "calistir.json"), {}) or {}).get("takvim_yenile"):
         takvim_istegi(build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False))
+    if (O.json_oku(os.path.join(O.KOK, "calistir.json"), {}) or {}).get("kisa_takvim"):
+        kisa_takvim_istegi(build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False))
     m = O.marka()
     simdi = dt_.datetime.now(dt_.timezone.utc)
     adaylar = []
