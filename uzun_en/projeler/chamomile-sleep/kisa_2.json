@@ -1,0 +1,14 @@
+{
+  "baslik": ["CHAMOMILE TEA:", "WHO SKIPS IT?"],
+  "baslik_yt": "Who Should Skip Chamomile Tea at Bedtime?",
+  "aciklama": "Chamomile tea is a popular bedtime drink, but it is not right for everyone. Here are the allergy and blood-thinner cautions, and what to do about them.",
+  "parcalar": [
+    {"sahne": 40, "cumleler": [1], "gorsel": 46, "baslik": null, "etiket": null},
+    {"sahne": 41, "cumleler": [1]},
+    {"sahne": 43, "cumleler": [1]},
+    {"sahne": 44, "cumleler": [0]},
+    {"sahne": 44, "cumleler": [1], "baslik": {"satirlar": ["SEVERE", "BLEEDING"], "vurgu": "INR 7.9", "not": "blood-thinning measure"}},
+    {"sahne": 45, "cumleler": [0]},
+    {"sahne": 53, "cumleler": [2], "baslik": {"satirlar": ["CHECK WITH", "YOUR DOCTOR"]}}
+  ]
+}
