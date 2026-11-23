@@ -16,7 +16,7 @@
     "not": "Python haftanın günü: 0=Pazartesi, 2=Çarşamba, 4=Cuma (22 Kasım 2026: haftada 3 yayın). 14:00 UTC = 17:00 TR = 10:00 New York."
   },
   "onde_uretim_azami": 100,
-  "uretim_durdur": false,
+  "uretim_durdur": true,
   "kapak_stil": "koyu",
   "oynatma_listesi": "Food Myths, Checked",
   "oynatma_listesi_aciklama": "One popular food claim per episode, checked against the research.",
