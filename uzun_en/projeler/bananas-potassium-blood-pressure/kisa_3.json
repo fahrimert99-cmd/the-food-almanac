@@ -1,0 +1,20 @@
+{
+  "baslik": ["8 BANANAS", "A DAY?"],
+  "baslik_yt": "Banana Math: How Much Potassium Do You Need?",
+  "aciklama": "One banana has about 422 mg of potassium, and a man's daily target is 3,400 mg. Here is the math, and what the National Kidney Foundation lists beyond bananas.",
+  "parcalar": [
+    {"sahne": 7, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 6, "cumleler": [0],
+     "baslik": {"satirlar": ["DAILY GOAL"], "vurgu": "3,400 MG", "not": "men; women need 2,600"},
+     "etiket": "National Academies · 2019"},
+    {"sahne": 6, "cumleler": [1], "gorsel": 5,
+     "baslik": {"satirlar": ["ONE BANANA"], "vurgu": "1/8", "not": "of a man's daily goal"},
+     "etiket": "USDA FoodData Central · Bananas, raw"},
+    {"sahne": 8, "cumleler": [0, 1]},
+    {"sahne": 39, "cumleler": [0]},
+    {"sahne": 51, "cumleler": [3], "gorsel": 37,
+     "baslik": {"satirlar": ["MANY FOODS"]},
+     "etiket": "National Kidney Foundation"},
+    {"sahne": 51, "cumleler": [1, 2], "etiket": null}
+  ]
+}
