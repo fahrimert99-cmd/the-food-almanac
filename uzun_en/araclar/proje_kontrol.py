@@ -39,6 +39,47 @@ def kahraman_payi(p):
     return sum(1 for s in g if desen.search(s["gorsel"])) / max(1, len(g))
 
 
+MERAK_ARALIK = 120          # sn: iki cevap (merak haritası) arası en çok; hedef 60–90 sn (gorev/SENARYO.md)
+
+
+def merak_denetle(p, S, hiz):
+    """Merak haritası (`merak`): her soru bir sahnede açılır, daha sonraki bir sahnede cevaplanır; aynı anda en çok 2
+    açık soru; 1. soru açılışta (1–3) açılır; iki cevap arası ~2 dakikayı geçmez. Fikir: sarpstar/cinecode (MIT)."""
+    h = []
+    M = p.get("merak")
+    if not isinstance(M, list) or not 5 <= len(M) <= 10:
+        return ["merak: 5–10 soruluk merak haritası gerekli: [{\"soru\", \"ac\": sahne id, \"cevap\": sahne id}] (gorev/SENARYO.md)"]
+    ids = [s.get("id") for s in S]
+    bas, t = {}, 0.0                    # sahnenin başladığı tahmini saniye
+    for s in S:
+        bas[s.get("id")] = t
+        t += len(s.get("metin", "").split()) / hiz
+    recap = next((s.get("id") for s in S if (s.get("bolum") or "").strip().lower() == "recap"), ids[-1] if ids else 0)
+    for i, q in enumerate(M, 1):
+        a, c = q.get("ac"), q.get("cevap")
+        if not (q.get("soru") and a in bas and c in bas and a < c):
+            h.append(f"merak {i}: 'soru' ve geçerli sahne id'leri gerekli, cevap açılıştan sonra gelmeli (ac {a}, cevap {c})")
+    if h:
+        return h
+    if min(q["ac"] for q in M) > 3:
+        h.append("merak: ilk soru açılışta (sahne 1–3) açılmalı")
+    for sid in ids:
+        acik = [q["soru"] for q in M if q["ac"] <= sid < q["cevap"]]
+        if len(acik) > 2:
+            h.append(f"merak: {sid}. sahnede {len(acik)} soru aynı anda açık; en çok 2 (izleyici kaybolur)")
+            break
+    if any(q["cevap"] >= recap for q in M):
+        h.append("merak: her soru özetten (Recap) önce cevaplanmalı")
+    zaman = sorted(bas[q["cevap"]] for q in M) + [bas[recap]]
+    onceki = 0.0
+    for z in zaman:
+        if z - onceki > MERAK_ARALIK:
+            h.append(f"merak: {onceki / 60:.1f}. ile {z / 60:.1f}. dakika arası hiçbir soru cevaplanmıyor "
+                     f"({z - onceki:.0f} sn); her 60–90 saniyede bir cevap ya da ters köşe gelmeli")
+        onceki = z
+    return h
+
+
 def denetle(slug, asgari_dk=None, yazim=False):
     """yazim=True: yazım aşamasının sıkı kuralları (en az 10 dk, açılışta kaynaklı rakam, kısa kapak satırları).
     Yayındaki eski projeler bu kurallardan önce yazıldığı için varsayılan denetim bunları aramaz."""
@@ -174,6 +215,8 @@ def denetle(slug, asgari_dk=None, yazim=False):
         if S and re.match(r"\s*(picture|imagine|think about|let'?s start|have you ever)\b", S[0].get("metin", ""), re.I):
             h.append("açılış: ilk cümle sahne kurmamalı ('Picture…', 'Imagine…'); izleyicinin kendi durumuna ya da "
                      "çarpıcı bulguya doğrudan girmeli (1. videoda izleyicilerin %73'ü ilk 30 saniyede çıktı)")
+    if yazim:
+        h += merak_denetle(p, S, MOTOR_KELIME_SN.get(p.get("ses_motoru") or m.get("ses_motoru", "piper"), KELIME_SN))
     pay = kahraman_payi(p)
     if pay is not None and pay < 0.45:
         h.append(f"kahraman '{p['kahraman']}' görselli sahnelerin yalnızca %{pay * 100:.0f}'inde; en az yarısının "
