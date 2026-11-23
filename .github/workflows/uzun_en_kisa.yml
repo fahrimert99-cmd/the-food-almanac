@@ -43,7 +43,7 @@ defaults:
 env:
   PYTHONDONTWRITEBYTECODE: "1"
   CMODEL: ${{ vars.UZUN_CLAUDE_MODEL }}
-  GMODEL: ${{ vars.UZUN_GEMINI_MODEL || 'gemini-3.8-flash' }}   # değişken boşsa Gemini 3.8 Flash (ücretsiz katman)
+  GMODEL: ${{ vars.UZUN_GEMINI_MODEL }}
 
 jobs:
   kisa:
