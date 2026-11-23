@@ -6,7 +6,7 @@ name: Flow Shorts yükleme (The Food Almanac)
 on:
   push:
     branches: [main]
-    paths: ["uzun_en/projeler/*/flow_kisa.json"]
+    paths: ["uzun_en/projeler/*/flow_kisa.json", "uzun_en/araclar/flow_kisa.py", ".github/workflows/flow_kisa.yml"]
   schedule:
     - cron: "41 8 * * *"
   workflow_dispatch:
@@ -54,7 +54,7 @@ jobs:
         run: |
           KURU=""; [ "${{ inputs.kuru }}" = "true" ] && KURU="--kuru"
           set +e
-          python3 uzun_en/araclar/flow_kisa.py --yukle $KURU
+          python3 uzun_en/araclar/flow_kisa.py --yukle --cakisma $KURU
           kod=$?
           set -e
           if [ "$kod" = "3" ]; then echo "::notice title=Flow Shorts::YouTube kotası dolu, yarın devam edilecek"; exit 0; fi

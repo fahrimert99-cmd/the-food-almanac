@@ -7,6 +7,7 @@ Bu hat otomatik Shorts hattından (kisa*_yayin.json) ayrıdır; onun dosyaların
   python3 uzun_en/araclar/flow_kisa.py --liste                 # bekleyen / yüklenmiş Flow Shorts'ları ve slotları
   python3 uzun_en/araclar/flow_kisa.py --yukle [--kuru]        # bekleyenleri sırayla haftalık slotlara yükle
   python3 uzun_en/araclar/flow_kisa.py --yukle --proje SLUG    # yalnızca bir proje
+  python3 uzun_en/araclar/flow_kisa.py --yukle --cakisma       # + aynı güne düşen otomatik Shorts'ların zamanlamasını kaldır
 
 Girdi (projeler/SLUG/):
   flow_kisa.json   -> başlık, açıklama, kaynaklar (şema: uzun_en/flow/README.md)
@@ -161,6 +162,56 @@ def yukle(slug, slot, kuru=False):
     return True
 
 
+def cakismalari_kaldir(kuru=False):
+    """Flow Shorts ile aynı UTC gününe zamanlanmış otomatik Shorts'ların (kisa*_yayin.json) zamanlamasını kaldırır.
+
+    Video silinmez: YouTube'da gizli kalır, publishAt kaldırılır (geri alınabilir). Kayda
+    "zamanlama_kaldirildi" eklenir; "slot" alanı korunur ki otomatik hat o günü yeniden doldurmasın.
+    """
+    simdi = dt.datetime.now(dt.timezone.utc)
+    gunler = {}
+    for s in projeler():
+        k = kayit(s)
+        if k.get("video_id") and k.get("slot") and ts(k["slot"]) > simdi:
+            gunler[k["slot"][:10]] = s
+    hedefler = []
+    for yol in sorted(glob.glob(os.path.join(O.PROJELER, "*", "kisa*_yayin.json"))):
+        k = O.json_oku(yol, {}) or {}
+        sl = str(k.get("slot") or "")
+        if k.get("video_id") and sl[:10] in gunler and ts(sl) > simdi and not k.get("zamanlama_kaldirildi"):
+            hedefler.append((yol, k, gunler[sl[:10]]))
+    if not hedefler:
+        O.log("Çakışma yok.")
+        return
+    yt = None
+    if not kuru:
+        from googleapiclient.discovery import build
+        import youtube_api as YY
+        yt = build("youtube", "v3", credentials=YY._kimlik(), cache_discovery=False)
+    for yol, k, flow_slug in hedefler:
+        vid = k["video_id"]
+        O.log(f"Çakışma: {os.path.relpath(yol, O.PROJELER)} {vid} ({k.get('slot')}) — Flow Shorts {flow_slug} ile aynı gün")
+        if kuru:
+            continue
+        r = yt.videos().list(part="status", id=vid).execute().get("items") or []
+        if not r:
+            O.log(f"! {vid} kanalda bulunamadı, atlanıyor")
+            continue
+        st = r[0]["status"]
+        if st.get("privacyStatus") != "private" or not st.get("publishAt"):
+            O.log(f"! {vid} zaten zamanlı değil ({st.get('privacyStatus')}), dokunulmadı")
+        else:
+            yeni = {"privacyStatus": "private"}
+            for a in ("embeddable", "license", "publicStatsViewable", "selfDeclaredMadeForKids", "containsSyntheticMedia"):
+                if a in st:
+                    yeni[a] = st[a]
+            yt.videos().update(part="status", body={"id": vid, "status": yeni}).execute()
+            O.log(f"  {vid}: zamanlama kaldırıldı, video gizli kaldı")
+        k["zamanlama_kaldirildi"] = {"tarih": z(simdi), "eski_slot": k.get("slot"),
+                                     "neden": f"Flow Shorts ({flow_slug}) ile aynı gün"}
+        O.json_yaz(yol, k)
+
+
 def bekleyenler(tek=None):
     return [s for s in projeler() if (tek in (None, s)) and not kayit(s).get("video_id")]
 
@@ -171,6 +222,7 @@ def main():
     ap.add_argument("--yukle", action="store_true")
     ap.add_argument("--proje")
     ap.add_argument("--kuru", action="store_true")
+    ap.add_argument("--cakisma", action="store_true", help="aynı güne düşen otomatik Shorts'ların zamanlamasını kaldır")
     a = ap.parse_args()
     simdi = dt.datetime.now(dt.timezone.utc)
     if a.liste:
@@ -178,8 +230,11 @@ def main():
             k = kayit(s)
             O.log(f"{s}: " + (f"yüklendi {k['video_id']} -> {k['slot']}" if k.get("video_id") else "bekliyor"))
         return
+    if a.cakisma and not a.yukle:
+        cakismalari_kaldir(a.kuru)
+        return
     if not a.yukle:
-        ap.error("--liste ya da --yukle")
+        ap.error("--liste, --yukle ya da --cakisma")
     dolu = dolu_haftalar()
     import yukle as Y
     for slug in bekleyenler(a.proje):
@@ -192,6 +247,8 @@ def main():
                 O.log("! YouTube kotası dolu — kalanlar sonraki çalıştırmada")
                 sys.exit(Y.KOTA_KODU)
             raise
+    if a.cakisma:
+        cakismalari_kaldir(a.kuru)
 
 
 if __name__ == "__main__":
