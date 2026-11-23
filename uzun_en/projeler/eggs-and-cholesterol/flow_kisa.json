@@ -1,0 +1,102 @@
+{
+  "eklenme": "2026-11-23",
+  "konu": "Is one egg a day bad for your heart?",
+  "ses": "Charon",
+  "kanca": [
+    "1 EGG A DAY",
+    "HEART RISK?"
+  ],
+  "baslik_yt": "One Egg a Day for 32 Years: What Happened to Heart Risk?",
+  "aciklama": "Harvard researchers followed over 215,000 people for up to 32 years. Here is what one egg a day did to their heart risk, and where the evidence disagrees.",
+  "kaynaklar": [
+    "Drouin-Chartier JP, et al. Egg consumption and risk of cardiovascular disease: three large prospective US cohort studies, systematic review, and updated meta-analysis. BMJ. 2020;368:m513. https://doi.org/10.1136/bmj.m513",
+    "Zhong VW, et al. Associations of Dietary Cholesterol or Egg Consumption With Incident Cardiovascular Disease and Mortality. JAMA. 2019;321(11):1081-1095. https://doi.org/10.1001/jama.2019.1572"
+  ],
+  "kaynak_etiketleri": {
+    "2": "Drouin-Chartier et al. · BMJ · 2020",
+    "3": "Drouin-Chartier et al. · BMJ · 2020",
+    "5": "Zhong et al. · JAMA · 2019"
+  },
+  "sahneler": [
+    {
+      "aksiyon": "a boiled egg wobbles in a porcelain egg cup as steam curls up from it, while a tall stack of old calendar pages flips rapidly beside it in a breeze, morning light, no person",
+      "anlatim": "One egg a day, every day, for thirty-two years.",
+      "vurgu": [
+        "one",
+        "egg",
+        "thirty-two"
+      ],
+      "sure_sn": 5.2,
+      "ses_adi": "Charon Eggs S1"
+    },
+    {
+      "aksiyon": "the Almanac reader quickly flips through thick old ledgers at a long desk covered with egg cartons, writing notes with a quill, candle flames flickering, pages turning",
+      "anlatim": "Harvard researchers followed over 215,000 people for up to 32 years to test it.",
+      "vurgu": [
+        "215,000",
+        "32"
+      ],
+      "sure_sn": 8.24,
+      "ses_adi": "Charon Eggs S2"
+    },
+    {
+      "aksiyon": "the Almanac reader cracks an egg into a small iron pan, the egg sizzles and the white spreads and turns opaque, steam rising, he smiles calmly, no other people anywhere",
+      "anlatim": "Eating up to one egg a day was not linked to higher heart disease risk.",
+      "vurgu": [
+        "not",
+        "linked"
+      ],
+      "sure_sn": 5.84,
+      "ses_adi": "Charon Eggs S3"
+    },
+    {
+      "aksiyon": "an egg cracks open on its own and the bright yolk slides slowly into a white porcelain dish, the brass apothecary balance beside it tips and gently settles, no person",
+      "anlatim": "A large yolk holds about 186 milligrams of cholesterol, but your liver makes most of yours.",
+      "vurgu": [
+        "186",
+        "milligrams",
+        "liver"
+      ],
+      "sure_sn": 8.64,
+      "ses_adi": "Charon Eggs S4"
+    },
+    {
+      "aksiyon": "two old books lie open side by side and their pages flip by themselves, an egg rolls slowly across each book, a brass magnifying glass slides between them, no person",
+      "anlatim": "A 2019 JAMA study disagreed, linking each extra half egg daily to six percent more risk.",
+      "vurgu": [
+        "disagreed",
+        "six",
+        "percent"
+      ],
+      "sure_sn": 8.92,
+      "ses_adi": "Charon Eggs S5"
+    },
+    {
+      "aksiyon": "two breakfast plates side by side, on the left bacon sizzles and butter melts on white toast beside a fried egg, on the right green vegetables steam beside an egg and whole grain bread, steam rising, no person",
+      "anlatim": "Often the real difference is what comes with the egg: bacon, butter and white toast.",
+      "vurgu": [
+        "bacon",
+        "butter",
+        "white",
+        "toast"
+      ],
+      "sure_sn": 6.84,
+      "ses_adi": "Charon Eggs S6"
+    },
+    {
+      "aksiyon": "the Almanac reader cuts into a soft boiled egg so the yolk flows, then lifts whole grain toast and takes a bite, smiling by a sunny window, curtains moving, no other people anywhere",
+      "anlatim": "For most people, one egg a day fits; with high cholesterol, ask your doctor first.",
+      "vurgu": [
+        "fits",
+        "doctor"
+      ],
+      "sure_sn": 6.96,
+      "ses_adi": "Charon Eggs S7"
+    }
+  ],
+  "uretim": {
+    "arac": "Almanac Studio (Google Flow)",
+    "tarih": "2026-11-23",
+    "kredi": 84
+  }
+}

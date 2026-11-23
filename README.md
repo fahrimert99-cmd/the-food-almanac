@@ -21,6 +21,7 @@ Ayrıntılı kullanım için: **[uzun_en/README.md](uzun_en/README.md)**
 | `.github/workflows/ci.yml` | Her değişiklikte hızlı kontrol: Python, JSON, senaryo kuralları, Remotion tip denetimi |
 | `.github/workflows/uzun_en_gorsel.yml` | Tarifi değiştirilen görseli (ör. kapak) yeniden üretir; tetik `uzun_en/gorsel_yenile.json` |
 | `.github/workflows/uzun_en_analiz.yml` | Haftalık kanal analizi verisi (ülke, trafik, izleyici tutma): `uzun_en/analiz/` |
+| `.github/workflows/flow_kisa.yml` | Google Flow ile üretilen gravür Shorts'larını haftada bir zamanlanmış yükler: [uzun_en/flow/README.md](uzun_en/flow/README.md) |
 | `.github/workflows/eski_akis_temizlik.yml` | Eski (silinmiş) iş akışlarının çalıştırma geçmişini temizler; bitince boşta bekler |
 | `assets/marka_en/` | Banner, profil görseli ve kaynak gravürler |
 | `assets/font/` | Anton fontu (OFL) |
