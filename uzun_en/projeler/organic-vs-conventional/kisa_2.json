@@ -1,0 +1,14 @@
+{
+  "baslik": ["ORGANIC CUTS", "PESTICIDES?"],
+  "baslik_yt": "Does Organic Food Cut Your Pesticide Exposure?",
+  "aciklama": "Four US families switched to an organic diet and their urine pesticide levels dropped. But does lower exposure mean better health? Here is what the testing data say.",
+  "parcalar": [
+    {"sahne": 26, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 26, "cumleler": [1], "baslik": {"satirlar": ["ORGANIC", "DIET TEST"], "vurgu": "16 PEOPLE", "not": "four US families"}, "etiket": "Hyland et al. · Environ Res · 2019"},
+    {"sahne": 27, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 27, "cumleler": [1, 2], "baslik": {"satirlar": ["EXPOSURE ≠", "HEALTH"]}, "etiket": null},
+    {"sahne": 20, "cumleler": [0, 1]},
+    {"sahne": 21, "cumleler": [1], "baslik": {"satirlar": ["WITHIN", "THE LIMIT"], "vurgu": "99%+", "not": "of 10,000+ samples, 2021"}, "etiket": "USDA · Pesticide Data Program · 2021"},
+    {"sahne": 58, "cumleler": [2], "baslik": null, "etiket": null}
+  ]
+}
