@@ -1,0 +1,101 @@
+{
+  "eklenme": "2026-11-23",
+  "konu": "Does coffee dehydrate you?",
+  "ses": "Charon",
+  "kanca": [
+    "COFFEE",
+    "DRIES YOU OUT?"
+  ],
+  "baslik_yt": "Does Coffee Dehydrate You? 50 Men, Two 3-Day Trials",
+  "aciklama": "In a 2014 crossover trial, 50 men who regularly drank coffee spent three days on coffee and three on water. Their total body water was nearly identical. Here is what that means, and who the study left out. Note: the trial was funded by the Institute for Scientific Information on Coffee.",
+  "kaynaklar": [
+    "Killer SC, Blannin AK, Jeukendrup AE. No evidence of dehydration with moderate daily coffee intake: a counterbalanced cross-over study in a free-living population. PLoS One. 2014;9(1):e84154. doi:10.1371/journal.pone.0084154. PMID 24416202.",
+    "Maughan RJ, Griffin J. Caffeine ingestion and fluid balance: a review. Journal of Human Nutrition and Dietetics. 2003;16(6):411-420. doi:10.1046/j.1365-277x.2003.00477.x. PMID 19774754.",
+    "U.S. Food and Drug Administration. Spilling the Beans: How Much Caffeine Is Too Much? Consumer Update, content current as of 28 August 2024. fda.gov."
+  ],
+  "kaynak_etiketleri": {
+    "2": "Killer et al. · PLoS One · 2014",
+    "3": "Killer et al. · PLoS One · 2014",
+    "4": "Maughan & Griffin · 2003",
+    "7": "FDA · 2024"
+  },
+  "sahneler": [
+    {
+      "aksiyon": "hot black coffee is poured from a copper pot into a porcelain cup beside a tall glass of water, thick steam swirling up, morning light, no person",
+      "anlatim": "Your daily coffee might hydrate you about as well as water.",
+      "vurgu": [
+        "coffee",
+        "water"
+      ],
+      "sure_sn": 5.08,
+      "ses_adi": "Charon Coffee S1"
+    },
+    {
+      "aksiyon": "the Almanac reader lines up small coffee cups and water glasses on a long desk, pouring coffee into each cup, writing in a ledger with a quill, candle flames flickering",
+      "anlatim": "In 2014, 50 coffee drinkers spent three days on coffee and three on water.",
+      "vurgu": [
+        "50",
+        "three"
+      ],
+      "sure_sn": 8.04,
+      "ses_adi": "Charon Coffee S2"
+    },
+    {
+      "aksiyon": "a large brass balance with a coffee pot on one pan and a water jug on the other, the pans swing up and down and slowly settle level, no person",
+      "anlatim": "Their body water barely moved: 51.5 kilograms on coffee, 51.4 on water.",
+      "vurgu": [
+        "51.5",
+        "51.4"
+      ],
+      "sure_sn": 9.36,
+      "ses_adi": "Charon Coffee S3"
+    },
+    {
+      "aksiyon": "water drips steadily from a small copper tap into a basin beside a cup of coffee, coffee beans tumble out of a burlap sack, no person",
+      "anlatim": "Caffeine is a mild diuretic; big doses raise urine in people new to coffee.",
+      "vurgu": [
+        "mild",
+        "diuretic",
+        "new"
+      ],
+      "sure_sn": 7.0,
+      "ses_adi": "Charon Coffee S4"
+    },
+    {
+      "aksiyon": "the Almanac reader sips coffee at his window as calendar pages flip past behind him and the morning light changes, he smiles, no other people anywhere",
+      "anlatim": "But regular drinkers adapt, and ordinary cups showed no real drying effect.",
+      "vurgu": [
+        "adapt",
+        "no"
+      ],
+      "sure_sn": 6.64,
+      "ses_adi": "Charon Coffee S5"
+    },
+    {
+      "aksiyon": "a long coffee house counter with a row of steaming cups, one small tea cup slowly slides out of the row and spins gently, no person",
+      "anlatim": "The trial only tested men who already drank coffee, so others may respond differently.",
+      "vurgu": [
+        "only",
+        "men"
+      ],
+      "sure_sn": 7.24,
+      "ses_adi": "Charon Coffee S6"
+    },
+    {
+      "aksiyon": "the Almanac reader fills a glass with water, then lifts a steaming cup of coffee and takes a sip, smiling by a sunny window, no other people anywhere",
+      "anlatim": "Your coffee counts as fluid; FDA calls 400 milligrams a day generally safe.",
+      "vurgu": [
+        "fluid",
+        "400",
+        "milligrams"
+      ],
+      "sure_sn": 7.08,
+      "ses_adi": "Charon Coffee S7"
+    }
+  ],
+  "uretim": {
+    "arac": "Almanac Studio (Google Flow)",
+    "tarih": "2026-11-23",
+    "kredi": 84
+  }
+}
