@@ -1,0 +1,19 @@
+{
+  "baslik": ["GENES VS", "WINE & HEART"],
+  "baslik_yt": "Does Wine Protect Against Stroke? What Genes Say",
+  "aciklama": "A study of 512,715 adults in China used genes that make people drink less to test whether wine really protects the heart. Here is what it found, and what the American Heart Association advises.",
+  "parcalar": [
+    {"sahne": 22, "cumleler": [1], "baslik": {"satirlar": ["GENES VS", "WINE & HEART"]}, "etiket": null},
+    {"sahne": 23, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["STROKE", "AND DRINKING"], "vurgu": "512,715", "not": "adults followed in China"},
+     "etiket": "Millwood et al. · Lancet · 2019"},
+    {"sahne": 24, "cumleler": [0],
+     "baslik": {"satirlar": ["MORE DRINKING,", "MORE STROKE"], "vurgu": "+27%", "not": "per 280 g a week, genetic"},
+     "etiket": "Millwood et al. · Lancet · 2019"},
+    {"sahne": 24, "cumleler": [1, 2], "baslik": {"satirlar": ["NOT CAUSAL,", "SAID AUTHORS"]},
+     "etiket": "Millwood et al. · Lancet · 2019"},
+    {"sahne": 25, "cumleler": [0], "baslik": {"satirlar": ["MOSTLY MEN,", "IN CHINA"]}, "etiket": null},
+    {"sahne": 34, "cumleler": [1, 2], "baslik": {"satirlar": ["DON'T DRINK?", "DON'T START"]},
+     "etiket": "AHA Statement ·Circulation · 2025"}
+  ]
+}
