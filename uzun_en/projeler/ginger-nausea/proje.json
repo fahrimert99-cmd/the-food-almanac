@@ -1,0 +1,696 @@
+{
+  "slug": "ginger-nausea",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does Ginger Really Help With Nausea?",
+  "yorum": "Do you reach for ginger tea, ginger ale or capsules when your stomach feels off? Did it seem to make a difference for you?",
+  "aciklama_giris": "A 2006 review of five small trials found that ginger lowered the risk of nausea and vomiting after surgery. A newer review with about four times as many patients found a more mixed picture: less nausea, but no clear drop in vomiting. So what does the research actually say, and does it matter whether you use tea, capsules or ginger ale?\n\nIn this video we look at the trials for nausea after surgery, during chemotherapy and in motion sickness, the doses that were actually tested, what a major ginger ale brand's label says about real ginger, and an important safety point for people who take blood thinners or have surgery coming.",
+  "kaynaklar": [
+    "Chaiyakunapruk N, Kitikannakorn N, Nathisuwan S, Leeprakobboon K, Leelasettagool C. The efficacy of ginger for the prevention of postoperative nausea and vomiting: a meta-analysis. American Journal of Obstetrics and Gynecology. 2006;194(1):95-99. PMID 16389016.",
+    "Lu C, Chen X, Yan X, He J, Nie Z. Effects of ginger on postoperative nausea and vomiting: a systematic review and meta-analysis of randomized controlled trials. International Journal of Nursing Studies. 2022;125:104094. DOI 10.1016/j.ijnurstu.2021.104094. PMID 34700257.",
+    "Ryan JL, Heckler CE, Roscoe JA, et al. Ginger (Zingiber officinale) reduces acute chemotherapy-induced nausea: a URCC CCOP study of 576 patients. Supportive Care in Cancer. 2012;20(7):1479-1489. PMID 21818642.",
+    "Crichton M, Marshall S, Marx W, McCarthy AL, Isenring E. Efficacy of ginger (Zingiber officinale) in ameliorating chemotherapy-induced nausea and vomiting and chemotherapy-related outcomes: a systematic review update and meta-analysis. Journal of the Academy of Nutrition and Dietetics. 2019;119(12):2055-2068. PMID 31519467.",
+    "Lien HC, Sun WM, Chen YH, Kim H, Hasler W, Owyang C. Effects of ginger on motion sickness and gastric slow-wave dysrhythmias induced by circular vection. American Journal of Physiology: Gastrointestinal and Liver Physiology. 2003;284(3):G481-G489. PMID 12576305.",
+    "Li Z, Wu J, Song J, Wen Y. Ginger for treating nausea and vomiting: an overview of systematic reviews and meta-analyses. International Journal of Food Sciences and Nutrition. 2024;75(2):122-133. DOI 10.1080/09637486.2023.2284647. PMID 38072785.",
+    "National Center for Complementary and Integrative Health (NIH). Ginger. nccih.nih.gov/health/ginger.",
+    "Rubin D, Patel V, Dietrich E. Effects of oral ginger supplementation on the INR. Case Reports in Medicine. 2019. PMID 31281366. PMC6594244.",
+    "Memorial Sloan Kettering Cancer Center. About Herbs: Ginger. mskcc.org/cancer-care/integrative-medicine/herbs/ginger.",
+    "News report on the Canada Dry (Dr Pepper Snapple Group) ginger ale class action and label change: aol.com/articles/ginger-ale-brand-sued-not-231700778.html."
+  ],
+  "kapak": {
+    "satirlar": [
+      "GINGER",
+      "SETTLES IT?"
+    ],
+    "vurgu": "–31%",
+    "vurgu_alt": "NAUSEA",
+    "gorsel": "a large fresh ginger root with sliced golden ginger rounds heaped in front, a steaming white cup of ginger tea tucked behind, tightly grouped, bright and appetizing"
+  },
+  "kahraman": "ginger",
+  "etiketler": [
+    "ginger for nausea",
+    "does ginger help upset stomach",
+    "ginger tea benefits",
+    "ginger ale nausea",
+    "nausea remedies",
+    "ginger and blood thinners",
+    "ginger supplement dose",
+    "nutrition science",
+    "after 60",
+    "food myths"
+  ],
+  "seslendirme_duzelt": {
+    "INR": "I N R",
+    "mg": "milligrams"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Ginger and an upset stomach",
+      "metin": "A 2006 review of five trials found ginger cut nausea and vomiting after surgery by about 30 percent. A newer review, with four times the patients, found something messier.",
+      "gorsel": "a whole ginger root and sliced ginger rounds on a wooden kitchen table beside a white teacup, soft window light",
+      "etiket": "Chaiyakunapruk et al. · Am J Obstet Gynecol · 2006",
+      "baslik": {
+        "satirlar": [
+          "AFTER SURGERY"
+        ],
+        "vurgu": "–31%",
+        "not": "nausea and vomiting risk in a 2006 review of five trials"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "It helps one symptom more than another. And ginger ale may hold almost none of it.",
+      "gorsel": "a tall glass of pale golden ginger ale with bubbles beside a whole ginger root and sliced ginger rounds on a saucer",
+      "baslik": {
+        "satirlar": [
+          "ONE SYMPTOM,",
+          "NOT ANOTHER"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know how much to take, and who should ask first.",
+      "gorsel": "a tidy kitchen table with a ginger root, a white mug of ginger tea and a small bowl of ginger capsules, tightly grouped"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what ginger actually is, and why so many people reach for it.",
+      "gorsel": "an antique botanical engraving of a ginger plant with leafy stems above and the knobby ginger root below, a quiet study table"
+    },
+    {
+      "id": 5,
+      "metin": "Ginger is the knobby underground stem of a tropical plant. People eat it fresh, dried, candied and brewed, and many reach for it when their stomach feels off.",
+      "gorsel": "a knobby ginger root cut open to show its pale yellow flesh, a few sliced ginger rounds and a small grater beside it on a wooden board",
+      "baslik": {
+        "satirlar": [
+          "THE ROOT"
+        ],
+        "not": "a stomach remedy many people reach for"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Today you can buy it as fresh root, tea bags, chews, capsules and ginger ale. Those are very different products, and that difference matters later in this video.",
+      "gorsel": "five items in a tight group: a fresh ginger root, a box-shaped tea bag, a bowl of ginger chews, an amber bottle of capsules, and a bottle of ginger ale",
+      "baslik": {
+        "satirlar": [
+          "SAME NAME,",
+          "DIFFERENT THINGS"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "First, is this more than a folk habit? Researchers have tested ginger in people for three kinds of nausea: after surgery, from chemotherapy, and from motion.",
+      "gorsel": "three small vignettes in a row: an operating lamp, an infusion stand and a ship's wheel, with a large ginger root in the foreground"
+    },
+    {
+      "id": 8,
+      "bolum": "After surgery",
+      "tip": "kart",
+      "metin": "Let's begin with nausea after an operation, because ginger has been tested for it many times.",
+      "kart": {
+        "ust": "AFTER SURGERY",
+        "baslik": "Nausea after an operation",
+        "alt": "Meta-analyses of randomized trials"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "In 2006, a team led by Nipon Chaiyakunapruk pooled five randomized trials with 363 patients. Each compared a fixed dose of ginger with a placebo in the 24 hours after surgery.",
+      "gorsel": "a hospital recovery bed with a folded blanket, a small tray holding a cup of ginger tea and a sliced ginger root beside it",
+      "etiket": "Chaiyakunapruk et al. · Am J Obstet Gynecol · 2006",
+      "baslik": {
+        "satirlar": [
+          "5 TRIALS"
+        ],
+        "not": "363 patients, ginger vs placebo after surgery"
+      }
+    },
+    {
+      "id": 10,
+      "tip": "grafik",
+      "metin": "Ginger lowered the risk of nausea and vomiting by about 31 percent, and the risk of vomiting alone by about 39 percent. The only side effect reported was abdominal discomfort.",
+      "grafik": {
+        "baslik": "How much lower the risk was with ginger",
+        "alt": "Ginger vs placebo, first 24 hours after surgery",
+        "cubuklar": [
+          {
+            "etiket": "Nausea or vomiting",
+            "deger": 31,
+            "metin": "−31%"
+          },
+          {
+            "etiket": "Vomiting alone",
+            "deger": 39,
+            "metin": "−39%"
+          }
+        ],
+        "kaynak": "Chaiyakunapruk et al., Am J Obstet Gynecol 2006 · 5 trials, 363 surgical patients"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "They concluded that at least one gram of ginger, taken as a fixed dose, worked better than placebo. That one-gram figure keeps coming up, so hold on to it.",
+      "gorsel": "a small brass kitchen scale with a little mound of dried ginger powder on its pan, a whole ginger root beside it",
+      "baslik": {
+        "satirlar": [
+          "AT LEAST",
+          "1 GRAM"
+        ],
+        "not": "the fixed ginger dose that beat placebo"
+      }
+    },
+    {
+      "id": 12,
+      "metin": "But five small trials are not the last word. In 2022, Lu and colleagues pooled fourteen randomized trials with 1,506 patients, about four times as many.",
+      "gorsel": "four neat stacks of bound research papers growing from a short stack to a tall one on a library table, a ginger root as a paperweight",
+      "etiket": "Lu et al. · Int J Nurs Stud · 2022",
+      "baslik": {
+        "satirlar": [
+          "14 TRIALS"
+        ],
+        "not": "1,506 patients, 2022 meta-analysis"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "In that analysis, ginger gave lower nausea scores than placebo at two, six and twelve hours after surgery. So the nausea benefit held up.",
+      "gorsel": "an antique round clock with a blank face beside a calm white teacup of ginger tea and a sliced ginger root",
+      "baslik": {
+        "satirlar": [
+          "NAUSEA",
+          "SCORES LOWER"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "metin": "But except in the recovery room, ginger showed no significant link with less vomiting, or with less use of anti-nausea drugs. The authors asked for better trials.",
+      "gorsel": "a hospital tray with a small cardboard basin, a glass of water and a ginger root, quiet and clinical",
+      "baslik": {
+        "satirlar": [
+          "NAUSEA: LOWER",
+          "VOMITING: UNCLEAR"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "So the honest summary is this. After surgery, ginger may take the edge off nausea, but it hasn't been shown to reliably stop vomiting.",
+      "gorsel": "a ginger root resting on a gentle set of balance scales, one pan slightly lifted, in a vintage engraving style"
+    },
+    {
+      "id": 16,
+      "metin": "Surgery also brings a safety point about ginger that surprises many people. We'll get to it in the last part.",
+      "gorsel": "a pill organizer with white tablets next to a ginger root and a small notepad with blank lines",
+      "baslik": {
+        "satirlar": [
+          "A SAFETY POINT",
+          "COMING UP"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "bolum": "During chemotherapy",
+      "tip": "kart",
+      "metin": "Nausea from chemotherapy is a different problem, and doctors treat it with strong prescription medicines. So the question here is whether ginger can add anything.",
+      "kart": {
+        "ust": "DURING CHEMOTHERAPY",
+        "baslik": "Nausea from cancer treatment",
+        "alt": "A large US trial and a 2019 review"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "The biggest trial was run in the United States by Julie Ryan and colleagues. It randomized 744 adults having chemotherapy, and 576 were included in the analysis.",
+      "gorsel": "a bright infusion room with a comfortable armchair, an infusion stand and a small table holding a cup of ginger tea and a ginger root",
+      "etiket": "Ryan et al. · Support Care Cancer · 2012",
+      "baslik": {
+        "satirlar": [
+          "744",
+          "RANDOMIZED"
+        ],
+        "not": "adults having chemotherapy, 576 analyzed"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "They took capsules for six days, starting three days before chemotherapy: ginger at half a gram, one gram or one and a half grams a day, or a placebo. Average age was 53, and 91 percent were women.",
+      "gorsel": "four identical amber capsule bottles in a row with blank labels, a fresh ginger root in front of the first bottle",
+      "baslik": {
+        "satirlar": [
+          "0.5, 1 OR",
+          "1.5 GRAMS"
+        ],
+        "not": "or placebo, in capsules for six days"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "All three ginger doses lowered nausea on the first day compared with placebo. The biggest drops came with half a gram and one gram. The highest dose did not do better.",
+      "gorsel": "a ginger root and a handful of ginger capsules beside a tall glass of water on a clean white kitchen counter",
+      "etiket": "Ryan et al. · Support Care Cancer · 2012",
+      "baslik": {
+        "satirlar": [
+          "DAY 1",
+          "NAUSEA LOWER"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "A 2019 review by Megan Crichton and colleagues pulled together 18 articles on adults having chemotherapy. Ginger at one gram a day or less, for more than three days, was linked with less acute vomiting, the kind in the first day.",
+      "gorsel": "a stack of eighteen bound journals on a desk with a magnifying glass resting on top and a ginger root beside them",
+      "etiket": "Crichton et al. · J Acad Nutr Diet · 2019",
+      "baslik": {
+        "satirlar": [
+          "18 ARTICLES"
+        ],
+        "not": "2019 review in adults having chemotherapy"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "But the review found no significant link with delayed vomiting, or with nausea itself. So even here, ginger is not a clear win.",
+      "gorsel": "a ginger root and a cup of ginger tea on a table, a faint question-mark shaped curl of steam rising from the cup",
+      "baslik": {
+        "satirlar": [
+          "MIXED",
+          "RESULTS"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "If you're having chemotherapy, talk with your oncology team before adding ginger. They know which other medicines you take.",
+      "gorsel": "a doctor's desk with a clipboard, a stethoscope and a small dish of sliced ginger, warm lamplight",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "CANCER TEAM"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "bolum": "Motion sickness and the big picture",
+      "metin": "Now motion sickness. In 2003, Lien and colleagues tested ginger in 13 volunteers who had a history of motion sickness.",
+      "gorsel": "a small sailboat on gentle waves with a ginger root drawn large in the foreground, vintage engraving style",
+      "etiket": "Lien et al. · Am J Physiol Gastrointest Liver Physiol · 2003",
+      "baslik": {
+        "satirlar": [
+          "13 VOLUNTEERS"
+        ],
+        "not": "with a history of motion sickness"
+      }
+    },
+    {
+      "id": 25,
+      "metin": "A setup in the lab gave them the feeling of spinning. Both 1,000 and 2,000 milligrams of ginger reduced nausea compared with placebo, and calmed an irregular, fast stomach rhythm.",
+      "gorsel": "a simple laboratory chair inside a plain striped rotating drum, a ginger root and a glass of water on a stand beside it",
+      "baslik": {
+        "satirlar": [
+          "1,000 AND",
+          "2,000 MG"
+        ],
+        "not": "both lowered nausea in the lab"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "It's a real finding, but a tiny one: 13 people, in a lab. And the National Institutes of Health's center on complementary health says most studies of ginger for motion sickness don't show a benefit.",
+      "gorsel": "a ginger root on a laboratory bench next to a small notebook with blank pages and a pair of round glasses"
+    },
+    {
+      "id": 27,
+      "metin": "Why would results differ so much? Small studies are noisy, and the ginger products and doses change from one study to the next.",
+      "gorsel": "several different ginger products laid out in a row: raw root, powder in a bowl, capsules, dried slices and a tea bag",
+      "baslik": {
+        "satirlar": [
+          "DIFFERENT",
+          "PRODUCTS"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "metin": "In 2024, researchers examined 15 meta-analyses of ginger for nausea and vomiting. Their verdict on the reviews themselves was sobering: methodological quality was low or critically low.",
+      "gorsel": "fifteen slim books stacked in a leaning tower beside a ginger root on a library shelf",
+      "etiket": "Li et al. · Int J Food Sci Nutr · 2024",
+      "baslik": {
+        "satirlar": [
+          "15 REVIEWS"
+        ],
+        "not": "rated low or critically low in quality"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "That doesn't make ginger useless. It means the evidence is thinner than the headlines suggest. The authors still concluded ginger may help in some situations, and called it a safe botanical option.",
+      "gorsel": "a ginger root held gently in an open hand-drawn scale pan with soft light, a quiet and balanced composition"
+    },
+    {
+      "id": 30,
+      "metin": "The one setting where federal health experts sound more positive is pregnancy. The NIH center says ginger may be helpful for nausea in pregnancy. For surgery and chemotherapy, it calls ginger's added value uncertain.",
+      "gorsel": "a ginger root and a cup of ginger tea on a table beside a closed notebook, soft morning light",
+      "baslik": {
+        "satirlar": [
+          "OFFICIAL VIEW:",
+          "UNCERTAIN"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "bolum": "Tea, capsules or ginger ale",
+      "tip": "kart",
+      "metin": "Now the practical question. Which form actually gives you the ginger the trials used?",
+      "kart": {
+        "ust": "WHAT YOU BUY",
+        "baslik": "Tea, capsules, ginger ale",
+        "alt": "The dose is the catch"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "The trials used measured doses, from half a gram to two grams, mostly in capsules. That's far easier to count than a mug of tea.",
+      "gorsel": "a row of ginger capsules lined up beside a small kitchen scale and a whole ginger root",
+      "baslik": {
+        "satirlar": [
+          "0.5 TO 2",
+          "GRAMS"
+        ],
+        "not": "the range tested in these trials"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Ginger tea and fresh ginger are real ginger, and many people find them pleasant. But nobody can say how many grams are in your mug. It depends on how much root you use and how long it steeps.",
+      "gorsel": "a white mug of hot ginger tea with thin ginger slices floating in it, a whole ginger root and a grater on the table"
+    },
+    {
+      "id": 34,
+      "metin": "Capsules and chews let you see the number. Look on the label for the milligrams of ginger in each serving, not just the word ginger on the front.",
+      "gorsel": "an amber supplement bottle with a blank label tipped on its side, capsules spilling beside a ginger root",
+      "baslik": {
+        "satirlar": [
+          "READ THE",
+          "MILLIGRAMS"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "Now ginger ale. In the United States, consumers brought a class action over one major brand's claim that it was made with real ginger, because ginger was missing from the ingredient list.",
+      "gorsel": "a glass bottle of ginger ale and a tall glass of pale bubbling ginger ale on a table, a single ginger root beside them",
+      "baslik": {
+        "satirlar": [
+          "GINGER ALE",
+          "ON TRIAL"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "That company dropped the real-ginger claim from its U.S. packaging in 2019. The label now says less than 2 percent ginger extract.",
+      "gorsel": "a ginger ale can with a blank label on a kitchen counter, a small sliced ginger root next to it",
+      "baslik": {
+        "satirlar": [
+          "LESS THAN",
+          "2%"
+        ],
+        "not": "ginger extract on one major brand's U.S. label"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "So check the ingredient list for the word ginger. Sipping fluids matters when you're queasy, but don't count on ginger ale as a ginger dose.",
+      "gorsel": "an open hand holding a ginger ale bottle up to the light, a ginger root and a magnifying glass on the table"
+    },
+    {
+      "id": 38,
+      "metin": "That's the difference I mentioned earlier: real ginger with a number on it, real ginger without one, and a drink that may have very little.",
+      "gorsel": "three items in a tight group: a bottle of ginger capsules, a white mug of ginger tea, and a glass of ginger ale, with a ginger root in front",
+      "baslik": {
+        "satirlar": [
+          "A NUMBER,",
+          "NO NUMBER,",
+          "VERY LITTLE"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "metin": "Side effects are usually mild. The NIH center lists abdominal discomfort, heartburn and diarrhea, plus irritation of the mouth and throat.",
+      "gorsel": "a ginger root and a cup of ginger tea on a table, a small glass of water and a folded napkin beside them",
+      "baslik": {
+        "satirlar": [
+          "MILD,",
+          "MOSTLY DIGESTIVE"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "bolum": "Blood thinners and surgery",
+      "tip": "kart",
+      "metin": "And now the safety part I promised earlier, starting with blood thinners.",
+      "kart": {
+        "ust": "THE SAFETY PART",
+        "baslik": "Blood thinners and ginger",
+        "alt": "Ask before you add it"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "Memorial Sloan Kettering Cancer Center says ginger supplements may increase the risk of bleeding. That matters if you take warfarin, aspirin, or similar medicines.",
+      "gorsel": "a pill organizer with white tablets next to a ginger root and a bottle of ginger capsules, tightly grouped",
+      "baslik": {
+        "satirlar": [
+          "BLEEDING",
+          "RISK?"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "The evidence is mostly case reports. In a 2019 report, a 70-year-old woman on long-term warfarin started a daily 48 milligram ginger chew. About a month later, her INR, a clotting test, had risen from 2.7 to 8.0.",
+      "gorsel": "a glass laboratory tube rack with small capped tubes beside a bottle of ginger chews and a ginger root",
+      "etiket": "Rubin et al. · Case Rep Med · 2019",
+      "baslik": {
+        "satirlar": [
+          "INR 2.7",
+          "TO 8.0"
+        ],
+        "not": "one case report, 70-year-old on warfarin"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "She had no reported bleeding. After warfarin doses were held and the ginger stopped, her INR fell back to 2.6. One case can't prove ginger was the cause, and the authors noted that unlisted ingredients could play a part.",
+      "gorsel": "a calm physician's desk with an open appointment book with blank pages, a bottle of ginger chews and a ginger root"
+    },
+    {
+      "id": 44,
+      "metin": "Controlled studies are less alarming. In a 2005 crossover study of healthy volunteers, a ginger product did not significantly change clotting. Another study in people on blood thinners linked ginger to bleeding, but not to a high INR.",
+      "gorsel": "a ginger root and a small bowl of ginger powder on a white table next to a quiet laboratory microscope",
+      "baslik": {
+        "satirlar": [
+          "MIXED",
+          "EVIDENCE"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "metin": "So the fair summary is: uncertain, not proven, and mostly a question about concentrated supplements. If you take a blood thinner, ask your doctor or pharmacist before adding ginger capsules. Never change your medicine on your own.",
+      "gorsel": "a pharmacist's counter with a pill bottle and a bottle of ginger capsules side by side, a ginger root in front",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Here's the surgery point. Memorial Sloan Kettering advises stopping ginger supplements about two weeks before an operation, and not using them afterward to control nausea. Tell your surgical team about every supplement you take.",
+      "gorsel": "a calendar page with two empty weeks in a row, a bottle of ginger capsules set aside next to a ginger root",
+      "baslik": {
+        "satirlar": [
+          "2 WEEKS",
+          "BEFORE SURGERY"
+        ],
+        "not": "stop ginger supplements, per MSKCC"
+      }
+    },
+    {
+      "id": 47,
+      "metin": "The same cancer center notes that ginger may lower blood sugar. How much that matters isn't known, but with insulin or other diabetes medicines, mention it to your pharmacist.",
+      "gorsel": "a glucose meter with a blank screen beside a ginger root and a small bottle of ginger capsules"
+    },
+    {
+      "id": 48,
+      "metin": "Before the tips, here is what we still don't know. One hint about how ginger might work came from the motion sickness study: it lowered a stress hormone called vasopressin and calmed the stomach rhythm. But that's 13 people in a lab, not a proven explanation.",
+      "gorsel": "a ginger root beside a simple engraving of a stomach with a gentle wavy line drawn across it, vintage textbook style",
+      "etiket": "Lien et al. · Am J Physiol Gastrointest Liver Physiol · 2003",
+      "baslik": {
+        "satirlar": [
+          "HOW IT WORKS:",
+          "NOT PROVEN"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "metin": "Another clue came from the chemotherapy trial. Feeling sick before treatment even began was strongly linked with nausea on the first day. That's a reminder that nausea has many causes, and ginger is only one tool.",
+      "gorsel": "a quiet waiting room with an empty armchair and a small side table holding a cup of ginger tea and a ginger root"
+    },
+    {
+      "id": 50,
+      "metin": "The reviews also point to a practical problem. Trials use different ginger products, doses and schedules, and Crichton's team called for standardized ginger products and stronger study designs. Until then, precise advice is hard.",
+      "gorsel": "an assortment of ginger products in mismatched jars and bottles on a shelf, from dried slices to powder to capsules, with a ginger root in front",
+      "baslik": {
+        "satirlar": [
+          "NO STANDARD",
+          "PRODUCT"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "metin": "Memorial Sloan Kettering also describes a report of fatal bleeding in an 80-year-old man on a blood thinner who had taken a boiled ginger and cinnamon mixture. A single report can't show cause, but it's one reason pharmacists ask about supplements.",
+      "gorsel": "a pharmacist's shelf of labeled medicine boxes with a bottle of ginger capsules and a ginger root on the counter in front",
+      "baslik": {
+        "satirlar": [
+          "ONE REPORT,",
+          "NOT PROOF"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "metin": "Natural doesn't mean risk-free, and it doesn't mean useless either. Ginger looks like a modest option worth discussing with your care team, not a cure.",
+      "gorsel": "a ginger root and a white cup of ginger tea on a wooden table in calm morning light, a small notebook beside them"
+    },
+    {
+      "id": 53,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So how would you use this wisely? Five simple steps.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Five sensible steps",
+        "alt": "If your doctor says it's fine"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "One: if you want to try ginger for occasional queasiness, pick a product that lists the amount on the label. In the trials, about one gram a day was typical.",
+      "gorsel": "a bottle of ginger capsules with a blank label beside a whole ginger root and a small glass of water",
+      "baslik": {
+        "satirlar": [
+          "1. CHECK",
+          "THE LABEL"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "Two: fresh ginger tea is a gentle choice, but the strength varies from cup to cup, so don't expect trial-sized results.",
+      "gorsel": "a hand-sliced pile of fresh ginger rounds beside a steaming white mug of ginger tea and a small kettle",
+      "baslik": {
+        "satirlar": [
+          "2. TEA IS",
+          "UNMEASURED"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "metin": "Three: don't rely on ginger ale as your ginger. Read the ingredient list, and treat it as a drink, not a dose.",
+      "gorsel": "a glass of ginger ale with bubbles on a coaster, a ginger root next to it and a folded ingredient leaflet with blank lines",
+      "baslik": {
+        "satirlar": [
+          "3. ALE IS",
+          "A DRINK"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Four: if you take a blood thinner or diabetes medicine, or you have surgery coming, ask your doctor or pharmacist first.",
+      "gorsel": "a doctor's desk with a prescription pad with blank lines, a pill bottle and a ginger root",
+      "baslik": {
+        "satirlar": [
+          "4. ASK",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "metin": "Five: nausea that lasts for days, or that keeps you from drinking fluids, deserves a call to your doctor, not just another cup of tea.",
+      "gorsel": "a landline telephone beside a glass of water and a ginger root on a bedside table",
+      "baslik": {
+        "satirlar": [
+          "5. LASTING",
+          "NAUSEA"
+        ],
+        "not": "call your doctor"
+      }
+    },
+    {
+      "id": 59,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Ginger and nausea",
+        "alt": "What the evidence supports"
+      }
+    },
+    {
+      "id": 60,
+      "metin": "Ginger may ease nausea a little, especially after surgery, but it hasn't been shown to reliably stop vomiting. Results for chemotherapy are mixed, and for motion sickness most studies don't show a benefit.",
+      "gorsel": "a ginger root resting beside a white teacup on a table, a gentle morning light from a window",
+      "baslik": {
+        "satirlar": [
+          "MAY EASE",
+          "NAUSEA"
+        ]
+      }
+    },
+    {
+      "id": 61,
+      "metin": "The doses in trials were measured, around one gram a day. Capsules give you a number, tea is real ginger of unknown strength, and one major ginger ale lists less than 2 percent ginger extract.",
+      "gorsel": "three items in a tight group: a bottle of ginger capsules, a mug of ginger tea and a glass of ginger ale, with a ginger root in front"
+    },
+    {
+      "id": 62,
+      "metin": "And if you take blood thinners or diabetes medicine, or have surgery coming, check with your doctor or pharmacist before adding ginger.",
+      "gorsel": "a pill organizer and a bottle of ginger capsules on a kitchen counter beside a whole ginger root",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "DOCTOR FIRST"
+        ]
+      }
+    },
+    {
+      "id": 63,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
