@@ -54,4 +54,4 @@ jobs:
       - name: Gemini CLI
         run: |
           npm install -g @google/gemini-cli >/dev/null 2>&1; gemini --version
-          gemini -m "$GMODEL" -p "Reply with exactly: GEMINI CLI OK" 2>&1 | tail -5
+          timeout 180 gemini -m "$GMODEL" -p "Reply with exactly: GEMINI CLI OK" 2>&1 | tail -5; echo "CLI çıkış: ${PIPESTATUS[0]}"
