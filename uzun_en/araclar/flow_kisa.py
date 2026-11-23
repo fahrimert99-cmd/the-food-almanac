@@ -26,6 +26,7 @@ import ortak as O  # noqa: E402
 TANIM = "flow_kisa.json"
 KAYIT = "flow_kisa_yayin.json"
 VIDEO = "flow_kisa.mp4"
+MEDYA_DALI = os.environ.get("FLOW_MEDYA_DALI", "flow-medya")
 VARSAYILAN = {"gun": 5, "saat_utc": "17:00", "en_erken_saat": 3}   # 5 = Cumartesi (Python haftanın günü)
 
 
@@ -100,10 +101,24 @@ def videoyu_getir(slug):
     os.makedirs(hedef, exist_ok=True)
     r = subprocess.run(["gh", "release", "download", f"uzun-en-{slug}", "-p", VIDEO, "-D", hedef, "--clobber"],
                        capture_output=True, text=True)
-    if r.returncode != 0 or not os.path.exists(yol):
-        O.log(f"! {slug}: {VIDEO} sürümde bulunamadı (uzun-en-{slug}) — atlanıyor ({r.stderr.strip()[:120]})")
-        return None
-    return yol
+    if r.returncode == 0 and os.path.exists(yol):
+        return yol
+    # Yedek: video ayrı "flow-medya" dalında (MEDYA_DALI/SLUG/flow_kisa.mp4) olabilir.
+    # Bulunursa sürüme de yüklenir, bir dahaki sefere oradan gelir.
+    f = subprocess.run(["git", "fetch", "--depth", "1", "origin", MEDYA_DALI], capture_output=True, text=True)
+    if f.returncode == 0:
+        with open(yol, "wb") as fh:
+            g = subprocess.run(["git", "show", f"FETCH_HEAD:{slug}/{VIDEO}"], stdout=fh, stderr=subprocess.PIPE)
+        if g.returncode == 0 and os.path.getsize(yol) > 0:
+            u = subprocess.run(["gh", "release", "upload", f"uzun-en-{slug}", yol, "--clobber"],
+                               capture_output=True, text=True)
+            O.log(f"  {slug}: {VIDEO} {MEDYA_DALI} dalından alındı"
+                  + (", sürüme yüklendi" if u.returncode == 0 else f" (sürüme yüklenemedi: {u.stderr.strip()[:80]})"))
+            return yol
+        if os.path.exists(yol):
+            os.remove(yol)
+    O.log(f"! {slug}: {VIDEO} ne sürümde (uzun-en-{slug}) ne {MEDYA_DALI} dalında — atlanıyor ({r.stderr.strip()[:120]})")
+    return None
 
 
 def yukle(slug, slot, kuru=False):
