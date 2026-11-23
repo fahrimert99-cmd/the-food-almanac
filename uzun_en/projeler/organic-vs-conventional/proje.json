@@ -1,0 +1,619 @@
+{
+  "slug": "organic-vs-conventional",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Is Organic Food Healthier? What Studies Show",
+  "yorum": "Do you buy organic produce, and if so, which items do you pick it for? Has the price ever made you think twice at the store?",
+  "aciklama_giris": "A large French study linked heavy organic eating with about 25 percent lower cancer risk. A Stanford review of 237 studies found little nutrition difference. Both can be true, because they measured different things. In this video we look at what the research shows: nutrients in organic and conventional produce, pesticide residues compared with legal safety limits, the NutriNet-Santé cohort and why it cannot prove cause, the Dirty Dozen list, and how organic prices vary.\n\nThe short version: organic produce carries fewer detectable residues, but nearly all conventional produce tests at or below legal limits, and no long-term study has shown that organic food improves health. We finish with five practical ways to spend your grocery money where it may matter most. For education only, not medical advice.",
+  "kaynaklar": [
+    "Smith-Spangler C, Brandeau ML, Hunter GE, et al. Are organic foods safer or healthier than conventional alternatives? A systematic review. Annals of Internal Medicine. 2012;157(5):348-366. DOI 10.7326/0003-4819-157-5-201209040-00007.",
+    "Baranski M, Srednicka-Tober D, Volakakis N, et al. Higher antioxidant and lower cadmium concentrations and lower incidence of pesticide residues in organically grown crops: a systematic literature review and meta-analyses. British Journal of Nutrition. 2014;112(5):794-811. PMID 24968103.",
+    "Mie A, Andersen HR, Gunnarsson S, et al. Human health implications of organic food and organic agriculture: a comprehensive review. Environmental Health. 2017;16:111. DOI 10.1186/s12940-017-0315-4.",
+    "Winter CK, Katz JM. Dietary exposure to pesticide residues from commodities alleged to contain the highest contamination levels. Journal of Toxicology. 2011;2011:589674. PMID 21776262.",
+    "US Department of Agriculture, Agricultural Marketing Service. Pesticide Data Program annual summary, 2021 data (reported by Food Safety News, December 2022).",
+    "Hyland C, et al. Organic diet intervention significantly reduces urinary pesticide levels in U.S. children and adults. Environmental Research. 2019;171:568-575. DOI 10.1016/j.envres.2019.01.024. PMID 30765100.",
+    "Baudry J, et al. Association of frequency of organic food consumption with cancer risk: findings from the NutriNet-Santé prospective cohort study. JAMA Internal Medicine. 2018;178(12):1597-1606. DOI 10.1001/jamainternmed.2018.4357.",
+    "US Department of Agriculture, Economic Research Service. Investigating retail price premiums for organic foods. Amber Waves, May 2016 (based on Carlson A, Jaenicke E, ERR-209)."
+  ],
+  "kapak": {
+    "satirlar": [
+      "ORGANIC",
+      "WORTH IT?"
+    ],
+    "vurgu": "–30%",
+    "vurgu_alt": "RESIDUE",
+    "gorsel": "a wooden crate overflowing with shiny red strawberries, green apples and a bunch of fresh spinach, tightly grouped and overlapping in the foreground, a small blank paper price tag tied to the crate handle, bright and appetizing"
+  },
+  "etiketler": [
+    "organic food",
+    "organic vs conventional",
+    "is organic healthier",
+    "pesticides on produce",
+    "dirty dozen",
+    "organic produce",
+    "pesticide residue",
+    "healthy eating after 60",
+    "nutrition science",
+    "organic food and cancer"
+  ],
+  "seslendirme_duzelt": {
+    "NutriNet-Santé": "Nutri Net Sahn-tay",
+    "USDA": "U S D A",
+    "EPA": "E P A",
+    "UC Davis": "U C Davis",
+    "Baranski": "Buh-ran-skee",
+    "Smith-Spangler": "Smith Spang-ler"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Two studies, one puzzle",
+      "metin": "In a French study of 68,946 adults, the biggest organic eaters had about 25 percent lower cancer risk. Yet a Stanford review of 237 studies found almost no nutrition difference.",
+      "gorsel": "a woven market basket close up, heaped with red apples, strawberries and leafy spinach, a rolled paper bag beside it, soft morning light",
+      "etiket": "Baudry et al. · JAMA Intern Med · 2018",
+      "baslik": {
+        "satirlar": [
+          "–25%",
+          "CANCER RISK?"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "metin": "The two results seem to clash, until you see what each one actually measured.",
+      "gorsel": "two market baskets side by side on a wooden table, one holding apples and carrots with a small green sprout beside it, the other holding the same fruit and carrots, a magnifying glass resting between them"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know where organic helps, where it doesn't, and where your money goes furthest.",
+      "gorsel": "an open leather coin purse with a few coins spilling beside a basket of apples and strawberries on a wooden counter",
+      "baslik": {
+        "satirlar": [
+          "WHERE TO",
+          "SPEND"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with the claim itself, and how to test it fairly.",
+      "gorsel": "a farmers market stall with crates of apples, strawberries, carrots and spinach under a striped awning, a hand-painted blank wooden sign"
+    },
+    {
+      "id": 5,
+      "metin": "Organic farming limits pesticide use. So the common belief sounds simple: fewer pesticides must mean a healthier plate. But that belief hides three separate questions.",
+      "gorsel": "a close view of a tidy vegetable garden bed with rows of leafy greens and a watering can, a small basket of apples at the end of the row"
+    },
+    {
+      "id": 6,
+      "metin": "One: is organic food more nutritious? Two: does it carry less pesticide residue? Three: if either is true, does it change your health?",
+      "gorsel": "three market baskets in a row, one with apples, one with strawberries, one with spinach, a single brass magnifying glass in front",
+      "baslik": {
+        "satirlar": [
+          "THREE",
+          "QUESTIONS"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "Most debates blur those three together. Keep them apart, and the two studies from the start stop clashing.",
+      "gorsel": "a kitchen table with a basket of apples, strawberries and spinach, an open notebook with blank pages and a pencil beside it"
+    },
+    {
+      "id": 8,
+      "bolum": "What is inside organic food",
+      "tip": "kart",
+      "metin": "In 2012, a Stanford team set out to answer the first question by gathering every study they could find.",
+      "kart": {
+        "ust": "THE REVIEW",
+        "baslik": "Stanford, 2012",
+        "alt": "237 studies · Annals of Internal Medicine"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "Led by Crystal Smith-Spangler, the team pooled 237 studies. Seventeen followed people eating organic or conventional diets. The other 223 simply measured nutrients or contaminants in food.",
+      "gorsel": "a tall stack of bound research journals with blank covers on a library table beside a basket of apples, an old brass desk lamp",
+      "etiket": "Smith-Spangler et al. · Ann Intern Med · 2012",
+      "baslik": {
+        "satirlar": [
+          "237",
+          "STUDIES"
+        ],
+        "not": "17 in people, 223 measuring food"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "On vitamins, the answer was plain. They found no consistent difference. The only nutrient significantly higher in organic produce was phosphorus, and the researchers judged that clinically minor.",
+      "gorsel": "a halved apple and a halved orange beside a small brass kitchen scale with two equal pans, a tidy wooden table",
+      "baslik": {
+        "satirlar": [
+          "VITAMINS"
+        ],
+        "not": "no consistent difference"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "There were hints elsewhere. Organic produce had somewhat more phenols, plant compounds that may act as antioxidants. Organic milk and chicken had more omega-3 fats. The authors called that evidence weak, with little clinical significance.",
+      "gorsel": "a glass bottle of milk, a plate of roasted chicken and a basket of apples arranged on a wooden counter, soft window light",
+      "etiket": "Smith-Spangler et al. · Ann Intern Med · 2012"
+    },
+    {
+      "id": 12,
+      "metin": "The human studies were short, from two days to two years, and none followed people long enough to see disease rates change. Only three looked at clinical outcomes, and they found no significant differences.",
+      "gorsel": "a simple wall calendar with turned pages beside a bowl of strawberries and a glass of water on a quiet table",
+      "baslik": {
+        "satirlar": [
+          "2 DAYS TO",
+          "2 YEARS"
+        ],
+        "not": "the longest human studies"
+      }
+    },
+    {
+      "id": 13,
+      "metin": "A larger 2014 meta-analysis led by Baranski drew on 343 publications. Organic crops had more of several antioxidant plant compounds. Phenolic acids were about 19 percent higher, flavonols about 50 percent, and flavanones about 69 percent.",
+      "tip": "grafik",
+      "grafik": {
+        "baslik": "How much higher in organic crops",
+        "alt": "Antioxidant plant compounds, organic vs conventional",
+        "cubuklar": [
+          {
+            "etiket": "Phenolic acids",
+            "deger": 19,
+            "metin": "+19%"
+          },
+          {
+            "etiket": "Flavones",
+            "deger": 26,
+            "metin": "+26%"
+          },
+          {
+            "etiket": "Flavonols",
+            "deger": 50,
+            "metin": "+50%"
+          },
+          {
+            "etiket": "Anthocyanins",
+            "deger": 51,
+            "metin": "+51%"
+          },
+          {
+            "etiket": "Flavanones",
+            "deger": 69,
+            "metin": "+69%"
+          }
+        ],
+        "kaynak": "Baranski et al., Br J Nutr 2014 · meta-analysis of organic vs conventional crops"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "Here's the catch. That review measured plant chemicals in food, not health in people. There is no good evidence that the extra antioxidants change anyone's heart, blood sugar or memory.",
+      "gorsel": "a laboratory bench with a glass beaker of deep purple berry juice, a bowl of blueberries and an antique brass microscope",
+      "etiket": "Baranski et al. · Br J Nutr · 2014",
+      "baslik": {
+        "satirlar": [
+          "FOOD,",
+          "NOT HEALTH"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "metin": "The authors also noted that results varied widely from study to study, and that publication bias was suspected for about half of the measures. A 2017 review reached a similar view: the nutritional differences are marginal.",
+      "gorsel": "a stack of papers weighed down by an apple on a wooden desk beside a tilted brass balance scale, a teacup with rising steam",
+      "etiket": "Mie et al. · Environ Health · 2017"
+    },
+    {
+      "id": 16,
+      "metin": "So on nutrition, the verdict is close to a tie. But there's one place where organic does clearly change something, and it's the next chapter.",
+      "gorsel": "a market basket of apples and spinach with a finger-shaped arrow carved on a wooden signpost pointing forward down a garden path",
+      "baslik": {
+        "satirlar": [
+          "NUTRITION:",
+          "CLOSE TO A TIE"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "bolum": "Pesticides and safety limits",
+      "tip": "kart",
+      "metin": "That place is pesticide residue. Let's look at how much organic food changes, and whether it matters.",
+      "kart": {
+        "ust": "THE RESIDUES",
+        "baslik": "Fewer residues, but safer?",
+        "alt": "USDA testing · UC Davis modeling"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "In the Stanford review, eating organic fruits and vegetables lowered the risk of detectable pesticide residue by about 30 percent.",
+      "gorsel": "a magnifying glass held over a bright red strawberry, tiny dots on its surface enlarged in a circular inset, a basket of strawberries behind",
+      "etiket": "Smith-Spangler et al. · Ann Intern Med · 2012",
+      "baslik": {
+        "satirlar": [
+          "DETECTABLE",
+          "RESIDUE"
+        ],
+        "vurgu": "–30%",
+        "not": "lower risk with organic produce"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "The 2014 meta-analysis agreed on direction. About 46 percent of conventional samples had detectable residues, against about 11 percent of organic ones. But that rests on only eleven studies, eight of them on one crop.",
+      "gorsel": "two shallow wooden trays of apples under a bright lamp, a pair of tweezers and a small glass dish beside each tray",
+      "etiket": "Baranski et al. · Br J Nutr · 2014"
+    },
+    {
+      "id": 20,
+      "metin": "But detectable is not the same as dangerous. Regulators set legal limits, called tolerances, for each pesticide on each food. The real question is how often foods go over them.",
+      "gorsel": "an antique brass balance scale holding a tiny pinch of powder on one pan and a heavy iron weight on the other, a basket of apples behind",
+      "baslik": {
+        "satirlar": [
+          "DETECTABLE",
+          "≠ DANGEROUS"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "metin": "Each year, the US Department of Agriculture tests thousands of foods through its Pesticide Data Program. In the 2021 report, over 10,000 samples were tested, and more than 99 percent were at or below the EPA limit.",
+      "gorsel": "a government laboratory bench with rows of small glass jars holding apple slices, spinach leaves and strawberries, a technician's gloves resting beside them",
+      "etiket": "USDA · Pesticide Data Program · 2021",
+      "baslik": {
+        "satirlar": [
+          "OVER 99%",
+          "WITHIN LIMITS"
+        ],
+        "not": "of 10,127 samples tested in 2021"
+      }
+    },
+    {
+      "id": 22,
+      "metin": "Only about half of one percent, 54 samples, went over a limit. And about one in four samples had no detectable residue at all.",
+      "gorsel": "a long wooden table with many small baskets of produce, almost all in a neat row and just a few set apart at the end",
+      "baslik": {
+        "satirlar": [
+          "1 IN 4",
+          "NO RESIDUE"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "metin": "Food toxicologists at UC Davis, Carl Winter and Josh Katz, went a step further. They modeled how much of the ten most common pesticides people would take in from twelve produce items, then compared it with the reference dose, the daily amount considered safe over a lifetime.",
+      "gorsel": "an old desk with a slide rule, an open ledger with blank columns, a basket of strawberries and a glass of water",
+      "etiket": "Winter & Katz · J Toxicol · 2011"
+    },
+    {
+      "id": 24,
+      "metin": "Every estimate came out well below that reference dose. The highest was 2 percent. Only one of 120 estimates passed 1 percent, and about three-quarters were below one ten-thousandth of the dose.",
+      "gorsel": "a very tall brass measuring cylinder, almost empty, with a single drop at the bottom, a bowl of strawberries and peppers beside it",
+      "etiket": "Winter & Katz · J Toxicol · 2011",
+      "baslik": {
+        "satirlar": [
+          "HIGHEST:",
+          "2% OF THE DOSE"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "Two honest caveats. It's a model using average diets and regulators' reference doses, not measurements inside people. And organic food isn't residue-free: about 23 percent of organic samples also had a detectable residue.",
+      "gorsel": "a basket of organic-looking apples and carrots with a small green sprout, a magnifying glass resting on the rim, an open notebook with blank pages",
+      "baslik": {
+        "satirlar": [
+          "ORGANIC ISN'T",
+          "RESIDUE-FREE"
+        ],
+        "not": "about 23% of organic samples had a detectable residue"
+      }
+    },
+    {
+      "id": 26,
+      "metin": "Does going organic change what's in your body? In a small 2019 study of four US families, 16 people in all, urine pesticide levels dropped after they switched to an organic diet. Some pesticide markers fell by more than 80 percent.",
+      "gorsel": "a family dinner table seen from above with a bowl of salad, a platter of roasted vegetables, four plates and glasses of water",
+      "etiket": "Hyland et al. · Environ Res · 2019",
+      "baslik": {
+        "satirlar": [
+          "4 FAMILIES"
+        ],
+        "not": "urine pesticide levels fell on an organic diet"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "It was small, had no comparison group, and was funded by an environmental advocacy group, so treat it as a clue. It shows exposure goes down. It doesn't show that health goes up.",
+      "gorsel": "a single small basket of strawberries on a lab bench next to a rack of empty glass sample tubes and a closed notebook"
+    },
+    {
+      "id": 28,
+      "bolum": "The cancer study and its limits",
+      "tip": "kart",
+      "metin": "Now back to the French study that opened this video.",
+      "kart": {
+        "ust": "THE COHORT",
+        "baslik": "NutriNet-Santé, France",
+        "alt": "68,946 adults · JAMA Internal Medicine 2018"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "This one was led by Baudry and colleagues, who followed 68,946 French adults for an average of four and a half years. Most were women, and the average age was 44.",
+      "gorsel": "a bustling French street market with crates of apples, leeks, strawberries and bread, a striped awning and a bicycle with a basket",
+      "etiket": "Baudry et al. · JAMA Intern Med · 2018"
+    },
+    {
+      "id": 30,
+      "metin": "Participants reported how often they ate organic versions of 16 kinds of food, which became an organic score. During follow-up, 1,340 people developed a first cancer.",
+      "gorsel": "sixteen small baskets in a tidy grid on a long wooden table, each holding a different food, from bread to carrots to apples",
+      "baslik": {
+        "satirlar": [
+          "1,340",
+          "FIRST CANCERS"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "metin": "The group eating the most organic food had a 25 percent lower risk of cancer overall than the group eating the least, and a 34 percent lower risk of breast cancer after menopause. No link appeared for prostate, colorectal or premenopausal breast cancer.",
+      "tip": "grafik",
+      "grafik": {
+        "baslik": "Lower cancer risk, highest vs lowest organic group",
+        "alt": "Hazard ratios converted to percent lower risk",
+        "cubuklar": [
+          {
+            "etiket": "All cancers",
+            "deger": 25,
+            "metin": "−25%"
+          },
+          {
+            "etiket": "Breast, after menopause",
+            "deger": 34,
+            "metin": "−34%"
+          }
+        ],
+        "kaynak": "Baudry et al., JAMA Intern Med 2018 · 68,946 French adults, mean follow-up 4.6 years"
+      }
+    },
+    {
+      "id": 32,
+      "metin": "The authors reported the overall result as an absolute difference of 0.6 percent. That is a small shift, and these are associations, not proof that organic food caused anything.",
+      "gorsel": "a modest bowl of strawberries beside a thin hand-drawn arrow bending slightly downward on a sheet of parchment paper",
+      "baslik": {
+        "satirlar": [
+          "ABSOLUTE",
+          "DIFFERENCE"
+        ],
+        "vurgu": "0.6%"
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Here's why. People who ate the most organic food were also better educated, had higher incomes, ate healthier diets overall, were more active and weighed less.",
+      "gorsel": "a bright kitchen with a cutting board of vegetables, a pair of walking shoes by the door and a bicycle helmet on a hook",
+      "baslik": {
+        "satirlar": [
+          "DIFFERENT",
+          "LIFESTYLES"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "metin": "The researchers accounted for many of those differences, but said leftover confounding can't be ruled out. Organic intake was self-reported. Follow-up was short. And they never measured pesticides in participants' bodies.",
+      "gorsel": "a researcher's desk with an open questionnaire of blank lines, a pencil, reading glasses and a basket of apples"
+    },
+    {
+      "id": 35,
+      "metin": "When the team reran the analysis with a simplified organic score limited to plant foods, the overall result held, but the breast cancer link was no longer significant. That shows how fragile that subgroup finding is.",
+      "gorsel": "a colorful plate of salad, beans, tomatoes and cucumbers on a wooden table, a basket of apples at the corner",
+      "baslik": {
+        "satirlar": [
+          "PLANTS OR",
+          "THE LABEL?"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "metin": "The strongest-looking numbers, for non-Hodgkin lymphoma, rested on just a handful of cases, too few to lean on. And with an average age of 44, the study says less about people past 60.",
+      "gorsel": "a very small handful of strawberries in a cupped bowl on a bare wooden table, empty space around it"
+    },
+    {
+      "id": 37,
+      "metin": "So the puzzle from the start resolves. The French result is an association in a young, health-conscious group. The Stanford review measured nutrients. They don't truly conflict.",
+      "gorsel": "two stone arches meeting over a small stream, one carrying a basket of strawberries and the other a basket of apples, calm and symmetrical",
+      "baslik": {
+        "satirlar": [
+          "NO REAL",
+          "CONFLICT"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "Organic isn't clearly more nutritious, and whether it lowers cancer risk is still unproven. In the last chapter, there's a simple way to decide where organic is worth the money.",
+      "gorsel": "an open wallet with a few bills beside a basket of mixed produce on a wooden counter, a garden path stretching behind"
+    },
+    {
+      "id": 39,
+      "bolum": "The Dirty Dozen and the price",
+      "tip": "kart",
+      "metin": "First, two things shoppers ask about most: the Dirty Dozen, and the price.",
+      "kart": {
+        "ust": "THE SHOPPING LIST",
+        "baslik": "Dirty Dozen and price",
+        "alt": "EWG · USDA Economic Research Service"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Every year, the Environmental Working Group publishes a Dirty Dozen, a list of produce most likely to carry pesticide residue. Spinach and strawberries have recently topped it.",
+      "gorsel": "a dozen different fruits and leafy greens lined up on a long wooden shelf, strawberries, grapes, peaches, apples and spinach among them",
+      "baslik": {
+        "satirlar": [
+          "THE DIRTY",
+          "DOZEN"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "The list is built from USDA test results, so it's a fair guide to which foods are more likely to show a detectable residue. But Winter and Katz noted that the ranking of that era counted whether residues were found, not how much, or how toxic.",
+      "gorsel": "a market scale holding a basket of strawberries, a few small paper sample bags beside it, a notebook with blank rows",
+      "etiket": "Winter & Katz · J Toxicol · 2011"
+    },
+    {
+      "id": 42,
+      "metin": "On those twelve foods, their model found exposures far below safety reference doses, and concluded that switching to organic would not measurably reduce risk. Nothing in these studies suggests that skipping fruits and vegetables is safer.",
+      "gorsel": "a dinner table with a big bowl of spinach salad, a plate of sliced apples and a bowl of strawberries, a family's hands reaching in",
+      "baslik": {
+        "satirlar": [
+          "SKIPPING",
+          "PRODUCE?"
+        ],
+        "not": "no study suggests it is safer"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "As with the cancer study, nobody has tested whether following the list changes anyone's health. It's a guide to residue, and that's all it claims to be.",
+      "gorsel": "a clipboard with a blank checklist resting on a basket of grapes and peaches in a kitchen"
+    },
+    {
+      "id": 44,
+      "metin": "Then there's the price. A USDA Economic Research Service study of grocery purchases from 2004 to 2010 found organic premiums on fresh fruits and vegetables ranged from 7 percent for spinach to 60 percent for packaged salad mix.",
+      "gorsel": "two bags of salad greens side by side on a grocery shelf, small blank price tags clipped to the shelf edge, shopping cart beside them",
+      "etiket": "USDA ERS · Amber Waves · 2016",
+      "baslik": {
+        "satirlar": [
+          "7% TO 60%"
+        ],
+        "not": "organic price premiums, fresh produce, 2010"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Those data are old, and prices vary by store and region, so they're not today's prices. The point is that the premium isn't one number. Spinach's premium fell from 57 percent in 2004 to 7 percent in 2010.",
+      "gorsel": "a bunch of spinach leaves on a kitchen scale, a small ledger and a pencil beside it, morning light on the table",
+      "baslik": {
+        "satirlar": [
+          "SPINACH",
+          "57% → 7%"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "So the smartest question isn't organic or not. It's which items are worth the extra cost to you, if any.",
+      "gorsel": "a shopper's hands holding two apples, one in each palm, over a market basket"
+    },
+    {
+      "id": 47,
+      "bolum": "Spending where it matters",
+      "tip": "kart",
+      "metin": "Here's the simple way to decide, as promised. Five practical ideas.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Spend where it counts",
+        "alt": "Five practical ways"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "One. Start with your budget. If organic strains it, conventional produce is a reasonable choice. In the UC Davis model, exposures on the highest-residue foods were far below reference doses.",
+      "gorsel": "a household budget ledger with blank lines, a pencil and a basket of apples and carrots on a kitchen table"
+    },
+    {
+      "id": 49,
+      "metin": "Two. If you want to lower residue, use the Dirty Dozen as a rough guide. Put your organic money toward items on the list that you eat often, like spinach, strawberries or apples, and buy the rest as you like.",
+      "gorsel": "a market basket with spinach, strawberries and apples in front, and a separate basket of bananas and onions set behind it",
+      "baslik": {
+        "satirlar": [
+          "ORGANIC FOR",
+          "TOP FOODS"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "metin": "Three. Compare the shelf prices. The premium ranged from 7 percent to 60 percent in the USDA analysis, so some organic items cost little extra and others cost a lot.",
+      "gorsel": "a grocery shelf with conventional and organic apples in neighboring bins, small blank price tags on each bin, a shopper's basket held at the edge"
+    },
+    {
+      "id": 51,
+      "metin": "Four. Wash produce under running water, organic or not. That's standard food-safety advice, and it costs nothing.",
+      "gorsel": "a kitchen sink with a colander of strawberries and apples under a running tap, water droplets sparkling"
+    },
+    {
+      "id": 52,
+      "metin": "Five. Keep the bigger picture. The French organic eaters also ate better and exercised more. Those habits, not the label, may be doing much of the work, and you can copy them at any grocery store.",
+      "gorsel": "a sunny kitchen counter with a bowl of salad, a basket of apples and a pair of walking shoes beside the door",
+      "baslik": {
+        "satirlar": [
+          "COPY THE",
+          "HABITS"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "metin": "One safety note. If you take medicines or follow a special diet, such as limiting potassium or vitamin K, the same rules apply whether food is organic or not. Ask your doctor or pharmacist about your own plan.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook, a pill organizer and a small bowl of apples",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "DOCTOR"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Fewer residues, same nutrition",
+        "alt": "Organic is a choice, not a cure"
+      }
+    },
+    {
+      "id": 55,
+      "metin": "On nutrition, organic and conventional produce are close. A Stanford review of 237 studies found no consistent vitamin difference, and the antioxidant gains in organic crops have no proven health payoff.",
+      "gorsel": "a market basket of apples, strawberries and spinach beside a balanced brass scale, calm and symmetrical"
+    },
+    {
+      "id": 56,
+      "metin": "Organic produce does carry fewer detectable residues, about 30 percent lower risk in the Stanford review. But in USDA testing, more than 99 percent of samples were at or below legal limits.",
+      "gorsel": "a bright red strawberry under a magnifying glass, a few strawberries behind it in a basket"
+    },
+    {
+      "id": 57,
+      "metin": "The French cancer link is a signal worth studying, not proof. Those organic eaters differed in many ways, and pesticides were never measured in their bodies.",
+      "gorsel": "a quiet research desk with a thick binder, reading glasses, a cup of tea and a bowl of apples"
+    },
+    {
+      "id": 58,
+      "metin": "Buy organic if you value it and can afford it. If not, conventional produce is still a good choice. Spend where it matters to you, and keep filling your cart with fruits and vegetables.",
+      "gorsel": "a cheerful woman in her sixties at a farmers market holding a full basket of apples, strawberries and spinach, smiling toward the stalls"
+    },
+    {
+      "id": 59,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

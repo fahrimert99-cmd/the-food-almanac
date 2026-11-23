@@ -1,0 +1,20 @@
+{
+  "baslik": ["4-DAY-OLD", "LEFTOVERS?"],
+  "baslik_yt": "Are 4-Day-Old Leftovers Still Safe to Eat?",
+  "aciklama": "The usual rule says leftovers last three to four days, but the clock starts before the fridge. Here are the limits that matter, and why your nose is not a test.",
+  "parcalar": [
+    {"sahne": 2, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 17, "cumleler": [0, 1],
+     "baslik": {"satirlar": ["NEVER PAST", "DAY FOUR"], "vurgu": "4 DAYS", "not": "Rutgers: the outer limit"},
+     "etiket": "Elnakib & Schaffner · Rutgers · 2019"},
+    {"sahne": 10, "cumleler": [0],
+     "baslik": {"satirlar": ["2 HOURS", "OUT, MAX"], "vurgu": "2 HOURS", "not": "out of the refrigerator"},
+     "etiket": "American Heart Association"},
+    {"sahne": 26, "cumleler": [1], "etiket": "Yang et al. · Foods · 2023"},
+    {"sahne": 28, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 55, "cumleler": [1, 2]},
+    {"sahne": 58, "cumleler": [1],
+     "baslik": {"satirlar": ["THE 3 NUMBERS"], "vurgu": "165°F", "not": "when you reheat"},
+     "etiket": null}
+  ]
+}

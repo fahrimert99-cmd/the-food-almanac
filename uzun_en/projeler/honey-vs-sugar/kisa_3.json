@@ -1,0 +1,21 @@
+{
+  "baslik": ["CLOVER HONEY", "-33 GLUCOSE?"],
+  "baslik_yt": "Clover Honey and Blood Sugar: Too Good to Be True?",
+  "aciklama": "Headlines say raw and clover honey cut blood sugar sharply. A 2022 Toronto analysis shows how few trials stand behind those numbers, and what the whole evidence says.",
+  "parcalar": [
+    {"sahne": 21, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 19, "cumleler": [0], "gorsel": 20,
+     "baslik": {"satirlar": ["SUBGROUPS"], "vurgu": "-33", "not": "mg/dL, clover honey"},
+     "etiket": "Ahmed et al. · Nutr Rev · 2022"},
+    {"sahne": 23, "cumleler": [0, 1, 2],
+     "baslik": {"satirlar": ["5 RAW,", "2 CLOVER"]}},
+    {"sahne": 23, "cumleler": [3], "gorsel": 13, "baslik": null,
+     "etiket": "Ahmed et al. · Nutr Rev · 2022"},
+    {"sahne": 1, "cumleler": [0],
+     "baslik": {"satirlar": ["ALL 18 TRIALS"], "vurgu": "-4", "not": "mg/dL fasting glucose"},
+     "etiket": "Ahmed et al. · Nutr Rev · 2022"},
+    {"sahne": 38, "cumleler": [1]},
+    {"sahne": 48, "cumleler": [2]},
+    {"sahne": 48, "cumleler": [3], "gorsel": 26, "baslik": {"satirlar": ["DON'T PAY", "EXTRA"]}}
+  ]
+}

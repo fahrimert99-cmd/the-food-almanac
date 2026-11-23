@@ -1,0 +1,21 @@
+{
+  "baslik": ["AFTER 60,", "CHICKEN RISK?"],
+  "baslik_yt": "Raw Chicken After 60: Who Should Be Extra Careful",
+  "aciklama": "The CDC says about 1 in 25 grocery store chicken packages carries Salmonella, and adults 65 and older are more likely to get very sick. Here are the simple habits that matter most.",
+  "parcalar": [
+    {"sahne": 7, "cumleler": [0], "gorsel": 11, "baslik": null, "etiket": null},
+    {"sahne": 7, "cumleler": [1],
+     "baslik": {"satirlar": ["SALMONELLA"], "vurgu": "1 IN 25", "not": "packages contaminated"},
+     "etiket": "CDC · Chicken and Food Poisoning"},
+    {"sahne": 40, "cumleler": [0],
+     "baslik": {"satirlar": ["HIGHER RISK"], "vurgu": "65+", "not": "most likely to get very sick"},
+     "etiket": "CDC · About Food Safety"},
+    {"sahne": 40, "cumleler": [1], "gorsel": 39, "baslik": null, "etiket": null},
+    {"sahne": 43, "cumleler": [0, 1], "baslik": null, "etiket": null},
+    {"sahne": 52, "cumleler": [1, 2], "baslik": {"satirlar": ["SKIP", "THE RINSE"]}, "etiket": null},
+    {"sahne": 53, "cumleler": [1]},
+    {"sahne": 57, "cumleler": [1],
+     "baslik": {"satirlar": ["COOK TO", "SAFE HEAT"], "vurgu": "165°F", "not": "check with thermometer"},
+     "etiket": null}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "baslik": ["BEAN GAS:", "MYTH?"],
+  "baslik_yt": "Beans Without the Gas: What Studies Found",
+  "aciklama": "Pooled feeding studies found that worries about gas from beans may be exaggerated. Here is what they found and how to add beans to your meals gradually.",
+  "parcalar": [
+    {"sahne": 41, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 40, "cumleler": [0],
+     "baslik": {"satirlar": ["HALF A CUP", "A DAY"], "vurgu": "½ CUP", "not": "daily, for 8–12 weeks"},
+     "etiket": "Winham & Hutchins · Nutr J · 2011"},
+    {"sahne": 40, "cumleler": [1], "gorsel": 41,
+     "baslik": {"satirlar": ["WEEK 1:", "UNDER HALF"], "vurgu": "<50%", "not": "reported more gas"},
+     "etiket": "Winham & Hutchins · Nutr J · 2011"},
+    {"sahne": 41, "cumleler": [2], "gorsel": 42, "baslik": null, "etiket": null},
+    {"sahne": 42, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["START", "SMALL"], "not": "2–4 tablespoons a day"}, "etiket": null},
+    {"sahne": 42, "cumleler": [3, 4], "baslik": null, "etiket": null},
+    {"sahne": 43, "cumleler": [1],
+     "baslik": {"satirlar": ["RINSE", "CANNED BEANS"]}, "etiket": null},
+    {"sahne": 45, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["SWAP,", "DON'T PILE ON"]}, "etiket": null},
+    {"sahne": 53, "cumleler": [1], "baslik": null, "etiket": null}
+  ]
+}

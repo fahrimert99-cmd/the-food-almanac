@@ -1,0 +1,17 @@
+{
+  "baslik": ["FRIED RICE", "MADE 14 SICK"],
+  "baslik_yt": "The Fried Rice That Made 14 Kids Sick",
+  "aciklama": "In 1993, leftover rice cooked the night before sickened 14 people at Virginia day care centers, even after it was fried again. Here is why reheating did not save it.",
+  "parcalar": [
+    {"sahne": 13, "cumleler": [0], "gorsel": 27, "baslik": null, "etiket": "CDC · MMWR · Virginia · 1993"},
+    {"sahne": 13, "cumleler": [1, 2], "gorsel": 1,
+     "baslik": {"satirlar": ["ATE IT,", "GOT SICK"], "vurgu": "14 OF 48", "not": "who ate the rice"},
+     "etiket": "CDC · MMWR · Virginia · 1993"},
+    {"sahne": 12, "cumleler": [1], "baslik": {"satirlar": ["COOLED ON", "THE COUNTER"]}},
+    {"sahne": 12, "cumleler": [2], "gorsel": 5, "baslik": null},
+    {"sahne": 59, "cumleler": [1], "baslik": {"satirlar": ["LOOKS FINE,", "STILL TOXIC"]}, "etiket": "Yang et al. · Foods · 2023"},
+    {"sahne": 27, "cumleler": [1], "baslik": {"satirlar": ["STIR-FRYING", "DIDN'T HELP"]}, "etiket": "CDC · MMWR · Virginia · 1993"},
+    {"sahne": 14, "cumleler": [1], "etiket": "CDC · MMWR · Virginia · 1993"},
+    {"sahne": 59, "cumleler": [2], "gorsel": 34, "baslik": {"satirlar": ["SHALLOW,", "NOT DEEP"]}, "etiket": null}
+  ]
+}

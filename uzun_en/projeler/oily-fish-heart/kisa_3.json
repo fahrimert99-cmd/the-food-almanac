@@ -1,0 +1,19 @@
+{
+  "baslik": ["FISH OIL PILLS", "AND AFIB?"],
+  "baslik_yt": "Fish Oil Supplements and Irregular Heartbeat",
+  "aciklama": "A 2021 analysis pooled seven trials and 81,210 people and linked omega-3 supplements with a higher risk of atrial fibrillation. Here is who should check with a doctor first.",
+  "parcalar": [
+    {"sahne": 53, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 21, "cumleler": [1],
+     "baslik": {"satirlar": ["7 TRIALS,", "POOLED"], "vurgu": "81,210", "not": "people analysed"},
+     "etiket": "Gencer et al. · Circulation · 2021"},
+    {"sahne": 21, "cumleler": [2],
+     "baslik": {"satirlar": ["ATRIAL", "FIBRILLATION"], "vurgu": "+25%", "not": "higher risk with supplements"},
+     "etiket": "Gencer et al. · Circulation · 2021"},
+    {"sahne": 22, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 22, "cumleler": [1], "gorsel": 53,
+     "baslik": {"satirlar": ["SAFETY", "FIRST"]}, "etiket": null},
+    {"sahne": 51, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["NO FISH?", "ASK A DOCTOR"]}, "etiket": null}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "baslik": ["VITAMIN C", "VS COLDS?"],
+  "baslik_yt": "Does Vitamin C Stop Colds? What 29 Trials Found",
+  "aciklama": "A Cochrane review pooled 29 trial comparisons and 11,306 people. Daily vitamin C barely changed how many colds most people caught, but one group saw their risk roughly halve.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 14, "cumleler": [0],
+     "baslik": {"satirlar": ["FEWER COLDS?"], "vurgu": "0.97", "not": "risk ratio, 24 comparisons"},
+     "etiket": "Hemilä & Chalker · Cochrane · 2013"},
+    {"sahne": 14, "cumleler": [1],
+     "baslik": {"satirlar": ["BARELY ANY", "DIFFERENCE"]},
+     "etiket": "Hemilä & Chalker · Cochrane · 2013"},
+    {"sahne": 27, "cumleler": [0, 1], "gorsel": 28, "baslik": null, "etiket": null},
+    {"sahne": 28, "cumleler": [0]},
+    {"sahne": 28, "cumleler": [1]},
+    {"sahne": 30, "cumleler": [2], "baslik": {"satirlar": ["EXTREME", "STRESS ONLY"]}, "etiket": null},
+    {"sahne": 57, "cumleler": [0, 1], "baslik": {"satirlar": ["NOT A", "COLD CURE"]}, "etiket": null}
+  ]
+}

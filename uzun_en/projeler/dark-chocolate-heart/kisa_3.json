@@ -1,0 +1,26 @@
+{
+  "baslik": ["COCOA & BLOOD", "PRESSURE?"],
+  "baslik_yt": "Can Cocoa Lower Blood Pressure? 35 Trials Say",
+  "aciklama": "A Cochrane review pooled 35 trials of cocoa and blood pressure. Here is how big the drop was, how it compares to a real reading, and why it is not proof for your heart.",
+  "parcalar": [
+    {"sahne": 22, "cumleler": [0], "gorsel": 24, "baslik": null, "etiket": null},
+    {"sahne": 23, "cumleler": [0],
+     "baslik": {"satirlar": ["35 TRIALS", "1,804 ADULTS"], "vurgu": "1,804", "not": "adults in 35 trials"},
+     "etiket": "Ried et al. · Cochrane · 2017"},
+    {"sahne": 24, "cumleler": [0],
+     "baslik": {"satirlar": ["TOP NUMBER"], "vurgu": "-1.8", "not": "mmHg systolic, on average"},
+     "etiket": "Ried et al. · Cochrane · 2017"},
+    {"sahne": 24, "cumleler": [1],
+     "baslik": {"satirlar": ["BOTTOM NUMBER"], "vurgu": "-1.8", "not": "mmHg diastolic, on average"},
+     "etiket": "Ried et al. · Cochrane · 2017"},
+    {"sahne": 25, "cumleler": [1, 2],
+     "baslik": {"satirlar": ["130/80", "BECOMES 128/78"]},
+     "etiket": null},
+    {"sahne": 28, "cumleler": [1],
+     "baslik": {"satirlar": ["NO HEART", "ATTACK DATA"]},
+     "etiket": null},
+    {"sahne": 28, "cumleler": [2],
+     "baslik": {"satirlar": ["HOPEFUL SIGN,", "NOT PROOF"]},
+     "etiket": null}
+  ]
+}

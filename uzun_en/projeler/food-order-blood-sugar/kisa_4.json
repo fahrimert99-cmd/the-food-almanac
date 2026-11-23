@@ -1,0 +1,18 @@
+{
+  "baslik": ["VEGGIES FIRST,", "2 YEARS LATER?"],
+  "baslik_yt": "Vegetables Before Carbs: A 2-Year Diabetes Study",
+  "aciklama": "Japanese researchers taught people with type 2 diabetes to eat vegetables before carbohydrates and followed them for two years. Here is what changed, and what we still don't know.",
+  "parcalar": [
+    {"sahne": 24, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 25, "cumleler": [0],
+     "baslik": {"satirlar": ["VEGGIES", "FIRST"], "vurgu": "2 YEARS", "not": "patients followed"},
+     "etiket": "Imai et al. · APJCN · 2011"},
+    {"sahne": 25, "cumleler": [1], "gorsel": 11,
+     "baslik": {"satirlar": ["HBA1C", "IMPROVED MORE"]},
+     "etiket": "Imai et al. · APJCN · 2011"},
+    {"sahne": 26, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 26, "cumleler": [2], "gorsel": 40, "baslik": {"satirlar": ["SPECIFIC", "GROUPS"]}, "etiket": null},
+    {"sahne": 41, "cumleler": [1], "baslik": {"satirlar": ["OPEN", "QUESTIONS"]}, "etiket": null},
+    {"sahne": 45, "cumleler": [1, 2, 3], "baslik": {"satirlar": ["START WITH", "VEGETABLES"]}, "etiket": null}
+  ]
+}

@@ -1,0 +1,540 @@
+{
+  "slug": "vitamin-c-colds",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Does Vitamin C Prevent or Shorten a Cold?",
+  "yorum": "When a cold starts, do you reach for orange juice or vitamin C, or do you take it every day? Has it ever seemed to make a difference for you?",
+  "aciklama_giris": "Vitamin C has a reputation as the cold fighter, but what do the trials show? A Cochrane review pooled 29 comparisons with 11,306 people. Taking vitamin C every day did not clearly cut how many colds the general public caught, and colds were only about 8 percent shorter in adults. Starting after symptoms began showed no consistent benefit. The exception was people under brief, heavy physical stress, such as marathon runners, skiers and soldiers.\n\nIn this video we look at what the review found, what happens if you start late, the one group that did benefit, what we know and don't know about orange juice, and why high-dose supplements deserve caution: in one Swedish study, men taking them were about twice as likely to develop kidney stones. We finish with four practical points.",
+  "kaynaklar": [
+    "Hemilä H, Chalker E. Vitamin C for preventing and treating the common cold. Cochrane Database of Systematic Reviews. 2013;(1):CD000980. doi:10.1002/14651858.CD000980.pub4",
+    "Peters EM, Goetzsche JM, Grobbelaar B, Noakes TD. Vitamin C supplementation reduces the incidence of postrace symptoms of upper-respiratory-tract infection in ultramarathon runners. American Journal of Clinical Nutrition. 1993. PMID 8185726",
+    "Hemilä H, Chalker E. Vitamin C reduces the severity of common colds: a meta-analysis. BMC Public Health. 2023;23:2468. PMID 38082300",
+    "Thomas LD, Elinder CG, Tiselius HG, Wolk A, Åkesson A. Ascorbic acid supplements and kidney stone incidence among men: a prospective study. JAMA Internal Medicine. 2013;173(5):386-388.",
+    "Hoffer LJ. Letter commenting on Thomas et al., ascorbic acid supplements and kidney stones. JAMA Internal Medicine. 2013;173(14):1384.",
+    "National Institutes of Health, Office of Dietary Supplements. Vitamin C fact sheet. https://ods.od.nih.gov/factsheets/VitaminC-Consumer/",
+    "Mayo Clinic. Vitamin C: overview and safety. https://www.mayoclinic.org/drugs-supplements/vitamin-c/art-20363932",
+    "U.S. Department of Agriculture, FoodData Central. Orange juice, raw and chilled: vitamin C per cup."
+  ],
+  "kapak": {
+    "satirlar": [
+      "ORANGES",
+      "VS COLDS?"
+    ],
+    "vurgu": "–8%",
+    "vurgu_alt": "SHORTER",
+    "gorsel": "a tall glass of fresh orange juice in front, a halved orange and two whole oranges overlapping tightly behind it, a steaming white mug and a folded tissue tucked beside the glass, tightly grouped, bright and appetizing"
+  },
+  "kahraman": "oranges",
+  "etiketler": [
+    "vitamin c for colds",
+    "does orange juice help a cold",
+    "vitamin c immune system",
+    "common cold",
+    "vitamin c supplements",
+    "orange juice",
+    "cochrane review",
+    "kidney stones",
+    "nutrition science",
+    "healthy aging"
+  ],
+  "seslendirme_duzelt": {
+    "Cochrane": "Cockrane",
+    "Hemilä": "Hemila",
+    "Karolinska Institutet": "Karolinska Institoot",
+    "JAMA": "Jama",
+    "NIH": "N I H"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Vitamin C and colds",
+      "metin": "Researchers pooled 29 trial comparisons, covering 11,306 people, to ask if vitamin C prevents colds. One group's risk fell by about half.",
+      "gorsel": "a wooden table with whole oranges, a halved orange and a glass of orange juice beside a steaming teacup and a folded handkerchief, soft window light",
+      "baslik": {
+        "satirlar": [
+          "29 TRIALS",
+          "11,306 PEOPLE"
+        ]
+      },
+      "etiket": "Hemilä & Chalker · Cochrane Database · 2013"
+    },
+    {
+      "id": 2,
+      "metin": "The twist is who that group was, and when the vitamin C was taken.",
+      "gorsel": "a magnifying glass held over a crowd of small wooden pegs, one cluster of pegs standing apart from the rest, a bowl of oranges in the foreground"
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know whether supplements or orange juice are worth it, and what high doses can do.",
+      "gorsel": "a glass of orange juice and a small dish of round tablets side by side on a kitchen counter, a halved orange and whole oranges behind them",
+      "baslik": {
+        "satirlar": [
+          "JUICE OR",
+          "SUPPLEMENTS?"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what vitamin C is, and where you already get it.",
+      "gorsel": "an open antique botanical book beside a branch of an orange tree with oranges and leaves, a brass magnifying glass resting on the page"
+    },
+    {
+      "id": 5,
+      "metin": "Vitamin C is a nutrient your body needs every day, and it doesn't make its own. Citrus fruit, peppers, strawberries and broccoli are common sources, and orange juice is the famous one.",
+      "gorsel": "a market arrangement of oranges, red peppers, strawberries and broccoli on a wooden table, oranges largest in the front"
+    },
+    {
+      "id": 6,
+      "metin": "The official recommended amount is 90 milligrams a day for adult men and 75 milligrams for adult women. Smokers need an extra 35 milligrams, according to the National Institutes of Health.",
+      "gorsel": "an old brass kitchen scale with two whole oranges on one pan and a small pile of tablets on the other, a halved orange beside it",
+      "baslik": {
+        "satirlar": [
+          "DAILY NEED"
+        ],
+        "vurgu": "75–90",
+        "not": "milligrams a day for adults"
+      }
+    },
+    {
+      "id": 7,
+      "metin": "One cup of fresh orange juice, about 8 ounces, holds roughly 124 milligrams of vitamin C. Chilled store-bought juice has closer to 80 milligrams. Either way, a single glass covers most or all of a day's amount.",
+      "gorsel": "a tall glass of orange juice next to a measuring cup, a halved orange and two whole oranges, a hand-squeezer on a wooden board",
+      "etiket": "USDA FoodData Central values"
+    },
+    {
+      "id": 8,
+      "metin": "So no one doubts that vitamin C matters. The real question is narrower: does taking more than you need protect you from colds, or help you recover faster? Researchers have tested that for decades.",
+      "gorsel": "a quiet study desk with a stack of journals with blank covers, a reading lamp, a bowl of oranges and a teacup with rising steam"
+    },
+    {
+      "id": 9,
+      "metin": "Today we'll check the biggest review of those tests, ask what happens if you start only after symptoms appear, and meet one group who did benefit. Later, there's a safety catch with high doses.",
+      "gorsel": "a trail map drawn as an old engraving with a winding dashed path past oranges, a teacup and a small kidney, a brass compass in the corner"
+    },
+    {
+      "id": 10,
+      "bolum": "The big review",
+      "tip": "kart",
+      "metin": "Let's start with the best evidence we have: a Cochrane review of the trials.",
+      "kart": {
+        "ust": "THE EVIDENCE",
+        "baslik": "29 trials, one answer",
+        "alt": "Cochrane review · 2013"
+      }
+    },
+    {
+      "id": 11,
+      "metin": "Cochrane is an international group that pools the results of many trials into one analysis. In 2013, researchers Hemilä and Chalker updated its review of vitamin C and the common cold.",
+      "gorsel": "a large library table covered with open volumes and a stack of papers, a single orange resting on top of the pile, tall windows behind"
+    },
+    {
+      "id": 12,
+      "metin": "They counted only placebo-controlled trials, where some people got vitamin C and others got a dummy pill, and where the daily dose was at least 200 milligrams, more than double the daily recommendation.",
+      "gorsel": "two identical glass jars of round tablets on a table, one jar with a small orange tag, and halved oranges between them",
+      "baslik": {
+        "satirlar": [
+          "200 MG +",
+          "A DAY"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "metin": "Why insist on a placebo? Because colds fade on their own. Anyone who tries a remedy on day three will feel better by day five. Without a comparison group, you can't tell which was which.",
+      "gorsel": "a calendar page drawn as an engraving with a teacup, a folded blanket and a bowl of oranges on a bedside table, a small hourglass beside them"
+    },
+    {
+      "id": 14,
+      "metin": "First question: does taking vitamin C every day mean fewer colds? Across 24 comparisons in the general population, with 10,708 people, the answer was barely. The pooled risk ratio was zero point nine seven, about three percent fewer colds, and the uncertainty range reached right up to no effect at all.",
+      "gorsel": "a long row of identical small wooden figures, nearly all standing the same, with whole oranges in front of the row and a halved orange at the end",
+      "etiket": "Hemilä & Chalker · Cochrane Database · 2013",
+      "baslik": {
+        "satirlar": [
+          "FEWER COLDS?"
+        ],
+        "vurgu": "0.97",
+        "not": "risk ratio, 24 comparisons"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "A risk ratio of one means no difference at all. Zero point nine seven is very close to one. A ratio of zero point five would mean the risk was cut in half.",
+      "gorsel": "an old balance scale nearly level, an orange on each pan, one side only a hair lower than the other, engraving style"
+    },
+    {
+      "id": 16,
+      "metin": "In plain words: for most people, taking vitamin C daily did not noticeably cut the number of colds they caught.",
+      "gorsel": "a person in their 60s smiling at a kitchen table with a glass of orange juice and a bowl of oranges, a warm scarf over the chair",
+      "baslik": {
+        "satirlar": [
+          "DAILY VITAMIN C",
+          "NO CLEAR DROP"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "tip": "grafik",
+      "metin": "Second question: if you do catch a cold, is it shorter? Slightly. Colds were about 8 percent shorter in adults and 14 percent shorter in children. In children taking one to two grams a day, about 18 percent shorter.",
+      "grafik": {
+        "baslik": "How much shorter colds were",
+        "alt": "Regular daily vitamin C vs. placebo",
+        "cubuklar": [
+          {
+            "etiket": "Adults",
+            "deger": 8,
+            "metin": "−8%"
+          },
+          {
+            "etiket": "Children",
+            "deger": 14,
+            "metin": "−14%"
+          },
+          {
+            "etiket": "Children, 1–2 g/day",
+            "deger": 18,
+            "metin": "−18%"
+          }
+        ],
+        "kaynak": "Hemilä & Chalker, Cochrane Database 2013 · 31 comparisons, 9,745 cold episodes"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "Take an imaginary ten-day cold. Eight percent shorter is less than one day. The review also found symptoms were somewhat milder. That's a real effect, but a modest one, and it showed up with daily use.",
+      "gorsel": "a wall calendar with ten blank squares drawn as an engraving, a glass of orange juice and oranges on a windowsill beside it",
+      "baslik": {
+        "satirlar": [
+          "A TEN-DAY COLD",
+          "LESS THAN A DAY"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "metin": "In 2023, the same authors analyzed 10 randomized, double-blind trials of at least one gram a day. Compared with placebo, vitamin C lowered cold severity scores by about 15 percent.",
+      "gorsel": "a stack of research folders with blank covers beside a glass of orange juice and two oranges, a pair of round eyeglasses on top",
+      "etiket": "Hemilä & Chalker · BMC Public Health · 2023",
+      "baslik": {
+        "satirlar": [
+          "MILDER COLDS"
+        ],
+        "vurgu": "–15%",
+        "not": "severity scores, 10 trials at 1 g/day or more"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "Severity there was measured on symptom scales, so it reflects how people felt, not whether they caught the virus. Milder is welcome, but it isn't the same as protected.",
+      "gorsel": "a simple wooden ruler-like scale with small notches drawn as an engraving, a tissue box and a halved orange beside it"
+    },
+    {
+      "id": 21,
+      "metin": "Notice one thing about all these trials. People took vitamin C every day, before any cold began. Most of us do it differently. We reach for it once the throat starts to scratch.",
+      "gorsel": "a hand reaching toward a glass of orange juice on a nightstand, a folded tissue and whole oranges nearby, a small lamp glowing"
+    },
+    {
+      "id": 22,
+      "bolum": "Starting after symptoms",
+      "metin": "So what happens if you start after symptoms begin? The Cochrane team found seven comparisons, covering 3,249 cold episodes, where vitamin C was started at the first sign of a cold.",
+      "gorsel": "a bedside table at dawn with a thermometer, a glass of orange juice, a halved orange and a small bottle of tablets",
+      "etiket": "Hemilä & Chalker · Cochrane Database · 2013"
+    },
+    {
+      "id": 23,
+      "metin": "The result: no consistent effect on how long the colds lasted, or how severe they felt.",
+      "gorsel": "two oranges side by side on a plate, perfectly alike, a fork beside them, a faint steaming teacup in the background",
+      "baslik": {
+        "satirlar": [
+          "STARTING LATE",
+          "NO CLEAR GAIN"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "metin": "One large trial using an 8 gram dose at the start of symptoms did report a benefit, and so did two trials of five-day supplementation. But few such trials exist, and none included children. We'll come back to that 8 gram number.",
+      "gorsel": "a small apothecary tray with a few tablets and a measuring spoon, a halved orange and whole oranges, an old brass pill box",
+      "baslik": {
+        "satirlar": [
+          "8 GRAMS",
+          "REMEMBER THIS"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "metin": "The trials reported no adverse effects, which is reassuring. But a trial lasting weeks can't tell us what years of high doses might do. The Swedish data coming up is why that matters.",
+      "gorsel": "a clinic desk with a closed notebook, a stethoscope and a bowl of oranges, a small hourglass and a tablet bottle beside them"
+    },
+    {
+      "id": 26,
+      "metin": "The reviewers' own view was measured. They wrote that routine vitamin C for everyone isn't justified, but because it's inexpensive, people with colds may reasonably test whether it helps them.",
+      "gorsel": "a calm kitchen scene with a person in their 60s reading a label on a small bottle, a bowl of oranges and a glass of juice on the table"
+    },
+    {
+      "id": 27,
+      "bolum": "The exception",
+      "tip": "kart",
+      "metin": "Now back to that group whose colds dropped by about half. Who were they?",
+      "kart": {
+        "ust": "THE EXCEPTION",
+        "baslik": "Heavy physical stress",
+        "alt": "Runners · skiers · soldiers"
+      }
+    },
+    {
+      "id": 28,
+      "metin": "In five trials, researchers followed 598 marathon runners, skiers, and soldiers on subarctic exercises. In that group, daily vitamin C cut the risk of a cold roughly in half, with a risk ratio of zero point four eight.",
+      "gorsel": "a snowy mountain trail with a pair of skis stuck in the snow, a pair of running shoes beside a thermos and a bag of oranges",
+      "etiket": "Hemilä & Chalker · Cochrane Database · 2013",
+      "baslik": {
+        "satirlar": [
+          "RUNNERS, SKIERS",
+          "SOLDIERS"
+        ],
+        "vurgu": "0.48",
+        "not": "risk ratio, 598 people in 5 trials"
+      }
+    },
+    {
+      "id": 29,
+      "metin": "One example: in 1993, Peters and colleagues gave ultramarathon runners 600 milligrams of vitamin C a day, or a placebo. In the two weeks after the race, 33 percent of the vitamin C runners reported cold symptoms, against 68 percent on placebo.",
+      "gorsel": "a pair of well-worn running shoes on a country road at sunrise, a paper cup of orange juice and a few oranges on a stone wall beside them",
+      "etiket": "Peters et al. · Am J Clin Nutr · 1993",
+      "baslik": {
+        "satirlar": [
+          "AFTER THE RACE"
+        ],
+        "vurgu": "68→33%",
+        "not": "cold symptoms, vitamin C vs placebo"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "Before anyone signs up for a marathon, notice what this means. These were athletes in extreme events and soldiers in the cold, facing short bursts of severe physical stress. Their results may not carry over to an ordinary daily routine.",
+      "gorsel": "a quiet front porch with a rocking chair, a blanket and a bowl of oranges, a walking stick leaning against the rail"
+    },
+    {
+      "id": 31,
+      "metin": "That fits the Cochrane conclusion: vitamin C may help people exposed to brief, severe physical exertion. The review pooled adults and children, so it can't tell us much about people over 60 specifically.",
+      "gorsel": "an old engraved scene of a ring of different figures drawn as simple wooden pegs, tall and short, around a table with a bowl of oranges"
+    },
+    {
+      "id": 32,
+      "metin": "For parents and grandparents: children's colds were about 14 percent shorter with daily vitamin C. Still, the upper limits for children are lower than for adults, so ask a pediatrician before giving high-dose supplements.",
+      "gorsel": "a cozy living room with a child's mug, a blanket and a plate of orange slices on a low table, soft lamplight"
+    },
+    {
+      "id": 33,
+      "bolum": "Juice or pills?",
+      "tip": "kart",
+      "metin": "Now the question in the title. What about a glass of orange juice instead of a pill?",
+      "kart": {
+        "ust": "THE HONEST PART",
+        "baslik": "Juice or supplements?",
+        "alt": "What the trials did not test"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Here is the honest gap. The Cochrane review looked at supplements of at least 200 milligrams a day. It did not test orange juice, or whole oranges, so it cannot tell us whether juice protects against colds.",
+      "gorsel": "a glass of orange juice and a few whole oranges on a table, a large empty chair facing them and a closed laboratory notebook between",
+      "baslik": {
+        "satirlar": [
+          "JUICE WAS",
+          "NOT TESTED"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "metin": "And the amounts differ. A cup of juice gives roughly 80 to 125 milligrams, below the doses in the review. That doesn't prove juice fails. It means the evidence for it simply isn't there.",
+      "gorsel": "a small glass of orange juice beside a larger pile of tablets, whole oranges behind, drawn as a quiet still life"
+    },
+    {
+      "id": 36,
+      "metin": "What food does do well is cover your daily need. Falling short of vitamin C is a real problem, and a glass of juice or a whole orange keeps you close to or above the recommended amount.",
+      "gorsel": "a breakfast table with a bowl of orange segments, a whole orange and a glass of juice, morning light through a window",
+      "baslik": {
+        "satirlar": [
+          "FOOD COVERS",
+          "YOUR DAILY NEED"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "metin": "So a morning orange is a fine habit for its own sake. Just don't expect it to work as a cold shield. The research doesn't support that promise, whether it comes from juice or from pills.",
+      "gorsel": "a ripe orange sitting under a small glass dome on a table, a teacup and a knitted scarf beside it"
+    },
+    {
+      "id": 38,
+      "bolum": "The kidney stone caution",
+      "tip": "kart",
+      "metin": "Now the catch I mentioned. More vitamin C is not automatically safer.",
+      "kart": {
+        "ust": "SAFETY",
+        "baslik": "High doses and stones",
+        "alt": "Swedish men · 11 years"
+      }
+    },
+    {
+      "id": 39,
+      "metin": "In a Swedish study, Thomas and colleagues at Karolinska Institutet followed 23,355 men with no history of kidney stones for 11 years. Their findings appeared in JAMA Internal Medicine in 2013.",
+      "gorsel": "a pair of kidneys drawn as a textbook engraving beside a halved orange and whole oranges, a thin dashed line connecting them",
+      "etiket": "Thomas et al. · JAMA Intern Med · 2013",
+      "baslik": {
+        "satirlar": [
+          "23,355 MEN",
+          "11 YEARS"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "metin": "During that time, 436 men developed kidney stones needing medical care. Men who took vitamin C supplements were about twice as likely to be among them as men who didn't, and the risk rose the more often they took them.",
+      "gorsel": "a kidney drawn as a textbook engraving with a few small pale stones beside it, a bowl of oranges and a tablet bottle in the foreground",
+      "baslik": {
+        "satirlar": [
+          "SUPPLEMENT USERS"
+        ],
+        "vurgu": "×2",
+        "not": "kidney stones vs. non-users"
+      }
+    },
+    {
+      "id": 41,
+      "metin": "A typical tablet in that study held about 1,000 milligrams, many times the daily recommendation. Regular multivitamin use was not linked with stones.",
+      "gorsel": "a tall brass measuring cylinder beside a single large tablet, a pair of oranges and a multivitamin bottle behind"
+    },
+    {
+      "id": 42,
+      "metin": "This was an observational study, so it shows a link, not proof of cause. A letter in the same journal argued the risk was likely overestimated, since men taking supplements may be tested for stones more often. It also studied only men.",
+      "gorsel": "a scholar's desk with an open journal, a pair of round eyeglasses and a bowl of oranges, a magnifying glass over a blank page"
+    },
+    {
+      "id": 43,
+      "metin": "Now the payoff on that 8 gram dose. Eight grams is 8,000 milligrams, four times the 2,000 milligram upper limit that NIH sets for adults, the highest daily amount unlikely to cause harm. That is a research dose, not one to try at home.",
+      "gorsel": "four identical tall stacks of tablets next to a single short stack, an orange on top of the short stack, engraving style",
+      "baslik": {
+        "satirlar": [
+          "UPPER LIMIT"
+        ],
+        "vurgu": "2,000",
+        "not": "milligrams a day for adults, all sources"
+      }
+    },
+    {
+      "id": 44,
+      "metin": "It would take around 16 cups of fresh orange juice to reach that limit, so it's supplements, not food, that carry this risk. Mayo Clinic notes that stones mainly happen with high doses.",
+      "gorsel": "a long row of sixteen glasses of orange juice on a table, a few whole oranges in front and a single tablet bottle at the end"
+    },
+    {
+      "id": 45,
+      "metin": "If you've ever had a kidney stone, or have kidney disease, talk with your doctor before taking vitamin C supplements. And tell your pharmacist about any supplement you take, because some can interact with medicines.",
+      "gorsel": "a pharmacy counter with a pharmacist's scale, a few prescription bottles and a bowl of oranges, a notebook beside them",
+      "baslik": {
+        "satirlar": [
+          "ASK YOUR",
+          "PHARMACIST"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "Here's the scorecard. Well supported: little effect on how many colds you catch, and a small shortening with daily use. Uncertain: late starts, high doses and juice. False: that vitamin C reliably stops colds.",
+      "gorsel": "three small wooden trays on a table, one holding oranges, one holding tablets and one holding a teacup, a brass scale in the middle",
+      "baslik": {
+        "satirlar": [
+          "THE HONEST",
+          "SCORECARD"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "bolum": "How to use it",
+      "tip": "kart",
+      "metin": "So what should you actually do? Four practical points.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Food first, no hype",
+        "alt": "Four practical points"
+      }
+    },
+    {
+      "id": 48,
+      "metin": "One. Get your vitamin C from food. A fresh orange, a glass of juice, peppers, strawberries or broccoli will meet the daily recommendation without a pill.",
+      "gorsel": "a kitchen counter with whole oranges, a halved orange, a red pepper, strawberries and broccoli, a glass of orange juice in front"
+    },
+    {
+      "id": 49,
+      "metin": "Two. Don't count on juice or tablets to stop colds. In the biggest review, taking vitamin C every day made almost no difference to how many colds people caught.",
+      "gorsel": "a glass of orange juice and a small dish of tablets on a table beside a steaming teacup, oranges behind them, a tissue box at the edge",
+      "baslik": {
+        "satirlar": [
+          "NOT A",
+          "COLD SHIELD"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "metin": "Three. If you choose a daily supplement, expect a modest gain, a cold maybe eight percent shorter, and stay under 2,000 milligrams a day from all sources, food and supplements together.",
+      "gorsel": "a small brass pill box open on a table with a few tablets, a halved orange and whole oranges beside it, a small notepad"
+    },
+    {
+      "id": 51,
+      "metin": "Four. Starting vitamin C only after symptoms appear has not shown a consistent benefit, so you needn't rush to the pharmacy for it.",
+      "gorsel": "a person in their 60s in a cardigan sitting by a window with a teacup, a bowl of oranges on the sill, a calm morning scene"
+    },
+    {
+      "id": 52,
+      "metin": "One more note. If you plan a hard event in the cold, such as a long race or a ski trip, ask your doctor whether vitamin C makes sense for you.",
+      "gorsel": "a pair of snowshoes and a thermos on a wooden bench, a small bag of oranges beside them, snowy pines behind"
+    },
+    {
+      "id": 53,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Food first. Modest gains.",
+        "alt": "Vitamin C and the common cold"
+      }
+    },
+    {
+      "id": 54,
+      "metin": "In a Cochrane review of 29 comparisons and 11,306 people, taking vitamin C every day did not clearly cut how many colds the general public caught. When colds did come, they were about 8 percent shorter in adults.",
+      "gorsel": "a glass of orange juice and a halved orange on a wooden table beside a steaming teacup, a tissue box and a calendar page"
+    },
+    {
+      "id": 55,
+      "metin": "Starting after symptoms began showed no consistent benefit. The exception was people under brief, heavy physical stress, such as marathon runners, skiers and soldiers, where colds roughly halved.",
+      "gorsel": "running shoes, skis and a thermos on a snowy path with a bag of oranges beside them, a distant mountain"
+    },
+    {
+      "id": 56,
+      "metin": "Orange juice wasn't tested, but it does meet your daily need. High-dose supplements are another matter: in a Swedish study, men taking them were about twice as likely to get kidney stones.",
+      "gorsel": "a glass of orange juice and whole oranges on the left, a tablet bottle and a pair of kidneys drawn as an engraving on the right, a thin dashed line between them"
+    },
+    {
+      "id": 57,
+      "metin": "Eat the orange because you enjoy it, and keep supplements modest. Vitamin C is a helpful nutrient, not a cold cure.",
+      "gorsel": "a bowl of whole oranges and one peeled orange on a wooden table in warm morning light, an open window behind"
+    },
+    {
+      "id": 58,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}

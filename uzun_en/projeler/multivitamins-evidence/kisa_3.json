@@ -1,0 +1,16 @@
+{
+  "baslik": ["MEGA-DOSE", "VITAMINS?"],
+  "baslik_yt": "Mega-Dose Vitamin Pills: What Experts Advise",
+  "aciklama": "A US task force reviewed vitamin and mineral supplements for healthy adults. Here is what it said about beta carotene, vitamin E and the ordinary multivitamin.",
+  "parcalar": [
+    {"sahne": 47, "cumleler": [2], "gorsel": 6, "baslik": null, "etiket": null},
+    {"sahne": 31, "cumleler": [1],
+     "baslik": {"satirlar": ["BETA CAROTENE", "AND SMOKING"], "vurgu": "2022", "not": "US task force review"},
+     "etiket": "USPSTF · 2022"},
+    {"sahne": 44, "cumleler": [1], "baslik": {"satirlar": ["MORE ISN'T", "BETTER"]}, "etiket": null},
+    {"sahne": 30, "cumleler": [0], "baslik": {"satirlar": ["EVIDENCE", "INSUFFICIENT"]}, "etiket": null},
+    {"sahne": 32, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 32, "cumleler": [1], "gorsel": 43, "baslik": null, "etiket": null},
+    {"sahne": 47, "cumleler": [1], "baslik": null, "etiket": null}
+  ]
+}

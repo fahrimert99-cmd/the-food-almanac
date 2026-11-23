@@ -1,0 +1,17 @@
+{
+  "baslik": ["MORE VITAMIN C", "= SAFER?"],
+  "baslik_yt": "High-Dose Vitamin C and Kidney Stones",
+  "aciklama": "More vitamin C is not automatically safer. A Swedish study of 23,355 men linked high-dose supplements to about twice the risk of kidney stones, with some important caveats.",
+  "parcalar": [
+    {"sahne": 38, "cumleler": [1], "gorsel": 39, "baslik": null, "etiket": null},
+    {"sahne": 56, "cumleler": [1], "gorsel": 40,
+     "baslik": {"satirlar": ["PILL TAKERS"], "vurgu": "×2", "not": "kidney stones vs. non-users"},
+     "etiket": "Thomas et al. · JAMA Intern Med · 2013"},
+    {"sahne": 41, "cumleler": [0], "baslik": {"satirlar": ["1,000 MG", "A TABLET"]}, "etiket": "Thomas et al. · JAMA Intern Med · 2013"},
+    {"sahne": 42, "cumleler": [0, 2], "baslik": {"satirlar": ["LINK,", "NOT PROOF"]}, "etiket": null},
+    {"sahne": 44, "cumleler": [1], "gorsel": 43,
+     "baslik": {"satirlar": ["UPPER LIMIT"], "vurgu": "2,000", "not": "mg a day, all sources"}, "etiket": null},
+    {"sahne": 45, "cumleler": [0], "etiket": null},
+    {"sahne": 45, "cumleler": [1], "gorsel": 50, "baslik": null, "etiket": null}
+  ]
+}

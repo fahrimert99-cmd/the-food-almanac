@@ -1,0 +1,23 @@
+{
+  "baslik": ["JUICE CLEANSE", "KIDNEY RISK?"],
+  "baslik_yt": "Can a Juice Cleanse Hurt Your Kidneys?",
+  "aciklama": "Kidney doctors have reported cases of kidney injury after juice-only diets. Here is what Mayo Clinic researchers found, who is most at risk, and what to do.",
+  "parcalar": [
+    {"sahne": 1, "cumleler": [1], "gorsel": 2, "baslik": null, "etiket": null},
+    {"sahne": 31, "cumleler": [1],
+     "baslik": {"satirlar": ["OXALATE", "IN JUICE"], "not": "found in greens and beets"},
+     "etiket": "NIH · Oxalate"},
+    {"sahne": 32, "cumleler": [0],
+     "baslik": {"satirlar": ["KIDNEYS", "FAILED"], "vurgu": "2013", "not": "Mayo Clinic case report"},
+     "etiket": "Getting et al. · Am J Med · 2013"},
+    {"sahne": 37, "cumleler": [0],
+     "baslik": {"satirlar": ["RARE,", "BUT REPORTED"]},
+     "etiket": null},
+    {"sahne": 37, "cumleler": [1], "gorsel": 53,
+     "baslik": {"satirlar": ["KNOWN RISK", "FACTORS"]},
+     "etiket": null},
+    {"sahne": 54, "cumleler": [0],
+     "baslik": {"satirlar": ["STOP AND", "CALL A DOCTOR"]},
+     "etiket": null}
+  ]
+}

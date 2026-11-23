@@ -1,0 +1,21 @@
+{
+  "baslik": ["STEVIA:", "SUGAR SPIKE?"],
+  "baslik_yt": "Does Stevia Raise Blood Sugar? What Trials Found",
+  "aciklama": "A two-week trial of 120 healthy adults tested four sweeteners, and stevia behaved differently from two others. Here is what it found, and how to check your own response.",
+  "parcalar": [
+    {"sahne": 30, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 30, "cumleler": [1], "gorsel": 22,
+     "baslik": {"satirlar": ["STEVIA,", "TESTED"], "vurgu": "2 WEEKS", "not": "120 healthy adults"},
+     "etiket": "Suez et al. · Cell · 2022"},
+    {"sahne": 24, "cumleler": [0],
+     "baslik": {"satirlar": ["SACCHARIN,", "SUCRALOSE"], "not": "slightly higher responses"},
+     "etiket": "Suez et al. · Cell · 2022"},
+    {"sahne": 32, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 32, "cumleler": [1], "gorsel": 31,
+     "baslik": {"satirlar": ["MOSTLY", "NEUTRAL"]}, "etiket": null},
+    {"sahne": 53, "cumleler": [2], "gorsel": 25,
+     "baslik": {"satirlar": ["RESPONSES", "ARE PERSONAL"]}, "etiket": null},
+    {"sahne": 53, "cumleler": [3],
+     "baslik": {"satirlar": ["TEST", "YOURSELF"]}, "etiket": null}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "baslik": ["WHICH TOXIN", "EXACTLY?"],
+  "baslik_yt": "Juice Cleanse: Which Toxins Does It Remove?",
+  "aciklama": "Twenty healthy adults drank only juice for three days, and their weight changed. But did any toxins leave their bodies? Here is what the research can and cannot show.",
+  "parcalar": [
+    {"sahne": 6, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0],
+     "baslik": {"satirlar": ["3 DAYS", "OF JUICE"], "vurgu": "20", "not": "healthy adults, one study"},
+     "etiket": "Henning et al. · Sci Rep · 2017"},
+    {"sahne": 22, "cumleler": [2], "baslik": {"satirlar": ["NO TOXINS", "MEASURED"]}, "etiket": "Henning et al. · Sci Rep · 2017"},
+    {"sahne": 56, "cumleler": [1], "gorsel": 18,
+     "baslik": {"satirlar": ["FEWER CALORIES", "THEN REGAIN"]},
+     "etiket": "Obert et al. · Curr Gastro Rep · 2017"},
+    {"sahne": 57, "cumleler": [0], "baslik": {"satirlar": ["ALREADY", "CLEANING"]}, "etiket": null},
+    {"sahne": 57, "cumleler": [1], "gorsel": 37,
+     "baslik": {"satirlar": ["OVER 60?", "CHECK FIRST"]}, "etiket": null},
+    {"sahne": 58, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 58, "cumleler": [1], "gorsel": 53, "baslik": null, "etiket": null}
+  ]
+}

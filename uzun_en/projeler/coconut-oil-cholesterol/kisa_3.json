@@ -1,0 +1,19 @@
+{
+  "baslik": ["BUTTER VS", "COCONUT OIL?"],
+  "baslik_yt": "Coconut Oil vs Butter vs Olive Oil: A Head-to-Head Test",
+  "aciklama": "A randomized trial gave 96 healthy adults 50 grams a day of coconut oil, olive oil or butter for four weeks. Here is what happened to their LDL cholesterol, and what the trial cannot tell us.",
+  "parcalar": [
+    {"sahne": 20, "cumleler": [0], "gorsel": 21, "baslik": null, "etiket": null},
+    {"sahne": 21, "cumleler": [0],
+     "baslik": {"satirlar": ["3 FATS", "4 WEEKS"], "vurgu": "50 g", "not": "a day, 96 adults"},
+     "etiket": "Khaw et al. · BMJ Open · 2018"},
+    {"sahne": 22, "cumleler": [0]},
+    {"sahne": 23, "cumleler": [0], "gorsel": 21,
+     "baslik": {"satirlar": ["BUTTER", "RAISED LDL"], "vurgu": "+16", "not": "mg/dL vs coconut oil"},
+     "etiket": "Khaw et al. · BMJ Open · 2018"},
+    {"sahne": 24, "cumleler": [0]},
+    {"sahne": 26, "cumleler": [1]},
+    {"sahne": 26, "cumleler": [2]},
+    {"sahne": 40, "cumleler": [2]}
+  ]
+}

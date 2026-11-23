@@ -1,0 +1,25 @@
+{
+  "baslik": ["RAW CARROTS?", "ONLY 3%"],
+  "baslik_yt": "Raw Carrots: Why Oil and Cooking Help Absorption",
+  "aciklama": "In a lab digestion model, only 3 percent of the beta-carotene in raw carrot pieces was released. See how mashing, cooking and a little oil changed that, and why salad dressing matters.",
+  "parcalar": [
+    {"sahne": 30, "cumleler": [2],
+     "baslik": {"satirlar": ["LAB DIGESTION"], "vurgu": "3%", "not": "released from raw carrot"},
+     "etiket": "Hedrén et al. · Eur J Clin Nutr · 2002"},
+    {"sahne": 31, "cumleler": [0, 1], "gorsel": 52,
+     "baslik": {"satirlar": ["MASHED,", "THEN COOKED"], "vurgu": "27%", "not": "released from cooked mash"},
+     "etiket": "Hedrén et al. · Eur J Clin Nutr · 2002"},
+    {"sahne": 31, "cumleler": [2], "gorsel": 32,
+     "baslik": {"satirlar": ["PLUS A", "LITTLE OIL"], "vurgu": "39%", "not": "released with oil"},
+     "etiket": "Hedrén et al. · Eur J Clin Nutr · 2002"},
+    {"sahne": 32, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 32, "cumleler": [1],
+     "baslik": {"satirlar": ["LAB MODEL,", "NOT PEOPLE"]},
+     "etiket": "Hedrén et al. · Eur J Clin Nutr · 2002"},
+    {"sahne": 33, "cumleler": [0], "etiket": "Brown et al. · Am J Clin Nutr · 2004"},
+    {"sahne": 34, "cumleler": [0, 1], "etiket": "Brown et al. · Am J Clin Nutr · 2004"},
+    {"sahne": 54, "cumleler": [1],
+     "baslik": {"satirlar": ["ADD A", "LITTLE FAT"]},
+     "etiket": null}
+  ]
+}
