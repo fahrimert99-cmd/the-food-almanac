@@ -40,6 +40,8 @@ def kahraman_payi(p):
 
 
 MERAK_ARALIK = 120          # sn: iki cevap (merak haritası) arası en çok; hedef 60–90 sn (gorev/SENARYO.md)
+MERAK_ILK = 120             # sn: açılıştaki ana soru en geç bu anda cevaplanır (karar 1–2. dakikada)
+BOLUM_AZAMI = 8             # yazım: 5–7 bölüm + Recap; papatya testinde 11 bölüm çıktı (YouTube bölüm listesi kalabalık)
 
 
 def merak_denetle(p, S, hiz):
@@ -61,8 +63,12 @@ def merak_denetle(p, S, hiz):
             h.append(f"merak {i}: 'soru' ve geçerli sahne id'leri gerekli, cevap açılıştan sonra gelmeli (ac {a}, cevap {c})")
     if h:
         return h
-    if min(q["ac"] for q in M) > 3:
+    ilk = min(M, key=lambda q: q["ac"])
+    if ilk["ac"] > 3:
         h.append("merak: ilk soru açılışta (sahne 1–3) açılmalı")
+    elif bas[ilk["cevap"]] > MERAK_ILK:         # papatya testi (23 Kasım 2026): ana soru 2:42'de cevaplandı
+        h.append(f"merak: açılıştaki ana soru {bas[ilk['cevap']] / 60:.1f}. dakikada cevaplanıyor; en geç 2. dakikada "
+                 "(sahne ~16'dan önce) cevaplanmalı, sonra yeni bir soru açılır")
     for sid in ids:
         acik = [q["soru"] for q in M if q["ac"] <= sid < q["cevap"]]
         if len(acik) > 2:
@@ -215,6 +221,8 @@ def denetle(slug, asgari_dk=None, yazim=False):
         if S and re.match(r"\s*(picture|imagine|think about|let'?s start|have you ever)\b", S[0].get("metin", ""), re.I):
             h.append("açılış: ilk cümle sahne kurmamalı ('Picture…', 'Imagine…'); izleyicinin kendi durumuna ya da "
                      "çarpıcı bulguya doğrudan girmeli (1. videoda izleyicilerin %73'ü ilk 30 saniyede çıktı)")
+    if yazim and len(bolumler) > BOLUM_AZAMI:
+        h.append(f"en çok {BOLUM_AZAMI} bölüm ('bolum' alanı, Recap dahil) olmalı (şu an {len(bolumler)}); 5–7 bölüm + Recap")
     if yazim:
         h += merak_denetle(p, S, MOTOR_KELIME_SN.get(p.get("ses_motoru") or m.get("ses_motoru", "piper"), KELIME_SN))
     pay = kahraman_payi(p)
