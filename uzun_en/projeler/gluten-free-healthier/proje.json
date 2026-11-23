@@ -1,0 +1,665 @@
+{
+  "slug": "gluten-free-healthier",
+  "kanal": "The Food Almanac",
+  "dil": "en",
+  "baslik": "Is Going Gluten-Free Healthier Without Celiac Disease?",
+  "yorum": "Have you ever tried cutting out gluten? If you did, what made you try it, and did you notice a difference?",
+  "aciklama_giris": "Gluten-free eating has spread far beyond people with celiac disease. In two large Harvard-linked cohorts, adults without celiac disease who ate less gluten did not have fewer heart attacks, and they had a higher risk of type 2 diabetes. Those are associations, not proof of cause, and gluten-free packaged foods often contain less protein and cost far more.\n\nIn this video we cover who truly needs a gluten-free diet (celiac disease, wheat allergy and non-celiac gluten sensitivity), what the 26-year heart study and the diabetes study found, what controlled trials say about gluten sensitivity, what gluten-free products actually contain, and why you should get tested before you cut gluten.",
+  "kaynaklar": [
+    "Choung RS, Unalp-Arida A, Ruhl CE, Brantner TL, Everhart JE, Murray JA. Less hidden celiac disease but increased gluten avoidance without a diagnosis in the United States: findings from the National Health and Nutrition Examination Surveys from 2009 to 2014. Mayo Clinic Proceedings. 2017. PMC5459670.",
+    "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK). Definition & Facts for Celiac Disease. niddk.nih.gov/health-information/digestive-diseases/celiac-disease/definition-facts",
+    "Singh P, Arora A, Strand TA, Leffler DA, Catassi C, Green PH, Kelly CP, Ahuja V, Makharia GK. Global prevalence of celiac disease: systematic review and meta-analysis. Clinical Gastroenterology and Hepatology. 2018. PMID 29551598.",
+    "Lebwohl B, Cao Y, Zong G, Hu FB, Green PHR, Neugut AI, Rimm EB, Sampson L, Dougherty LW, Giovannucci E, Willett WC, Sun Q, Chan AT. Long term gluten consumption in adults without celiac disease and risk of coronary heart disease: prospective cohort study. BMJ. 2017;357:j1892. DOI 10.1136/bmj.j1892. PMID 28465308.",
+    "Zong G, Lebwohl B, Hu FB, Sampson L, Dougherty LW, Willett WC, Chan AT, Sun Q. Gluten intake and risk of type 2 diabetes in three large prospective cohort studies of US men and women. Diabetologia. 2018. DOI 10.1007/s00125-018-4697-9. PMID 30074058.",
+    "Biesiekierski JR, Newnham ED, Irving PM, Barrett JS, Haines M, Doecke JD, Shepherd SJ, Muir JG, Gibson PR. Gluten causes gastrointestinal symptoms in subjects without celiac disease: a double-blind randomized placebo-controlled trial. American Journal of Gastroenterology. 2011. PMID 21224837.",
+    "Biesiekierski JR, Peters SL, Newnham ED, Rosella O, Muir JG, Gibson PR. No effects of gluten in patients with self-reported non-celiac gluten sensitivity after dietary reduction of fermentable, poorly absorbed, short-chain carbohydrates. Gastroenterology. 2013. PMID 23648697.",
+    "Wu JH, Neal B, Trevena H, Crino M, Stuart-Smith W, Faulkner-Hogg K, Yu Louie JC, Dunford E. Are gluten-free foods healthier than non-gluten-free foods? An evaluation of supermarket products in Australia. British Journal of Nutrition. 2015. PMID 26119206.",
+    "Missbach B, Schwingshackl L, Billmann A, Mystek A, Hickelsberger M, Bauer G, König J. Gluten-free food database: the nutritional quality and cost of packaged gluten-free foods. PeerJ. 2015;3:e1337. DOI 10.7717/peerj.1337. PMID 26528408.",
+    "Leonard MM, Sapone A, Catassi C, Fasano A. Celiac disease and nonceliac gluten sensitivity: a review. JAMA. 2017. PMID 28810029.",
+    "NIDDK. Diagnosis of Celiac Disease. niddk.nih.gov/health-information/digestive-diseases/celiac-disease/diagnosis",
+    "Husby S, Murray JA, Katzka DA. AGA Clinical Practice Update on Diagnosis and Monitoring of Celiac Disease: Changing Utility of Serology and Histologic Measures: Expert Review. Gastroenterology. 2019. PMID 30578783."
+  ],
+  "kapak": {
+    "satirlar": [
+      "GLUTEN-FREE",
+      "HEALTHIER?"
+    ],
+    "vurgu": "1%",
+    "vurgu_alt": "CELIAC",
+    "gorsel": "a big close-up whole wheat loaf with thick slices fanned out in front, a bowl of cooked pasta overlapping behind it, and a red heart symbol leaning against the loaf, tightly grouped, bright and appetizing"
+  },
+  "etiketler": [
+    "gluten free diet",
+    "is gluten free healthier",
+    "celiac disease",
+    "gluten sensitivity",
+    "gluten free without celiac",
+    "should i go gluten free",
+    "whole grains",
+    "heart health",
+    "nutrition science",
+    "healthy eating"
+  ],
+  "seslendirme_duzelt": {
+    "FODMAP": "fod map",
+    "FODMAPs": "fod maps",
+    "IBS": "I B S",
+    "tTG": "t T G"
+  },
+  "sahneler": [
+    {
+      "id": 1,
+      "bolum": "Who truly needs gluten-free",
+      "metin": "In one US survey, gluten-free eating among people without celiac disease more than tripled in five years.",
+      "gorsel": "a tall supermarket shelf stacked with boxes of pasta and loaves of bread in plain wrappers, a shopping basket in the foreground",
+      "etiket": "Choung et al. · Mayo Clin Proc · 2017",
+      "baslik": {
+        "satirlar": [
+          "GLUTEN-FREE",
+          "TRIPLED"
+        ],
+        "vurgu": "3×",
+        "not": "in five years, among people without celiac disease"
+      }
+    },
+    {
+      "id": 2,
+      "metin": "Then a Harvard study followed 110,000 people for 26 years, and the ones who ate the least gluten had a surprise waiting.",
+      "gorsel": "a long wooden table with two loaves of bread, one whole wheat and one pale, with a red heart symbol standing between them",
+      "baslik": {
+        "satirlar": [
+          "26 YEARS",
+          "110,000 PEOPLE"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "metin": "By the end, you'll know who truly needs it, what labels hide, and what to do before cutting gluten.",
+      "gorsel": "a kitchen counter with a sliced whole wheat loaf, a bowl of pasta and a notebook with blank pages, morning light from a window"
+    },
+    {
+      "id": 4,
+      "metin": "This is The Food Almanac. Let's start with what gluten actually is, and who has a real medical reason to avoid it.",
+      "gorsel": "a sheaf of wheat, barley and rye stalks tied together beside a rustic loaf of bread, in the style of an old botanical plate"
+    },
+    {
+      "id": 5,
+      "tip": "kart",
+      "metin": "Three conditions give people a real medical reason to avoid gluten. Let's meet them one at a time.",
+      "kart": {
+        "ust": "THE BASICS",
+        "baslik": "Who really needs it",
+        "alt": "Celiac · Wheat allergy · Sensitivity"
+      }
+    },
+    {
+      "id": 6,
+      "metin": "Gluten is a group of proteins found in wheat, barley and rye. That means it shows up in bread, pasta, cereal and many baked goods, which is why cutting it out changes so much of what's on your plate.",
+      "gorsel": "a bread loaf, a bowl of cooked pasta, a bowl of cereal and a muffin arranged on a wooden table beside a bundle of wheat stalks",
+      "baslik": {
+        "satirlar": [
+          "WHEAT",
+          "BARLEY",
+          "RYE"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "metin": "The first condition is celiac disease, an autoimmune disease. When people with celiac disease eat gluten, their immune system attacks and damages the lining of the small intestine.",
+      "gorsel": "a textbook engraving of the small intestine opened to show finger-like villi along the inner wall, a slice of bread resting beside it",
+      "baslik": {
+        "satirlar": [
+          "CELIAC",
+          "DISEASE"
+        ],
+        "not": "an autoimmune reaction to gluten"
+      }
+    },
+    {
+      "id": 8,
+      "metin": "The National Institutes of Health estimates that about 2 million people in the United States have celiac disease, and about 1 percent of people worldwide. Many of them have never been diagnosed.",
+      "gorsel": "a crowd of one hundred small identical figures drawn as an engraving, with a single figure at the front standing out",
+      "etiket": "NIDDK · Definition & Facts for Celiac Disease",
+      "baslik": {
+        "satirlar": [
+          "ABOUT",
+          "1 IN 100"
+        ],
+        "vurgu": "2M",
+        "not": "Americans estimated to have celiac disease"
+      }
+    },
+    {
+      "id": 9,
+      "metin": "A 2018 meta-analysis pooled 96 studies. It found celiac antibodies in 1.4 percent of people worldwide, and biopsy-confirmed disease in 0.7 percent.",
+      "gorsel": "a laboratory bench with a rack of small capped sample tubes, an antique brass microscope and an open notebook with blank pages",
+      "etiket": "Singh et al. · Clin Gastroenterol Hepatol · 2018",
+      "baslik": {
+        "satirlar": [
+          "1.4%",
+          "ANTIBODIES"
+        ],
+        "not": "worldwide, from 96 studies"
+      }
+    },
+    {
+      "id": 10,
+      "metin": "The second condition is wheat allergy, an immune reaction to wheat. Its symptoms, such as itchy eyes or trouble breathing, differ from celiac disease, and it does not cause long-term damage to the small intestine.",
+      "gorsel": "a bowl of wheat flour with a wooden scoop and a few wheat kernels scattered on a table, a clean handkerchief beside it",
+      "baslik": {
+        "satirlar": [
+          "WHEAT",
+          "ALLERGY"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "metin": "The third is non-celiac gluten sensitivity. People get symptoms such as belly pain and tiredness, but they test negative for celiac disease, and their small intestine is not damaged.",
+      "gorsel": "a person's silhouette drawn as a vintage engraving, seated and holding their stomach, a plate of bread and pasta on the table in front of them",
+      "baslik": {
+        "satirlar": [
+          "GLUTEN",
+          "SENSITIVITY"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "metin": "Notice what's missing from that list: a general reason for everyone else. So the real question is whether cutting gluten helps people who have none of these three. Later, we'll also look at what's inside gluten-free packaged foods.",
+      "gorsel": "a loaf of bread on a wooden board with a knife beside it, a question mark formed by three small wheat kernels on the table"
+    },
+    {
+      "id": 13,
+      "bolum": "The 26-year heart study",
+      "tip": "kart",
+      "metin": "In 2017, researchers at Columbia and Harvard asked a direct question. Does long-term gluten intake change the risk of heart disease in people without celiac disease?",
+      "kart": {
+        "ust": "THE KEY STUDY",
+        "baslik": "26 years of gluten",
+        "alt": "Nurses' Health Study · Health Professionals"
+      }
+    },
+    {
+      "id": 14,
+      "metin": "They used two huge American cohorts: 64,714 women from the Nurses' Health Study, and 45,303 men from the Health Professionals Follow-up Study. None of them had heart disease when the study began.",
+      "gorsel": "a long rolling hillside of identical small houses in an engraving style, a thin winding road leading toward a distant red heart symbol",
+      "etiket": "Lebwohl et al. · BMJ · 2017",
+      "baslik": {
+        "satirlar": [
+          "110,017",
+          "ADULTS"
+        ],
+        "not": "no heart disease at the start"
+      }
+    },
+    {
+      "id": 15,
+      "metin": "Every four years, participants filled out a detailed food questionnaire with 131 items. From their answers, the researchers estimated each person's gluten intake, then ranked everyone into five equal groups.",
+      "gorsel": "a hand holding a pencil over a long paper questionnaire with blank lines, a loaf of bread and a bowl of pasta beside it on a desk"
+    },
+    {
+      "id": 16,
+      "metin": "Then they followed everyone for 26 years, more than two million person-years of follow-up, counting fatal and non-fatal heart attacks. In all, 2,431 women and 4,098 men had one.",
+      "gorsel": "an antique calendar page flipping through many pages, a red heart symbol drawn beside a stack of old paper folders",
+      "baslik": {
+        "satirlar": [
+          "26 YEARS",
+          "OF FOLLOW-UP"
+        ],
+        "vurgu": "6,529",
+        "not": "heart attacks counted"
+      }
+    },
+    {
+      "id": 17,
+      "tip": "grafik",
+      "metin": "At first glance, the group eating the least gluten looks worse. Their heart disease rate was 352 cases per 100,000 person-years, versus 277 in the group eating the most.",
+      "grafik": {
+        "baslik": "Heart disease cases per 100,000 person-years",
+        "alt": "Raw numbers, before adjusting for lifestyle",
+        "cubuklar": [
+          {
+            "etiket": "Lowest gluten",
+            "deger": 352,
+            "metin": "352"
+          },
+          {
+            "etiket": "Highest gluten",
+            "deger": 277,
+            "metin": "277"
+          }
+        ],
+        "kaynak": "Lebwohl et al., BMJ 2017 · 110,017 US adults without heart disease at start · 26 years"
+      }
+    },
+    {
+      "id": 18,
+      "metin": "But that's before accounting for how those groups lived. After adjusting for known risk factors, the difference shrank to almost nothing: a hazard ratio of 0.95, where 1.0 means no difference. The range included no effect at all.",
+      "gorsel": "an antique brass balance scale, level, with a loaf of bread in one pan and a red heart symbol in the other",
+      "baslik": {
+        "satirlar": [
+          "AFTER",
+          "ADJUSTING"
+        ],
+        "vurgu": "0.95",
+        "not": "no clear difference in heart disease risk"
+      }
+    },
+    {
+      "id": 19,
+      "metin": "So the lower raw numbers may not be about gluten itself. When the researchers adjusted for refined grains instead, the highest gluten group had a 15 percent lower risk. The authors read that as a whole grain effect, not a gluten effect.",
+      "gorsel": "a bowl of brown whole grains beside a bowl of white refined flour, a whole wheat loaf and a pale loaf side by side on a wooden table",
+      "etiket": "Lebwohl et al. · BMJ · 2017",
+      "baslik": {
+        "satirlar": [
+          "WHOLE",
+          "GRAINS"
+        ],
+        "vurgu": "–15%",
+        "not": "after adjusting for refined grains"
+      }
+    },
+    {
+      "id": 20,
+      "metin": "Their conclusion was careful. Long-term gluten intake was not linked to heart disease, and avoiding gluten may lower whole grain intake, which could matter for the heart. They said gluten-free diets should not be promoted for people without celiac disease.",
+      "gorsel": "a sliced whole wheat loaf on a plate with a red heart symbol drawn above it, a wooden spoon and a small bowl of brown grains beside the plate"
+    },
+    {
+      "id": 21,
+      "metin": "Remember, this is an observational study. It can show links, not proof of cause. People also reported their own diets, and the participants were nurses and other health professionals, so they may not look like everyone.",
+      "gorsel": "a stack of paper food diaries tied with string on a desk, an antique pen and a pair of round eyeglasses resting on top"
+    },
+    {
+      "id": 22,
+      "metin": "The same group studied type 2 diabetes in three cohorts totaling about 200,000 US adults. Over 4.24 million person-years of follow-up, 15,947 people developed diabetes.",
+      "gorsel": "a tall stack of paper folders beside a glucose meter with a blank screen, a loaf of bread and a bowl of pasta in the foreground",
+      "etiket": "Zong et al. · Diabetologia · 2018",
+      "baslik": {
+        "satirlar": [
+          "200,000",
+          "ADULTS"
+        ],
+        "not": "followed for type 2 diabetes"
+      }
+    },
+    {
+      "id": 23,
+      "metin": "The group eating the most gluten had a 20 percent lower diabetes risk than the group eating the least. After adjusting for cereal fiber, the gap shrank to 13 percent.",
+      "gorsel": "a glucose meter with a blank screen on a table beside a sliced whole wheat loaf and a bowl of brown whole grain cereal",
+      "baslik": {
+        "satirlar": [
+          "LESS GLUTEN",
+          "HIGHER RISK"
+        ],
+        "vurgu": "–20%",
+        "not": "diabetes risk, highest vs lowest gluten fifth"
+      }
+    },
+    {
+      "id": 24,
+      "metin": "Again, that doesn't prove gluten protects anyone. Gluten intake rose together with starch and cereal fiber, and the authors noted that eating less gluten usually means eating less cereal fiber too.",
+      "gorsel": "a bowl of oat-colored cereal beside a wheat stalk and a thick slice of whole grain bread, a magnified circle showing fibrous grain husk"
+    },
+    {
+      "id": 25,
+      "metin": "So across two large studies, eating less gluten came with no heart benefit, and with a higher risk of diabetes. Both are associations. But neither supports the idea that gluten-free is healthier for everyone.",
+      "gorsel": "a plain wooden table with a whole wheat loaf at the center, a red heart symbol on one side and a glucose meter with a blank screen on the other",
+      "baslik": {
+        "satirlar": [
+          "NO CLEAR",
+          "BENEFIT"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "bolum": "Do some people react to gluten?",
+      "tip": "kart",
+      "metin": "But plenty of people say gluten makes them feel unwell, even though they don't have celiac disease. Are they imagining it?",
+      "kart": {
+        "ust": "THE PUZZLE",
+        "baslik": "Is gluten the culprit?",
+        "alt": "What controlled trials found"
+      }
+    },
+    {
+      "id": 27,
+      "metin": "No. The symptoms are real. The question researchers ask is what causes them. A team in Australia, led by Jessica Biesiekierski, set out to test whether gluten itself was the trigger.",
+      "gorsel": "an antique laboratory with a bench, a covered tray of bread and muffins and a closed notebook, a tall window with soft light"
+    },
+    {
+      "id": 28,
+      "metin": "In 2011, they studied 34 adults with irritable bowel syndrome whose symptoms were controlled on a gluten-free diet. For up to six weeks, they ate bread and muffins with gluten, or without, and nobody knew which.",
+      "gorsel": "two identical plates, each with a slice of bread and a muffin, set side by side on a table with a folded cloth between them",
+      "etiket": "Biesiekierski et al. · Am J Gastroenterol · 2011",
+      "baslik": {
+        "satirlar": [
+          "34 ADULTS",
+          "BLINDED TEST"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "metin": "On gluten, 68 percent of people had symptoms that were not adequately controlled. So gluten seemed to matter. But look at the placebo group: 40 percent of them felt worse too, without eating any gluten.",
+      "gorsel": "a bread slice and a muffin on a plate next to an antique scale, two small piles of pebbles in the pans of different heights",
+      "baslik": {
+        "satirlar": [
+          "68% VS 40%"
+        ],
+        "not": "symptoms on gluten vs on placebo"
+      }
+    },
+    {
+      "id": 30,
+      "metin": "That is the nocebo effect: when expecting to feel worse can make people feel worse. It doesn't mean the symptoms are faked. It means expectations can shape how the gut feels, and a good trial has to account for that.",
+      "gorsel": "a quiet room with a single armchair, a cup of tea on a small table, a window and a loaf of bread resting on a cloth"
+    },
+    {
+      "id": 31,
+      "metin": "So in 2013 the same team ran a tighter test in 37 adults who believed they were gluten sensitive. First everyone ate a low-FODMAP diet, which limits certain fermentable carbohydrates that can cause gut symptoms.",
+      "gorsel": "a neat row of three bowls holding beans, wheat berries and chopped onion on a wooden counter, a cooking spoon and a loaf of bread behind them",
+      "etiket": "Biesiekierski et al. · Gastroenterology · 2013",
+      "baslik": {
+        "satirlar": [
+          "37 ADULTS",
+          "SECOND TEST"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "metin": "Then each person ate three diets for a week apiece: 16 grams of gluten a day, almost no gluten, and a control diet with a different protein. Nobody knew which was which.",
+      "gorsel": "three covered meal trays lined up on a table, a loaf of bread on the first, a bowl of grains on the second and a plain dish on the third",
+      "baslik": {
+        "satirlar": [
+          "16 G OF",
+          "GLUTEN A DAY"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "metin": "Symptoms got worse to a similar degree on gluten and on the control protein. Only 8 percent of participants showed an effect specific to gluten. For most people, gluten itself was not the clear trigger.",
+      "gorsel": "a balance scale with a loaf of bread in one pan and a small bowl of white powder in the other pan, both at the same height",
+      "baslik": {
+        "satirlar": [
+          "GLUTEN-SPECIFIC",
+          "EFFECT"
+        ],
+        "vurgu": "8%",
+        "not": "of participants showed one"
+      }
+    },
+    {
+      "id": 34,
+      "metin": "Both trials were small, and they involved adults with irritable bowel syndrome, so they can't settle the question for everyone. But the second trial suggests the cause of those symptoms may often be something other than gluten alone.",
+      "gorsel": "a modest research desk with only a few papers with blank pages, a teacup and a magnifying glass resting on a loaf of bread"
+    },
+    {
+      "id": 35,
+      "metin": "If a food makes you feel unwell, that's worth taking seriously. The right move isn't to guess. It's to find out what's going on with your doctor, and we'll get to exactly how in a moment.",
+      "gorsel": "a doctor's consultation desk with a stethoscope, a closed notebook and a plate holding a slice of bread",
+      "baslik": {
+        "satirlar": [
+          "FIND OUT",
+          "WHY"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "bolum": "What's in gluten-free products",
+      "tip": "kart",
+      "metin": "First, though, there's another reason to be careful about going gluten-free. Look at what's actually inside the box.",
+      "kart": {
+        "ust": "INSIDE THE BOX",
+        "baslik": "Gluten-free products",
+        "alt": "Protein · Fiber · Price"
+      }
+    },
+    {
+      "id": 37,
+      "metin": "A gluten-free label tells you one thing: what's missing. It doesn't tell you whether the food is nutritious. Yet the label can look like a health halo on a grocery shelf.",
+      "gorsel": "a grocery shelf with plain boxes of cookies, crackers and cereal in neat rows, a hand reaching for one box",
+      "baslik": {
+        "satirlar": [
+          "A HEALTH",
+          "HALO?"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "metin": "Australian researchers compared the nutrition panels of 3,213 packaged foods from four large supermarkets. They looked at ten food categories, and scored them with a government health star rating.",
+      "gorsel": "a cart in a supermarket aisle filled with boxes of pasta, bread loaves and breakfast cereal, rows of shelves behind it",
+      "etiket": "Wu et al. · Br J Nutr · 2015",
+      "baslik": {
+        "satirlar": [
+          "3,213",
+          "PRODUCTS"
+        ],
+        "not": "compared in Australian supermarkets"
+      }
+    },
+    {
+      "id": 39,
+      "tip": "grafik",
+      "metin": "Gluten-free pasta had 52 percent less protein than regular pasta, and gluten-free bread had 32 percent less. Gluten-free pasta also scored nearly half a star lower on the five star health rating.",
+      "grafik": {
+        "baslik": "Less protein in gluten-free versions",
+        "alt": "Gluten-free vs regular packaged foods",
+        "cubuklar": [
+          {
+            "etiket": "Pasta",
+            "deger": 52,
+            "metin": "−52%"
+          },
+          {
+            "etiket": "Bread",
+            "deger": 32,
+            "metin": "−32%"
+          }
+        ],
+        "kaynak": "Wu et al., Br J Nutr 2015 · 3,213 packaged products, Sydney supermarkets"
+      }
+    },
+    {
+      "id": 40,
+      "metin": "Breads and breakfast cereals showed no significant difference in rating. And the label turned up in surprising places: 87 percent of the processed meats were labeled gluten-free. The authors concluded the products are unlikely to be healthier without a clear need.",
+      "gorsel": "a deli counter with sliced sausages and ham on a wooden board next to a loaf of bread and a bowl of pasta",
+      "baslik": {
+        "satirlar": [
+          "NOT",
+          "HEALTHIER"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "metin": "An Austrian study compared 63 gluten-free products with 126 regular counterparts from 12 supermarkets. In 57 percent of the food categories, the gluten-free versions had less than half the protein.",
+      "gorsel": "two shopping baskets side by side on a store floor, one with plain wrapped loaves and pasta and one with slightly different loaves and pasta",
+      "etiket": "Missbach et al. · PeerJ · 2015",
+      "baslik": {
+        "satirlar": [
+          "63 VS 126",
+          "PRODUCTS"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "metin": "And the price: gluten-free versions cost between 205 percent more for cereals and 267 percent more for bread and bakery products. That's about three to almost four times the price, in one Austrian study.",
+      "gorsel": "an antique cash register beside a small stack of coins and a loaf of bread on a counter, a tiny balance scale tipped to one side",
+      "baslik": {
+        "satirlar": [
+          "BREAD",
+          "PRICE"
+        ],
+        "vurgu": "+267%",
+        "not": "price of gluten-free bread and bakery products"
+      }
+    },
+    {
+      "id": 43,
+      "metin": "None of this means every gluten-free food is a poor choice. Fruit, vegetables, beans, eggs, fish and plain rice are naturally gluten-free. The trouble is with the packaged substitutes. And for people with celiac disease, those products matter, so some nutrients need attention.",
+      "gorsel": "a market table with fresh vegetables, fruit, a bowl of beans, eggs in a basket and a fillet of fish on a plate",
+      "baslik": {
+        "satirlar": [
+          "NATURALLY",
+          "GLUTEN-FREE"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "bolum": "Get tested before you cut",
+      "tip": "kart",
+      "metin": "Now, the most practical point in this video. If you are thinking about going gluten-free, do this first.",
+      "kart": {
+        "ust": "BEFORE YOU CUT",
+        "baslik": "Get tested first",
+        "alt": "Celiac testing needs gluten in your diet"
+      }
+    },
+    {
+      "id": 45,
+      "metin": "Celiac disease and gluten sensitivity cause overlapping symptoms, so doctors can't tell them apart from symptoms alone. A 2017 review in JAMA says celiac screening should happen before a gluten-free diet starts.",
+      "gorsel": "a doctor's desk with a stethoscope, a clipboard with blank pages and a plate with a slice of bread, a small hourglass beside it",
+      "etiket": "Leonard et al. · JAMA · 2017",
+      "baslik": {
+        "satirlar": [
+          "TEST",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "metin": "The reason is simple. The blood test looks for antibodies that are often higher in untreated celiac disease. The NIH advises not starting a gluten-free diet before testing, because it can affect the results.",
+      "gorsel": "a row of small capped sample tubes in a rack on a laboratory bench, an antique microscope beside a slice of bread on a small plate",
+      "etiket": "NIDDK · Diagnosis of Celiac Disease"
+    },
+    {
+      "id": 47,
+      "metin": "An expert review from the American Gastroenterological Association makes the same point: cutting out gluten before diagnosis can make the tests less accurate. Doctors then may need you to eat gluten again for a while before testing.",
+      "gorsel": "a simple wooden dinner table set with a plate, a fork and a slice of whole wheat bread, a pocket watch lying beside the plate",
+      "etiket": "Husby et al. · Gastroenterology · 2019",
+      "baslik": {
+        "satirlar": [
+          "DON'T CUT",
+          "BEFORE TESTING"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "metin": "If you've already gone gluten-free, don't worry. Just tell your doctor, and ask how to be tested. Please don't restart gluten on your own if you have a diagnosed condition. Let your doctor guide you.",
+      "gorsel": "a telephone on a desk beside a calendar with blank squares and a notebook, a pot of tea and a plate with bread on the side"
+    },
+    {
+      "id": 49,
+      "metin": "A proper diagnosis matters. Many people with celiac disease don't know they have it. And blood tests can also reveal related problems such as anemia, which a doctor can then address.",
+      "gorsel": "a rack of sample tubes beside a stethoscope and a clipboard with blank pages on a clean white table",
+      "baslik": {
+        "satirlar": [
+          "UNDIAGNOSED",
+          "IS COMMON"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "bolum": "What to do instead",
+      "tip": "kart",
+      "metin": "So what should you actually do? Here are four practical steps.",
+      "kart": {
+        "ust": "HOW TO USE IT",
+        "baslik": "Four practical steps",
+        "alt": "Before and after you decide"
+      }
+    },
+    {
+      "id": 51,
+      "metin": "One. If you think gluten bothers you, keep a simple food and symptom diary for two weeks before changing anything. Write down what you ate, and how you felt. Then bring it to your doctor.",
+      "gorsel": "an open notebook with blank lines and a pencil on a kitchen table, a sliced loaf of bread and a cup of tea beside it"
+    },
+    {
+      "id": 52,
+      "metin": "Two. Ask about celiac testing while you're still eating gluten. If it's negative, you and your doctor can look at other causes, such as irritable bowel syndrome, and decide the next step together.",
+      "gorsel": "a doctor's desk with a stethoscope and a plate with a slice of whole wheat bread, a calendar with blank squares beside them",
+      "baslik": {
+        "satirlar": [
+          "STEP TWO"
+        ],
+        "not": "ask about celiac testing first"
+      }
+    },
+    {
+      "id": 53,
+      "metin": "Three. If you do go gluten-free, build your plate from foods that are naturally free of gluten. Vegetables, fruit, beans, eggs, fish, nuts and plain rice, instead of packaged substitutes with less protein and a higher price.",
+      "gorsel": "a dinner plate with grilled fish, steamed vegetables and a scoop of rice, a small bowl of fresh fruit beside it on a wooden table"
+    },
+    {
+      "id": 54,
+      "metin": "Four. Don't lose your whole grains. If you cut gluten, choose naturally gluten-free whole grains, such as brown rice, quinoa or buckwheat. If you still eat wheat, whole wheat bread is a good way to keep them in.",
+      "gorsel": "three bowls of brown rice, quinoa and buckwheat on a wooden table, a whole wheat loaf at the back",
+      "baslik": {
+        "satirlar": [
+          "KEEP YOUR",
+          "WHOLE GRAINS"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "metin": "And one safety note. If you have diabetes, kidney disease, or take daily medicines, talk to your doctor or dietitian before making big changes to how you eat. A diet trend should never replace treatment.",
+      "gorsel": "a consultation desk with a stethoscope, a closed notebook and a plain pill organizer with empty compartments",
+      "baslik": {
+        "satirlar": [
+          "SAFETY",
+          "FIRST"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "bolum": "Recap",
+      "tip": "kart",
+      "metin": "Let's recap.",
+      "kart": {
+        "ust": "THE TAKEAWAY",
+        "baslik": "Test first, then decide",
+        "alt": "Gluten-free is for those who need it"
+      }
+    },
+    {
+      "id": 57,
+      "metin": "Celiac disease, wheat allergy and non-celiac gluten sensitivity are real reasons to avoid gluten. For everyone else, a large Harvard study found no heart benefit from eating less of it.",
+      "gorsel": "the whole wheat loaf from the start, sliced on a wooden board with a red heart symbol standing beside it"
+    },
+    {
+      "id": 58,
+      "metin": "People who ate the most gluten had a lower diabetes risk, an association partly tied to cereal fiber. And gluten-free packaged foods can have less protein, and cost roughly three times as much or more.",
+      "gorsel": "a supermarket shelf of plain boxed pasta and loaves of bread, a glucose meter with a blank screen on the counter in front"
+    },
+    {
+      "id": 59,
+      "metin": "Before you cut gluten, get tested for celiac disease while you still eat it. Then build your plate from whole, naturally gluten-free foods, and keep your whole grains in the mix.",
+      "gorsel": "a bright kitchen table with a plate of grilled fish, vegetables and brown rice, a sliced whole wheat loaf at the edge"
+    },
+    {
+      "id": 60,
+      "tip": "kart",
+      "metin": "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one.",
+      "kart": {
+        "ust": "THE FOOD ALMANAC",
+        "baslik": "Evidence over hype",
+        "alt": "For education only · not medical advice"
+      }
+    }
+  ]
+}
