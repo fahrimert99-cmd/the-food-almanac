@@ -1,5 +1,5 @@
 {
-  "aktif": null,
+  "aktif": "gluten-free-healthier",
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -299,6 +299,12 @@
       "slot": "2027-02-15T14:00:00Z",
       "asama": "yuklendi",
       "baslangic": "2026-11-23T14:22:38Z",
+      "sahne_deneme": 0
+    },
+    "gluten-free-healthier": {
+      "slot": "2027-02-17T14:00:00Z",
+      "asama": "senaryo",
+      "baslangic": "2026-11-23T15:30:28Z",
       "sahne_deneme": 0
     }
   }
