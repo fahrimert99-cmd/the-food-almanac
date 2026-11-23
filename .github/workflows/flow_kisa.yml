@@ -63,4 +63,5 @@ jobs:
         if: inputs.kuru != true
         env:
           GH_TOKEN: ${{ github.token }}
-        run: bash uzun_en/araclar/kaydet.sh "flow_kisa: Flow Shorts zamanlandı" uzun_en/projeler
+        run: |
+          bash uzun_en/araclar/kaydet.sh "flow_kisa - Flow Shorts zamanlandı" uzun_en/projeler
