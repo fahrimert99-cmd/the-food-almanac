@@ -1,0 +1,66 @@
+name: Flow Shorts yükleme (The Food Almanac)
+# Google Flow ile üretilen gravür Shorts'larını (projeler/SLUG/flow_kisa.json + sürümdeki flow_kisa.mp4) haftada bir
+# slota zamanlanmış olarak yükler: uzun_en/araclar/flow_kisa.py. Otomatik Shorts hattından (uzun_en_kisa.yml) ayrıdır.
+# Tetik: bir flow_kisa.json main'e gelince, her gün 08:41 UTC (kota dolduysa kaldığı yerden) ya da elle.
+# KREDİ HARCANMAZ: video Flow'da önceden üretilmiştir; burada yalnızca YouTube API (günlük ücretsiz kota) kullanılır.
+on:
+  push:
+    branches: [main]
+    paths: ["uzun_en/projeler/*/flow_kisa.json"]
+  schedule:
+    - cron: "41 8 * * *"
+  workflow_dispatch:
+    inputs:
+      kuru:
+        description: "Kuru çalışma (yüklemeden ne gönderileceğini yazdır)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: flow-kisa
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  yukle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Bağımlılıklar
+        run: pip install -q -r requirements.txt
+      - name: Bekleyenler
+        run: python3 uzun_en/araclar/flow_kisa.py --liste
+      - name: Yükle
+        env:
+          GH_TOKEN: ${{ github.token }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          KURU=""; [ "${{ inputs.kuru }}" = "true" ] && KURU="--kuru"
+          set +e
+          python3 uzun_en/araclar/flow_kisa.py --yukle $KURU
+          kod=$?
+          set -e
+          if [ "$kod" = "3" ]; then echo "::notice title=Flow Shorts::YouTube kotası dolu, yarın devam edilecek"; exit 0; fi
+          exit $kod
+      - name: Kaydet
+        if: inputs.kuru != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash uzun_en/araclar/kaydet.sh "flow_kisa: Flow Shorts zamanlandı" uzun_en/projeler
