@@ -1,0 +1,20 @@
+{
+  "baslik": ["IS ORGANIC", "HEALTHIER?"],
+  "baslik_yt": "Is Organic Food Healthier? What the Studies Show",
+  "aciklama": "A French study of 68,946 adults linked organic eating to lower cancer risk, yet a Stanford review of 237 studies found almost no nutrition gap. Here is what each one really measured.",
+  "parcalar": [
+    {"sahne": 38, "cumleler": [0], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0],
+     "baslik": {"satirlar": ["FRENCH STUDY", "68,946 ADULTS"], "vurgu": "-25%", "not": "cancer risk, most organic"},
+     "etiket": "Baudry et al. · JAMA Intern Med · 2018"},
+    {"sahne": 1, "cumleler": [1], "gorsel": 9,
+     "baslik": {"satirlar": ["STANFORD", "REVIEW"], "vurgu": "237", "not": "studies pooled"},
+     "etiket": "Smith-Spangler · Ann Intern Med · 2012"},
+    {"sahne": 18, "cumleler": [0]},
+    {"sahne": 56, "cumleler": [1], "gorsel": 21,
+     "baslik": {"satirlar": ["OVER 99%", "WITHIN LIMITS"], "not": "of 10,127 samples, 2021"},
+     "etiket": "USDA · Pesticide Data Program · 2021"},
+    {"sahne": 57, "cumleler": [0], "baslik": {"satirlar": ["SIGNAL,", "NOT PROOF"]}, "etiket": null},
+    {"sahne": 58, "cumleler": [0, 1], "baslik": {"satirlar": ["YOUR CALL,", "EAT PRODUCE"]}, "etiket": null}
+  ]
+}
