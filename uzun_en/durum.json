@@ -291,10 +291,9 @@
     },
     "organic-vs-conventional": {
       "slot": "2027-02-12T14:00:00Z",
-      "asama": "varlik",
+      "asama": "sahne",
       "baslangic": "2026-11-22T15:53:58Z",
-      "sahne_deneme": 0,
-      "gorsel_bekle": "2026-11-23T13:23:17Z"
+      "sahne_deneme": 0
     }
   }
 }
