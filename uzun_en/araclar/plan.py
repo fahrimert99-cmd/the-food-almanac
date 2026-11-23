@@ -137,11 +137,21 @@ def karar(d, t):
     """(slug, asama, slot, sablon, neden) — yapılacak iş yoksa slug None."""
     aktif = d.get("aktif")
     m = O.marka()
+    yeni_tek = False
+    if not m.get("uretim_durdur") or m.get("uretim_tek") != "yeni":
+        if d.pop("tek_yeni", None):                  # "yeni" bir sonraki kullanımda yeniden tek video başlatabilsin
+            O.durum_yaz(d)
     if m.get("uretim_durdur"):                       # kanal sahibinin isteğiyle; yüklenmiş videoların yayını sürer
         tek = m.get("uretim_tek")                    # durdurulmuşken yalnızca bu aktif proje bitirilir (tek video)
-        if not (tek and aktif == tek and d["videolar"].get(tek, {}).get("asama") not in BITTI):
+        if tek == "yeni":                            # durdurulmuşken tek bir YENİ video: başlayan proje kaydedilir
+            tek = d.get("tek_yeni")
+            yeni_tek = not tek and not (aktif and d["videolar"].get(aktif, {}).get("asama") not in BITTI)
+        if yeni_tek:
+            O.log("üretim durdurulmuş; tek yeni video başlatılıyor (marka.json uretim_tek: yeni)")
+        elif not (tek and aktif == tek and d["videolar"].get(tek, {}).get("asama") not in BITTI):
             return None, None, None, False, "üretim durduruldu (marka.json uretim_durdur: true)"
-        O.log(f"üretim durdurulmuş; yalnızca {tek} bitiriliyor (marka.json uretim_tek)")
+        else:
+            O.log(f"üretim durdurulmuş; yalnızca {tek} bitiriliyor (marka.json uretim_tek)")
     if aktif and d["videolar"].get(aktif, {}).get("asama") not in BITTI:
         v = d["videolar"][aktif]
         slot = tarih(v["slot"]) if v.get("slot") else t
@@ -184,6 +194,8 @@ def karar(d, t):
         if v.get("asama") not in BITTI and not v.get("slot") and slug_gecerli(slug):
             v["slot"] = iso(bos[0])
             d["aktif"] = slug
+            if yeni_tek:
+                d["tek_yeni"] = slug
             return slug, v.get("asama", "senaryo"), v["slot"], False, "kuyruktaki proje başlatıldı"
     k = konu_sec()
     if not k:
@@ -191,6 +203,8 @@ def karar(d, t):
     slug = k["slug"]
     d["videolar"][slug] = {"slot": iso(bos[0]), "asama": "senaryo", "baslangic": iso(t), "sahne_deneme": 0}
     d["aktif"] = slug
+    if yeni_tek:
+        d["tek_yeni"] = slug
     konu_isaretle(slug, "uretimde")
     return slug, "senaryo", iso(bos[0]), False, f"yeni proje: {slug}"
 

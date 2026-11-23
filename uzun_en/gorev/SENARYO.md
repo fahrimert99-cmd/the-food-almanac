@@ -166,10 +166,24 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
 4. **Forward references.** Once or twice in the middle of the video, point briefly to something specific that comes
    later, for example "In the practical part, there's one timing detail that changes how well this works." Every
    forward reference must be paid off later in the video. Never promise something the video doesn't deliver.
-5. **Recap.**
+5. **Curiosity map (`merak`, required).** Plan the questions that keep the viewer watching before you write the
+   scenes, and record them as a top-level list: `[{"soru": "Why did the gluten-free group gain weight?", "ac": 2,
+   "cevap": 12}, …]`, where `ac` is the scene that raises the question and `cevap` the scene that answers it.
+   Channel data shows most viewers leave in the first minute; a question the video still owes them is what keeps them.
+   - 5–10 questions. The first one opens in the cold open (scenes 1–3); its answer is the verdict, 1–2 minutes in.
+   - At most two questions open at the same time.
+   - A payoff (an answer, a reveal or a reversal) at least every 60–90 seconds. The validator rejects a gap of more
+     than about 2 minutes between answers (it counts about 2.59 words per second), and any question answered at or
+     after the Recap.
+   - Plant, don't tell: raise each question with a concrete detail or a single image, not an information block that
+     answers it early. Never answer a question before the viewer has had time to want the answer.
+   - Your forward references (point 4) are questions in this map too.
+   - Every question in the map must really be asked in its `ac` scene and really be answered in its `cevap` scene.
+   (Idea adapted from the open-source cinecode project, sarpstar/cinecode, MIT.)
+6. **Recap.**
    - A `kart` scene with `"bolum": "Recap"`, `kart.ust` "THE TAKEAWAY", and narration "Let's recap."
    - Then 3–4 recap scenes.
-6. **Last scene: outro card.** Use this exact pattern:
+7. **Last scene: outro card.** Use this exact pattern:
    - narration: "If you found this useful, subscribe to The Food Almanac for more food science, explained calmly and honestly. This video is for education only, and it isn't medical advice. See you in the next one."
    - `kart`: `{"ust": "THE FOOD ALMANAC", "baslik": "Evidence over hype", "alt": "For education only · not medical advice"}`
 
@@ -222,6 +236,7 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
   hashtags, no advice, no claims about the channel (such as "I read every comment").
 - `kahraman`: only for videos about one food or drink. The hero food in one or two lowercase words, exactly as written in
   the `gorsel` descriptions (for example `"garlic"`, `"oats"`, `"beet juice"`). Omit it for habit or myth topics.
+- `merak`: the curiosity map, as described in Step 3.
 - `etiketler`: 8–12 search tags in lowercase.
 - `seslendirme_duzelt`: pronunciation fixes for the voice only. Example: `{"HbA1c": "H B A 1 C", "GLP-1": "G L P 1"}`. Spell out acronyms the voice would read wrongly.
 
@@ -238,7 +253,7 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
 - **Credit.** When you describe a study, credit the researchers or the institution.
 
 ## Before you finish
-Check your own work against the rules: scene ids, required fields, chapter count (at least 4 scenes with `bolum`), and word count.
+Check your own work against the rules: scene ids, required fields, chapter count (at least 4 scenes with `bolum`), word count, and the curiosity map (scene ids, at most two open questions, an answer every 60–90 seconds).
 - The workflow runs `uzun_en/araclar/proje_kontrol.py` afterwards.
 - An independent fact-checker then verifies every claim against your sources.
 

@@ -85,6 +85,7 @@ plan.py ─► (konu havuzu boşsa) KONU ajanı
   kota bekleyen yüklemeler sürer. Yarıda kalan video kaldığı aşamada bekler. Yeniden başlatmak: `false` yapın.
   (23 Kasım 2026'dan beri `true`, kanal sahibinin isteğiyle; yeni talimata kadar.)
   Durdurulmuşken tek bir yarım videoyu bitirtmek: `"uretim_tek": "slug"` (yalnızca o aktif proje ilerler; Shorts yine üretilmez).
+  Durdurulmuşken tek bir yeni video: `"uretim_tek": "yeni"` (sıradaki konu baştan üretilir, bitince yine durur).
 - **Durdurmak:** Actions → Uzun Video EN → "..." → **Disable workflow**. (her şeyi, yayın denetimini de durdurur)
 - **Durum:** `uzun_en/durum.json` her videonun aşamasını, slotunu ve YouTube kimliğini tutar
   (`projeler/<slug>/yayin.json`).
