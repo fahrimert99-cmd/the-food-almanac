@@ -157,7 +157,7 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
      "This is The Food Almanac. Let's start with what's actually inside an oat." The validator requires the channel
      name in the first 8 scenes.
    - Do not use a separate "Welcome" title card: a text-only card at about 30 seconds is where viewers were leaving.
-3. **5–7 chapters.** Each chapter's first scene has `bolum` (at most 40 characters). Most chapters open with a `kart` scene whose `ust` is a short kicker ("THE EXPERIMENT", "INSIDE YOUR BODY", "THE HONEST PART", "HOW TO USE IT"). A good arc:
+3. **5–7 chapters** (at most 8 scenes with `bolum` in total, the Recap included; the validator rejects more). Each chapter's first scene has `bolum` (at most 40 characters). Most chapters open with a `kart` scene whose `ust` is a short kicker ("THE EXPERIMENT", "INSIDE YOUR BODY", "THE HONEST PART", "HOW TO USE IT"). A good arc:
    - the basics: what the thing is and how it works in the body, in plain language;
    - the key study or studies: what was done and what was found, with one `grafik` scene of real numbers;
    - the mechanism: why it might work;
@@ -171,6 +171,7 @@ Aim for about 1,650–1,800 narration words, which is about 10.5–11.5 minutes 
    "cevap": 12}, …]`, where `ac` is the scene that raises the question and `cevap` the scene that answers it.
    Channel data shows most viewers leave in the first minute; a question the video still owes them is what keeps them.
    - 5–10 questions. The first one opens in the cold open (scenes 1–3); its answer is the verdict, 1–2 minutes in.
+     The validator rejects it if that answer comes later than 2 minutes (about scene 16); open a new question then.
    - At most two questions open at the same time.
    - A payoff (an answer, a reveal or a reversal) at least every 60–90 seconds. The validator rejects a gap of more
      than about 2 minutes between answers (it counts about 2.59 words per second), and any question answered at or
