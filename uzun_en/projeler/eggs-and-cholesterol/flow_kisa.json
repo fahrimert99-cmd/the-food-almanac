@@ -97,6 +97,7 @@
   "uretim": {
     "arac": "Almanac Studio (Google Flow)",
     "tarih": "2026-11-23",
-    "kredi": 84
+    "kredi": 84,
+    "birlestirme": "uzun_en/flow/son_islem.py (Flow birleştirme adımı codec hatası verdi)"
   }
 }
