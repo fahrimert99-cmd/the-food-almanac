@@ -2,7 +2,7 @@
   "slug": "cinnamon-blood-sugar",
   "kanal": "The Food Almanac",
   "dil": "en",
-  "baslik": "Cinnamon and Blood Sugar: What Studies Show",
+  "baslik": "Can Cinnamon Lower Your Blood Sugar?",
   "yorum": "Do you add cinnamon to your coffee or oatmeal, and do you know whether your jar is Ceylon or cassia? Has your doctor or pharmacist ever mentioned it?",
   "aciklama_giris": "Pooled trials in adults with type 2 diabetes suggest cinnamon may lower fasting blood sugar by roughly 25 milligrams per deciliter, but the effect on A1C is small, uncertain and not consistent across reviews. The cinnamon sold in most American grocery stores is usually cassia, which contains far more coumarin than Ceylon cinnamon, a compound that can affect the liver in sensitive people.\n\nIn this video we look at the meta-analyses and trials, why they disagree, what the National Institutes of Health says, how much coumarin is in each type, how much cinnamon in your coffee is reasonable, and why cinnamon is never a substitute for diabetes medication.",
   "kaynaklar": [
@@ -22,11 +22,10 @@
   "kapak": {
     "satirlar": [
       "CINNAMON",
-      "WORKS?"
+      "FOR SUGAR?"
     ],
     "vurgu": "–25",
     "vurgu_alt": "mg/dL",
-    "serit": "Fasting glucose, A1C unclear",
     "gorsel": "a big bundle of rolled cinnamon sticks tied with twine, overlapping a small wooden bowl of ground cinnamon, a glucose meter with a blank screen tucked right behind them, very large, close up and appetizing"
   },
   "kahraman": "cinnamon",

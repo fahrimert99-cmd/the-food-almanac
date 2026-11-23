@@ -2,7 +2,7 @@
   "slug": "walking-after-meals",
   "kanal": "The Food Almanac",
   "dil": "en",
-  "baslik": "What a 10-Minute Walk After Meals Really Does to Your Blood Sugar",
+  "baslik": "Does a 10-Minute Walk After Dinner Lower Blood Sugar?",
   "yorum": "Do you take a walk after meals, or is the sofa more tempting? If you walk after dinner, how long do you usually go for?",
   "aciklama_giris": "A ten minute walk after dinner sounds too simple to matter. In small clinical trials, short walks after meals lowered the rise in blood sugar after eating, and in one randomized crossover trial of 41 adults with type 2 diabetes, three ten minute walks beat a single thirty minute walk taken at any time. The effect was largest after the evening meal.\n\nIn this video we look at what those trials actually found, how working muscles take up glucose without relying on insulin, how soon after eating to start, who benefits most, and what a walk cannot do. We finish with five practical, low effort ways to use it and a safety note for people on insulin or with heart conditions.",
   "kaynaklar": [
@@ -14,10 +14,11 @@
     "Hashimoto K, Dora K, Murakami Y, et al. Positive impact of a 10-min walk immediately after glucose intake on postprandial glucose levels. Scientific Reports. 2025. doi:10.1038/s41598-025-07312-y."
   ],
   "kapak": {
-    "satirlar": ["10-MIN", "WALK", "AFTER MEALS"],
-    "serit": "What it does to blood sugar",
+    "satirlar": [
+      "10-MIN WALK",
+      "SUGAR DROP?"
+    ],
     "vurgu": "–22%",
-    "vurgu_alt": "after evening meals",
     "gorsel": "a pair of bright blue walking sneakers right beside a large white plate of spaghetti with tomato sauce, and a handheld glucose meter with a blank grey screen lying in front of the plate, the three objects close together, large and close-up"
   },
   "etiketler": ["walk after eating blood sugar", "10 minute walk after meals", "post meal walk glucose", "blood sugar", "type 2 diabetes", "prediabetes", "glucose spike", "walking for health", "nutrition science", "healthy habits"],
