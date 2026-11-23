@@ -1,5 +1,5 @@
 {
-  "aktif": "ginger-nausea",
+  "aktif": null,
   "videolar": {
     "food-order-blood-sugar": {
       "asama": "yuklendi",
@@ -297,7 +297,7 @@
     },
     "ginger-nausea": {
       "slot": "2027-02-15T14:00:00Z",
-      "asama": "sahne",
+      "asama": "yuklendi",
       "baslangic": "2026-11-23T14:22:38Z",
       "sahne_deneme": 0
     }
