@@ -1,0 +1,19 @@
+{
+  "baslik": ["JUICE: +8%", "DIABETES?"],
+  "baslik_yt": "Juice vs Whole Fruit: What Harvard Data Show",
+  "aciklama": "A Harvard study of 187,382 health professionals linked fruit juice with higher type 2 diabetes risk, and whole fruit with lower risk. Here is what that means for juice cleanses.",
+  "parcalar": [
+    {"sahne": 25, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 49, "cumleler": [2], "gorsel": 49,
+     "baslik": {"satirlar": ["JUICE VS", "WHOLE FRUIT"], "vurgu": "+8%", "not": "diabetes risk, 3 juices/wk"},
+     "etiket": "Muraki et al. · BMJ · 2013"},
+    {"sahne": 26, "cumleler": [0], "gorsel": 25, "baslik": null, "etiket": "Muraki et al. · BMJ · 2013"},
+    {"sahne": 26, "cumleler": [1],
+     "baslik": {"satirlar": ["WHOLE FRUIT", "LOWER RISK"], "vurgu": "-26%", "not": "blueberries, per 3 a week"},
+     "etiket": "Muraki et al. · BMJ · 2013"},
+    {"sahne": 27, "cumleler": [0], "baslik": {"satirlar": ["DIABETES?", "ASK FIRST"]}, "etiket": null},
+    {"sahne": 27, "cumleler": [1], "gorsel": 39, "baslik": null, "etiket": null},
+    {"sahne": 50, "cumleler": [1], "baslik": {"satirlar": ["JUICE:", "OCCASIONAL"]}, "etiket": null},
+    {"sahne": 49, "cumleler": [1], "gorsel": 51, "baslik": {"satirlar": ["EAT IT", "WHOLE"]}, "etiket": null}
+  ]
+}
