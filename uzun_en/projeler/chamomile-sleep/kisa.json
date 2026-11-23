@@ -1,0 +1,20 @@
+{
+  "baslik": ["CHAMOMILE:", "SLEEP AID?"],
+  "baslik_yt": "Chamomile for Sleep: Two Trials, Opposite Results",
+  "aciklama": "Two chamomile trials, same four weeks, opposite results. Here is who may notice a difference at bedtime, and why the answer depends on the kind of sleep trouble.",
+  "parcalar": [
+    {"sahne": 2, "cumleler": [2], "baslik": null, "etiket": null},
+    {"sahne": 1, "cumleler": [0], "gorsel": 10,
+     "baslik": {"satirlar": ["OLDER ADULTS", "SLEPT BETTER"], "vurgu": "4 WEEKS", "not": "extract vs dummy pill"},
+     "etiket": "Adib-Hajbaghery & Mousavi · 2017"},
+    {"sahne": 1, "cumleler": [1], "gorsel": 12,
+     "baslik": {"satirlar": ["LONG-TERM", "INSOMNIA"], "vurgu": "34", "not": "adults, 6+ months"},
+     "etiket": "Zick et al. · BMC CAM · 2011"},
+    {"sahne": 14, "cumleler": [0]},
+    {"sahne": 16, "cumleler": [2]},
+    {"sahne": 16, "cumleler": [3], "gorsel": 29, "baslik": null, "etiket": null},
+    {"sahne": 45, "cumleler": [2]},
+    {"sahne": 48, "cumleler": [1], "baslik": null, "etiket": null},
+    {"sahne": 48, "cumleler": [2], "gorsel": 38, "baslik": null, "etiket": null}
+  ]
+}
